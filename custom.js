@@ -522,7 +522,7 @@ function animate_page(current_page)
             break;
         default :
             // DEFAULT:: TOP LEVEL PAGE
-            alert('FUNCTION: ANIMATE_PAGE -> RUNS DEFAULT - PLEASE CHECK !')
+            console.log('FUNCTION: ANIMATE_PAGE -> RUNS DEFAULT - PLEASE CHECK !')
             $('#wrapper').animate(
                 {'top': '0%'}, 'slow', 'swing', function()
                 {
@@ -558,7 +558,7 @@ function ajax_retrieve_skill_data()
             },
             error: function()
             {
-                alert('Failed 2 Tech-Logos file ...');
+                console.log('Failed 2 Tech-Logos file ...');
             }
         }
     );
@@ -598,7 +598,7 @@ function proccess_ajax_data(field)
     // CHECK AT LEASE ONE IS TRUE (VALIDATE)
     // if(!prun && !crun && !trun)
     // {
-    //     (alert('Specify FIELD to proccess'));
+    //     (console.log('Specify FIELD to proccess'));
     // }
 
     // // PROCCESS THE "REFERENCE" FIELD
@@ -855,7 +855,7 @@ function handle_banner_input(caller)
             }
             else
             {
-                alert('FUNCTION HANDLE_BANNER_INPUT RUNS WITH A DEFAULT, PLEASE CHECK !')
+                console.log('FUNCTION HANDLE_BANNER_INPUT RUNS WITH A DEFAULT, PLEASE CHECK !')
             }
         }
     }
@@ -863,7 +863,7 @@ function handle_banner_input(caller)
 
 // HOVER OUT THE MAIN BUTTONS (3) OF 'PROJECTS' PAGE (p2)
 // function hover_out_menu_buttons(event)
-// {//alert('left')
+// {//console.log('left')
 //
 //     $(this).animate(
 //         {'padding-top': '0'}, 'fast', function()
@@ -895,7 +895,7 @@ function reveal_list_subcategories(element)
             },
             error: function()
             {
-                alert('Failed 2 Open ...');
+                console.log('Failed 2 Open ...');
             }
         }
     );
@@ -943,7 +943,7 @@ function nav_bar_designer(item_requested, function_caller)
             error: function()
             {
 
-                alert('Could trace the Main Menu Buttons File ...');
+                console.log('Could trace the Main Menu Buttons File ...');
             }
             //END OF 'AJAX' FUNCTION
         }
@@ -1003,7 +1003,7 @@ function build_selected_item_content(current_list_item, curr_list)
             error: function()
             {
 
-                alert('Failed 2 Open ...');
+                console.log('Failed 2 Open ...');
             }
         }
     );
@@ -1169,7 +1169,7 @@ function slide_images(direction, button_clicked)
     {
 
         if($(selected_item).next().attr('href'))
-        { // alert(' SIBILI');
+        { // console.log(' SIBILI');
             src = $(selected_item).next().attr('href');
             $(selected_item).next().attr('class', 'item_previewed');
             $(selected_item).removeAttr('class');
