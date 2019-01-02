@@ -569,8 +569,6 @@ function proccess_ajax_data(field)
 
     var p = {}, c = {};
     var t = [];
-    // var ckey = '', cname = '', cdata = '';
-    // var psize = 0, csize = 0, tsize = 0, imgsize = 0, rcount = 0;
 
     var prun = false, crun = false, trun = false;
     var procstr = '';
@@ -595,21 +593,6 @@ function proccess_ajax_data(field)
         procstr += "t";
         t = __GET_TOOLS()
     }
-    // CHECK AT LEASE ONE IS TRUE (VALIDATE)
-    // if(!prun && !crun && !trun)
-    // {
-    //     (console.log('Specify FIELD to proccess'));
-    // }
-
-    // // PROCCESS THE "REFERENCE" FIELD
-    // if(crun)
-    // {
-    // }
-    //
-    // // PROCCESS THE "TOOLS" FIELD
-    // if(trun)
-    // {
-    // }
 
     convert_data_to_html(p, c, t, field, procstr);
 
@@ -861,18 +844,7 @@ function handle_banner_input(caller)
     }
 }
 
-// HOVER OUT THE MAIN BUTTONS (3) OF 'PROJECTS' PAGE (p2)
-// function hover_out_menu_buttons(event)
-// {//console.log('left')
-//
-//     $(this).animate(
-//         {'padding-top': '0'}, 'fast', function()
-//         {
-//             $(this).stop()
-//         }
-//     )
-//
-// }
+
 
 // ENLIST  THE IN-MENU LIST OPTIONS FOR THE 'PROJECT' PAGE
 function reveal_list_subcategories(element)
@@ -1244,13 +1216,9 @@ function slide_images(direction, button_clicked)
 
 function __GET_PROJECT()
 {
-    // var size = 0;
-    // var i = 0;
     var item = {};
     var cacheIdx = '';
 
-    // size = temp_projects.length - 1;
-    // i = Math.floor((Math.random() * size) + 1);
     if(temp_projects.length == 0)
     {
         temp_projects = projects.slice();
@@ -1323,13 +1291,6 @@ function __GET_TOOLS()
     var item = [], size;
     var t = [];
 
-    // tsize = temp_tools.length - 1;
-    // if(tsize <= 0)
-    // {
-    //     temp_tools = tech_tools.slice();
-    //     tsize = tech_tools.length;
-    // }
-
     size = $('#skills_preview #tool h4').length;
     // THE NUMBER OF IMAGES PREVIEWED ON SCREEN (THESE NEED TO POPULATE)
 
@@ -1360,12 +1321,8 @@ function __INITIALIZE_PAGE_DATA(data)
     var a = [];
     var proj = {};
 
-    // // FIND THE NUMBER OF 'ITEMS' IN THE 'SKILLS.XML'
-    // psize = $(data).find('item').length - 1;
-    //
-    // rnum = Math.floor((Math.random() * psize) + 1);
-    // STORE A COMPLETE 'ITEM' THAT REFLECTS ALL DATA RELATED TO A 'PROJECT'
 
+    // STORE A COMPLETE 'ITEM' THAT REFLECTS ALL DATA RELATED TO A 'PROJECT'
     projects = _suffleArray(__GET_ALL_PROJECTS(data));
     temp_projects = projects.slice();
 
