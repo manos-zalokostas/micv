@@ -5,7 +5,7 @@ const fs = require('fs');
 const hostname = '0.0.0.0';
 const port = 3000;
 
-const VALID_EXTENSIONS = ['.html', '.js', '.css', '.xml', '.jpg', '.png'];
+const VALID_EXTENSIONS = ['.html', '.js', '.css', '.xml', '.jpg', '.png', '.mjs'];
 
 const print = (msg) => '<html><body><h1>Error 404: ' + msg + '</h1></body></html>';
 
@@ -32,8 +32,8 @@ const server = http.createServer((req, res) => {
         /*
          */
         let extension = path.extname(filePath);
-        console.log('- ext: ', extension);
         if (!VALID_EXTENSIONS.includes(extension)) {
+            console.log('NO VALID EXTE: , >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ', filePath)
             setError(fileUrl + ' not a HTML file', res);
             return;
         }
@@ -45,7 +45,14 @@ const server = http.createServer((req, res) => {
                 return;
             }
             res.statusCode = 200;
-            // res.setHeader('Content-Type', 'text/html');
+            // res.setHeader('Content-Type', 'text/plain');
+            if (['.js', '.mjs'].includes(extension)) {
+                res.setHeader('Content-Type', 'text/javascript');
+            }
+            if (['.css'].includes(extension)) {
+                res.setHeader('Content-Type', 'text/css');
+            }
+
             fs.createReadStream(filePath).pipe(res);
         });
 
