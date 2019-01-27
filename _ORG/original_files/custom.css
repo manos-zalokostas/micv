@@ -1,0 +1,653 @@
+@charset "utf-8";
+/* CSS Document */
+
+#preview {
+    float: left;
+    position: absolute;
+    margin: 3% 2%;
+    width: 200%;
+    height: 100%;
+    overflow: hidden;
+    right: -100%;
+}
+
+#preview img {
+    float: left;
+    width: 40%;
+    height: 87%;
+    position: relative;
+    margin-left: 8%;
+    border: solid #ddd 20px;
+    border-radius: 12px;
+}
+
+#preview embed {
+    float: left;
+    width: 38%;
+    height: 87%;
+    margin-left: 10%;
+    border-radius: 12px;
+}
+
+#preview iframe {
+    float: left;
+    width: 40%;
+    height: 87%;
+    position: relative;
+    margin-left: 8%;
+    border: solid #ddd 20px;
+    border-radius: 12px;
+}
+
+#media_control {
+    position: absolute;
+    top: 17%;
+    left: -100%;
+    background-color: #eee;
+    width: 34%;
+    height: 78%;
+    overflow: hidden;
+    border-top-right-radius: 30px;
+    border: solid 2px #ddd;
+}
+
+#media_control span {
+    float: left;
+    margin-top: 2%;
+    width: 74%;
+    height: 5%;
+    border-top: 3px solid #eee;
+    border-bottom: 3px solid;
+    position: relative;
+    left: 4%;
+    background-color: #ddd;
+    border-radius: 6px;
+    font-family: monospace;
+}
+
+#media_control span.nochild {
+    color: #bbb;
+    background-color: #aaa;
+    border-top: solid 3px #888;
+    text-align: center;
+}
+
+#media_control span.nochild:hover {
+    background-color: #aaa;
+    border-top: solid 3px #888;
+}
+
+#media_control span.haschild {
+    color: #aaa;
+}
+
+#media_control #cpanel span[title='exit']:hover {
+    background-color: white;
+    color: #aaa;
+}
+
+#media_control span.nochilds:hover {
+    background-color: white;
+}
+
+#media_control span:hover {
+    border-bottom: 3px solid #999;
+    cursor: pointer;
+    background-color: white;
+}
+
+#cpanel {
+    float: left;
+    width: 12%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 20;
+    background-color: #555;
+    font-family: tahoma;
+    border: solid 2px white;
+    top: -3%;
+    margin-top: 0;
+    padding-top: 4%;
+    font-weight: bold;
+    left: -1%;
+    border-radius: 30px;
+    left: -100%;
+    font-size: 1.5em;
+}
+
+div {
+    vertical-align: middle;
+    padding: 0;
+    margin: 0;
+}
+
+
+.mbuttons {
+    /* background-color: #444; */
+    position: absolute;
+    right: 8%;
+    top: -3%;
+    z-index: 30;
+    height: 8%;
+    border-radius: 2px;
+    width: 45%;
+}
+
+.mbuttons > * {
+    background-color: slategray;
+    font-family: calibri;
+    border-radius: 2px;
+    color: #eee;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    margin: 0;
+    padding: 0;
+    margin-left: 3px;
+    height: 80%;
+    width: 31%;
+    float: left;
+    top: -100%;
+    position: relative;
+    /* border: solid 1px white; */
+}
+
+.mbuttons > b {
+    opacity: 0;
+    border: solid 4px #555;
+    margin: 0;
+    border-radius: 0;
+}
+
+.mbuttons > em {
+    border-radius: 30px;
+    position: absolute;
+    top: 0;
+    right: -200%;
+    background-color: slategrey;
+    border: 2px solid #555;
+    font-style: normal;
+    width: 10%;
+    display: none;
+    left: 100%;
+}
+
+.mbuttons > em.paused, .mbuttons > em:hover {
+    display: block;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    border: 2px solid #555;
+}
+
+#welcome h2 {
+    float: left;
+    width: 40%;
+    text-align: left;
+    font-size: 2em;
+}
+
+#welcome h3 {
+    float: left;
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    top: 30%;
+    opacity: 0;
+    color: white;
+}
+
+#tools .mitem h2 {
+    position: relative;
+    top: 0%;
+    left: 0%;
+    margin: 1% 0;
+}
+
+
+
+
+
+#context {
+    margin: 0;
+    height: 104%;
+    width: 200%;
+    position: relative;
+    left: 0;
+}
+
+#temp_list {
+    position: relative;
+    float: left;
+    list-style-type: none;
+    text-decoration: none;
+    text-align: left;
+    color: #069;
+    padding: 3% 4%;
+    margin: 3% 0;
+    width: 100%;
+}
+
+
+#description {
+    float: left;
+    height: 95%;
+    width: 50%;
+    border-radius: 40px;
+    color: #aaa;
+}
+
+#files {
+    margin: 0 4%;
+    height: 15%;
+    margin-top: 4%;
+    background-color: #EEE;
+}
+
+#footer {
+    display: block;
+    background-color: #ddd;
+    height: 100%;
+    padding-left: 4%;
+}
+
+#footer > h2 {
+    height: 10%;
+    margin: 0;
+    padding: 0;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    color: #eee;
+    font-size: 6em;
+    font-family: tahoma;
+    text-transform: uppercase;
+}
+
+#footer ul {
+    float: left;
+    list-style-type: none;
+    width: 22%;
+    height: 80%;
+    margin: 2px;
+    padding: 0 1%;
+    overflow: auto;
+    color: #aaa;
+    background-color: #555;
+}
+
+#footer ul li {
+    text-align: left;
+    width: 100%;
+    float: left;
+    color: grey;
+    font-family: calibri;
+}
+
+#footer ul#social_links li {
+    padding-bottom: 4%;
+    padding-top: 4%;
+    width: 60%;
+    overflow: hidden;
+    float: right;
+}
+
+#footer ul#social_links {
+    padding: 0;
+}
+
+#footer ul#social_links li:first-child {
+    border: none;
+    padding: 0%;
+    width: 100%;
+    text-align: center;
+}
+
+#footer ul li:first-child {
+    height: 8%;
+    text-align: center;
+    margin-bottom: 8%;
+    font-size: 3em;
+    color: slategrey;
+    width: 100%;
+    font-weight: bold;
+}
+
+#footer ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+#footer ul li a img {
+    width: 24%;
+    border: solid 2px gainsboro;
+    margin-right: 4%;
+}
+
+#footer ul li a.organization {
+    float: left;
+    width: 100%;
+    text-align: left;
+    font-size: 0.8em;
+    text-decoration: none;
+    color: darkgray;
+    font-weight: bold;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    padding-left: 1%;
+}
+
+#footer ul li a.organization img {
+    border: solid gainsboro;
+    width: 17%;
+    float: right;
+    margin-right: 0;
+}
+
+#footer ul li a.organization span {
+    font-size: 1.5em;
+    display: block;
+    float: left;
+    width: 60%;
+    font-family: calibri;
+    color: tan;
+    padding: 2%;
+    padding-left: 0;
+}
+
+#footer ul li a.person {
+    text-decoration: none;
+    font-size: 0.8em;
+    text-decoration: none;
+    color: silver;
+}
+
+#footer ul:last-child {
+    border-right: none;
+}
+
+#ititle {
+    text-align: left;
+    padding: 0% 2% 4% 2%;
+    color: orange;
+    font-size: 2.5em;
+    font-family: verdana;
+    float: left;
+    padding: 0;
+    width: 100%;
+    margin: 0;
+    margin: 0;
+    float: left;
+    margin-top: 5%;
+}
+
+#ititle h3 {
+    display: inline;
+    font-family: verdana;
+    padding: 0;
+    margin: 0;
+    width: 70%;
+    float: left;
+    margin-bottom: 1%;
+    margin-left: 2%;
+}
+
+#ititle hr {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+#itools span a {
+    float: right;
+    display: inline;
+    font-family: verdana;
+    font-size: 1.1em;
+    text-align: right;
+    padding: 0;
+    margin: 0;
+    background-color: #555;
+    margin: 1px;
+    padding: 1%;
+    border-radius: 4px;
+    text-decoration: none;
+    color: white;
+}
+
+#itools span a:hover {
+    background-color: orange;
+}
+
+#itools span {
+    float: right;
+    font-family: verdana;
+    font-size: 0.8em;
+    text-align: right;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+#itools {
+    float: right;
+    display: inline;
+    font-family: verdana;
+    font-size: 0.8em;
+    text-align: right;
+    padding: 0;
+    margin: 0;
+    width: 25%;
+    position: relative;
+    bottom: 0%;
+    right: 2%;
+}
+
+#icategory {
+    font-size: 0.8em;
+    font-family: verdana;
+    padding: 0;
+    margin: 0;
+    width: 60%;
+    float: left;
+    margin-top: 1%;
+    text-align: left;
+    margin-left: 2%;
+}
+
+#icategory .cat_key {
+    background-color: #555;
+    border-radius: 5px;
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+}
+
+#ibody {
+    float: left;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 0.9em;
+    text-align: left;
+    width: 70%;
+    height: 70%;
+    overflow: hidden;
+    margin-top: 4%;
+}
+
+#idescription {
+    float: left;
+    overflow: auto;
+    color: rgb(50, 71, 90);
+    text-align: left;
+    font-family: calibri;
+    padding: 2%;
+    height: 65%;
+    width: 96%;
+    font-size: 1em;
+    position: relative;
+    padding-top: 4%;
+}
+
+#idescription span {
+    padding: 0;
+    margin: 0;
+}
+
+#iscreenshots {
+    float: left;
+    clear: both;
+    margin-top: 1%;
+    width: 80%;
+    height: 16%;
+    padding-top: 1%;
+    position: relative;
+}
+
+#iscreenshots > span {
+    float: left;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: 20%;
+}
+
+#iscreenshots a {
+    position: relative;
+    float: left;
+    width: 15%;
+    height: 100%;
+    margin-right: 2%;
+    overflow: hidden;
+}
+
+#iscreenshots img {
+    position: relative;
+    width: 96%;
+    height: 96%;
+    border: solid 2px #555;
+    max-height: 110%;
+}
+
+#iscreenshots img:hover {
+    border: solid 2px #CC0;
+    cursor: pointer;
+}
+
+#iextra {
+    float: right;
+    font-size: 1em;
+    font-family: arial;
+    width: 25%;
+    height: 75%;
+    position: relative;
+    right: 2%;
+    top: 12%;
+}
+
+#iextra > div {
+    float: left;
+    background-color: #eee;
+    margin-bottom: 1px;
+    width: 100%;
+    display: none;
+}
+
+#iextra > div > span {
+    display: none;
+    max-height: 53%;
+    overflow: auto;
+    padding: 2%;
+    margin-left: 2%;
+    width: 90%;
+}
+
+#iextra > div > strong {
+    color: white;
+    background-color: #555;
+    height: 20px;
+    border-radius: 2px;
+    width: 98%;
+    float: right;
+    position: relative;
+    bottom: 1%;
+    left: 0%;
+    padding: 1%;
+    border: solid 1px #9aa;
+}
+
+#icomplements > div {
+    float: left;
+    width: 98%;
+    overflow: auto;
+}
+
+#iextra div strong:hover {
+    color: white;
+    background-color: slategray;
+    cursor: pointer;
+}
+
+#iextra span {
+    padding: 2px;
+    margin: 2px;
+    background-color: white;
+    width: 96%;
+}
+
+#iextra a {
+    text-align: left;
+    color: #888;
+    width: 100%;
+    font-size: 0.8em;
+    float: left;
+    padding-top: 5%;
+    border-bottom: 3px solid #eee;
+}
+
+#iextra a:hover {
+    border-bottom: 3px solid lightblue;
+}
+
+#iextra #icomment {
+    height: 54%;
+}
+
+#iextra #icomment span {
+    max-height: 100%;
+}
+
+#imedia img, #ifiles img {
+    float: right;
+    vertical-align: top;
+    margin-right: 3%;
+    width: 12%;
+    border: 0;
+}
+
+#imedia p, #ifiles p {
+    float: left;
+    padding: 0;
+    margin: 0;
+    font-size: 0.8em;
+    width: 65%;
+    margin: 1%;
+}
+
+#iscore > span {
+    font-size: 3em;
+    color: cornflowerblue;
+    font-weight: bold;
+}
+
+#iscore > span:before {
+    content: 'score: ';
+    font-size: 0.5em;
+    color: #bbb
+}
+
+#itutor {
+    text-align: left;
+}
+
+#itutor h4 {
+    float: left;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}

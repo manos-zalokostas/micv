@@ -6,24 +6,28 @@
     <script defer src="https://code.jquery.com/jquery-1.9.1.js"></script>
     <script defer type="text/javascript" src="./custom.js"></script>
     <link type="text/css" rel="stylesheet" href="custom.css"/>
-</head>
-<body>
-<script>
+    <script>
 
-    const config = {
+        const params = {
+            page:'monitor',
+            view:'list'
+        };
+
+        const app = {
             data: undefined,
-            actions: {
+            utils: {
+                getAsyncModule: async function (params, o) {
+                    let fnModule = await  import(params.page);
+                    return fnModule.default(params);
+                },
                 renderModule: function (selector, content) {
                     document.querySelector(selector).innerHTML = content;
                 },
-                getAsyncModule: async function (path, o) {
-                    let fnModule = await  import(path);
-                    return fnModule.default(o);
-                },
             }
         }
-    ;
-</script>
+    </script>
+</head>
+<body>
 <div id="view">
     <div id="wrapper">
 
@@ -40,10 +44,11 @@
 
         <div id="introduction">
             <script type="module">
-                (async () => {
-                        const PATH = './page/introduction/introduction.mjs';
-                        let module = await config.actions.getAsyncModule(PATH, config);
-                        config.actions.renderModule(module.selector, module.content);
+                params.page ==='monitor' && (async () => {
+                        params.page= './page/introduction.mjs';
+                        params.node = '#introduction';
+                        let module = await app.utils.getAsyncModule(params, app);
+                        app.utils.renderModule('#introduction', module.content);
                     }
                 )()
             </script>
