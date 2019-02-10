@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Builder Page</title>
+    <script>
+
+        const http = {
+            page: 'builder',
+            view: 'list',
+            type: 'web'
+        };
+
+
+        const app = {
+            data: undefined,
+            actions: {},
+            utils: {
+                getAsyncModule: async (params, o) => {
+                    let fnModule = await  import(params.page);
+                    return fnModule.default(params, app);
+                },
+                renderModule: (selector, content, css) => {
+                    document.querySelector(selector).innerHTML = content.concat(css);
+                },
+                strReduceSpace: (str) => str && str.replace(/\s{2,}/g, '')
+            },
+            importer: async (HTTP, PAGE, NODE, INDEX) => {
+                if (HTTP.page === NODE) {
+                    HTTP.page = PAGE;
+                    let module = await app.utils.getAsyncModule(HTTP, app);
+
+                    app.actions[INDEX] = module.actions;
+                    app.utils.renderModule(
+                        '#' + NODE,
+                        module.content,
+                        app.utils.strReduceSpace(module.css)
+                    );
+                }
+            },
+        }
+
+    </script>
+</head>
+<body>
+
+<section style="width:800px; height:400px; margin:300px">
+    <div class="stage">
+        <div class="actor" style="--width:100%; --height:100%"></div>
+    </div>
+    <!--<div id="builder">-->
+    <!--<script type="module">-->
+    <!--let page = '../PARTS/skillspreview.mjs',-->
+    <!--node = 'builder',-->
+    <!--view = 'resume';-->
+    <!--app.importer(http, page, node, view);-->
+    <!--</script>-->
+    <!--</div>-->
+</section>
+<style>
+
+    .actor:hover {
+        transition: background-color 500ms ease-in 0.2s;
+    }
+
+    .actor {
+        position: absolute;
+        height: var(--height);
+        width: var(--width);
+        background-color: green;
+        /*border:1px solid green;*/
+    }
+
+    .stage {
+        position: relative;
+        overflow: hidden;
+        border: 2px solid red;
+        height: 100%;
+        width: 100%;
+    }
+
+</style>
+
+<style>
+
+    /*
+    ANIMATIONS
+    */
+
+    @keyframes anime-left-in {
+        0% {
+            transform: translateX(-100%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes anime-left-out {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+
+    @keyframes anime-right-in {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes anime-right-out {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(100%);
+        }
+    }
+
+    @keyframes anime-top-in {
+        0% {
+            transform: translateY(-100%);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes anime-top-out {
+        0% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(-100%);
+        }
+    }
+
+    @keyframes anime-bottom-in {
+        0% {
+            transform: translateY(100%);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes anime-bottom-out {
+        0% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(100%);
+        }
+    }
+
+    @keyframes anime-width-min {
+        0% {
+            transform: scaleX(0);
+        }
+        100% {
+            transform: scaleX(100);
+        }
+    }
+
+    @keyframes anime-width-max {
+        0% {
+            transform: scaleX(0);
+        }
+        100% {
+            transform: scaleX(100);
+        }
+    }
+
+    @keyframes anime-height-min {
+        0% {
+            transform: scaleY(0);
+        }
+        100% {
+            transform: scaleY(100);
+        }
+    }
+
+    @keyframes anime-height-max {
+        0% {
+            transform: scaleY(0);
+        }
+        100% {
+            transform: scaleY(100);
+        }
+    }
+
+    @keyframes anime-rotate-x-top {
+        100% {
+            transform: rotateX(360deg);
+        }
+    }
+
+    @keyframes anime-rotate-x-bottom {
+        100% {
+            transform: rotateX(-360deg);
+        }
+    }
+
+    @keyframes anime-rotate-y-in {
+        100% {
+            transform: rotateY(360deg);
+        }
+    }
+
+    @keyframes anime-rotate-y-out {
+        100% {
+            transform: rotateY(-360deg);
+        }
+    }
+
+    @keyframes anime-rotate-z-left {
+        100% {
+            transform: rotateZ(360deg);
+        }
+    }
+
+    @keyframes anime-rotate-z-right {
+        100% {
+            transform: rotateZ(-360deg);
+        }
+    }
+
+    @keyframes opacity-out {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+
+    @keyframes opacity-in {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .left-in {
+        animation: anime-left-in 2s 1 ease-in-out forwards;
+    }
+
+    .left-out {
+        animation: anime-left-out 2s 1 ease-in-out forwards;
+    }
+
+    .right-in {
+        animation: anime-right-in 2s 1 ease-in-out forwards;
+    }
+
+    .right-out {
+        animation: anime-right-out 2s 1 ease-in-out forwards;
+    }
+
+    .top-in {
+        animation: anime-top-in 2s 1 ease-in-out forwards;
+    }
+
+    .top-out {
+        animation: anime-top-out 2s 1 ease-in-out forwards;
+    }
+
+    .bottom-in {
+        animation: anime-bottom-in 2s 1 ease-in-out forwards;
+    }
+
+    .bottom-out {
+        animation: anime-bottom-out 2s 1 ease-in-out forwards;
+    }
+
+    .width-max {
+        animation: anime-width-max 2s 1 ease-in-out forwards;
+    }
+
+    .width-min {
+        animation: anime-width-min2s 1 ease-in-out forwards;
+    }
+
+    .height-max {
+        animation: anime-height-max 2s 1 ease-in-out forwards;
+    }
+
+    .height-min {
+        animation: anime-height-max 2s 1 ease-in-out forwards;
+    }
+
+    .rotate-x-top {
+        animation: anime-rotate-x-top 2s 1 ease-in-out forwards;
+    }
+
+    .rotate-x-bottom {
+        animation: anime-rotate-x-bottom 2s 1 ease-in-out forwards;
+    }
+
+    .rotate-y-in {
+        animation: anime-rotate-y-in 2s 1 ease-in-out forwards;
+    }
+
+    .rotate-y-out {
+        animation: anime-rotate-y-out 2s 1 ease-in-out forwards;
+    }
+
+    .rotate-z-left {
+        animation: anime-rotate-z-left 2s 1 ease-in-out forwards;
+    }
+
+    .rotate-z-right {
+        animation: anime-rotate-z-right 2s 1 ease-in-out forwards;
+    }
+
+    .opacity-in {
+        animation: opacity-in 2s 1 ease-in-out forwards;
+    }
+
+    .opacity-out {
+        animation: opacity-out 2s 1 ease-in-out forwards;
+    }
+
+
+</style>
+</body>
+</html>
