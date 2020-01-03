@@ -46,11 +46,7 @@
             <file>images/sheduler/fp_technical_details.pdf</file>
         </files>
         <media>
-            <!--<movie>https://docs.google.com/file/d/0B_aqY-HgFIVpR2NzTEV5QVJTU0E/edit,-->
-            <!--schedule_handler.avi-->
-            <!--</movie>-->
         </media>
-        <!--<link>samples/scheduler/_nyc_index.php</link>-->
     </item>
     <item>
         <domain>WEB</domain>
@@ -1738,9 +1734,6 @@
             <file>images/sheduler/fp_technical_details.pdf</file>
         </files>
         <media>
-            <!--<movie>https://docs.google.com/file/d/0B_aqY-HgFIVpR2NzTEV5QVJTU0E/edit,-->
-            <!--schedule_handler.avi-->
-            <!--</movie>-->
         </media>
         <link></link>
     </item>
@@ -1849,10 +1842,8 @@
         <comment>-</comment>
         <files>
             <file>images/deltacosmos/delta_development.pdf</file>
-            <!--<file>images/deltacosmos/application_database.pdf</file>-->
         </files>
         <media>-</media>
-        <!--<link>samples/deltacosmos</link>-->
     </item>
     <item>
         <domain>WEB</domain>
@@ -1931,17 +1922,21 @@
         </tools>
         <description>
             <![CDATA[
- <p>Occupied as a part of Scrum maintained, multicultural developers environment for Interactive Data providing the implementation of Commerzbank Intranet project, namely Infobroker. Main responsibility was to collect, design and retrieve proprietary data - or complete data-views -  through Interactive Data web services, using a custom graphical interface of enterprise. The final output would be visually styled for web monitoring, dictated strictly through customer specifications.
-       By the time the project reached a certain level of completness, my job role was added to provide ticketing system support.
- </p>
- <ul> Key Responsibilities:
- <span>
- <li>Front-end developer</li>
- <li>Design data-structures / data-views and consume</li>
- <li>Desing and develop web-pages / web-page-widgets</li>
- <li>Provide ticketing system support</li>
- </span>
- </ul>
+<h3>Contracted as a Frontend Developer part of multinational, scrum maintained team of web developers.</h3>
+
+<p>The objective was for the team to build a concurrent web solution for the German Commerzbank that would be used internally by company's employees, namely Infobroker.  The intranet would assist bank's employees to monitor,  evaluate and gain insight from data visualizations.
+
+My role was to adhere to design blueprints dictated by company's UI/UX experts and deliver interactive pages and widgets.
+Enabling daily web meetings with with foreign colleagues and data maintainers, we would need to resolve the required data and the paths to collect before delivering the solutions.
+Data would need to get collected with the use of a graphical interface that would ensure data security all the way through.
+By the time the project reached to a certain level of completeness, my job was moved to provide ticketing support services.</p>
+
+Key Responsibilities:
+<ul>
+<li>Front-end developer with OOP PHP Zend Framework & Javascript / Jquery (backend was a remote service)</li>
+<li>Follow explicit instructions to consume required data from remote web services and blueprint layouts to deliver UIs</li>
+<li>Provide ticketing solutions for acknowledged bugs</li>
+</ul>
  ]]>
         </description>
         <screenshots>
@@ -1989,20 +1984,28 @@
         </tools>
         <description>
             <![CDATA[
- <p>
- Occupied as standalone Full Stack Developer in Agile mode with the Manager on a lecacy CRM system originated a decade back. The project was large and the legacy coded style brought to surface mixed technologies co-existing on thousand-lined standalone pages and a database with 500 tables invoked.
+ <h3>Contracted as standalone Full Stack Developer to partner with an assigned American coordinator that would guide me through development tasks by providing the respective business requirements. Daily web meetings.</h3>
+
+ <p>The overall objective was to upgrade, extend and maintain a legacy CRM commercial system that was build on top of PHP legacy constructs.
+
+ My role was to make the app portable by detaching all hardcoded paths of the project from the server, invoke svn versioning, launch on an updated server and afterwards extend with new features.
+  The project was large, consisting of more than 500 DB tables and the lack of any viable coding formation to separate diverse technologies was making it difficult to maintain.
+ The result was to work on the same page with all mixed technologies brushed-up on  thousand-lined pages.
  </p>
- <ul> Main Developments:
- <span>
- <li>Provide portability: Unroot the project from harcoded host and move all sensitive data to extranal configuration led to change literally almost a dosen of thousand files</li>
- <li>Set up a Ubuntu-based virtual 'Local' and Centos-based remote 'Stagging' hosts to deploy and test application before move on 'Production'</li>
- <li>Implement a parent 'User' in a MVC-like environment, that would provide all essential features to the newly created Classes. Amongst others, new classes would, access out-of-the-box,  grant access for: Configuration, Db, Session, Access Restrictions, Self-Debug, Debug-Loggs, Exceptions, Helper methods, and more.
- </li>
- <li>Synchronize legacy Calendar libraries (1st php-based and 2nd js-based) with Outlook through Exchange Web Services (EWS) to provide control over Calendar-Events, User-Tasks, Emails, Contacts etc </li>
- <li>Chart-based, time-ranged filtered, auditing of performance for Employees / Managers / Directors </li>
- <li>Enforce 90-Days, token-generated with expiry limations, password maintenance for all users</li>
- </span>
- </ul>
+
+<h4>Main Developments</h4>
+<ul>
+<li>Put application under SVN Versioning control</li>
+<li>Provide portability: Unroot the project that was harcoded  on the host and move all configuration data and links to custom-made external '.ini' configuration,</li>
+<li>Install and setup a Centos 5 copy of the Production to run as Staging environment and perform tests before updates publishing to Production.</li>
+<li>Set up a Ubuntu-based virtual 'Local' and Centos-based remote 'Staging' hosts to deploy and test application before move on 'Production'</li>
+<li>Set up a clone virtual machine (vbox) for development environment</li>
+<li>Implement Utility classes and a Core class, with MVC-like capabilities, as a root class to extend and inherit all essential activities for the newly invoked classes afterwards.</li>
+<li>Amongst others, newly initialized child classes, would genuinely have access to: Main and own Configuration, Database storage, Session storage, Access Restrictions, Self-Debug, Debug-Logs, Exceptions, Helper methods, and more.</li>
+<li>Synchronize 2 legacy Calendar libraries (1 php, 1 js) with Exchange Web Services (EWS) to enable control over Microsoft Calendar Events, User Tasks, Emails, Contacts etc</li>
+<li>Launch time evaluated,filtered, charts for performance auditing Employees / Teams / Managers / Directors</li>
+<li>Enforce 90-Days expiring passwords for all users, validated with unique tokens and time restricted activation boundaries,</li>
+</ul>
  ]]>
         </description>
         <screenshots>
@@ -2016,6 +2019,233 @@
         <files>
             <file>images/noblelinx/diagram1.png</file>
             <file>images/noblelinx/diagram2.png</file>
+        </files>
+        <media></media>
+        <link></link>
+    </item>
+    <item>
+        <domain>WEB</domain>
+        <id>WB10</id>
+        <section>Application Development</section>
+        <category>Design and Development</category>
+        <title>Ecep Technologies Inventory</title>
+        <tools>
+            <tool>web_application</tool>
+            <tool>javascript</tool>
+            <tool>php</tool>
+            <tool>css3</tool>
+            <tool>php</tool>
+            <tool>oop</tool>
+            <tool>requirements</tool>
+            <tool>mysql</tool>
+            <tool>laravel</tool>
+            <tool>bootstrap</tool>
+            <tool>git</tool>
+            <tool>phpstorm</tool>
+            <tool>mvc</tool>
+            <tool>rest_api</tool>
+        </tools>
+        <description>
+            <![CDATA[
+<h3>Contracted as standalone Full Stack Developer to design and build the company's warehouse inventory from scratch using a contemporary web framework, and utilizing the business requirement discussed daily with the owner on web calls.</h3>
+
+<p>The objective was to build a web system that would allow company's employees to perform daily workflow procedures handily and reduce the times needed to perform such tasks with spreadsheets and manpower.
+
+My role was to bring that system to life right from the ground, by communicating with the entrepreneur on a daily basis, to collect and elicit requirements.
+The initial task was to design and build a database of a centralized inventory application for company's products, and replace spreadsheets that were used instead. Following steps would issue the extensions  activities required to cover companies processes like purchases, deliveries, sales etc.</p>
+
+<h4>Main Developments</h4>
+<ul>
+<li>Design and build an efficient DB system by analyzing and evaluating legacy spreadsheet procedures for more than 500K distinct barcodes</li>
+<li>Use the Laravel MVC 5.1 Framework to as a robust and secure foundation to build the application and a REST-like API</li>
+<li>Use remote Git Repository to control development progress but also for deployments</li>
+<li>Create a Local virtual (VBOX) clone of Production for development purposes</li>
+<li>
+<p>Develop the core parts of the Application, ilke
+ - Product Imports with spreadsheets, barcode recognition, manually
+ - Product CRUD & Products Indexing w/ numerous filter combinations
+ - Indexing products lack / surplus
+ - Indexing of Purchases / Deliveries / Sales
+ - Instant evaluation of a devery in a way to identify lack / surplus on time
+ - Instant monitoring of past delivery status like complete / pending items
+ </p>
+ </li>
+</ul>
+ ]]>
+        </description>
+        <screenshots>
+            <shot>images/ecep/delivery_status.png</shot>
+            <shot>images/ecep/pending_purchaces.png</shot>
+            <shot>images/ecep/search_tool.png</shot>
+            <shot>images/ecep/purchase_details.png</shot>
+        </screenshots>
+        <score>-</score>
+        <tutor>-</tutor>
+        <comment>-</comment>
+        <files>
+            <file>images/ecep/erd.png</file>
+            <file>images/ecep/search_tool_description.png</file>
+            <file>images/ecep/api_feed_json.png</file>
+        </files>
+        <media></media>
+        <link></link>
+    </item>
+    <item>
+        <domain>WEB</domain>
+        <id>WB11</id>
+        <section>Application Development</section>
+        <category>Design and Development</category>
+        <title>Cosmores Booking Engine</title>
+        <tools>
+            <tool>web_application</tool>
+            <tool>php</tool>
+            <tool>javascript</tool>
+            <tool>jquery</tool>
+            <tool>css3</tool>
+            <tool>oop</tool>
+            <tool>requirements</tool>
+            <tool>mysql</tool>
+            <tool>centos</tool>
+            <tool>security</tool>
+            <tool>git</tool>
+            <tool>rest_api</tool>
+        </tools>
+        <description>
+            <![CDATA[
+<h3>Employed as standalone Fullstack Developer to maintain and extend the company's products.</h3>
+
+<p>The objective was to update the company's products, increase and enforce security on critical fields and launch new tools and features
+
+My role as a fullstack developer was to update the overall environment of a more than a decade past developed PHP system, without any coding formation style and mixed up technologies (php, js, css) on huge pages. Additionally I would need to create some common reusable helper structures to assist me build new things properly.
+</p>
+
+Main Developments
+<ul>
+<li>Build common and explicit PHP helper structures to make development lifecycle natively simple and secure</li>
+<li>
+<p>
+Build a configurable, Javascript CORS widget for displaying best price of an affiliate hotels.</p>
+ - A new REST-like, PHP API build to accommodate the exchange of CORS data consumed by widget
+ - The widget travels from Cosmores to customer site in string formate and then self-installed with included javascript launcher
+ - The widget is build with vanilla Js and plain CSS in order to avoid confiict with installed Jquery / Bootstrap or own site styles
+ - The widget is compatible with IE 8, Safari, Chrome etc
+ - The widget is fully controllable and customizable from respective backend app.
+ </p>
+ </li>
+<li>Put the application under GIT versioning and create a master repository on a remote server</li>
+<li>Create a portable, local virtual clone (vbox) of the Production environment server, so that development and testing activities</li> restrain from Production.</li>
+<li>
+<p>Leverage the security processes overall:
+ - Leverage the security of entry by blocking the front entrance and allow only recognizable devices to log in. The activity uses expirable tokens that are only accepted for limited amount of time, and provide respective messages to users for guidance.
+ - Enforce strong passwords with mixed char types and length
+ - Leverage the encryption/decryption procedures for all sensitive data in the DB, which led to more than 1M rows update
+ - Enforce a finite number of times informative data can be displayed before locked for ever
+ - Leverage the restriction rules for image uploads and malicious code indexing methods
+ - Invoke sanitize/filtering on data import/display respectively
+ - Enforce PDO with MySQL inserts
+ - Make extensive use of .httaccess for filtering urls, root and child directories with explicit rules for each
+ </p>
+ </li>
+</ul>
+ ]]>
+        </description>
+        <screenshots>
+            <shot>images/cosmores/compareme_config.png</shot>
+            <shot>images/cosmores/compareme_info.png</shot>
+        </screenshots>
+        <score>-</score>
+        <tutor>-</tutor>
+        <comment>-</comment>
+        <files>
+            <file>images/cosmores/notificatons_info.png</file>
+        </files>
+        <media></media>
+        <link></link>
+    </item>
+    <item>
+        <domain>WEB</domain>
+        <id>WB12</id>
+        <section>Application Development</section>
+        <category>Design and Development</category>
+        <title>Rateparity</title>
+        <tools>
+            <tool>web_application</tool>
+            <tool>javascript</tool>
+            <tool>reactjs</tool>
+            <tool>es6</tool>
+            <tool>css3</tool>
+            <tool>scss</tool>
+            <tool>requirements</tool>
+            <tool>nodejs</tool>
+            <tool>webpack</tool>
+            <tool>git</tool>
+            <tool>rest_api</tool>
+        </tools>
+        <description>
+            <![CDATA[
+<h3>Employed as standalone Frontend Developer to build fully customizable UI widgets, for affiliate sites, in association with a company's stakeholder that designed and developed the backend as a remote data web service.</h3>
+
+<p>The objective was to create a new product that would explore the potentials of UI widgets and thus enter a new market for the company
+
+My role as a Frontend developer was to create the independable CORS empowered Javascript widgets that would load on affiliate sites. The widgets should invoke the latest Js trends, load on sites without causing or receiving Js / CSS defects and should be as lightweight as possible restraining from vaguely loading countless libraries. Additianally I was attached to build the backend configuration application.
+</p>
+
+<h4>Main Developments</h4>
+
+FRONTEND WIDGETS -------------------------------------------------------------------------------
+<ul>
+<li>Design and develop the app's Installer that can be used on affiliate sites with a single HTML “Head”entry</li>
+<li>Design and develop decoupled SPA widgets, that reside on their own domains and can be launched by installer on demand</li>
+<li>
+<p>
+Publish 5 distinct widget types, with 4 viewport layouts for each, to accommodate diversity of screen displays:
+ - Price checks::          Integrates calendar that helps users check hotel prices per accommodation and compare with major booking channels
+ - Active offers::          Registered offers can be displayed with a user click
+ - Notifications::          Intresting metrics, in the form of notifications are displayed on sites screen
+ - Popup offers::          Offers can popup on user display at navigation time, based on submitted configuration
+</p>
+</li>
+<li>Utilize the latest React 16.8 build and make use of powerful features like Hooks, Code splitting, Lazy loading, Context api, Dynamic imports etc</li>
+<li>Make extensive use of cache so that widgets restrain from excessive calls to the remote service</li>
+<li>Structure the development environment with NodeJs, Webpack, Babel etc</li>
+</ul>
+
+BACKEND APPLICATION --------------------------------------------------------------------------------
+<ul>
+<li>
+<p>Create a React 16.4 application based on a helper theme with some main group activities
+- Configuration domains per widget
+- Metrics and evaluation of widget usage
+- Main Dashboard, Install and more..
+</p>
+</li>
+<li>
+<p>
+The widgets configuration includes
+- Configurable, on screen, positioning
+- Configurable colors and literals
+- Configurable activation / deactivation periods
+</p>
+</li>
+</ul>
+ ]]>
+        </description>
+        <screenshots>
+            <shot>images/rateparity/widget_price_full.png</shot>
+            <shot>images/rateparity/widget_max_roomstream.png</shot>
+            <shot>images/rateparity/widget_offer_full.png</shot>
+            <shot>images/rateparity/config_price_position.png</shot>
+            <shot>images/rateparity/config_offer_colors.png</shot>
+        </screenshots>
+        <score>-</score>
+        <tutor>-</tutor>
+        <comment>-</comment>
+        <files>
+            <file>images/rateparity/config_snippet_content.png</file>
+            <file>images/rateparity/config_disparity_details.png</file>
+            <file>images/rateparity/config_welcome.png</file>
+            <file>images/rateparity/widget_price_mobile.png</file>
+            <file>images/rateparity/widget_max_teaser.png</file>
         </files>
         <media></media>
         <link></link>

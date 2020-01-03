@@ -387,7 +387,7 @@ div {
 
 #introduction #interactive_cv_field #timeline li {
     position: relative;
-    margin: 0 2.5%;
+    margin: 0 2.2%;
     float: left;
     background-color: #ccc;
     width: 1px;
@@ -539,7 +539,6 @@ div {
 
 .mbuttons > em {
     border-radius: 30px;
-    px; */
     position: absolute;
     top: 0;
     right: -200%;
@@ -553,7 +552,7 @@ div {
 
 .mbuttons > em.paused, .mbuttons > em:hover {
     display: block;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: tomato;
     color: white;
     border: 2px solid #555;
 }
@@ -1164,7 +1163,7 @@ div {
     text-align: right;
     color: white;
     width: 30%;
-    height: 20%;
+    height: 26%;
     padding-right: 1%;
     margin: 2px;
     background-color: rgba(255, 255, 255, 0.2);
@@ -1197,7 +1196,7 @@ div {
     color: white;
     font-size: 1em;
     width: 40%;
-    height: 30%;
+    height: 20%;
     float: left;
 }
 
