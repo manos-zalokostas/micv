@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c2027ac-7fbf-48f5-b8a4-e62f9701cdf7" name="Default" comment="...followup">
-      <change afterPath="$PROJECT_DIR$/images/tech_logos/test.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/items.xml" beforeDir="false" afterPath="$PROJECT_DIR$/items.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +88,8 @@
       <workItem from="1577818989610" duration="2966000" />
       <workItem from="1578060304608" duration="12295000" />
       <workItem from="1578133900066" duration="3465000" />
-      <workItem from="1578139979731" duration="1197000" />
+      <workItem from="1578139979731" duration="1843000" />
+      <workItem from="1578154864490" duration="860000" />
     </task>
     <task id="LOCAL-00001" summary="convert http =&gt; https">
       <created>1545926008916</created>
@@ -113,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578071938255</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="...followup">
+      <created>1578146113514</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1578146113514</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,10 +149,10 @@
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="701" y="428" width="520" height="262" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1577628814673" />
-    <state x="565" y="154" width="791" height="810" key="CommitChangelistDialog2" timestamp="1578071938104">
+    <state x="565" y="154" width="791" height="810" key="CommitChangelistDialog2" timestamp="1578146113197">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="565" y="154" width="791" height="810" key="CommitChangelistDialog2/0.28.1920.1052@0.28.1920.1052" timestamp="1578071938104" />
+    <state x="565" y="154" width="791" height="810" key="CommitChangelistDialog2/0.28.1920.1052@0.28.1920.1052" timestamp="1578146113197" />
     <state x="704" y="300" width="513" height="518" key="FileChooserDialogImpl" timestamp="1577633040103">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
@@ -159,26 +165,26 @@
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="748" y="284" width="606" height="524" key="StructurePopup/0.28.1920.1052@0.28.1920.1052" timestamp="1578064572221" />
-    <state x="555" y="292" width="812" height="533" key="Vcs.Push.Dialog.v2" timestamp="1578071940584">
+    <state x="555" y="292" width="812" height="533" key="Vcs.Push.Dialog.v2" timestamp="1578146124887">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="555" y="292" width="812" height="533" key="Vcs.Push.Dialog.v2/0.28.1920.1052@0.28.1920.1052" timestamp="1578071940584" />
-    <state x="616" y="381" key="com.intellij.ide.util.TipDialog" timestamp="1578146085178">
+    <state x="555" y="292" width="812" height="533" key="Vcs.Push.Dialog.v2/0.28.1920.1052@0.28.1920.1052" timestamp="1578146124887" />
+    <state x="616" y="381" key="com.intellij.ide.util.TipDialog" timestamp="1578154868164">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="616" y="381" key="com.intellij.ide.util.TipDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1578146085178" />
-    <state x="330" y="107" width="1361" height="897" key="find.popup" timestamp="1578070596419">
+    <state x="616" y="381" key="com.intellij.ide.util.TipDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1578154868164" />
+    <state x="330" y="107" width="1361" height="897" key="find.popup" timestamp="1578157545258">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="330" y="107" width="1361" height="897" key="find.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1578070596419" />
+    <state x="330" y="107" width="1361" height="897" key="find.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1578157545258" />
     <state x="684" y="253" width="672" height="677" key="run.anything.popup" timestamp="1577803409066">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="684" y="253" width="672" height="677" key="run.anything.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1577803409066" />
-    <state x="939" y="272" width="672" height="678" key="search.everywhere.popup" timestamp="1578069505578">
+    <state x="939" y="272" width="672" height="678" key="search.everywhere.popup" timestamp="1578157523009">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="939" y="272" width="672" height="678" key="search.everywhere.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1578069505578" />
+    <state x="939" y="272" width="672" height="678" key="search.everywhere.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1578157523009" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
