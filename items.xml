@@ -1925,11 +1925,13 @@
 <h3>Contracted as a Frontend Developer part of multinational, scrum maintained team of web developers.</h3>
 
 <p>The objective was for the team to build a concurrent web solution for the German Commerzbank that would be used internally by company's employees, namely Infobroker.  The intranet would assist bank's employees to monitor,  evaluate and gain insight from data visualizations.
-
+<br />
 My role was to adhere to design blueprints dictated by company's UI/UX experts and deliver interactive pages and widgets.
 Enabling daily web meetings with with foreign colleagues and data maintainers, we would need to resolve the required data and the paths to collect before delivering the solutions.
+<br />
 Data would need to get collected with the use of a graphical interface that would ensure data security all the way through.
-By the time the project reached to a certain level of completeness, my job was moved to provide ticketing support services.</p>
+By the time the project reached to a certain level of completeness, my job was moved to provide ticketing support services.
+</p>
 
 Key Responsibilities:
 <ul>
@@ -1989,8 +1991,10 @@ Key Responsibilities:
  <p>The overall objective was to upgrade, extend and maintain a legacy CRM commercial system that was build on top of PHP legacy constructs.
 
  My role was to make the app portable by detaching all hardcoded paths of the project from the server, invoke svn versioning, launch on an updated server and afterwards extend with new features.
+ <br />
   The project was large, consisting of more than 500 DB tables and the lack of any viable coding formation to separate diverse technologies was making it difficult to maintain.
- The result was to work on the same page with all mixed technologies brushed-up on  thousand-lined pages.
+  <br />
+ The result was to work on the same page with all mixed-up  on  thousand-lined pages.
  </p>
 
 <h4>Main Developments</h4>
@@ -2049,9 +2053,11 @@ Key Responsibilities:
             <![CDATA[
 <h3>Contracted as standalone Full Stack Developer to design and build the company's warehouse inventory from scratch using a contemporary web framework, and utilizing the business requirement discussed daily with the owner on web calls.</h3>
 
-<p>The objective was to build a web system that would allow company's employees to perform daily workflow procedures handily and reduce the times needed to perform such tasks with spreadsheets and manpower.
-
+<p>
+The objective was to build a web system that would allow company's employees to perform daily workflow procedures handily and reduce the times needed to perform such tasks with spreadsheets and manpower.
+<br />
 My role was to bring that system to life right from the ground, by communicating with the entrepreneur on a daily basis, to collect and elicit requirements.
+<br />
 The initial task was to design and build a database of a centralized inventory application for company's products, and replace spreadsheets that were used instead. Following steps would issue the extensions  activities required to cover companies processes like purchases, deliveries, sales etc.</p>
 
 <h4>Main Developments</h4>
@@ -2062,12 +2068,12 @@ The initial task was to design and build a database of a centralized inventory a
 <li>Create a Local virtual (VBOX) clone of Production for development purposes</li>
 <li>
 <p>Develop the core parts of the Application, ilke
- - Product Imports with spreadsheets, barcode recognition, manually
- - Product CRUD & Products Indexing w/ numerous filter combinations
- - Indexing products lack / surplus
- - Indexing of Purchases / Deliveries / Sales
- - Instant evaluation of a devery in a way to identify lack / surplus on time
- - Instant monitoring of past delivery status like complete / pending items
+ <br />- Product Imports with spreadsheets, barcode recognition, manually
+ <br />- Product CRUD & Products Indexing w/ numerous filter combinations
+ <br />- Indexing products lack / surplus
+ <br />- Indexing of Purchases / Deliveries / Sales
+ <br />- Instant evaluation of a devery in a way to identify lack / surplus on time
+ <br />- Instant monitoring of past delivery status like complete / pending items
  </p>
  </li>
 </ul>
@@ -2114,8 +2120,9 @@ The initial task was to design and build a database of a centralized inventory a
             <![CDATA[
 <h3>Employed as standalone Fullstack Developer to maintain and extend the company's products.</h3>
 
-<p>The objective was to update the company's products, increase and enforce security on critical fields and launch new tools and features
-
+<p>
+The objective was to update the company's products, increase and enforce security on critical fields and launch new tools and features
+<br />
 My role as a fullstack developer was to update the overall environment of a more than a decade past developed PHP system, without any coding formation style and mixed up technologies (php, js, css) on huge pages. Additionally I would need to create some common reusable helper structures to assist me build new things properly.
 </p>
 
@@ -2125,25 +2132,25 @@ Main Developments
 <li>
 <p>
 Build a configurable, Javascript CORS widget for displaying best price of an affiliate hotels.</p>
- - A new REST-like, PHP API build to accommodate the exchange of CORS data consumed by widget
- - The widget travels from Cosmores to customer site in string formate and then self-installed with included javascript launcher
- - The widget is build with vanilla Js and plain CSS in order to avoid confiict with installed Jquery / Bootstrap or own site styles
- - The widget is compatible with IE 8, Safari, Chrome etc
- - The widget is fully controllable and customizable from respective backend app.
+ <br />- A new REST-like, PHP API build to accommodate the exchange of CORS data consumed by widget
+ <br />- The widget travels from Cosmores to customer site in string formate and then self-installed with included javascript launcher
+ <br />- The widget is build with vanilla Js and plain CSS in order to avoid confiict with installed Jquery / Bootstrap or own site styles
+ <br />- The widget is compatible with IE 8, Safari, Chrome etc
+ <br />- The widget is fully controllable and customizable from respective backend app.
  </p>
  </li>
 <li>Put the application under GIT versioning and create a master repository on a remote server</li>
 <li>Create a portable, local virtual clone (vbox) of the Production environment server, so that development and testing activities</li> restrain from Production.</li>
 <li>
 <p>Leverage the security processes overall:
- - Leverage the security of entry by blocking the front entrance and allow only recognizable devices to log in. The activity uses expirable tokens that are only accepted for limited amount of time, and provide respective messages to users for guidance.
- - Enforce strong passwords with mixed char types and length
- - Leverage the encryption/decryption procedures for all sensitive data in the DB, which led to more than 1M rows update
- - Enforce a finite number of times informative data can be displayed before locked for ever
- - Leverage the restriction rules for image uploads and malicious code indexing methods
- - Invoke sanitize/filtering on data import/display respectively
- - Enforce PDO with MySQL inserts
- - Make extensive use of .httaccess for filtering urls, root and child directories with explicit rules for each
+<br /> - Leverage the security of entry by blocking the front entrance and allow only recognizable devices to log in. The activity uses expirable tokens that are only accepted for limited amount of time, and provide respective messages to users for guidance.
+ <br />- Enforce strong passwords with mixed char types and length
+ <br />- Leverage the encryption/decryption procedures for all sensitive data in the DB, which led to more than 1M rows update
+ <br />- Enforce a finite number of times informative data can be displayed before locked for ever
+ <br />- Leverage the restriction rules for image uploads and malicious code indexing methods
+ <br />- Invoke sanitize/filtering on data import/display respectively
+ <br />- Enforce PDO with MySQL inserts
+ <br />- Make extensive use of .httaccess for filtering urls, root and child directories with explicit rules for each
  </p>
  </li>
 </ul>
@@ -2183,48 +2190,49 @@ Build a configurable, Javascript CORS widget for displaying best price of an aff
         </tools>
         <description>
             <![CDATA[
-<h3>Employed as standalone Frontend Developer to build fully customizable UI widgets, for affiliate sites, in association with a company's stakeholder that designed and developed the backend as a remote data web service.</h3>
+<h3>Employed as standalone Frontend Developer to build fully customizable UI widgets and the backend configuration app  in association with a backend data api developer.</h3>
 
-<p>The objective was to create a new product that would explore the potentials of UI widgets and thus enter a new market for the company
-
+<p>
+The objective was to create a new product that would explore the potentials of UI widgets and thus enter a new market for the company
+<br />
 My role as a Frontend developer was to create the independable CORS empowered Javascript widgets that would load on affiliate sites. The widgets should invoke the latest Js trends, load on sites without causing or receiving Js / CSS defects and should be as lightweight as possible restraining from vaguely loading countless libraries. Additianally I was attached to build the backend configuration application.
 </p>
 
 <h4>Main Developments</h4>
 
-FRONTEND WIDGETS -------------------------------------------------------------------------------
+<u>FRONTEND WIDGETS</u>
 <ul>
 <li>Design and develop the app's Installer that can be used on affiliate sites with a single HTML “Head”entry</li>
 <li>Design and develop decoupled SPA widgets, that reside on their own domains and can be launched by installer on demand</li>
 <li>
 <p>
 Publish 5 distinct widget types, with 4 viewport layouts for each, to accommodate diversity of screen displays:
- - Price checks::          Integrates calendar that helps users check hotel prices per accommodation and compare with major booking channels
- - Active offers::          Registered offers can be displayed with a user click
- - Notifications::          Intresting metrics, in the form of notifications are displayed on sites screen
- - Popup offers::          Offers can popup on user display at navigation time, based on submitted configuration
+<br /> - Price checks::          Integrates calendar that helps users check hotel prices per accommodation and compare with major booking channels
+ <br />- Active offers::          Registered offers can be displayed with a user click
+ <br />- Notifications::          Intresting metrics, in the form of notifications are displayed on sites screen
+ <br />- Popup offers::          Offers can popup on user display at navigation time, based on submitted configuration
 </p>
 </li>
 <li>Utilize the latest React 16.8 build and make use of powerful features like Hooks, Code splitting, Lazy loading, Context api, Dynamic imports etc</li>
 <li>Make extensive use of cache so that widgets restrain from excessive calls to the remote service</li>
 <li>Structure the development environment with NodeJs, Webpack, Babel etc</li>
 </ul>
-
-BACKEND APPLICATION --------------------------------------------------------------------------------
+<br />
+<u>BACKEND APPLICATION</u>
 <ul>
 <li>
 <p>Create a React 16.4 application based on a helper theme with some main group activities
-- Configuration domains per widget
-- Metrics and evaluation of widget usage
-- Main Dashboard, Install and more..
+<br />- Configuration domains per widget
+<br />- Metrics and evaluation of widget usage
+<br />- Main Dashboard, Install and more..
 </p>
 </li>
 <li>
 <p>
 The widgets configuration includes
-- Configurable, on screen, positioning
-- Configurable colors and literals
-- Configurable activation / deactivation periods
+<br />- Configurable, on screen, positioning
+<br />- Configurable colors and literals
+<br />- Configurable activation / deactivation periods
 </p>
 </li>
 </ul>

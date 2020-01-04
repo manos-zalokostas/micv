@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c2027ac-7fbf-48f5-b8a4-e62f9701cdf7" name="Default" comment="convert http =&gt; https">
+    <list default="true" id="7c2027ac-7fbf-48f5-b8a4-e62f9701cdf7" name="Default" comment="...followup">
+      <change afterPath="$PROJECT_DIR$/images/tech_logos/test.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/items.xml" beforeDir="false" afterPath="$PROJECT_DIR$/items.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +25,9 @@
   <component name="PhpDebugGeneral" xdebug_debug_port="9009" />
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="Remote PHP 5.5" />
   <component name="ProjectId" id="1VewICXtv6EA8G2WMx8GTIqxbff" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -84,7 +88,9 @@
       <workItem from="1577745673091" duration="3569000" />
       <workItem from="1577791243377" duration="13858000" />
       <workItem from="1577818989610" duration="2966000" />
-      <workItem from="1578060304608" duration="11367000" />
+      <workItem from="1578060304608" duration="12295000" />
+      <workItem from="1578133900066" duration="3465000" />
+      <workItem from="1578139979731" duration="1197000" />
     </task>
     <task id="LOCAL-00001" summary="convert http =&gt; https">
       <created>1545926008916</created>
@@ -100,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578071426959</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="...followup">
+      <created>1578071938255</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1578071938255</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,18 +133,20 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="convert http =&gt; https" />
-    <option name="LAST_COMMIT_MESSAGE" value="convert http =&gt; https" />
+    <MESSAGE value="...followup" />
+    <option name="LAST_COMMIT_MESSAGE" value="...followup" />
   </component>
   <component name="WindowStateProjectService">
     <state x="701" y="428" width="520" height="262" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1577628814673">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="701" y="428" width="520" height="262" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1577628814673" />
-    <state x="565" y="154" width="791" height="810" key="CommitChangelistDialog2" timestamp="1578071848251">
+    <state x="565" y="154" width="791" height="810" key="CommitChangelistDialog2" timestamp="1578071938104">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="565" y="154" width="791" height="810" key="CommitChangelistDialog2/0.28.1920.1052@0.28.1920.1052" timestamp="1578071848251" />
+    <state x="565" y="154" width="791" height="810" key="CommitChangelistDialog2/0.28.1920.1052@0.28.1920.1052" timestamp="1578071938104" />
     <state x="704" y="300" width="513" height="518" key="FileChooserDialogImpl" timestamp="1577633040103">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
@@ -144,14 +159,14 @@
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="748" y="284" width="606" height="524" key="StructurePopup/0.28.1920.1052@0.28.1920.1052" timestamp="1578064572221" />
-    <state x="555" y="292" width="812" height="533" key="Vcs.Push.Dialog.v2" timestamp="1578071679168">
+    <state x="555" y="292" width="812" height="533" key="Vcs.Push.Dialog.v2" timestamp="1578071940584">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="555" y="292" width="812" height="533" key="Vcs.Push.Dialog.v2/0.28.1920.1052@0.28.1920.1052" timestamp="1578071679168" />
-    <state x="616" y="381" key="com.intellij.ide.util.TipDialog" timestamp="1578060310167">
+    <state x="555" y="292" width="812" height="533" key="Vcs.Push.Dialog.v2/0.28.1920.1052@0.28.1920.1052" timestamp="1578071940584" />
+    <state x="616" y="381" key="com.intellij.ide.util.TipDialog" timestamp="1578146085178">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="616" y="381" key="com.intellij.ide.util.TipDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1578060310167" />
+    <state x="616" y="381" key="com.intellij.ide.util.TipDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1578146085178" />
     <state x="330" y="107" width="1361" height="897" key="find.popup" timestamp="1578070596419">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
@@ -171,7 +186,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/script.js</url>
           <line>565</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
