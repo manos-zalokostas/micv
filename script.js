@@ -10,9 +10,32 @@ $(document).ready(
 
         ajax_retrieve_skill_data();
 
-        eval_external_request_display();
+        EVAL_EXTERNAL_URL_COMMAND();
 
         start_projector_display();
+
+        // LISTENER FOR THE PAGES
+        $("#search_radio input[value=project]").click(
+            function () {
+                document.querySelector(('input[list]')).setAttribute('list', 'project_list')
+            }
+        );
+        $("#search_radio input[value=skill]").click(
+            function () {
+                document.querySelector(('input[list]')).setAttribute('list', 'skill_list')
+            }
+        );
+        $("input[list]").change(
+            function () {
+                if ($(this).attr('list') === 'project_list') {
+                    handle_banner_input('project', $(this).context.value.split(' ').shift());
+                }
+                if ($(this).attr('list') === 'skill_list') {
+                    handle_banner_input('tool', $(this).context.value.split(' ').shift());
+                }
+                $("input[list]")[0].value = '';
+            }
+        );
 
         // LISTENER FOR THE PAGES
         $("#site_menu a").click(
@@ -282,26 +305,6 @@ $(document).ready(
     }
 );
 
-
-function eval_external_request_display() {
-    var search = window.location.search;
-    if (search) {
-        search = search.replace('?', '');
-        var entries = search.split('=');
-        var type = entries[0];
-        var target = entries[1];
-
-        if (type == 'project') {
-            handle_banner_input('project', target);
-            return true;
-        }
-        if (type == 'tool') {
-            handle_banner_input('tool', target);
-            return true;
-        }
-    }
-    return false;
-}
 
 /**
  *
@@ -1165,7 +1168,32 @@ function slide_images(direction, button_clicked) {
 }
 
 /*
- ---------------------------  REFACTOR FUNCTIONS --------------------------------------
+ ---------------------------  REFACTOR FUNCTIONS  2 --------------------------------------
+ */
+
+
+function EVAL_EXTERNAL_URL_COMMAND() {
+    var search = window.location.search;
+    if (search) {
+        search = search.replace('?', '');
+        var entries = search.split('=');
+        var type = entries[0];
+        var target = entries[1];
+
+        if (type == 'project') {
+            handle_banner_input('project', target);
+            return true;
+        }
+        if (type == 'tool') {
+            handle_banner_input('tool', target);
+            return true;
+        }
+    }
+    return false;
+}
+
+/*
+ ---------------------------  REFACTOR  FUNCTIONS  1 --------------------------------------
  */
 
 
@@ -1292,7 +1320,6 @@ function __INITIALIZE_PAGE_DATA(data) {
 
     // // FIND THE NUMBER OF 'ITEMS' IN THE 'SKILLS.XML'
     // psize = $(data).find('item').length - 1;
-    //
     // rnum = Math.floor((Math.random() * psize) + 1);
     // STORE A COMPLETE 'ITEM' THAT REFLECTS ALL DATA RELATED TO A 'PROJECT'
 
@@ -1306,8 +1333,31 @@ function __INITIALIZE_PAGE_DATA(data) {
     tech_tools = _suffleArray(__GET_ALL_TOOLS(data));
     temp_tools = tech_tools.slice();
 
+    _BUILD_SEARCH_LISTS(projects, tech_tools);
+
 }
 
+
+/**
+ *
+ * @param projects
+ * @param tools
+ * @private
+ */
+function _BUILD_SEARCH_LISTS(projects, tools) {
+    var htmlProjects = [],
+        htmlTools = [];
+    // debugger
+    projects.forEach(function (project) {
+        htmlProjects.push("<option value='" + project.name + "'>" + project.name + "</option>")
+    });
+    tools.forEach(function (tool) {
+        htmlTools.push("<option value='" + tool + "'>" + tool + "</option>")
+    });
+
+    document.querySelector(('#project_list')).innerHTML = htmlProjects;
+    document.querySelector(('#skill_list')).innerHTML = htmlTools;
+}
 
 /**
  *
