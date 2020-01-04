@@ -1644,6 +1644,16 @@ function __RESOLVE_AND_DISPLAY_ITEM_FULL_DESCRIPTION(current_list_item, curr_lis
                                 }
                             );
                             break;
+                        case 'links':
+                            $(data).each(
+                                function () {
+                                    var addr = this;
+                                    var app = 'link';
+                                    var label = $(addr).text().substring($(this).text().lastIndexOf("=") + 1).split('.');
+
+                                    mdata += '<a target="_blank" style="text-transform: uppercase" href="' + $(this).text() + '">' + label.join(' ') + '<img src="images/_buttons/link.jpg" style="width:35px; float:right " /></a>';
+                                }
+                            )
                         default:
                             /* I LEFT IT PURSPOSELY BECAUSE I NEED TO SEE THE 'VALUES' INDEXED BY THE SCRIPT*/
                             break;
@@ -1660,9 +1670,9 @@ function __RESOLVE_AND_DISPLAY_ITEM_FULL_DESCRIPTION(current_list_item, curr_lis
                     }
                     $('#description #i' + tag).css({'display': 'block'});
                     $('#description #i' + tag + ' span').html(data);
-                    if (tag == 'link') {
-                        $('#description #i' + tag + ' span').html('<a href="' + data + '">VISIT ONLINE</a>');
-                    }
+                    // if (tag == 'link') {
+                    //     $('#description #i' + tag + ' span').html('<a href="' + data + '">VISIT ONLINE</a>');
+                    // }
                 }
             }
         }

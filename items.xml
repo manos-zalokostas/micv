@@ -2256,6 +2256,18 @@ The widgets configuration includes
             <file>images/rateparity/widget_max_teaser.png</file>
         </files>
         <media></media>
-        <link></link>
+        <links>
+            <link>https://code.rateparity.com/v4.versions/?debug=price.max</link>
+            <link>https://code.rateparity.com/v4.versions/?debug=price.full</link>
+            <link>https://code.rateparity.com/v4.versions/?debug=price.min</link>
+            <link>https://code.rateparity.com/v4.versions/?debug=price.plain</link>
+            <link>https://code.rateparity.com/v4.versions/?debug=price.mob</link>
+            <link>https://code.rateparity.com/v4.versions/?debug=offer.full</link>
+            <link>https://code.rateparity.com/v4.versions/?debug=offer.plain</link>
+            <link>https://code.rateparity.com/v4.versions/?debug=offer.mob</link>
+            <link>https://code.rateparity.com/v4.versions/?debug=nudges</link>
+            <link>https://code.rateparity.com/v4.versions/?debug=snippet</link>
+            <link>https://code.rateparity.com/v4.versions/?debug=exit</link>
+        </links>
     </item>
 </items>
