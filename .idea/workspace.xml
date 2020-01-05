@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c2027ac-7fbf-48f5-b8a4-e62f9701cdf7" name="Default" comment="Add site search for 'projects' &amp; 'skills'">
+      <change afterPath="$PROJECT_DIR$/page_context.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page_context_interactive_field.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page_context_resume_field.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page_footer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page_introduction_monitor.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +24,11 @@
     <favorites_list name="micv" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpDebugGeneral" xdebug_debug_port="9009" />
@@ -93,6 +103,7 @@
       <workItem from="1578154864490" duration="6209000" />
       <workItem from="1578164835263" duration="418000" />
       <workItem from="1578173992892" duration="8835000" />
+      <workItem from="1578229319825" duration="6207000" />
     </task>
     <task id="LOCAL-00001" summary="convert http =&gt; https">
       <created>1545926008916</created>
@@ -176,10 +187,14 @@
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="701" y="428" width="520" height="262" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1577628814673" />
-    <state x="565" y="154" width="791" height="810" key="CommitChangelistDialog2" timestamp="1578182207644">
+    <state x="565" y="154" width="791" height="810" key="CommitChangelistDialog2" timestamp="1578185264768">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="565" y="154" width="791" height="810" key="CommitChangelistDialog2/0.28.1920.1052@0.28.1920.1052" timestamp="1578182207644" />
+    <state x="565" y="154" width="791" height="810" key="CommitChangelistDialog2/0.28.1920.1052@0.28.1920.1052" timestamp="1578185264768" />
+    <state x="94" y="128" width="1732" height="857" key="DiffContextDialog" timestamp="1578236270364">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="94" y="128" width="1732" height="857" key="DiffContextDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1578236270364" />
     <state x="704" y="300" width="513" height="518" key="FileChooserDialogImpl" timestamp="1577633040103">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
@@ -192,14 +207,14 @@
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="748" y="284" width="606" height="524" key="StructurePopup/0.28.1920.1052@0.28.1920.1052" timestamp="1578160890806" />
-    <state x="555" y="292" width="812" height="533" key="Vcs.Push.Dialog.v2" timestamp="1578182213327">
+    <state x="555" y="292" width="812" height="533" key="Vcs.Push.Dialog.v2" timestamp="1578185297621">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="555" y="292" width="812" height="533" key="Vcs.Push.Dialog.v2/0.28.1920.1052@0.28.1920.1052" timestamp="1578182213327" />
-    <state x="616" y="381" key="com.intellij.ide.util.TipDialog" timestamp="1578174029272">
+    <state x="555" y="292" width="812" height="533" key="Vcs.Push.Dialog.v2/0.28.1920.1052@0.28.1920.1052" timestamp="1578185297621" />
+    <state x="616" y="381" key="com.intellij.ide.util.TipDialog" timestamp="1578229320668">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="616" y="381" key="com.intellij.ide.util.TipDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1578174029272" />
+    <state x="616" y="381" key="com.intellij.ide.util.TipDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1578229320668" />
     <state x="330" y="107" width="1361" height="897" key="find.popup" timestamp="1578163282654">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
