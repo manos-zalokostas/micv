@@ -7,26 +7,12 @@
     <script type="text/javascript" src="script.js"></script>
     <link href="style.css" type="text/css" rel="stylesheet"/>
     <script>
-        import('/page_context.js')
-            .then(({context}) => {
-                document.querySelector('#context').innerHTML = context();
-            });
-        import('/page_footer.js')
-            .then(({footer}) => {
-                document.querySelector('#footer').innerHTML = footer();
-            });
-        import('/page_context_resume_field.js')
-            .then(({resumefield}) => {
-                document.querySelector('#resume_cv_field').innerHTML = resumefield();
-            });
-        import('/page_context_interactive_field.js')
-            .then(({interactivefield}) => {
-                document.querySelector('#interactive_cv_field').innerHTML = interactivefield();
-            });
-        import('/page_introduction_monitor.js')
-            .then(({monitor}) => {
-                document.querySelector('#skills_preview').innerHTML = monitor();
-            });
+        const load = (file, selector, fnc) => import(file).then(module => document.querySelector(selector).innerHTML = module[fnc]());
+        load('/page_context.js', '#context', 'context');
+        load('/page_footer.js', '#footer', 'footer');
+        load('/page_context_resume_field.js', '#resume_cv_field', 'resumefield');
+        load('/page_context_interactive_field.js', '#interactive_cv_field', 'interactivefield');
+        load('/page_introduction_monitor.js', '#skills_preview', 'monitor');
     </script>
 </head>
 <body>

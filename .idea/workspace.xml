@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c2027ac-7fbf-48f5-b8a4-e62f9701cdf7" name="Default" comment="Add site search for 'projects' &amp; 'skills'">
-      <change afterPath="$PROJECT_DIR$/page_context.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/page_context_interactive_field.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/page_context_resume_field.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/page_footer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/page_introduction_monitor.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
@@ -223,10 +218,10 @@
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="684" y="253" width="672" height="677" key="run.anything.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1577803409066" />
-    <state x="939" y="272" width="672" height="678" key="search.everywhere.popup" timestamp="1578160911777">
+    <state x="939" y="272" width="672" height="678" key="search.everywhere.popup" timestamp="1578255186487">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="939" y="272" width="672" height="678" key="search.everywhere.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1578160911777" />
+    <state x="939" y="272" width="672" height="678" key="search.everywhere.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1578255186487" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
