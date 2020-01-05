@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c2027ac-7fbf-48f5-b8a4-e62f9701cdf7" name="Default" comment="Populate the &quot;links&quot; section instaed of 1 link allowed before">
+    <list default="true" id="7c2027ac-7fbf-48f5-b8a4-e62f9701cdf7" name="Default" comment="Add site search for 'projects' &amp; 'skills'">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +92,7 @@
       <workItem from="1578139979731" duration="1843000" />
       <workItem from="1578154864490" duration="6209000" />
       <workItem from="1578164835263" duration="418000" />
-      <workItem from="1578173992892" duration="8089000" />
+      <workItem from="1578173992892" duration="8835000" />
     </task>
     <task id="LOCAL-00001" summary="convert http =&gt; https">
       <created>1545926008916</created>
@@ -138,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578164725567</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add site search for 'projects' &amp; 'skills'">
+      <created>1578182207889</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1578182207889</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,17 +168,18 @@
     <MESSAGE value="...followup" />
     <MESSAGE value="update cv document" />
     <MESSAGE value="Populate the &quot;links&quot; section instaed of 1 link allowed before" />
-    <option name="LAST_COMMIT_MESSAGE" value="Populate the &quot;links&quot; section instaed of 1 link allowed before" />
+    <MESSAGE value="Add site search for 'projects' &amp; 'skills'" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add site search for 'projects' &amp; 'skills'" />
   </component>
   <component name="WindowStateProjectService">
     <state x="701" y="428" width="520" height="262" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1577628814673">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="701" y="428" width="520" height="262" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1577628814673" />
-    <state x="565" y="154" width="791" height="810" key="CommitChangelistDialog2" timestamp="1578164725097">
+    <state x="565" y="154" width="791" height="810" key="CommitChangelistDialog2" timestamp="1578182207644">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="565" y="154" width="791" height="810" key="CommitChangelistDialog2/0.28.1920.1052@0.28.1920.1052" timestamp="1578164725097" />
+    <state x="565" y="154" width="791" height="810" key="CommitChangelistDialog2/0.28.1920.1052@0.28.1920.1052" timestamp="1578182207644" />
     <state x="704" y="300" width="513" height="518" key="FileChooserDialogImpl" timestamp="1577633040103">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
@@ -186,10 +192,10 @@
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="748" y="284" width="606" height="524" key="StructurePopup/0.28.1920.1052@0.28.1920.1052" timestamp="1578160890806" />
-    <state x="555" y="292" width="812" height="533" key="Vcs.Push.Dialog.v2" timestamp="1578164727555">
+    <state x="555" y="292" width="812" height="533" key="Vcs.Push.Dialog.v2" timestamp="1578182213327">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="555" y="292" width="812" height="533" key="Vcs.Push.Dialog.v2/0.28.1920.1052@0.28.1920.1052" timestamp="1578164727555" />
+    <state x="555" y="292" width="812" height="533" key="Vcs.Push.Dialog.v2/0.28.1920.1052@0.28.1920.1052" timestamp="1578182213327" />
     <state x="616" y="381" key="com.intellij.ide.util.TipDialog" timestamp="1578174029272">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
