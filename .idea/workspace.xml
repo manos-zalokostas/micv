@@ -1,27 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c2027ac-7fbf-48f5-b8a4-e62f9701cdf7" name="Default" comment="Add site search for 'projects' &amp; 'skills'">
-      <change afterPath="$PROJECT_DIR$/IntroductionMessage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IntroductionResume.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IntroductionTimeline.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MonitorProject.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MonitorReference.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MonitorSkills.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interactive_section.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main_content.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/monitor_project.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/monitor_references.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/monitor_skills.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/monitor_skills.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/script-for-monitor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/temp.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/temp.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.json" afterDir="false" />
+    <list default="true" id="7c2027ac-7fbf-48f5-b8a4-e62f9701cdf7" name="Default" comment="Cut HML to Modules #1">
+      <change afterPath="$PROJECT_DIR$/ContentDescriptionBody.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ContentDescriptionHeader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ContentOptions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/temp.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/temp2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_content.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_content.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp.html" beforeDir="false" afterPath="$PROJECT_DIR$/temp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp.js" beforeDir="false" afterPath="$PROJECT_DIR$/temp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +117,8 @@
       <workItem from="1578229319825" duration="6207000" />
       <workItem from="1578314347780" duration="392000" />
       <workItem from="1578315108938" duration="232000" />
-      <workItem from="1578316214864" duration="9380000" />
+      <workItem from="1578316214864" duration="9891000" />
+      <workItem from="1578331871867" duration="8516000" />
     </task>
     <task id="LOCAL-00001" summary="convert http =&gt; https">
       <created>1545926008916</created>
@@ -178,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578182207889</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Cut HML to Modules #1">
+      <created>1578326106667</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1578326106667</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,17 +202,18 @@
     <MESSAGE value="update cv document" />
     <MESSAGE value="Populate the &quot;links&quot; section instaed of 1 link allowed before" />
     <MESSAGE value="Add site search for 'projects' &amp; 'skills'" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add site search for 'projects' &amp; 'skills'" />
+    <MESSAGE value="Cut HML to Modules #1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cut HML to Modules #1" />
   </component>
   <component name="WindowStateProjectService">
     <state x="701" y="428" width="520" height="262" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1577628814673">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="701" y="428" width="520" height="262" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1577628814673" />
-    <state x="565" y="154" width="791" height="810" key="CommitChangelistDialog2" timestamp="1578185264768">
+    <state x="565" y="154" width="791" height="810" key="CommitChangelistDialog2" timestamp="1578326106513">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="565" y="154" width="791" height="810" key="CommitChangelistDialog2/0.28.1920.1052@0.28.1920.1052" timestamp="1578185264768" />
+    <state x="565" y="154" width="791" height="810" key="CommitChangelistDialog2/0.28.1920.1052@0.28.1920.1052" timestamp="1578326106513" />
     <state x="94" y="128" width="1732" height="857" key="DiffContextDialog" timestamp="1578272224615">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
@@ -235,14 +234,14 @@
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="555" y="292" width="812" height="533" key="Vcs.Push.Dialog.v2/0.28.1920.1052@0.28.1920.1052" timestamp="1578185297621" />
-    <state x="99" y="128" width="1722" height="853" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1578321504424">
+    <state x="99" y="128" width="1722" height="853" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1578340390520">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="99" y="128" width="1722" height="853" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1578321504424" />
-    <state x="616" y="381" key="com.intellij.ide.util.TipDialog" timestamp="1578316215550">
+    <state x="99" y="128" width="1722" height="853" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1578340390520" />
+    <state x="616" y="381" key="com.intellij.ide.util.TipDialog" timestamp="1578332196379">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="616" y="381" key="com.intellij.ide.util.TipDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1578316215550" />
+    <state x="616" y="381" key="com.intellij.ide.util.TipDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1578332196379" />
     <state x="330" y="107" width="1361" height="897" key="find.popup" timestamp="1578163282654">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
@@ -255,9 +254,9 @@
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="684" y="253" width="672" height="677" key="run.anything.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1578319442673" />
-    <state x="939" y="272" width="672" height="678" key="search.everywhere.popup" timestamp="1578323377252">
+    <state x="939" y="272" width="672" height="678" key="search.everywhere.popup" timestamp="1578338125014">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="939" y="272" width="672" height="678" key="search.everywhere.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1578323377252" />
+    <state x="939" y="272" width="672" height="678" key="search.everywhere.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1578338125014" />
   </component>
 </project>
