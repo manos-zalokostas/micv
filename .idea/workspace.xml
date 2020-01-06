@@ -2,8 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c2027ac-7fbf-48f5-b8a4-e62f9701cdf7" name="Default" comment="Add site search for 'projects' &amp; 'skills'">
+      <change afterPath="$PROJECT_DIR$/IntroductionMessage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IntroductionResume.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IntroductionTimeline.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MonitorProject.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MonitorReference.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MonitorSkills.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interactive_section.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main_content.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monitor_project.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monitor_references.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monitor_skills.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/monitor_skills.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/script-for-monitor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/temp.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/temp.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +35,13 @@
   </component>
   <component name="FavoritesManager">
     <favorites_list name="micv" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -39,6 +64,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -99,6 +125,9 @@
       <workItem from="1578164835263" duration="418000" />
       <workItem from="1578173992892" duration="8835000" />
       <workItem from="1578229319825" duration="6207000" />
+      <workItem from="1578314347780" duration="392000" />
+      <workItem from="1578315108938" duration="232000" />
+      <workItem from="1578316214864" duration="9380000" />
     </task>
     <task id="LOCAL-00001" summary="convert http =&gt; https">
       <created>1545926008916</created>
@@ -186,10 +215,10 @@
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="565" y="154" width="791" height="810" key="CommitChangelistDialog2/0.28.1920.1052@0.28.1920.1052" timestamp="1578185264768" />
-    <state x="94" y="128" width="1732" height="857" key="DiffContextDialog" timestamp="1578236270364">
+    <state x="94" y="128" width="1732" height="857" key="DiffContextDialog" timestamp="1578272224615">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="94" y="128" width="1732" height="857" key="DiffContextDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1578236270364" />
+    <state x="94" y="128" width="1732" height="857" key="DiffContextDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1578272224615" />
     <state x="704" y="300" width="513" height="518" key="FileChooserDialogImpl" timestamp="1577633040103">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
@@ -198,40 +227,37 @@
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="449" y="191" width="1022" height="735" key="SettingsEditor/0.28.1920.1052@0.28.1920.1052" timestamp="1577729062767" />
-    <state x="748" y="284" width="606" height="524" key="StructurePopup" timestamp="1578160890806">
+    <state x="748" y="284" width="606" height="524" key="StructurePopup" timestamp="1578257718167">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="748" y="284" width="606" height="524" key="StructurePopup/0.28.1920.1052@0.28.1920.1052" timestamp="1578160890806" />
+    <state x="748" y="284" width="606" height="524" key="StructurePopup/0.28.1920.1052@0.28.1920.1052" timestamp="1578257718167" />
     <state x="555" y="292" width="812" height="533" key="Vcs.Push.Dialog.v2" timestamp="1578185297621">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="555" y="292" width="812" height="533" key="Vcs.Push.Dialog.v2/0.28.1920.1052@0.28.1920.1052" timestamp="1578185297621" />
-    <state x="616" y="381" key="com.intellij.ide.util.TipDialog" timestamp="1578229320668">
+    <state x="99" y="128" width="1722" height="853" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1578321504424">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="616" y="381" key="com.intellij.ide.util.TipDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1578229320668" />
+    <state x="99" y="128" width="1722" height="853" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1578321504424" />
+    <state x="616" y="381" key="com.intellij.ide.util.TipDialog" timestamp="1578316215550">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="616" y="381" key="com.intellij.ide.util.TipDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1578316215550" />
     <state x="330" y="107" width="1361" height="897" key="find.popup" timestamp="1578163282654">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="330" y="107" width="1361" height="897" key="find.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1578163282654" />
-    <state x="684" y="253" width="672" height="677" key="run.anything.popup" timestamp="1577803409066">
+    <state x="608" y="273" width="700" height="530" key="recent.locations.popup" timestamp="1578315313423">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="684" y="253" width="672" height="677" key="run.anything.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1577803409066" />
-    <state x="939" y="272" width="672" height="678" key="search.everywhere.popup" timestamp="1578255186487">
+    <state x="608" y="273" width="700" height="530" key="recent.locations.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1578315313423" />
+    <state x="684" y="253" width="672" height="677" key="run.anything.popup" timestamp="1578319442673">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="939" y="272" width="672" height="678" key="search.everywhere.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1578255186487" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/script.js</url>
-          <line>568</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="684" y="253" width="672" height="677" key="run.anything.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1578319442673" />
+    <state x="939" y="272" width="672" height="678" key="search.everywhere.popup" timestamp="1578323377252">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="939" y="272" width="672" height="678" key="search.everywhere.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1578323377252" />
   </component>
 </project>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Manos Portfolio</title>
+    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+<!--    <script type="text/javascript" src="script.js"></script>-->
+    <link href="style.css" type="text/css" rel="stylesheet"/>
+    <style>
+        #test {
+            position: absolute;
+            width: 80%;
+            height: 90%;
+            border: 2px solid red;
+            margin: 5% 0 0 10%;
+        }
+    </style>
+    <script>
+        const load = (file, selector, fnc) => import(file).then(module => document.querySelector(selector).innerHTML = module[fnc]());
+        load('/test.js', '#test', 'test');
+    </script>
+</head>
+<body>
+
+<div id="test"></div>
+</body>
+</html>

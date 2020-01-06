@@ -1,0 +1,105 @@
+#tool {
+    width: 100%;
+    height: 100%;
+    background: #444;
+}
+
+.mitem {
+    /*position: absolute;*/
+    /*left: 0%;*/
+    /*top: 0%;*/
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    font-family: verdana;
+    z-index: 10;
+}
+
+.mitem > * {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    text-decoration: none;
+    color: white;
+    text-align: right;
+}
+
+.mitem > * * {
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mitem > h4 {
+    bottom: 15%;
+    left: 2%;
+}
+
+.mitem > h2 {
+    top: 5%;
+    left: 0%;
+    width: 10%;
+    text-align: left;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: tomato;
+    padding: 1%;
+    font-size: 1em;
+}
+
+.mitem > h3 {
+    width: 65%;
+    height: 10%;
+    text-align: left;
+    font-size: 2.8em;
+}
+
+.mgroupi div > div {
+    height: 24%;
+    width: 30%;
+    float: left;
+    margin: 2px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 2px solid #ddd;
+    list-style-type: none;
+}
+
+.mitem > p > * {
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+.mgroupi > h4 {
+    float: left;
+    font-size: 1.5em;
+    font-family: calibri;
+    width: 44%;
+    margin-top: 6%;
+}
+
+.mgroupi > img {
+    position: relative;
+    bottom: -5%;
+    right: -100%;
+    border-radius: 6px;
+    width: 28%;
+    border: 4px solid gainsboro;
+}
+
+.mgroupi > img:hover {
+    cursor: pointer;
+    border: 4px solid gold;
+}
+
+#tool .mitem h2 {
+    position: relative;
+    top: 0%;
+    left: 0%;
+    margin: 1% 0;
+}
