@@ -1,16 +1,20 @@
-export default (o) => run(o);
+import {dq} from "./aux.js";
 
-const run = (o) => {
+const CSSID = '#resume_cv_field .aux_txt';
 
-    return view();
+export default (o = null) => run(o);
 
+
+
+const run = (cssid) => {
+    dq(cssid || CSSID).innerHTML = view()
 }
 
 
 const view = () => {
 
     return `
-    <section class="content-project">
+    <section class="resume">
         <header>Timeline</header>
         <span>on / off</span>
         <p>${DATA.list}</p>
@@ -51,4 +55,4 @@ const DATA =
         `
     }
 
-// run()
+run()

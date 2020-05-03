@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c2027ac-7fbf-48f5-b8a4-e62f9701cdf7" name="Default" comment="Add site search for 'projects' &amp; 'skills'">
-      <change afterPath="$PROJECT_DIR$/aux/items.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/installer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-component/BasicWebComponent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-component/SimpleComponent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-component/WBCAnchor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-component/definitions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web-component/web-component.html" afterDir="false" />
+    <list default="true" id="7c2027ac-7fbf-48f5-b8a4-e62f9701cdf7" name="Default" comment="#MASTER || REVERT&#10;**********************&#10; - REVERT TO PREVIOUS STATE SO THAT 'GITHUB' USES A FUNCTIONAL - LEGACY - COPY">
+      <change afterPath="$PROJECT_DIR$/components/TimelineList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/AboutText.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/AboutText.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ResumeList.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/ResumeList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/view.html" beforeDir="false" afterPath="$PROJECT_DIR$/components/html_templates.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/items.xml" beforeDir="false" afterPath="$PROJECT_DIR$/aux/items.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/aux/test.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/aux/text.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/text2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/aux/text2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/installer.js" beforeDir="false" afterPath="$PROJECT_DIR$/installer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +54,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="HTML" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/components" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -70,14 +65,15 @@
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/aux" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/components" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/components" />
       <recent name="$PROJECT_DIR$/web-component" />
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/aux" />
+      <recent name="$PROJECT_DIR$/components" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -193,8 +189,39 @@
         <entry key="MAIN">
           <value>
             <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
               <option name="COLUMN_ORDER" />
             </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="master" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="COMPONENTS" />
+                </option>
+              </RecentGroup>
+            </list>
           </value>
         </entry>
       </map>
@@ -246,10 +273,10 @@
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="806" y="479" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.28.1920.1052@0.28.1920.1052" timestamp="1588507999130" />
-    <state x="638" y="254" width="752" height="610" key="find.popup" timestamp="1588507763485">
+    <state x="638" y="254" width="752" height="610" key="find.popup" timestamp="1588531638400">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="638" y="254" width="752" height="610" key="find.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1588507763485" />
+    <state x="638" y="254" width="752" height="610" key="find.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1588531638400" />
     <state width="600" height="424" key="javadoc.popup" timestamp="1587815719558">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
@@ -258,9 +285,9 @@
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="546" y="307" width="700" height="530" key="recent.locations.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1587561380214" />
-    <state x="644" y="270" width="672" height="678" key="search.everywhere.popup" timestamp="1588507694353">
+    <state x="644" y="270" width="672" height="678" key="search.everywhere.popup" timestamp="1588531859832">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="644" y="270" width="672" height="678" key="search.everywhere.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1588507694353" />
+    <state x="644" y="270" width="672" height="678" key="search.everywhere.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1588531859832" />
   </component>
 </project>

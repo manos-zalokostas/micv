@@ -8,7 +8,6 @@ export default (o = null) => run(o);
 
 const run = (cssid) => {
     dq(cssid || CSSID).innerHTML = view()
-
 }
 
 

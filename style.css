@@ -386,7 +386,7 @@ div {
 }
 
 #introduction #interactive_cv_field #timeline li {
-    position: relative;
+    /*position: relative;*/
     margin: 0 2.2%;
     float: left;
     background-color: #ccc;
@@ -396,7 +396,7 @@ div {
 }
 
 #introduction #interactive_cv_field #timeline li p {
-    visibility: hidden;
+    /*visibility: hidden;*/
     height: 1px;
 }
 
