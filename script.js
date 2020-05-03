@@ -28,7 +28,8 @@ $(document).ready(
         $("input[list]").change(
             function () {
                 if ($(this).attr('list') === 'project_list') {
-                    handle_banner_input('project', $(this).context.value.split(' ').shift());
+                    // handle_banner_input('project', $(this).context.value.split(' ').shift());
+                    handle_banner_input('project', $(this).context.value);
                 }
                 if ($(this).attr('list') === 'skill_list') {
                     handle_banner_input('tool', $(this).context.value.split(' ').shift());
@@ -496,7 +497,7 @@ function animate_page(current_page) {
  *
  */
 function ajax_retrieve_skill_data() {
-    var oXML = __GET_CACHED_DATA('sXML', true);
+    var oXML = __GET_CACHED_DATA('sXML');
 
     if (oXML) {
         __INITIALIZE_PAGE_DATA(oXML);
@@ -504,22 +505,42 @@ function ajax_retrieve_skill_data() {
         return;
     }
 
-    $.ajax(
-        {
-            url: 'items.xml',
-            dataType: 'xml',
-            success: function (data) {
+    var API = "http://localhost:3000/items";
 
-                __SET_CACHE_DATA('sXML', data, true);
+    var xhr = new XMLHttpRequest();
+    // xhr.withCredentials = true;
 
-                __INITIALIZE_PAGE_DATA(data);
-                proccess_ajax_data(gmode);
-            },
-            error: function () {
-                console.log('Failed 2 Tech-Logos file ...');
-            }
+    xhr.addEventListener("readystatechange", function () {
+        if (this.readyState === 4) {
+            let data = JSON.parse(this.responseText);
+            __SET_CACHE_DATA('sXML', data);
+            __INITIALIZE_PAGE_DATA(data);
+            proccess_ajax_data(gmode);
         }
-    );
+    });
+
+    xhr.open("GET", API);
+    xhr.setRequestHeader("Content-Type", "application/json");
+
+    xhr.send(null);
+
+    // $.ajax(
+    //     {
+    //         // url: 'items.xml',
+    //         url: 'items.patras',
+    //         dataType: 'json',
+    //         success: function (data) {
+    //
+    //             __SET_CACHE_DATA('sXML', data);
+    //
+    //             __INITIALIZE_PAGE_DATA(data);
+    //             proccess_ajax_data(gmode);
+    //         },
+    //         error: function () {
+    //             console.log('Failed 2 Tech-Logos file ...');
+    //         }
+    //     }
+    // );
 }
 
 
@@ -806,7 +827,7 @@ function handle_banner_input(caller, target) {
  * @param element
  */
 function reveal_list_subcategories(element) {
-    var oXML = __GET_CACHED_DATA('sXML', true);
+    var oXML = __GET_CACHED_DATA('sXML');
 
     if (oXML) {
         __RESOLVE_AND_DISPLAY_SUBSECTION(element, oXML);
@@ -858,7 +879,7 @@ function preview_extras(element) {
  * @param function_caller
  */
 function nav_bar_designer(item_requested, function_caller) {
-    var oXML = __GET_CACHED_DATA('sXML', true);
+    var oXML = __GET_CACHED_DATA('sXML');
 
     if (oXML) {
         __RESOLVE_AND_POPULATE_MAIN_BOARD(item_requested, function_caller, oXML);
@@ -926,7 +947,7 @@ function clean_page_data() {
  */
 function build_selected_item_content(current_list_item, curr_list) {
 
-    var oXML = __GET_CACHED_DATA('sXML', true);
+    var oXML = __GET_CACHED_DATA('sXML');
     if (oXML) {
         __RESOLVE_AND_DISPLAY_ITEM_FULL_DESCRIPTION(current_list_item, curr_list, oXML);
         return;
@@ -1212,8 +1233,8 @@ function __GET_PROJECT() {
     item = temp_projects.pop();
     cacheIdx = _toIndex('p_' + item.id);
 
-    if (__GET_CACHED_DATA(cacheIdx, false)) {
-        return __GET_CACHED_DATA(cacheIdx, false);
+    if (__GET_CACHED_DATA(cacheIdx)) {
+        return __GET_CACHED_DATA(cacheIdx);
     }
 
     // DESIGNATE THE 'PROJECT' OBJECT FOR 1ST-PAGE SHOWCASE
@@ -1224,7 +1245,7 @@ function __GET_PROJECT() {
         data: item.desc
     };
 
-    __SET_CACHE_DATA(cacheIdx, p, false);
+    __SET_CACHE_DATA(cacheIdx, p);
 
     return p;
 }
@@ -1249,8 +1270,8 @@ function __GET_REFERENCE() {
     project = _toIndex('c_' + o[2]);
     cacheIdx = _toIndex('c_' + o[3]);
 
-    if (__GET_CACHED_DATA(cacheIdx, false)) {
-        return __GET_CACHED_DATA(cacheIdx, false);
+    if (__GET_CACHED_DATA(cacheIdx)) {
+        return __GET_CACHED_DATA(cacheIdx);
     }
 
     var name, data, ckey;
@@ -1269,7 +1290,7 @@ function __GET_REFERENCE() {
         item: o[3]
     }
     // THROUGH (POP) THE ITEM FROM THE ARRAY, SO THAT IT WILL NOT BE RETRIEVED AGAIN LATER
-    __SET_CACHE_DATA(cacheIdx, c, false);
+    __SET_CACHE_DATA(cacheIdx, c);
 
     return c;
 }
@@ -1347,7 +1368,7 @@ function __INITIALIZE_PAGE_DATA(data) {
 function _BUILD_SEARCH_LISTS(projects, tools) {
     var htmlProjects = [],
         htmlTools = [];
-    // debugger
+    //
     projects.forEach(function (project) {
         htmlProjects.push("<option value='" + project.name + "'>" + project.name + "</option>")
     });
@@ -1368,18 +1389,27 @@ function _BUILD_SEARCH_LISTS(projects, tools) {
 function __GET_ALL_TOOLS(data) {
     var index = 'all_tools';
     var a = [];
-    var cache = __GET_CACHED_DATA(index, false);
+    var cache = __GET_CACHED_DATA(index);
 
     if (cache) {
         return JSON.parse(cache);
     }
 
+    var tools = [];
+    data.items.item.forEach(function (item) {
+        if (item.tools.tool !== '-') {
+            item.tools.tool.forEach(function (tool) {
+                tools.push(tool);
+            })
+        }
+    })
     // var tsize = 0;
     var key = '';
     // FIND THE NUMBER UNIQUE 'SKILLS' IN THE 'SKILLS.XML'
-    $(data).find('tool').each(
-        function () {
-            key = $(this).text();
+    // $(data).find('tool').each(
+    tools.forEach(
+        function (o) {
+            key = o;
 
             if (key == '-') {
                 return;
@@ -1399,7 +1429,7 @@ function __GET_ALL_TOOLS(data) {
         }
     );
 
-    __SET_CACHE_DATA(index, JSON.stringify(a), false);
+    __SET_CACHE_DATA(index, JSON.stringify(a));
 
     return a;
 }
@@ -1414,7 +1444,7 @@ function __GET_ALL_TOOLS(data) {
 function __GET_ALL_PROJECTS(data) {
     var index = 'all_projects';
     var a = [], aSerialized = [];
-    var cache = __GET_CACHED_DATA(index, false);
+    var cache = __GET_CACHED_DATA(index);
 
     if (cache) {
         var i = 0;
@@ -1429,14 +1459,15 @@ function __GET_ALL_PROJECTS(data) {
 
     var proj = {};
 
-    $(data).find('item').each(
-        function () {
+    // $(data).find('item').each(
+    data.items.item.forEach(
+        function (o) {
             proj = {
-                id: $(this).children('id').text(),
-                name: $(this).children('title').text(),
-                cat: $(this).children('category').text(),
-                desc: ".." + $(this).children('description').text().substring($(this).children('description').text().indexOf('<span>') + 6, $(this).children('description').text().indexOf('</span>')) + "..",
-                img: $(this).children('screenshots').children('shot:first-child').text()
+                id: o.id,
+                name: o.title,
+                cat: o.category,
+                desc: ".." + o.description.substring(o.description.indexOf('<span>') + 6, o.description.indexOf('</span>')) + "..",
+                img: o.screenshots[0]
             };
 
             a.push(proj);
@@ -1444,7 +1475,7 @@ function __GET_ALL_PROJECTS(data) {
         }
     );
 
-    __SET_CACHE_DATA(index, JSON.stringify(aSerialized), false);
+    __SET_CACHE_DATA(index, JSON.stringify(aSerialized));
 
     return a;
 }
@@ -1459,25 +1490,26 @@ function __GET_ALL_PROJECTS(data) {
 function __GET_ALL_REFERENCES(data) {
     var index = 'all_references';
     var a = [], aSerialized = [], aTemp = [];
-    var cache = __GET_CACHED_DATA(index, false);
+    var cache = __GET_CACHED_DATA(index);
 
     if (cache) {
         var i = 0;
 
-        aSerialized = JSON.parse(__GET_CACHED_DATA(index, false));
+        aSerialized = JSON.parse(__GET_CACHED_DATA(index));
 
         return aSerialized;
     }
 
     // FIND THE NUMBER OF VALID 'COMMENTS' IN THE 'SKILLS.XML'
-    $(data).find('item > comment').each(
-        function () {
-            if ($(this).text() != '-') {
+    // $(data).find('item > comment').each(
+    data.items.item.forEach(
+        function (o, i) {
+            if (o.comment != '-') {
                 aTemp = [
-                    $(this).text().substring($(this).text().indexOf('<span>') + 6, $(this).text().indexOf('</span>')),
-                    $(this).prev().text(),
-                    $(this).parent().find('title').text(),
-                    $(this).parent().find('id').text(),
+                    o.comment.substring(o.comment.indexOf('<span>') + 6, o.comment.indexOf('</span>')),
+                    o.tutor,
+                    o.title,
+                    o.id,
                 ];
                 a.push(aTemp);
                 aSerialized.push(JSON.stringify(aTemp));
@@ -1485,7 +1517,7 @@ function __GET_ALL_REFERENCES(data) {
         }
     );
 
-    __SET_CACHE_DATA(index, JSON.stringify(a), false);
+    __SET_CACHE_DATA(index, JSON.stringify(a));
 
     return a;
 }
@@ -1499,18 +1531,16 @@ function __GET_ALL_REFERENCES(data) {
  */
 function __RESOLVE_AND_DISPLAY_SUBSECTION(element, data) {
 
+
     var curr_section = element.innerHTML;
     var curr_element = element;
 
-    var list_elem = "";
-    var childs = $(data).find('section:contains(' + curr_section + ')').siblings('title')
-        .each(
-            function () {
-                list_elem += '<li>' + $(this).text() + '</li>';
-            }
-        );
+    var childs = data.items.item
+        .filter(item => item.section === curr_section)
+        .map(item => '<li>' + item.title + '</li>');
 
-    var lista = '<ul class="sublist">' + list_elem + '</ul>';
+
+    var lista = '<ul class="sublist">' + childs.join('') + '</ul>';
     $('#list').css('overflow-x', 'hidden');
     if (!($(curr_element).children('ul').is(':visible'))) {
         $(curr_element).append($(lista));
@@ -1562,31 +1592,39 @@ function __RESOLVE_AND_POPULATE_MAIN_BOARD(item_requested, function_caller, data
     // A DISTINCTION IS MADE FOR THE CALLER, THAT WILL DEFINE THE QUERY TO THE XML FILE
     // AND FINALLY SUSTAIN THE BEHAVIOUR OF THE DISPLAY
     if (caller == "navigation") {
-        childs = $(data).find('domain:contains(' + item + ')').siblings('section');
+        // childs = $(data).find('domain:contains(' + item + ')').siblings('section');
+        childs = data.items.item.map(o => o.domain === item && o.section);
     } else {
         if (caller == "category") {
 
             // THE SCRIPT QUERIES THE 'CATEGORY' TAG FROM THE XML FILE
-            childs = $(data).find('category:contains(' + item + ')').siblings('title');
+            // childs = $(data).find('category:contains(' + item + ')').siblings('title');
+            childs = data.items.item.map(o => o.category === item && o.title);
             initialize_button($('#menu_tabs a:not(:contains(' + item + '))'));
         } else {
 
             // THE SCRIPT QUERIES THE 'TOOLS' TAG FROM THE XML FILE (TOOLS ~ KEYWORDS)
-            var tools = $(data).find('tools>tool:contains(' + item + ')').each(
-                function () {
-                    if ($(this)[0].textContent == item) {
-                        childs.push($(this).parent().siblings('title'))
-                    }
+            // var tools = $(data).find('tools>tool:contains(' + item + ')').each(
+            //     function () {
+            //         if ($(this)[0].textContent == item) {
+            //             childs.push($(this).parent().siblings('title'))
+            //         }
+            //     }
+            // )
+            childs = data.items.item.reduce((acc, o) => {
+                if (o.tools.tool !== '-' && o.tools.tool.includes(item)) {
+                    acc.push(o.title);
                 }
-            )
+                return acc;
+            }, [])
         }
     }
     initialize_button($('#menu_tabs a:not(:contains(' + item + '))'));
     // AFTER DECIDING WHICH DATA WILL BE PROCESSED AS 'CHILDS' ABOVE,
     // NOW THEY ARE STORED IN AN ARRAY AND FURTHER PROCESSED AFTER 'COMPLETE' OF THE AJAX CALL
-    $(childs).each(
-        function () {
-            temp_array.push($(this).text());
+    childs.forEach(
+        function (value) {
+            temp_array.push(value);
         }
     );
 
@@ -1630,103 +1668,148 @@ function __RESOLVE_AND_DISPLAY_ITEM_FULL_DESCRIPTION(current_list_item, curr_lis
         slide_images('x', null)
     }
 
-    l_item = $(data).find('item>title:contains(' + list_item + ')').parent().children();
+    // l_item = $(data).find('item>title:contains(' + list_item + ')').parent().children();
+
+    l_item = data.items.item
+        .filter(item => item.title === list_item)
+        .pop();
 
     var num = -250;
 
-    $(l_item).each(
-        function () {
+    // $(l_item).each(
+    //     function () {
 
-            var tag = this.tagName;
-            var data = '';
+    var tag = this.tagName;
+    var data = '';
 
-            // 'CDATA'  THAT IS CONTAINED IN SOME TAGS, LIKE 'DESCRIPTION' OR 'INSTRUCTOR'
-            // ARE ALSO RECOGNIZED AS 'CHILD-NODES', NEVERTHELESS MAINTAIN A TYPE ='4' NODE
-            // AND THAT IS WHY A DISTINCTION IS BEING MADE UPPON
-            // THE SCRIPT WILL HANDLE TO DISPLAY ONLY THE TAGS THAT CONTAIN VALUES (OTHERWISE DISPLAY OFF)
-            if (this.childNodes[1] && (this.childNodes[1].nodeType == '1')) {
+    // 'CDATA'  THAT IS CONTAINED IN SOME TAGS, LIKE 'DESCRIPTION' OR 'INSTRUCTOR'
+    // ARE ALSO RECOGNIZED AS 'CHILD-NODES', NEVERTHELESS MAINTAIN A TYPE ='4' NODE
+    // AND THAT IS WHY A DISTINCTION IS BEING MADE UPPON
+    // THE SCRIPT WILL HANDLE TO DISPLAY ONLY THE TAGS THAT CONTAIN VALUES (OTHERWISE DISPLAY OFF)
+    // if (this.childNodes[1] && (this.childNodes[1].nodeType == '1')) {
 
-                data = $(this).children(':first-child').text();
+    // data = $(this).children(':first-child').text();
 
-                if (data != '' && data != '-') {
-                    data = $(this).children();
-                    var mdata = "";
+    // if (data != '' && data != '-') {
+    //     data = $(this).children();
 
-                    switch (tag) {
+    // switch (tag) {
 
-                        case 'tools':
-                            $(data).each(
-                                function () {
-                                    mdata += '<a class="keys" href="#">' + $(this).text() + '</a>';
-                                }
-                            );
-                            break;
-                        case 'screenshots':
-                            $(data).each(
-                                function () {
-                                    mdata += '<a href="' + $(this).text() + '"><img  src="' + $(this).text() + '" title="' + $(this).text().substring($(this).text().lastIndexOf('/') + 1, $(this).text().lastIndexOf('.')).replace(
-                                        /_/g, " "
-                                    ) + '"  /></a>';
-                                    var img_loader = new Image();
-                                    img_loader.src = $(this).text();
-                                    num += 10;
-                                }
-                            )
-                            break;
-                        case 'files':
-                            $(data).each(
-                                function () {
-                                    var addr = this;
-                                    var app = $(addr).text().substring($(this).text().lastIndexOf(".") + 1);
-                                    var label = $(addr).text().substring($(this).text().lastIndexOf("/") + 1, $(this).text().lastIndexOf("."))
-                                    mdata += '<a href="' + $(addr).text() + '"><img src="images/_buttons/' + app + '.png" /><p>' + label.replace(/_/g, " ").toUpperCase() + '</p></a>';
-                                }
-                            )
-                            break;
-                        case 'media':
-                            $(data).each(
-                                function () {
-                                    var addr = this;
-                                    var app = $(addr).text().substring($(addr).text().lastIndexOf(".") + 1);
-                                    var label = $(addr).text().substring($(addr).text().lastIndexOf(",") + 1, $(addr).text().lastIndexOf("."));
-                                    var src = $(addr).text().substring(0, $(addr).text().lastIndexOf(","));
-                                    mdata += '<a href="' + src + '"><img src="images/_buttons/' + app + '.png"  /><p>' + label.replace(/_/g, " ").toUpperCase() + '</p></a>';
-                                }
-                            );
-                            break;
-                        case 'links':
-                            $(data).each(
-                                function () {
-                                    var addr = this;
-                                    var app = 'link';
-                                    var label = $(addr).text().substring($(this).text().lastIndexOf("=") + 1).split('.');
-
-                                    mdata += '<a target="_blank" style="text-transform: uppercase" href="' + $(this).text() + '">' + label.join(' ') + '<img src="images/_buttons/link.jpg" style="width:35px; float:right " /></a>';
-                                }
-                            )
-                        default:
-                            /* I LEFT IT PURSPOSELY BECAUSE I NEED TO SEE THE 'VALUES' INDEXED BY THE SCRIPT*/
-                            break;
-                    }
-
-                    $('#description #i' + tag).css({'display': 'block'});
-                    $('#description #i' + tag + ' span').append(mdata);
-                }
-            } else {
-                data = $(this).text();
-                if (data != '' && data != '-') {
-                    if (tag == 'tutor') {
-                        $('#icomplements').css({'display': 'block'})
-                    }
-                    $('#description #i' + tag).css({'display': 'block'});
-                    $('#description #i' + tag + ' span').html(data);
-                    // if (tag == 'link') {
-                    //     $('#description #i' + tag + ' span').html('<a href="' + data + '">VISIT ONLINE</a>');
-                    // }
-                }
-            }
+    // case 'tools':
+    var mdata = "";
+    var tag = 'tools';
+    l_item.tools.tool.forEach(
+        function (tool) {
+            // mdata += '<a class="keys" href="#">' + $(this).text() + '</a>';
+            mdata += '<a class="keys" href="#">' + tool + '</a>';
         }
     );
+    $('#description #i' + tag).css({'display': 'block'});
+    $('#description #i' + tag + ' span').append(mdata);
+    // break;
+    // case 'screenshots':
+    var mdata = "";
+    var tag = 'screenshots';
+    l_item.screenshots.shot.forEach(
+        function (ss) {
+            mdata += '<a href="' + ss + '"><img  src="' + ss + '" title="' + ss.substring(ss.lastIndexOf('/') + 1, ss.lastIndexOf('.')).replace(
+                /_/g, " "
+            ) + '"  /></a>';
+            var img_loader = new Image();
+            img_loader.src = ss;
+            num += 10;
+        }
+    )
+    $('#description #i' + tag).css({'display': 'block'});
+    $('#description #i' + tag + ' span').append(mdata);
+
+    // break;
+    // case 'files':
+    if (l_item.files && l_item.files.file) {
+        var mdata = "";
+        var tag = 'files';
+        if (!l_item.files.file.length) l_item.file.file = [l_item.files.file]
+        l_item.files.file && l_item.files.file.forEach(
+            function (file) {
+                // var addr = this;
+                var app = file.substring(file.lastIndexOf(".") + 1);
+                var label = file.substring(file.lastIndexOf("/") + 1, file.lastIndexOf("."))
+                mdata += '<a href="' + file + '"><img src="images/_buttons/' + app + '.png" /><p>' + label.replace(/_/g, " ").toUpperCase() + '</p></a>';
+            }
+        )
+        $('#description #i' + tag).css({'display': 'block'});
+        $('#description #i' + tag + ' span').append(mdata);
+    }
+    // break;
+    // case 'media':
+    var mdata = "";
+    var tag = 'media';
+    l_item.media && l_item.media.length && l_item.media.forEach(
+        function (addr) {
+            // var addr = this;
+            var app = addr.substring(addr.lastIndexOf(".") + 1);
+            var label = addr.substring(addr.lastIndexOf(",") + 1, addr.lastIndexOf("."));
+            var src = addr.substring(0, addr.lastIndexOf(","));
+            mdata += '<a href="' + src + '"><img src="images/_buttons/' + app + '.png"  /><p>' + label.replace(/_/g, " ").toUpperCase() + '</p></a>';
+        }
+    );
+    $('#description #i' + tag).css({'display': 'block'});
+    $('#description #i' + tag + ' span').append(mdata);
+    // break;
+    // case 'links':
+    var mdata = "";
+    var tag = 'links';
+    l_item.links && l_item.links.link.forEach(
+        function (addr) {
+            // var addr = this;
+            var app = 'link';
+            var label = addr.substring(addr.lastIndexOf("=") + 1).split('.');
+
+            mdata += '<a target="_blank" style="text-transform: uppercase" href="' + addr + '">' + label.join(' ') + '<img src="images/_buttons/link.jpg" style="width:35px; float:right " /></a>';
+        }
+    )
+    $('#description #i' + tag).css({'display': 'block'});
+    $('#description #i' + tag + ' span').append(mdata);
+
+
+    var mdata = l_item.description;
+    var tag = 'description';
+    $('#description #i' + tag).css({'display': 'block'});
+    $('#description #i' + tag + ' span').append(mdata);
+
+    var mdata = l_item.category;
+    var tag = 'category';
+    $('#description #i' + tag).css({'display': 'block'});
+    $('#description #i' + tag + ' span').append(mdata);
+
+    var mdata = l_item.title;
+    var tag = 'title';
+    $('#description #i' + tag).css({'display': 'block'});
+    $('#description #i' + tag + ' span').append(mdata);
+
+    // default:
+    //     /* I LEFT IT PURSPOSELY BECAUSE I NEED TO SEE THE 'VALUES' INDEXED BY THE SCRIPT*/
+    //     break;
+    // }
+
+    // $('#description #i' + tag).css({'display': 'block'});
+    // $('#description #i' + tag + ' span').append(mdata);
+    // }
+    //     } else {
+    //         data = $(this).text();
+    //         if (data != '' && data != '-') {
+    //             if (tag == 'tutor') {
+    //                 $('#icomplements').css({'display': 'block'})
+    //             }
+    //             $('#description #i' + tag).css({'display': 'block'});
+    //             $('#description #i' + tag + ' span').html(data);
+    // if (tag == 'link') {
+    //     $('#description #i' + tag + ' span').html('<a href="' + data + '">VISIT ONLINE</a>');
+    // }
+    // }
+    //     }
+    // }
+    // );
     //END OF 'AJAX' FUNCTION
 
     // FIND ITEM TO DISPLAY ON ANIME-END
@@ -1778,6 +1861,7 @@ function __GET_CACHED_DATA(index, isXML) {
         var oParser = new DOMParser();
         return oParser.parseFromString(data, 'text/xml');
     }
+
     if (data && !isXML) {
         return JSON.parse(data);
     }
@@ -1817,3 +1901,22 @@ function _suffleArray(a) {
     }
     return b;
 }
+
+
+// function AJAX() {
+//     var API = "localhost:3000/users";
+//
+//     var xhr = new XMLHttpRequest();
+//     xhr.withCredentials = true;
+//
+//     xhr.addEventListener("readystatechange", function () {
+//         if (this.readyState === 4) {
+//             return this.responseText;
+//         }
+//     });
+//
+//     xhr.open("GET", API);
+//     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+//
+//     xhr.send(null);
+// }
