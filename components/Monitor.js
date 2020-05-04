@@ -1,6 +1,7 @@
-import ProjectorProject from "./ProjectorProject.js";
-import ProjectorQuote from "./ProjectorQuote.js";
-import ProjectorTools from "./ProjectorTools.js";
+import ProjectorProject from "./MonitorProject.js";
+import ProjectorQuote from "./MonitorQuote.js";
+import ProjectorTools from "./MonitorTools.js";
+import {dq} from "./aux.js";
 
 
 const filters = ['project', 'quote', 'tools'];
@@ -11,6 +12,19 @@ let index = -1;
 let isIntervalBlocked = false;
 let isFilterForced = false;
 
+
+const CSSID = '#skills_preview';
+
+export default (o = null) => run(o);
+
+
+const run = (cssid) => {
+    // rotateContent();
+    dq(cssid || CSSID).innerHTML = view()
+}
+// const run = () => {
+//     return view();
+// }
 
 const resolveFilter = () => {
     if (isFilterForced) return filters[index];
@@ -85,12 +99,8 @@ const attachLoaders = () => {
 };
 
 
-const run = () => {
-    rotateContent();
-    return view();
-}
+// const elem = document.createElement('div');
+// elem.innerHTML = run();
+// document.body.appendChild(elem);
 
-
-const elem = document.createElement('div');
-elem.innerHTML = run();
-document.body.appendChild(elem);
+run();

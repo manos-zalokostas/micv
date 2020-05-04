@@ -1,13 +1,13 @@
 export default (o) => run(o);
 
+
 const run = (o) => {
-
     return view();
-
 }
 
+
 const getDataset = () => {
-// if(!dataclone.length) cloneData();
+    if (!dataclone.length) cloneData();
     return dataclone.shift();
 };
 
