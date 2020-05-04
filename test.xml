@@ -1,0 +1,53 @@
+<item>
+    <domain>WEB</domain>
+    <id>WB12</id>
+    <section>Application Development</section>
+    <category>Design and Development</category>
+    <title>Rateparity</title>
+    <tools>
+        <tool>web_application</tool>
+        <tool>javascript</tool>
+        <tool>react js</tool>
+        <tool>es6</tool>
+        <tool>css3</tool>
+        <tool>scss</tool>
+        <tool>requirements</tool>
+        <tool>node js</tool>
+        <tool>webpack</tool>
+        <tool>git</tool>
+        <tool>rest_api</tool>
+    </tools>
+    <description>
+        <![CDATA[
+ <p>
+ Standalone Frontend Developer building with the latest ES6+ upgrade and the popular React Js library. Developing customizable, one-line-installation CORS Widgets for enriching the user experience on customers sites. Additionally developing the configuration app in the backend for widgets customization and usage monitoring and evaluation.
+ </p>
+ <ul> Key Responsibilities:
+ <span>
+ <li>Design and develop 5 decoupled SPA widgets, providing 4 layout viewports for each </li>
+ <li>Design and develop the app's installer, invoked once at load-time, and launches respective widgets based on configuration</li>
+ <li>Design and develop the Configuration App in the backend</li>
+ <li>Configure the development environment with NodeJs, Webpack and Babel</li>
+ <li>Limit the number of frontend libraries to minimum </li>
+ </span>
+ </ul>
+ ]]>
+    </description>
+    <screenshots>
+        <shot>images/ratepariy/widget_price_full.png</shot>
+        <shot>images/ratepariy/widget_max_roomsheet.png</shot>
+        <shot>images/ratepariy/widget_offer_full.png</shot>
+        <shot>images/ratepariy/config_price_position.png</shot>
+        <shot>images/ratepariy/config_offer_colors.png</shot>
+        <shot>images/ratepariy/config_snippet_content.png</shot>
+        <shot>images/ratepariy/config_disparity_details.png</shot>
+    </screenshots>
+    <score>-</score>
+    <tutor>-</tutor>
+    <comment>-</comment>
+    <files>
+        <file>images/cosmores/notificatons_info.png</file>
+    </files>
+    <media></media>
+    <link></link>
+</item>
