@@ -23,7 +23,7 @@ const view = () => {
 
 const attachLoaders = () => {
     document.addEventListener('click', evt => {
-        debugger
+
         if (evt.target.dataset && evt.target.dataset.project) {
             navigateDescription(evt);
         }

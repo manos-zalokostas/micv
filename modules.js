@@ -5,3 +5,8 @@ import ResumeList from "./components/ResumeList.js";
 import TimelineList from "./components/TimelineList.js";
 import Projector from "./components/Monitor.js";
 import ProjectGroupPool from "./components/ProjectGroupPool.js";
+import DescriptionHeader from "./components/DescriptionHeader.js";
+import DescriptionText from "./components/DescriptionText.js";
+import DescriptionSlideshow from "./components/DescriptionSlideshow.js";
+import DescriptionExtra from "./components/DescriptionExtra.js";
+import ReferenceGroup from "./components/ReferenceGroup.js";

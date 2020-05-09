@@ -2,15 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c2027ac-7fbf-48f5-b8a4-e62f9701cdf7" name="Default" comment="#MASTER || REVERT&#10;**********************&#10; - REVERT TO PREVIOUS STATE SO THAT 'GITHUB' USES A FUNCTIONAL - LEGACY - COPY">
-      <change afterPath="$PROJECT_DIR$/components/TimelineList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/DescriptionExtra.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/DescriptionHeader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/DescriptionSlideshow.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/DescriptionText.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ReferenceGroup.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dev.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/AboutText.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/AboutText.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ResumeList.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/ResumeList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/view.html" beforeDir="false" afterPath="$PROJECT_DIR$/components/html_templates.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ProjectGroup.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProjectGroup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/html_templates.html" beforeDir="false" afterPath="$PROJECT_DIR$/components/html_templates.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/installer.js" beforeDir="false" afterPath="$PROJECT_DIR$/installer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/installer.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view.html" beforeDir="false" afterPath="$PROJECT_DIR$/view.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +24,20 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FavoritesManager">
     <favorites_list name="micv" />
@@ -65,15 +82,15 @@
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/components" />
-      <recent name="$PROJECT_DIR$/web-component" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/aux" />
       <recent name="$PROJECT_DIR$/components" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/components" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/web-component" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -127,6 +144,8 @@
       <workItem from="1587974250642" duration="24000" />
       <workItem from="1588332171533" duration="9753000" />
       <workItem from="1588496031260" duration="5136000" />
+      <workItem from="1588833708282" duration="835000" />
+      <workItem from="1589010455825" duration="15576000" />
     </task>
     <task id="LOCAL-00001" summary="convert http =&gt; https">
       <created>1545926008916</created>
@@ -265,18 +284,22 @@
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="626" y="322" width="540" height="524" key="StructurePopup/0.28.1920.1052@0.28.1920.1052" timestamp="1588338665237" />
-    <state x="675" y="372" key="com.intellij.ide.util.TipDialog" timestamp="1587974250607">
+    <state x="200" y="140" width="1606" height="825" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1589020644078">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="675" y="372" key="com.intellij.ide.util.TipDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1587974250607" />
+    <state x="200" y="140" width="1606" height="825" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1589020644078" />
+    <state x="675" y="372" key="com.intellij.ide.util.TipDialog" timestamp="1588833815693">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="675" y="372" key="com.intellij.ide.util.TipDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1588833815693" />
     <state x="806" y="479" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588507999130">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="806" y="479" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.28.1920.1052@0.28.1920.1052" timestamp="1588507999130" />
-    <state x="638" y="254" width="752" height="610" key="find.popup" timestamp="1588531638400">
+    <state x="638" y="254" width="752" height="610" key="find.popup" timestamp="1589020649341">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="638" y="254" width="752" height="610" key="find.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1588531638400" />
+    <state x="638" y="254" width="752" height="610" key="find.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1589020649341" />
     <state width="600" height="424" key="javadoc.popup" timestamp="1587815719558">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
@@ -285,9 +308,9 @@
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="546" y="307" width="700" height="530" key="recent.locations.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1587561380214" />
-    <state x="644" y="270" width="672" height="678" key="search.everywhere.popup" timestamp="1588531859832">
+    <state x="644" y="270" width="672" height="678" key="search.everywhere.popup" timestamp="1589023167694">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="644" y="270" width="672" height="678" key="search.everywhere.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1588531859832" />
+    <state x="644" y="270" width="672" height="678" key="search.everywhere.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1589023167694" />
   </component>
 </project>
