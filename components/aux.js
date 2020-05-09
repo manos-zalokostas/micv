@@ -13,3 +13,20 @@ export const cl = (...args) => console.log(' --> DEBUG:: ', args);
 export const dq = (str) => document.querySelector(str);
 
 export const dqa = (str) => document.querySelectorAll(str);
+
+
+export const cladd = (elem, style) => {
+    elem.classList.add(style)
+};
+
+export const clrem = (elem, style) => {
+    elem.classList.remove(style);
+}
+
+export const setattr = (elem, attr, value) => {
+    elem.setAttribute(attr, value);
+}
+
+export const remattr = (elem, attr) => {
+    elem.removeAttribute(attr);
+}

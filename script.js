@@ -1366,18 +1366,18 @@ function __INITIALIZE_PAGE_DATA(data) {
  * @private
  */
 function _BUILD_SEARCH_LISTS(projects, tools) {
-    var htmlProjects = [],
-        htmlTools = [];
+    // var htmlProjects = [],
+    //     htmlTools = [];
+    // //
+    // projects.forEach(function (project) {
+    //     htmlProjects.push("<option value='" + project.name + "'>" + project.name + "</option>")
+    // });
+    // tools.forEach(function (tool) {
+    //     htmlTools.push("<option value='" + tool + "'>" + tool + "</option>")
+    // });
     //
-    projects.forEach(function (project) {
-        htmlProjects.push("<option value='" + project.name + "'>" + project.name + "</option>")
-    });
-    tools.forEach(function (tool) {
-        htmlTools.push("<option value='" + tool + "'>" + tool + "</option>")
-    });
-
-    document.querySelector(('#project_list')).innerHTML = htmlProjects;
-    document.querySelector(('#skill_list')).innerHTML = htmlTools;
+    // document.querySelector(('#project_list')).innerHTML = htmlProjects;
+    // document.querySelector(('#skill_list')).innerHTML = htmlTools;
 }
 
 /**
