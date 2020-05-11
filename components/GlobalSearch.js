@@ -1,6 +1,6 @@
 import {dq, cl, strJoin} from "./aux.js";
 
-const CSSID = '#global_search';
+const CSSID = '#global-search';
 
 // let activeImage = 'images/webdes_a1/welcome_page.jpg';
 
@@ -20,13 +20,13 @@ const view = () => {
                 <div>
                     <label>
                         project
-                        <input type="radio" name="global-search" value="project_list" checked>
+                        <input type="radio" name="introduction-navigation" value="project_list" checked>
                     </label>
                 </div>
                 <div>
                     <label>
                         skill
-                        <input type="radio" name="global-search" value="tool_list">
+                        <input type="radio" name="introduction-navigation" value="tool_list">
                     </label>
                 </div>
             </div>
@@ -52,7 +52,7 @@ const view = () => {
 const attachListeners = () => {
 
     document.addEventListener('click', (evt) => {
-        if (evt.target.name === 'global-search') {
+        if (evt.target.name === 'introduction-navigation') {
             cl('CLICK: ', evt.target.value)
             dq('#search_result input').removeAttribute('list');
             dq('#search_result input').setAttribute('list', evt.target.value)

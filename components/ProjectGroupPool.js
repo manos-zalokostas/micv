@@ -1,7 +1,7 @@
 import ProjectGroup from "./ProjectGroup.js";
 import {dq, strJoin} from "./aux.js";
 
-const CSSID = '#list';
+const CSSID = '#projects-syndication';
 
 export default (o = null) => run(o);
 

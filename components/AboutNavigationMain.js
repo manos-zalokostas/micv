@@ -1,7 +1,7 @@
 import {dq, cl, strJoin} from "./aux.js";
 import {NavigationAbout} from "./Layout.js";
 
-const CSSID = '#introduction_menu';
+const CSSID = '#introduction-navigation';
 
 // let activeImage = 'images/webdes_a1/welcome_page.jpg';
 
@@ -23,6 +23,7 @@ const view = () => {
             <a href="#" data-type="${name}">${name}</a>
             `)}
             </nav>
+            <style>#about-navigation a { color: white }</style>
             <script>${attachListeners()}</script>
         </div>
     `;

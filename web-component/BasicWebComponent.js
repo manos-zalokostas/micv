@@ -1,7 +1,7 @@
 const data = [
-    ['Title 1', 'paragraph 1', 'footer 1'],
-    ['Title 2', 'paragraph 2', 'footer 2'],
-    ['Title 3', 'paragraph 3', 'footer 3'],
+    ['Title 1', 'paragraph 1', 'page-footer 1'],
+    ['Title 2', 'paragraph 2', 'page-footer 2'],
+    ['Title 3', 'paragraph 3', 'page-footer 3'],
 ];
 
 class WebComponent extends HTMLElement {
@@ -36,14 +36,14 @@ class WebComponent extends HTMLElement {
 
     render() {
         let template = document.getElementById('html-template');
-        let node, header, paragraph, footer;
+        let node, header, paragraph, page-footer;
 
         data.forEach(group => {
             node = document.importNode(template.content, true);
-            [header, paragraph, footer] = group;
+            [header, paragraph, page-footer] = group;
 
             node.querySelector('header').innerHTML = header;
-            node.querySelector('footer').innerHTML = footer;
+            node.querySelector('page-footer').innerHTML = page-footer;
             node.querySelector('p').innerHTML = paragraph;
 
             node.querySelector('aside').innerHTML = this['owner'];

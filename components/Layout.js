@@ -12,19 +12,19 @@ export const NavigationAbout = (action) => {
 
 const Actions = {
     welcome: () => {
-        setattr(dq('#resume_cv_field'), 'class', 'hide');
-        setattr(dq('#interactive_cv_field'), 'class', 'hide');
-        remattr(dq('#introduction_cv_field'), 'class');
+        setattr(dq('#resume-text'), 'class', 'hide');
+        setattr(dq('#resume-interactive'), 'class', 'hide');
+        remattr(dq('#resume-introduction'), 'class');
     },
     timeline: () => {
-        remattr(dq('#resume_cv_field'), 'class');
-        setattr(dq('#interactive_cv_field'), 'class', 'hide');
-        setattr(dq('#introduction_cv_field'), 'class', 'hide');
+        remattr(dq('#resume-text'), 'class');
+        setattr(dq('#resume-interactive'), 'class', 'hide');
+        setattr(dq('#resume-introduction'), 'class', 'hide');
     },
     interactive: () => {
-        setattr(dq('#resume_cv_field'), 'class', 'hide');
-        remattr(dq('#interactive_cv_field'), 'class');
-        setattr(dq('#introduction_cv_field'), 'class', 'hide');
+        setattr(dq('#resume-text'), 'class', 'hide');
+        remattr(dq('#resume-interactive'), 'class');
+        setattr(dq('#resume-introduction'), 'class', 'hide');
     },
     document: () => {
     },

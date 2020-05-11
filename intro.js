@@ -3,7 +3,7 @@ export const Intro = () => {
     return (
         `
         <div id="introduction">
-    <div id="introduction_menu">
+    <div id="introduction-navigation">
     <ul>
     <li><a id="introduction_cv" class='selected' href="#">Welcome</a></li>
 <li><a id="resume_cv" href="#">Timeline</a></li>
@@ -12,7 +12,7 @@ export const Intro = () => {
 </ul>
 </div>
 <h1>Resume</h1>
-<div id="skills_preview" class="monitor">
+<div id="introduction-projector" class="monitor">
     <div id='skill_fields' class='mbuttons'><b title='project'>projects</b><b title="reference">references</b><b title="tool">skills</b><em>||</em></div>
 <div id="welcome">
     <h3>Web Development</h3>
@@ -74,15 +74,15 @@ export const Intro = () => {
 </li>
 </ul>
 </div>
-<div id="author_presentation">
+<div id="author-message">
     <p>Creativity is the tool that while enjoy using and practicing is leading me a nice journey throughout diverse educational and occupational experiences.
     Unfolding my need for being creative and enthousiasm for technology I started my training on graphics design. Leveraging my skills on the
 area have let me acknowledge spare concepts around web technology. The need for obtaining fundamental understanding has gradually overwhelmed me, and drove me to migrate interest on the field. <br/>
 </p>
 <img src="images/profile/manos2.jpg"/>
     </div>
-    <div id="interactive_intro" class='citation'>
-    <div id="resume_cv_field">
+    <div id="resume-contents" class='citation'>
+    <div id="resume-text">
     <div class="aux_txt">
     <h3>Timeline <span>comments<input type="checkbox" id="cv_comments"/></span></h3>
 <p id="cv_description">
@@ -156,7 +156,7 @@ while also studying 'Art History' and 'Typography History'. The next year I had 
 </p>
 </div>
 </div>
-<div id="interactive_cv_field">
+<div id="resume-interactive">
     <h2>Interactive Timeline</h2>
 <ul id='timeline_btns'>
     <li><a id="mlt" href="#">Clear</a></li>
@@ -272,12 +272,12 @@ technologies,
 </li>
 </ul>
 </div>
-<div id="introduction_cv_field">
+<div id="resume-introduction">
     <div class="main_txt">
     <h2>Welcome</h2>
     <p>
     <span>Hi! My name is Manos.</span>
-For near the last and a half decade I have been studying and practicing my skills on diverse domains of educational interest,
+For near the last and a half decade I have been studying and practicing my skills on diverse footer-references of educational interest,
     attending a bachelor degree from an English University while also taking multiple full-year trainings on Athenian private vocational institutes.
     The aspects of my study and research could be, in an abstruct manner, summarized to 'Web and Desktop Applications Development','Business Management and Marketing' and 'Graphics Design'.
     At the same time, speaking of my occupational experience, for more than a decade I have been occupied and have been evolving my competences and communication in a top-competent,world-wide extending
@@ -287,12 +287,12 @@ pharmaceutical company, complying and assimilating to my profile highly strict a
 <div class="aux_txt">
     <h3>What is the site about</h3>
 <p>
-On site you may resume both of my occupational and educational timelines, how the two were drawn and evolve in parellel during previous years. Context may be indexed in detail,
-either as bulleted descriptions or guided by an interactive timeline. Along with the descriptive context you may also have an overview on some of the most critical projects that I have encountered.
+On site you may resume both of my occupational and educational timelines, how the two were drawn and evolve in parellel during previous years. page-projects may be indexed in detail,
+either as bulleted descriptions or guided by an interactive timeline. Along with the descriptive page-projects you may also have an overview on some of the most critical projects that I have encountered.
     Therefore you may find available work-samples while working as a freelance developer on the Web, as officer occupied by pharmaceutical company, and last but not least as student at university.
     For the latter you may additionally index the scores attained, instructors’ comments, while also documentation and video reference whenever appropriate.
     Finally on the last page there are available links to the officials sites for each cited organization. You are suggested to request for reference where available. If you wish you may contact me
-using any of my personal accounts provided for some of the most popular social networks. Please suggest the context if you feel like.
+using any of my personal accounts provided for some of the most popular social networks. Please suggest the page-projects if you feel like.
 </p>
 </div>
 </div>

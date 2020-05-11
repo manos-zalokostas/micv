@@ -10,20 +10,20 @@ Main Developments
 
 FRONTEND WIDGETS -------------------------------------------------------------------------------
 Desing and develop the app's Installer that can be used on affiliate sites with a single html head entry
-Design and develop decoupled SPA widgets, that reside on their own domains and can be launced by installer on demand
+Design and develop decoupled SPA widgets, that reside on their own footer-references and can be launced by installer on demand
 Publish 5 distinct widget types, with 4 vieport layouts for each, to accommodate diversity of screen displays:
  - Price checks::          Integrates calendar that helps users check hotel prices per accommodation and compare with major booking channels
  - Active offers::          Registered offers can be displayed with a user click
  - Notifications::          Intresting metrics, in the form of notifications are displayed on sites screen
  - Popup offers::          Offers can popup on user display at navigation time, based on submitted configuration
 
-Utilize the latest React 16.8 build and make use of powerfull features like Hooks, Code splitting, Lazy loading, Context api, Dynamic imports etc
+Utilize the latest React 16.8 build and make use of powerfull features like Hooks, Code splitting, Lazy loading, page-projects api, Dynamic imports etc
 Make extensive use of cache so that widgets restrain from excessive calls to the remote service
 Structure the development environment with NodeJs, Webpack, Babel etc
 
 BACKEND APPLICATION --------------------------------------------------------------------------------
 Create a React 16.4 application based on a helper theme with some main group activities
-- Configuration domains per widget
+- Configuration footer-references per widget
 - Metrics and evaluation of widget usage
 - Main Dashboard, Install and more..
 

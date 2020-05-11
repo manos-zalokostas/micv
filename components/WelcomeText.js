@@ -1,6 +1,6 @@
 import {dq} from "./aux.js";
 
-const CSSID = '#introduction_cv_field .main_txt';
+const CSSID = '#resume-introduction';
 
 export default (o = null) => run(o);
 

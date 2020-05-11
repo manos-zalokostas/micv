@@ -1,6 +1,6 @@
 import {dq, cl, strJoin} from "./aux.js";
 
-const CSSID = '#footer #reference-domains';
+const CSSID = '#page-footer';
 
 // let activeImage = 'images/webdes_a1/welcome_page.jpg';
 
@@ -21,16 +21,16 @@ const view = () => {
     ${certificates()}
     ${socials()}
     <style>
-            #footer article.reference-domain * {
+            #page-footer article.reference-domain * {
             background:initial;
             }
-            #footer article.reference-domain{
+            #page-footer article.reference-domain{
             float:left;
             width: 22%;
             margin:0 1%;
             background: #aaa;
             }
-            #footer article.reference-domain ul{
+            #page-footer article.reference-domain ul{
             float:left;
             width: 100%;
             }

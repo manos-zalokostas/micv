@@ -13,7 +13,7 @@ let isIntervalBlocked = false;
 let isFilterForced = false;
 
 
-const CSSID = '#skills_preview';
+const CSSID = '#introduction-projector';
 
 export default (o = null) => run(o);
 

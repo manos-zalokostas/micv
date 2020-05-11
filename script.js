@@ -28,20 +28,20 @@ $(document).ready(
         $("input[list]").change(
             function () {
                 if ($(this).attr('list') === 'project_list') {
-                    // handle_banner_input('project', $(this).context.value.split(' ').shift());
-                    handle_banner_input('project', $(this).context.value);
+                    // handle_banner_input('project', $(this).page-projects.value.split(' ').shift());
+                    handle_banner_input('project', $(this).page-projects.value);
                 }
                 if ($(this).attr('list') === 'skill_list') {
-                    handle_banner_input('tool', $(this).context.value.split(' ').shift());
+                    handle_banner_input('tool', $(this).page-projects.value.split(' ').shift());
                 }
                 $("input[list]")[0].value = '';
             }
         );
 
         // LISTENER FOR THE PAGES
-        $("#site_menu a").click(
+        $("#global-menu a").click(
             function () {
-                var current_page = $(this).context.innerHTML;
+                var current_page = $(this).page-projects.innerHTML;
                 animate_page(current_page)
             }
         );
@@ -51,7 +51,7 @@ $(document).ready(
             function () {
                 $(this).click(
                     function () {
-                        var pause_btn = $('#skills_preview > div > em');
+                        var pause_btn = $('#introduction-projector > div > em');
                         if ($(pause_btn).hasClass('paused')) {
                             handle_pause_action();
                         }
@@ -63,14 +63,14 @@ $(document).ready(
         );
 
         // LISTENER FOR THE 'PAUSE' BUTTON
-        var pause_btn = $('#skills_preview > div > em');
+        var pause_btn = $('#introduction-projector > div > em');
         $(pause_btn).click(handle_pause_action);
 
 
         // LISTENER FOR THE SKILLS - BANNER
-        $('#skills_preview').mouseenter(
+        $('#introduction-projector').mouseenter(
             function () {
-                var pause_btn = $('#skills_preview > div > em');
+                var pause_btn = $('#introduction-projector > div > em');
                 if ($(pause_btn).hasClass('paused')) {
                     return;
                 }
@@ -78,9 +78,9 @@ $(document).ready(
             }
         )
 
-        $('#skills_preview').mouseleave(
+        $('#introduction-projector').mouseleave(
             function () {
-                var pause_btn = $('#skills_preview > div > em');
+                var pause_btn = $('#introduction-projector > div > em');
                 if ($(pause_btn).hasClass('paused')) {
                     return;
                 }
@@ -89,14 +89,14 @@ $(document).ready(
         )
 
         // LISTENERS FOR THE BANNER - SHOWCASE - ITEMS
-        $('#skills_preview').delegate(
+        $('#introduction-projector').delegate(
             'ul>li>div', 'click', function () {
                 $(this).click(handle_banner_input(this.parentNode.id));
             }
         )
 
         //LISTENERS FOR THE 'INTRODUCTION' PAGE
-        $("#introduction_menu a").each(
+        $("#introduction-navigation a").each(
             function () {
                 $(this).click(
                     function () {
@@ -110,10 +110,10 @@ $(document).ready(
         $('#cv_comments').click(
             function () {
                 if (document.querySelector('#cv_description i').style.display == 'none' || !(document.querySelector('#cv_description i').hasAttribute('style'))) {
-                    $('#cv_description i').css({'display': 'block'}).animate({'opacity': '1'});
+                    $('#cv_description i').css({'display': 'block'}).animate({'opacity', 1': '1'});
                 } else {
                     $('#cv_description i').animate(
-                        {'opacity': '0'}, function () {
+                        {'opacity', 1': 1}, function () {
                             $(this).css({'display': 'none'})
                         }
                     );
@@ -141,7 +141,7 @@ $(document).ready(
 
                         if (document.querySelector('#timeline a.selected')) {
                             $('#timeline a.selected').removeClass().css('paddingBottom', 0);
-                            $('#objectives').css('opacity', 0);
+                            $('#objectives').css('opacity', 1', 1);
                         }
 
                         if (document.querySelector('#timeline_btns a[style]')) {
@@ -154,8 +154,8 @@ $(document).ready(
                             function () {
                                 if (this.className.match(domain)) {
                                     this.setAttribute('class', this.getAttribute('class').replace('_off', ''));
-                                    $(this).css({'opacity': '0'});
-                                    $(this).animate({'padding-left': '6px', 'opacity': '1'}, 'slow', 'swing');
+                                    $(this).css({'opacity', 1': 1});
+                                    $(this).animate({'padding-left': '6px', 'opacity', 1': '1'}, 'slow', 'swing');
                                 } else {
                                     if (!(this.getAttribute('class').match('_off')) && this.getAttribute('class') != 'default') {
                                         this.setAttribute('class', this.getAttribute('class') + '_off');
@@ -181,28 +181,28 @@ $(document).ready(
 
                         $(this).addClass('selected').animate({'paddingBottom': '100px'});
 
-                        $('#objectives').css({'opacity': '0'});
+                        $('#objectives').css({'opacity', 1': 1});
 
                         var label = this.parentNode.querySelector('p[title="item_label"]').innerHTML;
                         var skill = this.parentNode.querySelector('p[title="item_skills"]').innerHTML;
                         document.querySelector('#label').innerHTML = label;
                         document.querySelector('#skills').innerHTML = skill;
 
-                        $('#objectives').animate({'opacity': '1'}, 'slow', 'swing');
+                        $('#objectives').animate({'opacity', 1': '1'}, 'slow', 'swing');
                     }
                 )
             }
         );
 
         //LISTENERS FOR THE ''WORK'' PAGE
-        // $("#menu_tabs li a").hover(hover_in_menu_buttons, hover_out_menu_buttons);
+        // $("#projects-navigation li a").hover(hover_in_menu_buttons, hover_out_menu_buttons);
 
         //MAIN BUTTONS 'CLICK'
-        $("#menu_tabs li a").click(
+        $("#projects-navigation li a").click(
             function (event) {
 
-                if (document.querySelector('#context').style.left != 0) {
-                    $('#context').animate({'left': 0})
+                if (document.querySelector('#page-projects').style.left != 0) {
+                    $('#page-projects').animate({'left': 0})
                 }
                 nav_bar_designer(event.target.innerHTML, 'navigation');
             }
@@ -248,7 +248,7 @@ $(document).ready(
         );
 
         // EXTRA BUTTONS 'CLICK'
-        $('#iextra > div').click(
+        $('#project-extras > div').click(
             function (event) {
 
                 preview_extras(this);
@@ -256,7 +256,7 @@ $(document).ready(
         )
 
         // media / files / IMAGES  ELEMENTS 'CLICK'
-        $('#imedia, #ifiles, #iscreenshots').delegate(
+        $('#imedia, #ifiles, #project-media').delegate(
             'a', 'click', function (event) {
 
                 var item_src = $(this).attr('href');
@@ -280,7 +280,7 @@ $(document).ready(
         $('#description').delegate(
             'a.keys', 'click', function (event) {
                 nav_bar_designer(event.target.innerHTML, 'keyword')
-                $('#context').animate({'left': 0});
+                $('#page-projects').animate({'left': 0});
                 return false;
             }
         )
@@ -289,7 +289,7 @@ $(document).ready(
         $('#description').delegate(
             'a.cat_key', 'click', function (event) {
                 nav_bar_designer(event.target.innerHTML, 'category')
-                $('#context').animate({'left': 0});
+                $('#page-projects').animate({'left': 0});
                 return false;
             }
         )
@@ -328,35 +328,35 @@ function start_projector_display() {
             }
 
             if (icounter >= 1) {
-                $('#skills_preview').animate({'left': 0});
+                $('#introduction-projector').animate({'left': 0});
             }
             if (icounter == 5) {
-                $('#skill_fields b').animate({'top': 0, 'opacity': 1});
+                $('#skill_fields b').animate({'top': 0, 'opacity', 1': 1});
             }
             if (icounter == 10) {
-                $(child1).animate({'opacity': 1})
+                $(child1).animate({'opacity', 1': 1})
                 navigate_resume_page('introduction_cv');
             }
             if (icounter == 18) {
-                $(child1).animate({'opacity': 0})
+                $(child1).animate({'opacity', 1': 0})
             }
             if (icounter == 20) {
-                $(child2).animate({'opacity': 1})
+                $(child2).animate({'opacity', 1': 1})
             }
             if (icounter == 28) {
-                $(child2).animate({'opacity': 0})
+                $(child2).animate({'opacity', 1': 0})
             }
             if (icounter == 30) {
-                $(child3).animate({'opacity': 1})
+                $(child3).animate({'opacity', 1': 1})
             }
             if (icounter == 38) {
-                $(child3).animate({'opacity': 0})
+                $(child3).animate({'opacity', 1': 0})
             }
             if (icounter == 40) {
-                $(child4).animate({'opacity': 1})
+                $(child4).animate({'opacity', 1': 1})
             }
             if (icounter == 48) {
-                $(child4).animate({'opacity': 0})
+                $(child4).animate({'opacity', 1': 0})
             }
             if (icounter == 50) {
                 $('#welcome').remove();
@@ -371,7 +371,7 @@ function start_projector_display() {
  *
  */
 function handle_pause_action() {
-    var pause_btn = $('#skills_preview > div > em');
+    var pause_btn = $('#introduction-projector > div > em');
     if (pause_btn.attr('class')) {
         $(pause_btn).removeClass();
         animation_running = true;
@@ -393,8 +393,8 @@ function navigate_resume_page(domain) {
     var id = '#' + domain;
     var domain = '#' + domain + '_field';
 
-    if (document.querySelector('#introduction_menu a.selected')) {
-        document.querySelector('#introduction_menu a.selected').removeAttribute('class')
+    if (document.querySelector('#introduction-navigation a.selected')) {
+        document.querySelector('#introduction-navigation a.selected').removeAttribute('class')
     }
     $(id).addClass('selected');
 
@@ -402,7 +402,7 @@ function navigate_resume_page(domain) {
         clean_page_data();
         animate_page('projects');
 
-        $('#context').animate({'left': '-100%'});
+        $('#page-projects').animate({'left': '-100%'});
         content_handler('images/cv_document/micv.pdf', 'pdf');
     }
     // GET ALL THE SIBLINGS ON THE DISPLAY (LEFT OPEN BY PREVIOUS ACITVITIES), AND RESTORE THEM TO ORIGINAL POSITION
@@ -410,22 +410,22 @@ function navigate_resume_page(domain) {
         function () {
             if (this.id.match('cv_field')) {
                 $(this).animate(
-                    {'opacity': '0', 'left': '-100%'}, 'swing', function () {
+                    {'opacity', 1': 1, 'left': '-100%'}, 'swing', function () {
                     }
                 )
             }
         }
     )
 
-    $(domain).animate({'opacity': '1', 'left': '0'});
+    $(domain).animate({'opacity', 1': '1', 'left': '0'});
     $(domain).find('.main_txt > p').animate(
         {'left': 0}, function () {
-            $(domain).find('.main_txt > h2').animate({'opacity': '1'})
+            $(domain).find('.main_txt > h2').animate({'opacity', 1': '1'})
         }
     );
     $(domain).find('.aux_txt > p').animate(
         {'right': 0}, function () {
-            $(domain).find('.aux_txt > h3').animate({'opacity': '1'})
+            $(domain).find('.aux_txt > h3').animate({'opacity', 1': '1'})
         }
     );
 
@@ -439,34 +439,34 @@ function navigate_resume_page(domain) {
  */
 function animate_page(current_page) {
 
-    if ($('#site_menu a.selected').attr('title') == current_page) {
+    if ($('#global-menu a.selected').attr('title') == current_page) {
         return;
     }
     var animation_paused = $('#skill_fields > em').hasClass('paused');
 
-    $('#site_menu a.selected').removeAttr('class');
-    $('#site_menu a[title="' + current_page + '"]').addClass('selected');
+    $('#global-menu a.selected').removeAttr('class');
+    $('#global-menu a[title="' + current_page + '"]').addClass('selected');
 
-    $('#site_menu').animate({'top': '-10%'})
+    $('#global-menu').animate({'top': '-10%'})
 
     switch (current_page) {
 
         case 'about' :
             $('#wrapper').animate(
                 {'top': '0%'}, 'slow', 'swing', function () {
-                    $('#site_menu').animate({'top': 0})
+                    $('#global-menu').animate({'top': 0})
                 }
             );
-            $('#author_presentation > img').animate({'left': 0}, 'slow');
+            $('#author-message > img').animate({'left': 0}, 'slow');
             if (!animation_running && !animation_paused) {
                 animate_skills(gmode);
             }
             break;
         case 'projects' :
             $('#wrapper').animate({'top': '-100%'}, 'slow', 'swing');
-            $('#author_presentation > img').animate(
+            $('#author-message > img').animate(
                 {'left': '-100%'}, 'slow', function () {
-                    $('#site_menu').animate({'top': 0})
+                    $('#global-menu').animate({'top': 0})
                 }
             );
             animate_skills('off');
@@ -474,10 +474,10 @@ function animate_page(current_page) {
         case 'certificates' :
             $('#wrapper').animate(
                 {'top': '-200%'}, 'slow', 'swing', function () {
-                    $('#site_menu').animate({'top': 0})
+                    $('#global-menu').animate({'top': 0})
                 }
             );
-            $('#author_presentation > img').animate({'left': '-100%'});
+            $('#author-message > img').animate({'left': '-100%'});
             animate_skills('off');
             break;
         default :
@@ -485,7 +485,7 @@ function animate_page(current_page) {
             console.log('FUNCTION: ANIMATE_PAGE -> RUNS DEFAULT - PLEASE CHECK !')
             $('#wrapper').animate(
                 {'top': '0%'}, 'slow', 'swing', function () {
-                    $('#site_menu').animate({'top': 0})
+                    $('#global-menu').animate({'top': 0})
                 }
             )
             break;
@@ -703,7 +703,7 @@ function animate_skills(mode) {
         var animate_next = true;
 
         if (mode == 'global') {
-            max = $('#skills_preview> ul> li').length;
+            max = $('#introduction-projector> ul> li').length;
         } else {
             if (mode == 'reference') {
                 sindex += 1
@@ -738,7 +738,7 @@ function animate_skills(mode) {
                     /*animate_next=false;*/
                 }
 
-                var anime_child = $('#skills_preview> ul> li:nth-child(' + (index + 1) + ')');
+                var anime_child = $('#introduction-projector> ul> li:nth-child(' + (index + 1) + ')');
 
                 if ($('.slide_animated')) {
 
@@ -809,7 +809,7 @@ function handle_banner_input(caller, target) {
         if (!target) {
             target = $(window.event.target).prev().text().replace(/ /g, '_');
         }
-        $('#context').animate({'left': 0});
+        $('#page-projects').animate({'left': 0});
         animate_page('projects')
         nav_bar_designer(target, 'keyword')
         return
@@ -862,7 +862,7 @@ function preview_extras(element) {
     var elem = element
 
     // HIDES THE PREVIEWED SIBLING
-    $('#iextra').find('.extra_preview').animate({'height': '5%'}).find('span').css('display', 'none');
+    $('#project-extras').find('.extra_preview').animate({'height': '5%'}).find('span').css('display', 'none');
 
     // ANIMATES-IN THE SELECTED FIELD
     $(elem).attr('class', 'extra_preview').animate(
@@ -923,7 +923,7 @@ function initialize_button(btn) {
  */
 function clean_page_data() {
 
-    var id_elems = $('#description #iextra *[id]');
+    var id_elems = $('#description #project-extras *[id]');
     var elem_spans = $('#description span');
     var navigation_list = $('#list');
 
@@ -1017,22 +1017,22 @@ function content_handler(item_src, app) {
     var item;
 
     if (src == 'images/cv_document/micv.pdf') {
-        $('#iextra > div').css('display', 'none')
+        $('#project-extras > div').css('display', 'none')
     }
 
     //ANIMATES THE OPACTITY OF THE 'TEXT and IMAGES' BACKGROUND RESOURCES
     //BOFORE THE SLIDESHOW AREA IS EXPANDED
-    $('#ibody > div:first-child').children().animate(
-        {opacity: 0}, 'normal', function () {
-            $(this).css('display', 'none');
-        }
-    );
+    // $('#project-body > div:first-child').children().animate(
+    //     {opacity', 1: 0}, 'normal', function () {
+    //         $(this).css('display', 'none');
+    //     }
+    // );
 
     if (!($('#media_control').is(':visible'))) {
 
         $('#description').append('<div id="media_control"><div id="cpanel"><span title="next"> > </span><span title="previous"> < </span><span title="exit"> x </span></div><div id="preview"></div></div>');
-        $('#iscreenshots').animate({'bottom': '-100%'});
-        $('#idescription').animate({'left': '-100%'});
+        $('#project-media').animate({'bottom': '-100%'});
+        $('#project-description').animate({'left': '-100%'});
 
         $('#media_control').animate(
             {'left': '51%'}, 'linear', function () {
@@ -1045,8 +1045,8 @@ function content_handler(item_src, app) {
     $('#preview').html($(item));
 
     $('#preview').css({'right': '-100%'});
-    $('#preview').children(':first-child').css({'opacity': 0, 'right': '-100%'})
-    $('#preview').children(':first-child').css({'opacity': 1, 'right': '0'});
+    $('#preview').children(':first-child').css({'opacity', 1': 0, 'right': '-100%'})
+    $('#preview').children(':first-child').css({'opacity', 1': 1, 'right': '0'});
 
     //THE BELOW SCRITP WILL HANDLE THE BUTTONS OF THE PREVIEW AREA *THE FIRST TIME IT OPENS*,
     //IN A WAY THAT IF THE CURRENTLY DISPLAYED ITEM HAVE SIBLING ITEMS
@@ -1143,10 +1143,10 @@ function slide_images(direction, button_clicked) {
             //TO DO THAT i TAKE THE src OF THE ITEM THAT WILL BE DISPLAYED DURING THIS
             //CODE EXECUTION (--NOT THE ONE THAT WAS ALREADY DISPLAYED ON SCREEN--)
             $('#preview').children(':first').animate(
-                {'opacity': 0, 'right': '100%'}, function () {
+                {'opacity', 1': 0, 'right': '100%'}, function () {
                     $('#preview').children(':first').attr('src', src).css({'right': '-100%'})
                 }
-            ).animate({'opacity': 1, 'right': 0});
+            ).animate({'opacity', 1': 1, 'right': 0});
         } else {
             $(btnnext).attr('class', 'nochild')
         }
@@ -1165,10 +1165,10 @@ function slide_images(direction, button_clicked) {
                 //TO DO THAT i TAKE THE src OF THE ITEM THAT WILL BE DISPLAYED DURING THIS
                 //CODE EXECUTION (--NOT THE ONE THAT WAS ALREADY DISPLAYED ON SCREEN--)
                 $('#preview').children(':first').animate(
-                    {'opacity': 0, 'right': '-100%'}, function () {
+                    {'opacity', 1': 0, 'right': '-100%'}, function () {
                         $('#preview').children(':first').attr('src', src).css({'right': '100%'})
                     }
-                ).animate({'opacity': 1, 'right': 0});
+                ).animate({'opacity', 1': 1, 'right': 0});
             } else {
                 $(btnprev).attr('class', 'nochild')
             }
@@ -1176,14 +1176,14 @@ function slide_images(direction, button_clicked) {
         } else {
             $('#media_control').animate(
                 {height: 0}, 'fast', function () {
-                    $('#iscreenshots').animate({'bottom': 0});
-                    $('#idescription').animate({'left': 0});
+                    $('#project-media').animate({'bottom': 0});
+                    $('#project-description').animate({'left': 0});
                     $(this).remove()
                 }
             );
 
-            $('#ibody > div:first-child').children().css('display', 'block');
-            $('#ibody > div:first-child').children().animate({opacity: 1}, 'slow');
+            $('#project-body > div:first-child').children().css('display', 'block');
+            $('#project-body > div:first-child').children().animate({opacity', 1: 1}, 'slow');
         }
     }
 }
@@ -1306,7 +1306,7 @@ function __GET_TOOLS() {
     var t = [];
 
 
-    size = $('#skills_preview #tool h4').length;
+    size = $('#introduction-projector #tool h4').length;
     // THE NUMBER OF IMAGES PREVIEWED ON SCREEN (THESE NEED TO POPULATE)
 
     for (var i = 0; i < size; i++) {
@@ -1568,8 +1568,8 @@ function __RESOLVE_AND_POPULATE_MAIN_BOARD(item_requested, function_caller, data
 
     //THIS SCRIPT HANDLES THE MAIN NAVIGATION BUTTON ANIMES AND CHANGES THE BACKGROUND IMAGE ON CLICK
     if (caller == 'navigation') {
-        $('#menu_tabs a:contains(' + item + ')').addClass('selected').unbind('hover');
-        $('#menu_tabs a:not(:contains(' + item + '))')
+        $('#projects-navigation a:contains(' + item + ')').addClass('selected').unbind('hover');
+        $('#projects-navigation a:not(:contains(' + item + '))')
             .animate({'padding-top': 0})
             // .hover(hover_in_menu_buttons, hover_out_menu_buttons)
             .removeClass();
@@ -1600,7 +1600,7 @@ function __RESOLVE_AND_POPULATE_MAIN_BOARD(item_requested, function_caller, data
             // THE SCRIPT QUERIES THE 'CATEGORY' TAG FROM THE XML FILE
             // childs = $(data).find('category:contains(' + item + ')').siblings('title');
             childs = data.items.item.map(o => o.category === item && o.title);
-            initialize_button($('#menu_tabs a:not(:contains(' + item + '))'));
+            initialize_button($('#projects-navigation a:not(:contains(' + item + '))'));
         } else {
 
             // THE SCRIPT QUERIES THE 'TOOLS' TAG FROM THE XML FILE (TOOLS ~ KEYWORDS)
@@ -1619,7 +1619,7 @@ function __RESOLVE_AND_POPULATE_MAIN_BOARD(item_requested, function_caller, data
             }, [])
         }
     }
-    initialize_button($('#menu_tabs a:not(:contains(' + item + '))'));
+    initialize_button($('#projects-navigation a:not(:contains(' + item + '))'));
     // AFTER DECIDING WHICH DATA WILL BE PROCESSED AS 'CHILDS' ABOVE,
     // NOW THEY ARE STORED IN AN ARRAY AND FURTHER PROCESSED AFTER 'COMPLETE' OF THE AJAX CALL
     childs.forEach(
@@ -1815,7 +1815,7 @@ function __RESOLVE_AND_DISPLAY_ITEM_FULL_DESCRIPTION(current_list_item, curr_lis
     // FIND ITEM TO DISPLAY ON ANIME-END
     if (list) {
         var field = open_field_on_anime_end(list);
-        $('#context').animate(
+        $('#page-projects').animate(
             {'left': '-100%'}, function () {
                 preview_extras(field)
             }
@@ -1823,7 +1823,7 @@ function __RESOLVE_AND_DISPLAY_ITEM_FULL_DESCRIPTION(current_list_item, curr_lis
         return;
     }
     // ANIMATE THE DISPLAY TO THE AREA THAT SHOWCASES SINGLE ITEM (AT THE RIGHT OF THE PAGE)
-    $('#context').animate({'left': '-100%'});
+    $('#page-projects').animate({'left': '-100%'});
 }
 
 

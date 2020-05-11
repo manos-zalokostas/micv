@@ -1,6 +1,6 @@
 import {dq} from "./aux.js";
 
-const CSSID = '#context #idescription';
+const CSSID = '#page-projects #project-description';
 
 export default (o = null) => run(o);
 

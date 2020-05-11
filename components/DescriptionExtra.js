@@ -1,6 +1,6 @@
 import {dq, cl, strJoin} from "./aux.js";
 
-const CSSID = '#description #iextra';
+const CSSID = '#project-extras';
 
 // let activeImage = 'images/webdes_a1/welcome_page.jpg';
 

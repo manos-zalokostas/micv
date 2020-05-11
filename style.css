@@ -194,24 +194,24 @@ div {
     border-radius: 17px;
 }
 
-#introduction #introduction_cv_field p:first-letter {
+#introduction #resume-introduction p:first-letter {
     padding-left: 2%;
 }
 
-#introduction #introduction_cv_field .main_txt p {
+#introduction #resume-introduction .main_txt p {
     top: 5%;
 }
 
-#introduction #resume_cv_field h2 {
+#introduction #resume-text h2 {
     font-size: 4em;
 }
 
-.citation #resume_cv_field .main_txt > p {
+.citation #resume-text .main_txt > p {
     font-size: 1em;
     width: 100%;
 }
 
-.citation #resume_cv_field .aux_txt > p {
+.citation #resume-text .aux_txt > p {
     width: 80%;
     height: 77%;
     float: left;
@@ -231,7 +231,7 @@ div {
     overflow: auto;
 }
 
-#introduction #resume_cv_field p i {
+#introduction #resume-text p i {
     font-style: normal;
     font-weight: normal;
     display: none;
@@ -239,21 +239,21 @@ div {
     font-size: .8em;
 }
 
-#introduction #resume_cv_field p strong {
+#introduction #resume-text p strong {
     margin-left: 1%;
     margin-right: 1%;
     font-size: 1.2em;
 }
 
-#introduction #resume_cv_field p strong:before {
+#introduction #resume-text p strong:before {
     content: ' -';
 }
 
-.citation #resume_cv_field h3 {
+.citation #resume-text h3 {
 
 }
 
-#introduction #resume_cv_field h3 span {
+#introduction #resume-text h3 span {
     float: right;
     font-size: 0.5em;
     color: gainsboro;
@@ -262,11 +262,11 @@ div {
     top: 85%;
 }
 
-#introduction #interactive_cv_field {
+#introduction #resume-interactive {
 
 }
 
-.citation #interactive_cv_field h2 {
+.citation #resume-interactive h2 {
     color: #aaa;
     float: right;
     width: 10%;
@@ -278,11 +278,11 @@ div {
     text-align: right;
 }
 
-#skills_preview {
+#introduction-projector {
     left: -100%;
 }
 
-#interactive_cv_field #timeline_btns {
+#resume-interactive #timeline_btns {
     list-style-type: none;
     position: absolute;
     left: 0%;
@@ -296,7 +296,7 @@ div {
     margin-top: 3%;
 }
 
-#introduction #interactive_cv_field #timeline_btns li {
+#introduction #resume-interactive #timeline_btns li {
     float: left;
     width: 100%;
     margin: 4%;
@@ -319,7 +319,7 @@ div {
     border-radius: 10px;
 }
 
-#introduction #interactive_cv_field #timeline_btns li a:hover {
+#introduction #resume-interactive #timeline_btns li a:hover {
     border-bottom: 2px solid #ddd;
 }
 
@@ -332,7 +332,7 @@ div {
     border: solid #ddd;
 }
 
-#interactive_cv_field #objectives {
+#resume-interactive #objectives {
     list-style-type: none;
     position: absolute;
     left: 15%;
@@ -344,7 +344,7 @@ div {
     opacity: 0;
 }
 
-#introduction #interactive_cv_field #objectives #label {
+#introduction #resume-interactive #objectives #label {
     list-style-type: none;
     padding-left: 2%;
     padding-bottom: 1%;
@@ -358,7 +358,7 @@ div {
     border-bottom: solid 2px #aaa;
 }
 
-#introduction #interactive_cv_field #objectives #skills {
+#introduction #resume-interactive #objectives #skills {
     padding-left: 4%;
     padding-top: 2%;
     margin: 1%;
@@ -370,7 +370,7 @@ div {
     font-size: 1.5em;
 }
 
-#interactive_cv_field #timeline {
+#resume-interactive #timeline {
     position: absolute;
     background-color: #bbb;
     width: 70%;
@@ -385,7 +385,7 @@ div {
     left: 15%;
 }
 
-#introduction #interactive_cv_field #timeline li {
+#introduction #resume-interactive #timeline li {
     /*position: relative;*/
     margin: 0 2.2%;
     float: left;
@@ -395,12 +395,12 @@ div {
     border-radius: 20px;
 }
 
-#introduction #interactive_cv_field #timeline li p {
+#introduction #resume-interactive #timeline li p {
     /*visibility: hidden;*/
     height: 1px;
 }
 
-#introduction #interactive_cv_field #timeline li.default {
+#introduction #resume-interactive #timeline li.default {
     color: #bbb;
     font-size: inherit;
     text-decoration: none;
@@ -410,20 +410,20 @@ div {
     float: left;
 }
 
-#introduction #interactive_cv_field #timeline li.job_start {
+#introduction #resume-interactive #timeline li.job_start {
     color: #ca8;
     font-size: 1.5em;
     bottom: 20px;
     background-color: #ca8;
 }
 
-#introduction #interactive_cv_field #timeline li.job_end {
+#introduction #resume-interactive #timeline li.job_end {
     color: darkkhaki;
     margin-left: 19px;
     font-size: 0.8em;
 }
 
-#introduction #interactive_cv_field #timeline li.std_start {
+#introduction #resume-interactive #timeline li.std_start {
     color: teal;
     font-size: 1.5em;
     position: relative;
@@ -432,28 +432,28 @@ div {
     background-color: teal;
 }
 
-#introduction #interactive_cv_field #timeline li.std_start a {
+#introduction #resume-interactive #timeline li.std_start a {
     left: -16px;
     bottom: 20px;
 }
 
-#introduction #interactive_cv_field #timeline li.job_start a {
+#introduction #resume-interactive #timeline li.job_start a {
     left: -15px;
     bottom: 21px;
     padding-bottom: 42px;
 }
 
-#introduction #interactive_cv_field #timeline li.std_end {
+#introduction #resume-interactive #timeline li.std_end {
     color: teal;
     font-size: 0.8em;
 }
 
-#introduction #interactive_cv_field #timeline li.job_start_off, #introduction #interactive_cv_field #timeline li.job_end_off, #introduction #interactive_cv_field #timeline li.std_start_off, #introduction #interactive_cv_field #timeline li.std_end_off {
+#introduction #resume-interactive #timeline li.job_start_off, #introduction #resume-interactive #timeline li.job_end_off, #introduction #resume-interactive #timeline li.std_start_off, #introduction #resume-interactive #timeline li.std_end_off {
     color: #aaa;
     font-size: 0.8em;
 }
 
-#introduction #interactive_cv_field #timeline li a {
+#introduction #resume-interactive #timeline li a {
     color: inherit;
     font-size: inherit;
     text-decoration: none;
@@ -463,7 +463,7 @@ div {
     float: left;
 }
 
-#introduction #interactive_cv_field #timeline li a.default {
+#introduction #resume-interactive #timeline li a.default {
     color: #888;
     font-size: 0.8em;
     text-decoration: none;
@@ -473,7 +473,7 @@ div {
     float: left;
 }
 
-#introduction #interactive_cv_field #timeline li a:hover {
+#introduction #resume-interactive #timeline li a:hover {
     font-size: 1.5em;
     bottom: 1.5em;
     padding: 0 0.5em;
@@ -481,7 +481,7 @@ div {
     left: -1.5em;
 }
 
-#introduction #interactive_cv_field #timeline li a.selected {
+#introduction #resume-interactive #timeline li a.selected {
     font-size: 1.5em;
     bottom: 1.5em;
     left: -1em;
@@ -557,7 +557,7 @@ div {
     border: 2px solid #555;
 }
 
-#skills_preview #skill_fields > b.filteron, #skills_preview #skill_fields > b:hover {
+#introduction-projector #skill_fields > b.filteron, #introduction-projector #skill_fields > b:hover {
     background-color: tomato;
     color: white;
     border-bottom: 1px solid tomato;
@@ -572,7 +572,7 @@ div {
     overflow: hidden;
 }
 
-#introduction #skills_preview #welcome {
+#introduction #introduction-projector #welcome {
     position: absolute;
     left: 4%;
     font-family: arial;
@@ -621,7 +621,7 @@ div {
     width: 70%;
 }
 
-#introduction #skills_preview ul li > #reference {
+#introduction #introduction-projector ul li > #reference {
     display: block;
 }
 
@@ -629,11 +629,11 @@ div {
     color: cadetblue;
 }
 
-#introduction #skills_preview ul li#reference > div > p:before {
+#introduction #introduction-projector ul li#reference > div > p:before {
     content: '"..';
 }
 
-#introduction #skills_preview ul li#reference > div > p:after {
+#introduction #introduction-projector ul li#reference > div > p:after {
     content: '.."';
 }
 
@@ -648,7 +648,7 @@ div {
     margin: 1% 0;
 }
 
-#introduction #skills_preview ul li#tool > div > div:hover {
+#introduction #introduction-projector ul li#tool > div > div:hover {
     cursor: default;
 }
 
@@ -806,7 +806,7 @@ div {
     width: 15%;
 }
 
-#author_presentation {
+#author-message {
     width: 19%;
     height: 38%;
     position: absolute;
@@ -817,7 +817,7 @@ div {
     border-radius: 10px;
 }
 
-#introduction #author_presentation p {
+#introduction #author-message p {
     width: 98%;
     font-size: 1em;
     position: absolute;
@@ -833,7 +833,7 @@ div {
     color: #555;
 }
 
-#author_presentation img {
+#author-message img {
     width: 8%;
     position: fixed;
     left: 0.5%;
@@ -843,7 +843,7 @@ div {
     z-index: 100;
 }
 
-#site_menu {
+#global-menu {
     position: fixed;
     top: 0%;
     right: 0%;
@@ -856,7 +856,7 @@ div {
     font-family: arial;
 }
 
-#site_menu li {
+#global-menu li {
     float: right;
     margin-left: 1px;
     border: solid 1px #ccc;
@@ -869,7 +869,7 @@ div {
     text-align: center;
 }
 
-#site_menu li a {
+#global-menu li a {
     /* text-decoration: none; */
     /* font-family: tahoma; */
     color: white;
@@ -882,11 +882,11 @@ div {
     padding: 2% 22%;
 }
 
-#site_menu li a:hover {
+#global-menu li a:hover {
     cursor: pointer;
 }
 
-#site_menu li a.selected {
+#global-menu li a.selected {
     cursor: pointer;
     color: orange;
     font-weight: bold;
@@ -993,20 +993,20 @@ div {
     position: relative;
 }
 
-#resume_cv_field .main_txt {
+#resume-text .main_txt {
     float: right;
     width: 25%;
     height: 100%;
 }
 
-#resume_cv_field .aux_txt {
+#resume-text .aux_txt {
     width: 100%;
     float: left;
     height: 100%;
     overflow: hidden;
 }
 
-#resume_cv_field .aux_txt > h3 {
+#resume-text .aux_txt > h3 {
     float: left;
     width: 80%;
     height: 10%;
@@ -1019,7 +1019,7 @@ div {
     color: orange;
 }
 
-#introduction_menu {
+#introduction-navigation {
     position: absolute;
     top: 0%;
     width: 100%;
@@ -1029,7 +1029,7 @@ div {
     border-bottom: 8px solid #ccc;
 }
 
-#introduction_menu ul {
+#introduction-navigation ul {
     float: left;
     list-style-type: none;
     padding: 0;
@@ -1038,7 +1038,7 @@ div {
     width: 40%;
 }
 
-#introduction_menu ul li {
+#introduction-navigation ul li {
     position: relative;
     bottom: 5%;
     float: left;
@@ -1049,7 +1049,7 @@ div {
     width: 20%;
 }
 
-#introduction_menu ul li a {
+#introduction-navigation ul li a {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -1062,44 +1062,44 @@ div {
     text-align: center;
 }
 
-#introduction_menu #search {
+#introduction-navigation #search {
     float: left;
     width: 30%;
     margin: 10px 0;
 }
 
-#introduction_menu #search_radio {
+#introduction-navigation #search_radio {
     float: left;
     width: 40%;
 }
 
-#introduction_menu #search_radio > div {
+#introduction-navigation #search_radio > div {
     float: left;
     width: 50%;
 }
 
-#introduction_menu #search_radio label :hover {
+#introduction-navigation #search_radio label :hover {
     cursor: pointer;
 }
 
-#introduction_menu #search_radio input {
+#introduction-navigation #search_radio input {
     float: right;
     width: 50%;
     margin: 4px 0 0;
 }
 
-#introduction_menu #search_radio label {
+#introduction-navigation #search_radio label {
     color: white;
     text-transform: uppercase;
     font-size: x-small;
 }
 
 
-#introduction_menu #search_result {
+#introduction-navigation #search_result {
     height: 100%;
 }
 
-#introduction_menu #search_result input {
+#introduction-navigation #search_result input {
     float: right;
     width: 50%;
     height: 100%;
@@ -1109,11 +1109,11 @@ div {
 }
 
 
-#introduction_menu ul li a:hover, #introduction_menu ul li a.selected {
+#introduction-navigation ul li a:hover, #introduction-navigation ul li a.selected {
     color: goldenrod;
 }
 
-#menu_tabs {
+#projects-navigation {
     float: left;
     padding: 0;
     margin: 0;
@@ -1125,7 +1125,7 @@ div {
     border-bottom: 8px solid #ddd;
 }
 
-#menu_tabs ul {
+#projects-navigation ul {
     float: left;
     padding: 0;
     margin: 0;
@@ -1137,7 +1137,7 @@ div {
     border-top-right-radius: 12px;
 }
 
-#menu_tabs ul li {
+#projects-navigation ul li {
     float: left;
     z-index: 0;
     position: relative;
@@ -1148,7 +1148,7 @@ div {
     text-align: center;
 }
 
-#menu_tabs ul li a {
+#projects-navigation ul li a {
     font-family: Tahoma, Geneva, sans-serif;
     font-size: 2em;
     text-decoration: none;
@@ -1156,15 +1156,15 @@ div {
     text-transform: lowercase;
 }
 
-#menu_tabs ul li a:hover {
+#projects-navigation ul li a:hover {
     color: lightsteelblue;
 }
 
-#menu_tabs ul li a.selected {
+#projects-navigation ul li a.selected {
     color: lightsteelblue;
 }
 
-#context {
+#page-projects {
     margin: 0;
     height: 104%;
     width: 200%;
@@ -1172,7 +1172,7 @@ div {
     left: 0;
 }
 
-#context .monitor {
+#page-projects .monitor {
     float: left;
     font-family: Tahoma, Geneva, sans-serif;
     height: 82%;
@@ -1183,7 +1183,7 @@ div {
     overflow-x: hidden;
 }
 
-#context .monitor > h5 {
+#page-projects .monitor > h5 {
     font-size: 20em;
     color: lightslategrey;
     margin: 1%;
@@ -1192,7 +1192,7 @@ div {
     text-align: center;
 }
 
-#context .monitor > ul {
+#page-projects .monitor > ul {
     margin: 0;
     padding: 0 2%;
     width: 100%;
@@ -1205,7 +1205,7 @@ div {
     top: 8%;
 }
 
-#context .monitor ul {
+#page-projects .monitor ul {
     list-style-type: none;
 }
 
@@ -1222,7 +1222,7 @@ div {
     position: relative;
 }
 
-#context .mgroupi .sublist {
+#page-projects .mgroupi .sublist {
     position: relative;
     font-size: 0.8em;
     color: white;
@@ -1241,7 +1241,7 @@ div {
     border: none;
 }
 
-#context .mgroupi .sublist > li {
+#page-projects .mgroupi .sublist > li {
     margin: 2px;
     background-color: orange;
     padding: 1%;
@@ -1296,14 +1296,14 @@ div {
     background-color: #EEE;
 }
 
-#footer {
+#page-footer {
     display: block;
     background-color: #ddd;
     height: 100%;
     padding-left: 4%;
 }
 
-#footer > h2 {
+#page-footer > h2 {
     height: 10%;
     margin: 0;
     padding: 0;
@@ -1315,7 +1315,7 @@ div {
     text-transform: uppercase;
 }
 
-#footer ul {
+#page-footer ul {
     float: left;
     list-style-type: none;
     width: 22%;
@@ -1327,7 +1327,7 @@ div {
     background-color: #555;
 }
 
-#footer ul li {
+#page-footer ul li {
     text-align: left;
     width: 100%;
     float: left;
@@ -1335,7 +1335,7 @@ div {
     font-family: calibri;
 }
 
-#footer ul#social_links li {
+#page-footer ul#social_links li {
     padding-bottom: 4%;
     padding-top: 4%;
     width: 60%;
@@ -1343,18 +1343,18 @@ div {
     float: right;
 }
 
-#footer ul#social_links {
+#page-footer ul#social_links {
     padding: 0;
 }
 
-#footer ul#social_links li:first-child {
+#page-footer ul#social_links li:first-child {
     border: none;
     padding: 0%;
     width: 100%;
     text-align: center;
 }
 
-#footer ul li:first-child {
+#page-footer ul li:first-child {
     height: 8%;
     text-align: center;
     margin-bottom: 8%;
@@ -1364,18 +1364,18 @@ div {
     font-weight: bold;
 }
 
-#footer ul li a {
+#page-footer ul li a {
     text-decoration: none;
     color: white;
 }
 
-#footer ul li a img {
+#page-footer ul li a img {
     width: 24%;
     border: solid 2px gainsboro;
     margin-right: 4%;
 }
 
-#footer ul li a.organization {
+#page-footer ul li a.organization {
     float: left;
     width: 100%;
     text-align: left;
@@ -1388,14 +1388,14 @@ div {
     padding-left: 1%;
 }
 
-#footer ul li a.organization img {
+#page-footer ul li a.organization img {
     border: solid gainsboro;
     width: 17%;
     float: right;
     margin-right: 0;
 }
 
-#footer ul li a.organization span {
+#page-footer ul li a.organization span {
     font-size: 1.5em;
     display: block;
     float: left;
@@ -1406,14 +1406,14 @@ div {
     padding-left: 0;
 }
 
-#footer ul li a.person {
+#page-footer ul li a.person {
     text-decoration: none;
     font-size: 0.8em;
     text-decoration: none;
     color: silver;
 }
 
-#footer ul:last-child {
+#page-footer ul:last-child {
     border-right: none;
 }
 
@@ -1512,7 +1512,7 @@ div {
     color: white;
 }
 
-#ibody {
+#project-body {
     float: left;
     font-family: Verdana, Geneva, sans-serif;
     font-size: 0.9em;
@@ -1523,7 +1523,7 @@ div {
     margin-top: 4%;
 }
 
-#idescription {
+#project-description {
     float: left;
     overflow: auto;
     color: rgb(50, 71, 90);
@@ -1537,12 +1537,12 @@ div {
     padding-top: 4%;
 }
 
-#idescription span {
+#project-description span {
     padding: 0;
     margin: 0;
 }
 
-#iscreenshots {
+#project-media {
     float: left;
     clear: both;
     margin-top: 1%;
@@ -1552,7 +1552,7 @@ div {
     position: relative;
 }
 
-#iscreenshots > span {
+#project-media > span {
     float: left;
     width: 100%;
     height: 100%;
@@ -1560,7 +1560,7 @@ div {
     left: 20%;
 }
 
-#iscreenshots a {
+#project-media a {
     position: relative;
     float: left;
     width: 15%;
@@ -1569,7 +1569,7 @@ div {
     overflow: hidden;
 }
 
-#iscreenshots img {
+#project-media img {
     position: relative;
     width: 96%;
     height: 96%;
@@ -1577,12 +1577,12 @@ div {
     max-height: 110%;
 }
 
-#iscreenshots img:hover {
+#project-media img:hover {
     border: solid 2px #CC0;
     cursor: pointer;
 }
 
-#iextra {
+#project-extras {
     float: right;
     font-size: 1em;
     font-family: arial;
@@ -1593,7 +1593,7 @@ div {
     top: 12%;
 }
 
-#iextra > div {
+#project-extras > div {
     float: left;
     background-color: #eee;
     margin-bottom: 1px;
@@ -1601,7 +1601,7 @@ div {
     display: none;
 }
 
-#iextra > div > span {
+#project-extras > div > span {
     display: none;
     max-height: 53%;
     overflow: auto;
@@ -1610,7 +1610,7 @@ div {
     width: 90%;
 }
 
-#iextra > div > strong {
+#project-extras > div > strong {
     color: white;
     background-color: #555;
     height: 20px;
@@ -1630,20 +1630,20 @@ div {
     overflow: auto;
 }
 
-#iextra div strong:hover {
+#project-extras div strong:hover {
     color: white;
     background-color: slategray;
     cursor: pointer;
 }
 
-#iextra span {
+#project-extras span {
     padding: 2px;
     margin: 2px;
     background-color: white;
     width: 96%;
 }
 
-#iextra a {
+#project-extras a {
     text-align: left;
     color: #888;
     width: 100%;
@@ -1653,15 +1653,15 @@ div {
     border-bottom: 3px solid #eee;
 }
 
-#iextra a:hover {
+#project-extras a:hover {
     border-bottom: 3px solid lightblue;
 }
 
-#iextra #icomment {
+#project-extras #icomment {
     height: 54%;
 }
 
-#iextra #icomment span {
+#project-extras #icomment span {
     max-height: 100%;
 }
 
@@ -1711,7 +1711,7 @@ div {
         font-size: 0.9em;
     }
 
-    #author_presentation {
+    #author-message {
         top: 5%;
     }
 
@@ -1719,7 +1719,7 @@ div {
         font-size: 0.8em;
     }
 
-    #introduction #author_presentation p {
+    #introduction #author-message p {
         font-size: 0.9em
     }
 
@@ -1743,15 +1743,15 @@ div {
         text-align: right;
     }
 
-    #ibody {
+    #project-body {
         margin-left: 2%;
     }
 
-    #iextra {
+    #project-extras {
         height: 65%;
     }
 
-    #iextra > div > strong {
+    #project-extras > div > strong {
         height: 14px;
     }
 
@@ -1763,12 +1763,12 @@ div {
         font-size: 0.8em;
     }
 
-    #author_presentation {
+    #author-message {
         top: 8%;
         font-size: 0.9em;
     }
 
-    #author_presentation > img {
+    #author-message > img {
         width: 4%;
         left: -1%;
         margin-left: 4%;
@@ -1847,18 +1847,18 @@ div {
         bottom: 1%;
     }
 
-    #resume_cv_field .main_txt {
+    #resume-text .main_txt {
         width: 24%;
         margin: 0;
         font-size: 0.9em;
     }
 
-    #resume_cv_field .aux_txt {
+    #resume-text .aux_txt {
         width: 100%;
         overflow: hidden;
     }
 
-    #context .monitor > h5 {
+    #page-projects .monitor > h5 {
         font-size: 14em;
     }
 
@@ -1874,7 +1874,7 @@ div {
         font-size: 0.9em;
     }
 
-    #iscreenshots {
+    #project-media {
         top: 0%;
     }
 
@@ -1883,29 +1883,29 @@ div {
         top: -8%;
     }
 
-    #idescription {
+    #project-description {
         height: 65%;
         font-size: 1.2em;
     }
 
-    #ibody {
+    #project-body {
         margin-left: 3%;
         margin-top: 1%;
         height: 74%;
     }
 
-    #iextra {
+    #project-extras {
         height: 80%;
         left: -1%;
         top: 2%;
     }
 
-    #iextra > div > strong {
+    #project-extras > div > strong {
         height: 10px;
         font-size: 0.8em;
     }
 
-    #footer > h2 {
+    #page-footer > h2 {
         font-size: 5em;
     }
 
@@ -1916,11 +1916,11 @@ div {
         font-size: 0.8em;
     }
 
-    #site_menu {
+    #global-menu {
         width: 50%;
     }
 
-    #introduction #skills_preview {
+    #introduction #introduction-projector {
         top: 5%;
         height: 26%;
         width: 95%;
@@ -1974,11 +1974,11 @@ div {
         top: 20%;
     }
 
-    #author_presentation > p {
+    #author-message > p {
         display: none;
     }
 
-    #interactive_intro {
+    #resume-contents {
         bottom: 1%;
         height: 58%;
         font-size: 0.8em;
@@ -1991,11 +1991,11 @@ div {
         border-radius: 0;
     }
 
-    #iextra {
+    #project-extras {
         display: none;
     }
 
-    #introduction_cv_field > div.aux_txt {
+    #resume-introduction > div.aux_txt {
         display: none;
     }
 
@@ -2004,7 +2004,7 @@ div {
         top: 41%;
     }
 
-    #ibody {
+    #project-body {
         width: 80%;
         height: 75%;
         margin-top: 5%;
@@ -2014,7 +2014,7 @@ div {
         font-size: 1em;
     }
 
-    #iscreenshots {
+    #project-media {
         bottom: -5%;
         width: 120%;
         left: -24%;
@@ -2053,19 +2053,19 @@ div {
         margin-left: 6%;
     }
 
-    #footer ul {
+    #page-footer ul {
         height: 20%;
         width: 95%;
         overflow: auto;
     }
 
-    #footer ul#social_links {
+    #page-footer ul#social_links {
         width: 97%;
         height: 10%;
         overflow: hidden;
     }
 
-    #footer ul#social_links > li {
+    #page-footer ul#social_links > li {
         float: left;
         width: 20%;
         padding: 0;
@@ -2075,33 +2075,33 @@ div {
         overflow: hidden;
     }
 
-    #footer ul#social_links > li img {
+    #page-footer ul#social_links > li img {
         width: 40%;
         float: right;
     }
 
-    #footer ul#social_links > li:nth-child(5) {
+    #page-footer ul#social_links > li:nth-child(5) {
         display: none;
     }
 
-    #footer ul#social_links > li:nth-child(2) {
+    #page-footer ul#social_links > li:nth-child(2) {
         display: none;
     }
 
-    #footer ul#social_links > li:nth-child(1) {
+    #page-footer ul#social_links > li:nth-child(1) {
         display: none;
     }
 
-    #footer > ul > li:first-child {
+    #page-footer > ul > li:first-child {
         border: none;
         margin-bottom: 6%;
     }
 
-    #footer > ul > li:nth-child(2) {
+    #page-footer > ul > li:nth-child(2) {
         border-bottom: 1px solid #ddd;
     }
 
-    #footer ul li a.organization span {
+    #page-footer ul li a.organization span {
         width: 72%;
     }
 
@@ -2109,16 +2109,16 @@ div {
         font-size: 0.8em;
     }
 
-    #introduction_menu > ul > li {
+    #introduction-navigation > ul > li {
         width: 28%;
     }
 
-    #author_presentation {
+    #author-message {
         top: 4%;
         font-size: 0.9em;
     }
 
-    #author_presentation > img {
+    #author-message > img {
         width: 10%;
         left: 0%;
         margin-left: 10%;
@@ -2130,7 +2130,7 @@ div {
         margin-top: 4%;
     }
 
-    #introduction_menu #interactive_cv, #introduction_menu #document_cv {
+    #introduction-navigation #interactive_cv, #introduction-navigation #document_cv {
         display: none;
     }
 
@@ -2184,7 +2184,7 @@ div {
         font-size: 1.2em;
     }
 
-    .citation #resume_cv_field .aux_txt > p {
+    .citation #resume-text .aux_txt > p {
         width: 93%;
         height: 70%;
         float: left;
@@ -2224,33 +2224,33 @@ div {
         text-align: center;
     }
 
-    .citation #resume_cv_field .main_txt {
+    .citation #resume-text .main_txt {
         display: none;
     }
 
-    #resume_cv_field .main_txt {
+    #resume-text .main_txt {
         width: 24%;
         margin: 0;
         font-size: 0.9em;
     }
 
-    .citation #resume_cv_field h3 {
+    .citation #resume-text h3 {
         font-size: 5em;
         top: 1%;
         left: 20%;
     }
 
-    .citation #resume_cv_field h3 > span {
+    .citation #resume-text h3 > span {
         display: none
     }
 
-    #resume_cv_field .aux_txt {
+    #resume-text .aux_txt {
         width: 98%;
         height: 100%;
         bottom: 1%;
     }
 
-    #context .monitor > h5 {
+    #page-projects .monitor > h5 {
         font-size: 14em;
         width: 100%;
         top: 25%;
@@ -2292,38 +2292,38 @@ div {
         right: -200%;
     }
 
-    #iextra {
+    #project-extras {
         height: 68%;
     }
 
-    #iextra > div > strong {
+    #project-extras > div > strong {
         height: 10px;
         font-size: 0.8em;
     }
 
-    #footer > h2 {
+    #page-footer > h2 {
         font-size: 5em;
     }
 
-    #footer > ul {
+    #page-footer > ul {
         height: 24%;
     }
 
-    #footer > ul > li {
+    #page-footer > ul > li {
         width: 100%;
     }
 
-    #footer > ul > li > a.person {
+    #page-footer > ul > li > a.person {
         width: 100%;
         float: left;
     }
 
-    #footer > ul > li > a.organization {
+    #page-footer > ul > li > a.organization {
         display: block;
         margin: 0;
     }
 
-    #footer > ul > li > a.organization img {
+    #page-footer > ul > li > a.organization img {
         padding: 0;
         margin: 0;
     }

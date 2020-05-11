@@ -227,17 +227,17 @@
   <p><b>Description of the Application</b></p>
   <ul>
   <span>
-        <li>The application is a unified ms access environment that delivers instantly, coherent and verbose information about all of the company employees in several distinct domains.
+        <li>The application is a unified ms access environment that delivers instantly, coherent and verbose information about all of the company employees in several distinct footer-references.
         </li>
   <li>Amongst all of the main pages there is a ‘search input’ that will add value while in search of data for an individual.
         </li>
-        <li>All domains provide also stand-alone and multi-rows presentation of data while indexing the data.
+        <li>All footer-references provide also stand-alone and multi-rows presentation of data while indexing the data.
         </li>
         <li>Maintain a registry of all the company employees with all of their company-relevant credentials.
         </li>
        </span>
        </ul>
-  <p><u>The domains where the application evolves function are the following: </u></p>
+  <p><u>The footer-references where the application evolves function are the following: </u></p>
         <ul>
         <li> <b> Domain: PERSONS.</b> Employee company-related credentials (name, job purpose, department, geographical area, phone/mobile, email etc.. )
         </li>
@@ -245,7 +245,7 @@
         </li>
         <li> <b> Domain: CARS</b>. The page resolves the matches between company’s cars fleet and employees. There is a adequate description of the car assigned recorded, as ‘brand’, ‘cc’, ‘color’, ‘leasing-company’, ‘car features’, ‘car km’ and ‘date bought’. Also there is the name of the driver that has been assigned the car.
         </li>
-        <li> <b> Domain: PARKING</b>. The page resolves the parking seats of 2 different buildings and their correlation with the actual cars of company and assigned drivers (only for employees occupied in office - not sales force).  The page makes extensive use of searching operations providing 3 different domains for indexing.
+        <li> <b> Domain: PARKING</b>. The page resolves the parking seats of 2 different buildings and their correlation with the actual cars of company and assigned drivers (only for employees occupied in office - not sales force).  The page makes extensive use of searching operations providing 3 different footer-references for indexing.
         </li>
         <li> <b> Domain: OVERVIEW</b>. The page gathers and accumulates information from 3 distinct pages and provides a quick overview for each employee. The retrieved pages are ‘roadsafety’, ‘safetracks’ and ‘accidents’
         </li>
@@ -533,7 +533,7 @@
         <description>
             <![CDATA[
  <span>
- <p>An electronic leaflet distributed by the Facility Security & HSE Department, with an intention of being delivered to all employees of the company via email on a 3 month basis. Context of the paper would conclude up information regarded relevant to the department’s original scope and principals.</p>
+ <p>An electronic leaflet distributed by the Facility Security & HSE Department, with an intention of being delivered to all employees of the company via email on a 3 month basis. page-projects of the paper would conclude up information regarded relevant to the department’s original scope and principals.</p>
  <p>The driving concept beneath the newspaper was for the department to establish an active communication port with the members of the company, broadcasting informative and alerting messages for precaution but within a joyful environment, thus more readable for the audience.</p>
  </span>
  ]]>
@@ -1051,7 +1051,7 @@
       <li>Marks for working notes (out of a possible 30) : 30/30 - A thorough set of working notes was provided, running to 32 pages!
    Significantly, these notes document his progression of thought and questions he is considering about the topics.  </li>
       <li>Marks for essay (out of a possible 60) :  60/60 -  The information provided in the report is of sufficient depth to believe that the market niche exists
-   and can be serviced by the “optimal form of product” that Manos proposes. Many aspects of the technical considerations are put into context with real-world problems in order to arrive
+   and can be serviced by the “optimal form of product” that Manos proposes. Many aspects of the technical considerations are put into page-projects with real-world problems in order to arrive
    at the considered optimal service form. The length of the report is excessive but reflects the completeness and professional approach to providing in-depth researched information on the topic. </li>
  </ul>
 
@@ -1589,7 +1589,7 @@
  ]]>
         </description>
         <screenshots>
-            <shot>images/sepm_a3/portal_domains.jpg</shot>
+            <shot>images/sepm_a3/portal_footer-references.jpg</shot>
             <shot>images/sepm_a3/portal_navigation.jpg</shot>
             <shot>images/sepm_a3/user_role_features.jpg</shot>
         </screenshots>
@@ -1634,7 +1634,7 @@
 <ul>
 <span>
 <p> Amongst other, the functionality described verifies: </p>
-<li> Core functionality for the domains of: Information, Communication, e-Commerce <li>
+<li> Core functionality for the footer-references of: Information, Communication, e-Commerce <li>
 <li> User communication: Article releases, RSS feeds, Calendar, Newsletters</li>
 <li> User Registration</li>
 <li>Products Availability, Search, Shopping Cart</li>
@@ -2203,7 +2203,7 @@ My role as a Frontend developer was to create the independable CORS empowered Ja
 <u>FRONTEND WIDGETS</u>
 <ul>
 <li>Design and develop the app's Installer that can be used on affiliate sites with a single HTML “Head”entry</li>
-<li>Design and develop decoupled SPA widgets, that reside on their own domains and can be launched by installer on demand</li>
+<li>Design and develop decoupled SPA widgets, that reside on their own footer-references and can be launched by installer on demand</li>
 <li>
 <p>
 Publish 5 distinct widget types, with 4 viewport layouts for each, to accommodate diversity of screen displays:
@@ -2213,7 +2213,7 @@ Publish 5 distinct widget types, with 4 viewport layouts for each, to accommodat
  <br />- Popup offers::          Offers can popup on user display at navigation time, based on submitted configuration
 </p>
 </li>
-<li>Utilize the latest React 16.8 build and make use of powerful features like Hooks, Code splitting, Lazy loading, Context api, Dynamic imports etc</li>
+<li>Utilize the latest React 16.8 build and make use of powerful features like Hooks, Code splitting, Lazy loading, page-projects api, Dynamic imports etc</li>
 <li>Make extensive use of cache so that widgets restrain from excessive calls to the remote service</li>
 <li>Structure the development environment with NodeJs, Webpack, Babel etc</li>
 </ul>
@@ -2222,7 +2222,7 @@ Publish 5 distinct widget types, with 4 viewport layouts for each, to accommodat
 <ul>
 <li>
 <p>Create a React 16.4 application based on a helper theme with some main group activities
-<br />- Configuration domains per widget
+<br />- Configuration footer-references per widget
 <br />- Metrics and evaluation of widget usage
 <br />- Main Dashboard, Install and more..
 </p>

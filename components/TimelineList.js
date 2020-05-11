@@ -1,6 +1,6 @@
 import {dq} from "./aux.js";
 
-const CSSID = '#interactive_cv_field';
+const CSSID = '#resume-interactive';
 
 export default (o = null) => run(o);
 

@@ -1,6 +1,6 @@
 import {cl, dq, strJoin} from "./aux.js";
 
-const CSSID = '#description #header';
+const CSSID = '#project-title';
 
 export default (o = null) => run(o);
 

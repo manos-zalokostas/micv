@@ -1,17 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c2027ac-7fbf-48f5-b8a4-e62f9701cdf7" name="Default" comment="#MASTER || REVERT&#10;**********************&#10; - REVERT TO PREVIOUS STATE SO THAT 'GITHUB' USES A FUNCTIONAL - LEGACY - COPY">
-      <change afterPath="$PROJECT_DIR$/components/AboutNavigationMain.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/GlobalSearch.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/Layout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/layout.css" afterDir="false" />
+    <list default="true" id="7c2027ac-7fbf-48f5-b8a4-e62f9701cdf7" name="Default" comment="#COMPONENTS | &lt;LAYOUT&gt;&#10;********************************&#10; - INITIALIZE THE &lt;LAYOUT&gt; CLASS AND BIND DEV-PHASE   INTERACTIVITY TO THE  'ABOUT-NAVIGATION' MENU&#10; - BUILD MORE AUTONOMOUS COMPONENTS">
+      <change afterPath="$PROJECT_DIR$/components/GlobalNavigation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page-introduction.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page-projects.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/page-references.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/aux.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/aux.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dev.html" beforeDir="false" afterPath="$PROJECT_DIR$/dev.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aux/MonitorViewProject.js" beforeDir="false" afterPath="$PROJECT_DIR$/aux/MonitorViewProject.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aux/items.json" beforeDir="false" afterPath="$PROJECT_DIR$/aux/items.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aux/items.xml" beforeDir="false" afterPath="$PROJECT_DIR$/aux/items.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aux/text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/aux/text.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aux/text2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/aux/text2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/AboutNavigationMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/AboutNavigationMain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/AboutText.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/AboutText.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/DescriptionExtra.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/DescriptionExtra.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/DescriptionHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/DescriptionHeader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/DescriptionSlideshow.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/DescriptionSlideshow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/DescriptionText.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/DescriptionText.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/GlobalSearch.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/GlobalSearch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/IntroText.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/IntroText.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Monitor.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Monitor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ProjectGroup.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProjectGroup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ProjectGroupPool.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProjectGroupPool.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ReferenceGroup.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/ReferenceGroup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ResumeList.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/ResumeList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/TimelineList.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/TimelineList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/WelcomeText.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/WelcomeText.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/html_templates.html" beforeDir="false" afterPath="$PROJECT_DIR$/components/html_templates.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/items.xml" beforeDir="false" afterPath="$PROJECT_DIR$/components/items.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/sepm_a3/_notes/dwsync.xml" beforeDir="false" afterPath="$PROJECT_DIR$/images/sepm_a3/_notes/dwsync.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/intro.js" beforeDir="false" afterPath="$PROJECT_DIR$/intro.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-component/BasicWebComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/web-component/BasicWebComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-component/web-component.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-component/web-component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +96,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="HTML" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -80,15 +107,15 @@
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/components" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/web-component" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/aux" />
       <recent name="$PROJECT_DIR$/components" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/components" />
+      <recent name="$PROJECT_DIR$/web-component" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -144,6 +171,7 @@
       <workItem from="1588496031260" duration="5136000" />
       <workItem from="1588833708282" duration="835000" />
       <workItem from="1589010455825" duration="15576000" />
+      <workItem from="1589213964463" duration="8191000" />
     </task>
     <task id="LOCAL-00001" summary="convert http =&gt; https">
       <created>1545926008916</created>
@@ -194,7 +222,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578182207889</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="#COMPONENTS | &lt;LAYOUT&gt;&#10;********************************&#10; - INITIALIZE THE &lt;LAYOUT&gt; CLASS AND BIND DEV-PHASE   INTERACTIVITY TO THE  'ABOUT-NAVIGATION' MENU&#10; - BUILD MORE AUTONOMOUS COMPONENTS">
+      <created>1589056296314</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1589056296314</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,7 +286,8 @@
     <MESSAGE value="update cv document" />
     <MESSAGE value="Populate the &quot;links&quot; section instaed of 1 link allowed before" />
     <MESSAGE value="Add site search for 'projects' &amp; 'skills'" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add site search for 'projects' &amp; 'skills'" />
+    <MESSAGE value="#COMPONENTS | &lt;LAYOUT&gt;&#10;********************************&#10; - INITIALIZE THE &lt;LAYOUT&gt; CLASS AND BIND DEV-PHASE   INTERACTIVITY TO THE  'ABOUT-NAVIGATION' MENU&#10; - BUILD MORE AUTONOMOUS COMPONENTS" />
+    <option name="LAST_COMMIT_MESSAGE" value="#COMPONENTS | &lt;LAYOUT&gt;&#10;********************************&#10; - INITIALIZE THE &lt;LAYOUT&gt; CLASS AND BIND DEV-PHASE   INTERACTIVITY TO THE  'ABOUT-NAVIGATION' MENU&#10; - BUILD MORE AUTONOMOUS COMPONENTS" />
   </component>
   <component name="WindowStateProjectService">
     <state x="226" y="185" width="802" height="722" key="#Intentions" timestamp="1587812336063">
@@ -262,10 +298,10 @@
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="576" y="206" width="802" height="677" key="#Plugins/0.28.1920.1052@0.28.1920.1052" timestamp="1587722292978" />
-    <state x="661" y="101" width="932" height="913" key="CommitChangelistDialog2" timestamp="1588507997135">
+    <state x="661" y="101" width="932" height="913" key="CommitChangelistDialog2" timestamp="1589056296042">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="661" y="101" width="932" height="913" key="CommitChangelistDialog2/0.28.1920.1052@0.28.1920.1052" timestamp="1588507997135" />
+    <state x="661" y="101" width="932" height="913" key="CommitChangelistDialog2/0.28.1920.1052@0.28.1920.1052" timestamp="1589056296042" />
     <state x="118" y="201" width="1561" height="774" maximized="true" key="DiffContextDialog" timestamp="1588333491851">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
@@ -282,22 +318,26 @@
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="626" y="322" width="540" height="524" key="StructurePopup/0.28.1920.1052@0.28.1920.1052" timestamp="1588338665237" />
+    <state x="592" y="289" width="802" height="552" key="Vcs.Push.Dialog.v2" timestamp="1589056315778">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="592" y="289" width="802" height="552" key="Vcs.Push.Dialog.v2/0.28.1920.1052@0.28.1920.1052" timestamp="1589056315778" />
     <state x="200" y="140" width="1606" height="825" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1589020644078">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="200" y="140" width="1606" height="825" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1589020644078" />
-    <state x="675" y="372" key="com.intellij.ide.util.TipDialog" timestamp="1588833815693">
+    <state x="675" y="372" key="com.intellij.ide.util.TipDialog" timestamp="1589213964602">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="675" y="372" key="com.intellij.ide.util.TipDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1588833815693" />
-    <state x="806" y="479" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588507999130">
+    <state x="675" y="372" key="com.intellij.ide.util.TipDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1589213964602" />
+    <state x="806" y="479" width="456" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589213979484">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="806" y="479" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.28.1920.1052@0.28.1920.1052" timestamp="1588507999130" />
-    <state x="638" y="254" width="868" height="610" key="find.popup" timestamp="1589055985368">
+    <state x="806" y="479" width="456" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.28.1920.1052@0.28.1920.1052" timestamp="1589213979484" />
+    <state x="638" y="254" width="868" height="610" key="find.popup" timestamp="1589219896059">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="638" y="254" width="868" height="610" key="find.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1589055985368" />
+    <state x="638" y="254" width="868" height="610" key="find.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1589219896059" />
     <state width="600" height="424" key="javadoc.popup" timestamp="1587815719558">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
@@ -306,9 +346,9 @@
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="546" y="307" width="700" height="530" key="recent.locations.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1587561380214" />
-    <state x="644" y="270" width="672" height="678" key="search.everywhere.popup" timestamp="1589054730237">
+    <state x="644" y="270" width="672" height="678" key="search.everywhere.popup" timestamp="1589221897963">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="644" y="270" width="672" height="678" key="search.everywhere.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1589054730237" />
+    <state x="644" y="270" width="672" height="678" key="search.everywhere.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1589221897963" />
   </component>
 </project>

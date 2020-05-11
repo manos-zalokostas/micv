@@ -1,8 +1,8 @@
 
 
 const view = () => `
-<div id="skills_preview" class="monitor" style="left: 0px;">
-                <div id="skill_fields" class="mbuttons"><b title="project" style="top: 0px; opacity: 1;">projects</b><b title="reference" style="top: 0px; opacity: 1;">references</b><b title="tool" style="top: 0px; opacity: 1;">skills</b><em class="paused" style="right: -24%; display: block;">||</em></div>
+<div id="introduction-projector" class="monitor" style="left: 0px;">
+                <div id="skill_fields" class="mbuttons"><b title="project" style="top: 0px; opacity', 1: 1;">projects</b><b title="reference" style="top: 0px; opacity', 1: 1;">references</b><b title="tool" style="top: 0px; opacity', 1: 1;">skills</b><em class="paused" style="right: -24%; display: block;">||</em></div>
                 
 
                 <ul>

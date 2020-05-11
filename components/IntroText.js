@@ -1,6 +1,6 @@
 import {dq} from "./aux.js";
 
-const CSSID = '#author_presentation';
+const CSSID = '#author-message';
 
 export default (o = null) => run(o);
 
