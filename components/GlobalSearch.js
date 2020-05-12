@@ -15,7 +15,6 @@ const run = (cssid) => {
 
 const view = () => {
     return `
-        <div id="search">
             <div id="search_radio">
                 <div>
                     <label>
@@ -43,8 +42,8 @@ const view = () => {
     }
                 </datalist>
             </div>
+            <style>${style(CSSID)}</style>
             <script>${attachListeners()}</script>
-        </div>
     `;
 }
 
@@ -79,5 +78,19 @@ const DATA =
         listTool: ['tool1', 'tool2', 'tool3', 'tool4'],
     }
 
+
+const style = (cssid) => `
+${cssid}  {
+    display: flex;
+}
+${cssid} > div {
+    flex:0.5;
+    display: flex;
+    place-content: space-evenly;
+}
+${cssid} > div input {
+    flex: 1;
+}
+`;
 
 run();

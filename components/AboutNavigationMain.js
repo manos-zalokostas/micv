@@ -17,15 +17,15 @@ const run = (cssid) => {
 
 const view = () => {
     return `
-        <div>
             <nav id="about-navigation">
-            ${DATA.buttons.map(name => `
-            <a href="#" data-type="${name}">${name}</a>
-            `)}
+            ${
+                strJoin(DATA.buttons.map(name => `
+                <a href="#" data-type="${name}">${name}</a>
+                `))
+    }
             </nav>
-            <style>#about-navigation a { color: white }</style>
+            <style>${style()}</style>
             <script>${attachListeners()}</script>
-        </div>
     `;
 }
 
@@ -43,6 +43,21 @@ const attachListeners = () => {
 
 }
 
+const style = () => `
+${CSSID} nav#about-navigation {
+    display: flex;
+    place-content: space-evenly;
+    flex: 0.25;
+    background: slategrey;
+}
+${CSSID} nav#about-navigation > a {
+    flex:0.25;
+    color:white;
+    text-align: center;
+    text-decoration: none;
+    border:solid 1px;
+}
+`;
 
 const DATA =
     {

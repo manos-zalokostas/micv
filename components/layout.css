@@ -5,3 +5,7 @@
 .show {
     display:block;
 }
+
+.go-left {
+    translateX(100%)
+}

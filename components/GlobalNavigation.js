@@ -16,9 +16,12 @@ const run = (cssid) => {
 const view = () => {
     return `
         <nav>
-            ${DATA.pages.map(page => `<a title="page-${page}">${page}</a>`)}
+    ${
+        strJoin(DATA.pages.map(page => `<a title="page-${page}">${page}</a>`))
+    }
+        <style>${style()}</style>
         </nav>
-    `;
+            `;
 }
 
 
@@ -34,6 +37,21 @@ const attachListeners = () => {
 
 }
 
+const style = () => `
+${CSSID} nav {
+    display: flex;
+    place-content: space-evenly;
+}
+
+${CSSID} nav > a {
+    flex:1;
+    color: #555;
+    background:white;
+    border:1px solid #888;
+    text-align:center;
+    text-transform: uppercase;
+}
+`
 
 const DATA =
     {

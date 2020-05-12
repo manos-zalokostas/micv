@@ -2,43 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c2027ac-7fbf-48f5-b8a4-e62f9701cdf7" name="Default" comment="#COMPONENTS | &lt;LAYOUT&gt;&#10;********************************&#10; - INITIALIZE THE &lt;LAYOUT&gt; CLASS AND BIND DEV-PHASE   INTERACTIVITY TO THE  'ABOUT-NAVIGATION' MENU&#10; - BUILD MORE AUTONOMOUS COMPONENTS">
-      <change afterPath="$PROJECT_DIR$/components/GlobalNavigation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/page-introduction.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/page-projects.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/page-references.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aux/MonitorViewProject.js" beforeDir="false" afterPath="$PROJECT_DIR$/aux/MonitorViewProject.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aux/items.json" beforeDir="false" afterPath="$PROJECT_DIR$/aux/items.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aux/items.xml" beforeDir="false" afterPath="$PROJECT_DIR$/aux/items.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aux/text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/aux/text.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aux/text2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/aux/text2.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/AboutNavigationMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/AboutNavigationMain.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/AboutText.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/AboutText.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/DescriptionExtra.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/DescriptionExtra.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/DescriptionHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/DescriptionHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/DescriptionSlideshow.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/DescriptionSlideshow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/DescriptionText.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/DescriptionText.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/GlobalNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/GlobalNavigation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/GlobalSearch.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/GlobalSearch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/IntroText.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/IntroText.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Layout.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Monitor.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Monitor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ProjectGroup.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProjectGroup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ProjectGroupPool.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProjectGroupPool.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ReferenceGroup.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/ReferenceGroup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ResumeList.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/ResumeList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/TimelineList.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/TimelineList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/WelcomeText.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/WelcomeText.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/html_templates.html" beforeDir="false" afterPath="$PROJECT_DIR$/components/html_templates.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/items.xml" beforeDir="false" afterPath="$PROJECT_DIR$/components/items.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/sepm_a3/_notes/dwsync.xml" beforeDir="false" afterPath="$PROJECT_DIR$/images/sepm_a3/_notes/dwsync.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/intro.js" beforeDir="false" afterPath="$PROJECT_DIR$/intro.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-component/BasicWebComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/web-component/BasicWebComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-component/web-component.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-component/web-component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,6 +144,7 @@
       <workItem from="1588833708282" duration="835000" />
       <workItem from="1589010455825" duration="15576000" />
       <workItem from="1589213964463" duration="8191000" />
+      <workItem from="1589306377070" duration="6517000" />
     </task>
     <task id="LOCAL-00001" summary="convert http =&gt; https">
       <created>1545926008916</created>
@@ -326,10 +299,10 @@
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="200" y="140" width="1606" height="825" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1589020644078" />
-    <state x="675" y="372" key="com.intellij.ide.util.TipDialog" timestamp="1589213964602">
+    <state x="675" y="372" key="com.intellij.ide.util.TipDialog" timestamp="1589306384470">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="675" y="372" key="com.intellij.ide.util.TipDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1589213964602" />
+    <state x="675" y="372" key="com.intellij.ide.util.TipDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1589306384470" />
     <state x="806" y="479" width="456" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589213979484">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
@@ -346,9 +319,9 @@
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="546" y="307" width="700" height="530" key="recent.locations.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1587561380214" />
-    <state x="644" y="270" width="672" height="678" key="search.everywhere.popup" timestamp="1589221897963">
+    <state x="644" y="270" width="672" height="678" key="search.everywhere.popup" timestamp="1589306457018">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="644" y="270" width="672" height="678" key="search.everywhere.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1589221897963" />
+    <state x="644" y="270" width="672" height="678" key="search.everywhere.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1589306457018" />
   </component>
 </project>

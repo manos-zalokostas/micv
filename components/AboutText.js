@@ -5,7 +5,6 @@ const CSSID = '#resume-introduction';
 export default (o = null) => run(o);
 
 
-
 const run = (cssid) => {
     dq(cssid || CSSID).innerHTML = view()
 }
@@ -16,9 +15,29 @@ const view = () => {
         <section class="welcome-text">
             <header>${DATA.title}</header>
             <p class="intro">${DATA.text}</p>
+            <style>${style()}</style>
         </section>
     `;
 }
+
+
+const style = () => `
+${CSSID} section.welcome-text {
+    display: flex;
+    flex-direction:row-reverse;
+    place-content: space-evenly;
+    place-items: center;
+}
+${CSSID} section.welcome-text header {
+    flex: 0.2;
+    font-size: xx-large;
+    color: tomato;
+    text-align: center;
+}
+${CSSID} section.welcome-text p {
+    flex: 0.8   
+}
+`;
 
 
 const DATA =
