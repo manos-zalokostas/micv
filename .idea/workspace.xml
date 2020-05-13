@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c2027ac-7fbf-48f5-b8a4-e62f9701cdf7" name="Default" comment="#COMPONENTS | &lt;LAYOUT&gt;&#10;********************************&#10; - INITIALIZE THE &lt;LAYOUT&gt; CLASS AND BIND DEV-PHASE   INTERACTIVITY TO THE  'ABOUT-NAVIGATION' MENU&#10; - BUILD MORE AUTONOMOUS COMPONENTS">
+    <list default="true" id="7c2027ac-7fbf-48f5-b8a4-e62f9701cdf7" name="Default" comment="#COMPONENTS | STYLIZE COMPONENTS&#10;**************************************&#10; - SET STYLES ON COMPONENT IN COMPLETE ISOLATION - BEFORE NESTING TO LAYOUT">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/AboutNavigationMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/AboutNavigationMain.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/AboutText.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/AboutText.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/GlobalNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/GlobalNavigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/GlobalSearch.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/GlobalSearch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Monitor.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Monitor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/components/layout.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ResumeList.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/ResumeList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/TimelineList.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/TimelineList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -144,7 +139,9 @@
       <workItem from="1588833708282" duration="835000" />
       <workItem from="1589010455825" duration="15576000" />
       <workItem from="1589213964463" duration="8191000" />
-      <workItem from="1589306377070" duration="6517000" />
+      <workItem from="1589306377070" duration="6865000" />
+      <workItem from="1589351697225" duration="59000" />
+      <workItem from="1589377409006" duration="4080000" />
     </task>
     <task id="LOCAL-00001" summary="convert http =&gt; https">
       <created>1545926008916</created>
@@ -202,7 +199,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589056296314</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="#COMPONENTS | STYLIZE COMPONENTS&#10;**************************************&#10; - SET STYLES ON COMPONENT IN COMPLETE ISOLATION - BEFORE NESTING TO LAYOUT">
+      <created>1589315010679</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1589315010679</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,7 +264,8 @@
     <MESSAGE value="Populate the &quot;links&quot; section instaed of 1 link allowed before" />
     <MESSAGE value="Add site search for 'projects' &amp; 'skills'" />
     <MESSAGE value="#COMPONENTS | &lt;LAYOUT&gt;&#10;********************************&#10; - INITIALIZE THE &lt;LAYOUT&gt; CLASS AND BIND DEV-PHASE   INTERACTIVITY TO THE  'ABOUT-NAVIGATION' MENU&#10; - BUILD MORE AUTONOMOUS COMPONENTS" />
-    <option name="LAST_COMMIT_MESSAGE" value="#COMPONENTS | &lt;LAYOUT&gt;&#10;********************************&#10; - INITIALIZE THE &lt;LAYOUT&gt; CLASS AND BIND DEV-PHASE   INTERACTIVITY TO THE  'ABOUT-NAVIGATION' MENU&#10; - BUILD MORE AUTONOMOUS COMPONENTS" />
+    <MESSAGE value="#COMPONENTS | STYLIZE COMPONENTS&#10;**************************************&#10; - SET STYLES ON COMPONENT IN COMPLETE ISOLATION - BEFORE NESTING TO LAYOUT" />
+    <option name="LAST_COMMIT_MESSAGE" value="#COMPONENTS | STYLIZE COMPONENTS&#10;**************************************&#10; - SET STYLES ON COMPONENT IN COMPLETE ISOLATION - BEFORE NESTING TO LAYOUT" />
   </component>
   <component name="WindowStateProjectService">
     <state x="226" y="185" width="802" height="722" key="#Intentions" timestamp="1587812336063">
@@ -271,10 +276,10 @@
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="576" y="206" width="802" height="677" key="#Plugins/0.28.1920.1052@0.28.1920.1052" timestamp="1587722292978" />
-    <state x="661" y="101" width="932" height="913" key="CommitChangelistDialog2" timestamp="1589056296042">
+    <state x="661" y="101" width="932" height="913" key="CommitChangelistDialog2" timestamp="1589315010432">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="661" y="101" width="932" height="913" key="CommitChangelistDialog2/0.28.1920.1052@0.28.1920.1052" timestamp="1589056296042" />
+    <state x="661" y="101" width="932" height="913" key="CommitChangelistDialog2/0.28.1920.1052@0.28.1920.1052" timestamp="1589315010432" />
     <state x="118" y="201" width="1561" height="774" maximized="true" key="DiffContextDialog" timestamp="1588333491851">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
@@ -291,22 +296,22 @@
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="626" y="322" width="540" height="524" key="StructurePopup/0.28.1920.1052@0.28.1920.1052" timestamp="1588338665237" />
-    <state x="592" y="289" width="802" height="552" key="Vcs.Push.Dialog.v2" timestamp="1589056315778">
+    <state x="592" y="289" width="802" height="552" key="Vcs.Push.Dialog.v2" timestamp="1589315023986">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="592" y="289" width="802" height="552" key="Vcs.Push.Dialog.v2/0.28.1920.1052@0.28.1920.1052" timestamp="1589056315778" />
+    <state x="592" y="289" width="802" height="552" key="Vcs.Push.Dialog.v2/0.28.1920.1052@0.28.1920.1052" timestamp="1589315023986" />
     <state x="200" y="140" width="1606" height="825" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1589020644078">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="200" y="140" width="1606" height="825" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1589020644078" />
-    <state x="675" y="372" key="com.intellij.ide.util.TipDialog" timestamp="1589306384470">
+    <state x="675" y="372" key="com.intellij.ide.util.TipDialog" timestamp="1589351731779">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="675" y="372" key="com.intellij.ide.util.TipDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1589306384470" />
-    <state x="806" y="479" width="456" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589213979484">
+    <state x="675" y="372" key="com.intellij.ide.util.TipDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1589351731779" />
+    <state x="806" y="479" width="456" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589377642523">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="806" y="479" width="456" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.28.1920.1052@0.28.1920.1052" timestamp="1589213979484" />
+    <state x="806" y="479" width="456" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.28.1920.1052@0.28.1920.1052" timestamp="1589377642523" />
     <state x="638" y="254" width="868" height="610" key="find.popup" timestamp="1589219896059">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
@@ -319,9 +324,9 @@
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="546" y="307" width="700" height="530" key="recent.locations.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1587561380214" />
-    <state x="644" y="270" width="672" height="678" key="search.everywhere.popup" timestamp="1589306457018">
+    <state x="644" y="270" width="672" height="678" key="search.everywhere.popup" timestamp="1589382084976">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="644" y="270" width="672" height="678" key="search.everywhere.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1589306457018" />
+    <state x="644" y="270" width="672" height="678" key="search.everywhere.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1589382084976" />
   </component>
 </project>

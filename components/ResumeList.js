@@ -5,7 +5,6 @@ const CSSID = '#resume-text';
 export default (o = null) => run(o);
 
 
-
 const run = (cssid) => {
     dq(cssid || CSSID).innerHTML = view()
 }
@@ -15,12 +14,42 @@ const view = () => {
 
     return `
     <section class="resume">
-        <header>Timeline</header>
-        <span>on / off</span>
-        <p>${DATA.list}</p>
+        <div>
+            <header>Timeline</header>
+            <span>on / off</span>
+        </div>
+        ${DATA.list}
+        <style>${style}</style>
     </section>
     `;
 }
+
+const style = () => `
+${CSSID} section.resume {
+    display: flex;
+}
+${CSSID} section.resume > div {
+    flex: 0.25;
+    display: flex;
+    flex-flow: column;
+    place-items: center;
+    justify-content: center;
+}
+${CSSID} section.resume > div header{
+    font-size:xx-large;
+}
+${CSSID} section.resume > ul {
+    flex: 0.75;
+    list-style: none;
+}
+${CSSID} section.resume > ul li {
+    margin: 25px 0;
+}
+${CSSID} section.resume > ul li span {
+    display: none;
+}
+`;
+
 
 const DATA =
     {

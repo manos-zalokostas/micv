@@ -1,14 +1,14 @@
 import PageIntroduction from './page-introduction.js'
 
-// import GlobalSearch from "./components/GlobalSearch.js";
-// import AboutNavigationMain from "./components/AboutNavigationMain.js";
-// import Projector from "./components/Monitor.js";
-// import GlobalNavigation from "./components/GlobalNavigation.js";
-// import IntroText from "./components/IntroText.js";
-// import AboutText from "./components/AboutText.js";
-// import WelcomeText from "./components/WelcomeText.js";
-// import ResumeList from "./components/ResumeList.js";
-// import TimelineList from "./components/TimelineList.js";
+import GlobalSearch from "./components/GlobalSearch.js";
+import AboutNavigationMain from "./components/AboutNavigationMain.js";
+import Projector from "./components/Monitor.js";
+import GlobalNavigation from "./components/GlobalNavigation.js";
+import IntroText from "./components/IntroText.js";
+import AboutText from "./components/AboutText.js";
+import WelcomeText from "./components/WelcomeText.js";
+import ResumeList from "./components/ResumeList.js";
+import TimelineList from "./components/TimelineList.js";
 
 
 // import PageProjects from './page-projects.js'

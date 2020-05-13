@@ -32,12 +32,10 @@ const STYLE = `
         list-style-type: none;
         display: inline;
     }
-
     #timeline li {
         float: left;
         margin: 4px;
     }
-
     #timeline li > section {
         display: none;
         position: absolute;
@@ -45,18 +43,47 @@ const STYLE = `
         width: 60%;
         margin-top: 25px;
     }
-
     #timeline li > section > a {
         visibility: hidden;
     }
-
+    #timeline li > section > a:hover {
+        cursor:pointer;
+    }
     #timeline li:hover > section {
         position: absolute;
         display: block;
+        margin-left:5%;
     }
+article.timeline {
+    display: flex;
+}
+article.timeline > nav {
+    flex:0.2;
+    display: flex;
+    flex-direction: column;
+    place-content: space-between;
+}
+article.timeline > nav > a {
+    text-decoration:none;
+    background:#555;
+    color:white;
+}
+article.timeline > nav > a:hover {
+    cursor:pointer;
+}
+article.timeline > nav > a:hover {
+    background: white;
+    color:#555;
+}
+article.timeline > section {
+    flex:0.8;
+    display: flex;
+}
+article.timeline > section li:hover{
+    color:white;
+    cursor:pointer;
+}
 
-    #timeline p {
-    }
 `;
 
 const DATA =
