@@ -29,8 +29,9 @@ const view = () => {
 const STYLE = `
    #timeline {
         float: left;
-        list-style-type: none;
         display: inline;
+        list-style-type: none;
+        padding:0;
     }
     #timeline li {
         float: left;

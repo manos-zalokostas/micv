@@ -1,6 +1,6 @@
 import {dq} from "./aux.js";
 
-const CSSID = '#resume-introduction';
+const CSSID = '#resume-introduction > div:first-child';
 
 export default (o = null) => run(o);
 

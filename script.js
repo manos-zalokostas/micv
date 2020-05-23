@@ -574,77 +574,77 @@ function proccess_ajax_data(field) {
         t = __GET_TOOLS()
     }
 
-    convert_data_to_html(p, c, t, field, procstr);
-
-}
-
-
-/**
- *
- * @param project
- * @param comment
- * @param tools
- * @param field
- * @param proccess_string
- */
-function convert_data_to_html(project, comment, tools, field, proccess_string) {
-
-    var p = project;
-    var c = comment;
-    var t = tools;
-
-    var pdiv = $('#project >div:first-child ');
-    var pdivl = $('#project >div:last-child');
-    var cdiv = $('#reference > div');
-    var cdivl = $('#reference >div:last-child');
-    var tdiv = $('#tool > div > div');
-    var counter = 0;
-    var data_loaded = false;
-    // THE 'PCT' STRING IS A CONCATENATED STRING COMMING FROM THE PARENT FUNCTION
-    // AND IS BULT TO SUMMARIZE WHAT THE FUNCTIONS THAT WILL BE EXECUTED IN THE CURRENT SCRIPT
-    // EXAMPLE: 'PCT' -> PROJECT, COMMENT, TOOLS :: THIS SHOW THAT ALL FOLLOWING FUNCTIONS WILL BE RUNNING FORTH
-    var pct = proccess_string;
-    var pctl = pct.length;
-
-    if (pct.indexOf('p') > -1) {
-        // FIRST THING TO DO WITH THE 'PCT' (PROCCESS STRING)
-        // IS TO THE REMOVE THE 'FLAG' SO THAT THE CURRENT 'IF' WILL NO WHETHER TO RUNN THE NEXT FUNCTION
-        // WITHOUT MOVING TO FOLLOWING 'IF' STATEMENTS
-
-        pdiv.children('h3').html(p.name);
-        pdiv.children('h4').html(p.label);
-        pdiv.children('p').html(p.data);
-        pdiv.children('img').attr('src', (p.img));
-        pdivl.css({'background': 'url(' + p.img + ') no-repeat', 'backgroundSize': '100%', 'backgroundPosition': '50%'})
-
-        pct = pct.replace('p', '');
-        if (pct == '' && !animation_running) {
-            gmode = 'project';
-            animate_skills(gmode);
-            return;
-        }
-    }
-
-    if (pct.indexOf('c') > -1) {
-        cdiv.children('h3').html(c.name);
-        cdiv.children('h3').attr('title', c.item);
-        cdiv.children('h4').html(c.label);
-        cdiv.children('p').html(c.data);
-        cdiv.children('img').attr('src', (c.img));
-        cdivl.css({'background': 'url(' + c.img + ') no-repeat', 'backgroundSize': '100%', 'backgroundPosition': '50%'})
-
-        pct = pct.replace('c', '');
-        if (pct == '' && !animation_running) {
-            gmode = 'reference';
-            animate_skills(gmode);
-            return;
-        }
-    }
-
-    if (pct.indexOf('t') > -1) {
-        place_skill_images(tdiv, t, counter, field, pctl);
-    }
-}
+    // convert_data_to_html(p, c, t, field, procstr);
+//
+// }
+//
+//
+// /**
+//  *
+//  * @param project
+//  * @param comment
+//  * @param tools
+//  * @param field
+//  * @param proccess_string
+//  */
+// function convert_data_to_html(project, comment, tools, field, proccess_string) {
+//
+//     var p = project;
+//     var c = comment;
+//     var t = tools;
+//
+//     var pdiv = $('#project >div:first-child ');
+//     var pdivl = $('#project >div:last-child');
+//     var cdiv = $('#reference > div');
+//     var cdivl = $('#reference >div:last-child');
+//     var tdiv = $('#tool > div > div');
+//     var counter = 0;
+//     var data_loaded = false;
+//     // THE 'PCT' STRING IS A CONCATENATED STRING COMMING FROM THE PARENT FUNCTION
+//     // AND IS BULT TO SUMMARIZE WHAT THE FUNCTIONS THAT WILL BE EXECUTED IN THE CURRENT SCRIPT
+//     // EXAMPLE: 'PCT' -> PROJECT, COMMENT, TOOLS :: THIS SHOW THAT ALL FOLLOWING FUNCTIONS WILL BE RUNNING FORTH
+//     var pct = proccess_string;
+//     var pctl = pct.length;
+//
+//     if (pct.indexOf('p') > -1) {
+//         // FIRST THING TO DO WITH THE 'PCT' (PROCCESS STRING)
+//         // IS TO THE REMOVE THE 'FLAG' SO THAT THE CURRENT 'IF' WILL NO WHETHER TO RUNN THE NEXT FUNCTION
+//         // WITHOUT MOVING TO FOLLOWING 'IF' STATEMENTS
+//
+//         pdiv.children('h3').html(p.name);
+//         pdiv.children('h4').html(p.label);
+//         pdiv.children('p').html(p.data);
+//         pdiv.children('img').attr('src', (p.img));
+//         pdivl.css({'background': 'url(' + p.img + ') no-repeat', 'backgroundSize': '100%', 'backgroundPosition': '50%'})
+//
+//         pct = pct.replace('p', '');
+//         if (pct == '' && !animation_running) {
+//             gmode = 'project';
+//             animate_skills(gmode);
+//             return;
+//         }
+//     }
+//
+//     if (pct.indexOf('c') > -1) {
+//         cdiv.children('h3').html(c.name);
+//         cdiv.children('h3').attr('title', c.item);
+//         cdiv.children('h4').html(c.label);
+//         cdiv.children('p').html(c.data);
+//         cdiv.children('img').attr('src', (c.img));
+//         cdivl.css({'background': 'url(' + c.img + ') no-repeat', 'backgroundSize': '100%', 'backgroundPosition': '50%'})
+//
+//         pct = pct.replace('c', '');
+//         if (pct == '' && !animation_running) {
+//             gmode = 'reference';
+//             animate_skills(gmode);
+//             return;
+//         }
+//     }
+//
+//     if (pct.indexOf('t') > -1) {
+//         place_skill_images(tdiv, t, counter, field, pctl);
+//     }
+// }
 
 
 /**

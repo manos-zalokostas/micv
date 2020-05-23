@@ -30,3 +30,11 @@ export const setattr = (elem, attr, value) => {
 export const remattr = (elem, attr) => {
     elem.removeAttribute(attr);
 }
+
+export const setstyle = (elem, prop, val) => {
+    elem.style[prop] = val;
+}
+
+export const remstyle = (elem, prop) => {
+    delete elem.style[prop]
+}

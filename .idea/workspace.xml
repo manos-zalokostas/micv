@@ -1,11 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c2027ac-7fbf-48f5-b8a4-e62f9701cdf7" name="Default" comment="#COMPONENTS | STYLIZE COMPONENTS&#10;**************************************&#10; - SET STYLES ON COMPONENT IN COMPLETE ISOLATION - BEFORE NESTING TO LAYOUT">
+    <list default="true" id="7c2027ac-7fbf-48f5-b8a4-e62f9701cdf7" name="Default" comment="#COMPONENTS | ATTACH COMPONENTS TO PAGE (PARTIAL)&#10;*********************************************************&#10; - APPLY CSS TO PAGE AND NEST PART OF COMPONENTS WITH BASIC INTERACTIVITY">
+      <change afterPath="$PROJECT_DIR$/components/ProjectsNavigation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/WCDescriptionSlideshow.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dev-wc.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/AboutNavigationMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/AboutNavigationMain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/AboutText.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/AboutText.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/DescriptionSlideshow.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/DescriptionSlideshow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/GlobalNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/GlobalNavigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ProjectGroup.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProjectGroup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ProjectGroupPool.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProjectGroupPool.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/ResumeList.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/ResumeList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/TimelineList.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/TimelineList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/WelcomeText.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/WelcomeText.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/aux.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/aux.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev.html" beforeDir="false" afterPath="$PROJECT_DIR$/dev.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page-introduction.js" beforeDir="false" afterPath="$PROJECT_DIR$/page-introduction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page-projects.js" beforeDir="false" afterPath="$PROJECT_DIR$/page-projects.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-component/BasicWebComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/web-component/BasicWebComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web-component/web-component.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-component/web-component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +82,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="HTML" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../nodscratch" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -74,15 +93,15 @@
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/aux" />
-      <recent name="$PROJECT_DIR$/components" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/components" />
       <recent name="$PROJECT_DIR$/web-component" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/aux" />
+      <recent name="$PROJECT_DIR$/components" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -141,7 +160,16 @@
       <workItem from="1589213964463" duration="8191000" />
       <workItem from="1589306377070" duration="6865000" />
       <workItem from="1589351697225" duration="59000" />
-      <workItem from="1589377409006" duration="4080000" />
+      <workItem from="1589377409006" duration="4370000" />
+      <workItem from="1589441582193" duration="145000" />
+      <workItem from="1589483077179" duration="6620000" />
+      <workItem from="1589526746029" duration="556000" />
+      <workItem from="1589716939550" duration="34000" />
+      <workItem from="1589719988729" duration="69000" />
+      <workItem from="1589999871065" duration="8009000" />
+      <workItem from="1590045561404" duration="60000" />
+      <workItem from="1590224283764" duration="1433000" />
+      <workItem from="1590226234768" duration="17367000" />
     </task>
     <task id="LOCAL-00001" summary="convert http =&gt; https">
       <created>1545926008916</created>
@@ -206,7 +234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589315010679</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="#COMPONENTS | STYLIZE COMPONENTS&#10;**************************************&#10; - FILL THE 'INTRODUCTION' PAGE w/ COMPONENTS">
+      <created>1589383484082</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1589383484082</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,7 +300,9 @@
     <MESSAGE value="Add site search for 'projects' &amp; 'skills'" />
     <MESSAGE value="#COMPONENTS | &lt;LAYOUT&gt;&#10;********************************&#10; - INITIALIZE THE &lt;LAYOUT&gt; CLASS AND BIND DEV-PHASE   INTERACTIVITY TO THE  'ABOUT-NAVIGATION' MENU&#10; - BUILD MORE AUTONOMOUS COMPONENTS" />
     <MESSAGE value="#COMPONENTS | STYLIZE COMPONENTS&#10;**************************************&#10; - SET STYLES ON COMPONENT IN COMPLETE ISOLATION - BEFORE NESTING TO LAYOUT" />
-    <option name="LAST_COMMIT_MESSAGE" value="#COMPONENTS | STYLIZE COMPONENTS&#10;**************************************&#10; - SET STYLES ON COMPONENT IN COMPLETE ISOLATION - BEFORE NESTING TO LAYOUT" />
+    <MESSAGE value="#COMPONENTS | STYLIZE COMPONENTS&#10;**************************************&#10; - FILL THE 'INTRODUCTION' PAGE w/ COMPONENTS" />
+    <MESSAGE value="#COMPONENTS | ATTACH COMPONENTS TO PAGE (PARTIAL)&#10;*********************************************************&#10; - APPLY CSS TO PAGE AND NEST PART OF COMPONENTS WITH BASIC INTERACTIVITY" />
+    <option name="LAST_COMMIT_MESSAGE" value="#COMPONENTS | ATTACH COMPONENTS TO PAGE (PARTIAL)&#10;*********************************************************&#10; - APPLY CSS TO PAGE AND NEST PART OF COMPONENTS WITH BASIC INTERACTIVITY" />
   </component>
   <component name="WindowStateProjectService">
     <state x="226" y="185" width="802" height="722" key="#Intentions" timestamp="1587812336063">
@@ -276,46 +313,50 @@
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="576" y="206" width="802" height="677" key="#Plugins/0.28.1920.1052@0.28.1920.1052" timestamp="1587722292978" />
-    <state x="661" y="101" width="932" height="913" key="CommitChangelistDialog2" timestamp="1589315010432">
+    <state x="661" y="101" width="932" height="913" key="CommitChangelistDialog2" timestamp="1590244275863">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="661" y="101" width="932" height="913" key="CommitChangelistDialog2/0.28.1920.1052@0.28.1920.1052" timestamp="1589315010432" />
+    <state x="661" y="101" width="932" height="913" key="CommitChangelistDialog2/0.28.1920.1052@0.28.1920.1052" timestamp="1590244275863" />
     <state x="118" y="201" width="1561" height="774" maximized="true" key="DiffContextDialog" timestamp="1588333491851">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="118" y="201" width="1561" height="774" maximized="true" key="DiffContextDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1588333491851" />
-    <state x="414" y="282" width="426" height="484" key="FileChooserDialogImpl" timestamp="1588340964681">
+    <state x="414" y="282" width="426" height="484" key="FileChooserDialogImpl" timestamp="1590233203029">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="414" y="282" width="426" height="484" key="FileChooserDialogImpl/0.28.1920.1052@0.28.1920.1052" timestamp="1588340964681" />
+    <state x="414" y="282" width="426" height="484" key="FileChooserDialogImpl/0.28.1920.1052@0.28.1920.1052" timestamp="1590233203029" />
     <state x="493" y="180" key="SettingsEditor" timestamp="1587811194864">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="493" y="180" key="SettingsEditor/0.28.1920.1052@0.28.1920.1052" timestamp="1587811194864" />
-    <state x="626" y="322" width="540" height="524" key="StructurePopup" timestamp="1588338665237">
+    <state x="626" y="322" width="540" height="524" key="StructurePopup" timestamp="1590235144651">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="626" y="322" width="540" height="524" key="StructurePopup/0.28.1920.1052@0.28.1920.1052" timestamp="1588338665237" />
-    <state x="592" y="289" width="802" height="552" key="Vcs.Push.Dialog.v2" timestamp="1589315023986">
+    <state x="626" y="322" width="540" height="524" key="StructurePopup/0.28.1920.1052@0.28.1920.1052" timestamp="1590235144651" />
+    <state width="498" height="445" key="SwitcherDM" timestamp="1590224392970">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="592" y="289" width="802" height="552" key="Vcs.Push.Dialog.v2/0.28.1920.1052@0.28.1920.1052" timestamp="1589315023986" />
+    <state width="498" height="445" key="SwitcherDM/0.28.1920.1052@0.28.1920.1052" timestamp="1590224392970" />
+    <state x="592" y="289" width="802" height="552" key="Vcs.Push.Dialog.v2" timestamp="1589383486180">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="592" y="289" width="802" height="552" key="Vcs.Push.Dialog.v2/0.28.1920.1052@0.28.1920.1052" timestamp="1589383486180" />
     <state x="200" y="140" width="1606" height="825" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1589020644078">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="200" y="140" width="1606" height="825" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1589020644078" />
-    <state x="675" y="372" key="com.intellij.ide.util.TipDialog" timestamp="1589351731779">
+    <state x="675" y="372" key="com.intellij.ide.util.TipDialog" timestamp="1590226245647">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="675" y="372" key="com.intellij.ide.util.TipDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1589351731779" />
+    <state x="675" y="372" key="com.intellij.ide.util.TipDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1590226245647" />
     <state x="806" y="479" width="456" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589377642523">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="806" y="479" width="456" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.28.1920.1052@0.28.1920.1052" timestamp="1589377642523" />
-    <state x="638" y="254" width="868" height="610" key="find.popup" timestamp="1589219896059">
+    <state x="638" y="254" width="868" height="610" key="find.popup" timestamp="1590244183026">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="638" y="254" width="868" height="610" key="find.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1589219896059" />
+    <state x="638" y="254" width="868" height="610" key="find.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1590244183026" />
     <state width="600" height="424" key="javadoc.popup" timestamp="1587815719558">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
@@ -324,9 +365,9 @@
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="546" y="307" width="700" height="530" key="recent.locations.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1587561380214" />
-    <state x="644" y="270" width="672" height="678" key="search.everywhere.popup" timestamp="1589382084976">
+    <state x="644" y="270" width="672" height="678" key="search.everywhere.popup" timestamp="1590243639264">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="644" y="270" width="672" height="678" key="search.everywhere.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1589382084976" />
+    <state x="644" y="270" width="672" height="678" key="search.everywhere.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1590243639264" />
   </component>
 </project>

@@ -36,14 +36,14 @@ class WebComponent extends HTMLElement {
 
     render() {
         let template = document.getElementById('html-template');
-        let node, header, paragraph, page-footer;
+        let node, header, paragraph, pagefooter;
 
         data.forEach(group => {
             node = document.importNode(template.content, true);
-            [header, paragraph, page-footer] = group;
+            [header, paragraph, pagefooter] = group;
 
             node.querySelector('header').innerHTML = header;
-            node.querySelector('page-footer').innerHTML = page-footer;
+            node.querySelector('page-footer').innerHTML = pagefooter;
             node.querySelector('p').innerHTML = paragraph;
 
             node.querySelector('aside').innerHTML = this['owner'];

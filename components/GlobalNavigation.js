@@ -1,4 +1,5 @@
-import {dq, cl, strJoin} from "./aux.js";
+import {dq, dqa, cl, strJoin} from "./aux.js";
+import {LayoutNavigationGlobal} from "./Layout.js";
 
 const CSSID = '#global-navigation';
 
@@ -6,7 +7,6 @@ const CSSID = '#global-navigation';
 
 
 export default (o = null) => run(o);
-
 
 const run = (cssid) => {
     dq(cssid || CSSID).innerHTML = view()
@@ -17,9 +17,10 @@ const view = () => {
     return `
         <nav>
     ${
-        strJoin(DATA.pages.map(page => `<a title="page-${page}">${page}</a>`))
+        strJoin(DATA.pages.map(page => `<a data-type="${page}"">${page}</a>`))
     }
         <style>${style()}</style>
+        <script>${attachListeners()}</script>
         </nav>
             `;
 }
@@ -27,17 +28,27 @@ const view = () => {
 
 const attachListeners = () => {
 
-    // document.addEventListener('click', (evt) => {
-    //
-    //     if (evt.target.parentElement.id === 'about-navigation') {
-    //         cl(evt.target.dataset.type)
-    //         NavigationAbout(evt.target.dataset.type)
-    //     }
-    // })
+    document.addEventListener('click', (evt) => {
+        if (Array.from(dqa('#global-navigation > nav > a')).includes(evt.target)) {
+            cl(evt.target.dataset.type)
+           LayoutNavigationGlobal(evt.target.dataset.type)
+        }
+    })
 
 }
 
 const style = () => `
+div#global-navigation {
+    position: fixed;
+    z-index: 10;
+    right: 0;
+    top:  0;
+}
+
+div#global-navigation > nav > a {
+    padding:10px;
+}
+
 ${CSSID} nav {
     display: flex;
     place-content: space-evenly;

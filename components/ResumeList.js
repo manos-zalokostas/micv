@@ -1,6 +1,6 @@
 import {dq} from "./aux.js";
 
-const CSSID = '#resume-text';
+const CSSID = '#resume-timeline';
 
 export default (o = null) => run(o);
 
@@ -41,6 +41,7 @@ ${CSSID} section.resume > div header{
 ${CSSID} section.resume > ul {
     flex: 0.75;
     list-style: none;
+    overflow:auto;
 }
 ${CSSID} section.resume > ul li {
     margin: 25px 0;

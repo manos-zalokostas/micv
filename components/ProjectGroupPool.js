@@ -11,34 +11,65 @@ const run = (cssid) => {
 }
 
 
-const view = () => {
+const view = (domain = 'WEB') => {
     return `
-    <article class="pool-project">${strJoin(DATA())}
+    <article class="pool-project">${strJoin(DATA(domain))}
     <style>${STYLE}</style>
     </article>
     `;
 };
 
 
-
 const STYLE = `
-    .pool-project {
+    article.pool-project {
+        display: flex;
+        flex-flow: wrap; 
+    }
+    article.pool-project > section {
+        flex-basis: 20%;
         box-sizing:border-box;
-        overflow:auto;
-        padding:4px;
-        width:100%;
-        height:100%;
-        border: solid 2px red;
-        background:orange;
+        margin:1%;
+        padding:2%;
+        
     }
 `;
 
-const DATA = () => {
-    let html = ProjectGroup();
-    let data = new Array(12);
-    return data.fill(html);
+
+const DATA = (domain) => {
+
+
+    let o = JSON.parse(sessionStorage.MIDATA)
+    let items = o.items.item;
+    let domains = items.filter(o => o.domain === domain);
+
+    let sections = domains.map(o => o.section);
+    sections = Array.from(new Set(sections));
+
+    let data = [];
+    sections.forEach(str => {
+        let pack = domains.reduce((acc, o) => {
+            if (o.section === str) acc[1].push([o.id, o.title]);
+            return acc;
+        }, [str, []])
+        data.push(pack);
+    })
+
+    let groups = data.map(group => ProjectGroup(group));
+
+    return groups;
+    // let html = ProjectGroup(_DATA);
+    // let data = new Array(12);
+    // return data.fill(html);
 }
 
+
+const _DATA = [
+    'DOMAIN A', [
+        [1, 'PROJECT 1'],
+        [2, 'PROJECT 2'],
+        [3, 'PROJECT 3'],
+        [5, 'PROJECT 4'],
+    ]
+];
+
 run();
-
-

@@ -3,10 +3,6 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Manos Portfolio</title>
-    <!--    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>-->
-    <!--    <script type="text/javascript" src="script.js"></script>-->
-    <!--    <link type="text/css" rel="stylesheet" href="style.css"/>-->
-    <script type="module" src="./modules.js"></script>
     <link type="text/css" rel="stylesheet" href="components/layout.css"/>
 </head>
 <body style="background: #888">
@@ -19,15 +15,34 @@
 
         <div id="page-introduction"></div>
 
-<!--        <div id="page-projects"></div>-->
+        <div id="page-projects"></div>
 
-<!--        <div id="page-footer"></div>-->
+        <!--        <div id="page-footer"></div>-->
 
 
     </div>
 </div>
 
+<script type="module" src="./modules.js"></script>
+<script>
 
+    fetch('http://localhost:3000/items')
+        .then(response => response.json())
+        .then(data => {
+            sessionStorage.MIDATA = JSON.stringify(data)
+            let script = document.createElement('script');
+            script.type = 'module';
+            script.src = './modules.js';
+            document.head.appendChild(script);
+        })
+    ;
+    // let req = async () => {
+    //     let resp =  await window.fetch('http://localhost:3000/items');
+    //
+    // };
+    //
+    // req();
+</script>
 </body>
 </html>
 

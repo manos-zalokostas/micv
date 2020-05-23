@@ -1,21 +1,46 @@
 import {dq, cl, strJoin} from "./aux.js";
 
-const CSSID = '#project-media';
-
-// let activeImage = 'images/webdes_a1/welcome_page.jpg';
-let activeIndex = 0;
-
-export default (o = null) => run(o);
+const CSSID = '';
 
 
-const run = (cssid) => {
-    dq(cssid || CSSID).innerHTML = view()
+class WCDescriptionSlideshow extends HTMLElement {
+
+    width = 50;
+
+    constructor() {
+        super();
+        this.attachShadow({mode: 'open'})
+    }
+
+    static get observedAttributes() {
+        return ['width'];
+    }
+
+
+    attributeChangedCallback(name, prev, next) {
+
+        if (name === 'width' && prev !== next) {
+            this.width = next;
+            this.render();
+        }
+    }
+
+
+    connectedCallback() {
+        this.render();
+    }
+
+
+    render() {
+        this.shadowRoot.innerHTML = '';
+        this.shadowRoot.innerHTML = view(this.width);
+    }
 }
 
 
-const view = () => {
+const view = (width) => {
     return `
-        <article class="description-slideshow">
+        <article style="width:${width}%" class="description-slideshow">
             <section>
                 <nav class="slideshow-nav">
                     <a data-type="next">next</a>
@@ -23,7 +48,7 @@ const view = () => {
                     <a data-type="exit">exit</a>
                 </nav>
                 <p class="slideshow-preview">
-                    <img src="${DATA.images[activeIndex]}"/>
+                    <img src="${DATA.images[0]}"/>
                     <span>TEXT</span>
                 </p>
             </section>
@@ -41,6 +66,7 @@ const view = () => {
 
 
 const attachListeners = () => {
+
     document.addEventListener('click', (evt) => {
         if (evt.target.parentElement.parentElement.classList.contains('slideshow-media')) {
             cl('CLICK: ', evt.target.src)
@@ -124,7 +150,7 @@ Provide ticketing solutions for acknowledged bugs
             "images/webdes_a1/preview_registered_products.jpg",
             "images/webdes_a1/preview_registered_users.jpg",
         ]
-    }
+    };
 
 
-run();
+customElements.define('wc-slideshow', WCDescriptionSlideshow);

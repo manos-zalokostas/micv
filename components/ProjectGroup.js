@@ -1,20 +1,19 @@
 import {dq, strJoin} from "./aux.js";
 
-const CSSID = '#author-message';
 
 export default (o = null) => run(o);
 
-const run = (cssid) => {
+const run = (data) => {
     // dq(cssid || CSSID).innerHTML = view();
-    return  view();
+    return view(data || DATA);
 }
 
 
-const view = () => {
+const view = (data) => {
     return `
     <section class="group-project">
-        <h3>Project Group 1</h3>
-        ${_projectList()}
+        <h3>${data[0]}</h3>
+        ${_projectList(data[1])}
         <style>${STYLE}</style>
         <script>${attachLoaders()}</script>
     </section>
@@ -36,51 +35,46 @@ const navigateDescription = (evt) => {
 }
 
 
+const _projectList = (data) => {
 
-
-const _projectList = () => {
     return `
     <nav>
         ${
-        strJoin(DATA.projects.map((str, i) => `<a data-project="${i}">${str}</a>`))
-        }
+        strJoin(data.map((pack, i) => `<a data-project="${pack[0]}">${pack[1]}</a>`))
+    }
 </nav>`
 
 }
 
 const STYLE = `
     .group-project {
-        float:left;
-        box-sizing:border-box;
-        overflow:auto;
-        padding:4px;
-        width:25%;
-        height:20%;
         background:silver;
     }
-
     .group-project h3 {
     }
-
     .group-project nav {
-        display: none;
-        background:yellow;
+        display:flex;
+        flex-flow:wrap;
+        justify-content: space-around;
     }
-
-    .group-project:hover nav {
-        display: block;
+    .group-project:hover nav a {
+        opacity:1;
     }
-
     .group-project nav a {
-        display:block;
-        margin: 0 0 0 10%;
-        width:90%;
+        flex-basis: 40%;;
+        opacity:0;
+        background:white;
     }
 `;
 
-const DATA = {
-    projects: ['a', 'b', 'c'],
-}
+const DATA = [
+    'DOMAIN A', [
+        [1, 'PROJECT 1'],
+        [2, 'PROJECT 2'],
+        [3, 'PROJECT 3'],
+        [5, 'PROJECT 4'],
+    ],
+];
 
 // run('#dev');
 

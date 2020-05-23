@@ -1,6 +1,6 @@
 import {dq} from "./aux.js";
 
-const CSSID = '#resume-introduction';
+const CSSID = '#resume-introduction >div:last-child';
 
 export default (o = null) => run(o);
 
@@ -12,7 +12,7 @@ const run = (cssid) => {
 
 const view = () => {
     return `
-        <section class="welcome-text">
+        <section class="about-text">
             <header>${DATA.title}</header>
             <p class="intro">${DATA.text}</p>
             <style>${style()}</style>

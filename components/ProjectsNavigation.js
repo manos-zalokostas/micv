@@ -1,7 +1,7 @@
 import {dq, cl, strJoin} from "./aux.js";
-import {LayoutNavigationAbout} from "./Layout.js";
+import {LayoutNavigationProjects} from "./Layout.js";
 
-const CSSID = '#introduction-navigation';
+const CSSID = '#projects-navigation';
 
 // let activeImage = 'images/webdes_a1/welcome_page.jpg';
 
@@ -17,9 +17,9 @@ const run = (cssid) => {
 
 const view = () => {
     return `
-            <nav id="about-navigation">
+            <nav>
             ${
-                strJoin(DATA.buttons.map(name => `
+        strJoin(DATA.buttons.map(name => `
                 <a href="#" data-type="${name}">${name}</a>
                 `))
     }
@@ -34,23 +34,25 @@ const attachListeners = () => {
 
     document.addEventListener('click', (evt) => {
 
-        if (evt.target.parentElement.id === 'about-navigation') {
-            cl(evt.target.dataset.type)
-            LayoutNavigationAbout(evt.target.dataset.type)
+        if (evt.target.parentElement.id === 'projects-navigation') {
+//             cl(evt.target.dataset.type)
+// debugger
+//             LayoutNavigationProjects(evt.target.dataset.type)
         }
     })
 
 
 }
 
+
 const style = () => `
-${CSSID} nav#about-navigation {
+${CSSID} na {
     display: flex;
     place-content: space-evenly;
     background: slategrey;
     width:30%;
 }
-${CSSID} nav#about-navigation > a {
+${CSSID} nav > a {
     flex:0.25;
     color:white;
     text-align: center;
@@ -61,7 +63,7 @@ ${CSSID} nav#about-navigation > a {
 
 const DATA =
     {
-        buttons: ['welcome', 'timeline', 'interactive', 'document'],
+        buttons: ['web', 'studies', 'work'],
     }
 
 
