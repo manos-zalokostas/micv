@@ -1,18 +1,24 @@
 import {setstyle, remstyle, remattr, cladd, setattr, dq, cl, strJoin} from "./aux.js";
-import ProjectGroup from "./ProjectGroup.js";
+import ProjectGroupPool from "./ProjectGroupPool.js";
 
 
-export const LayoutNavigationProjects = (action) => {
-    //
+/**
+ *
+ * @param projectid
+ * @constructor
+ */
+export const LayoutNavigationProjectShowcase = (projectid = null) => {
+
+    let action = projectid ? 'enter' : 'leave';
+
     const Actions = {
-        web: () => {
-            ProjectGroup('web')
+        enter: () => {
+            setstyle(dq('#projects-syndication'), 'display', 'none');
+            setstyle(dq('#project-showcase'), 'display', 'flex');
         },
-        studies: () => {
-            ProjectGroup('studies')
-        },
-        work: () => {
-            ProjectGroup('work')
+        leave: () => {
+            setstyle(dq('#projects-syndication'), 'display', 'flex');
+            setstyle(dq('#project-showcase'), 'display', 'none');
         },
     };
 
@@ -23,6 +29,90 @@ export const LayoutNavigationProjects = (action) => {
 };
 
 
+/**
+ *
+ * @param str
+ * @returns {string}
+ */
+export const loadRepetitive = (str) => {
+    str = str.replace(/\n/g, '')
+        .replace(/ {2,}/g, '')
+        .replace(/<\/style>/g, "<\/style>\n");
+
+    let regxStyle = /<style>.*<\/style>/g;
+    let regxScript = /<script>\w*<\/script>/g;
+
+    let styles = str.match(regxStyle),
+        scripts = str.match(regxScript),
+        style = '',
+        script = '';
+
+    if (styles && styles[0]) {
+        style = styles[0]
+    }
+    if (scripts && scripts[0]) {
+        script = scripts[0]
+    }
+
+    str = str.replace(regxStyle, '', str);
+    str = str.replace(regxScript, "", str);
+// debugger
+    str += style;
+    // str += script;
+
+    return str;
+}
+
+
+/********************************************
+ *  ========== EXPIRAMENTAL ===========
+ * @param o
+ * @param cssid
+ */
+export const loadElement = (o, cssid) => {
+
+    let html = o.run();
+
+    dq(cssid).innerHTML = `
+        ${html}
+        <style>${o.setStyles()}</style>
+        <script>${o.setListeners()}</script>
+`;
+};
+
+
+/**
+ *
+ * @param action
+ * @constructor
+ */
+export const LayoutNavigationProjects = (action) => {
+    //
+    const Actions = {
+        web: () => {
+            ProjectGroupPool('web')
+        },
+        studies: () => {
+            ProjectGroupPool('studies')
+        },
+        work: () => {
+            ProjectGroupPool('work')
+        },
+    };
+
+    if (!(Actions[action])) return;
+
+    LayoutNavigationProjectShowcase();
+    Actions[action]();
+
+};
+
+
+/**
+ *
+ * @param action
+ * @constructor
+ */
 export const LayoutNavigationGlobal = (action) => {
     //
     const Actions = {
@@ -76,7 +166,6 @@ export const LayoutNavigationAbout = (action) => {
     if (!(ActionsIntroduction[action])) return;
 
     ActionsIntroduction[action]();
-
 
 };
 

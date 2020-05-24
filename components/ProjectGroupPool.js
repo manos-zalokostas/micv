@@ -1,42 +1,57 @@
 import ProjectGroup from "./ProjectGroup.js";
 import {dq, strJoin} from "./aux.js";
+import {loadRepetitive} from "./Layout.js";
 
 const CSSID = '#projects-syndication';
 
-export default (o = null) => run(o);
+export default (type = 'web') => run(type);
 
-const run = (cssid) => {
-    dq(cssid || CSSID).innerHTML = view();
-    // return view();
+
+/**
+ *
+ * @param type
+ */
+const run = (type = 'web') => {
+    dq(CSSID).innerHTML = view(type);
 }
 
 
-const view = (domain = 'WEB') => {
+/**
+ *
+ * @param domain
+ * @returns {string}
+ */
+const view = (domain) => {
     return `
-    <article class="pool-project">${strJoin(DATA(domain))}
+    <article class="pool-project">${repetitiveContent(domain)}
     <style>${STYLE}</style>
     </article>
     `;
 };
 
 
-const STYLE = `
-    article.pool-project {
-        display: flex;
-        flex-flow: wrap; 
-    }
-    article.pool-project > section {
-        flex-basis: 20%;
-        box-sizing:border-box;
-        margin:1%;
-        padding:2%;
-        
-    }
-`;
+/**
+ *
+ * @param domain
+ * @returns {string}
+ */
+const repetitiveContent = (domain) => {
+    let content = strJoin(makeData(domain));
+
+    let strippedContent = loadRepetitive(content);
+
+    return strippedContent;
+}
 
 
-const DATA = (domain) => {
+/**
+ *
+ * @param domain
+ * @returns {string[]}
+ */
+const makeData = (domain) => {
 
+    domain = domain.toUpperCase();
 
     let o = JSON.parse(sessionStorage.MIDATA)
     let items = o.items.item;
@@ -54,13 +69,24 @@ const DATA = (domain) => {
         data.push(pack);
     })
 
-    let groups = data.map(group => ProjectGroup(group));
+    let groups = data.map((group, i) => ProjectGroup(group, i));
 
     return groups;
-    // let html = ProjectGroup(_DATA);
-    // let data = new Array(12);
-    // return data.fill(html);
 }
+
+
+const STYLE = `
+    article.pool-project {
+        display: flex;
+        flex-flow: wrap; 
+    }
+    article.pool-project > section {
+        flex-basis: 20%;
+        box-sizing:border-box;
+        margin:1%;
+        padding:2%;
+    }
+`;
 
 
 const _DATA = [
@@ -72,4 +98,4 @@ const _DATA = [
     ]
 ];
 
-run();
+// run();

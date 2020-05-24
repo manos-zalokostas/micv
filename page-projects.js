@@ -6,6 +6,22 @@ const run = () => document.querySelector('#page-projects').innerHTML = `
 
 <div id="projects-syndication"></div>
 
+<div id="project-showcase">
+
+    <div id="project-title"></div>
+
+    <div id="project-body">
+
+        <div id="project-description"></div>
+
+        <div id="project-media"></div>
+
+    </div>
+
+    <div id="project-extras"></div>
+
+</div>
+
 <style>${style()}</style>
 `
 
@@ -34,12 +50,14 @@ div#projects-syndication {
 }
 
 div#project-showcase {
+    display: flex;
     flex: 1 1 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
     overflow: auto;
+    width:100%;
 }
 `
 

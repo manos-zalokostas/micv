@@ -17,23 +17,24 @@ const view = () => {
     return `
         <article class="description-slideshow">
             <section>
-                <nav class="slideshow-nav">
-                    <a data-type="next">next</a>
-                    <a data-type="prev">prev</a>
-                    <a data-type="exit">exit</a>
-                </nav>
                 <p class="slideshow-preview">
                     <img src="${DATA.images[activeIndex]}"/>
                     <span>TEXT</span>
                 </p>
             </section>
-            <nav class="slideshow-media">
-            ${strJoin(
-        DATA.images.map(((path, i) =>
-                `<a href="#"><img data-index=${i} src=${path} /></a>`
-        )))}
-            </nav>
-            <style>.${style()}</style>
+            <div class="media-navs">
+                <nav class="slideshow-nav">
+                    <a data-type="next">next</a>
+                    <a data-type="prev">prev</a>
+                    <a data-type="exit">exit</a>
+                </nav>
+                <nav class="slideshow-media">
+                ${strJoin(DATA.images.map(((path, i) =>
+            `<a href="#"><img data-index=${i} src=${path} /></a>`
+    )))}
+                </nav>
+            </div>
+                <style>${style()}</style>
             <script>${attachListeners()}</script>
         </article>
     `;
@@ -64,17 +65,13 @@ const attachListeners = () => {
 const style = () => `
 ${CSSID} article.description-slideshow {
     display: flex;
-    flex-flow: column;
     padding: 10px;
     background: black;
+    flex-flow: row-reverse;
 }
 ${CSSID} article.description-slideshow > section {
     display: flex;
-    flex: 1 1 100%;
-    margin: auto;
-    width: 80%;
-    flex-flow: column;
-    background: silver;
+    flex: 4 4 100%;
 }
 ${CSSID} article.description-slideshow > section > nav{
     display: flex;
@@ -94,19 +91,46 @@ ${CSSID} article.description-slideshow > section > p {
     padding: 25px 0;
 }
 ${CSSID} article.description-slideshow > section > p > span {
-    padding: 10px 0;
+    padding: 10px;
+    color: white;
+    text-align: right;
 }
 ${CSSID} article.description-slideshow > nav {
     display: flex;
-    flex: 1 1 100%;
-    margin: auto;
-    width: 90%;
-    place-content: space-evenly;
-    padding: 10px 0;
     background: orange;
+    flex-flow: column;
+    place-content: flex-end;
+}
+${CSSID} article.description-slideshow > nav > a {
+    margin:5px
 }
 ${CSSID} .slideshow-media img {
     width: 80px;
+}
+.media-navs {
+    flex: 1 1 15%;
+    display: flex;
+    flex-flow: column;
+    padding: 0 10px 0 0;
+}
+nav.slideshow-nav {
+    display: flex;
+    flex:  1 1 10%;
+    flex-flow: column;
+    text-align: center;
+    /* margin: 5px; */
+    align-items: flex-start;
+}
+nav.slideshow-nav > a {
+    color:white;
+    /* background:#aaa; */
+    padding:2px 4px 4px 4px;
+}
+nav.slideshow-media {
+    display: flex;
+    flex-flow: column;
+    flex: 4 4 80%;
+    place-content: flex-end;
 }
 `;
 

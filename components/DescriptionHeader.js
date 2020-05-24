@@ -19,6 +19,7 @@ const view = () => {
                 <dt>TOOLS</dt>
                 ${strJoin(DATA.tools.map(tool => `<dd data-type="description-tool">${tool}</dd>`))}
             </dl>
+            <style>${STYLE}</style>
             <script>${attachListeners()}</script>
         </section>
     `;
@@ -36,12 +37,61 @@ const attachListeners = () => {
     })
 }
 
+const STYLE = `
+div#project-title {
+    flex: 1 1 100%;
+    flex-direction: column;
+}
+div#project-title section {
+    flex: 1 1 100%;
+    flex-direction: column;
+}
+div#project-title section h2 {
+    flex: 1 1 100%;
+    flex-direction: column;
+}
+div#project-title section h3 {
+    flex: 1 1 100%;
+    flex-direction: column;
+    background: blue;
+    width: fit-content;
+}
+div#project-title section dl {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+div#project-title section dt {
+    display:none;
+    padding: 10px  10px 10px 0;
+    background: yellow;
+    width: initial;
+}
+div#project-title section dd {
+    flex-direction: column;
+}
+div#project-body {
+    flex: 1 1 100%;
+}
+div#project-extras {}
+section {}
+`;
 
 const DATA =
     {
-        title: 'What is this site about ?',
+        title: 'PROJECT NAME',
         category: 'CATEGORY 1',
-        tools: [1, 2, 3, 4, 5]
+        tools: [
+            'tool a',
+            'tool b',
+            'tool c',
+            'tool d',
+            'tool e',
+            'tool e',
+            'tool e',
+            'tool e',
+            'tool e',
+        ]
     }
 
 run();

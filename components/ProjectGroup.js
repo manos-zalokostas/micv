@@ -1,51 +1,57 @@
-import {dq, strJoin} from "./aux.js";
+import {dqa, dq, strJoin} from "./aux.js";
+import {LayoutNavigationProjectShowcase} from "./Layout.js";
+
+export default (o = null, i = 0) => run(o, i);
 
 
-export default (o = null) => run(o);
-
-const run = (data) => {
-    // dq(cssid || CSSID).innerHTML = view();
-    return view(data || DATA);
+const run = (data, i) => {
+    return view(data || DATA, i);
 }
 
 
-const view = (data) => {
+const view = (data, i) => {
     return `
     <section class="group-project">
         <h3>${data[0]}</h3>
-        ${_projectList(data[1])}
-        <style>${STYLE}</style>
-        <script>${attachLoaders()}</script>
+        ${_projectList(data[1], i)}
+        <style>${i === 0 && STYLE}</style>
+        <script>${i === 0 && attachLoaders()}</script>
     </section>
     `;
 };
 
+
+/**
+ *
+ * @param data
+ * @returns {string}
+ * @private
+ */
+const _projectList = (data, i) => {
+
+    return `
+    <nav> ${
+        strJoin(data.map((pack, i) => `<a data-project="${pack[0]}">${pack[1]}</a>`))
+    }</nav>`
+}
+
+
+/**
+ *
+ */
 const attachLoaders = () => {
     document.addEventListener('click', evt => {
-
-        if (evt.target.dataset && evt.target.dataset.project) {
-            navigateDescription(evt);
+        if (Array.from(dqa('.group-project > nav > a')).includes(evt.target)) {
+            console.log(evt.target.dataset.project)
+            LayoutNavigationProjectShowcase(evt.target.dataset.project)
         }
     })
 };
 
 
-const navigateDescription = (evt) => {
-    console.log(evt.target.dataset.project)
-}
+/*
 
-
-const _projectList = (data) => {
-
-    return `
-    <nav>
-        ${
-        strJoin(data.map((pack, i) => `<a data-project="${pack[0]}">${pack[1]}</a>`))
-    }
-</nav>`
-
-}
-
+ */
 const STYLE = `
     .group-project {
         background:silver;
@@ -66,6 +72,7 @@ const STYLE = `
         background:white;
     }
 `;
+
 
 const DATA = [
     'DOMAIN A', [

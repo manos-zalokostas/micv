@@ -2,29 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c2027ac-7fbf-48f5-b8a4-e62f9701cdf7" name="Default" comment="#COMPONENTS | ATTACH COMPONENTS TO PAGE (PARTIAL)&#10;*********************************************************&#10; - APPLY CSS TO PAGE AND NEST PART OF COMPONENTS WITH BASIC INTERACTIVITY">
-      <change afterPath="$PROJECT_DIR$/components/ProjectsNavigation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/WCDescriptionSlideshow.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev-wc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aux/test.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/AboutNavigationMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/AboutNavigationMain.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/AboutText.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/AboutText.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/DescriptionHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/DescriptionHeader.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/DescriptionSlideshow.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/DescriptionSlideshow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/GlobalNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/GlobalNavigation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Layout.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/ProjectGroup.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProjectGroup.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/ProjectGroupPool.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProjectGroupPool.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ResumeList.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/ResumeList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/TimelineList.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/TimelineList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/WelcomeText.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/WelcomeText.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/aux.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/aux.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ProjectsNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProjectsNavigation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dev.html" beforeDir="false" afterPath="$PROJECT_DIR$/dev.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page-introduction.js" beforeDir="false" afterPath="$PROJECT_DIR$/page-introduction.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page-projects.js" beforeDir="false" afterPath="$PROJECT_DIR$/page-projects.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-component/BasicWebComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/web-component/BasicWebComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-component/web-component.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-component/web-component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +71,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="HTML" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../nodscratch" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/aux" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -90,18 +79,19 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="$USER_HOME$/.nvm/versions/node/v6.9.4/bin/node" />
-    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/components" />
-      <recent name="$PROJECT_DIR$/web-component" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/aux" />
       <recent name="$PROJECT_DIR$/components" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/aux" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/components" />
+      <recent name="$PROJECT_DIR$/web-component" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -169,7 +159,10 @@
       <workItem from="1589999871065" duration="8009000" />
       <workItem from="1590045561404" duration="60000" />
       <workItem from="1590224283764" duration="1433000" />
-      <workItem from="1590226234768" duration="17367000" />
+      <workItem from="1590226234768" duration="17559000" />
+      <workItem from="1590255154377" duration="13054000" />
+      <workItem from="1590308454763" duration="1086000" />
+      <workItem from="1590309819717" duration="7646000" />
     </task>
     <task id="LOCAL-00001" summary="convert http =&gt; https">
       <created>1545926008916</created>
@@ -241,11 +234,28 @@
       <option name="project" value="LOCAL" />
       <updated>1589383484082</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="#COMPONENTS | ATTACH COMPONENTS TO PAGE (PARTIAL)&#10;*********************************************************&#10; - APPLY CSS TO PAGE AND NEST PART OF COMPONENTS WITH BASIC INTERACTIVITY">
+      <created>1590244276741</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1590244276741</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -317,18 +327,18 @@
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="661" y="101" width="932" height="913" key="CommitChangelistDialog2/0.28.1920.1052@0.28.1920.1052" timestamp="1590244275863" />
-    <state x="118" y="201" width="1561" height="774" maximized="true" key="DiffContextDialog" timestamp="1588333491851">
+    <state x="118" y="201" width="1561" height="774" maximized="true" key="DiffContextDialog" timestamp="1590256611482">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="118" y="201" width="1561" height="774" maximized="true" key="DiffContextDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1588333491851" />
+    <state x="118" y="201" width="1561" height="774" maximized="true" key="DiffContextDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1590256611482" />
     <state x="414" y="282" width="426" height="484" key="FileChooserDialogImpl" timestamp="1590233203029">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="414" y="282" width="426" height="484" key="FileChooserDialogImpl/0.28.1920.1052@0.28.1920.1052" timestamp="1590233203029" />
-    <state x="493" y="180" key="SettingsEditor" timestamp="1587811194864">
+    <state x="493" y="180" key="SettingsEditor" timestamp="1590256788548">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="493" y="180" key="SettingsEditor/0.28.1920.1052@0.28.1920.1052" timestamp="1587811194864" />
+    <state x="493" y="180" key="SettingsEditor/0.28.1920.1052@0.28.1920.1052" timestamp="1590256788548" />
     <state x="626" y="322" width="540" height="524" key="StructurePopup" timestamp="1590235144651">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
@@ -337,18 +347,18 @@
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state width="498" height="445" key="SwitcherDM/0.28.1920.1052@0.28.1920.1052" timestamp="1590224392970" />
-    <state x="592" y="289" width="802" height="552" key="Vcs.Push.Dialog.v2" timestamp="1589383486180">
+    <state x="592" y="289" width="802" height="552" key="Vcs.Push.Dialog.v2" timestamp="1590244353256">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="592" y="289" width="802" height="552" key="Vcs.Push.Dialog.v2/0.28.1920.1052@0.28.1920.1052" timestamp="1589383486180" />
+    <state x="592" y="289" width="802" height="552" key="Vcs.Push.Dialog.v2/0.28.1920.1052@0.28.1920.1052" timestamp="1590244353256" />
     <state x="200" y="140" width="1606" height="825" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1589020644078">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="200" y="140" width="1606" height="825" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1589020644078" />
-    <state x="675" y="372" key="com.intellij.ide.util.TipDialog" timestamp="1590226245647">
+    <state x="675" y="372" key="com.intellij.ide.util.TipDialog" timestamp="1590309821235">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="675" y="372" key="com.intellij.ide.util.TipDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1590226245647" />
+    <state x="675" y="372" key="com.intellij.ide.util.TipDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1590309821235" />
     <state x="806" y="479" width="456" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589377642523">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
@@ -365,9 +375,9 @@
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="546" y="307" width="700" height="530" key="recent.locations.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1587561380214" />
-    <state x="644" y="270" width="672" height="678" key="search.everywhere.popup" timestamp="1590243639264">
+    <state x="644" y="270" width="672" height="678" key="search.everywhere.popup" timestamp="1590314215398">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="644" y="270" width="672" height="678" key="search.everywhere.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1590243639264" />
+    <state x="644" y="270" width="672" height="678" key="search.everywhere.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1590314215398" />
   </component>
 </project>

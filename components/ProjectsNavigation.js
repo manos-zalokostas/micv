@@ -1,9 +1,7 @@
-import {dq, cl, strJoin} from "./aux.js";
+import {dqa, dq, cl, strJoin} from "./aux.js";
 import {LayoutNavigationProjects} from "./Layout.js";
 
 const CSSID = '#projects-navigation';
-
-// let activeImage = 'images/webdes_a1/welcome_page.jpg';
 
 
 export default (o = null) => run(o);
@@ -34,10 +32,10 @@ const attachListeners = () => {
 
     document.addEventListener('click', (evt) => {
 
-        if (evt.target.parentElement.id === 'projects-navigation') {
-//             cl(evt.target.dataset.type)
+        if (Array.from(dqa(`${CSSID} > nav > a`)).includes(evt.target)) {
+            cl(evt.target.dataset.type)
 // debugger
-//             LayoutNavigationProjects(evt.target.dataset.type)
+            LayoutNavigationProjects(evt.target.dataset.type)
         }
     })
 
