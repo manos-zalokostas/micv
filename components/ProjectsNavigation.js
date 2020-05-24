@@ -44,8 +44,10 @@ const attachListeners = () => {
 
 
 const style = () => `
-${CSSID} na {
+
+${CSSID} nav {
     display: flex;
+    z-index: 100;
     place-content: space-evenly;
     background: slategrey;
     width:30%;

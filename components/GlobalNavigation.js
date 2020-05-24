@@ -40,7 +40,7 @@ const attachListeners = () => {
 const style = () => `
 div#global-navigation {
     position: fixed;
-    z-index: 10;
+    z-index: 100;
     right: 0;
     top:  0;
 }

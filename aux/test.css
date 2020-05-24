@@ -1,0 +1,73 @@
+div#page-footer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+div#page-footer > div {
+    display: flex;
+    flex-flow: row;
+    place-content: space-around;
+    width: 100%;
+    height: 100%;
+}
+
+article.reference-domain {
+    flex: 1 1 100%;
+    background: #444;
+    margin: 10px;
+    flex-flow: column;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    place-content: space-between;
+}
+
+article.reference-domain img {
+    width: 36px;
+}
+
+article.reference-domain ul {
+    display: flex;
+    flex-flow: column;
+    place-content: space-evenly;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 39%;
+    background: #ddd;
+}
+
+article.reference-domain header {
+    flex: 1 25 100%;
+    align-self: center;
+    justify-self: unset;
+    color: #ddd;
+    font-weight: bold;
+    font-size: x-large;
+    text-decoration: underline;
+}
+
+article.reference-domain a {
+    text-decoration: none;
+}
+
+article.reference-domain section {
+    flex: 1 4 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+}
+
+article.reference-domain h2 {
+}
+article.reference-domain h3 {
+}
+article.reference-domain ul li {
+}
+section.reference-group {
+}

@@ -117,15 +117,19 @@ export const LayoutNavigationGlobal = (action) => {
     //
     const Actions = {
         introduction: () => {
-            setstyle(dq('#page-projects'), 'display', 'none');
             setstyle(dq('#page-introduction'), 'display', 'flex');
+            setstyle(dq('#page-projects'), 'display', 'none');
+            setstyle(dq('#page-footer'), 'display', 'none');
         },
         projects: () => {
             setstyle(dq('#page-introduction'), 'display', 'none');
             setstyle(dq('#page-projects'), 'display', 'flex');
+            setstyle(dq('#page-footer'), 'display', 'none');
         },
         references: () => {
-            return null;
+            setstyle(dq('#page-introduction'), 'display', 'none');
+            setstyle(dq('#page-projects'), 'display', 'none');
+            setstyle(dq('#page-footer'), 'display', 'block');
         },
     };
 
