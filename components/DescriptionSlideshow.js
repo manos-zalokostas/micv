@@ -1,25 +1,27 @@
 import {dq, cl, strJoin} from "./aux.js";
 
 const CSSID = '#project-media';
-
+let DATA = '';
 // let activeImage = 'images/webdes_a1/welcome_page.jpg';
 let activeIndex = 0;
 
-export default (o = null) => run(o);
+export default (pid) => run(pid);
 
 
-const run = (cssid) => {
-    dq(cssid || CSSID).innerHTML = view()
+const run = (pid) => {
+    dq(CSSID).innerHTML = view(pid)
 }
 
 
-const view = () => {
+const view = (pid) => {
+
+     DATA = makeData(pid);
+
     return `
         <article class="description-slideshow">
             <section>
                 <p class="slideshow-preview">
                     <img src="${DATA.images[activeIndex]}"/>
-                    <span>TEXT</span>
                 </p>
             </section>
             <div class="media-navs">
@@ -62,12 +64,29 @@ const attachListeners = () => {
 }
 
 
+
+const makeData = (pid = 'WB02') => {
+    let {items} = JSON.parse(sessionStorage.MIDATA)
+    let item = items.item.find(o => o.id === pid);
+
+
+    return {
+        // text: item.description,
+        images: item.screenshots.shot
+    }
+};
+
+
 const style = () => `
 ${CSSID} article.description-slideshow {
     display: flex;
     padding: 10px;
     background: black;
     flex-flow: row-reverse;
+}
+${CSSID} article.description-slideshow .slideshow-preview img{
+    max-width:100%;
+    max-height: 100%;
 }
 ${CSSID} article.description-slideshow > section {
     display: flex;
@@ -134,21 +153,22 @@ nav.slideshow-media {
 }
 `;
 
-const DATA =
-    {
-        text: `
-Front-end developer with OOP PHP Zend Framework & Javascript / Jquery (backend was a remote service)
-Follow explicit instructions to consume required data from remote web services and blueprint layouts to deliver UIs
-Provide ticketing solutions for acknowledged bugs
-`,
-        images: [
-            "images/webdes_a1/welcome_page.jpg",
-            "images/webdes_a1/add_product_to_basket.jpg",
-            "images/webdes_a1/single_product_description.jpg",
-            "images/webdes_a1/preview_registered_products.jpg",
-            "images/webdes_a1/preview_registered_users.jpg",
-        ]
-    }
+//
+// const DATA =
+//     {
+//         text: `
+// Front-end developer with OOP PHP Zend Framework & Javascript / Jquery (backend was a remote service)
+// Follow explicit instructions to consume required data from remote web services and blueprint layouts to deliver UIs
+// Provide ticketing solutions for acknowledged bugs
+// `,
+//         images: [
+//             "images/webdes_a1/welcome_page.jpg",
+//             "images/webdes_a1/add_product_to_basket.jpg",
+//             "images/webdes_a1/single_product_description.jpg",
+//             "images/webdes_a1/preview_registered_products.jpg",
+//             "images/webdes_a1/preview_registered_users.jpg",
+//         ]
+//     }
 
 
 run();

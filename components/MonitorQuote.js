@@ -1,4 +1,5 @@
 export default (o) => run(o);
+let DATA = '';
 
 const run = () => {
 
@@ -7,6 +8,7 @@ const run = () => {
 }
 
 const getDataset = () => {
+    DATA = makeData();
     if (!dataclone.length) cloneData();
     return dataclone.shift();
 };
@@ -24,10 +26,9 @@ const view = () => {
 
     return `
     <section class="content-quote">
-    <h1>${o.title}</h1>
-    <h2>${o.category}</h2>
-    <h3>${o.subcategory}</h3>
-    <p>${o.description}</p>
+    <h1>${o.name}</h1>
+    <h2>${o.title}</h2>
+    <h3>${o.quote}</h3>
     <img src=${o.image} />
     <div>BACKGROUND IMAGE</div>
 </section>
@@ -36,32 +37,59 @@ const view = () => {
 
 let dataclone = [];
 
-const DATA = [
-    {
-        id: 'id',
-        title: 'PERSON 1',
-        category: 'category',
-        subcategory: 'subcategory',
-        description: 'description',
-        image: 'image',
-    },
-    {
-        id: 'id',
-        title: 'PERSON 12',
-        category: 'category',
-        subcategory: 'subcategory',
-        description: 'description',
-        image: 'image',
-    },
-    {
-        id: 'id',
-        title: 'PERSON 33',
-        category: 'category',
-        subcategory: 'subcategory',
-        description: 'description',
-        image: 'image',
-    },
-]
 
+const makeData = () => {
+    //
+    let domain = 'STUDIES',
+        o = JSON.parse(sessionStorage.MIDATA),
+        items = o.items.item,
+        domains = items.filter(o => o.domain === domain);
+
+
+    let data = domains.map(o => {
+            let a = o.tutor.split('>');
+
+            return {
+                id: o.id,
+                name: a[2].split('<').shift(),
+                title: a[5].split('<').shift(),
+                quote: o.comment,
+                image: a[1].includes('linkedin') ? 'lnkedin' : 'facebook'
+            }
+        }
+    );
+
+    return data;
+
+};
+
+//
+// const _DATA = [
+//     {
+//         id: 'id',
+//         title: 'PERSON 1',
+//         category: 'category',
+//         subcategory: 'subcategory',
+//         description: 'description',
+//         image: 'image',
+//     },
+//     {
+//         id: 'id',
+//         title: 'PERSON 12',
+//         category: 'category',
+//         subcategory: 'subcategory',
+//         description: 'description',
+//         image: 'image',
+//     },
+//     {
+//         id: 'id',
+//         title: 'PERSON 33',
+//         category: 'category',
+//         subcategory: 'subcategory',
+//         description: 'description',
+//         image: 'image',
+//     },
+// ]
+//
 
 // run()

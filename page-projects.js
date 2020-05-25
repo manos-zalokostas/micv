@@ -1,12 +1,12 @@
-export default () => run();
+export default (projectid) => run(projectid);
 
-const run = () => document.querySelector('#page-projects').innerHTML = `
+const run = (projectid) => document.querySelector('#page-projects').innerHTML = `
 
 <div id="projects-navigation"></div>
 
 <div id="projects-syndication"></div>
 
-<div id="project-showcase" style="display: none">
+<div id="project-showcase"  data-project=${projectid} style="display: none">
 
     <div id="project-title"></div>
 
@@ -59,6 +59,7 @@ div#projects-syndication {
 
 div#project-showcase {
     display: flex;
+    flex-flow:column;
     flex: 1 1 100%;
     height: 100%;
     position: absolute;

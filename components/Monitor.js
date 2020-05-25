@@ -18,9 +18,9 @@ const CSSID = '#introduction-projector';
 export default (o = null) => run(o);
 
 
-const run = (cssid) => {
-    // rotateContent();
-    dq(cssid || CSSID).innerHTML = view()
+const run = () => {
+    rotateContent();
+    dq(CSSID).innerHTML = view()
 }
 // const run = () => {
 //     return view();
@@ -76,7 +76,6 @@ const view = () => {
 
     return `
         <article class="projector">
-            <script>${attachLoaders()}</script>
             <header>
                 <nav>
                     <a data-filter="project">project</a>
@@ -86,6 +85,7 @@ const view = () => {
                 <section>${displayContent()}</section>
             </header>
             <style>${style()}</style>
+            <script>${attachLoaders()}</script>
         </article>
     `;
 }

@@ -20,7 +20,7 @@ ProjectGroupPool();
 import DescriptionHeader from "./components/DescriptionHeader.js";
 import DescriptionText from "./components/DescriptionText.js";
 import DescriptionSlideshow from "./components/DescriptionSlideshow.js";
-// import DescriptionExtra from "./components/DescriptionExtra.js";
+import DescriptionExtra from "./components/DescriptionExtra.js";
 
 
 import ReferenceGroup from "./components/ReferenceGroup.js";

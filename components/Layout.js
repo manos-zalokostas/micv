@@ -1,18 +1,31 @@
 import {setstyle, remstyle, remattr, cladd, setattr, dq, cl, strJoin} from "./aux.js";
 import ProjectGroupPool from "./ProjectGroupPool.js";
+ import PageProjects from '../page-projects.js'
+import DescriptionText from "./DescriptionText.js";
+import DescriptionExtra from "./DescriptionExtra.js";
+import DescriptionSlideshow from "./DescriptionSlideshow.js";
+import DescriptionHeader from "./DescriptionHeader.js";
+
+
+
+
 
 
 /**
  *
- * @param projectid
+ * @param pid
  * @constructor
  */
-export const LayoutNavigationProjectShowcase = (projectid = null) => {
+export const LayoutNavigationProjectShowcase = (pid = null) => {
 
-    let action = projectid ? 'enter' : 'leave';
+    let action = pid ? 'enter' : 'leave';
 
     const Actions = {
         enter: () => {
+            DescriptionText(pid);
+            DescriptionExtra(pid);
+            DescriptionHeader(pid);
+            DescriptionSlideshow(pid);
             setstyle(dq('#projects-syndication'), 'display', 'none');
             setstyle(dq('#project-showcase'), 'display', 'flex');
         },
@@ -56,7 +69,7 @@ export const loadRepetitive = (str) => {
 
     str = str.replace(regxStyle, '', str);
     str = str.replace(regxScript, "", str);
-// debugger
+//
     str += style;
     // str += script;
 

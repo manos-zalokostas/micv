@@ -1,4 +1,5 @@
 export default (o) => run(o);
+let DATA = '';
 
 
 const run = (o) => {
@@ -7,6 +8,7 @@ const run = (o) => {
 
 
 const getDataset = () => {
+    DATA = makeData();
     if (!dataclone.length) cloneData();
     return dataclone.shift();
 };
@@ -37,30 +39,52 @@ const view = () => {
 let dataclone = [];
 
 
-const DATA = [
-    {
-        id: 'id',
-        title: 'PROJECT A',
-        category: 'category',
-        subcategory: 'subcategory',
-        description: 'description',
-        image: 'image',
-    },
-    {
-        id: 'id',
-        title: 'PROJECT AB',
-        category: 'category',
-        subcategory: 'subcategory',
-        description: 'description',
-        image: 'image',
-    },
-    {
-        id: 'id',
-        title: 'PROJECT DD',
-        category: 'category',
-        subcategory: 'subcategory',
-        description: 'description',
-        image: 'image',
-    },
-]
+const makeData = () => {
+
+    let domain = 'WEB',
+        o = JSON.parse(sessionStorage.MIDATA),
+        items = o.items.item,
+        domains = items.filter(o => o.domain === domain);
+
+    let data = domains.map(o => {
+            return {
+                id: o.id,
+                title: o.title,
+                category: o.category,
+                subcategory: o.subcategory,
+                description: o.description,
+                image: o.image,
+            }
+        }
+    );
+
+    return data;
+};
+
+// const DATA = [
+//     {
+//         id: 'id',
+//         title: 'PROJECT A',
+//         category: 'category',
+//         subcategory: 'subcategory',
+//         description: 'description',
+//         image: 'image',
+//     },
+//     {
+//         id: 'id',
+//         title: 'PROJECT AB',
+//         category: 'category',
+//         subcategory: 'subcategory',
+//         description: 'description',
+//         image: 'image',
+//     },
+//     {
+//         id: 'id',
+//         title: 'PROJECT DD',
+//         category: 'category',
+//         subcategory: 'subcategory',
+//         description: 'description',
+//         image: 'image',
+//     },
+// ]
 // run();

@@ -1,15 +1,18 @@
 import {dq, cl, strJoin} from "./aux.js";
 
 const CSSID = '#project-extras';
-
+let DATA = null;
+let PID = 'WB02';
 // let activeImage = 'images/webdes_a1/welcome_page.jpg';
 
 
-export default (o = null) => run(o);
+export default (pid) => run(pid);
 
 
-const run = (cssid) => {
-    dq(cssid || CSSID).innerHTML = view()
+const run = (pid) => {
+    PID = pid || PID;
+    DATA = makeData(PID);
+    dq(CSSID).innerHTML = view()
 }
 
 
@@ -63,37 +66,54 @@ const attachListeners = () => {
 }
 
 
-const DATA =
-    {
+const makeData = () => {
+    let {items} = JSON.parse(sessionStorage.MIDATA)
+    let item = items.item.find(o => o.id === PID);
+
+    return {
         quotes: [
             {
-                tutor: 'TUTOR 1',
-                score: '80',
-                text: `Front-end developer with OOP PHP Zend Framework & Javascript / Jquery (backend was a remote service)
-                Follow explicit instructions to consume required data from remote web services and blueprint layouts to deliver UIs
-                Provide ticketing solutions for acknowledged bugs`,
-            },
-            {
-                tutor: 'TUTOR 2',
-                score: '87',
-                text: `Follow explicit instructions to consume required data from remote web services and blueprint layouts to deliver UIs Provide ticketing solutions for acknowledged bugs. Front-end developer with OOP PHP Zend Framework & Javascript / Jquery (backend was a remote service)`,
+                tutor: item.tutor,
+                score: item.score,
+                text: item.description,
             },
         ],
-        files: [
-            "images/webdes_a1/welcome_page.jpg",
-            "images/webdes_a1/add_product_to_basket.jpg",
-            "images/webdes_a1/single_product_description.jpg",
-            "images/webdes_a1/preview_registered_products.jpg",
-            "images/webdes_a1/preview_registered_users.jpg",
-        ],
-        links: [
-            "images/webdes_a1/welcome_page.jpg",
-            "images/webdes_a1/add_product_to_basket.jpg",
-            "images/webdes_a1/single_product_description.jpg",
-            "images/webdes_a1/preview_registered_products.jpg",
-            "images/webdes_a1/preview_registered_users.jpg",
-        ]
+        files: item.files.file ?  item.files.file : [],
+        links: item.links ? item.links.link : []
     }
+};
+
+// const DATA =
+//     {
+//         quotes: [
+//             {
+//                 tutor: 'TUTOR 1',
+//                 score: '80',
+//                 text: `Front-end developer with OOP PHP Zend Framework & Javascript / Jquery (backend was a remote service)
+//                 Follow explicit instructions to consume required data from remote web services and blueprint layouts to deliver UIs
+//                 Provide ticketing solutions for acknowledged bugs`,
+//             },
+//             {
+//                 tutor: 'TUTOR 2',
+//                 score: '87',
+//                 text: `Follow explicit instructions to consume required data from remote web services and blueprint layouts to deliver UIs Provide ticketing solutions for acknowledged bugs. Front-end developer with OOP PHP Zend Framework & Javascript / Jquery (backend was a remote service)`,
+//             },
+//         ],
+//         files: [
+//             "images/webdes_a1/welcome_page.jpg",
+//             "images/webdes_a1/add_product_to_basket.jpg",
+//             "images/webdes_a1/single_product_description.jpg",
+//             "images/webdes_a1/preview_registered_products.jpg",
+//             "images/webdes_a1/preview_registered_users.jpg",
+//         ],
+//         links: [
+//             "images/webdes_a1/welcome_page.jpg",
+//             "images/webdes_a1/add_product_to_basket.jpg",
+//             "images/webdes_a1/single_product_description.jpg",
+//             "images/webdes_a1/preview_registered_products.jpg",
+//             "images/webdes_a1/preview_registered_users.jpg",
+//         ]
+//     }
 
 
 run();

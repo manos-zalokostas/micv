@@ -1,9 +1,13 @@
 import * as aux from "./aux.js";
+// import ProjectGroup from "./ProjectGroup";
+
+let DATA = '';
+
 
 export default () => run();
 
 const run = () => {
-
+    DATA = makeData();
     return view();
 }
 
@@ -50,7 +54,31 @@ const item = (o) => {
 
 let dataclone = [];
 
-const DATA = [
+
+const makeData = () => {
+
+    let o = JSON.parse(sessionStorage.MIDATA)
+    let items = o.items.item;
+    // let tools = items.filter(o => o.domain === domain);
+    let tools = items.map(o => o.tools.tool);
+    tools = tools.filter(a => Array.isArray(a));
+    tools = tools.flat();
+    tools = Array.from(new Set(tools));
+
+    let data = tools.map(str => ({
+        id: str.replace('_', ''),
+        title: str,
+        image: `images/tech_logos/${str}.jpg`
+    }))
+
+//
+    return data;
+
+
+};
+
+
+const _DATA = [
     {
         id: 'id',
         title: 'title 1',

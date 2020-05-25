@@ -2,19 +2,20 @@ import {cl, dq, strJoin} from "./aux.js";
 
 const CSSID = '#project-title';
 
-export default (o = null) => run(o);
+export default (pid) => run(pid);
 
 
-const run = (cssid) => {
-    dq(cssid || CSSID).innerHTML = view()
+const run = (projecid) => {
+    dq(CSSID).innerHTML = view()
 }
 
 
-const view = () => {
+const view = (pid) => {
+    let DATA = makeData(pid);
     return `
         <section>
             <h2>${DATA.title}</h2>
-            <h3 data-type = 'description-category'>CATEGORY ${DATA.category}</h3>
+            <h3 data-type = 'description-category'> ${DATA.category}</h3>
             <dl>
                 <dt>TOOLS</dt>
                 ${strJoin(DATA.tools.map(tool => `<dd data-type="description-tool">${tool}</dd>`))}
@@ -53,7 +54,6 @@ div#project-title section h2 {
 div#project-title section h3 {
     flex: 1 1 100%;
     flex-direction: column;
-    background: blue;
     width: fit-content;
 }
 div#project-title section dl {
@@ -77,7 +77,20 @@ div#project-extras {}
 section {}
 `;
 
-const DATA =
+
+const makeData = (pid = 'WB02') => {
+    let {items} = JSON.parse(sessionStorage.MIDATA)
+    let item = items.item.find(o => o.id === pid);
+
+    return {
+        title: item.title,
+        category: item.category,
+        tools: Array.isArray(item.tools.tool) ? item.tools.tool : [item.tools.tool]
+}
+};
+
+
+const _DATA =
     {
         title: 'PROJECT NAME',
         category: 'CATEGORY 1',

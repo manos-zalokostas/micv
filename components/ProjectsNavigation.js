@@ -34,7 +34,7 @@ const attachListeners = () => {
 
         if (Array.from(dqa(`${CSSID} > nav > a`)).includes(evt.target)) {
             cl(evt.target.dataset.type)
-// debugger
+//
             LayoutNavigationProjects(evt.target.dataset.type)
         }
     })
