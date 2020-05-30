@@ -1,3 +1,5 @@
+const CSSID = 'content-project';
+
 export default (o) => run(o);
 let DATA = '';
 
@@ -24,16 +26,19 @@ const view = () => {
     let o = getDataset();
 
     return `
-    <section class="content-project">
+    <section class="${CSSID}">
         <h1>${o.title}</h1>
         <h2>${o.category}</h2>
         <h3>${o.subcategory}</h3>
         <p>${o.description}</p>
         <img src=${o.image} />
         <div>BACKGROUND IMAGE</div>
+        <style>${STYLE}</style>
     </section>
     `;
+
 }
+
 
 
 let dataclone = [];
@@ -59,32 +64,13 @@ const makeData = () => {
     );
 
     return data;
+
 };
 
-// const DATA = [
-//     {
-//         id: 'id',
-//         title: 'PROJECT A',
-//         category: 'category',
-//         subcategory: 'subcategory',
-//         description: 'description',
-//         image: 'image',
-//     },
-//     {
-//         id: 'id',
-//         title: 'PROJECT AB',
-//         category: 'category',
-//         subcategory: 'subcategory',
-//         description: 'description',
-//         image: 'image',
-//     },
-//     {
-//         id: 'id',
-//         title: 'PROJECT DD',
-//         category: 'category',
-//         subcategory: 'subcategory',
-//         description: 'description',
-//         image: 'image',
-//     },
-// ]
-// run();
+
+const STYLE = `
+.${CSSID} {
+background: blue;
+width:100%;
+} 
+`;

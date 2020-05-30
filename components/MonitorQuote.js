@@ -1,3 +1,6 @@
+const CSSID = 'content-quote';
+
+
 export default (o) => run(o);
 let DATA = '';
 
@@ -25,15 +28,17 @@ const view = () => {
 
 
     return `
-    <section class="content-quote">
+<section class="${CSSID}">
     <h1>${o.name}</h1>
     <h2>${o.title}</h2>
     <h3>${o.quote}</h3>
     <img src=${o.image} />
     <div>BACKGROUND IMAGE</div>
+    <style>${STYLE}</style>
 </section>
     `;
 }
+
 
 let dataclone = [];
 
@@ -63,33 +68,10 @@ const makeData = () => {
 
 };
 
-//
-// const _DATA = [
-//     {
-//         id: 'id',
-//         title: 'PERSON 1',
-//         category: 'category',
-//         subcategory: 'subcategory',
-//         description: 'description',
-//         image: 'image',
-//     },
-//     {
-//         id: 'id',
-//         title: 'PERSON 12',
-//         category: 'category',
-//         subcategory: 'subcategory',
-//         description: 'description',
-//         image: 'image',
-//     },
-//     {
-//         id: 'id',
-//         title: 'PERSON 33',
-//         category: 'category',
-//         subcategory: 'subcategory',
-//         description: 'description',
-//         image: 'image',
-//     },
-// ]
-//
 
-// run()
+const STYLE = `
+.${CSSID} {
+background:yellow;
+width:100%;
+} 
+`;

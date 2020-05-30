@@ -1,73 +1,65 @@
-div#page-footer {
+div#page-introduction {
+    display: flex;
+    flex-flow: wrap;
     position: absolute;
     left: 0;
     top: 0;
-    height: 100%;
-    width: 100%;
-}
-
-div#page-footer > div {
-    display: flex;
-    flex-flow: row;
-    place-content: space-around;
+    background: #555;
     width: 100%;
     height: 100%;
 }
 
-article.reference-domain {
+div#introduction-navigation {
     flex: 1 1 100%;
-    background: #444;
-    margin: 10px;
-    flex-flow: column;
-    width: 100%;
-    height: 100%;
+    height: 5%;
+    box-sizing: border-box;
+    border: 2px solid white;
     display: flex;
-    flex-direction: column;
-    place-content: space-between;
+    align-items: center;
 }
 
-article.reference-domain img {
-    width: 36px;
-}
-
-article.reference-domain ul {
+div#introduction-projector {
+    flex: 1 1 70%;
+    height: 40%;
+    box-sizing: border-box;
+    border: 2px solid white;
     display: flex;
-    flex-flow: column;
-    place-content: space-evenly;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    height: 39%;
-    background: #ddd;
+    align-items: center;
 }
 
-article.reference-domain header {
-    flex: 1 25 100%;
-    align-self: center;
-    justify-self: unset;
-    color: #ddd;
-    font-weight: bold;
-    font-size: x-large;
-    text-decoration: underline;
-}
+div#introduction-projector {}
 
-article.reference-domain a {
-    text-decoration: none;
-}
-
-article.reference-domain section {
-    flex: 1 4 100%;
+div#author-message {
+    flex: 1 1 30%;
+    height: 40%;
+    box-sizing: border-box;
+    border: 2px solid white;
     display: flex;
-    flex-flow: column;
-    justify-content: flex-start;
+    align-items: center;
 }
 
-article.reference-domain h2 {
+div#resume-contents {
+    flex: 1 1 100%;
+    position:relative;
+    overflow:hidden;
+    height: 55%;
+    box-sizing: border-box;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
 }
-article.reference-domain h3 {
+
+div#resume-contents > div {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
 }
-article.reference-domain ul li {
+
+div#resume-contents #resume-timeline {
+    height:100%;
 }
-section.reference-group {
+
+div#resume-contents .resume {
+    height:100%;
 }

@@ -37,6 +37,18 @@ ${CSSID} section.welcome-text header {
 ${CSSID} section.welcome-text p {
     flex: 0.8   
 }
+${CSSID} section.about-text {
+    display:flex;
+    flex-direction:row-reverse;
+}
+${CSSID} section.about-text header {
+    flex: 0 0 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:tomato;
+    font-size:x-large;   
+}
 `;
 
 

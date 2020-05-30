@@ -45,15 +45,29 @@ div#page-introduction {
 div#introduction-navigation {
     flex: 1 1 100%;
     height: 5%;
+    box-sizing: border-box;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
 }
 
 div#introduction-projector {
     flex: 1 1 70%;
-    height: 40%;}
+    height: 40%;
+    box-sizing: border-box;
+    border: 2px solid white;
+    display: flex;
+    align-items: start;
+    overflow:hidden;
+}
 
 div#author-message {
     flex: 1 1 30%;
     height: 40%;
+    box-sizing: border-box;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
 }
 
 div#resume-contents {
@@ -61,12 +75,13 @@ div#resume-contents {
     position:relative;
     overflow:hidden;
     height: 55%;
+    box-sizing: border-box;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
 }
 
 div#resume-contents > div {
-    position:absolute;
-    top:0;
-    left:0;
     width:100%;
 }
 
@@ -78,11 +93,6 @@ div#resume-contents .resume {
     height:100%;
 }
 
-div#resume-text {}
-
-div#resume-interactive {}
-
-div#resume-introduction {}
 `;
 
 

@@ -15,17 +15,30 @@ let isFilterForced = false;
 
 const CSSID = '#introduction-projector';
 
+
+/**
+ *
+ * @param o
+ */
 export default (o = null) => run(o);
 
 
+/**
+ *
+ */
 const run = () => {
-    rotateContent();
+    // rotateContent();
     dq(CSSID).innerHTML = view()
 }
 // const run = () => {
 //     return view();
 // }
 
+
+/**
+ *
+ * @returns {string}
+ */
 const resolveFilter = () => {
     if (isFilterForced) return filters[index];
     index += 1;
@@ -34,6 +47,9 @@ const resolveFilter = () => {
 }
 
 
+/**
+ *
+ */
 const rotateContent = () => {
     let interval = setInterval(
         () => {
@@ -48,20 +64,34 @@ const rotateContent = () => {
 };
 
 
+/**
+ *
+ */
 const replaceContent = () => {
-    document.querySelector('section').innerHTML = displayContent();
+    document.querySelector('main').innerHTML = displayContent();
 };
 
 
+/**
+ *
+ * @returns {string}
+ */
 const displayContent = () => {
     let filter = resolveFilter();
-    if (filter === 'project') return ProjectorProject();
-    if (filter === 'quote') return ProjectorQuote();
-    if (filter === 'tools') return ProjectorTools();
+    // if (filter === 'project') return ProjectorProject();
+    // if (filter === 'quote') return ProjectorQuote();
+    // if (filter === 'tools') return ProjectorTools();
+    // return ProjectorProject();
+    // return ProjectorQuote();
+    return ProjectorTools();
 
 };
 
 
+/**
+ *
+ * @param evt
+ */
 const filterContent = (evt) => {
     let {filter} = evt.target.dataset;
     if (filters.includes(filter)) {
@@ -72,6 +102,10 @@ const filterContent = (evt) => {
 };
 
 
+/**
+ *
+ * @returns {string}
+ */
 const view = () => {
 
     return `
@@ -82,8 +116,8 @@ const view = () => {
                     <a data-filter="quote">quotes</a>
                     <a data-filter="tools">tools</a>
                 </nav>
-                <section>${displayContent()}</section>
             </header>
+            <main>${displayContent()}</main>
             <style>${style()}</style>
             <script>${attachLoaders()}</script>
         </article>
@@ -91,6 +125,9 @@ const view = () => {
 }
 
 
+/**
+ *
+ */
 const attachLoaders = () => {
     document.addEventListener('click', evt => {
         if (evt.target.dataset && evt.target.dataset.filter) {
@@ -99,6 +136,12 @@ const attachLoaders = () => {
     })
 };
 
+
+
+
+/*
+
+ */
 const style = () => `
 ${CSSID} article.projector {
     background: #444;
@@ -106,6 +149,8 @@ ${CSSID} article.projector {
     border: 4px solid #555;
     box-sizing: border-box;
     padding: 5px;
+    width:100%;
+    height:100%;
 }
 ${CSSID} nav {
     display: flex;
@@ -116,6 +161,11 @@ ${CSSID} nav a {
     color: white;
     background: tomato;
     margin: 0 2px;
+}
+${CSSID} main {
+    display:flex;
+    width:100%;
+    height:100%;
 }
 `
 
