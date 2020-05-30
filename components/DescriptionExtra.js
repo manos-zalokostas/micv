@@ -37,7 +37,7 @@ const view = () => {
         <h2>LINKS</h2>
             ${DATA.links.map(path => `<a href="${path}">${path}</a>`)}
         </section>
-            <style>.description-files img {width: 40px}</style>
+            <style>${STYLE}</style>
             <script>${attachListeners()}</script>
     </article>
     `;
@@ -78,10 +78,20 @@ const makeData = () => {
                 text: item.description,
             },
         ],
-        files: item.files.file ?  item.files.file : [],
+        files: item.files.file ? item.files.file : [],
         links: item.links ? item.links.link : []
     }
 };
+
+
+const STYLE = `
+${CSSID} {
+    position: relative;
+    top: -55%;
+    height: 85%;
+}
+`;
+
 
 // const DATA =
 //     {

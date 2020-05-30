@@ -48,8 +48,7 @@ const style = () => `
 ${CSSID} nav {
     display: flex;
     z-index: 100;
-    place-content: space-evenly;
-    background: slategrey;
+    // place-content: space-evenly;
     width:30%;
 }
 ${CSSID} nav > a {
@@ -57,7 +56,8 @@ ${CSSID} nav > a {
     color:white;
     text-align: center;
     text-decoration: none;
-    border:solid 1px;
+    border:solid 1px black;
+    background: slategrey;
 }
 `;
 

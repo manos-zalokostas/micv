@@ -70,7 +70,7 @@ const makeData = () => {
 
 const STYLE = `
 .${CSSID} {
-background: blue;
+// background: blue;
 width:100%;
 } 
 `;

@@ -40,41 +40,24 @@ const attachListeners = () => {
 
 const STYLE = `
 div#project-title {
-    flex: 1 1 100%;
-    flex-direction: column;
+    // background:silver;
 }
-div#project-title section {
-    flex: 1 1 100%;
-    flex-direction: column;
-}
-div#project-title section h2 {
-    flex: 1 1 100%;
-    flex-direction: column;
-}
-div#project-title section h3 {
-    flex: 1 1 100%;
-    flex-direction: column;
-    width: fit-content;
-}
-div#project-title section dl {
-    display: flex;
+
+div#project-title > section{
+    display:flex;
     flex-wrap: wrap;
-    align-items: center;
 }
-div#project-title section dt {
-    display:none;
-    padding: 10px  10px 10px 0;
-    background: yellow;
-    width: initial;
+
+div#project-title > section > h2{flex: 0 0 100%;}
+
+div#project-title > section > h3{
+    flex: 0 0 40%;
 }
-div#project-title section dd {
-    flex-direction: column;
+
+div#project-title > section > dl{
+    flex: 0 0 40%;
+    display: flex;
 }
-div#project-body {
-    flex: 1 1 100%;
-}
-div#project-extras {}
-section {}
 `;
 
 

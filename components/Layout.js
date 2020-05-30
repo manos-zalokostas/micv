@@ -5,6 +5,7 @@ import DescriptionText from "./DescriptionText.js";
 import DescriptionExtra from "./DescriptionExtra.js";
 import DescriptionSlideshow from "./DescriptionSlideshow.js";
 import DescriptionHeader from "./DescriptionHeader.js";
+import DescriptionMedia from "./DescriptionMedia.js";
 
 
 
@@ -25,6 +26,7 @@ export const LayoutNavigationProjectShowcase = (pid = null) => {
             DescriptionText(pid);
             DescriptionExtra(pid);
             DescriptionHeader(pid);
+            DescriptionMedia(pid);
             DescriptionSlideshow(pid);
             setstyle(dq('#projects-syndication'), 'display', 'none');
             setstyle(dq('#project-showcase'), 'display', 'flex');

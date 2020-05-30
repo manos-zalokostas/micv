@@ -112,7 +112,7 @@ const STYLE = `
 .${CSSID}  {
     display:flex;
     flex-wrap:wrap;
-    background: red;
+    // background: red;
     width:100%;
 }
 

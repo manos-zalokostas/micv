@@ -60,7 +60,7 @@ const STYLE = `
     }
     .group-project nav {
         display:flex;
-        flex-flow:wrap;
+        flex-flow:column;
         justify-content: space-around;
     }
     .group-project:hover nav a {
@@ -70,6 +70,8 @@ const STYLE = `
         flex-basis: 40%;;
         opacity:0;
         background:white;
+        margin: 4px 0;
+        padding:4px;
     }
 `;
 

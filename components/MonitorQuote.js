@@ -71,7 +71,7 @@ const makeData = () => {
 
 const STYLE = `
 .${CSSID} {
-background:yellow;
+// background:yellow;
 width:100%;
 } 
 `;

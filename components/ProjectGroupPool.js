@@ -79,12 +79,16 @@ const STYLE = `
     article.pool-project {
         display: flex;
         flex-flow: wrap; 
+        justify-content:space-around;
+        align-content:center;
+        width:100%;
     }
     article.pool-project > section {
         flex-basis: 20%;
         box-sizing:border-box;
         margin:1%;
         padding:2%;
+        // height:40%;
     }
 `;
 

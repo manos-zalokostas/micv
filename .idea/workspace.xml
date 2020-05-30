@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c2027ac-7fbf-48f5-b8a4-e62f9701cdf7" name="Default" comment="#COMPONENTS | ADD FUNCTIONALITY TO PARTS&#10;******************************************************&#10; USE DYNAMIC CONTENT FOR THE FOLLOWING : &#10; &#10; - DESCRIPTION - PAGE&#10; - PROJECTOR">
+    <list default="true" id="7c2027ac-7fbf-48f5-b8a4-e62f9701cdf7" name="Default" comment="#COMPONENTS | 'ABOUT PAGE' LAYOUTS &#10;******************************************************&#10; - STANDARIZE THE LAYOUT OF PAGE (** PARTICAL)">
+      <change afterPath="$PROJECT_DIR$/components/DescriptionMedia.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aux/test.css" beforeDir="false" afterPath="$PROJECT_DIR$/aux/test.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/AboutText.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/AboutText.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/AboutNavigationMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/AboutNavigationMain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/DescriptionExtra.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/DescriptionExtra.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/DescriptionHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/DescriptionHeader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/DescriptionSlideshow.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/DescriptionSlideshow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Layout.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Monitor.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Monitor.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/MonitorProject.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MonitorProject.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/MonitorQuote.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MonitorQuote.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/MonitorTools.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MonitorTools.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ProjectGroup.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProjectGroup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ProjectGroupPool.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProjectGroupPool.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ProjectsNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProjectsNavigation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modules.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page-introduction.js" beforeDir="false" afterPath="$PROJECT_DIR$/page-introduction.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/page-projects.js" beforeDir="false" afterPath="$PROJECT_DIR$/page-projects.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +75,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="HTML" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../devenv/git-cosmores" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/components" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -79,16 +86,16 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/components" />
+      <recent name="$PROJECT_DIR$/aux" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/web-component" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/aux" />
       <recent name="$PROJECT_DIR$/components" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/aux" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/components" />
-      <recent name="$PROJECT_DIR$/web-component" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -167,7 +174,8 @@
       <workItem from="1590518499218" duration="636000" />
       <workItem from="1590524894227" duration="11000" />
       <workItem from="1590570145072" duration="120000" />
-      <workItem from="1590833312188" duration="4672000" />
+      <workItem from="1590833312188" duration="5713000" />
+      <workItem from="1590864651747" duration="8453000" />
     </task>
     <task id="LOCAL-00001" summary="convert http =&gt; https">
       <created>1545926008916</created>
@@ -267,7 +275,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590439912708</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="#COMPONENTS | 'ABOUT PAGE' LAYOUTS &#10;******************************************************&#10; - STANDARIZE THE LAYOUT OF PAGE (** PARTICAL)">
+      <created>1590838161289</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1590838161289</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -341,7 +356,8 @@
     <MESSAGE value="#COMPONENTS | ATTACH COMPONENTS TO PAGE (PARTIAL) #2&#10;****************************************************************&#10; - BUILDING THE 'PROJECT DESCRIPTION' PAGE" />
     <MESSAGE value="#COMPONENTS | ADD TEMPLATE OF 'REFERENCES' PAGE&#10;************************************************************&#10; - 'REFERENCES' PAGE WITH SAMPLE DATA" />
     <MESSAGE value="#COMPONENTS | ADD FUNCTIONALITY TO PARTS&#10;******************************************************&#10; USE DYNAMIC CONTENT FOR THE FOLLOWING : &#10; &#10; - DESCRIPTION - PAGE&#10; - PROJECTOR" />
-    <option name="LAST_COMMIT_MESSAGE" value="#COMPONENTS | ADD FUNCTIONALITY TO PARTS&#10;******************************************************&#10; USE DYNAMIC CONTENT FOR THE FOLLOWING : &#10; &#10; - DESCRIPTION - PAGE&#10; - PROJECTOR" />
+    <MESSAGE value="#COMPONENTS | 'ABOUT PAGE' LAYOUTS &#10;******************************************************&#10; - STANDARIZE THE LAYOUT OF PAGE (** PARTICAL)" />
+    <option name="LAST_COMMIT_MESSAGE" value="#COMPONENTS | 'ABOUT PAGE' LAYOUTS &#10;******************************************************&#10; - STANDARIZE THE LAYOUT OF PAGE (** PARTICAL)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="226" y="185" width="802" height="722" key="#Intentions" timestamp="1587812336063">
@@ -352,14 +368,14 @@
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="576" y="206" width="802" height="677" key="#Plugins/0.28.1920.1052@0.28.1920.1052" timestamp="1587722292978" />
-    <state x="661" y="101" width="932" height="913" key="CommitChangelistDialog2" timestamp="1590439912479">
+    <state x="661" y="101" width="932" height="913" key="CommitChangelistDialog2" timestamp="1590838160928">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="661" y="101" width="932" height="913" key="CommitChangelistDialog2/0.28.1920.1052@0.28.1920.1052" timestamp="1590439912479" />
-    <state x="118" y="201" width="1561" height="774" maximized="true" key="DiffContextDialog" timestamp="1590256611482">
+    <state x="661" y="101" width="932" height="913" key="CommitChangelistDialog2/0.28.1920.1052@0.28.1920.1052" timestamp="1590838160928" />
+    <state x="118" y="201" width="1561" height="774" maximized="true" key="DiffContextDialog" timestamp="1590872235004">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="118" y="201" width="1561" height="774" maximized="true" key="DiffContextDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1590256611482" />
+    <state x="118" y="201" width="1561" height="774" maximized="true" key="DiffContextDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1590872235004" />
     <state x="414" y="282" width="426" height="484" key="FileChooserDialogImpl" timestamp="1590477241432">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
@@ -384,19 +400,19 @@
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="200" y="140" width="1606" height="825" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1589020644078" />
-    <state x="675" y="372" key="com.intellij.ide.util.TipDialog" timestamp="1590570216742">
+    <state x="675" y="372" key="com.intellij.ide.util.TipDialog" timestamp="1590864653073">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="675" y="371" key="com.intellij.ide.util.TipDialog/0.27.1920.1053/1920.0.1024.768@0.27.1920.1053" timestamp="1590524902736" />
-    <state x="675" y="372" key="com.intellij.ide.util.TipDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1590570216742" />
+    <state x="675" y="372" key="com.intellij.ide.util.TipDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1590864653073" />
     <state x="806" y="479" width="456" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589377642523">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="806" y="479" width="456" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.28.1920.1052@0.28.1920.1052" timestamp="1589377642523" />
-    <state x="638" y="254" width="868" height="610" key="find.popup" timestamp="1590834374277">
+    <state x="638" y="254" width="868" height="610" key="find.popup" timestamp="1590873490255">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="638" y="254" width="868" height="610" key="find.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1590834374277" />
+    <state x="638" y="254" width="868" height="610" key="find.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1590873490255" />
     <state width="600" height="424" key="javadoc.popup" timestamp="1587815719558">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
@@ -405,9 +421,9 @@
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="546" y="307" width="700" height="530" key="recent.locations.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1587561380214" />
-    <state x="644" y="270" width="672" height="678" key="search.everywhere.popup" timestamp="1590835042379">
+    <state x="644" y="270" width="672" height="678" key="search.everywhere.popup" timestamp="1590872420694">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="644" y="270" width="672" height="678" key="search.everywhere.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1590835042379" />
+    <state x="644" y="270" width="672" height="678" key="search.everywhere.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1590872420694" />
   </component>
 </project>

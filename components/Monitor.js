@@ -27,7 +27,7 @@ export default (o = null) => run(o);
  *
  */
 const run = () => {
-    // rotateContent();
+    rotateContent();
     dq(CSSID).innerHTML = view()
 }
 // const run = () => {
@@ -78,12 +78,12 @@ const replaceContent = () => {
  */
 const displayContent = () => {
     let filter = resolveFilter();
-    // if (filter === 'project') return ProjectorProject();
-    // if (filter === 'quote') return ProjectorQuote();
-    // if (filter === 'tools') return ProjectorTools();
+    if (filter === 'project') return ProjectorProject();
+    if (filter === 'quote') return ProjectorQuote();
+    if (filter === 'tools') return ProjectorTools();
     // return ProjectorProject();
     // return ProjectorQuote();
-    return ProjectorTools();
+    // return ProjectorTools();
 
 };
 

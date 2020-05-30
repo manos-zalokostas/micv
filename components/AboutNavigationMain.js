@@ -55,7 +55,7 @@ ${CSSID} nav#about-navigation > a {
     color:white;
     text-align: center;
     text-decoration: none;
-    border:solid 1px;
+    border:solid 1px black;
 }
 `;
 

@@ -1,6 +1,6 @@
 import {dq, cl, strJoin} from "./aux.js";
 
-const CSSID = '#project-media';
+const CSSID = '#project-slideshow';
 let DATA = '';
 // let activeImage = 'images/webdes_a1/welcome_page.jpg';
 let activeIndex = 0;
@@ -83,6 +83,7 @@ ${CSSID} article.description-slideshow {
     padding: 10px;
     background: black;
     flex-flow: row-reverse;
+    height:100%;
 }
 ${CSSID} article.description-slideshow .slideshow-preview img{
     max-width:100%;
@@ -126,26 +127,24 @@ ${CSSID} article.description-slideshow > nav > a {
 ${CSSID} .slideshow-media img {
     width: 80px;
 }
-.media-navs {
+${CSSID} .media-navs {
     flex: 1 1 15%;
     display: flex;
     flex-flow: column;
     padding: 0 10px 0 0;
 }
-nav.slideshow-nav {
+${CSSID} nav.slideshow-nav {
     display: flex;
     flex:  1 1 10%;
     flex-flow: column;
     text-align: center;
-    /* margin: 5px; */
     align-items: flex-start;
 }
-nav.slideshow-nav > a {
+${CSSID} nav.slideshow-nav > a {
     color:white;
-    /* background:#aaa; */
     padding:2px 4px 4px 4px;
 }
-nav.slideshow-media {
+${CSSID} nav.slideshow-media {
     display: flex;
     flex-flow: column;
     flex: 4 4 80%;

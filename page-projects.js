@@ -8,18 +8,16 @@ const run = (projectid) => document.querySelector('#page-projects').innerHTML = 
 
 <div id="project-showcase"  data-project=${projectid} style="display: none">
 
-    <div id="project-title"></div>
+    <div id="project-title">HEADER</div>
 
-    <div id="project-body">
+    <div id="project-description">DESCRIPTION</div>
 
-        <div id="project-media"></div>
+    <div id="project-media">IMAGES</div>
 
-        <div id="project-description"></div>
+    <div id="project-extras">EXTRA FILES</div>
 
-    </div>
-
-    <div id="project-extras"></div>
-
+    <div id="project-slideshow">SLIDESHOW</div>
+    
 </div>
 
 <style>${style()}</style>
@@ -35,6 +33,7 @@ div#page-projects {
     left: 0;
     width: 100%;
     height: 100%;
+    background:#555;
 }
 
 div#projects-navigation {
@@ -49,25 +48,54 @@ div#projects-navigation {
 
 div#projects-syndication {
     flex: 1 1 100%;
-    height: 90%;
     position: absolute;
     left: 0;
     top: 10%;
     overflow: auto;
-    margin-left:10%;
+    height: 90%;
+    width:100%;
 }
 
 div#project-showcase {
     display: flex;
-    flex-flow:column;
-    flex: 1 1 100%;
+    flex-flow: wrap;
+    width: 100%;
     height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    overflow: auto;
-    width:100%;
 }
+
+div#project-showcase > div {
+    box-sizing:border-box;
+    border:2px solid;
+}
+
+div#project-title {
+    flex: 0 0 100%;
+    height:15%;
+}
+
+div#project-description {
+    flex: 0 0 60%;
+    height:55%;
+}
+
+div#project-media {
+    flex: 0 0 60%;
+    height:30%;
+}
+
+div#project-extras {
+    flex: 0 0 40%;
+}
+
+div#project-slideshow {
+    position: absolute;
+    top: 15%;
+    height: 85%;
+    width: 60%;
+}
+
+
+
 `
 
 
