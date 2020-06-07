@@ -46,13 +46,13 @@ const view = (pid) => {
 const attachListeners = () => {
     document.addEventListener('click', (evt) => {
         if (evt.target.parentElement.parentElement.classList.contains('slideshow-media')) {
-            cl('CLICK: ', evt.target.src)
+            // cl('CLICK: ', evt.target.src)
             activeIndex = evt.target.dataset.index;
             dq('.slideshow-preview img').src = DATA.images[activeIndex];
         }
 
         if (evt.target.parentElement.classList.contains('slideshow-nav')) {
-            cl('CLICK: ', evt.target.dataset.type);
+            // cl('CLICK: ', evt.target.dataset.type);
             if (evt.target.dataset.type === 'exit') return;
             // ,
             if (evt.target.dataset.type === 'next' && DATA.images[activeIndex + 1]) activeIndex++;

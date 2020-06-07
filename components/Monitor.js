@@ -95,7 +95,7 @@ const displayContent = () => {
 const filterContent = (evt) => {
     let {filter} = evt.target.dataset;
     if (filters.includes(filter)) {
-        console.log(filter);
+        // console.log(filter);
         index = filters.indexOf(filter);
         isFilterForced = true;
     }

@@ -4,15 +4,26 @@ import {LayoutNavigationProjects} from "./Layout.js";
 const CSSID = '#projects-navigation';
 
 
+/*
+
+ */
 export default (o = null) => run(o);
 
 
+
+/*
+
+ */
 const run = (cssid) => {
 
     dq(cssid || CSSID).innerHTML = view()
 }
 
 
+/**
+ *
+ * @returns {string}
+ */
 const view = () => {
     return `
             <nav>
@@ -28,13 +39,15 @@ const view = () => {
 }
 
 
+/**
+ *
+ */
 const attachListeners = () => {
 
     document.addEventListener('click', (evt) => {
 
         if (Array.from(dqa(`${CSSID} > nav > a`)).includes(evt.target)) {
-            cl(evt.target.dataset.type)
-//
+            // cl(evt.target.dataset.type)
             LayoutNavigationProjects(evt.target.dataset.type)
         }
     })
@@ -43,6 +56,10 @@ const attachListeners = () => {
 }
 
 
+
+/*
+
+ */
 const style = () => `
 
 ${CSSID} nav {
@@ -61,6 +78,10 @@ ${CSSID} nav > a {
 }
 `;
 
+
+/*
+
+ */
 const DATA =
     {
         buttons: ['web', 'studies', 'work'],

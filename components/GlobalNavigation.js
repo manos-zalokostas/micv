@@ -30,7 +30,7 @@ const attachListeners = () => {
 
     document.addEventListener('click', (evt) => {
         if (Array.from(dqa('#global-navigation > nav > a')).includes(evt.target)) {
-            cl(evt.target.dataset.type)
+            // cl(evt.target.dataset.type)
            LayoutNavigationGlobal(evt.target.dataset.type)
         }
     })

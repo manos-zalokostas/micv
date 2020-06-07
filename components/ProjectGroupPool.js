@@ -1,18 +1,29 @@
 import ProjectGroup from "./ProjectGroup.js";
 import {dq, strJoin} from "./aux.js";
 import {loadRepetitive} from "./Layout.js";
+import Projects from "./Projects.js";
 
 const CSSID = '#projects-syndication';
 
-export default (type = 'web') => run(type);
+let FILTER = 'web';
+let CATEGORY = 'domain';
+
+
+
+export default (type = 'web', filter='domain') => run(type, filter);
 
 
 /**
  *
- * @param type
+ * @param filter
+ * @param category
  */
-const run = (type = 'web') => {
-    dq(CSSID).innerHTML = view(type);
+const run = (filter = 'web', category = 'domain') => {
+debugger
+    FILTER = filter;
+    CATEGORY = category;
+
+    dq(CSSID).innerHTML = view();
 }
 
 
@@ -21,9 +32,9 @@ const run = (type = 'web') => {
  * @param domain
  * @returns {string}
  */
-const view = (domain) => {
+const view = () => {
     return `
-    <article class="pool-project">${repetitiveContent(domain)}
+    <article class="pool-project">${repetitiveContent()}
     <style>${STYLE}</style>
     </article>
     `;
@@ -35,8 +46,8 @@ const view = (domain) => {
  * @param domain
  * @returns {string}
  */
-const repetitiveContent = (domain) => {
-    let content = strJoin(makeData(domain));
+const repetitiveContent = () => {
+    let content = strJoin(makeData());
 
     let strippedContent = loadRepetitive(content);
 
@@ -46,10 +57,86 @@ const repetitiveContent = (domain) => {
 
 /**
  *
- * @param domain
- * @returns {string[]}
+ * @param FILTER
+ * @param type
+ * @returns {Uint8Array|BigInt64Array|*[]|Float64Array|Int8Array|Float32Array|Int32Array|Uint32Array|Uint8ClampedArray|BigUint64Array|Int16Array|Uint16Array|string[]}
  */
-const makeData = (domain) => {
+const makeData = () => {
+
+    let data, groups;
+
+    // CATEGORY = 'tool';
+    // FILTER = 'php';
+
+    if (CATEGORY === 'domain') {
+        data = groupByDomain(FILTER);
+        groups = data.map((group, i) => ProjectGroup(group, i));
+        return groups;
+    }
+
+
+    if (CATEGORY === 'section') {
+        data = groupBySection(FILTER);
+        groups = data.map((group, i) => Projects(group, i));
+        return groups;
+    }
+
+
+    if (CATEGORY === 'tool') {
+        data = groupByTool(FILTER);
+        groups = data.map((group, i) => Projects(group, i));
+        return groups;
+    }
+
+    // if (groupType === 'domain') data = groupByDomain(domain);
+
+
+}
+
+
+/**
+ *
+ * @param tool
+ * @returns {[]}
+ */
+const groupByTool = (tool) => {
+//
+    // domain = domain.toUpperCase();
+// d
+    let o = JSON.parse(sessionStorage.MIDATA)
+    let items = o.items.item;
+    let tools = items.filter(o => o.tools.tool.includes(tool));
+
+    let data = tools.map(item => [item.id, item.title])
+
+    return data;
+}
+
+
+/**
+ *
+ * @param section
+ * @returns {[]}
+ */
+const groupBySection = (section) => {
+
+    let o = JSON.parse(sessionStorage.MIDATA)
+    let items = o.items.item;
+
+    let sections = items.filter(o => o.section === section);
+
+    let data = sections.map(item => [item.id, item.title])
+
+    return data;
+}
+
+
+/**
+ *
+ * @param domain
+ * @returns {[]}
+ */
+const groupByDomain = (domain) => {
 
     domain = domain.toUpperCase();
 
@@ -69,12 +156,13 @@ const makeData = (domain) => {
         data.push(pack);
     })
 
-    let groups = data.map((group, i) => ProjectGroup(group, i));
-
-    return groups;
+    return data;
 }
 
 
+/*
+
+ */
 const STYLE = `
     article.pool-project {
         display: flex;
@@ -101,5 +189,6 @@ const _DATA = [
         [5, 'PROJECT 4'],
     ]
 ];
+
 
 // run();

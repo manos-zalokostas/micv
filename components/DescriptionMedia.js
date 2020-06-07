@@ -43,7 +43,7 @@ const view = (pid) => {
 const attachListeners = () => {
     document.addEventListener('click', (evt) => {
         if (evt.target.parentElement.parentElement.classList.contains('slideshow-media')) {
-            cl('CLICK: ', evt.target.src)
+            // cl('CLICK: ', evt.target.src)
             activeIndex = evt.target.dataset.index;
             dq('.slideshow-preview img').src = DATA.images[activeIndex];
         }
@@ -70,7 +70,7 @@ const makeData = (pid = 'WB02') => {
 
     return {
         // text: item.description,
-        images: item.screenshots.shot
+        images: Array.isArray(item.screenshots.shot) ? item.screenshots.shot : [item.screenshots.shot]
     }
 };
 

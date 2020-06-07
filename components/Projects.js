@@ -12,8 +12,7 @@ const run = (data, i) => {
 const view = (data, i) => {
     return `
     <section class="group-project">
-        <h3>${data[0]}</h3>
-        ${_projectList(data[1], i)}
+        ${_projectList(data)}
         <style>${i === 0 && STYLE}</style>
         <script>${i === 0 && attachLoaders()}</script>
     </section>
@@ -27,12 +26,9 @@ const view = (data, i) => {
  * @returns {string}
  * @private
  */
-const _projectList = (data, i) => {
-
-    return `
-    <nav> ${
-        strJoin(data.map((pack, i) => `<a data-project="${pack[0]}">${pack[1]}</a>`))
-    }</nav>`
+const _projectList = (data) => {
+    //
+    return `<a data-project="${data[0]}">${data[1]}</a>`
 }
 
 
@@ -41,7 +37,7 @@ const _projectList = (data, i) => {
  */
 const attachLoaders = () => {
     document.addEventListener('click', evt => {
-        if (Array.from(dqa('.group-project > nav > a')).includes(evt.target)) {
+        if (Array.from(dqa('.group-project  > a')).includes(evt.target)) {
             // console.log(evt.target.dataset.project)
             LayoutNavigationProjectShowcase(evt.target.dataset.project)
         }
@@ -76,6 +72,10 @@ const STYLE = `
 `;
 
 
+
+/*
+
+ */
 const DATA = [
     'DOMAIN A', [
         [1, 'PROJECT 1'],

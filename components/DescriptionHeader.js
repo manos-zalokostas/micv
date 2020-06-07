@@ -1,4 +1,6 @@
 import {cl, dq, strJoin} from "./aux.js";
+// import {dqa} from "./aux.js";
+import {LayoutNavigationProjects} from "./Layout.js";
 
 const CSSID = '#project-title';
 
@@ -15,10 +17,10 @@ const view = (pid) => {
     return `
         <section>
             <h2>${DATA.title}</h2>
-            <h3 data-type = 'description-category'> ${DATA.category}</h3>
+            <h3 class = 'description-section' data-type="${DATA.category}"> ${DATA.category}</h3>
             <dl>
                 <dt>TOOLS</dt>
-                ${strJoin(DATA.tools.map(tool => `<dd data-type="description-tool">${tool}</dd>`))}
+                ${strJoin(DATA.tools.map(tool => `<dd class="description-tool" data-type="${tool}">${tool}</dd>`))}
             </dl>
             <style>${STYLE}</style>
             <script>${attachListeners()}</script>
@@ -29,11 +31,11 @@ const view = (pid) => {
 
 const attachListeners = () => {
     document.addEventListener('click', (evt) => {
-        if (evt.target.dataset.type === 'description-category') {
-            cl('CLICK: ', 'description-category')
+        if (evt.target.classList.contains( 'description-section')) {
+            LayoutNavigationProjects('section', evt.target.dataset.type)
         }
-        if (evt.target.dataset.type === 'description-tool') {
-            cl('CLICK: ', 'description-tool')
+        if (evt.target.classList.contains('description-tool')) {
+            LayoutNavigationProjects('tool', evt.target.dataset.type)
         }
     })
 }
@@ -69,7 +71,7 @@ const makeData = (pid = 'WB02') => {
         title: item.title,
         category: item.category,
         tools: Array.isArray(item.tools.tool) ? item.tools.tool : [item.tools.tool]
-}
+    }
 };
 
 

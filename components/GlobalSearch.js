@@ -52,7 +52,7 @@ const attachListeners = () => {
 
     document.addEventListener('click', (evt) => {
         if (evt.target.name === 'introduction-navigation') {
-            cl('CLICK: ', evt.target.value)
+            // cl('CLICK: ', evt.target.value)
             dq('#search_result input').removeAttribute('list');
             dq('#search_result input').setAttribute('list', evt.target.value)
             dq('#search_radio [checked]').removeAttribute('checked');
@@ -62,10 +62,10 @@ const attachListeners = () => {
 
     document.addEventListener('change', (evt) => {
         if (evt.target.getAttribute('list') === 'project_list') {
-            cl(evt.target.value)
+            // cl(evt.target.value)
         }
         if (evt.target.getAttribute('list') === 'tool_list') {
-            cl(evt.target.value)
+            // cl(evt.target.value)
         }
     });
 

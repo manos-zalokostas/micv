@@ -1,15 +1,11 @@
 import {setstyle, remstyle, remattr, cladd, setattr, dq, cl, strJoin} from "./aux.js";
 import ProjectGroupPool from "./ProjectGroupPool.js";
- import PageProjects from '../page-projects.js'
+import PageProjects from '../page-projects.js'
 import DescriptionText from "./DescriptionText.js";
 import DescriptionExtra from "./DescriptionExtra.js";
-import DescriptionSlideshow from "./DescriptionSlideshow.js";
+// import DescriptionSlideshow from "./DescriptionSlideshow.js";
 import DescriptionHeader from "./DescriptionHeader.js";
 import DescriptionMedia from "./DescriptionMedia.js";
-
-
-
-
 
 
 /**
@@ -27,7 +23,7 @@ export const LayoutNavigationProjectShowcase = (pid = null) => {
             DescriptionExtra(pid);
             DescriptionHeader(pid);
             DescriptionMedia(pid);
-            DescriptionSlideshow(pid);
+            // DescriptionSlideshow(pid);
             setstyle(dq('#projects-syndication'), 'display', 'none');
             setstyle(dq('#project-showcase'), 'display', 'flex');
         },
@@ -101,18 +97,24 @@ export const loadElement = (o, cssid) => {
  * @param action
  * @constructor
  */
-export const LayoutNavigationProjects = (action) => {
-    //
+export const LayoutNavigationProjects = (action, filter = null) => {
+    //de
     const Actions = {
         web: () => {
-            ProjectGroupPool('web')
+            ProjectGroupPool(action)
         },
         studies: () => {
-            ProjectGroupPool('studies')
+            ProjectGroupPool(action)
         },
         work: () => {
-            ProjectGroupPool('work')
+            ProjectGroupPool(action)
         },
+        section: () => {
+            ProjectGroupPool(filter, action)
+        },
+        tool: () => {
+            ProjectGroupPool(filter, action)
+        }
     };
 
     if (!(Actions[action])) return;

@@ -96,7 +96,7 @@ const makeData = () => {
     tools = tools.filter(a => Array.isArray(a));
     tools = tools.flat();
     tools = Array.from(new Set(tools));
-// debugger
+//
     let data = tools.map(str => ({
         id: str.replace('_', ''),
         title: str,

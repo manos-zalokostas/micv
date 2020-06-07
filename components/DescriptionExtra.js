@@ -31,11 +31,11 @@ const view = () => {
         </section>
         <section class="description-files">
         <h2>FILES</h2>
-            ${DATA.files.map(path => `<img src="${path}" />`)}
+            ${DATA.files.map && DATA.files.map(path => `<img src="${path}" />`)}
         </section>
         <section class="description-links">
         <h2>LINKS</h2>
-            ${DATA.links.map(path => `<a href="${path}">${path}</a>`)}
+            ${DATA.links.map && DATA.links.map(path => `<a href="${path}">${path}</a>`)}
         </section>
             <style>${STYLE}</style>
             <script>${attachListeners()}</script>
@@ -44,6 +44,9 @@ const view = () => {
 }
 
 
+/**
+ *
+ */
 const attachListeners = () => {
     document.addEventListener('click', (evt) => {
 
@@ -66,9 +69,24 @@ const attachListeners = () => {
 }
 
 
+/**
+ *
+ * @returns {{files: (*|[*]), links: (*|[*]), quotes: [{score: *, text: *, tutor: *}]}}
+ */
 const makeData = () => {
+    // ;
     let {items} = JSON.parse(sessionStorage.MIDATA)
     let item = items.item.find(o => o.id === PID);
+
+    let files = [],
+        links = [];
+
+    if (item.files && item.files.file) {
+        files = Array.isArray(item.files.file) ? item.files.file : [item.files.file]
+    }
+    if (item.links && item.links.link) {
+        links = Array.isArray(item.links.link) ? item.links.link : [item.links.link]
+    }
 
     return {
         quotes: [
@@ -78,12 +96,15 @@ const makeData = () => {
                 text: item.description,
             },
         ],
-        files: item.files.file ? item.files.file : [],
-        links: item.links ? item.links.link : []
+        files: files,
+        links: links
     }
 };
 
 
+/*
+
+ */
 const STYLE = `
 ${CSSID} {
     position: relative;
