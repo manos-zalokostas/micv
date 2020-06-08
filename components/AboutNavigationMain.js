@@ -15,6 +15,10 @@ const run = (cssid) => {
 }
 
 
+/**
+ *
+ * @returns {string}
+ */
 const view = () => {
     return `
             <nav id="about-navigation">
@@ -30,19 +34,25 @@ const view = () => {
 }
 
 
+/**
+ *
+ */
 const attachListeners = () => {
 
     document.addEventListener('click', (evt) => {
-
+        console.log('ADD LISTENERS :  ABOUT NAVIGATION FILE')
         if (evt.target.parentElement.id === 'about-navigation') {
             // cl(evt.target.dataset.type)
             LayoutNavigationAbout(evt.target.dataset.type)
         }
     })
 
-
 }
 
+
+/*
+
+ */
 const style = () => `
 ${CSSID} nav#about-navigation {
     display: flex;
@@ -59,6 +69,10 @@ ${CSSID} nav#about-navigation > a {
 }
 `;
 
+
+/*
+
+ */
 const DATA =
     {
         buttons: ['welcome', 'timeline', 'interactive', 'document'],

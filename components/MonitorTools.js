@@ -1,10 +1,9 @@
-const CSSID = 'content-tools';
-
-
+import {LayoutNavigationGlobal, LayoutNavigationProjects} from "./Layout.js";
 import * as aux from "./aux.js";
-// import ProjectGroup from "./ProjectGroup";
 
+const CSSID = 'content-tools';
 let DATA = '';
+let dataclone = [];
 
 
 export default () => run();
@@ -61,6 +60,7 @@ const view = () => {
         `<div class="${CSSID}">
             ${aux.strHtml(aux.strJoin(a))}
             <style>${STYLE}</style>
+            <script>${attachListeners()}</script>
         </div>`
     );
 }
@@ -73,14 +73,32 @@ const view = () => {
  */
 const item = (o) => {
     return aux.strHtml(`
-<section>
+<section data-tool="${o.title}">
     <h1>${o.title}</h1>
     <img src=${o.image} />
 </section>
     `);
 }
 
-let dataclone = [];
+
+
+
+/**
+ *
+ */
+const attachListeners = () => {
+
+    document.addEventListener('click', (evt) => {
+        console.log('ADD LISTENERS :  GLOBAL SEARCH 12')
+// debugger
+        if (evt.target.parentElement.dataset.tool) {
+            LayoutNavigationGlobal('projects');
+            LayoutNavigationProjects('tool', evt.target.parentElement.dataset.tool)
+        }
+
+    });
+
+}
 
 
 /**
@@ -123,6 +141,17 @@ const STYLE = `
     box-sizing: border-box;
     padding:5px;
     width: 25%;
+    height: 50%;
     justify-content: flex-end;
     }
+
+.${CSSID}  > section h1 {
+    width: 40%;
+    }
+
+.${CSSID}  > section img {
+    width: 60%;
+    }
+
+
 `;

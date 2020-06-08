@@ -1,14 +1,35 @@
 import {dqa, dq, strJoin} from "./aux.js";
 import {LayoutNavigationProjectShowcase} from "./Layout.js";
 
+let hasAttachedListeners = false;
+
+
+/**
+ *
+ * @param o
+ * @param i
+ * @returns {string}
+ */
 export default (o = null, i = 0) => run(o, i);
 
 
+/**
+ *
+ * @param data
+ * @param i
+ * @returns {string}
+ */
 const run = (data, i) => {
     return view(data || DATA, i);
 }
 
 
+/**
+ *
+ * @param data
+ * @param i
+ * @returns {string}
+ */
 const view = (data, i) => {
     return `
     <section class="group-project">
@@ -40,10 +61,11 @@ const _projectList = (data, i) => {
  *
  */
 const attachLoaders = () => {
-    document.addEventListener('click', evt => {
+    !hasAttachedListeners && document.addEventListener('click', evt => {
+        console.log('ADD LISTENERS :  PROJECTS-GROUPS')
         if (Array.from(dqa('.group-project > nav > a')).includes(evt.target)) {
-            // console.log(evt.target.dataset.project)
             LayoutNavigationProjectShowcase(evt.target.dataset.project)
+            hasAttachedListeners = true;
         }
     })
 };

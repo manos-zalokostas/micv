@@ -1,18 +1,26 @@
 import {dq, cl, strJoin} from "./aux.js";
+import {groupTools, groupProjects} from "./DataStore.js";
+import {LayoutNavigationGlobal, LayoutNavigationProjectShowcase, LayoutNavigationProjects} from "./Layout.js";
 
 const CSSID = '#global-search';
-
-// let activeImage = 'images/webdes_a1/welcome_page.jpg';
 
 
 export default (o = null) => run(o);
 
 
+/**
+ *
+ * @param cssid
+ */
 const run = (cssid) => {
     dq(cssid || CSSID).innerHTML = view()
 }
 
 
+/**
+ *
+ * @returns {string}
+ */
 const view = () => {
     return `
             <div id="search_radio">
@@ -33,24 +41,28 @@ const view = () => {
                 <input list="tool_list">
                 <datalist id="project_list">
                 ${
-        DATA.listProject.map(name => `<option value="${name}">${name}</option>`)
+        strJoin(DATA.listProject.map(a => `<option value="${a[0]}">${a[1]}</option>`))
     }
                 </datalist>
                 <datalist id="tool_list">
                 ${
-        DATA.listTool.map(name => `<option value="${name}">${name}</option>`)
+        strJoin(DATA.listTool.map(name => `<option value="${name}">${name}</option>`))
     }
                 </datalist>
             </div>
-            <style>${style(CSSID)}</style>
+            <style>${style}</style>
             <script>${attachListeners()}</script>
     `;
 }
 
 
+/**
+ *
+ */
 const attachListeners = () => {
 
     document.addEventListener('click', (evt) => {
+        console.log('ADD LISTENERS :  GLOBAL SEARCH')
         if (evt.target.name === 'introduction-navigation') {
             // cl('CLICK: ', evt.target.value)
             dq('#search_result input').removeAttribute('list');
@@ -61,10 +73,15 @@ const attachListeners = () => {
     })
 
     document.addEventListener('change', (evt) => {
+        console.log('ADD LISTENERS :  GLOBAL SEARCH 12')
         if (evt.target.getAttribute('list') === 'project_list') {
+            LayoutNavigationGlobal('projects');
+            LayoutNavigationProjectShowcase(evt.target.value)
             // cl(evt.target.value)
         }
         if (evt.target.getAttribute('list') === 'tool_list') {
+            LayoutNavigationGlobal('projects');
+            LayoutNavigationProjects('tool', evt.target.value)
             // cl(evt.target.value)
         }
     });
@@ -72,23 +89,35 @@ const attachListeners = () => {
 }
 
 
-const DATA =
-    {
-        listProject: ['project1', 'project2', 'project3', 'project4'],
-        listTool: ['tool1', 'tool2', 'tool3', 'tool4'],
-    }
+/**
+ *
+ * @returns {{listProject: [string, string, string, string], listTool: [string, string, string, string]}}
+ * @constructor
+ */
+const DATA = {
+    listProject: groupProjects(),
+    listTool: groupTools()
+}
 
 
-const style = (cssid) => `
-${cssid}  {
+
+/*
+
+ */
+const style = `
+${CSSID}  {
+    position: fixed;
+    z-index:100;
+    top:0;
+    right: 40%;;    
     display: flex;
 }
-${cssid} > div {
+${CSSID} > div {
     flex:0.5;
     display: flex;
     place-content: space-evenly;
 }
-${cssid} > div input {
+${CSSID} > div input {
     flex: 1;
 }
 `;

@@ -29,9 +29,11 @@ const view = () => {
 const attachListeners = () => {
 
     document.addEventListener('click', (evt) => {
+        console.log('ADD LISTENERS :  DESCRIPTION GLOBAL NAVIGATION')
+
         if (Array.from(dqa('#global-navigation > nav > a')).includes(evt.target)) {
-            // cl(evt.target.dataset.type)
            LayoutNavigationGlobal(evt.target.dataset.type)
+
         }
     })
 

@@ -45,7 +45,7 @@ const view = () => {
 const attachListeners = () => {
 
     document.addEventListener('click', (evt) => {
-
+        console.log('ADD LISTENERS :  PROJECTS NAVIGATION')
         if (Array.from(dqa(`${CSSID} > nav > a`)).includes(evt.target)) {
             // cl(evt.target.dataset.type)
             LayoutNavigationProjects(evt.target.dataset.type)

@@ -1,6 +1,8 @@
 import {dqa, dq, strJoin} from "./aux.js";
 import {LayoutNavigationProjectShowcase} from "./Layout.js";
 
+let hasAttachedListeners = false;
+
 export default (o = null, i = 0) => run(o, i);
 
 
@@ -36,10 +38,11 @@ const _projectList = (data) => {
  *
  */
 const attachLoaders = () => {
-    document.addEventListener('click', evt => {
+    !hasAttachedListeners && document.addEventListener('click', evt => {
+        console.log('ADD LISTENERS :  PROJECTS')
         if (Array.from(dqa('.group-project  > a')).includes(evt.target)) {
-            // console.log(evt.target.dataset.project)
-            LayoutNavigationProjectShowcase(evt.target.dataset.project)
+            LayoutNavigationProjectShowcase(evt.target.dataset.project);
+            hasAttachedListeners = true;
         }
     })
 };
@@ -70,7 +73,6 @@ const STYLE = `
         padding:4px;
     }
 `;
-
 
 
 /*

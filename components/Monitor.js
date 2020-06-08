@@ -130,6 +130,7 @@ const view = () => {
  */
 const attachLoaders = () => {
     document.addEventListener('click', evt => {
+        console.log('ADD LISTENERS :  MONITOR')
         if (evt.target.dataset && evt.target.dataset.filter) {
             filterContent(evt);
         }

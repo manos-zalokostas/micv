@@ -49,6 +49,8 @@ const view = () => {
  */
 const attachListeners = () => {
     document.addEventListener('click', (evt) => {
+        console.log('ADD LISTENERS :  DESCRIPTION EXTRA')
+
 
         // if (evt.target.parentElement.parentElement.classList.contains('slideshow-media')) {
         //     cl('CLICK: ', evt.target.src)
@@ -99,6 +101,7 @@ const makeData = () => {
         files: files,
         links: links
     }
+
 };
 
 
@@ -110,6 +113,9 @@ ${CSSID} {
     position: relative;
     top: -55%;
     height: 85%;
+    width:40%;
+    // background: blue;
+    overflow: auto;
 }
 `;
 

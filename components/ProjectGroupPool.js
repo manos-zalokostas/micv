@@ -2,6 +2,7 @@ import ProjectGroup from "./ProjectGroup.js";
 import {dq, strJoin} from "./aux.js";
 import {loadRepetitive} from "./Layout.js";
 import Projects from "./Projects.js";
+import {groupByDomain, groupBySection, groupByTool} from "./DataStore.js";
 
 const CSSID = '#projects-syndication';
 
@@ -9,8 +10,7 @@ let FILTER = 'web';
 let CATEGORY = 'domain';
 
 
-
-export default (type = 'web', filter='domain') => run(type, filter);
+export default (type = 'web', filter = 'domain') => run(type, filter);
 
 
 /**
@@ -19,7 +19,7 @@ export default (type = 'web', filter='domain') => run(type, filter);
  * @param category
  */
 const run = (filter = 'web', category = 'domain') => {
-debugger
+
     FILTER = filter;
     CATEGORY = category;
 
@@ -93,71 +93,68 @@ const makeData = () => {
 
 }
 
-
-/**
- *
- * @param tool
- * @returns {[]}
- */
-const groupByTool = (tool) => {
 //
-    // domain = domain.toUpperCase();
-// d
-    let o = JSON.parse(sessionStorage.MIDATA)
-    let items = o.items.item;
-    let tools = items.filter(o => o.tools.tool.includes(tool));
-
-    let data = tools.map(item => [item.id, item.title])
-
-    return data;
-}
-
-
-/**
- *
- * @param section
- * @returns {[]}
- */
-const groupBySection = (section) => {
-
-    let o = JSON.parse(sessionStorage.MIDATA)
-    let items = o.items.item;
-
-    let sections = items.filter(o => o.section === section);
-
-    let data = sections.map(item => [item.id, item.title])
-
-    return data;
-}
-
-
-/**
- *
- * @param domain
- * @returns {[]}
- */
-const groupByDomain = (domain) => {
-
-    domain = domain.toUpperCase();
-
-    let o = JSON.parse(sessionStorage.MIDATA)
-    let items = o.items.item;
-    let domains = items.filter(o => o.domain === domain);
-
-    let sections = domains.map(o => o.section);
-    sections = Array.from(new Set(sections));
-
-    let data = [];
-    sections.forEach(str => {
-        let pack = domains.reduce((acc, o) => {
-            if (o.section === str) acc[1].push([o.id, o.title]);
-            return acc;
-        }, [str, []])
-        data.push(pack);
-    })
-
-    return data;
-}
+// /**
+//  *
+//  * @param tool
+//  * @returns {[]}
+//  */
+// const groupByTool = (tool) => {
+//     let o = JSON.parse(sessionStorage.MIDATA),
+//         items = o.items.item,
+//         tools = items.filter(o => o.tools.tool.includes(tool));
+//
+//     let data = tools.map(item => [item.id, item.title])
+//
+//     return data;
+// }
+//
+//
+// /**
+//  *
+//  * @param section
+//  * @returns {[]}
+//  */
+// const groupBySection = (section) => {
+//
+//     let o = JSON.parse(sessionStorage.MIDATA)
+//     let items = o.items.item;
+//
+//     let sections = items.filter(o => o.section === section);
+//
+//     let data = sections.map(item => [item.id, item.title])
+//
+//     return data;
+// }
+//
+//
+// /**
+//  *
+//  * @param domain
+//  * @returns {[]}
+//  */
+// const groupByDomain = (domain) => {
+//
+//     domain = domain.toUpperCase();
+//
+//     let o = JSON.parse(sessionStorage.MIDATA)
+//     let items = o.items.item;
+//     let domains = items.filter(o => o.domain === domain);
+//
+//     let sections = domains.map(o => o.section);
+//     sections = Array.from(new Set(sections));
+//
+//     let data = [];
+//     sections.forEach(str => {
+//         let pack = domains.reduce((acc, o) => {
+//             if (o.section === str) acc[1].push([o.id, o.title]);
+//             return acc;
+//         }, [str, []])
+//         data.push(pack);
+//     })
+//
+//     return data;
+// }
 
 
 /*

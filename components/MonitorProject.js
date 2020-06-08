@@ -1,3 +1,5 @@
+import {LayoutNavigationProjectShowcase, LayoutNavigationGlobal} from "./Layout.js";
+
 const CSSID = 'content-project';
 
 export default (o) => run(o);
@@ -26,7 +28,7 @@ const view = () => {
     let o = getDataset();
 
     return `
-    <section class="${CSSID}">
+    <section data-pid=${o.id} class="${CSSID}">
         <h1>${o.title}</h1>
         <h2>${o.category}</h2>
         <h3>${o.subcategory}</h3>
@@ -34,11 +36,30 @@ const view = () => {
         <img src=${o.image} />
         <div>BACKGROUND IMAGE</div>
         <style>${STYLE}</style>
+        <script>${attachListeners()}</script>
     </section>
     `;
 
 }
 
+
+
+/**
+ *
+ */
+const attachListeners = () => {
+
+    document.addEventListener('click', (evt) => {
+        console.log('ADD LISTENERS :  GLOBAL SEARCH 12')
+//
+        if (evt.target.classList.contains(CSSID)) {
+            LayoutNavigationGlobal('projects');
+            LayoutNavigationProjectShowcase(evt.target.dataset.pid)
+            // cl(evt.target.value)
+        }
+    });
+
+}
 
 
 let dataclone = [];

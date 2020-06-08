@@ -45,6 +45,7 @@ const view = (pid) => {
 
 const attachListeners = () => {
     document.addEventListener('click', (evt) => {
+        console.log('ADD LISTENERS :  DESCRIPTION SLIDESHOW')
         if (evt.target.parentElement.parentElement.classList.contains('slideshow-media')) {
             // cl('CLICK: ', evt.target.src)
             activeIndex = evt.target.dataset.index;

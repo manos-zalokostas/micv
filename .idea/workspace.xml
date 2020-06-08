@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c2027ac-7fbf-48f5-b8a4-e62f9701cdf7" name="Default" comment="#COMPONENTS | 'DESCRIPTION PAGE' LAYOUTS  &#10;******************************************************&#10; - STANDARIZE THE LAYOUT OF PAGE PARTS ( SYNDICATION / DESCRIPTION )">
-      <change afterPath="$PROJECT_DIR$/components/Projects.js" afterDir="false" />
+    <list default="true" id="7c2027ac-7fbf-48f5-b8a4-e62f9701cdf7" name="Default" comment="#COMPONENTS | CONECT REQUESTS FOR 'SECTION' / 'TOOL'&#10;*************************************************************&#10; - ENABLE AUXILIARY REQUESTS FOR CERTAIN DOMAIN LIKE 'SECTION' / 'TOOL' &#10; &#10; ** PROBLEMATIC AT THE MOMENT w/ MULTIPLE LISTENERS INTERFERENCE THAT BLOCK AND SLOW DOWN RENDERING">
+      <change afterPath="$PROJECT_DIR$/components/DataStore.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aux/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/aux/test.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/AboutNavigationMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/AboutNavigationMain.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/DescriptionExtra.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/DescriptionExtra.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/DescriptionHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/DescriptionHeader.js" afterDir="false" />
@@ -11,12 +12,17 @@
       <change beforePath="$PROJECT_DIR$/components/DescriptionSlideshow.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/DescriptionSlideshow.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/GlobalNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/GlobalNavigation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/GlobalSearch.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/GlobalSearch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Layout.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Monitor.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Monitor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MonitorProject.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MonitorProject.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/MonitorQuote.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MonitorQuote.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/MonitorTools.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MonitorTools.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/ProjectGroup.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProjectGroup.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/ProjectGroupPool.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProjectGroupPool.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Projects.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Projects.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/ProjectsNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProjectsNavigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ReferenceGroup.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/ReferenceGroup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,16 +91,16 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/aux" />
-      <recent name="$PROJECT_DIR$/components" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/components" />
       <recent name="$PROJECT_DIR$/aux" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/web-component" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/aux" />
+      <recent name="$PROJECT_DIR$/components" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -178,7 +184,9 @@
       <workItem from="1590995217249" duration="1100000" />
       <workItem from="1590996334948" duration="17000" />
       <workItem from="1591439840997" duration="556000" />
-      <workItem from="1591555161991" duration="8848000" />
+      <workItem from="1591555161991" duration="9056000" />
+      <workItem from="1591608805188" duration="5385000" />
+      <workItem from="1591641734430" duration="7118000" />
     </task>
     <task id="LOCAL-00001" summary="convert http =&gt; https">
       <created>1545926008916</created>
@@ -292,7 +300,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590873554189</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="#COMPONENTS | CONECT REQUESTS FOR 'SECTION' / 'TOOL'&#10;*************************************************************&#10; - ENABLE AUXILIARY REQUESTS FOR CERTAIN DOMAIN LIKE 'SECTION' / 'TOOL' &#10; &#10; ** PROBLEMATIC AT THE MOMENT w/ MULTIPLE LISTENERS INTERFERENCE THAT BLOCK AND SLOW DOWN RENDERING">
+      <created>1591564315364</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1591564315364</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -368,7 +383,8 @@
     <MESSAGE value="#COMPONENTS | ADD FUNCTIONALITY TO PARTS&#10;******************************************************&#10; USE DYNAMIC CONTENT FOR THE FOLLOWING : &#10; &#10; - DESCRIPTION - PAGE&#10; - PROJECTOR" />
     <MESSAGE value="#COMPONENTS | 'ABOUT PAGE' LAYOUTS &#10;******************************************************&#10; - STANDARIZE THE LAYOUT OF PAGE (** PARTICAL)" />
     <MESSAGE value="#COMPONENTS | 'DESCRIPTION PAGE' LAYOUTS  &#10;******************************************************&#10; - STANDARIZE THE LAYOUT OF PAGE PARTS ( SYNDICATION / DESCRIPTION )" />
-    <option name="LAST_COMMIT_MESSAGE" value="#COMPONENTS | 'DESCRIPTION PAGE' LAYOUTS  &#10;******************************************************&#10; - STANDARIZE THE LAYOUT OF PAGE PARTS ( SYNDICATION / DESCRIPTION )" />
+    <MESSAGE value="#COMPONENTS | CONECT REQUESTS FOR 'SECTION' / 'TOOL'&#10;*************************************************************&#10; - ENABLE AUXILIARY REQUESTS FOR CERTAIN DOMAIN LIKE 'SECTION' / 'TOOL' &#10; &#10; ** PROBLEMATIC AT THE MOMENT w/ MULTIPLE LISTENERS INTERFERENCE THAT BLOCK AND SLOW DOWN RENDERING" />
+    <option name="LAST_COMMIT_MESSAGE" value="#COMPONENTS | CONECT REQUESTS FOR 'SECTION' / 'TOOL'&#10;*************************************************************&#10; - ENABLE AUXILIARY REQUESTS FOR CERTAIN DOMAIN LIKE 'SECTION' / 'TOOL' &#10; &#10; ** PROBLEMATIC AT THE MOMENT w/ MULTIPLE LISTENERS INTERFERENCE THAT BLOCK AND SLOW DOWN RENDERING" />
   </component>
   <component name="WindowStateProjectService">
     <state x="226" y="185" width="802" height="722" key="#Intentions" timestamp="1587812336063">
@@ -379,10 +395,10 @@
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="576" y="206" width="802" height="677" key="#Plugins/0.28.1920.1052@0.28.1920.1052" timestamp="1587722292978" />
-    <state x="520" y="102" width="932" height="913" key="CommitChangelistDialog2" timestamp="1590873554030">
+    <state x="520" y="102" width="932" height="913" key="CommitChangelistDialog2" timestamp="1591564315108">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="520" y="102" width="932" height="913" key="CommitChangelistDialog2/0.28.1920.1052@0.28.1920.1052" timestamp="1590873554030" />
+    <state x="520" y="102" width="932" height="913" key="CommitChangelistDialog2/0.28.1920.1052@0.28.1920.1052" timestamp="1591564315108" />
     <state x="118" y="201" width="1561" height="774" maximized="true" key="DiffContextDialog" timestamp="1590872235004">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
@@ -403,27 +419,27 @@
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state width="498" height="445" key="SwitcherDM/0.28.1920.1052@0.28.1920.1052" timestamp="1590224392970" />
-    <state x="592" y="289" width="802" height="552" key="Vcs.Push.Dialog.v2" timestamp="1590873556212">
+    <state x="592" y="289" width="802" height="552" key="Vcs.Push.Dialog.v2" timestamp="1591611806934">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="592" y="289" width="802" height="552" key="Vcs.Push.Dialog.v2/0.28.1920.1052@0.28.1920.1052" timestamp="1590873556212" />
+    <state x="592" y="289" width="802" height="552" key="Vcs.Push.Dialog.v2/0.28.1920.1052@0.28.1920.1052" timestamp="1591611806934" />
     <state x="200" y="140" width="1606" height="825" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1589020644078">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="200" y="140" width="1606" height="825" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1589020644078" />
-    <state x="675" y="372" key="com.intellij.ide.util.TipDialog" timestamp="1591555162359">
+    <state x="675" y="372" key="com.intellij.ide.util.TipDialog" timestamp="1591641904900">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="675" y="371" key="com.intellij.ide.util.TipDialog/0.27.1920.1053/1920.0.1024.768@0.27.1920.1053" timestamp="1590524902736" />
-    <state x="675" y="372" key="com.intellij.ide.util.TipDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1591555162359" />
+    <state x="675" y="372" key="com.intellij.ide.util.TipDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1591641904900" />
     <state x="806" y="479" width="456" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589377642523">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="806" y="479" width="456" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.28.1920.1052@0.28.1920.1052" timestamp="1589377642523" />
-    <state x="638" y="254" width="868" height="610" key="find.popup" timestamp="1591563526955">
+    <state x="638" y="254" width="868" height="610" key="find.popup" timestamp="1591648951851">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="638" y="254" width="868" height="610" key="find.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1591563526955" />
+    <state x="638" y="254" width="868" height="610" key="find.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1591648951851" />
     <state width="600" height="424" key="javadoc.popup" timestamp="1587815719558">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
@@ -436,9 +452,9 @@
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="623" y="254" width="672" height="677" key="run.anything.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1591556177886" />
-    <state x="644" y="270" width="672" height="678" key="search.everywhere.popup" timestamp="1591561861761">
+    <state x="644" y="270" width="672" height="678" key="search.everywhere.popup" timestamp="1591648827783">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="644" y="270" width="672" height="678" key="search.everywhere.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1591561861761" />
+    <state x="644" y="270" width="672" height="678" key="search.everywhere.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1591648827783" />
   </component>
 </project>
