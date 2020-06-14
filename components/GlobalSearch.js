@@ -62,7 +62,7 @@ const view = () => {
 const attachListeners = () => {
 
     document.addEventListener('click', (evt) => {
-        console.log('ADD LISTENERS :  GLOBAL SEARCH')
+        // console.log('ADD LISTENERS :  GLOBAL SEARCH')
         if (evt.target.name === 'introduction-navigation') {
             // cl('CLICK: ', evt.target.value)
             dq('#search_result input').removeAttribute('list');
@@ -73,7 +73,7 @@ const attachListeners = () => {
     })
 
     document.addEventListener('change', (evt) => {
-        console.log('ADD LISTENERS :  GLOBAL SEARCH 12')
+        // console.log('ADD LISTENERS :  GLOBAL SEARCH 12')
         if (evt.target.getAttribute('list') === 'project_list') {
             LayoutNavigationGlobal('projects');
             LayoutNavigationProjectShowcase(evt.target.value)

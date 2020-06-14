@@ -50,7 +50,7 @@ const view = () => {
 const attachListeners = () => {
 
     document.addEventListener('click', (evt) => {
-        console.log('ADD LISTENERS :  GLOBAL SEARCH 12')
+        // console.log('ADD LISTENERS :  GLOBAL SEARCH 12')
 //
         if (evt.target.classList.contains(CSSID)) {
             LayoutNavigationGlobal('projects');

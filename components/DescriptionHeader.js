@@ -42,7 +42,7 @@ const view = (pid) => {
  */
 const attachListeners = () => {
     document.addEventListener('click', (evt) => {
-        console.log('ADD LISTENERS :  DESCRIPTION HEADER')
+        // console.log('ADD LISTENERS :  DESCRIPTION HEADER')
         if (evt.target.classList.contains( 'description-section')) {
             LayoutNavigationProjects('section', evt.target.dataset.type)
         }

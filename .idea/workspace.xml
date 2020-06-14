@@ -1,28 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c2027ac-7fbf-48f5-b8a4-e62f9701cdf7" name="Default" comment="#COMPONENTS | CONECT REQUESTS FOR 'SECTION' / 'TOOL'&#10;*************************************************************&#10; - ENABLE AUXILIARY REQUESTS FOR CERTAIN DOMAIN LIKE 'SECTION' / 'TOOL' &#10; &#10; ** PROBLEMATIC AT THE MOMENT w/ MULTIPLE LISTENERS INTERFERENCE THAT BLOCK AND SLOW DOWN RENDERING">
-      <change afterPath="$PROJECT_DIR$/components/DataStore.js" afterDir="false" />
+    <list default="true" id="7c2027ac-7fbf-48f5-b8a4-e62f9701cdf7" name="Default" comment="#COMPONENTS | ADD GLOBAL SEARCH + ATTACH MULTIPLE CLICK CONNECTS&#10;*******************************************************************************&#10; - ENABLE CLICKING FOR MULTIPLE 'PROJECT / TOOLS' SECTIONS THAT NAVIGATE TO RESP 'PAGES' &#10; - ADD GLOBAL NAVIGATION">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/aux/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/aux/test.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/AboutNavigationMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/AboutNavigationMain.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/DescriptionExtra.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/DescriptionExtra.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/DescriptionHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/DescriptionHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/DescriptionMedia.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/DescriptionMedia.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/DescriptionSlideshow.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/DescriptionSlideshow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/GlobalNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/GlobalNavigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/GlobalSearch.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/GlobalSearch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Monitor.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Monitor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/MonitorProject.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MonitorProject.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/MonitorQuote.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MonitorQuote.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/MonitorTools.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/MonitorTools.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ProjectGroup.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProjectGroup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ProjectGroupPool.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProjectGroupPool.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Projects.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Projects.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ProjectsNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProjectsNavigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ReferenceGroup.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/ReferenceGroup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aux/MonitorViewProject.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aux/items.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aux/items.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aux/test.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aux/test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aux/test.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aux/text.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/aux/text2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/WCDescriptionSlideshow.js" beforeDir="false" afterPath="$PROJECT_DIR$/web-component/WCDescriptionSlideshow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/html_templates.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/items.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/web-component/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev-wc.html" beforeDir="false" afterPath="$PROJECT_DIR$/web-component/dev-wc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/intro.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,16 +88,17 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web-component" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/aux" />
+      <recent name="$PROJECT_DIR$/components" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/components" />
       <recent name="$PROJECT_DIR$/aux" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/web-component" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/aux" />
-      <recent name="$PROJECT_DIR$/components" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -186,7 +184,9 @@
       <workItem from="1591439840997" duration="556000" />
       <workItem from="1591555161991" duration="9056000" />
       <workItem from="1591608805188" duration="5385000" />
-      <workItem from="1591641734430" duration="7118000" />
+      <workItem from="1591641734430" duration="7405000" />
+      <workItem from="1591686467120" duration="12000" />
+      <workItem from="1592128052238" duration="519000" />
     </task>
     <task id="LOCAL-00001" summary="convert http =&gt; https">
       <created>1545926008916</created>
@@ -307,7 +307,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591564315364</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="#COMPONENTS | ADD GLOBAL SEARCH + ATTACH MULTIPLE CLICK CONNECTS&#10;*******************************************************************************&#10; - ENABLE CLICKING FOR MULTIPLE 'PROJECT / TOOLS' SECTIONS THAT NAVIGATE TO RESP 'PAGES' &#10; - ADD GLOBAL NAVIGATION">
+      <created>1591649131942</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1591649131942</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -384,7 +391,8 @@
     <MESSAGE value="#COMPONENTS | 'ABOUT PAGE' LAYOUTS &#10;******************************************************&#10; - STANDARIZE THE LAYOUT OF PAGE (** PARTICAL)" />
     <MESSAGE value="#COMPONENTS | 'DESCRIPTION PAGE' LAYOUTS  &#10;******************************************************&#10; - STANDARIZE THE LAYOUT OF PAGE PARTS ( SYNDICATION / DESCRIPTION )" />
     <MESSAGE value="#COMPONENTS | CONECT REQUESTS FOR 'SECTION' / 'TOOL'&#10;*************************************************************&#10; - ENABLE AUXILIARY REQUESTS FOR CERTAIN DOMAIN LIKE 'SECTION' / 'TOOL' &#10; &#10; ** PROBLEMATIC AT THE MOMENT w/ MULTIPLE LISTENERS INTERFERENCE THAT BLOCK AND SLOW DOWN RENDERING" />
-    <option name="LAST_COMMIT_MESSAGE" value="#COMPONENTS | CONECT REQUESTS FOR 'SECTION' / 'TOOL'&#10;*************************************************************&#10; - ENABLE AUXILIARY REQUESTS FOR CERTAIN DOMAIN LIKE 'SECTION' / 'TOOL' &#10; &#10; ** PROBLEMATIC AT THE MOMENT w/ MULTIPLE LISTENERS INTERFERENCE THAT BLOCK AND SLOW DOWN RENDERING" />
+    <MESSAGE value="#COMPONENTS | ADD GLOBAL SEARCH + ATTACH MULTIPLE CLICK CONNECTS&#10;*******************************************************************************&#10; - ENABLE CLICKING FOR MULTIPLE 'PROJECT / TOOLS' SECTIONS THAT NAVIGATE TO RESP 'PAGES' &#10; - ADD GLOBAL NAVIGATION" />
+    <option name="LAST_COMMIT_MESSAGE" value="#COMPONENTS | ADD GLOBAL SEARCH + ATTACH MULTIPLE CLICK CONNECTS&#10;*******************************************************************************&#10; - ENABLE CLICKING FOR MULTIPLE 'PROJECT / TOOLS' SECTIONS THAT NAVIGATE TO RESP 'PAGES' &#10; - ADD GLOBAL NAVIGATION" />
   </component>
   <component name="WindowStateProjectService">
     <state x="226" y="185" width="802" height="722" key="#Intentions" timestamp="1587812336063">
@@ -395,10 +403,10 @@
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="576" y="206" width="802" height="677" key="#Plugins/0.28.1920.1052@0.28.1920.1052" timestamp="1587722292978" />
-    <state x="520" y="102" width="932" height="913" key="CommitChangelistDialog2" timestamp="1591564315108">
+    <state x="520" y="102" width="932" height="913" key="CommitChangelistDialog2" timestamp="1591649131684">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="520" y="102" width="932" height="913" key="CommitChangelistDialog2/0.28.1920.1052@0.28.1920.1052" timestamp="1591564315108" />
+    <state x="520" y="102" width="932" height="913" key="CommitChangelistDialog2/0.28.1920.1052@0.28.1920.1052" timestamp="1591649131684" />
     <state x="118" y="201" width="1561" height="774" maximized="true" key="DiffContextDialog" timestamp="1590872235004">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
@@ -419,27 +427,27 @@
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state width="498" height="445" key="SwitcherDM/0.28.1920.1052@0.28.1920.1052" timestamp="1590224392970" />
-    <state x="592" y="289" width="802" height="552" key="Vcs.Push.Dialog.v2" timestamp="1591611806934">
+    <state x="592" y="289" width="802" height="552" key="Vcs.Push.Dialog.v2" timestamp="1592128080048">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="592" y="289" width="802" height="552" key="Vcs.Push.Dialog.v2/0.28.1920.1052@0.28.1920.1052" timestamp="1591611806934" />
+    <state x="592" y="289" width="802" height="552" key="Vcs.Push.Dialog.v2/0.28.1920.1052@0.28.1920.1052" timestamp="1592128080048" />
     <state x="200" y="140" width="1606" height="825" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1589020644078">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="200" y="140" width="1606" height="825" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1589020644078" />
-    <state x="675" y="372" key="com.intellij.ide.util.TipDialog" timestamp="1591641904900">
+    <state x="675" y="372" key="com.intellij.ide.util.TipDialog" timestamp="1591686468065">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="675" y="371" key="com.intellij.ide.util.TipDialog/0.27.1920.1053/1920.0.1024.768@0.27.1920.1053" timestamp="1590524902736" />
-    <state x="675" y="372" key="com.intellij.ide.util.TipDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1591641904900" />
+    <state x="675" y="372" key="com.intellij.ide.util.TipDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1591686468065" />
     <state x="806" y="479" width="456" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589377642523">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
     <state x="806" y="479" width="456" height="160" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.28.1920.1052@0.28.1920.1052" timestamp="1589377642523" />
-    <state x="638" y="254" width="868" height="610" key="find.popup" timestamp="1591648951851">
+    <state x="638" y="254" width="868" height="610" key="find.popup" timestamp="1592128690451">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="638" y="254" width="868" height="610" key="find.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1591648951851" />
+    <state x="638" y="254" width="868" height="610" key="find.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1592128690451" />
     <state width="600" height="424" key="javadoc.popup" timestamp="1587815719558">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>

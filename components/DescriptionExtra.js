@@ -49,7 +49,7 @@ const view = () => {
  */
 const attachListeners = () => {
     document.addEventListener('click', (evt) => {
-        console.log('ADD LISTENERS :  DESCRIPTION EXTRA')
+        // console.log('ADD LISTENERS :  DESCRIPTION EXTRA')
 
 
         // if (evt.target.parentElement.parentElement.classList.contains('slideshow-media')) {

@@ -40,7 +40,7 @@ const view = () => {
 const attachListeners = () => {
 
     document.addEventListener('click', (evt) => {
-        console.log('ADD LISTENERS :  ABOUT NAVIGATION FILE')
+        // console.log('ADD LISTENERS :  ABOUT NAVIGATION FILE')
         if (evt.target.parentElement.id === 'about-navigation') {
             // cl(evt.target.dataset.type)
             LayoutNavigationAbout(evt.target.dataset.type)

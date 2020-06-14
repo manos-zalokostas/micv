@@ -62,7 +62,7 @@ const _projectList = (data, i) => {
  */
 const attachLoaders = () => {
     !hasAttachedListeners && document.addEventListener('click', evt => {
-        console.log('ADD LISTENERS :  PROJECTS-GROUPS')
+        // console.log('ADD LISTENERS :  PROJECTS-GROUPS')
         if (Array.from(dqa('.group-project > nav > a')).includes(evt.target)) {
             LayoutNavigationProjectShowcase(evt.target.dataset.project)
             hasAttachedListeners = true;

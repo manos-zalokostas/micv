@@ -89,7 +89,7 @@ const item = (o) => {
 const attachListeners = () => {
 
     document.addEventListener('click', (evt) => {
-        console.log('ADD LISTENERS :  GLOBAL SEARCH 12')
+        // console.log('ADD LISTENERS :  GLOBAL SEARCH 12')
 // debugger
         if (evt.target.parentElement.dataset.tool) {
             LayoutNavigationGlobal('projects');

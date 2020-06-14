@@ -102,7 +102,7 @@ section.reference-group {
 
 const attachListeners = () => {
     document.addEventListener('click', (evt) => {
-        console.log('ADD LISTENERS :  REFERENCE GROUP')
+        // console.log('ADD LISTENERS :  REFERENCE GROUP')
         // if (evt.target.parentElement.parentElement.classList.contains('slideshow-media')) {
         //     cl('CLICK: ', evt.target.src)
         //     activeIndex = evt.target.dataset.index;
