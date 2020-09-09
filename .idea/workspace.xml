@@ -2,124 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c2027ac-7fbf-48f5-b8a4-e62f9701cdf7" name="Default" comment="Populate the &quot;links&quot; section instaed of 1 link allowed before">
-      <change beforePath="$PROJECT_DIR$/ContentDescriptionBody.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ContentDescriptionExtras.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ContentDescriptionHeader.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ContentOptions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IntroductionMessage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IntroductionResume.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IntroductionTimeline.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonitorProject.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonitorReference.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MonitorSkills.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aux/items.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aux/items.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aux/test.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aux/text.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/aux/text2.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/AboutText.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/IntroText.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/MonitorViewProject.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Projector.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ProjectorProject.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ProjectorQuote.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ProjectorTools.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ResumeList.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/WelcomeText.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/aux.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/items.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/view.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/adsa_a1/adsa_contents.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/images/adsa_a1/adsa_contents.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/adsa_a1/adsa_original_corrupted_dataset.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/images/adsa_a1/adsa_original_corrupted_dataset.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/adsa_a2/adsa_a2_contents.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/images/adsa_a2/adsa_a2_contents.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/adsa_a2/adsa_a2_database_design.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/images/adsa_a2/adsa_a2_database_design.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/android/android_applications_development.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/images/android/android_applications_development.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/cosmores/compareme_config.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/cosmores/compareme_config.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/cosmores/compareme_info.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/cosmores/compareme_info.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/cv_document/micv.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/images/cv_document/micv.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/dba_a1/dba_a1_case_study.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/images/dba_a1/dba_a1_case_study.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/dba_a1/dba_a1_contents.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/images/dba_a1/dba_a1_contents.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/dba_a1/dba_a1_db_erd.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/images/dba_a1/dba_a1_db_erd.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/dba_a2/dba2_contents.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/images/dba_a2/dba2_contents.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/deltacosmos/delta_development.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/images/deltacosmos/delta_development.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ecep/api_feed_json.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ecep/api_feed_json.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ecep/delivery_status.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ecep/delivery_status.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ecep/erd.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ecep/erd.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ecep/pending_purchaces.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ecep/pending_purchaces.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ecep/purchase_details.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ecep/purchase_details.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ecep/search_tool.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ecep/search_tool.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ecep/search_tool_description.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ecep/search_tool_description.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/hse_db/hse_db_design.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/images/hse_db/hse_db_design.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/hse_newsletter/hse_newsletter.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/images/hse_newsletter/hse_newsletter.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/innovation_club/followup.swf" beforeDir="false" afterPath="$PROJECT_DIR$/images/innovation_club/followup.swf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/innovation_club/teaser1.swf" beforeDir="false" afterPath="$PROJECT_DIR$/images/innovation_club/teaser1.swf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/innovation_club/teaser2.swf" beforeDir="false" afterPath="$PROJECT_DIR$/images/innovation_club/teaser2.swf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/inse_a1/inse_a1_contents.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/images/inse_a1/inse_a1_contents.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/lc_a3/Full Cisco prsentation.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/images/lc_a3/Full Cisco prsentation.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/lc_a3/lc_a3_slideshow.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/images/lc_a3/lc_a3_slideshow.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/mc_a2/cproject_contents.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/images/mc_a2/cproject_contents.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/mc_a2/mc_presentation.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/images/mc_a2/mc_presentation.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/mc_rfg/mc_refjour_contents.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/images/mc_rfg/mc_refjour_contents.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/noblelinx/diagram1.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/noblelinx/diagram1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/noblelinx/diagram2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/noblelinx/diagram2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/os_a1/unix_a1_contents.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/images/os_a1/unix_a1_contents.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ptech_a2/ptech_a2_contents.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/images/ptech_a2/ptech_a2_contents.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ptech_a2/ptech_a2_manual.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/images/ptech_a2/ptech_a2_manual.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/sav_a1/sav_a1_contents.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/images/sav_a1/sav_a1_contents.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/sav_a2/sav_a2_contents.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/images/sav_a2/sav_a2_contents.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/sepm_a1/sepm_a1_contents.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/images/sepm_a1/sepm_a1_contents.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/sepm_a2/sepm_a2_contents.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/images/sepm_a2/sepm_a2_contents.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/sepm_a2/sepm_a2_ddt.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/images/sepm_a2/sepm_a2_ddt.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/sepm_a3/sepm_a3_contents.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/images/sepm_a3/sepm_a3_contents.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/sepm_a3/sepm_a3_reqs.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/images/sepm_a3/sepm_a3_reqs.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/sepm_a4/sepm_a4_contents.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/images/sepm_a4/sepm_a4_contents.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/sepm_a4/sepm_a4_manual.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/images/sepm_a4/sepm_a4_manual.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/sheduler/fp_database_design.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/images/sheduler/fp_database_design.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/sheduler/fp_manual.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/images/sheduler/fp_manual.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/sheduler/fp_scheduler_contents.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/images/sheduler/fp_scheduler_contents.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/sheduler/fp_technical_details.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/images/sheduler/fp_technical_details.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/sysdev_a1/sysdev_a1_contents.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/images/sysdev_a1/sysdev_a1_contents.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/sysdev_a1/sysdev_a1_interface.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/images/sysdev_a1/sysdev_a1_interface.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/sysdev_a1/sysdev_a1_manual.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/images/sysdev_a1/sysdev_a1_manual.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/sysdev_a2/sysdev_a2_contents.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/images/sysdev_a2/sysdev_a2_contents.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/sysdev_a2/sysdev_a2_manual.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/images/sysdev_a2/sysdev_a2_manual.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/webdes_a1/webdes_a1_contents.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/images/webdes_a1/webdes_a1_contents.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/webdes_a1/webdes_a1_db_entities.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/images/webdes_a1/webdes_a1_db_entities.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/webdes_a1/webdes_a1_manual.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/images/webdes_a1/webdes_a1_manual.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/installer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/interactive_section.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/intro.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_content.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/monitor_project.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/monitor_references.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/monitor_skills.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/monitor_skills.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/page_context.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/page_context_interactive_field.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/page_context_resume_field.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/page_footer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/page_introduction_monitor.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script-for-monitor.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/temp2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-component/BasicWebComponent.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-component/SimpleComponent.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-component/WBCAnchor.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-component/definitions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-component/web-component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,6 +14,20 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FavoritesManager">
     <favorites_list name="micv" />
@@ -148,6 +46,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="PhpDebugGeneral" xdebug_debug_port="9009" />
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="Remote PHP 5.5" />
@@ -322,9 +221,17 @@
     <option name="LAST_COMMIT_MESSAGE" value="Cut HML to Modules #2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="774" y="151" width="844" height="810" key="CommitChangelistDialog2" timestamp="1588633454142">
+    <state x="99" y="128" width="1722" height="853" key="DiffContextDialog" timestamp="1599675322372">
       <screen x="0" y="28" width="1920" height="1052" />
     </state>
-    <state x="774" y="151" width="844" height="810" key="CommitChangelistDialog2/0.28.1920.1052@0.28.1920.1052" timestamp="1588633454142" />
+    <state x="99" y="128" width="1722" height="853" key="DiffContextDialog/0.28.1920.1052@0.28.1920.1052" timestamp="1599675322372" />
+    <state x="743" y="474" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1599673801068">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="743" y="474" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.28.1920.1052@0.28.1920.1052" timestamp="1599673801068" />
+    <state x="623" y="260" width="672" height="678" key="search.everywhere.popup" timestamp="1599673868857">
+      <screen x="0" y="28" width="1920" height="1052" />
+    </state>
+    <state x="623" y="260" width="672" height="678" key="search.everywhere.popup/0.28.1920.1052@0.28.1920.1052" timestamp="1599673868857" />
   </component>
 </project>
