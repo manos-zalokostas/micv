@@ -88,73 +88,9 @@ const makeData = () => {
         return groups;
     }
 
-    // if (groupType === 'domain') data = groupByDomain(domain);
-
 
 }
 
-//
-// /**
-//  *
-//  * @param tool
-//  * @returns {[]}
-//  */
-// const groupByTool = (tool) => {
-//     let o = JSON.parse(sessionStorage.MIDATA),
-//         items = o.items.item,
-//         tools = items.filter(o => o.tools.tool.includes(tool));
-//
-//     let data = tools.map(item => [item.id, item.title])
-//
-//     return data;
-// }
-//
-//
-// /**
-//  *
-//  * @param section
-//  * @returns {[]}
-//  */
-// const groupBySection = (section) => {
-//
-//     let o = JSON.parse(sessionStorage.MIDATA)
-//     let items = o.items.item;
-//
-//     let sections = items.filter(o => o.section === section);
-//
-//     let data = sections.map(item => [item.id, item.title])
-//
-//     return data;
-// }
-//
-//
-// /**
-//  *
-//  * @param domain
-//  * @returns {[]}
-//  */
-// const groupByDomain = (domain) => {
-//
-//     domain = domain.toUpperCase();
-//
-//     let o = JSON.parse(sessionStorage.MIDATA)
-//     let items = o.items.item;
-//     let domains = items.filter(o => o.domain === domain);
-//
-//     let sections = domains.map(o => o.section);
-//     sections = Array.from(new Set(sections));
-//
-//     let data = [];
-//     sections.forEach(str => {
-//         let pack = domains.reduce((acc, o) => {
-//             if (o.section === str) acc[1].push([o.id, o.title]);
-//             return acc;
-//         }, [str, []])
-//         data.push(pack);
-//     })
-//
-//     return data;
-// }
 
 
 /*

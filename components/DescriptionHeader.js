@@ -82,7 +82,7 @@ div#project-title > section{
     display:flex;
     flex-wrap: wrap;
     max-height: 100%;
-    overflow: auto;
+    // overflow: auto;
     // background: yellow;
 }
 div#project-title > section > h2{flex: 0 0 100%;}

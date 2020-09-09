@@ -54,6 +54,7 @@ div#projects-syndication {
     overflow: auto;
     height: 90%;
     width:100%;
+    // background: #444;
 }
 
 div#project-showcase {
@@ -65,7 +66,8 @@ div#project-showcase {
 
 div#project-showcase > div {
     box-sizing:border-box;
-    border:2px solid;
+    // border:2px solid;
+    padding: 20px;
 }
 
 div#project-title {

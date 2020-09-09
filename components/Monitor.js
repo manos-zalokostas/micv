@@ -147,7 +147,7 @@ const style = () => `
 ${CSSID} article.projector {
     background: #444;
     border-radius: 10px;
-    border: 4px solid #555;
+    // border: 4px solid #555;
     box-sizing: border-box;
     padding: 5px;
     width:100%;

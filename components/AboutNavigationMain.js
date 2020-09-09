@@ -57,7 +57,7 @@ const style = () => `
 ${CSSID} nav#about-navigation {
     display: flex;
     place-content: space-evenly;
-    background: slategrey;
+    // background: slategrey;
     width:30%;
 }
 ${CSSID} nav#about-navigation > a {
@@ -65,7 +65,7 @@ ${CSSID} nav#about-navigation > a {
     color:white;
     text-align: center;
     text-decoration: none;
-    border:solid 1px black;
+    // border:solid 1px black;
 }
 `;
 

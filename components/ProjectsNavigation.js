@@ -73,8 +73,8 @@ ${CSSID} nav > a {
     color:white;
     text-align: center;
     text-decoration: none;
-    border:solid 1px black;
-    background: slategrey;
+    // border:solid 1px black;
+    // background: slategrey;
 }
 `;
 

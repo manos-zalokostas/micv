@@ -119,6 +119,9 @@ ${CSSID} > div {
 }
 ${CSSID} > div input {
     flex: 1;
+    border:none;
+    border-bottom: 1px solid #888;
+    background: none;
 }
 `;
 

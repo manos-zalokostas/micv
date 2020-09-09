@@ -46,7 +46,7 @@ div#introduction-navigation {
     flex: 1 1 100%;
     height: 5%;
     box-sizing: border-box;
-    border: 2px solid white;
+    // border: 2px solid white;
     display: flex;
     align-items: center;
 }
@@ -55,7 +55,7 @@ div#introduction-projector {
     flex: 1 1 70%;
     height: 40%;
     box-sizing: border-box;
-    border: 2px solid white;
+    // border: 2px solid white;
     display: flex;
     align-items: start;
     overflow:hidden;
@@ -65,9 +65,10 @@ div#author-message {
     flex: 1 1 30%;
     height: 40%;
     box-sizing: border-box;
-    border: 2px solid white;
+    // border: 2px solid white;
     display: flex;
     align-items: center;
+    padding: 20px;
 }
 
 div#resume-contents {
@@ -76,13 +77,14 @@ div#resume-contents {
     overflow:hidden;
     height: 55%;
     box-sizing: border-box;
-    border: 2px solid white;
+    // border: 2px solid white;
     display: flex;
     align-items: center;
 }
 
 div#resume-contents > div {
     width:100%;
+    padding: 20px;
 }
 
 div#resume-contents #resume-timeline {

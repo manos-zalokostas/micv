@@ -76,7 +76,7 @@ const attachLoaders = () => {
  */
 const STYLE = `
     .group-project {
-        background:silver;
+        background:#444;
     }
     .group-project h3 {
     }
@@ -91,7 +91,7 @@ const STYLE = `
     .group-project nav a {
         flex-basis: 40%;;
         opacity:0;
-        background:white;
+        // background:white;
         margin: 4px 0;
         padding:4px;
     }
