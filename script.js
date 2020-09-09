@@ -3,7 +3,7 @@
 $(document).ready(
     function () {
 
-        console.log(IMCV1)
+        console.log('IMCV1')
 
         animation = '';
         animation_running = false;
