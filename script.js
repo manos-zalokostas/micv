@@ -2,6 +2,9 @@
 
 $(document).ready(
     function () {
+
+        console.log(IMCV1)
+
         animation = '';
         animation_running = false;
         gmode = 'global';
@@ -220,6 +223,13 @@ $(document).ready(
                 $(this).css({'background-color': 'white', 'color': 'orange'});
 
                 build_selected_item_content(event.target.innerHTML, $('.list').attr('id'));
+
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                    'event': 'evt-project-preview',
+                    'project-previewed': event.target.innerText
+                });
+
             }
         );
 
