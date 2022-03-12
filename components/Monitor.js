@@ -1,7 +1,7 @@
 import ProjectorProject from "./MonitorProject.js";
 import ProjectorQuote from "./MonitorQuote.js";
 import ProjectorTools from "./MonitorTools.js";
-import {dq} from "./aux.js";
+import {dq} from "./ally.js";
 
 
 const filters = ['project', 'quote', 'tools'];

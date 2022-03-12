@@ -1,5 +1,5 @@
 import ProjectGroup from "./ProjectGroup.js";
-import {dq, strJoin} from "./aux.js";
+import {dq, strJoin} from "./ally.js";
 import {loadRepetitive} from "./Layout.js";
 import Projects from "./Projects.js";
 import {groupByDomain, groupBySection, groupByTool} from "./DataStore.js";

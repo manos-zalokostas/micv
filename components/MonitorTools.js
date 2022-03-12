@@ -1,5 +1,5 @@
 import {LayoutNavigationGlobal, LayoutNavigationProjects} from "./Layout.js";
-import * as aux from "./aux.js";
+import * as aux from "./ally.js";
 
 const CSSID = 'content-tools';
 let DATA = '';

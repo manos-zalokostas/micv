@@ -1,4 +1,4 @@
-import {setstyle, remstyle, remattr, cladd, setattr, dq, cl, strJoin} from "./aux.js";
+import {setstyle, remstyle, remattr, cladd, setattr, dq, cl, strJoin} from "./ally.js";
 import ProjectGroupPool from "./ProjectGroupPool.js";
 import PageProjects from '../page-projects.js'
 import DescriptionText from "./DescriptionText.js";

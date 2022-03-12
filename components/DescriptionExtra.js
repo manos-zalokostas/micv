@@ -1,4 +1,4 @@
-import {dq, cl, strJoin} from "./aux.js";
+import {dq, cl, strJoin} from "./ally.js";
 
 const CSSID = '#project-extras';
 let DATA = null;

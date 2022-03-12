@@ -1,4 +1,4 @@
-import {dq} from "./aux.js";
+import {dq} from "./ally.js";
 
 const CSSID = '#resume-introduction > div:first-child';
 

@@ -1,4 +1,4 @@
-import {dq, dqa, cl, strJoin} from "./aux.js";
+import {dq, dqa, cl, strJoin} from "./ally.js";
 import {LayoutNavigationGlobal} from "./Layout.js";
 
 const CSSID = '#global-navigation';

@@ -1,4 +1,4 @@
-import {dq, cl, strJoin} from "./aux.js";
+import {dq, cl, strJoin} from "./ally.js";
 import {groupTools, groupProjects} from "./DataStore.js";
 import {LayoutNavigationGlobal, LayoutNavigationProjectShowcase, LayoutNavigationProjects} from "./Layout.js";
 

@@ -10,9 +10,9 @@ export const jp = (...args) => JSON.parse(args);
 
 export const cl = (...args) => console.log(' --> DEBUG:: ', args);
 
-export const dq = (str) => document.querySelector(str);
+export const dq = (str, node = document) => node.querySelector(str);
 
-export const dqa = (str) => document.querySelectorAll(str);
+export const dqa = (str, node = document) => node.querySelectorAll(str);
 
 
 export const cladd = (elem, style) => {

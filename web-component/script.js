@@ -1,4 +1,4 @@
-import * as aux from "./aux.js";
+import * as aux from "./ally.js";
 
 
 export const run = () => {

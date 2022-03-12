@@ -1,4 +1,4 @@
-import {dqa, dq, strJoin} from "./aux.js";
+import {dqa, dq, strJoin} from "./ally.js";
 import {LayoutNavigationProjectShowcase} from "./Layout.js";
 
 let hasAttachedListeners = false;

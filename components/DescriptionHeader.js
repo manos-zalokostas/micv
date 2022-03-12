@@ -1,5 +1,5 @@
-import {cl, dq, strJoin} from "./aux.js";
-// import {dqa} from "./aux.js";
+import {cl, dq, strJoin} from "./ally.js";
+// import {dqa} from "./ally.js";
 import {LayoutNavigationProjects} from "./Layout.js";
 
 const CSSID = '#project-title';
