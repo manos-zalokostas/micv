@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Manos Portfolio</title>
-    <link type="text/css" rel="stylesheet" href="components/layout.css"/>
+    <link type="text/css" rel="stylesheet" href="layout/main.css"/>
 </head>
 <body style="background: #888">
 
@@ -19,7 +19,7 @@
 
         <div id="page-projects" style="display:none"></div>
 
-        <div id="page-footer" style="display:none"></div>
+<!--        <div id="page-footer" style="display:none"></div>-->
 
     </div>
 
@@ -28,10 +28,10 @@
 <script type="module" src="./modules.js"></script>
 <script>
 
-    fetch('http://localhost:3000/items')
+    fetch('http://localhost:4000/items')
         .then(response => response.json())
         .then(data => {
-            sessionStorage.MIDATA = JSON.stringify(data)
+            sessionStorage.MIDATA = JSON.stringify(data[0].data)
             let script = document.createElement('script');
             script.type = 'module';
             script.src = './modules.js';

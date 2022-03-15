@@ -1,22 +1,24 @@
-import PageIntroduction from './page-introduction.js'
+import '/pages/projects.js'
+import '/pages/introduction.js'
 
-import GlobalSearch from "./components/GlobalSearch.js";
-import GlobalNavigation from "./components/GlobalNavigation.js";
-import AboutNavigationMain from "./components/AboutNavigationMain.js";
-import Projector from "./components/Monitor.js";
-import IntroText from "./components/IntroText.js";
-import AboutText from "./components/AboutText.js";
-import WelcomeText from "./components/WelcomeText.js";
-import ResumeList from "./components/ResumeList.js";
-import TimelineList from "./components/TimelineList.js";
+import "./components/IntroductionIntro.js";
+import "./components/IntroductionWelcome.js";
+import "./components/IntroductionAbout.js";
 
 
+import "./components/IntroductionResume.js";
+import "./components/IntroductionTimeline.js";
 
-import PageProjects from './page-projects.js'
 
-import ProjectsNavigation from "./components/ProjectsNavigation.js";
-import ProjectGroupPool from "./components/ProjectGroupPool.js";
-ProjectGroupPool();
+import "./components/GlobalSearch.js";
+import "./components/GlobalNavigation.js";
+import "./components/AboutNavigationMain.js";
+import "./components/Monitor.js";
+
+
+// import ProjectsNavigation from "./components/ProjectsNavigation.js";
+// import ProjectGroupPool from "./components/ProjectGroupPool.js";
+// ProjectGroupPool();
 
 // import DescriptionHeader from "./components/DescriptionHeader.js";
 // import DescriptionText from "./components/DescriptionText.js";
@@ -25,4 +27,4 @@ ProjectGroupPool();
 // import DescriptionSlideshow from "./components/DescriptionSlideshow.js";
 
 
-import ReferenceGroup from "./components/ReferenceGroup.js";
+// import ReferenceGroup from "./components/ReferenceGroup.js";

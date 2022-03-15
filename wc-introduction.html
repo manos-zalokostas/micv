@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Manos Portfolio</title>
+</head>
+<script type="module">
+    import "/components/global/GlobalWrapper.js"
+    import "/components/global/GlobalNavigation.js"
+</script>
+<body style="background: #888">
+
+<wc-global-wrapper>
+
+    <wc-global-navigation></wc-global-navigation>
+
+</wc-global-wrapper>
+
+
+<template id="introduction-tmpl">
+
+    <div class="introduction-navigation">
+        <wc-introduction-navigation></wc-introduction-navigation>
+    </div>
+
+    <div class="introduction-monitor">
+        <wc-monitor></wc-monitor>
+    </div>
+
+    <div class="introduction-topic">
+
+        <div class="introduction-introduction">
+            <wc-introduction-intro></wc-introduction-intro>
+        </div>
+
+        <div class="introduction-timeline" style="display:none">
+            <wc-introduction-timeline></wc-introduction-timeline>
+        </div>
+
+        <div class="introduction-resume" style="display:none">
+            <wc-introduction-resume></wc-introduction-resume>
+        </div>
+
+    </div>
+
+    <script type="module">
+        import "/components/introduction/IntroductionNavigation.js"
+        import "/components/introduction/IntroductionResume.js"
+        import "/components/introduction/IntroductionTimeline.js"
+        import "/components/introduction/IntroductionIntro.js"
+        import "/components/introduction/IntroductionWelcome.js"
+
+        import "/components/monitor/WCMonitor.js"
+    </script>
+    <style>
+    </style>
+</template>
+
+<template id="projectlist-tmpl">
+    <article>
+        <div id="projects-navigation">PROJECT NAVIGATION</div>
+
+        <div id="projects-syndication">PROJECT SYNDICATION</div>
+
+    </article>
+    <style>
+    </style>
+</template>
+
+<template id="description-tmpl">
+    <article>
+
+        <div id="project-showcase" data-project=${projectid}>
+
+            <div id="project-title">HEADER</div>
+
+            <div id="project-description">DESCRIPTION</div>
+
+            <div id="project-media">IMAGES</div>
+
+            <div id="project-extras">EXTRA FILES</div>
+
+            <div id="project-slideshow">SLIDESHOW</div>
+        </div>
+    </article>
+
+    <style>
+    </style>
+</template>
+
+
+<template id="reference-tmpl">
+    <h2>Useful Links</h2>
+    <ul id="work_links">
+        <li>Employers</li>
+    </ul>
+    <ul id="study_links">
+        <li>Education</li>
+    </ul>
+    <ul id="certificate_links">
+        <li>Certificates</li>
+    </ul>
+    <ul id="social_links">
+        <li>Social Net</li>
+        <li>Share</li>
+        <li>Contact</li>
+    </ul>
+</template>
+
+
+<script>
+
+
+    // let template = document.getElementById('introduction-tmpl');
+    // let templateContent = template.content;
+    // document.querySelector('#global-content').appendChild(templateContent);
+
+
+    fetch('http://localhost:4000/items')
+        .then(response => response.json())
+        .then(data => {
+            sessionStorage.MIDATA = JSON.stringify(data[0].data)
+            // let script = document.createElement('script');
+            // script.type = 'module';
+            // script.src = './modules.js';
+            // document.head.appendChild(script);
+        })
+    ;
+
+</script>
+</body>
+</html>
