@@ -10,7 +10,7 @@ class WCGlobalNavigation extends HTMLElement {
     constructor() {
         super();
         this.shadow = this.attachShadow({mode: 'open'})
-        this.signalChangePage = (type) => new CustomEvent("changePage", {
+        this.shoutChangePage = (type) => new CustomEvent("changePage", {
                 bubbles: true,
                 cancelable: false,
                 composed: true,
@@ -52,7 +52,7 @@ const view = (o) => {
 
 const attachListeners = (o) => {
     o.shadow.addEventListener('click', (evt) => {
-            o.dispatchEvent(o.signalChangePage(evt.target.dataset.type))
+            o.dispatchEvent(o.shoutChangePage(evt.target.dataset.type))
         }
     )
 }

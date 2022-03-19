@@ -7,24 +7,30 @@
 <script type="module">
     import "/components/global/GlobalWrapper.js"
     import "/components/global/GlobalNavigation.js"
+    import "/components/global/GlobalSearch.js"
 </script>
 <body style="background: #888">
 
+
 <wc-global-wrapper>
 
-    <wc-global-navigation></wc-global-navigation>
+    <div slot="global-search" class="global-search">
+        <wc-global-search></wc-global-search>
+    </div>
+    <div slot="global-navigation" class="global-navigation">
+        <wc-global-navigation></wc-global-navigation>
+    </div>
 
 </wc-global-wrapper>
 
 
 <template id="introduction-tmpl">
-
     <div class="introduction-navigation">
         <wc-introduction-navigation></wc-introduction-navigation>
     </div>
 
     <div class="introduction-monitor">
-        <wc-monitor></wc-monitor>
+<!--        <wc-monitor></wc-monitor>-->
     </div>
 
     <div class="introduction-topic">
@@ -56,13 +62,23 @@
     </style>
 </template>
 
+
+
 <template id="projectlist-tmpl">
     <article>
-        <div id="projects-navigation">PROJECT NAVIGATION</div>
+        <div id="projects-navigation">
+            <wc-project-navigation></wc-project-navigation>
+        </div>
 
-        <div id="projects-syndication">PROJECT SYNDICATION</div>
+        <div id="projects-topic">
+            <wc-project-map category="domain" filter="web"></wc-project-map>
+        </div>
 
     </article>
+    <script type="module">
+        import "/components/project/ProjectNavigation.js"
+        import "/components/project/ProjectMap.js"
+    </script>
     <style>
     </style>
 </template>

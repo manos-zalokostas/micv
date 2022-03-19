@@ -1,8 +1,6 @@
 import {strJoin} from "/utils/ally.js";
 
-
 const BUTTONS = ['introduction', 'resume', 'timeline', 'document'];
-
 
 
 class WCIntroductionNavigation extends HTMLElement {
@@ -14,7 +12,10 @@ class WCIntroductionNavigation extends HTMLElement {
     constructor() {
         super();
         this.shadow = this.attachShadow({mode: 'open'})
-        this.signalChangeIntoTopic = (topic) => new CustomEvent("changeIntroTopic", {
+        this.shadow.addEventListener('click', (evt) => {
+            this.dispatchEvent(this.shoutChangeIntoTopic(evt.target.dataset.topic))
+        })
+        this.shoutChangeIntoTopic = (topic) => new CustomEvent("changeIntroTopic", {
                 bubbles: true,
                 cancelable: false,
                 composed: true,
@@ -27,46 +28,26 @@ class WCIntroductionNavigation extends HTMLElement {
 
 
     connectedCallback() {
-        !this.hasMount && attachListeners(this);
+        // !this.hasMount && attachListeners(this);
         this.render();
+        this.hasMount = true;
     }
 
 
     render() {
 
-        this.shadow.innerHTML = view(this);
+        this.shadow.innerHTML = `<nav>${
+            strJoin(BUTTONS.map(name =>
+                `<a href="#" data-topic="${name}">${name}</a>`
+            ))
+        }
+${style}
+</nav>
+`;
 
         this.hasMount = true;
 
     }
-}
-
-
-/**
- *
- * @returns {string}
- */
-const view = (o) => {
-    return `
-            <nav>
-                ${
-        strJoin(BUTTONS.map(name =>
-            `<a href="#"data-topic="${name}">${name}</a>`)
-        )
-    }
-            </nav>
-           ${style}
-    `;
-}
-
-
-/**
- *
- */
-const attachListeners = (o) => {
-    o.shadow.addEventListener('click', (evt) => {
-        o.dispatchEvent(o.signalChangeIntoTopic(evt.target.dataset.topic))
-    })
 }
 
 

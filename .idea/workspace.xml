@@ -5,55 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c2027ac-7fbf-48f5-b8a4-e62f9701cdf7" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/_dev/tmp.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/global/GlobalWrapper.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/monitor/WCMonitor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/project/ProjectNavigation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/project/ProjectPool.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wc-introduction.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/tmp.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_dev/tmp.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/project/ProjectViewItem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/project/ProjectViewItemlist.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/AboutNavigationMain.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/introduction/IntroductionNavigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/AboutText.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/introduction/IntroductionAbout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/DataStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/service/DataStore.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/DescriptionExtra.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/description/DescriptionExtra.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/DescriptionHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/description/DescriptionHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/DescriptionMedia.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/description/DescriptionMedia.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/DescriptionSlideshow.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/description/DescriptionSlideshow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/DescriptionText.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/description/DescriptionText.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/GlobalNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/global/GlobalNavigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/GlobalSearch.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/global/GlobalSearch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/IntroText.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/introduction/IntroductionIntro.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/layout/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Monitor.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/monitor/Monitor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/MonitorProject.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/monitor/MonitorViewProject.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/MonitorQuote.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/monitor/MonitorViewQuote.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/MonitorTools.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/monitor/MonitorViewTools.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ProjectGroup.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/project/ProjectViewMulti.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ProjectGroupPool.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/project/ProjectMap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Projects.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/project/ProjectViewSingle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ProjectsNavigation.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ReferenceGroup.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/reference/ReferenceGroup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ResumeList.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/introduction/IntroductionResume.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/TimelineList.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/introduction/IntroductionTimeline.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/WelcomeText.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/introduction/IntroductionWelcome.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ally.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/ally.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/layout/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/global/GlobalNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/global/GlobalNavigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/global/GlobalSearch.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/global/GlobalSearch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/global/GlobalWrapper.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/global/GlobalWrapper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/introduction/IntroductionNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/introduction/IntroductionNavigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/project/ProjectMap.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/project/ProjectMap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/project/ProjectNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/project/ProjectNavigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/project/ProjectViewMulti.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/project/ProjectViewSingle.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dev.html" beforeDir="false" afterPath="$PROJECT_DIR$/dev.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page-introduction.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/introduction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page-projects.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/projects.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page-references.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/references.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-component/BasicWebComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/_dev/wc-examples/BasicWebComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-component/SimpleComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/_dev/wc-examples/SimpleComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-component/WBCAnchor.js" beforeDir="false" afterPath="$PROJECT_DIR$/_dev/wc-examples/WBCAnchor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-component/WCDescriptionSlideshow.js" beforeDir="false" afterPath="$PROJECT_DIR$/_dev/wc-examples/WCDescriptionSlideshow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-component/definitions.js" beforeDir="false" afterPath="$PROJECT_DIR$/_dev/wc-examples/definitions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-component/dev-wc.html" beforeDir="false" afterPath="$PROJECT_DIR$/_dev/wc-examples/dev-wc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-component/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/_dev/wc-examples/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web-component/web-component.html" beforeDir="false" afterPath="$PROJECT_DIR$/_dev/wc-examples/web-component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/DataStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/service/DataStore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wc-introduction.html" beforeDir="false" afterPath="$PROJECT_DIR$/wc-introduction.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +102,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="HTML" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/components/global" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/_dev" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -143,16 +110,16 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="$USER_HOME$/.nvm/versions/node/v6.9.4/bin/node" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.JSONPath" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/_dev" />
       <recent name="$PROJECT_DIR$/components/global" />
       <recent name="$PROJECT_DIR$/components/monitor" />
       <recent name="$PROJECT_DIR$/components/project" />
       <recent name="$PROJECT_DIR$/pages" />
-      <recent name="$PROJECT_DIR$/components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/_dev/web-components" />
@@ -256,7 +223,10 @@
       <workItem from="1594063664111" duration="105000" />
       <workItem from="1647180058345" duration="9918000" />
       <workItem from="1647246486146" duration="20907000" />
-      <workItem from="1647335553088" duration="21961000" />
+      <workItem from="1647335553088" duration="23143000" />
+      <workItem from="1647434514782" duration="2934000" />
+      <workItem from="1647673569730" duration="7118000" />
+      <workItem from="1647695841191" duration="18612000" />
     </task>
     <task id="LOCAL-00001" summary="convert http =&gt; https">
       <created>1545926008916</created>
@@ -398,7 +368,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647115467973</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="#MULTI UPDATE&#10;*********************&#10; - CONVERTS JS MODULES TO 'WEB-COMPONENTS' CLASSES W/ 'SHADOW DOM' ( ** PARTIAL ) &#10; - USE 'TEMPLATE' ELEMENTS TO REPRESENT APP PAGES AND DEPRECATE THE 'LAYOUT' BASE CLASS&#10; - RESTRUCTURE PATHS AND DIRECTORIES FOR CLARITY + MAINTAINABILITY&#10;++ CLEANUPS">
+      <created>1647366191717</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1647366191717</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -419,19 +396,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="master" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -480,7 +445,8 @@
     <MESSAGE value="#COMPONENTS | ADD GLOBAL SEARCH + ATTACH MULTIPLE CLICK CONNECTS&#10;*******************************************************************************&#10; - ENABLE CLICKING FOR MULTIPLE 'PROJECT / TOOLS' SECTIONS THAT NAVIGATE TO RESP 'PAGES' &#10; - ADD GLOBAL NAVIGATION" />
     <MESSAGE value="#COMPONENTS | CLEAN-UP FILES&#10;**************************************&#10;  REMOVE FILES FROM OLD PROJECT" />
     <MESSAGE value="#MOVE TO TERA-DRIVE" />
-    <option name="LAST_COMMIT_MESSAGE" value="#MOVE TO TERA-DRIVE" />
+    <MESSAGE value="#MULTI UPDATE&#10;*********************&#10; - CONVERTS JS MODULES TO 'WEB-COMPONENTS' CLASSES W/ 'SHADOW DOM' ( ** PARTIAL ) &#10; - USE 'TEMPLATE' ELEMENTS TO REPRESENT APP PAGES AND DEPRECATE THE 'LAYOUT' BASE CLASS&#10; - RESTRUCTURE PATHS AND DIRECTORIES FOR CLARITY + MAINTAINABILITY&#10;++ CLEANUPS" />
+    <option name="LAST_COMMIT_MESSAGE" value="#MULTI UPDATE&#10;*********************&#10; - CONVERTS JS MODULES TO 'WEB-COMPONENTS' CLASSES W/ 'SHADOW DOM' ( ** PARTIAL ) &#10; - USE 'TEMPLATE' ELEMENTS TO REPRESENT APP PAGES AND DEPRECATE THE 'LAYOUT' BASE CLASS&#10; - RESTRUCTURE PATHS AND DIRECTORIES FOR CLARITY + MAINTAINABILITY&#10;++ CLEANUPS" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

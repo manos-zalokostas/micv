@@ -1,6 +1,6 @@
-import {dqa, strJoin} from "/utils/ally.js";
-// import {LayoutNavigationProjects} from "/layout/main.js";
+import {strJoin} from "/utils/ally.js";
 
+const BUTTONS = ['web', 'studies', 'work'];
 
 
 class WCProjectNavigation extends HTMLElement {
@@ -12,63 +12,42 @@ class WCProjectNavigation extends HTMLElement {
 
     constructor() {
         super();
-        this.shadow = this.attachShadow({mode: 'open'})
-    }
-
-
-    // static get observedAttributes() {
-    //     return ['width', 'img'];
-    // }
-
-
-    attributeChangedCallback(name, prev, next) {
+        this.shadow = this.attachShadow({mode: 'open'});
+        this.shadow.addEventListener('click', (evt) => {
+            this.dispatchEvent(this.shoutChangeProjectTopic(evt.target.dataset.topic))
+        })
+        this.shoutChangeProjectTopic = (topic) =>{
+            
+            return new CustomEvent("changeProjectTopic", {
+                    bubbles: true,
+                    cancelable: false,
+                    composed: true,
+                    detail: {
+                        topic
+                    }
+                }
+            )
+        }
     }
 
 
     connectedCallback() {
         this.render();
+        this.hasMount = true;
     }
 
 
     render() {
+        this.shadow.innerHTML = `<nav>${
+            strJoin(BUTTONS.map(name => `
+                <a data-topic="${name}">${name}</a>
+                `))
+        }
+${style} 
+</nav>`;
 
-        this.shadow.innerHTML = view(this);
-
-        this.hasMount = true;
 
     }
-}
-
-
-/**
- *
- * @returns {string}
- */
-const view = (o) => {
-    return `
-            <nav>
-            ${strJoin(DATA.buttons.map(name => `
-                <a href="#" data-type="${name}">${name}</a>
-                `))}
-            </nav>
-               ${style}
-            <script>${!o.hasMount && attachListeners(o)}</script>
-    `;
-}
-
-
-/**
- *
- */
-const attachListeners = (o) => {
-
-    o.shadow.addEventListener('click', (evt) => {
-        // console.log('ADD LISTENERS :  PROJECTS NAVIGATION')
-        if (Array.from(dqa(`> nav > a`)).includes(evt.target)) {
-            // cl(evt.target.dataset.type)
-            // LayoutNavigationProjects(evt.target.dataset.type)
-        }
-    })
 }
 
 
@@ -90,15 +69,6 @@ nav > a {
 }
 </style>
 `;
-
-
-/*
-
- */
-const DATA =
-    {
-        buttons: ['web', 'studies', 'work'],
-    }
 
 
 customElements.define('wc-project-navigation', WCProjectNavigation);

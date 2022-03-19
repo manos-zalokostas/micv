@@ -1,6 +1,13 @@
 <script type="module">
 
     /*
+GLOBAL
+ */
+    // import "/components/global/GlobalNavigation.js"
+    // import "/components/global/GlobalSearch.js"
+
+
+    /*
     INTRODUCTION
      */
     // import "/_dev/WCDescriptionSlideshow.js"
@@ -11,14 +18,6 @@
     // import "/components/introduction/IntroductionTimeline.js"
     // import "/components/introduction/IntroductionNavigation.js"
 
-
-    /*
-    PROJECTS
-     */
-    // import "/components/project/ProjectNavigation.js"
-    //  import "/components/project/ProjectMap.js"
-
-
     /*
     MONITOR
      */
@@ -26,18 +25,18 @@
 
 
     /*
-    GLOBAL
+    PROJECTS
      */
-    // import "/components/global/GlobalNavigation.js"
-    // import "/components/global/GlobalSearch.js"
+    // import "/components/project/ProjectNavigation.js"
+    //  import "/components/project/ProjectViewItem.js"
+    //  import "/components/project/ProjectViewItemlist.js"
+     import "/components/project/ProjectMap.js"
 
 
     // document.addEventListener('click', (evt) => {
-    //     debugger
+    //
     //     alert(evt.target.dataset)
     // })
-
-
 
 
     // ##
@@ -45,30 +44,33 @@
 
 <body style="background:#444">
 <div id="dev">
-    <article>TSIKIS ADVANTAGE</article>
+    <!--    <article>TSIKIS ADVANTAGE</article>-->
 
-<!--    GLOBAL-->
-<!--    <wc-global-navigation></wc-global-navigation>-->
-<!--    <wc-global-search></wc-global-search>-->
+    <!--    GLOBAL-->
+    <!--    <wc-global-navigation></wc-global-navigation>-->
+    <!--    <wc-global-search></wc-global-search>-->
 
-<!--MONITOR-->
-<!--    <wc-monitor></wc-monitor>-->
+    <!--    INTRODUCTION-->
+    <!--    <wc-introduction-timeline></wc-introduction-timeline>-->
+    <!--    <wc-introduction-resume></wc-introduction-resume>-->
+    <!--    <wc-introduction-about></wc-introduction-about>-->
+    <!--    <wc-introduction-welcome></wc-introduction-welcome>-->
+    <!--    <wc-introduction-intro></wc-introduction-intro>-->
+    <!--    <wc-introduction-navigation></wc-introduction-navigation>-->
+
+    <!--MONITOR-->
+    <!--    <wc-monitor></wc-monitor>-->
 
 
-<!--    PROJECT-->
-<!--<wc-project-navigation></wc-project-navigation>-->
-<!--<wc-project-map></wc-project-map>-->
+    <!--    PROJECT-->
+<!--    <wc-project-navigation></wc-project-navigation>-->
+    <wc-project-map></wc-project-map>
+<!--    <wc-project-view-item></wc-project-view-item>-->
+<!--    <wc-project-view-itemlist></wc-project-view-itemlist>-->
+<!--<-->
 
-<!--    INTRODUCTION-->
-<!--    <wc-introduction-timeline></wc-introduction-timeline>-->
-<!--    <wc-introduction-resume></wc-introduction-resume>-->
-<!--    <wc-introduction-about></wc-introduction-about>-->
-<!--    <wc-introduction-welcome></wc-introduction-welcome>-->
-<!--    <wc-introduction-intro></wc-introduction-intro>-->
-<!--    <wc-introduction-navigation></wc-introduction-navigation>-->
-
-<!--    DESCRIPTION-->
-<!--        <wc-slideshow width="50" img="2"></wc-slideshow>-->
+    <!--    DESCRIPTION-->
+    <!--        <wc-slideshow width="50" img="2"></wc-slideshow>-->
 </div>
 <style>
     article {

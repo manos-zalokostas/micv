@@ -1,100 +1,108 @@
-import {strJoin} from "/utils/ally.js";
+import {groupByDomain} from "../../service/DataStore.js";
+import {groupBySection} from "../../service/DataStore.js";
+import {groupByTool} from "../../service/DataStore.js";
+
+import ProjectViewItem from "./ProjectViewItem.js";
+import ProjectViewItemlist from "./ProjectViewItemlist.js";
 
 
-let FILTER = 'web';
 let CATEGORY = 'domain';
+let FILTER = 'web';
+
+// let CATEGORY = 'section';
+// let FILTER = "Site Development";
+
+// let CATEGORY = 'tool';
+// let FILTER = 'web_application';
 
 
 class WCProjectMap extends HTMLElement {
 
     shadow = '';
     hasMount = false;
-    img = 1;
+
+    category = '';
+    filter = '';
+
+
+    static get observedAttributes() {
+        return [
+            "category",
+            "filter"
+        ];
+    }
 
 
     constructor() {
         super();
-        this.shadow = this.attachShadow({mode: 'open'})
-    }
-
-
-    static get observedAttributes() {
-        return ['width'];
+        this.shadow = this.attachShadow({mode: 'open'});
     }
 
 
     attributeChangedCallback(name, prev, next) {
-        if (name === 'width' && prev !== next) {
-            this.width = next;
-            this.render();
+
+        if (prev !== next) {
+            this[name] = next;
         }
-    }
 
-
-    connectedCallback() {
         this.render();
     }
 
 
-    render() {
+    connectedCallback() {
 
-        this.shadow.innerHTML = view();
+        this.filter = this.getAttribute('filter');
+        this.category = this.getAttribute('category');
+
+        this.render();
 
         this.hasMount = true;
+    }
+
+
+    render() {
+        let shadow = this.shadow;
+        shadow.innerHTML = view();
+
+        makeData(this.category, this.filter).forEach(
+            wc => shadow.firstChild.appendChild(wc)
+        )
 
     }
+
 }
 
 
-/**
- *
- * @param domain
- * @returns {string}
- */
-const view = () => {
-    return `
-    <article class="pool-project">
-    TSIKIS PROJECT-MAP
-    ${style}
-    </article>
-    `;
-};
+/*
 
+ */
+const view = () => `<article class="pool-project">${style}</article>`;
 
 
 /**
  *
- * @param FILTER
- * @param type
- * @returns {Uint8Array|BigInt64Array|*[]|Float64Array|Int8Array|Float32Array|Int32Array|Uint32Array|Uint8ClampedArray|BigUint64Array|Int16Array|Uint16Array|string[]}
+ * @returns {WCProjectViewItemlist[]|WCProjectViewItem[]|*[]}
  */
-const makeData = () => {
+const makeData = (category, filter) => {
 
     let data, groups;
+debugger
 
-    // CATEGORY = 'tool';
-    // FILTER = 'php';
+    // if (category === 'domain') {
+        data = groupByDomain(filter);
+        groups = data.map((group, i) => new ProjectViewItemlist(group, i));
+debugger
 
-    // if (CATEGORY === 'domain') {
-    //     data = groupByDomain(FILTER);
-    //     groups = data.map((group, i) => ProjectGroup(group, i));
-    //     return groups;
-    // }
-    //
-    //
-    // if (CATEGORY === 'section') {
-    //     data = groupBySection(FILTER);
-    //     groups = data.map((group, i) => Projects(group, i));
-    //     return groups;
-    // }
-    //
-    //
-    // if (CATEGORY === 'tool') {
-    //     data = groupByTool(FILTER);
-    //     groups = data.map((group, i) => Projects(group, i));
-    //     return groups;
+        return groups;
     // }
 
+    // if (category === 'section') data = groupBySection(filter);
+    //
+    // if (category === 'tool') data = groupByTool(filter);
+
+    // groups = data.map((group, i) => new ProjectViewItem(group, i));
+
+    // return groups;
 
 }
 

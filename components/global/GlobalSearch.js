@@ -1,4 +1,4 @@
-import {dq, strJoin} from "/utils/ally.js";
+import {strJoin} from "/utils/ally.js";
 import {groupTools, groupProjects} from "/service/DataStore.js";
 
 
@@ -11,6 +11,7 @@ class WCGlobalSearch extends HTMLElement {
     constructor() {
         super();
         this.shadow = this.attachShadow({mode: 'open'})
+        attachListeners(this);
     }
 
     connectedCallback() {
@@ -34,7 +35,8 @@ class WCGlobalSearch extends HTMLElement {
  */
 const view = (o) => {
     return `
-            <div id="search_radio">
+        <div id="global-search">
+            <div id="search-radio">
                 <div>
                     <label>
                         project
@@ -48,7 +50,7 @@ const view = (o) => {
                     </label>
                 </div>
             </div>
-            <div id="search_result">
+            <div id="search-result">
                 <input list="tool_list">
                 <datalist id="project_list">
                     ${strJoin(DATA.listProject.map(a => `<option value="${a[0]}">${a[1]}</option>`))}
@@ -58,8 +60,8 @@ const view = (o) => {
     }
                 </datalist>
             </div>
-            <style>${style}</style>
-            <script>${attachListeners(o)}</script>
+            ${style}
+        </div>
     `;
 }
 
@@ -70,10 +72,8 @@ const view = (o) => {
 const attachListeners = (o) => {
 
     o.shadow.addEventListener('click', (evt) => {
-        // console.log('ADD LISTENERS :  GLOBAL SEARCH')
         if (evt.target.name === 'introduction-navigation') {
             console.log('CLICK => INTRODUCTION-NAVIGATION')
-            // evt.target.setAttribute('checked', true)
         }
     })
 
@@ -111,24 +111,30 @@ const DATA = {
  */
 const style = `
 <style>
-#search_radio  {
-    position: fixed;
-    z-index:100;
-    top:0;
-    right: 40%;;    
+#global-search {
     display: flex;
 }
-#search_radio > div {
-    flex:0.5;
+#search-radio {
     display: flex;
-    place-content: space-evenly;
 }
-#search_radio > div input {
-    flex: 1;
-    border:none;
-    border-bottom: 1px solid #888;
-    background: none;
-}
+/*#search_radio  {*/
+/*    position: fixed;*/
+/*    z-index:100;*/
+/*    top:0;*/
+/*    right: 40%;;    */
+/*    display: flex;*/
+/*}*/
+/*#search_radio > div {*/
+/*    flex:0.5;*/
+/*    display: flex;*/
+/*    place-content: space-evenly;*/
+/*}*/
+/*#search_radio > div input {*/
+/*    flex: 1;*/
+/*    border:none;*/
+/*    border-bottom: 1px solid #888;*/
+/*    background: none;*/
+/*}*/
 </style>
 `;
 

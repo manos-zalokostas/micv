@@ -10,7 +10,8 @@ class WCGlobalWrapper extends HTMLElement {
         this.shadow = this.attachShadow({mode: 'open'})
         this.shadow.innerHTML = `
             <div id="global-wrapper">
-                <slot></slot>
+                <slot name="global-navigation"></slot>
+                <slot name="global-search"></slot>
                 <div id="page-content"></div>
             </div>
                 `;
@@ -46,6 +47,12 @@ const attachLinsteners = (o) => {
     o.addEventListener('changeIntroTopic', (evt) => {
         o.shadow.querySelectorAll('.introduction-topic > div')
             .forEach(node => node.style.display = 'none');
+
+        o.shadow.querySelector(`.introduction-${evt.detail.topic}`).style.display = 'block'
+    })
+    o.addEventListener('changeProjectTopic', (evt) => {
+        let elem = o.shadow.querySelector('wc-project-map');
+        elem.setAttribute('filter', evt.detail.topic)
 
         o.shadow.querySelector(`.introduction-${evt.detail.topic}`).style.display = 'block'
     })
