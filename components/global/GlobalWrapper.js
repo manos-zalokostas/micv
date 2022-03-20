@@ -1,3 +1,5 @@
+import {itemById} from "../../service/DataStore.js";
+
 class WCGlobalWrapper extends HTMLElement {
 
     shadow = '';
@@ -54,7 +56,14 @@ const attachLinsteners = (o) => {
         let elem = o.shadow.querySelector('wc-project-map');
         elem.setAttribute('filter', evt.detail.topic)
 
-        o.shadow.querySelector(`.introduction-${evt.detail.topic}`).style.display = 'block'
+    })
+    o.addEventListener('changeDescriptionTopic', (evt) => {
+        let item = itemById(evt.detail.topicId);
+        let elems = o.shadow.querySelectorAll('#description-wrapper > div > *');
+        elems.forEach(
+            elem => elem.setAttribute('item', JSON.stringify(item))
+        )
+
     })
 };
 

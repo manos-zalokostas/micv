@@ -86,12 +86,12 @@ const view = () => `<article class="pool-project">${style}</article>`;
 const makeData = (category, filter) => {
 
     let data, groups;
-debugger
+
 
     // if (category === 'domain') {
         data = groupByDomain(filter);
         groups = data.map((group, i) => new ProjectViewItemlist(group, i));
-debugger
+
 
         return groups;
     // }

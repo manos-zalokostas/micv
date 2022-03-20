@@ -1,85 +1,82 @@
-import {dq, cl, strJoin} from "/utils/ally.js";
+import {itemById} from "../../service/DataStore.js";
 
-const CSSID = '#project-extras';
-let DATA = null;
-let PID = 'WB02';
-// let activeImage = 'images/webdes_a1/welcome_page.jpg';
+class WCDescriptionExtra extends HTMLElement {
+
+    shadow = '';
+    hasMount = false;
+    pid = 'WB02';
+    item = {};
+    data = {};
 
 
-export default (pid) => run(pid);
+    static get observedAttributes() {
+        return ['item'];
+    }
 
 
-const run = (pid) => {
-    PID = pid || PID;
-    DATA = makeData(PID);
-    dq(CSSID).innerHTML = view()
+    constructor() {
+        super();
+        this.item = itemById(this.pid);
+        this.data = makeData(this.item)
+        this.shadow = this.attachShadow({mode: 'open'})
+    }
+
+
+    attributeChangedCallback(attr, prev, next) {
+        if (attr === 'item' && prev !== next) {
+            this.item = JSON.parse(next)
+            this.data= makeData(this.item)
+            this.pid = this.item.id;
+            this.render();
+        }
+    }
+
+
+    connectedCallback() {
+        this.render();
+        this.hasMount = true;
+    }
+
+
+    render() {
+
+        this.shadow.innerHTML = `
+            <article class="description-extra">
+                <section class="description-quote">
+                   <h2>COMPLEMENTS</h2>
+                  ${this.data.quotes.map(o => `
+                    <p>
+                        <span>${this.data.tutor}</span>
+                        <span>${this.data.score}</span>
+                        <span>${this.data.text}</span>
+                    </p>
+                `)}
+                </section>
+
+                <section class="description-files">
+                    <h2>FILES</h2>
+                        ${this.data.files.map && this.data.files.map(path => `<img src="${path}" />`)}
+                </section>
+
+                <section class="description-links">
+                    <h2>LINKS</h2>
+                        ${this.data.links.map && this.data.links.map(path => `<a href="${path}">${path}</a>`)}
+                </section>
+              ${style}
+            </article>
+`;
+
+    }
 }
 
-
-const view = () => {
-    return `
-    <article class="description-extra">
-        <section class="description-quote">
-           <h2>COMPLEMENTS</h2>
-          ${DATA.quotes.map(o =>
-        `  <p>
-                <span>${o.tutor}</span>
-                <span>${o.score}</span>
-                <span>${o.text}</span>
-            </p>`
-    )}
-        </section>
-        <section class="description-files">
-        <h2>FILES</h2>
-            ${DATA.files.map && DATA.files.map(path => `<img src="${path}" />`)}
-        </section>
-        <section class="description-links">
-        <h2>LINKS</h2>
-            ${DATA.links.map && DATA.links.map(path => `<a href="${path}">${path}</a>`)}
-        </section>
-            <style>${STYLE}</style>
-            <script>${attachListeners()}</script>
-    </article>
-    `;
-}
-
-
-/**
- *
- */
-const attachListeners = () => {
-    document.addEventListener('click', (evt) => {
-        // console.log('ADD LISTENERS :  DESCRIPTION EXTRA')
-
-
-        // if (evt.target.parentElement.parentElement.classList.contains('slideshow-media')) {
-        //     cl('CLICK: ', evt.target.src)
-        //     activeIndex = evt.target.dataset.index;
-        //     dq('.slideshow-preview img').src = DATA.images[activeIndex];
-        // }
-        //
-        // if (evt.target.parentElement.classList.contains('slideshow-nav')) {
-        //     cl('CLICK: ', evt.target.dataset.type);
-        //     if (evt.target.dataset.type === 'exit') return;
-        //     // ,
-        //     if (evt.target.dataset.type === 'next' && DATA.images[activeIndex + 1]) activeIndex++;
-        //     if (evt.target.dataset.type === 'prev' && DATA.images[activeIndex - 1]) activeIndex--;
-        //
-        //     dq('.slideshow-preview img').src = DATA.images[activeIndex];
-        // }
-    })
-}
 
 
 /**
  *
  * @returns {{files: (*|[*]), links: (*|[*]), quotes: [{score: *, text: *, tutor: *}]}}
  */
-const makeData = () => {
-    // ;
-    let {items} = JSON.parse(sessionStorage.MIDATA)
-    let item = items.item.find(o => o.id === PID);
-
+const makeData = (item) => {
+debugger
     let files = [],
         links = [];
 
@@ -108,16 +105,20 @@ const makeData = () => {
 /*
 
  */
-const STYLE = `
-${CSSID} {
+const style = `
+<style>
+ article {
     position: relative;
     top: -55%;
     height: 85%;
     width:40%;
-    // background: blue;
     overflow: auto;
 }
+</style>
 `;
+
+
+customElements.define('wc-description-extra', WCDescriptionExtra);
 
 
 // const DATA =
@@ -153,4 +154,4 @@ ${CSSID} {
 //     }
 
 
-run();
+// run();

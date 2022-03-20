@@ -44,7 +44,7 @@ export default class WCProjectViewItemlist extends HTMLElement {
  * @returns {string}
  */
 const view = (data = DATA) => {
-    debugger
+    
     return `
     <section class="group-project">
         <h3>${data[0]}</h3>

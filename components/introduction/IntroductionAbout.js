@@ -12,28 +12,22 @@ class WCIntroductionAbout extends HTMLElement {
 
     connectedCallback() {
         this.render();
+        this.hasMount = true;
     }
 
 
     render() {
 
-        this.shadow.innerHTML = view();
-
-        this.hasMount = true;
-
-    }
-}
-
-
-const view = () => {
-    return `
+        this.shadow.innerHTML = `
         <section class="about-text">
             <header>${DATA.title}</header>
             <p class="intro">${DATA.text}</p>
                 ${style()}
-        </section>
-    `;
+        </section>`
+    }
+
 }
+
 
 
 const style = () => `

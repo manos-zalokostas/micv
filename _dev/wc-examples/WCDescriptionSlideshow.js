@@ -167,4 +167,4 @@ Provide ticketing solutions for acknowledged bugs
     };
 
 
-customElements.define('wc-slideshow', WCDescriptionSlideshow);
+customElements.define('wc-description-slideshow', WCDescriptionSlideshow);

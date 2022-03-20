@@ -11,98 +11,87 @@ class WCGlobalSearch extends HTMLElement {
     constructor() {
         super();
         this.shadow = this.attachShadow({mode: 'open'})
-        attachListeners(this);
+        this.shadow.addEventListener('click', (evt) => {
+            if (evt.target.name === 'search-topic') {
+                this.shadow.querySelector('[name=search-input]').setAttribute('list', evt.target.value)
+            }
+        })
+        this.shadow.addEventListener('change', (evt) => {
+            
+            if (evt.target.getAttribute('list') === 'project-list') {
+                this.dispatchEvent(this.shoutChangeDescriptionTopic(evt.target.value));
+                console.log('CHANGE => PROJECT-LIST')
+            }
+            if (evt.target.getAttribute('list') === 'tool-list') {
+                console.log('CHANGE => TOOL-LIST')
+            }
+        })
+        this.shoutChangeDescriptionTopic = (topicId) => new CustomEvent("changeDescriptionTopic", {
+                bubbles: true,
+                cancelable: false,
+                composed: true,
+                detail: {
+                    topicId
+                }
+            }
+        )
+
     }
 
     connectedCallback() {
         this.render();
+        this.hasMount = true;
     }
 
 
     render() {
 
-        this.shadow.innerHTML = view(this);
-
-        this.hasMount = true;
-
-    }
-}
-
-
-/**
- *
- * @returns {string}
- */
-const view = (o) => {
-    return `
+        this.shadow.innerHTML = `
         <div id="global-search">
+
             <div id="search-radio">
                 <div>
-                    <label>
-                        project
-                        <input type="radio" name="introduction-navigation" value="project_list" checked>
+                    <label> project
+                        <input type="radio" name="search-topic" value="project-list" checked>
                     </label>
                 </div>
                 <div>
-                    <label>
-                        skill
-                        <input type="radio" name="introduction-navigation" value="tool_list">
+                    <label> skill
+                        <input type="radio" name="search-topic" value="tool-list">
                     </label>
                 </div>
             </div>
+
             <div id="search-result">
-                <input list="tool_list">
-                <datalist id="project_list">
-                    ${strJoin(DATA.listProject.map(a => `<option value="${a[0]}">${a[1]}</option>`))}
+
+                <input name="search-input" list="project-list">
+
+                <datalist id="project-list">
+                    ${strJoin(DATA.projects.map(a => `<option value="${a[0]}">${a[1]}</option>`))}
                 </datalist>
-                <datalist id="tool_list">
-                ${strJoin(DATA.listTool.map(name => `<option value="${name}">${name}</option>`))
-    }
+
+                <datalist id="tool-list">
+                    ${strJoin(DATA.tools.map(name => `<option value="${name}">${name}</option>`))}
                 </datalist>
+
             </div>
             ${style}
         </div>
     `;
+
+
+    }
 }
 
 
 /**
  *
- */
-const attachListeners = (o) => {
-
-    o.shadow.addEventListener('click', (evt) => {
-        if (evt.target.name === 'introduction-navigation') {
-            console.log('CLICK => INTRODUCTION-NAVIGATION')
-        }
-    })
-
-    o.shadow.addEventListener('change', (evt) => {
-        if (evt.target.getAttribute('list') === 'project_list') {
-            console.log('CHANGE => PROJECT-LIST')
-            // LayoutNavigationGlobal('projects');
-            // LayoutNavigationProjectShowcase(evt.target.value)
-            // cl(evt.target.value)
-        }
-        if (evt.target.getAttribute('list') === 'tool_list') {
-            console.log('CHANGE => TOOL-LIST')
-            // LayoutNavigationGlobal('projects');
-            // LayoutNavigationProjects('tool', evt.target.value)
-            // cl(evt.target.value)
-        }
-    });
-
-}
-
-
-/**
- *
- * @returns {{listProject: [string, string, string, string], listTool: [string, string, string, string]}}
+ * @returns {{projects: [string, string, string, string], tools: [string, string, string, string]}}
  * @constructor
  */
 const DATA = {
-    listProject: groupProjects(),
-    listTool: groupTools()
+    projects: groupProjects(),
+    tools: groupTools()
 }
 
 

@@ -1,93 +1,31 @@
-import {dq, cl, strJoin} from "/utils/ally.js";
-
-const CSSID = '#project-media';
-let DATA = '';
-// let activeImage = 'images/webdes_a1/welcome_page.jpg';
-let activeIndex = 0;
+import {strJoin} from "/utils/ally.js";
+import {itemById} from "../../service/DataStore.js";
 
 
 /**
  */
-export default (pid) => run(pid);
-
-
-/**
- */
-const run = (pid) => {
-    dq(CSSID).innerHTML = view(pid)
-}
-
-
-/**
- */
-const view = (pid) => {
-
-    DATA = makeData(pid);
-
-    return `
-        <article class="description-slideshow">
-                <nav class="slideshow-media">
-                ${strJoin(DATA.images.map(((path, i) =>
-            `<a href="#"><img data-index=${i} src=${path} /></a>`
-    )))}
-                </nav>
-                <style>${style()}</style>
-            <script>${attachListeners()}</script>
-        </article>
-    `;
-}
-
-
-/**
- */
-const attachListeners = () => {
-    document.addEventListener('click', (evt) => {
-        // console.log('ADD LISTENERS :  DESCRIPTION MEDIA')
-        if (evt.target.parentElement.parentElement.classList.contains('slideshow-media')) {
-            // cl('CLICK: ', evt.target.src)
-            activeIndex = evt.target.dataset.index;
-            dq('.slideshow-preview img').src = DATA.images[activeIndex];
-        }
-
-        // if (evt.target.parentElement.classList.contains('slideshow-nav')) {
-        //     cl('CLICK: ', evt.target.dataset.type);
-        //     if (evt.target.dataset.type === 'exit') return;
-        //     // ,
-        //     if (evt.target.dataset.type === 'next' && DATA.images[activeIndex + 1]) activeIndex++;
-        //     if (evt.target.dataset.type === 'prev' && DATA.images[activeIndex - 1]) activeIndex--;
-        //
-        //     dq('.slideshow-preview img').src = DATA.images[activeIndex];
-        // }
-    })
-}
-
-
-/**
- */
-const makeData = (pid = 'WB02') => {
-    let {items} = JSON.parse(sessionStorage.MIDATA)
-    let item = items.item.find(o => o.id === pid);
-
+const makeData = (item ) => {
 
     return {
-        // text: item.description,
         images: Array.isArray(item.screenshots.shot) ? item.screenshots.shot : [item.screenshots.shot]
     }
 };
 
 
-const style = () => `
-${CSSID} article.description-slideshow {
+
+const style =  `
+<style>
+article.description-slideshow {
     display: flex;
     padding: 10px;
     background: black;
     flex-flow: row-reverse;
     height:100%;
 }
-${CSSID} .slideshow-media img {
+.slideshow-media img {
     width: 80px;
 }
-${CSSID} nav.slideshow-media {
+nav.slideshow-media {
     display: flex;
     flex-flow: row;
     flex: 4 4 80%;
@@ -95,7 +33,92 @@ ${CSSID} nav.slideshow-media {
     height:100%;
     align-items: center;
 }
+</style>
 `;
+
+
+
+class WCDescriptionMedia extends HTMLElement {
+
+    shadow = '';
+    hasMount = false;
+    pid = 'WB02';
+    item = {};
+    data = {};
+
+
+
+    static get observedAttributes() {
+        return ['item'];
+    }
+
+
+    constructor() {
+        super();
+        this.item = itemById(this.pid);
+        this.data = makeData(this.item)
+        this.shadow = this.attachShadow({mode: 'open'})
+    }
+
+
+    attributeChangedCallback(attr, prev, next) {
+        if (attr === 'item' && prev !== next) {
+            this.item = JSON.parse(next)
+            this.data= makeData(this.item)
+            this.pid = this.item.id;
+            this.render();
+        }
+    }
+
+
+    connectedCallback() {
+        this.render();
+        this.hasMount = true;
+    }
+
+
+    render() {
+
+        this.shadow.innerHTML = `
+        <article class="description-slideshow">
+            <nav class="slideshow-media">${
+            strJoin(this.data.images.map(((path, i) => `<a href="#"><img data-index=${i} src=${path} /></a>`)))
+        }</nav>
+        ${style}
+        </article>
+    `;
+
+    }
+}
+
+customElements.define('wc-description-media', WCDescriptionMedia);
+
+
+// /**
+//  */
+// const attachListeners = () => {
+//     document.addEventListener('click', (evt) => {
+//         // console.log('ADD LISTENERS :  DESCRIPTION MEDIA')
+//         if (evt.target.parentElement.parentElement.classList.contains('slideshow-media')) {
+//             // cl('CLICK: ', evt.target.src)
+//             activeIndex = evt.target.dataset.index;
+//             dq('.slideshow-preview img').src = DATA.images[activeIndex];
+//         }
+//
+//         // if (evt.target.parentElement.classList.contains('slideshow-nav')) {
+//         //     cl('CLICK: ', evt.target.dataset.type);
+//         //     if (evt.target.dataset.type === 'exit') return;
+//         //     // ,
+//         //     if (evt.target.dataset.type === 'next' && DATA.images[activeIndex + 1]) activeIndex++;
+//         //     if (evt.target.dataset.type === 'prev' && DATA.images[activeIndex - 1]) activeIndex--;
+//         //
+//         //     dq('.slideshow-preview img').src = DATA.images[activeIndex];
+//         // }
+//     })
+// }
+
+
+
 
 //
 // const DATA =
@@ -115,4 +138,3 @@ ${CSSID} nav.slideshow-media {
 //     }
 
 
-run();

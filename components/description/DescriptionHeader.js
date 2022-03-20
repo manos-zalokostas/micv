@@ -1,66 +1,70 @@
-import {cl, dq, strJoin} from "/utils/ally.js";
-// import {dqa} from "/utils/ally.js";
-import {LayoutNavigationProjects} from "/layout/main.js";
-
-const CSSID = '#project-title';
-
-export default (pid) => run(pid);
+import {strJoin} from "/utils/ally.js";
+import {itemById} from "../../service/DataStore.js";
 
 
-/**
- *
- * @param projecid
- */
-const run = (projecid) => {
-    dq(CSSID).innerHTML = view(projecid)
-}
+
+class WCDescriptionHeader extends HTMLElement {
+
+    shadow = '';
+    hasMount = false;
+    pid = 'WB02';
+    item = {};
+    data = {};
 
 
-/**
- *
- * @param pid
- * @returns {string}
- */
-const view = (pid) => {
-    let DATA = makeData(pid);
-    return `
+
+    static get observedAttributes() {
+        return ['item'];
+    }
+
+
+    constructor() {
+        super();
+        this.item = itemById(this.pid);
+        this.data = makeData(this.item)
+        this.shadow = this.attachShadow({mode: 'open'})
+    }
+
+
+    attributeChangedCallback(attr, prev, next) {
+        if (attr === 'item' && prev !== next) {
+            this.item = JSON.parse(next)
+            this.data= makeData(this.item)
+            this.pid = this.item.id;
+            this.render();
+        }
+    }
+
+
+    connectedCallback() {
+        this.render();
+        this.hasMount = true;
+    }
+
+
+    render() {
+
+        this.shadow.innerHTML = `
         <section>
-            <h2>${DATA.title}</h2>
-            <h3 class = 'description-section' data-type="${DATA.category}"> ${DATA.category}</h3>
-            <dl>
-                ${strJoin(DATA.tools.map(tool => `<dd class="description-tool" data-type="${tool}">${tool}</dd>`))}
-            </dl>
-            <style>${STYLE}</style>
-            <script>${attachListeners()}</script>
+            <h2>${this.data.title}</h2>
+            <h3 class = 'description-section' data-type="${this.data.category}"> ${this.data.category}</h3>
+            <dl>${
+            strJoin(this.data.tools.map(tool => `<dd class="description-tool" data-type="${tool}">${tool}</dd>`))
+        }</dl>
+        ${style}
         </section>
-    `;
+`;
+
+    }
 }
 
 
 /**
  *
- */
-const attachListeners = () => {
-    document.addEventListener('click', (evt) => {
-        // console.log('ADD LISTENERS :  DESCRIPTION HEADER')
-        if (evt.target.classList.contains( 'description-section')) {
-            LayoutNavigationProjects('section', evt.target.dataset.type)
-        }
-        if (evt.target.classList.contains('description-tool')) {
-            LayoutNavigationProjects('tool', evt.target.dataset.type)
-        }
-    })
-}
-
-
-/**
- *
- * @param pid
+ * @param item
  * @returns {{title: (string|string), category: section, tools: (*|[*])}}
  */
-const makeData = (pid = 'WB02') => {
-    let {items} = JSON.parse(sessionStorage.MIDATA)
-    let item = items.item.find(o => o.id === pid);
+const makeData = (item) => {
 
     return {
         title: item.title,
@@ -70,58 +74,50 @@ const makeData = (pid = 'WB02') => {
 };
 
 
-
 /*
 
  */
-const STYLE = `
-div#project-title {
-    // background:silver;
-}
+const style = `
+<style>
 div#project-title > section{
     display:flex;
     flex-wrap: wrap;
     max-height: 100%;
-    // overflow: auto;
-    // background: yellow;
 }
 div#project-title > section > h2{flex: 0 0 100%;}
-
 div#project-title > section > h3{
     z-index: 10;
     flex: 0 0 40%;
 }
-
 div#project-title > section > dl{
     z-index: 10;
     flex: 0 0 60%;
     display: flex;
-    // background: silver;
-    height: 15px;
     max-width: 56%;
     overflow: auto;
     height: 100%;
     flex-flow: wrap;
     justify-content: flex-end;
 }
+</style>
 `;
 
 
-const _DATA =
-    {
-        title: 'PROJECT NAME',
-        category: 'CATEGORY 1',
-        tools: [
-            'tool a',
-            'tool b',
-            'tool c',
-            'tool d',
-            'tool e',
-            'tool e',
-            'tool e',
-            'tool e',
-            'tool e',
-        ]
-    }
+const _DATA = {
+    title: 'PROJECT NAME',
+    category: 'CATEGORY 1',
+    tools: [
+        'tool a',
+        'tool b',
+        'tool c',
+        'tool d',
+        'tool e',
+        'tool e',
+        'tool e',
+        'tool e',
+        'tool e',
+    ]
+}
 
-// run();
+
+customElements.define('wc-description-header', WCDescriptionHeader);

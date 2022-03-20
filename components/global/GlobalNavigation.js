@@ -10,6 +10,10 @@ class WCGlobalNavigation extends HTMLElement {
     constructor() {
         super();
         this.shadow = this.attachShadow({mode: 'open'})
+        this.shadow.addEventListener('click', (evt) => {
+                this.dispatchEvent(this.shoutChangePage(evt.target.dataset.type))
+            }
+        )
         this.shoutChangePage = (type) => new CustomEvent("changePage", {
                 bubbles: true,
                 cancelable: false,
@@ -23,39 +27,25 @@ class WCGlobalNavigation extends HTMLElement {
 
 
     connectedCallback() {
-        !this.hasMount && attachListeners(this);
         this.render();
+        this.hasMount = true;
     }
 
 
     render() {
-
-        this.shadow.innerHTML = view(this);
-
-        this.hasMount = true;
-
-    }
-}
-
-
-const view = (o) => {
-    return `
+        this.shadow.innerHTML = `
         <div id="global-navigation">
             <nav>
             ${strJoin(DATA.pages.map(page => `<a data-type=${page}>${page}</a>`))}
             </nav>
             ${style}
         </div>
-            `;
+        `
+
+    }
 }
 
 
-const attachListeners = (o) => {
-    o.shadow.addEventListener('click', (evt) => {
-            o.dispatchEvent(o.shoutChangePage(evt.target.dataset.type))
-        }
-    )
-}
 
 
 const style = `

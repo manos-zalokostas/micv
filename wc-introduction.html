@@ -25,12 +25,13 @@
 
 
 <template id="introduction-tmpl">
+
     <div class="introduction-navigation">
         <wc-introduction-navigation></wc-introduction-navigation>
     </div>
 
     <div class="introduction-monitor">
-<!--        <wc-monitor></wc-monitor>-->
+        <!--        <wc-monitor></wc-monitor>-->
     </div>
 
     <div class="introduction-topic">
@@ -53,19 +54,20 @@
         import "/components/introduction/IntroductionNavigation.js"
         import "/components/introduction/IntroductionResume.js"
         import "/components/introduction/IntroductionTimeline.js"
-        import "/components/introduction/IntroductionIntro.js"
         import "/components/introduction/IntroductionWelcome.js"
-
+        import "/components/introduction/IntroductionIntro.js"
         import "/components/monitor/WCMonitor.js"
     </script>
+
     <style>
     </style>
 </template>
 
 
-
 <template id="projectlist-tmpl">
+
     <article>
+
         <div id="projects-navigation">
             <wc-project-navigation></wc-project-navigation>
         </div>
@@ -83,23 +85,41 @@
     </style>
 </template>
 
+
 <template id="description-tmpl">
     <article>
 
-        <div id="project-showcase" data-project=${projectid}>
+        <div id="description-wrapper">
 
-            <div id="project-title">HEADER</div>
+            <div id=description-header">
+                <wc-description-header></wc-description-header>
+            </div>
 
-            <div id="project-description">DESCRIPTION</div>
+            <div id="description-text">
+                <wc-description-text></wc-description-text>
+            </div>
 
-            <div id="project-media">IMAGES</div>
+            <div id="description-media">
+                <wc-description-media></wc-description-media>
+            </div>
 
-            <div id="project-extras">EXTRA FILES</div>
+            <div id="description-extra">
+                <wc-description-extra></wc-description-extra>
+            </div>
 
-            <div id="project-slideshow">SLIDESHOW</div>
+            <div id="description-slideshow">
+                <wc-description-slideshow></wc-description-slideshow>
+            </div>
+
         </div>
     </article>
-
+    <script type="module">
+        import "/components/description/DescriptionHeader.js"
+        import "/components/description/DescriptionText.js"
+        import "/components/description/DescriptionMedia.js"
+        import "/components/description/DescriptionExtra.js"
+        import "/components/description/DescriptionSlideshow.js"
+    </script>
     <style>
     </style>
 </template>
@@ -132,16 +152,16 @@
     // document.querySelector('#global-content').appendChild(templateContent);
 
 
-    fetch('http://localhost:4000/items')
-        .then(response => response.json())
-        .then(data => {
-            sessionStorage.MIDATA = JSON.stringify(data[0].data)
-            // let script = document.createElement('script');
-            // script.type = 'module';
-            // script.src = './modules.js';
-            // document.head.appendChild(script);
-        })
-    ;
+    // fetch('http://localhost:4000/items')
+    //     .then(response => response.json())
+    //     .then(data => {
+    //         sessionStorage.MIDATA = JSON.stringify(data[0].data)
+    //         // let script = document.createElement('script');
+    //         // script.type = 'module';
+    //         // script.src = './modules.js';
+    //         // document.head.appendChild(script);
+    //     })
+    // ;
 
 </script>
 </body>

@@ -1,109 +1,125 @@
-import {dq, cl, strJoin} from "/utils/ally.js";
-
-const CSSID = '#project-slideshow';
-let DATA = '';
-// let activeImage = 'images/webdes_a1/welcome_page.jpg';
-let activeIndex = 0;
-
-export default (pid) => run(pid);
+import {strJoin} from "/utils/ally.js";
 
 
-const run = (pid) => {
-    dq(CSSID).innerHTML = view(pid)
-}
+class WCDescriptionSlideshow extends HTMLElement {
+
+    shadow = '';
+    hasMount = false;
+    img = 1;
 
 
-const view = (pid) => {
+    constructor() {
+        super();
+        this.shadow = this.attachShadow({mode: 'open'})
+    }
 
-     DATA = makeData(pid);
 
-    return `
-        <article class="description-slideshow">
+    static get observedAttributes() {
+        return ['width', 'img'];
+    }
+
+
+    attributeChangedCallback(name, prev, next) {
+        if (name === 'width' && prev !== next) {
+            this.width = next;
+            this.render();
+        }
+        if (name === 'img' && prev !== next) {
+            this.img = next;
+            this.render();
+        }
+    }
+
+
+    connectedCallback() {
+        this.render();
+    }
+
+
+    render() {
+
+        this.shadow.innerHTML = `
+        <article style="width:${this.width}%"  img=${this.img} class="description-slideshow">
+
             <section>
+                <nav class="slideshow-nav">
+            ${strJoin(
+            ['prev', 'next', 'exit'].map(((str) =>
+                    `<a class="nav-btn" data-type=${str}>${str}</a>`
+            )))}
+                </nav>
+
                 <p class="slideshow-preview">
-                    <img src="${DATA.images[activeIndex]}"/>
+                    <img class="preview" src="${DATA.images[this.img]}"/>
+                    <span>TEXT</span>
                 </p>
             </section>
-            <div class="media-navs">
-                <nav class="slideshow-nav">
-                    <a data-type="next">next</a>
-                    <a data-type="prev">prev</a>
-                    <a data-type="exit">exit</a>
-                </nav>
-                <nav class="slideshow-media">
-                ${strJoin(DATA.images.map(((path, i) =>
-            `<a href="#"><img data-index=${i} src=${path} /></a>`
-    )))}
-                </nav>
-            </div>
-                <style>${style()}</style>
-            <script>${attachListeners()}</script>
+
+            <nav class="slideshow-media">
+            ${strJoin(
+            DATA.images.map(((path, i) =>
+                    `<a href="#"><img class="media" data-index=${i} src=${path} /></a>`
+            )))}
+            </nav>
+
+               ${style}
+            <script>${!this.hasMount && attachListeners(this)}</script>
+
         </article>
     `;
+
+        this.hasMount = true;
+
+    }
 }
 
 
-const attachListeners = () => {
-    document.addEventListener('click', (evt) => {
-        // console.log('ADD LISTENERS :  DESCRIPTION SLIDESHOW')
-        if (evt.target.parentElement.parentElement.classList.contains('slideshow-media')) {
-            // cl('CLICK: ', evt.target.src)
-            activeIndex = evt.target.dataset.index;
-            dq('.slideshow-preview img').src = DATA.images[activeIndex];
+const attachListeners = (o) => {
+
+    if (o.hasMount) return;
+
+    o.shadow.addEventListener('click', (evt) => {
+
+        if (evt.target.classList.contains('media')) {
+            console.log(evt.target.dataset.type, o.img)
+            o.setAttribute('img', evt.target.dataset.index);
         }
 
-        if (evt.target.parentElement.classList.contains('slideshow-nav')) {
-            // cl('CLICK: ', evt.target.dataset.type);
+        if (evt.target.classList.contains('nav-btn')) {
+            console.log(evt.target.dataset.type, o.img)
             if (evt.target.dataset.type === 'exit') return;
-            // ,
-            if (evt.target.dataset.type === 'next' && DATA.images[activeIndex + 1]) activeIndex++;
-            if (evt.target.dataset.type === 'prev' && DATA.images[activeIndex - 1]) activeIndex--;
-
-            dq('.slideshow-preview img').src = DATA.images[activeIndex];
+            if (evt.target.dataset.type === 'next' && DATA.images[+o.img + 1]) o.setAttribute('img', ++o.img);
+            if (evt.target.dataset.type === 'prev' && DATA.images[+o.img - 1]) o.setAttribute('img', --o.img);
         }
     })
 }
 
 
-
-const makeData = (pid = 'WB02') => {
-    let {items} = JSON.parse(sessionStorage.MIDATA)
-    let item = items.item.find(o => o.id === pid);
-
-
-    return {
-        // text: item.description,
-        images: item.screenshots.shot
-    }
-};
-
-
-const style = () => `
-${CSSID} article.description-slideshow {
+const style = `
+<style>
+.description-slideshow {
     display: flex;
+    flex-flow: column;
     padding: 10px;
-    background: black;
-    flex-flow: row-reverse;
-    height:100%;
 }
-${CSSID} article.description-slideshow .slideshow-preview img{
-    max-width:100%;
-    max-height: 100%;
-}
-${CSSID} article.description-slideshow > section {
+.description-slideshow > section {
     display: flex;
-    flex: 4 4 100%;
+    flex: 1 1 100%;
+    margin: auto;
+    width: 80%;
+    flex-flow: column;
+    background: silver;
 }
-${CSSID} article.description-slideshow > section > nav{
+.description-slideshow > section > nav{
     display: flex;
     place-content: flex-end;
     color: white;
     margin: 10px 0;
 }
-${CSSID} article.description-slideshow > section > nav > a{
+.description-slideshow > section > nav > a{
     margin:0 4px;
 }
-${CSSID} article.description-slideshow > section > p {
+.description-slideshow > section > p {
     display: flex;
     flex: 1 1 100%;
     margin: auto;
@@ -111,64 +127,44 @@ ${CSSID} article.description-slideshow > section > p {
     flex-flow: column;
     padding: 25px 0;
 }
-${CSSID} article.description-slideshow > section > p > span {
-    padding: 10px;
-    color: white;
-    text-align: right;
+.description-slideshow > section > p > span {
+    padding: 10px 0;
 }
-${CSSID} article.description-slideshow > nav {
+.description-slideshow > nav {
     display: flex;
+    flex: 1 1 100%;
+    margin: auto;
+    width: 90%;
+    place-content: space-evenly;
+    padding: 10px 0;
     background: orange;
-    flex-flow: column;
-    place-content: flex-end;
 }
-${CSSID} article.description-slideshow > nav > a {
-    margin:5px
-}
-${CSSID} .slideshow-media img {
+.slideshow-media img {
     width: 80px;
 }
-${CSSID} .media-navs {
-    flex: 1 1 15%;
-    display: flex;
-    flex-flow: column;
-    padding: 0 10px 0 0;
-}
-${CSSID} nav.slideshow-nav {
-    display: flex;
-    flex:  1 1 10%;
-    flex-flow: column;
-    text-align: center;
-    align-items: flex-start;
-}
-${CSSID} nav.slideshow-nav > a {
-    color:white;
-    padding:2px 4px 4px 4px;
-}
-${CSSID} nav.slideshow-media {
-    display: flex;
-    flex-flow: column;
-    flex: 4 4 80%;
-    place-content: flex-end;
-}
+</style>
 `;
 
-//
-// const DATA =
-//     {
-//         text: `
-// Front-end developer with OOP PHP Zend Framework & Javascript / Jquery (backend was a remote service)
-// Follow explicit instructions to consume required data from remote web services and blueprint layouts to deliver UIs
-// Provide ticketing solutions for acknowledged bugs
-// `,
-//         images: [
-//             "images/webdes_a1/welcome_page.jpg",
-//             "images/webdes_a1/add_product_to_basket.jpg",
-//             "images/webdes_a1/single_product_description.jpg",
-//             "images/webdes_a1/preview_registered_products.jpg",
-//             "images/webdes_a1/preview_registered_users.jpg",
-//         ]
-//     }
+
+/**
+ *
+ * @type {{images: string[], text: string}}
+ */
+const DATA =
+    {
+        text: `
+Front-end developer with OOP PHP Zend Framework & Javascript / Jquery (backend was a remote service)
+Follow explicit instructions to consume required data from remote web services and blueprint layouts to deliver UIs
+Provide ticketing solutions for acknowledged bugs
+`,
+        images: [
+            "images/webdes_a1/welcome_page.jpg",
+            "images/webdes_a1/add_product_to_basket.jpg",
+            "images/webdes_a1/single_product_description.jpg",
+            "images/webdes_a1/preview_registered_products.jpg",
+            "images/webdes_a1/preview_registered_users.jpg",
+        ]
+    };
 
 
-run();
+customElements.define('wc-description-slideshow', WCDescriptionSlideshow);
