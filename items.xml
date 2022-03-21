@@ -3,7 +3,7 @@
     <item>
         <domain>WEB</domain>
         <id>WB01</id>
-        <section>Application Development</section>
+        <section>Education</section>
         <category>-</category>
         <title>Schedule Handler</title>
         <tools>
@@ -51,7 +51,7 @@
     <item>
         <domain>WEB</domain>
         <id>WB02</id>
-        <section>Site Development</section>
+        <section>Merchandise</section>
         <category>Design and Development</category>
         <title>Elgreg</title>
         <tools>
@@ -92,7 +92,7 @@
     <item>
         <domain>WEB</domain>
         <id>WB03</id>
-        <section>Site Development</section>
+        <section>Merchandise</section>
         <category>Design and Development</category>
         <title>ELGREG [2013]</title>
         <tools>
@@ -163,7 +163,7 @@
     <item>
         <domain>WEB</domain>
         <id>WB04</id>
-        <section>Site Development</section>
+        <section>Portfolio</section>
         <category>Design and Development</category>
         <title>Curriculum Vitae</title>
         <tools>
@@ -1740,7 +1740,7 @@
     <item>
         <domain>WEB</domain>
         <id>WB05</id>
-        <section>Javascript Made E-learning</section>
+        <section>Education</section>
         <category>Design and Development</category>
         <title>Pearson E-learning</title>
         <tools>
@@ -1795,7 +1795,7 @@
     <item>
         <domain>WEB</domain>
         <id>WB06</id>
-        <section>Employee Management System</section>
+        <section>Safekeeping</section>
         <category>Design and Development</category>
         <title>DeltaComsos ERP</title>
         <tools>
@@ -1897,7 +1897,7 @@
     <item>
         <domain>WEB</domain>
         <id>WB08</id>
-        <section>Application Development</section>
+        <section>Banking</section>
         <category>Design and Development</category>
         <title>Commerzbank Infobroker</title>
         <tools>
@@ -1958,7 +1958,7 @@ Key Responsibilities:
     <item>
         <domain>WEB</domain>
         <id>WB09</id>
-        <section>Application Development</section>
+        <section>Conferences</section>
         <category>Design and Development</category>
         <title>Noblelinx CRM</title>
         <tools>
@@ -2030,7 +2030,7 @@ Key Responsibilities:
     <item>
         <domain>WEB</domain>
         <id>WB10</id>
-        <section>Application Development</section>
+        <section>Warehouse</section>
         <category>Design and Development</category>
         <title>Ecep Technologies Inventory</title>
         <tools>
@@ -2099,7 +2099,7 @@ The initial task was to design and build a database of a centralized inventory a
     <item>
         <domain>WEB</domain>
         <id>WB11</id>
-        <section>Application Development</section>
+        <section>Hospitality</section>
         <category>Design and Development</category>
         <title>Cosmores Booking Engine</title>
         <tools>
@@ -2172,9 +2172,9 @@ Build a configurable, Javascript CORS widget for displaying best price of an aff
     <item>
         <domain>WEB</domain>
         <id>WB12</id>
-        <section>Application Development</section>
+        <section>Hospitality</section>
         <category>Design and Development</category>
-        <title>Rateparity</title>
+        <title>Rateparity - Enhanced User Experince</title>
         <tools>
             <tool>web_application</tool>
             <tool>javascript</tool>
@@ -2239,8 +2239,8 @@ The widgets configuration includes
  ]]>
         </description>
         <screenshots>
-            <shot>images/rateparity/widget_price_full.png</shot>
             <shot>images/rateparity/widget_max_roomstream.png</shot>
+            <shot>images/rateparity/widget_price_full.png</shot>
             <shot>images/rateparity/widget_offer_full.png</shot>
             <shot>images/rateparity/config_price_position.png</shot>
             <shot>images/rateparity/config_offer_colors.png</shot>
@@ -2257,17 +2257,129 @@ The widgets configuration includes
         </files>
         <media></media>
         <links>
-            <link>https://code.rateparity.com/v4.versions/?debug=price.max</link>
-            <link>https://code.rateparity.com/v4.versions/?debug=price.full</link>
-            <link>https://code.rateparity.com/v4.versions/?debug=price.min</link>
-            <link>https://code.rateparity.com/v4.versions/?debug=price.plain</link>
-            <link>https://code.rateparity.com/v4.versions/?debug=price.mob</link>
-            <link>https://code.rateparity.com/v4.versions/?debug=offer.full</link>
-            <link>https://code.rateparity.com/v4.versions/?debug=offer.plain</link>
-            <link>https://code.rateparity.com/v4.versions/?debug=offer.mob</link>
-            <link>https://code.rateparity.com/v4.versions/?debug=nudges</link>
-            <link>https://code.rateparity.com/v4.versions/?debug=snippet</link>
-            <link>https://code.rateparity.com/v4.versions/?debug=exit</link>
+<!--            <link>https://code.rateparity.com/v4.versions/?debug=price.max</link>-->
+<!--            <link>https://code.rateparity.com/v4.versions/?debug=price.full</link>-->
+<!--            <link>https://code.rateparity.com/v4.versions/?debug=price.min</link>-->
+<!--            <link>https://code.rateparity.com/v4.versions/?debug=price.plain</link>-->
+<!--            <link>https://code.rateparity.com/v4.versions/?debug=price.mob</link>-->
+<!--            <link>https://code.rateparity.com/v4.versions/?debug=offer.full</link>-->
+<!--            <link>https://code.rateparity.com/v4.versions/?debug=offer.plain</link>-->
+<!--            <link>https://code.rateparity.com/v4.versions/?debug=offer.mob</link>-->
+<!--            <link>https://code.rateparity.com/v4.versions/?debug=nudges</link>-->
+<!--            <link>https://code.rateparity.com/v4.versions/?debug=snippet</link>-->
+<!--            <link>https://code.rateparity.com/v4.versions/?debug=exit</link>-->
+        </links>
+    </item>
+    <item>
+        <domain>WEB</domain>
+        <id>WB13</id>
+        <section>Energy</section>
+        <category>Design and Development</category>
+        <title>Hybrid Power Management</title>
+        <tools>
+            <tool>web_application</tool>
+            <tool>javascript</tool>
+            <tool>reactjs</tool>
+            <tool>es6</tool>
+            <tool>css3</tool>
+            <tool>scss</tool>
+            <tool>requirements</tool>
+            <tool>nodejs</tool>
+            <tool>webpack</tool>
+            <tool>git</tool>
+            <tool>rest_api</tool>
+        </tools>
+        <description>
+            <![CDATA[
+<h3>Contracted as standalone Full stack Developer to design and develop energy management
+application that address energy planning amongst the national energy supplier and official subsidiaries distributed across islands</h3>
+<ul>
+<li>
+Core scopes of the project: Power Production / Load / Availability, Technical status of units and ultimately
+alignment with the official Schedule announced by the national supplier on daily basis
+</li>
+<li>
+The project consists of several policy restrictions applied at all levels and impose strict time submissions
+compliance and algorithmic data dependencies
+</li>
+<li>
+Communication amongst all members addressed within the app with Notifications and Message exchanges
+</li>
+<li>
+Dockerized infrastructure was installed remotely to national supplier premises at project completion
+</li>
+</ul>
+ ]]>
+        </description>
+        <screenshots>
+            <shot>images/hybrid/htos.png</shot>
+            <shot>images/hybrid/hintro.png</shot>
+            <shot>images/hybrid/hload.png</shot>
+            <shot>images/hybrid/hprod.png</shot>
+            <shot>images/hybrid/hshed.png</shot>
+        </screenshots>
+        <score>-</score>
+        <tutor>-</tutor>
+        <comment>-</comment>
+        <files>
+        </files>
+        <media></media>
+        <links>
+        </links>
+    </item>
+    <item>
+        <domain>WEB</domain>
+        <id>WB14</id>
+        <section>Energy</section>
+        <category>Design and Development</category>
+        <title>Synergy - Energy Analytics Apps </title>
+        <tools>
+            <tool>web_application</tool>
+            <tool>javascript</tool>
+            <tool>reactjs</tool>
+            <tool>es6</tool>
+            <tool>css3</tool>
+            <tool>scss</tool>
+            <tool>requirements</tool>
+            <tool>nodejs</tool>
+            <tool>webpack</tool>
+            <tool>git</tool>
+            <tool>rest_api</tool>
+        </tools>
+        <description>
+            <![CDATA[
+<h3>Contracted as standalone Full stack Developer to design and develop infrastructure and 2 energy apps, parts of the
+multi European big-data project ‘Synergy” founded by the greater movement “Horizon 2020”. Project customers are major national suppliers across Europe</h3>
+<ul>
+<li>
+Scopes of the project are to build infrastructure for the Greek domains hosting the 2 GUI Applications
+</li>
+<li>
+Delegate apps 'authentication / authorization' processes and SSO features to remote core platform invoking the Keycloak IAM controls
+</li>
+<li>
+Provide analytics and chart visualizations in a way to enhance the customers understanding and tendencies of excessive, collaborative amounts of data
+</li>
+<li>
+Dockerized infrastructure utilized to maintain the interconnections active between infrastructure nodes
+</li>
+</ul>
+ ]]>
+        </description>
+        <screenshots>
+            <shot>images/synergy/sfreq.png</shot>
+            <shot>images/synergy/sintro.png</shot>
+            <shot>images/synergy/splan.png</shot>
+            <shot>images/synergy/sscen.png</shot>
+            <shot>images/synergy/ssel.png</shot>
+        </screenshots>
+        <score>-</score>
+        <tutor>-</tutor>
+        <comment>-</comment>
+        <files>
+        </files>
+        <media></media>
+        <links>
         </links>
     </item>
 </items>
