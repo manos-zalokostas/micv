@@ -1,6 +1,5 @@
-// import {LayoutNavigationProjectShowcase, LayoutNavigationGlobal} from "/layout/main.js";
-
 const CSSID = 'content-project';
+let dataclone = [];
 let DATA = '';
 
 export default () => {
@@ -60,7 +59,6 @@ const attachListeners = () => {
 }
 
 
-let dataclone = [];
 
 
 const makeData = () => {

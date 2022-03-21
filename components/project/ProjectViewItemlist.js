@@ -1,5 +1,4 @@
 import {strJoin} from "/utils/ally.js";
-import {itemById} from "/service/DataStore.js";
 
 
 export default class WCProjectViewItemlist extends HTMLElement {
@@ -16,48 +15,43 @@ export default class WCProjectViewItemlist extends HTMLElement {
         this.data = data;
         this.shadow = this.attachShadow({mode: 'open'})
         this.shadow.addEventListener('click', evt => {
-            console.log(itemById(evt.target.dataset.project))
+            if (evt.target.classList.contains('project')) {
+                this.dispatchEvent(this.shoutChangeDescriptionTopic(evt.target.dataset.pid));
+            }
         })
+        this.shoutChangeDescriptionTopic = (topicId) => new CustomEvent("changeTopicDescription", {
+                bubbles: true,
+                cancelable: false,
+                composed: true,
+                detail: {
+                    topicId
+                }
+            }
+        )
+
     }
 
 
     connectedCallback() {
-        // !this.hasMount && attachLinsteners(this);
         this.render();
     }
 
 
     render() {
 
-        this.shadow.innerHTML = view(this.data);
+        this.shadow.innerHTML = `
+            <section class="group-project">
+                <h3>${this.data[0]}</h3>
+                    <nav> 
+                        ${strJoin(this.data[1].map((pack, i) => `<a class="project" data-pid="${pack[0]}">${pack[1]}</a>`))}
+                    </nav>
+                    ${style}
+            </section>
+`;
 
-        this.hasMount = true;
     }
 
 }
-
-
-/**
- *
- * @param data
- * @param i
- * @returns {string}
- */
-const view = (data = DATA) => {
-    
-    return `
-    <section class="group-project">
-        <h3>${data[0]}</h3>
-            <nav> 
-                ${strJoin(data[1].map((pack, i) => `<a data-project="${pack[0]}">${pack[1]}</a>`))}
-            </nav>
-            ${style}
-    </section>
-    `;
-};
-
-
-
 
 
 /*

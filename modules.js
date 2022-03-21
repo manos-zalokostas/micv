@@ -27,4 +27,4 @@ import "./components/Monitor.js";
 // import DescriptionSlideshow from "./components/DescriptionSlideshow.js";
 
 
-// import ReferenceGroup from "./components/ReferenceGroup.js";
+// import Reference from "./components/Reference.js";

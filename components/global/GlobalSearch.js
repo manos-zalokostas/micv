@@ -17,16 +17,14 @@ class WCGlobalSearch extends HTMLElement {
             }
         })
         this.shadow.addEventListener('change', (evt) => {
-            
+
             if (evt.target.getAttribute('list') === 'project-list') {
                 this.dispatchEvent(this.shoutChangeDescriptionTopic(evt.target.value));
-                console.log('CHANGE => PROJECT-LIST')
             }
             if (evt.target.getAttribute('list') === 'tool-list') {
-                console.log('CHANGE => TOOL-LIST')
             }
         })
-        this.shoutChangeDescriptionTopic = (topicId) => new CustomEvent("changeDescriptionTopic", {
+        this.shoutChangeDescriptionTopic = (topicId) => new CustomEvent("changeTopicDescription", {
                 bubbles: true,
                 cancelable: false,
                 composed: true,
@@ -84,10 +82,8 @@ class WCGlobalSearch extends HTMLElement {
 }
 
 
-/**
- *
- * @returns {{projects: [string, string, string, string], tools: [string, string, string, string]}}
- * @constructor
+/*
+
  */
 const DATA = {
     projects: groupProjects(),
@@ -106,24 +102,6 @@ const style = `
 #search-radio {
     display: flex;
 }
-/*#search_radio  {*/
-/*    position: fixed;*/
-/*    z-index:100;*/
-/*    top:0;*/
-/*    right: 40%;;    */
-/*    display: flex;*/
-/*}*/
-/*#search_radio > div {*/
-/*    flex:0.5;*/
-/*    display: flex;*/
-/*    place-content: space-evenly;*/
-/*}*/
-/*#search_radio > div input {*/
-/*    flex: 1;*/
-/*    border:none;*/
-/*    border-bottom: 1px solid #888;*/
-/*    background: none;*/
-/*}*/
 </style>
 `;
 

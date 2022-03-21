@@ -18,7 +18,7 @@ class WCProjectNavigation extends HTMLElement {
         })
         this.shoutChangeProjectTopic = (topic) =>{
             
-            return new CustomEvent("changeProjectTopic", {
+            return new CustomEvent("changeTopicProject", {
                     bubbles: true,
                     cancelable: false,
                     composed: true,

@@ -15,7 +15,7 @@ class WCIntroductionNavigation extends HTMLElement {
         this.shadow.addEventListener('click', (evt) => {
             this.dispatchEvent(this.shoutChangeIntoTopic(evt.target.dataset.topic))
         })
-        this.shoutChangeIntoTopic = (topic) => new CustomEvent("changeIntroTopic", {
+        this.shoutChangeIntoTopic = (topic) => new CustomEvent("changeTopicIntroduction", {
                 bubbles: true, cancelable: false, composed: true,
                 detail: {
                     topic

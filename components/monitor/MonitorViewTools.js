@@ -1,4 +1,3 @@
-// import {LayoutNavigationGlobal, LayoutNavigationProjects} from "/layout/main.js";
 import * as aux from "/utils/ally.js";
 
 const CSSID = 'content-tools';

@@ -1,38 +1,69 @@
-import ProjectorProject from "./MonitorViewProject.js";
-import ProjectorQuote from "./MonitorViewQuote.js";
-import ProjectorTools from "./MonitorViewTools.js";
-import {dq} from "/utils/ally.js";
+import VieProject from "./MonitorViewProject.js";
+import ViewQuote from "./MonitorViewQuote.js";
+import ViewTools from "./MonitorViewTools.js";
 
 
 const filters = ['project', 'quote', 'tools'];
 
-let rotateFrequency = 1000 * 5;
 let index = -1;
 
 let isIntervalBlocked = false;
 let isFilterForced = false;
 
 
-const CSSID = '#introduction-projector';
-
-
-/**
- *
- * @param o
- */
-export default (o = null) => run(o);
-
-
 /**
  *
  */
-const run = () => {
-    rotateContent();
-    dq(CSSID).innerHTML = view()
+class WCMonitor extends HTMLElement {
+
+    shadow = '';
+    hasMount = false;
+    img = 1;
+
+
+    constructor() {
+        super();
+        this.shadow = this.attachShadow({mode: 'open'})
+    }
+
+
+    connectedCallback() {
+        this.render();
+    }
+
+
+    render() {
+
+        this.shadow.innerHTML = `
+            <article class="projector">
+                <header>
+                    <nav>
+                        <a data-filter="project">project</a>
+                        <a data-filter="quote">quotes</a>
+                        <a data-filter="tools">tools</a>
+                    </nav>
+                </header>
+                <main>${displayContent(this)}</main>
+                <script>${attacheListeners(this)}</script>
+                ${style}
+            </article>`
+
+        this.hasMount = true;
+
+    }
 }
-// const run = () => {
-//     return view();
-// }
+
+/**
+ *
+ * @returns {string}
+ */
+const displayContent = (o) => {
+    let filter = resolveFilter();
+    !o.hasMount && rotateContent(o);
+    if (filter === 'project') return VieProject()
+    if (filter === 'quote') return ViewQuote();
+    if (filter === 'tools') return ViewTools();
+};
 
 
 /**
@@ -50,16 +81,16 @@ const resolveFilter = () => {
 /**
  *
  */
-const rotateContent = () => {
+const rotateContent = (o) => {
     let interval = setInterval(
         () => {
             if (isIntervalBlocked) {
                 clearInterval(interval)
                 return;
             }
-            replaceContent()
+            replaceContent(o)
         },
-        rotateFrequency
+        1000 * 5
     )
 };
 
@@ -67,24 +98,8 @@ const rotateContent = () => {
 /**
  *
  */
-const replaceContent = () => {
-    document.querySelector('main').innerHTML = displayContent();
-};
-
-
-/**
- *
- * @returns {string}
- */
-const displayContent = () => {
-    let filter = resolveFilter();
-    if (filter === 'project') return ProjectorProject();
-    if (filter === 'quote') return ProjectorQuote();
-    if (filter === 'tools') return ProjectorTools();
-    // return ProjectorProject();
-    // return ProjectorQuote();
-    // return ProjectorTools();
-
+const replaceContent = (o) => {
+    o.shadow.querySelector('main').innerHTML = displayContent(o);
 };
 
 
@@ -95,7 +110,6 @@ const displayContent = () => {
 const filterContent = (evt) => {
     let {filter} = evt.target.dataset;
     if (filters.includes(filter)) {
-        // console.log(filter);
         index = filters.indexOf(filter);
         isFilterForced = true;
     }
@@ -104,32 +118,9 @@ const filterContent = (evt) => {
 
 /**
  *
- * @returns {string}
  */
-const view = () => {
-
-    return `
-        <article class="projector">
-            <header>
-                <nav>
-                    <a data-filter="project">project</a>
-                    <a data-filter="quote">quotes</a>
-                    <a data-filter="tools">tools</a>
-                </nav>
-            </header>
-            <main>${displayContent()}</main>
-            <style>${style()}</style>
-            <script>${attachLoaders()}</script>
-        </article>
-    `;
-}
-
-
-/**
- *
- */
-const attachLoaders = () => {
-    document.addEventListener('click', evt => {
+const attacheListeners = (o) => {
+    o.shadow.addEventListener('click', evt => {
         // console.log('ADD LISTENERS :  MONITOR')
         if (evt.target.dataset && evt.target.dataset.filter) {
             filterContent(evt);
@@ -138,40 +129,38 @@ const attachLoaders = () => {
 };
 
 
-
-
 /*
 
  */
-const style = () => `
-${CSSID} article.projector {
-    background: #444;
+const style = `
+<style>
+.projector {
+    overflow-y: auto;
     border-radius: 10px;
-    // border: 4px solid #555;
     box-sizing: border-box;
     padding: 5px;
     width:100%;
-    height:100%;
+    height: 300px;
+    background: #444;
 }
-${CSSID} nav {
+nav {
     display: flex;
     justify-content: flex-end;
 }
-${CSSID} nav a {
+nav a {
     padding: 0 15px;
     color: white;
     background: tomato;
     margin: 0 2px;
 }
-${CSSID} main {
+main {
     display:flex;
     width:100%;
     height:100%;
 }
-`
+</style>
+`;
 
-// const elem = document.createElement('div');
-// elem.innerHTML = run();
-// document.body.appendChild(elem);
 
-run();
+customElements.define('wc-monitor', WCMonitor);
+

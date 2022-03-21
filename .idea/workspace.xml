@@ -6,19 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="7c2027ac-7fbf-48f5-b8a4-e62f9701cdf7" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_dev/wc-examples/WCDescriptionSlideshow.js" beforeDir="false" afterPath="$PROJECT_DIR$/_dev/wc-examples/WCDescriptionSlideshow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/description/DescriptionExtra.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/description/DescriptionExtra.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/description/DescriptionHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/description/DescriptionHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/description/DescriptionMedia.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/description/DescriptionMedia.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_dev/wc-examples/WCDescriptionSlideshow.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/components/description/DescriptionSlideshow.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/description/DescriptionSlideshow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/description/DescriptionText.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/description/DescriptionText.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/global/GlobalNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/global/GlobalNavigation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/global/GlobalSearch.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/global/GlobalSearch.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/global/GlobalWrapper.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/global/GlobalWrapper.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/introduction/IntroductionAbout.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/introduction/IntroductionAbout.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/introduction/IntroductionNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/introduction/IntroductionNavigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/project/ProjectMap.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/project/ProjectMap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/monitor/Monitor.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/monitor/Monitor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/monitor/MonitorViewProject.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/monitor/MonitorViewProject.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/monitor/MonitorViewQuote.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/monitor/MonitorViewQuote.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/monitor/MonitorViewTools.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/monitor/MonitorViewTools.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/project/ProjectNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/project/ProjectNavigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/project/ProjectViewItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/project/ProjectViewItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/project/ProjectViewItemlist.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/project/ProjectViewItemlist.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/reference/ReferenceGroup.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/reference/Reference.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/DataStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/service/DataStore.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wc-introduction.html" beforeDir="false" afterPath="$PROJECT_DIR$/wc-introduction.html" afterDir="false" />
     </list>
@@ -229,7 +230,10 @@
       <workItem from="1647673569730" duration="7118000" />
       <workItem from="1647695841191" duration="19510000" />
       <workItem from="1647764960018" duration="404000" />
-      <workItem from="1647765503162" duration="13581000" />
+      <workItem from="1647765503162" duration="13675000" />
+      <workItem from="1647796110268" duration="384000" />
+      <workItem from="1647796640125" duration="10071000" />
+      <workItem from="1647854338213" duration="1704000" />
     </task>
     <task id="LOCAL-00001" summary="convert http =&gt; https">
       <created>1545926008916</created>
@@ -385,7 +389,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647722113666</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="#WC-PAGES | DESCRIPTION PAGE&#10;****************************************&#10; - INTEGRATE PAGE">
+      <created>1647784825169</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1647784825170</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -457,17 +468,7 @@
     <MESSAGE value="#MOVE TO TERA-DRIVE" />
     <MESSAGE value="#MULTI UPDATE&#10;*********************&#10; - CONVERTS JS MODULES TO 'WEB-COMPONENTS' CLASSES W/ 'SHADOW DOM' ( ** PARTIAL ) &#10; - USE 'TEMPLATE' ELEMENTS TO REPRESENT APP PAGES AND DEPRECATE THE 'LAYOUT' BASE CLASS&#10; - RESTRUCTURE PATHS AND DIRECTORIES FOR CLARITY + MAINTAINABILITY&#10;++ CLEANUPS" />
     <MESSAGE value="#WC-PAGES | INTRODUCTION / PROJECT&#10;********************************************&#10; - INTEGRATE PAGES W/ NESTED WEB-COMPONENTS" />
-    <option name="LAST_COMMIT_MESSAGE" value="#WC-PAGES | INTRODUCTION / PROJECT&#10;********************************************&#10; - INTEGRATE PAGES W/ NESTED WEB-COMPONENTS" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/_dev/wc-examples/WCDescriptionSlideshow.js</url>
-          <line>162</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="#WC-PAGES | DESCRIPTION PAGE&#10;****************************************&#10; - INTEGRATE PAGE" />
+    <option name="LAST_COMMIT_MESSAGE" value="#WC-PAGES | DESCRIPTION PAGE&#10;****************************************&#10; - INTEGRATE PAGE" />
   </component>
 </project>

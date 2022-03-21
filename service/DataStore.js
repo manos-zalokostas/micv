@@ -1,3 +1,8 @@
+export const raw = () => _loadData();
+
+
+
+
 /*
 
  */
@@ -6,10 +11,10 @@ export const itemById = (itemId) => {
     let o = _loadData(),
         items = o.items.item,
         item = items.find(o => o.id === itemId);
-    // tools = new Set(tools.flat());
 
     return item;
 }
+
 
 
 /**

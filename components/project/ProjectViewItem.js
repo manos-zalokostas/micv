@@ -1,16 +1,30 @@
 export default class WCProjectViewItem extends HTMLElement {
 
     shadow = '';
-    hasMount = false;
     page = 'introduction'
     introTopic = 'welcome'
     data = [];
+
 
     constructor(data = DATA) {
         super();
         this.data = data;
         this.shadow = this.attachShadow({mode: 'open'})
-        attachListeners(this);
+        this.shadow.addEventListener('click', evt => {
+            if (evt.target.classList.contains('project')) {
+                this.dispatchEvent(this.shoutChangeDescriptionTopic(evt.target.dataset.pid));
+            }
+        })
+        this.shoutChangeDescriptionTopic = (topicId) => new CustomEvent("changeTopicDescription", {
+                bubbles: true,
+                cancelable: false,
+                composed: true,
+                detail: {
+                    topicId
+                }
+            }
+        )
+
     }
 
 
@@ -21,40 +35,18 @@ export default class WCProjectViewItem extends HTMLElement {
 
     render() {
 
-        this.shadow.innerHTML = view(this.data);
+        this.shadow.innerHTML = `
+        <section class="group-project">
+            <a class="project" data-pid="${this.data[0]}">${this.data[1]}</a>
+            ${style}
+        </section>
+`
 
-        this.hasMount = true;
     }
 
 }
 
 
-const view = (data, renderTags = true) => {
-
-    return `
-    <section class="group-project">
-        <a data-project="${data[0]}">${data[1]}</a>
-        ${renderTags && style}
-    </section>
-    `;
-};
-
-
-
-
-/**
- *
- */
-const attachListeners = () => {
-    document.addEventListener('click', evt => {
-        // !hasAttachedListeners && document.addEventListener('click', evt => {
-        console.log('ADD LISTENERS :  PROJECTS')
-        // if (Array.from(dqa('.group-project  > a')).includes(evt.target)) {
-        // LayoutNavigationProjectShowcase(evt.target.dataset.project);
-        // hasAttachedListeners = true;
-        // }
-    })
-};
 
 
 /*

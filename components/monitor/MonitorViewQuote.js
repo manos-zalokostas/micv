@@ -1,4 +1,3 @@
-// import {LayoutNavigationGlobal, LayoutNavigationProjectShowcase} from "/layout/main.js";
 const CSSID = 'content-quote';
 let dataclone = [];
 let DATA = '';

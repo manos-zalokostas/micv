@@ -1,26 +1,38 @@
-import {dq, cl, strJoin} from "/utils/ally.js";
+class WCReference extends HTMLElement {
 
-const CSSID = '#page-footer';
-
-// let activeImage = 'images/webdes_a1/welcome_page.jpg';
-
-
-export default (o = null) => run(o);
+    shadow = '';
+    hasMount = false;
 
 
-const run = (cssid) => {
-    dq(cssid || CSSID).innerHTML = view()
+    constructor() {
+        super();
+        this.shadow = this.attachShadow({mode: 'open'})
+    }
+
+
+    connectedCallback() {
+        this.render();
+        this.hasMount = true;
+    }
+
+
+    render() {
+
+        this.shadow.innerHTML = `
+            <article>
+                ${occupation()}
+                ${education()}
+                ${certificates()}
+                ${socials()}
+                ${style}
+            </article>
+`
+    }
 }
 
 
-const view = () => {
-    return `
-    <div>
-    ${occupation()}
-    ${education()}
-    ${certificates()}
-    ${socials()}
-    <style>
+const style = `
+<style>
 div#page-footer {
     position: absolute;
     left: 0;
@@ -94,32 +106,9 @@ article.reference-domain ul li {
 }
 section.reference-group {
 }
-    </style>
-    </div>
-    `;
-}
+</style>
+`;
 
-
-const attachListeners = () => {
-    document.addEventListener('click', (evt) => {
-        // console.log('ADD LISTENERS :  REFERENCE GROUP')
-        // if (evt.target.parentElement.parentElement.classList.contains('slideshow-media')) {
-        //     cl('CLICK: ', evt.target.src)
-        //     activeIndex = evt.target.dataset.index;
-        //     dq('.slideshow-preview img').src = DATA.images[activeIndex];
-        // }
-        //
-        // if (evt.target.parentElement.classList.contains('slideshow-nav')) {
-        //     cl('CLICK: ', evt.target.dataset.type);
-        //     if (evt.target.dataset.type === 'exit') return;
-        //     // ,
-        //     if (evt.target.dataset.type === 'next' && DATA.images[activeIndex + 1]) activeIndex++;
-        //     if (evt.target.dataset.type === 'prev' && DATA.images[activeIndex - 1]) activeIndex--;
-        //
-        //     dq('.slideshow-preview img').src = DATA.images[activeIndex];
-        // }
-    })
-}
 
 const occupation = () => `
 <article class="reference-domain">
@@ -182,47 +171,46 @@ const socials = () => `
  `;
 
 
-const DATA =
-    {
-        occupation: [
-            {
-                company: 'COMPANY 1',
-                domain: 'DOMAIN 1',
-                referers: ['ref 1', 'ref 2', 'ref 3', 'ref 4']
-            },
-            {
-                company: 'COMPANY 2',
-                domain: 'DOMAIN 3',
-                referers: ['ref 14', 'ref 52', 'ref 53', 'ref 44']
-            },
-        ],
-        education: [
-            {
-                company: 'SCHOOL 1',
-                domain: 'DOMAIN 1',
-                referers: ['ref 1', 'ref 2', 'ref 3', 'ref 4']
-            },
-            {
-                company: 'SCHOOL 2',
-                domain: 'DOMAIN 3',
-                referers: ['ref 14', 'ref 52', 'ref 53', 'ref 44']
-            },
-        ],
-        certificates: [
-            "images/webdes_a1/welcome_page.jpg",
-            "images/webdes_a1/add_product_to_basket.jpg",
-            "images/webdes_a1/single_product_description.jpg",
-            "images/webdes_a1/preview_registered_products.jpg",
-            "images/webdes_a1/preview_registered_users.jpg",
-        ],
-        socials: [
-            "images/webdes_a1/welcome_page.jpg",
-            "images/webdes_a1/add_product_to_basket.jpg",
-            "images/webdes_a1/single_product_description.jpg",
-            "images/webdes_a1/preview_registered_products.jpg",
-            "images/webdes_a1/preview_registered_users.jpg",
-        ]
-    }
+const DATA = {
+    occupation: [
+        {
+            company: 'COMPANY 1',
+            domain: 'DOMAIN 1',
+            referers: ['ref 1', 'ref 2', 'ref 3', 'ref 4']
+        },
+        {
+            company: 'COMPANY 2',
+            domain: 'DOMAIN 3',
+            referers: ['ref 14', 'ref 52', 'ref 53', 'ref 44']
+        },
+    ],
+    education: [
+        {
+            company: 'SCHOOL 1',
+            domain: 'DOMAIN 1',
+            referers: ['ref 1', 'ref 2', 'ref 3', 'ref 4']
+        },
+        {
+            company: 'SCHOOL 2',
+            domain: 'DOMAIN 3',
+            referers: ['ref 14', 'ref 52', 'ref 53', 'ref 44']
+        },
+    ],
+    certificates: [
+        "images/webdes_a1/welcome_page.jpg",
+        "images/webdes_a1/add_product_to_basket.jpg",
+        "images/webdes_a1/single_product_description.jpg",
+        "images/webdes_a1/preview_registered_products.jpg",
+        "images/webdes_a1/preview_registered_users.jpg",
+    ],
+    socials: [
+        "images/webdes_a1/welcome_page.jpg",
+        "images/webdes_a1/add_product_to_basket.jpg",
+        "images/webdes_a1/single_product_description.jpg",
+        "images/webdes_a1/preview_registered_products.jpg",
+        "images/webdes_a1/preview_registered_users.jpg",
+    ]
+}
 
 
-run();
+customElements.define('wc-reference', WCReference);
