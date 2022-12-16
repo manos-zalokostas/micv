@@ -1,4 +1,4 @@
-import {strJoin} from "/utils/ally.js";
+import {strJoin} from "/micv/utils/ally.js";
 
 
 class WCGlobalNavigation extends HTMLElement {

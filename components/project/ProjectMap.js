@@ -1,19 +1,6 @@
 import {groupByDomain} from "../../service/DataStore.js";
-import {groupBySection} from "../../service/DataStore.js";
-import {groupByTool} from "../../service/DataStore.js";
+import ProjectViewItemlist from "/micv/components/project/ProjectViewItemlist.js";
 
-import ProjectViewItem from "./ProjectViewItem.js";
-import ProjectViewItemlist from "./ProjectViewItemlist.js";
-
-
-let CATEGORY = 'domain';
-let FILTER = 'web';
-
-// let CATEGORY = 'section';
-// let FILTER = "Site Development";
-
-// let CATEGORY = 'tool';
-// let FILTER = 'web_application';
 
 
 class WCProjectMap extends HTMLElement {

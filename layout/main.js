@@ -1,4 +1,4 @@
-import {setstyle, remstyle, remattr, cladd, setattr, dq, cl, strJoin} from "/utils/ally.js";
+import {setstyle, remstyle, remattr, cladd, setattr, dq, cl, strJoin} from "/micv/utils/ally.js";
 // import ProjectGroupPool from "/components/ProjectGroupPool.js";
 // import DescriptionText from "/components/DescriptionText.js";
 // import DescriptionExtra from "/components/DescriptionExtra.js";

@@ -76,7 +76,7 @@ class WCDescriptionExtra extends HTMLElement {
  * @returns {{files: (*|[*]), links: (*|[*]), quotes: [{score: *, text: *, tutor: *}]}}
  */
 const makeData = (item) => {
-debugger
+
     let files = [],
         links = [];
 

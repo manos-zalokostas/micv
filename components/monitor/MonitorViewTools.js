@@ -1,4 +1,4 @@
-import * as aux from "/utils/ally.js";
+import * as aux from "/micv/utils/ally.js";
 
 const CSSID = 'content-tools';
 let dataclone = [];
