@@ -1,4 +1,4 @@
-import {itemById} from "../../service/DataStore.js";
+import {itemById} from "/service/DataStore.js";
 
 class WCGlobalWrapper extends HTMLElement {
 
@@ -12,9 +12,19 @@ class WCGlobalWrapper extends HTMLElement {
         this.shadow = this.attachShadow({mode: 'open'})
         this.shadow.innerHTML = `
             <div id="global-wrapper">
-                <slot name="global-navigation"></slot>
-                <slot name="global-search"></slot>
+
+                <div  class="global-search">
+                    <wc-global-search></wc-global-search>
+                </div>
+            
+                <div  class="global-navigation">
+                    <wc-global-navigation></wc-global-navigation>
+                </div>
+
                 <div id="page-content"></div>
+
+                <link href="/components/global/GlobalWrapper.css" rel="stylesheet" />
+                
             </div>
                 `;
     }
@@ -75,10 +85,6 @@ const attachLinsteners = (o) => {
 };
 
 
-const style = `
-<style>
-</style>
-`
 
 
 customElements.define('wc-global-wrapper', WCGlobalWrapper);

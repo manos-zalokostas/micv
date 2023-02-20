@@ -1,5 +1,5 @@
 import {strJoin} from "/micv/utils/ally.js";
-import {groupTools, groupProjects} from "/service/DataStore.js";
+import {groupTools, groupProjects} from "/micv/service/DataStore.js";
 
 
 class WCGlobalSearch extends HTMLElement {
@@ -25,14 +25,10 @@ class WCGlobalSearch extends HTMLElement {
             }
         })
         this.shoutChangeDescriptionTopic = (topicId) => new CustomEvent("changeTopicDescription", {
-                bubbles: true,
-                cancelable: false,
-                composed: true,
-                detail: {
-                    topicId
-                }
+            bubbles: true, cancelable: false, composed: true, detail: {
+                topicId
             }
-        )
+        })
 
     }
 
@@ -45,39 +41,34 @@ class WCGlobalSearch extends HTMLElement {
     render() {
 
         this.shadow.innerHTML = `
-        <div id="global-search">
-
-            <div id="search-radio">
-                <div>
-                    <label> project
-                        <input type="radio" name="search-topic" value="project-list" checked>
-                    </label>
-                </div>
-                <div>
-                    <label> skill
-                        <input type="radio" name="search-topic" value="tool-list">
-                    </label>
-                </div>
-            </div>
-
-            <div id="search-result">
-
+        <section id="global-search">
+        
+            <div>
+                <label> 
+                    <span>project</span>
+                    <input type="radio" name="search-topic" value="project-list" checked>
+                </label>
+                
+                <label> 
+                    <span>skill</span>
+                    <input type="radio" name="search-topic" value="tool-list">
+                </label>
+            </div>            
+                            
+            <div>
                 <input name="search-input" list="project-list">
-
-                <datalist id="project-list">
-                    ${strJoin(DATA.projects.map(a => `<option value="${a[0]}">${a[1]}</option>`))}
+                    <datalist id="project-list">
+                ${strJoin(DATA.projects.map(a => `<option value="${a[0]}">${a[1]}</option>`))}
                 </datalist>
-
-                <datalist id="tool-list">
-                    ${strJoin(DATA.tools.map(name => `<option value="${name}">${name}</option>`))}
+                    <datalist id="tool-list">
+                ${strJoin(DATA.tools.map(name => `<option value="${name}">${name}</option>`))}
                 </datalist>
-
-            </div>
-            ${style}
-        </div>
+            </div>            
+            
+            <link href="/components/global/GlobalSearch.css" rel="stylesheet" />
+        
+        </section>
     `;
-
-
     }
 }
 
@@ -86,23 +77,8 @@ class WCGlobalSearch extends HTMLElement {
 
  */
 const DATA = {
-    projects: groupProjects(),
-    tools: groupTools()
+    projects: groupProjects(), tools: groupTools()
 }
 
-
-/*
-
- */
-const style = `
-<style>
-#global-search {
-    display: flex;
-}
-#search-radio {
-    display: flex;
-}
-</style>
-`;
 
 customElements.define('wc-global-search', WCGlobalSearch);

@@ -32,41 +32,21 @@ class WCIntroductionNavigation extends HTMLElement {
     }
 
 
-    render() {
-
-        this.shadow.innerHTML = `<nav>${
-            strJoin(BUTTONS.map(name =>
-                `<a href="#" data-topic="${name}">${name}</a>`
-            ))
-        }
-${style}
-</nav>
+    async render() {
+        this.shadow.innerHTML = `
+            <nav>${
+                        strJoin(BUTTONS.map(name =>
+                            `<a href="#" data-topic="${name}">${name}</a>`
+                        ))
+                    }
+            </nav>
+            <link href="/components/introduction/IntroductionNavigation.css"   rel="stylesheet" />
 `;
 
         this.hasMount = true;
 
     }
 }
-
-
-/*
-
- */
-const style = `
-<style>
-nav {
-    display: flex;
-    place-content: space-evenly;
-    width:30%;
-}
-nav a {
-    flex:0.25;
-    color:white;
-    text-align: center;
-    text-decoration: none;
-}
-</style>
-`;
 
 
 customElements.define('wc-introduction-navigation', WCIntroductionNavigation);

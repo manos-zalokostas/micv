@@ -1,0 +1,22 @@
+#global-search {
+    display: flex;
+    justify-content: stretch;
+    width: 100%;
+    background: blue;
+}
+
+#global-search > div {
+    display: flex;
+    justify-content: space-evenly;
+    background: yellow;
+    width: 50%;
+}
+
+input[list] {
+    width: 100%;
+}
+
+label {
+    text-transform: uppercase;
+    cursor: pointer;
+}

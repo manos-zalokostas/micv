@@ -5,25 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c2027ac-7fbf-48f5-b8a4-e62f9701cdf7" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/data.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/global/GlobalNavigation.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/global/GlobalSearch.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/global/GlobalWrapper.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/introduction/IntroductionNavigation.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_dev/wc-examples/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/_dev/wc-examples/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/description/DescriptionExtra.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/description/DescriptionExtra.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/description/DescriptionHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/description/DescriptionHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/description/DescriptionMedia.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/description/DescriptionMedia.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/description/DescriptionSlideshow.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/description/DescriptionSlideshow.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/global/GlobalNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/global/GlobalNavigation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/global/GlobalSearch.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/global/GlobalSearch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/global/GlobalWrapper.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/global/GlobalWrapper.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/introduction/IntroductionNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/introduction/IntroductionNavigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/monitor/Monitor.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/monitor/Monitor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/monitor/MonitorViewTools.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/monitor/MonitorViewTools.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/project/ProjectMap.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/project/ProjectMap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/project/ProjectNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/project/ProjectNavigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/project/ProjectPool.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/project/ProjectPool.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/project/ProjectViewItemlist.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/project/ProjectViewItemlist.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev.html" beforeDir="false" afterPath="$PROJECT_DIR$/dev.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layout/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/layout/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wc-introduction.html" beforeDir="false" afterPath="$PROJECT_DIR$/wc-introduction.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layout/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/layout/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/introduction.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/projects.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/references.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +75,9 @@
       </set>
     </option>
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="PhpDebugGeneral" xdebug_debug_port="9009">
     <xdebug_debug_ports port="9009" />
     <xdebug_debug_ports port="9003" />
@@ -91,19 +91,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "last_opened_file_path": "/home/manos/Desktop/devenv/micv/_dev",
-    "node.js.selected.package.tslint": "(autodetect)"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/manos/Desktop/devenv/micv/components/global&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/_dev" />
       <recent name="$PROJECT_DIR$/components/global" />
+      <recent name="$PROJECT_DIR$/components/introduction" />
+      <recent name="$PROJECT_DIR$/_dev" />
       <recent name="$PROJECT_DIR$/components/monitor" />
       <recent name="$PROJECT_DIR$/components/project" />
-      <recent name="$PROJECT_DIR$/pages" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -216,6 +220,10 @@
       <workItem from="1647796110268" duration="384000" />
       <workItem from="1647796640125" duration="10071000" />
       <workItem from="1647854338213" duration="1704000" />
+      <workItem from="1675754642211" duration="185000" />
+      <workItem from="1675879296122" duration="9918000" />
+      <workItem from="1675930282624" duration="64000" />
+      <workItem from="1676882106844" duration="4395000" />
     </task>
     <task id="LOCAL-00001" summary="convert http =&gt; https">
       <created>1545926008916</created>

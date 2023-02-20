@@ -1,0 +1,22 @@
+#global-wrapper {
+    display: grid;
+    grid-template-rows: 50px 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "nav search"
+    "content content";
+    height: 100vh;
+    background: green;
+}
+
+.global-search {
+    grid-area: search;
+}
+
+.global-navigation {
+    grid-area: nav;
+}
+
+#page-content {
+    grid-area: content;
+}

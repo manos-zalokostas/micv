@@ -34,46 +34,20 @@ class WCGlobalNavigation extends HTMLElement {
 
     render() {
         this.shadow.innerHTML = `
-        <div id="global-navigation">
+        <section id="global-navigation">
             <nav>
-            ${strJoin(DATA.pages.map(page => `<a data-type=${page}>${page}</a>`))}
+            ${strJoin(DATA.pages.map(page => `
+            <a data-type=${page}>${page}</a>
+`))}
             </nav>
-            ${style}
-        </div>
+            
+            <link href="/components/global/GlobalNavigation.css" rel="stylesheet" />
+        </section>
         `
 
     }
 }
 
-
-
-
-const style = `
-<style>
-#global-navigation {
-    position: fixed;
-    z-index: 100;
-    right: 0;
-    top:  0;
-    background: orange;
-}
-#global-navigation > nav > a {
-    padding:10px;
-}
-nav {
-    display: flex;
-    place-content: space-evenly;
-}
-nav > a {
-    flex:1;
-    color: #555;
-    background:white;
-    border:1px solid #888;
-    text-align:center;
-    text-transform: uppercase;
-}
-</style>
-`
 
 const DATA = {
     pages: ['introduction', 'projectlist', 'description', 'reference'],
