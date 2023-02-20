@@ -7,16 +7,19 @@ export default () => {
     let o = getDataset();
 
     return `
-    <section data-pid=${o.id} class="${CSSID}">
-        <h1>${o.title}</h1>
-        <h2>${o.category}</h2>
-        <h3>${o.subcategory}</h3>
-        <p>${o.description}</p>
-        <img src=${o.image} />
-        <div>BACKGROUND IMAGE</div>
-        <style>${style}</style>
-        <script>${attachListeners()}</script>
-    </section>
+    <article data-pid=${o.id} class="${CSSID}">
+        <header>
+            <h1>${o.title}</h1>
+            <h2>${o.category}</h2>
+        </header>
+        <main>${o.description}</main>
+        <picture>
+            <img src="/images/tmp.jpg" />
+        </picture>
+<!--        <div>BACKGROUND IMAGE</div>-->
+        <script>${attachListeners() || ''}</script>
+        <link href="/components/monitor/MonitorViewProject.css" rel="stylesheet"/>
+    </article>
     `;
 
 }
@@ -30,15 +33,13 @@ export default () => {
 const getDataset = () => {
     DATA = makeData();
     if (!dataclone.length) cloneData();
-    return dataclone.shift();
+    return dataclone.pop();
 };
 
 
 const cloneData = () => {
     dataclone = JSON.parse(JSON.stringify(DATA));
 }
-
-
 
 
 /**
@@ -59,8 +60,6 @@ const attachListeners = () => {
 }
 
 
-
-
 const makeData = () => {
 
     let domain = 'WEB',
@@ -71,10 +70,10 @@ const makeData = () => {
     let data = domains.map(o => {
             return {
                 id: o.id,
-                title: o.title,
-                category: o.category,
-                subcategory: o.subcategory,
-                description: o.description,
+                title: o.title ?? 'TITTLE',
+                category: o.category ?? 'CATEGORY',
+                subcategory: o.subcategory ?? 'SUBCATEGORY',
+                description: o.description ?? 'DESCRIPTION',
                 image: o.image,
             }
         }
@@ -85,8 +84,8 @@ const makeData = () => {
 };
 
 
-const style = `
-{
-width:100%;
-} 
-`;
+// const style = `
+// {
+// width:100%;
+// }
+// `;

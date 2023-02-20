@@ -13,19 +13,22 @@ export default () => {
     let o = getDataset();
 
     return `
-    <section data-pid=${o.id} class="${CSSID}">
-    <h1>${o.name}</h1>
-    <h2>${o.title}</h2>
-    <h3>${o.quote}</h3>
-    <img src=${o.image} />
-    <div>BACKGROUND IMAGE</div>
-    <style>${STYLE}</style>
+<article data-pid=${o.id} class="${CSSID}">
+    <header>
+        <h1>${o.name || 'NAME'}</h1>
+       <h2>${o.title || 'TITTLE'}</h2>
+    </header>
+    <main>
+        <h3>${o.quote || 'QUOTE'}</h3>
+    </main>
+    <picture>
+        <img src=${ '/images/tmp.jpg' || o.image } />
+    </picture>
      <script>${attachListeners()}</script>
-</section>
+     <link href="/components/monitor/MonitorViewQuote.css" rel="stylesheet"/>
+</article>
     `;
 }
-
-
 
 
 /**
@@ -35,7 +38,7 @@ export default () => {
 const getDataset = () => {
     DATA = makeData();
     if (!dataclone.length) cloneData();
-    return dataclone.shift();
+    return dataclone.pop();
 };
 
 
@@ -94,8 +97,3 @@ const makeData = () => {
 };
 
 
-const STYLE = `
-.${CSSID} {
-width:100%;
-} 
-`;

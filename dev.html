@@ -3,17 +3,22 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Manos Portfolio</title>
+<!--    <link href="/components/monitor/MonitorViewTools.css" rel="stylesheet"/>-->
 </head>
 <script type="module">
-    import "/components/global/GlobalWrapper.js"
+    import {raw} from "/service/DataStore.js";
 
+    sessionStorage.MIDATA = JSON.stringify(raw());
+
+    // import View from "/components/introdu.js"
+    // document.body.innerHTML = View();
+
+    import "/components/introduction/IntroductionTimeline.js"
 </script>
 <body style="background: #888">
 
 
-<wc-global-wrapper></wc-global-wrapper>
-
-
+<wc-introduction-timeline></wc-introduction-timeline>
 
 </body>
 </html>

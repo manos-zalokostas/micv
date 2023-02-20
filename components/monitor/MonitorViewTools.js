@@ -15,8 +15,8 @@ export default () => {
     return (
         `<div class="${CSSID}">
             ${aux.strHtml(aux.strJoin(a))}
-            <style>${style}</style>
             <script>${attachListeners()}</script>
+            <link href="/components/monitor/MonitorViewTools.css" rel="stylesheet"/>
         </div>`
     );
 }
@@ -116,32 +116,32 @@ const makeData = () => {
 };
 
 
-const style = `
-.${CSSID}  {
-    display:flex;
-    flex-wrap:wrap;
-    // background: red;
-    width:100%;
-}
+const style = '';
 
-.${CSSID}  > section  {
-    display: flex;
-    flex: 0 0 25%;
-    flex-flow:row-reverse;
-    box-sizing: border-box;
-    padding:5px;
-    width: 25%;
-    height: 50%;
-    justify-content: flex-end;
-    }
-
-.${CSSID}  > section h1 {
-    width: 40%;
-    }
-
-.${CSSID}  > section img {
-    width: 60%;
-    }
-
-
-`;
+// const style = `
+// .${CSSID}  {
+//     display:flex;
+//     flex-wrap:wrap;
+//     // background: red;
+//     width:100%;
+// }
+//
+// .${CSSID}  > section  {
+//     display: flex;
+//     flex: 0 0 25%;
+//     flex-flow:row-reverse;
+//     box-sizing: border-box;
+//     padding:5px;
+//     width: 25%;
+//     height: 50%;
+//     justify-content: flex-end;
+//     }
+//
+// .${CSSID}  > section h1 {
+//     width: 40%;
+//     }
+//
+// .${CSSID}  > section img {
+//     width: 60%;
+//     }
+// `;
