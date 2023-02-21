@@ -2,21 +2,25 @@
     display: grid;
     grid-template-rows: 50px 1fr;
     grid-template-columns: 1fr 1fr;
+    grid-gap: 6px;
     grid-template-areas:
     "nav search"
     "content content";
     height: 100vh;
-    background: green;
+    background: #555;
 }
 
 .global-search {
     grid-area: search;
+    background: #444;
 }
 
 .global-navigation {
     grid-area: nav;
+    background: #444;
 }
 
 #page-content {
     grid-area: content;
+    background: #444;
 }

@@ -5,14 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c2027ac-7fbf-48f5-b8a4-e62f9701cdf7" name="Default" comment="#WC-PAGES | DESCRIPTION PAGE&#10;****************************************&#10; - INTEGRATE PAGE">
-      <change afterPath="$PROJECT_DIR$/components/monitor/MonitorViewProject.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/monitor/MonitorViewQuote.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/monitor/MonitorViewTools.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/tmp.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/introduction/IntroductionResume.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/introduction/IntroductionTimeline.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/introduction.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/introduction.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/monitor/MonitorViewProject.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/monitor/MonitorViewProject.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/monitor/MonitorViewQuote.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/monitor/MonitorViewQuote.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/monitor/MonitorViewTools.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/monitor/MonitorViewTools.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/global/GlobalWrapper.css" beforeDir="false" afterPath="$PROJECT_DIR$/components/global/GlobalWrapper.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/introduction/IntroductionResume.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/introduction/IntroductionResume.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/introduction/IntroductionTimeline.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/introduction/IntroductionTimeline.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/monitor/Monitor.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/monitor/Monitor.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dev.html" beforeDir="false" afterPath="$PROJECT_DIR$/dev.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
@@ -85,16 +86,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/manos/Desktop/devnod/micv/components/monitor",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/manos/Desktop/devnod/micv/components/monitor&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/components/monitor" />
@@ -219,6 +220,7 @@
       <workItem from="1675930282624" duration="64000" />
       <workItem from="1676882106844" duration="4395000" />
       <workItem from="1676889308179" duration="10666000" />
+      <workItem from="1676967881152" duration="378000" />
     </task>
     <task id="LOCAL-00001" summary="convert http =&gt; https">
       <created>1545926008916</created>

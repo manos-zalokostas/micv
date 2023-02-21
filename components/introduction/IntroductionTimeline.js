@@ -29,79 +29,18 @@ class WCIntroductionTimeline extends HTMLElement {
 const view = () => {
     return `
     <article class="timeline">
-    <nav class="timeline_tabs">
-        <a id="mlt" href="#">Clear</a>
-        <a id="std" href="#">Studies</a>
-        <a id="job" href="#">Work</a>
-    </nav>
-    <section>${DATA.list}</section>
-    ${style()}
+        <nav class="timeline_tabs">
+            <a id="mlt" href="#">Clear</a>
+            <a id="std" href="#">Studies</a>
+            <a id="job" href="#">Work</a>
+        </nav>
+        <section>${DATA.list}</section>
+    <link href="/components/introduction/IntroductionTimeline.css" rel="stylesheet" />
     </article>
     `;
 }
 
 
-const style = () => `
-<style>
-   #timeline {
-        float: left;
-        display: inline;
-        list-style-type: none;
-        padding:0;
-    }
-    #timeline li {
-        float: left;
-        margin: 4px;
-    }
-    #timeline li > section {
-        display: none;
-        position: absolute;
-        left: 20%;
-        width: 60%;
-        margin-top: 25px;
-    }
-    #timeline li > section > a {
-        visibility: hidden;
-    }
-    #timeline li > section > a:hover {
-        cursor:pointer;
-    }
-    #timeline li:hover > section {
-        position: absolute;
-        display: block;
-        margin-left:5%;
-    }
-article.timeline {
-    display: flex;
-}
-article.timeline > nav {
-    flex:0.2;
-    display: flex;
-    flex-direction: column;
-    place-content: space-between;
-}
-article.timeline > nav > a {
-    text-decoration:none;
-    background:#555;
-    color:white;
-}
-article.timeline > nav > a:hover {
-    cursor:pointer;
-}
-article.timeline > nav > a:hover {
-    background: white;
-    color:#555;
-}
-article.timeline > section {
-    flex:0.8;
-    display: flex;
-}
-article.timeline > section li:hover{
-    color:white;
-    cursor:pointer;
-}
-</style>
-`;
 
 
 

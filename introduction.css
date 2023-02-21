@@ -1,0 +1,28 @@
+#page-content {
+    background: #333;
+    display: grid;
+    height: 100%;
+    grid-template: 400px 50px auto  / repeat(4, 1fr);
+    grid-gap: 5px;
+    grid-template-areas:
+        "monitor monitor monitor welcome"
+        ". . . . "
+        "topic topic topic topic";
+
+}
+
+.introduction-navigation {
+    grid-area: monitor;
+    background: red;
+}
+
+.introduction-monitor {
+    grid-area: monitor;
+    background: yellow;
+}
+
+.introduction-topic {
+    grid-area: topic;
+    background: blue;
+
+}

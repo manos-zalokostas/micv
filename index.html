@@ -6,6 +6,7 @@
 </head>
 <script type="module">
     import {raw} from "/service/DataStore.js";
+
     sessionStorage.MIDATA = JSON.stringify(raw());
 
     import "/components/global/GlobalWrapper.js"
@@ -52,18 +53,9 @@
         import "/components/introduction/IntroductionIntro.js"
         import "/components/monitor/Monitor.js"
     </script>
+    <link href="/introduction.css" rel="stylesheet"/>
 
-    <style>
-        .introduction-navigation{
-            background: blue;
-        }
-        .introduction-monitor{
-            background: red;
-        }
-        .introduction-topic{
-            background: orange;
-        }
-    </style>
+    <!--    <link href="/introduction.css"-->
 </template>
 
 

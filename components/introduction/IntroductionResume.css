@@ -1,0 +1,51 @@
+section {
+    display: flex;
+    justify-content: stretch;
+}
+
+header {
+    font-size: 3rem;
+}
+
+.switch {
+    display: flex;
+    width: 100px;
+    justify-content: space-around;
+    background: yellowgreen;
+}
+
+.switch span {
+    width: calc((100% - 10px) / 2);
+    background: lightblue;
+    border: 5px;
+    text-align: center;
+}
+
+
+section > div {
+    flex-basis: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section > ul {
+    flex-basis: 80%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+section li {
+    font-size: 1.2rem;
+    margin: 10px;
+}
+
+section li:before {
+    content: " - ";
+}
+
+section li span {
+    display: none;
+}

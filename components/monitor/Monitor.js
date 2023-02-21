@@ -45,7 +45,6 @@ class WCMonitor extends HTMLElement {
                 </header>
                 <main>${displayContent(this)}</main>
                 <script>${attacheListeners(this)}</script>
-                ${style}
             </article>`
 
         this.hasMount = true;
@@ -129,37 +128,37 @@ const attacheListeners = (o) => {
 };
 
 
-/*
-
- */
-const style = `
-<style>
-.projector {
-    overflow-y: auto;
-    border-radius: 10px;
-    box-sizing: border-box;
-    padding: 5px;
-    width:100%;
-    height: 300px;
-    background: #444;
-}
-nav {
-    display: flex;
-    justify-content: flex-end;
-}
-nav a {
-    padding: 0 15px;
-    color: white;
-    background: tomato;
-    margin: 0 2px;
-}
-main {
-    display:flex;
-    width:100%;
-    height:100%;
-}
-</style>
-`;
+// /*
+//
+//  */
+// const style = `
+// <style>
+// .projector {
+//     overflow-y: auto;
+//     border-radius: 10px;
+//     box-sizing: border-box;
+//     padding: 5px;
+//     width:100%;
+//     height: 300px;
+//     background: #444;
+// }
+// nav {
+//     display: flex;
+//     justify-content: flex-end;
+// }
+// nav a {
+//     padding: 0 15px;
+//     color: white;
+//     background: tomato;
+//     margin: 0 2px;
+// }
+// main {
+//     display:flex;
+//     width:100%;
+//     height:100%;
+// }
+// </style>
+// `;
 
 
 customElements.define('wc-monitor', WCMonitor);

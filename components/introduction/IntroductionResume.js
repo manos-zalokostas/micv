@@ -31,13 +31,13 @@ const view = (o) => {
         <div>
             <header>Timeline</header>
             <div class="switch">
-                <span class="switch-on"> on</span> / 
+                <span class="switch-on"> on</span> 
                 <span class="switch-off"> off</span>
             </div>
         </div>
         ${DATA.list}
-        ${style}
-        ${attachListeners(o)};
+        <script>${attachListeners(o)}</script>
+            <link href="/components/introduction/IntroductionResume.css" rel="stylesheet" />
     </section>
     `;
 }
@@ -60,38 +60,6 @@ const attachListeners = (o) => {
     })
 }
 
-
-const style = `
-<style>
-.resume {
-    display: flex;
-}
-.resume > div {
-    flex: 0.25;
-    display: flex;
-    flex-flow: column;
-    place-items: center;
-    justify-content: center;
-}
-.resume > div header{
-    font-size:xx-large;
-}
-.resume .switch span{
-    cursor:pointer;
-}
-.resume > ul {
-    flex: 0.75;
-    list-style: none;
-    overflow:auto;
-}
-.resume > ul li {
-    margin: 25px 0;
-}
-.resume > ul li span {
-    display: none;
-}
-</style>
-`;
 
 
 const DATA =
