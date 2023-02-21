@@ -49,28 +49,36 @@ class WCDescriptionSlideshow extends HTMLElement {
         <article class="description-slideshow">
 
             <section>
+
                 <nav class="slideshow-nav">
-        ${
-            strJoin(['prev', 'next', 'exit'].map(((str) =>
-                    `<a class="nav-btn" data-type=${str}>${str}</a>`
-            )))
-        }
+                    ${
+                        strJoin(['prev', 'next', 'exit'].map(((str) =>
+                                `<a class="nav-btn" data-type=${str}>${str}</a>`
+                        )))
+                    }
                 </nav>
 
                 <p class="slideshow-preview">
                     <img class="preview" src="${this.data.images[this.img]}"/>
+                    <br />
+                    <br />
                     <span>TEXT</span>
                 </p>
+
             </section>
 
-            <nav class="slideshow-media">
-        ${
-            strJoin(this.data.images.map(((path, i) =>
-                    `<a href="#"><img class="media" data-index=${i} src=${path} /></a>`
-            )))
-        }
-            </nav>
-           ${style}
+
+            <div class="slideshow-media">
+                <nav >
+                    ${
+                        strJoin(this.data.images.map(((path, i) =>
+                                `<a href="#"><img class="media" data-index=${i} src=${path} /></a>`
+                        )))
+                    }
+                </nav>
+            </div>
+
+            <link href="/components/description/DescriptionSlideshow.css" rel="stylesheet" />
 
         </article>
     `;
@@ -123,56 +131,6 @@ const DATA = {
     ]
 };
 
-
-const style = `
-<style>
-.description-slideshow {
-    display: flex;
-    flex-flow: column;
-    padding: 10px;
-}
-.description-slideshow > section {
-    display: flex;
-    flex: 1 1 100%;
-    margin: auto;
-    width: 80%;
-    flex-flow: column;
-    background: silver;
-}
-.description-slideshow > section > nav{
-    display: flex;
-    place-content: flex-end;
-    color: white;
-    margin: 10px 0;
-}
-.description-slideshow > section > nav > a{
-    margin:0 4px;
-}
-.description-slideshow > section > p {
-    display: flex;
-    flex: 1 1 100%;
-    margin: auto;
-    width: 80%;
-    flex-flow: column;
-    padding: 25px 0;
-}
-.description-slideshow > section > p > span {
-    padding: 10px 0;
-}
-.description-slideshow > nav {
-    display: flex;
-    flex: 1 1 100%;
-    margin: auto;
-    width: 90%;
-    place-content: space-evenly;
-    padding: 10px 0;
-    background: orange;
-}
-.slideshow-media img {
-    width: 80px;
-}
-</style>
-`;
 
 
 customElements.define('wc-description-slideshow', WCDescriptionSlideshow);

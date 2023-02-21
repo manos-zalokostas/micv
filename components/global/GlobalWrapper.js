@@ -13,10 +13,6 @@ class WCGlobalWrapper extends HTMLElement {
         this.shadow.innerHTML = `
             <div id="global-wrapper">
 
-                <div  class="global-search">
-                    <wc-global-search></wc-global-search>
-                </div>
-            
                 <div  class="global-navigation">
                     <wc-global-navigation></wc-global-navigation>
                 </div>

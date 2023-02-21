@@ -86,7 +86,7 @@ const makeData = () => {
                 id: o.id,
                 name: a[2].split('<').shift(),
                 title: a[5].split('<').shift(),
-                quote: o.comment,
+                quote: o.comment ? o.comment.substring(0, 400) + "<i> ...more </i>" : 'QUOTE',
                 image: a[1].includes('linkedin') ? 'lnkedin' : 'facebook'
             }
         }

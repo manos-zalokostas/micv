@@ -1,28 +1,38 @@
-#page-content {
-    background: #333;
+#introduction-wrapper {
     display: grid;
-    height: 100%;
-    grid-template: 400px 50px auto  / repeat(4, 1fr);
-    grid-gap: 5px;
     grid-template-areas:
-        "monitor monitor monitor welcome"
-        ". . . . "
-        "topic topic topic topic";
-
+            "nav . . ."
+            "monitor monitor monitor text"
+            ". . . . "
+            "topic topic topic topic";
+    grid-template-rows: 50px 300px 10px auto;
+    grid-gap: 10px;
+    grid-template-columns:  repeat(4, 1fr);
+    height: 100%;
 }
 
 .introduction-navigation {
-    grid-area: monitor;
-    background: red;
+    grid-area: nav;
+    /*background: red;*/
 }
 
 .introduction-monitor {
     grid-area: monitor;
-    background: yellow;
+    /*background: yellow;*/
+}
+
+.introduction-text {
+    grid-area: text;
+    /*background: blue;*/
 }
 
 .introduction-topic {
     grid-area: topic;
-    background: blue;
+    /*background: cadetblue;*/
+}
 
+.introduction-about,
+.introduction-timeline,
+.introduction-resume {
+    height: 100%;
 }

@@ -11,14 +11,22 @@ header {
     display: flex;
     width: 100px;
     justify-content: space-around;
-    background: yellowgreen;
+    /*background: yellowgreen;*/
+}
+
+.switch:before {
+    content: " comments: ";
+    /*background: yellowgreen;*/
 }
 
 .switch span {
     width: calc((100% - 10px) / 2);
-    background: lightblue;
-    border: 5px;
     text-align: center;
+    margin: 0 4px;
+    padding: 2px;
+    border: 5px;
+    background: #ddd;
+    cursor: pointer;
 }
 
 

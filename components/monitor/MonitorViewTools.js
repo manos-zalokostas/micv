@@ -115,33 +115,3 @@ const makeData = () => {
 
 };
 
-
-const style = '';
-
-// const style = `
-// .${CSSID}  {
-//     display:flex;
-//     flex-wrap:wrap;
-//     // background: red;
-//     width:100%;
-// }
-//
-// .${CSSID}  > section  {
-//     display: flex;
-//     flex: 0 0 25%;
-//     flex-flow:row-reverse;
-//     box-sizing: border-box;
-//     padding:5px;
-//     width: 25%;
-//     height: 50%;
-//     justify-content: flex-end;
-//     }
-//
-// .${CSSID}  > section h1 {
-//     width: 40%;
-//     }
-//
-// .${CSSID}  > section img {
-//     width: 60%;
-//     }
-// `;

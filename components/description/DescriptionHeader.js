@@ -51,7 +51,7 @@ class WCDescriptionHeader extends HTMLElement {
             <dl>${
             strJoin(this.data.tools.map(tool => `<dd class="description-tool" data-type="${tool}">${tool}</dd>`))
         }</dl>
-        ${style}
+            <link href="/components/description/DescriptionHeader.css" rel="stylesheet" />
         </section>
 `;
 

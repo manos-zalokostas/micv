@@ -1,13 +1,14 @@
 .content-tools {
     display: grid;
-    grid-template: repeat(2, auto) / repeat(4, 1fr);
+    grid-template: repeat(2, 50%) / repeat(4, 1fr);
     grid-gap: 4px;
     font-size: .7rem;
+    height: 100%;
 }
 
 section {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 14px;
     background: #444444;
 }

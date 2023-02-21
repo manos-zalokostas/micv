@@ -29,7 +29,7 @@ const view = (o) => {
     return `
     <section class="resume">
         <div>
-            <header>Timeline</header>
+            <header>Resume</header>
             <div class="switch">
                 <span class="switch-on"> on</span> 
                 <span class="switch-off"> off</span>

@@ -25,7 +25,7 @@ class WCDescriptionExtra extends HTMLElement {
     attributeChangedCallback(attr, prev, next) {
         if (attr === 'item' && prev !== next) {
             this.item = JSON.parse(next)
-            this.data= makeData(this.item)
+            this.data = makeData(this.item)
             this.pid = this.item.id;
             this.render();
         }
@@ -42,33 +42,45 @@ class WCDescriptionExtra extends HTMLElement {
 
         this.shadow.innerHTML = `
             <article class="description-extra">
+
                 <section class="description-quote">
                    <h2>COMPLEMENTS</h2>
                   ${this.data.quotes.map(o => `
-                    <p>
-                        <span>${this.data.tutor}</span>
-                        <span>${this.data.score}</span>
-                        <span>${this.data.text}</span>
-                    </p>
+                    <ul>
+                        <li>${this.data.tutor || 'ITEM'}</li>
+                        <li>${this.data.score || 'ITEM'}</li>
+                        <li>${this.data.text || 'ITEM'}</li>
+                    </ul>
                 `)}
                 </section>
 
                 <section class="description-files">
                     <h2>FILES</h2>
-                        ${this.data.files.map && this.data.files.map(path => `<img src="${path}" />`)}
+                    <ol>
+                        <li>${this.data.tutor || 'ITEM'}</li>
+                        <li>${this.data.score || 'ITEM'}</li>
+                        <li>${this.data.text || 'ITEM'}</li>
+                    </ol>
+<!--                        ${this.data.files.map && this.data.files.map(path => `<img src="${path}" />`)}-->
                 </section>
 
                 <section class="description-links">
                     <h2>LINKS</h2>
-                        ${this.data.links.map && this.data.links.map(path => `<a href="${path}">${path}</a>`)}
+                    <ol>
+                        <li>${this.data.tutor || 'ITEM'}</li>
+                        <li>${this.data.score || 'ITEM'}</li>
+                        <li>${this.data.text || 'ITEM'}</li>
+                    </ol>
+<!--                        ${this.data.links.map && this.data.links.map(path => `<a href="${path}">${path}</a>`)}-->
                 </section>
-              ${style}
+
+              <link href="/components/description/DescriptionExtra.css" rel="stylesheet" />
+
             </article>
 `;
 
     }
 }
-
 
 
 /**
@@ -102,20 +114,6 @@ const makeData = (item) => {
 };
 
 
-/*
-
- */
-const style = `
-<style>
- article {
-    position: relative;
-    top: -55%;
-    height: 85%;
-    width:40%;
-    overflow: auto;
-}
-</style>
-`;
 
 
 customElements.define('wc-description-extra', WCDescriptionExtra);

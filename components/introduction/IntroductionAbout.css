@@ -1,0 +1,23 @@
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+section p {
+    display: flex;
+}
+
+section p:last-of-type {
+    flex-direction: row-reverse;
+}
+
+strong {
+    flex-basis: 25%;
+    text-align: center;
+}
+
+span {
+    flex-basis: 75%;
+}

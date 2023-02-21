@@ -1,0 +1,28 @@
+#description-wrapper {
+    display: grid;
+    grid-template-areas:
+            "header header"
+            "content aside"
+            "slideshow aside";
+    grid-template-rows: 15% 15% 70%;
+    grid-template-columns: 70% 30%;
+    background: green;
+    padding: 10px;
+    height: 100%;
+}
+
+#description-header {
+    grid-area: header;
+}
+
+#description-text {
+    grid-area: content
+}
+
+#description-slideshow {
+    grid-area: slideshow;
+}
+
+#description-extra {
+    grid-area: aside
+}

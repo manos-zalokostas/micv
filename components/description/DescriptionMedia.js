@@ -4,37 +4,12 @@ import {itemById} from "../../service/DataStore.js";
 
 /**
  */
-const makeData = (item ) => {
+const makeData = (item) => {
 
     return {
         images: Array.isArray(item.screenshots.shot) ? item.screenshots.shot : [item.screenshots.shot]
     }
 };
-
-
-
-const style =  `
-<style>
-article.description-slideshow {
-    display: flex;
-    padding: 10px;
-    background: black;
-    flex-flow: row-reverse;
-    height:100%;
-}
-.slideshow-media img {
-    width: 80px;
-}
-nav.slideshow-media {
-    display: flex;
-    flex-flow: row;
-    flex: 4 4 80%;
-    place-content: space-around;
-    height:100%;
-    align-items: center;
-}
-</style>
-`;
 
 
 
@@ -45,7 +20,6 @@ class WCDescriptionMedia extends HTMLElement {
     pid = 'WB02';
     item = {};
     data = {};
-
 
 
     static get observedAttributes() {
@@ -64,7 +38,7 @@ class WCDescriptionMedia extends HTMLElement {
     attributeChangedCallback(attr, prev, next) {
         if (attr === 'item' && prev !== next) {
             this.item = JSON.parse(next)
-            this.data= makeData(this.item)
+            this.data = makeData(this.item)
             this.pid = this.item.id;
             this.render();
         }
@@ -84,7 +58,7 @@ class WCDescriptionMedia extends HTMLElement {
             <nav class="slideshow-media">${
             strJoin(this.data.images.map(((path, i) => `<a href="#"><img data-index=${i} src=${path} /></a>`)))
         }</nav>
-        ${style}
+        <link href="/components/description/DescriptionMedia.css" rel="stylesheet" />
         </article>
     `;
 
@@ -116,8 +90,6 @@ customElements.define('wc-description-media', WCDescriptionMedia);
 //         // }
 //     })
 // }
-
-
 
 
 //

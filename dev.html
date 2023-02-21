@@ -3,21 +3,26 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Manos Portfolio</title>
-<!--    <link href="/components/monitor/MonitorViewTools.css" rel="stylesheet"/>-->
+    <!--    <link href="/components/monitor/MonitorViewTools.css" rel="stylesheet"/>-->
 </head>
 <script type="module">
     import {raw} from "/service/DataStore.js";
 
     sessionStorage.MIDATA = JSON.stringify(raw());
 
-    // import View from "/components/introdu.js"
-    // document.body.innerHTML = View();
+    import View from "/components/monitor/MonitorViewTools.js"
+    document.body.innerHTML = View();
 
-    import "/components/global/GlobalWrapper.js"
+    // import "/components/description/DescriptionHeader.js"
+    // import "/components/description/DescriptionText.js"
+    // import "/components/description/DescriptionMedia.js"
+    // import "/components/description/DescriptionExtra.js"
+    // import "/components/description/DescriptionSlideshow.js"
+    // import "/components/monitor/MonitorViewTools.js"
 </script>
-<body style="background: #888">
+<body style="background: #888; height:100vh">
 
-<wc-global-wrapper></wc-global-wrapper>
+<!--<wc-monitor-tools></wc-monitor-tools>-->
 
 </body>
 </html>

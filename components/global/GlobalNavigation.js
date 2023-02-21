@@ -36,8 +36,8 @@ class WCGlobalNavigation extends HTMLElement {
         this.shadow.innerHTML = `
         <section id="global-navigation">
             <nav>
-            ${strJoin(DATA.pages.map(page => `
-            <a data-type=${page}>${page}</a>
+            ${strJoin(DATA.pages.map(([name, path]) => `
+            <a data-type=${path}>${name}</a>
 `))}
             </nav>
             
@@ -50,7 +50,12 @@ class WCGlobalNavigation extends HTMLElement {
 
 
 const DATA = {
-    pages: ['introduction', 'projectlist', 'description', 'reference'],
+    pages: [
+        ['home', 'introduction'],
+        ['projects', 'projectlist'],
+        ['slides', 'description'],
+        ['reference', 'reference']
+    ],
 }
 
 

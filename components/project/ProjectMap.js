@@ -63,7 +63,9 @@ class WCProjectMap extends HTMLElement {
 /*
 
  */
-const view = () => `<article class="pool-project">${style}</article>`;
+const view = () => `<article class="pool-project">
+<link href="/components/project/ProjectMap.css" rel="stylesheet" />
+</article>`;
 
 
 /**

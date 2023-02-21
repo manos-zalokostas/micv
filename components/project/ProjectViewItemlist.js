@@ -45,7 +45,7 @@ export default class WCProjectViewItemlist extends HTMLElement {
                     <nav> 
                         ${strJoin(this.data[1].map((pack, i) => `<a class="project" data-pid="${pack[0]}">${pack[1]}</a>`))}
                     </nav>
-                    ${style}
+                    <link href="/components/project/ProjectViewItemlist.css" rel="stylesheet" />
             </section>
 `;
 
@@ -53,33 +53,33 @@ export default class WCProjectViewItemlist extends HTMLElement {
 
 }
 
-
-/*
-
- */
-const style = `
-<style>
-    .group-project {
-        background:#444;
-    }
-    .group-project h3 {
-    }
-    .group-project nav {
-        display:flex;
-        flex-flow:column;
-        justify-content: space-around;
-    }
-    .group-project:hover nav a {
-        opacity:1;
-    }
-    .group-project nav a {
-        flex-basis: 40%;;
-        opacity:0;
-        margin: 4px 0;
-        padding:4px;
-    }
- </style>
-`;
+//
+// /*
+//
+//  */
+// const style = `
+// <style>
+//     .group-project {
+//         background:#444;
+//     }
+//     .group-project h3 {
+//     }
+//     .group-project nav {
+//         display:flex;
+//         flex-flow:column;
+//         justify-content: space-around;
+//     }
+//     .group-project:hover nav a {
+//         opacity:1;
+//     }
+//     .group-project nav a {
+//         flex-basis: 40%;;
+//         opacity:0;
+//         margin: 4px 0;
+//         padding:4px;
+//     }
+//  </style>
+// `;
 
 
 const DATA = [

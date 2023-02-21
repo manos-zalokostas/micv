@@ -17,17 +17,13 @@ export default () => {
             <img src="/images/tmp.jpg" />
         </picture>
 <!--        <div>BACKGROUND IMAGE</div>-->
-        <script>${attachListeners() || ''}</script>
+        <script>${attachListeners()}</script>
         <link href="/components/monitor/MonitorViewProject.css" rel="stylesheet"/>
     </article>
     `;
 
 }
 
-
-// const run = (o) => {
-//     return view();
-// }
 
 
 const getDataset = () => {
@@ -73,7 +69,7 @@ const makeData = () => {
                 title: o.title ?? 'TITTLE',
                 category: o.category ?? 'CATEGORY',
                 subcategory: o.subcategory ?? 'SUBCATEGORY',
-                description: o.description ?? 'DESCRIPTION',
+                description: o.description? o.description.substring(0, 400) + " ... <i>more</i>" : 'DESCRIPTION',
                 image: o.image,
             }
         }
@@ -82,10 +78,3 @@ const makeData = () => {
     return data;
 
 };
-
-
-// const style = `
-// {
-// width:100%;
-// }
-// `;

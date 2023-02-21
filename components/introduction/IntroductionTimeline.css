@@ -1,11 +1,10 @@
 article {
     display: flex;
-    /*background: blue;*/
 }
 
 article > nav {
     flex-basis: 15%;
-    background: blue;
+    /*background: blue;*/
 }
 
 article > nav a {
@@ -21,7 +20,7 @@ article > nav a {
 }
 
 article > section {
-    background: yellowgreen;
+    /*background: yellowgreen;*/
     flex-basis: 85%;
 }
 
@@ -29,32 +28,6 @@ article > section > ul {
     display: flex;
     justify-content: space-between;
     list-style: none;
-}
-
-article > section > ul li {
-    /*text-align: center;*/
-    /*background: green;*/
-    /*color: white;*/
-}
-
-article > section > ul li section {
-    /*position: absolute;*/
-    /*!*left: calc(100vw - 75%);*!*/
-    /*background: white;*/
-    /*color: #333;*/
-    /*transition: width 2s;*/
-}
-
-article > section > ul li section:hover {
-    /*display: block;*/
-    /*left: calc(100vw - 75%);*/
-    /*background: white;*/
-    /*color: #333;*/
-    /*opacity: 1;*/
-    /*transition: width 2s;*/
-}
-
-article > section > ul li a {
 }
 
 article > section > ul section {

@@ -1,12 +1,12 @@
 .content-project {
     display: grid;
     grid-template: 200px auto  / 4fr 1fr;
-    height: 300px;
     background: url("http://localhost:63342/images/tmp.jpg") no-repeat 115% 90% ;
     background-size: 750px ;
     background-color: #333;
     background-blend-mode: overlay;
     color: white;
+    height: 100%;
 }
 
 .content-project header {

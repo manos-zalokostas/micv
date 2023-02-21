@@ -3,6 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Manos Portfolio</title>
+    <link href="index.css" rel="stylesheet" />
 </head>
 <script type="module">
     import {raw} from "/service/DataStore.js";
@@ -11,9 +12,9 @@
 
     import "/components/global/GlobalWrapper.js"
     import "/components/global/GlobalNavigation.js"
-    import "/components/global/GlobalSearch.js"
+    // import "/components/global/GlobalSearch.js"
 </script>
-<body style="background: #888">
+<body >
 
 
 <wc-global-wrapper></wc-global-wrapper>
@@ -21,26 +22,41 @@
 
 <template id="introduction-tmpl">
 
-    <div class="introduction-navigation">
-        <wc-introduction-navigation></wc-introduction-navigation>
-    </div>
+    <div id="introduction-wrapper">
 
-    <div class="introduction-monitor">
-        <wc-monitor></wc-monitor>
-    </div>
+        <div class="introduction-navigation">
+<!--            NAVIGATION-->
+            <wc-introduction-navigation></wc-introduction-navigation>
+        </div>
 
-    <div class="introduction-topic">
+        <div class="introduction-monitor">
+<!--            MONITOR-->
+            <wc-monitor></wc-monitor>
+        </div>
 
-        <div class="introduction-introduction">
+
+        <div class="introduction-text">
+<!--            TEXT-->
             <wc-introduction-intro></wc-introduction-intro>
         </div>
 
-        <div class="introduction-timeline" style="display:none">
-            <wc-introduction-timeline></wc-introduction-timeline>
-        </div>
 
-        <div class="introduction-resume" style="display:none">
-            <wc-introduction-resume></wc-introduction-resume>
+
+        <div class="introduction-topic">
+<!--            TOPIC-->
+
+            <div class="introduction-about">
+                <wc-introduction-about></wc-introduction-about>
+            </div>
+
+            <div class="introduction-timeline" style="display:none">
+                <wc-introduction-timeline></wc-introduction-timeline>
+            </div>
+
+            <div class="introduction-resume" style="display:none">
+                <wc-introduction-resume></wc-introduction-resume>
+            </div>
+
         </div>
 
     </div>
@@ -51,17 +67,18 @@
         import "/components/introduction/IntroductionTimeline.js"
         import "/components/introduction/IntroductionWelcome.js"
         import "/components/introduction/IntroductionIntro.js"
+        import "/components/introduction/IntroductionAbout.js"
         import "/components/monitor/Monitor.js"
     </script>
+
     <link href="/introduction.css" rel="stylesheet"/>
 
-    <!--    <link href="/introduction.css"-->
 </template>
 
 
 <template id="projectlist-tmpl">
 
-    <article>
+    <div id="projectlist-wrapper">
 
         <div id="projects-navigation">
             <wc-project-navigation></wc-project-navigation>
@@ -71,43 +88,39 @@
             <wc-project-map category="domain" filter="web"></wc-project-map>
         </div>
 
-    </article>
+    </div>
     <script type="module">
         import "/components/project/ProjectNavigation.js"
         import "/components/project/ProjectMap.js"
     </script>
-    <style>
-    </style>
+
 </template>
 
 
 <template id="description-tmpl">
-    <article>
 
-        <div id="description-wrapper">
+    <div id="description-wrapper">
 
-            <div id=description-header">
-                <wc-description-header></wc-description-header>
-            </div>
-
-            <div id="description-text">
-                <wc-description-text></wc-description-text>
-            </div>
-
-            <div id="description-media">
-                <wc-description-media></wc-description-media>
-            </div>
-
-            <div id="description-extra">
-                <wc-description-extra></wc-description-extra>
-            </div>
-
-            <div id="description-slideshow">
-                <wc-description-slideshow></wc-description-slideshow>
-            </div>
-
+        <div id="description-header">
+            <wc-description-header></wc-description-header>
         </div>
-    </article>
+
+        <div id="description-text">
+            <wc-description-text></wc-description-text>
+        </div>
+
+        <div id="description-extra">
+            <wc-description-extra></wc-description-extra>
+        </div>
+
+        <div id="description-slideshow">
+            <wc-description-slideshow></wc-description-slideshow>
+        </div>
+
+    </div>
+
+    <link href="/description.css" rel="stylesheet"/>
+
     <script type="module">
         import "/components/description/DescriptionHeader.js"
         import "/components/description/DescriptionText.js"
@@ -115,8 +128,7 @@
         import "/components/description/DescriptionExtra.js"
         import "/components/description/DescriptionSlideshow.js"
     </script>
-    <style>
-    </style>
+
 </template>
 
 
@@ -129,8 +141,7 @@
     <script type="module">
         import "/components/reference/Reference.js"
     </script>
-    <style>
-    </style>
+
 </template>
 
 
