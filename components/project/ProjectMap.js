@@ -1,6 +1,5 @@
-import {groupByDomain} from "../../service/DataStore.js";
+import {groupByDomain} from "/micv/service/DataStore.js";
 import ProjectViewItemlist from "/micv/components/project/ProjectViewItemlist.js";
-
 
 
 class WCProjectMap extends HTMLElement {
@@ -8,8 +7,8 @@ class WCProjectMap extends HTMLElement {
     shadow = '';
     hasMount = false;
 
-    category = '';
-    filter = '';
+    category = 'Design and Development';
+    filter = 'web';
 
 
     static get observedAttributes() {
@@ -23,6 +22,30 @@ class WCProjectMap extends HTMLElement {
     constructor() {
         super();
         this.shadow = this.attachShadow({mode: 'open'});
+
+        const shadow = this.shadow;
+        shadow.addEventListener('maximizeProjectGroup', (evt) => {
+            const elems = shadow.querySelectorAll('wc-project-view-itemlist')
+            const wcs = Array.from(elems);
+
+            wcs.forEach(wc => wc.shadow.querySelector('.group-project').classList.add('hide'))
+            const elem = wcs.find(wc => wc.shadow.querySelector('.group-project').dataset.gid === evt.detail.groupId);
+
+            elem.shadow.firstElementChild.classList.remove('hide')
+            elem.shadow.firstElementChild.classList.add('max')
+
+        })
+        shadow.addEventListener('exitProjectGroup', (evt) => {
+            const elems = shadow.querySelectorAll('wc-project-view-itemlist')
+            const wcs = Array.from(elems);
+
+            wcs.forEach(wc => wc.shadow.querySelector('.group-project').classList.remove('hide'))
+            const elem = wcs.find(wc => wc.shadow.querySelector('.group-project').dataset.gid === evt.detail.groupId);
+
+            elem.shadow.firstElementChild.classList.remove('max')
+            wcs.forEach(wc => wc.shadow.querySelector('.group-project').classList.add('init'))
+
+        })
     }
 
 
@@ -38,12 +61,19 @@ class WCProjectMap extends HTMLElement {
 
     connectedCallback() {
 
-        this.filter = this.getAttribute('filter');
-        this.category = this.getAttribute('category');
+        this.filter = this.getAttribute('filter') ?? this.filter;
+        this.category = this.getAttribute('category') ?? this.category;
 
         this.render();
 
         this.hasMount = true;
+        setTimeout(
+            () => {
+                let elems = document.querySelectorAll(".group-project");
+                //
+                elems.forEach(elem => elem.classList.add("reset"))
+            }, 4000
+        )
     }
 
 
@@ -51,9 +81,10 @@ class WCProjectMap extends HTMLElement {
         let shadow = this.shadow;
         shadow.innerHTML = view();
 
-        makeData(this.category, this.filter).forEach(
-            wc => shadow.firstChild.appendChild(wc)
-        )
+        makeUiBoxes(this.category, this.filter)
+            .forEach(
+                wc => shadow.firstChild.appendChild(wc)
+            )
 
     }
 
@@ -72,60 +103,16 @@ const view = () => `<article class="pool-project">
  *
  * @returns {WCProjectViewItemlist[]|WCProjectViewItem[]|*[]}
  */
-const makeData = (category, filter) => {
+const makeUiBoxes = (category, filter) => {
 
-    let data, groups;
+    let boxes;
 
+    boxes = groupByDomain(filter)
+        .map((group, i) => new ProjectViewItemlist(group, i));
 
-    // if (category === 'domain') {
-        data = groupByDomain(filter);
-        groups = data.map((group, i) => new ProjectViewItemlist(group, i));
-
-
-        return groups;
-    // }
-
-    // if (category === 'section') data = groupBySection(filter);
-    //
-    // if (category === 'tool') data = groupByTool(filter);
-
-    // groups = data.map((group, i) => new ProjectViewItem(group, i));
-
-    // return groups;
+    return boxes;
 
 }
-
-
-/*
-
- */
-const style = `
-    <style>
-    .pool-project {
-        display: flex;
-        flex-flow: wrap; 
-        justify-content:space-around;
-        align-content:center;
-        width:100%;
-    }
-    .pool-project > section {
-        flex-basis: 20%;
-        box-sizing:border-box;
-        margin:1%;
-        padding:2%;
-    }
-</style>
-`;
-
-
-const _DATA = [
-    'DOMAIN A', [
-        [1, 'PROJECT 1'],
-        [2, 'PROJECT 2'],
-        [3, 'PROJECT 3'],
-        [5, 'PROJECT 4'],
-    ]
-];
 
 
 customElements.define('wc-project-map', WCProjectMap);

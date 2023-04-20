@@ -7,20 +7,15 @@
 </head>
 <script type="module">
     import {raw} from "/service/DataStore.js";
-
     sessionStorage.MIDATA = JSON.stringify(raw());
 
-    import View from "/components/monitor/MonitorViewTools.js"
-    document.body.innerHTML = View();
+    import "/micv/components/project/ProjectMap.js"
 
-    // import "/components/description/DescriptionHeader.js"
-    // import "/components/description/DescriptionText.js"
-    // import "/components/description/DescriptionMedia.js"
-    // import "/components/description/DescriptionExtra.js"
-    // import "/components/description/DescriptionSlideshow.js"
-    // import "/components/monitor/MonitorViewTools.js"
 </script>
+
 <body style="background: #888; height:100vh">
+
+<wc-project-map></wc-project-map>
 
 <!--<wc-monitor-tools></wc-monitor-tools>-->
 
