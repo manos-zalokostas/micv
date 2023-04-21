@@ -1,5 +1,5 @@
 import {strJoin} from "/micv/utils/ally.js";
-
+import "/micv/components/project/WCProject.js"
 
 export default class WCProjectViewItemlist extends HTMLElement {
 
@@ -32,7 +32,7 @@ export default class WCProjectViewItemlist extends HTMLElement {
                 this.dispatchEvent(this.shoutMaximizeProjectGroup(evt.target.dataset.gid));
             }
             if (evt.target.classList.contains('group-project-exit')) {
-                debugger
+                
                 this.dispatchEvent(this.shoutExitProjectGroup(evt.target.parentNode.dataset.gid));
             }
         })
@@ -80,15 +80,20 @@ export default class WCProjectViewItemlist extends HTMLElement {
     }
 
     html = () => `
-            <section class="group-project" data-gid=${this.data[0].replaceAll(" ", "_").toLowerCase()}>
-            <span class="group-project-exit">x</span>
-                <h3>${this.data[0]} </h3>
-                    <nav> 
-                        ${strJoin(this.data[1].map((pack, i) =>
-        `<a class="project" data-pid="${pack[0]}">${pack[1]}<span class="project-exit">x</span></a>`))
+<section class="group-project" data-gid=${this.data[0].replaceAll(" ", "_").toLowerCase()}>
+    <span class="group-project-exit">x</span>
+    <h3>${this.data[0]} </h3>
+        <nav>
+            ${strJoin(this.data[1].map((pack, i) =>
+        `<a class="project" data-pid="${pack[0]}">
+                ${pack[1]}
+                <span class="project-exit">x</span>
+                <wc-project></wc-project>
+                </a>`
+    ))
     }
-                    </nav>
-            </section>
+        </nav>
+</section>
 `;
 
 
@@ -164,11 +169,12 @@ const style = () => `
             }
             
             nav {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-around;
-                align-items: center;
-                height: 60%;
+                /*display: flex;*/
+                /*flex-direction: column;*/
+                /*flex-wrap: wrap;*/
+                /*justify-content: space-around;*/
+                /*align-items: center;*/
+                /*height: 60%;*/
                 overflow: auto;
             }
             
@@ -198,9 +204,9 @@ const style = () => `
                 height: 100%;
             }
             
-            nav:hover a {
-                display: block;
-            }
+            /*nav:hover a {*/
+            /*    display: block;*/
+            /*}*/
     </style>
     `
 

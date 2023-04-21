@@ -60,8 +60,7 @@ class WCDescriptionExtra extends HTMLElement {
                         <li>${this.data.tutor || 'ITEM'}</li>
                         <li>${this.data.score || 'ITEM'}</li>
                         <li>${this.data.text || 'ITEM'}</li>
-                    </ol>
-<!--                        ${this.data.files.map && this.data.files.map(path => `<img src="${path}" />`)}-->
+                    </ol>${this.data.files.map && this.data.files.map(path => `<img src="${path}" />`)}
                 </section>
 
                 <section class="description-links">
@@ -71,12 +70,41 @@ class WCDescriptionExtra extends HTMLElement {
                         <li>${this.data.score || 'ITEM'}</li>
                         <li>${this.data.text || 'ITEM'}</li>
                     </ol>
-<!--                        ${this.data.links.map && this.data.links.map(path => `<a href="${path}">${path}</a>`)}-->
+                    ${this.data.links.map && this.data.links.map(path => `<a href="${path}">${path}</a>`)}
                 </section>
-
-              <link href="/components/description/DescriptionExtra.css" rel="stylesheet" />
-
             </article>
+            <style>
+                .description-extra {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    /*background-color: blue;*/
+                    height: 100%;
+                }
+                section{
+                    width: 80%;
+                    text-align: center;
+                }
+                h2 {
+                    color: white;
+                    background-color: #333;
+                    margin: 0;
+                }
+                ol, ul {
+                    text-align: left;
+                    background-color: #555;
+                    margin: 0;
+                    display: none;
+                }
+                section:hover ul, section:hover ol {
+                    display: block;
+                }
+                li {
+                    color: white;
+                    border-bottom: 2px solid #666;
+                    background-color: #555555;
+                }
+            </style>
 `;
 
     }
@@ -114,42 +142,4 @@ const makeData = (item) => {
 };
 
 
-
-
 customElements.define('wc-description-extra', WCDescriptionExtra);
-
-
-// const DATA =
-//     {
-//         quotes: [
-//             {
-//                 tutor: 'TUTOR 1',
-//                 score: '80',
-//                 text: `Front-end developer with OOP PHP Zend Framework & Javascript / Jquery (backend was a remote service)
-//                 Follow explicit instructions to consume required data from remote web services and blueprint layouts to deliver UIs
-//                 Provide ticketing solutions for acknowledged bugs`,
-//             },
-//             {
-//                 tutor: 'TUTOR 2',
-//                 score: '87',
-//                 text: `Follow explicit instructions to consume required data from remote web services and blueprint layouts to deliver UIs Provide ticketing solutions for acknowledged bugs. Front-end developer with OOP PHP Zend Framework & Javascript / Jquery (backend was a remote service)`,
-//             },
-//         ],
-//         files: [
-//             "images/webdes_a1/welcome_page.jpg",
-//             "images/webdes_a1/add_product_to_basket.jpg",
-//             "images/webdes_a1/single_product_description.jpg",
-//             "images/webdes_a1/preview_registered_products.jpg",
-//             "images/webdes_a1/preview_registered_users.jpg",
-//         ],
-//         links: [
-//             "images/webdes_a1/welcome_page.jpg",
-//             "images/webdes_a1/add_product_to_basket.jpg",
-//             "images/webdes_a1/single_product_description.jpg",
-//             "images/webdes_a1/preview_registered_products.jpg",
-//             "images/webdes_a1/preview_registered_users.jpg",
-//         ]
-//     }
-
-
-// run();

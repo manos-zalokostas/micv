@@ -58,8 +58,24 @@ class WCDescriptionMedia extends HTMLElement {
             <nav class="slideshow-media">${
             strJoin(this.data.images.map(((path, i) => `<a href="#"><img data-index=${i} src=${path} /></a>`)))
         }</nav>
-        <link href="/components/description/DescriptionMedia.css" rel="stylesheet" />
         </article>
+        <style>
+            .description-slideshow {
+                display: flex;
+                flex-direction: column;
+                background-color: blue;
+                height: 100%;
+            }
+            nav {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                height: 100%;
+            }
+            img {
+                width: 200px;
+            }
+        </style>
     `;
 
     }

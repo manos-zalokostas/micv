@@ -5,11 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c2027ac-7fbf-48f5-b8a4-e62f9701cdf7" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/description/DescriptionImage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/description/DescriptionTag.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/monitor/ViewProjectBasic.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/monitor/ViewProjectExtended.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/monitor/ViewProjectVerbose.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/project/WCProject.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/micv.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/micv.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/monitor/Monitor.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/monitor/Monitor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_dev/wc-examples/BasicWebComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/_dev/wc-examples/SampleWebComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/description/DescriptionExtra.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/description/DescriptionExtra.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/description/DescriptionExtra.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/description/DescriptionHeader.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/description/DescriptionHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/description/DescriptionHeader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/description/DescriptionMedia.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/description/DescriptionMedia.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/description/DescriptionMedia.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/description/DescriptionSlideshow.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/description/DescriptionSlideshow.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/description/DescriptionSlideshow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/monitor/MonitorViewProject.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/monitor/MonitorViewProject.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/monitor/MonitorViewProject.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/project/ProjectMap.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/components/project/ProjectMap.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/project/ProjectMap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/project/ProjectViewItemlist.css" beforeDir="false" afterPath="$PROJECT_DIR$/components/project/ProjectViewItemlist.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/project/ProjectPool.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/project/ProjectViewItemlist.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/components/project/ProjectViewItemlist.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/project/ProjectViewItemlist.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dev.html" beforeDir="false" afterPath="$PROJECT_DIR$/dev.html" afterDir="false" />
     </list>
@@ -82,24 +100,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/manos/Desktop/devnod/micv/components/introduction&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/manos/Desktop/devenv/micv/components/description",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/components/description" />
+      <recent name="$PROJECT_DIR$/components/monitor" />
+      <recent name="$PROJECT_DIR$/components/project" />
       <recent name="$PROJECT_DIR$/components/introduction" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/components/reference" />
-      <recent name="$PROJECT_DIR$/_dev" />
-      <recent name="$PROJECT_DIR$/components/description" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -223,6 +241,7 @@
       <workItem from="1681897123285" duration="15330000" />
       <workItem from="1681974254923" duration="6291000" />
       <workItem from="1681981082834" duration="3073000" />
+      <workItem from="1682068291045" duration="8551000" />
     </task>
     <task id="LOCAL-00001" summary="convert http =&gt; https">
       <created>1545926008916</created>

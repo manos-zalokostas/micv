@@ -1,5 +1,4 @@
-import {strJoin} from "/micv/utils/ally.js";
-import {itemById} from "../../service/DataStore.js";
+import {itemById} from "/micv/service/DataStore.js";
 
 
 
@@ -48,11 +47,20 @@ class WCDescriptionHeader extends HTMLElement {
         <section>
             <h2>${this.data.title}</h2>
             <h3 class = 'description-section' data-type="${this.data.category}"> ${this.data.category}</h3>
-            <dl>${
-            strJoin(this.data.tools.map(tool => `<dd class="description-tool" data-type="${tool}">${tool}</dd>`))
-        }</dl>
-            <link href="/components/description/DescriptionHeader.css" rel="stylesheet" />
         </section>
+        <style>
+        section {
+            display: grid;
+            grid-template: 60% 40% / 3fr 1fr;
+            color: white;
+            height: 100%;
+            /*background-color: #333;*/
+        }
+        h2 {
+            grid-row: 1 / 2;
+            grid-column: 1 / -1;
+        }
+        </style>
 `;
 
     }

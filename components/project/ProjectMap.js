@@ -10,15 +10,6 @@ class WCProjectMap extends HTMLElement {
     category = 'Design and Development';
     filter = 'web';
 
-
-    static get observedAttributes() {
-        return [
-            "category",
-            "filter"
-        ];
-    }
-
-
     constructor() {
         super();
         this.shadow = this.attachShadow({mode: 'open'});
@@ -48,9 +39,17 @@ class WCProjectMap extends HTMLElement {
         })
     }
 
+    static get observedAttributes() {
+        return [
+            "category",
+            "filter"
+        ];
+    }
+
+
+
 
     attributeChangedCallback(name, prev, next) {
-
         if (prev !== next) {
             this[name] = next;
         }
@@ -70,7 +69,6 @@ class WCProjectMap extends HTMLElement {
         setTimeout(
             () => {
                 let elems = document.querySelectorAll(".group-project");
-                //
                 elems.forEach(elem => elem.classList.add("reset"))
             }, 4000
         )
@@ -79,7 +77,7 @@ class WCProjectMap extends HTMLElement {
 
     render() {
         let shadow = this.shadow;
-        shadow.innerHTML = view();
+        shadow.innerHTML = view() + style();
 
         makeUiBoxes(this.category, this.filter)
             .forEach(
@@ -94,10 +92,20 @@ class WCProjectMap extends HTMLElement {
 /*
 
  */
-const view = () => `<article class="pool-project">
-<link href="/components/project/ProjectMap.css" rel="stylesheet" />
-</article>`;
+const view = () => `<article class="pool-project"></article>`;
 
+const style = () => `
+<style>
+.pool-project {
+    display: grid;
+    background: #555;
+    grid-auto-rows: 250px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    height: 100%;
+}
+</style>
+`
 
 /**
  *

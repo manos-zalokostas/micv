@@ -69,7 +69,7 @@ const makeData = () => {
                 title: o.title ?? 'TITTLE',
                 category: o.category ?? 'CATEGORY',
                 subcategory: o.subcategory ?? 'SUBCATEGORY',
-                description: o.description? o.description.substring(0, 400) + " ... <i>more</i>" : 'DESCRIPTION',
+                description: o.description ? o.description.substring(0, 400) + " ... <i>more</i>" : 'DESCRIPTION',
                 image: o.image,
             }
         }

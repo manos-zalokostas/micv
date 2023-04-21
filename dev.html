@@ -9,14 +9,19 @@
     import {raw} from "/service/DataStore.js";
     sessionStorage.MIDATA = JSON.stringify(raw());
 
-    import "/micv/components/project/ProjectMap.js"
+    // import "/micv/components/project/ProjectMap.js"
+    import "/micv/components/project/WCProject.js"
 
 </script>
 
 <body style="background: #888; height:100vh">
 
-<wc-project-map></wc-project-map>
+<div>
 
+</div>
+
+<wc-project layout="verbose"></wc-project>
+<!--<wc-project-map></wc-project-map>-->
 <!--<wc-monitor-tools></wc-monitor-tools>-->
 
 </body>

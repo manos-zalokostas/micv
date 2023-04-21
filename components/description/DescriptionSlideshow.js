@@ -77,10 +77,45 @@ class WCDescriptionSlideshow extends HTMLElement {
                     }
                 </nav>
             </div>
-
-            <link href="/components/description/DescriptionSlideshow.css" rel="stylesheet" />
-
         </article>
+        <style>
+            .description-slideshow {
+                display: grid;
+                grid-template-rows: 85% 15%;
+                grid-template-columns: 1fr;
+                height: 100%;
+                /*background-color: blue;*/
+            }
+            .description-slideshow section {
+                margin: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                height: 100%;
+            }
+            .slideshow-preview {
+                display: flex;
+                flex-direction: column;
+            }
+            .slideshow-preview img {
+                width: 800px;
+            }
+            .slideshow-media {
+                display: flex;
+                flex-direction: column;
+                /*background-color: blue;*/
+                height: 100%;
+            }
+            .slideshow-media nav {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                height: 100%;
+            }
+            .slideshow-media img {
+                width: 125px;
+            }
+        </style>
     `;
 
         this.hasMount = true;
@@ -115,22 +150,6 @@ const makeData = (item) => ({
     text: item.description,
     images: item.screenshots.shot
 })
-
-
-/*
-
- */
-const DATA = {
-    text: `Front-end developer with OOP PHP Zend Framework & Javascript / Jquery (backend was a remote service)Follow explicit instructions to consume required data from remote web services and blueprint layouts to deliver UIsProvide ticketing solutions for acknowledged bugs`,
-    images: [
-        "images/webdes_a1/welcome_page.jpg",
-        "images/webdes_a1/add_product_to_basket.jpg",
-        "images/webdes_a1/single_product_description.jpg",
-        "images/webdes_a1/preview_registered_products.jpg",
-        "images/webdes_a1/preview_registered_users.jpg",
-    ]
-};
-
 
 
 customElements.define('wc-description-slideshow', WCDescriptionSlideshow);
