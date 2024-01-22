@@ -39,8 +39,6 @@ $(document).ready(
                 $("input[list]")[0].value = '';
             }
         );
-
-        // LISTENER FOR THE PAGES
         $("#site_menu a").click(
             function () {
                 var current_page = $(this).context.innerHTML;
@@ -264,7 +262,7 @@ $(document).ready(
             }
         )
 
-        // media / files / IMAGES  ELEMENTS 'CLICK'
+        // MEDIA / FILES / IMAGES  ELEMENTS 'CLICK'
         $('#imedia, #ifiles, #iscreenshots').delegate(
             'a', 'click', function (event) {
 
