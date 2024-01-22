@@ -29,6 +29,7 @@ export default () => {
  * @returns {*}
  */
 const viewItem = (o) => {
+    o ||= {};
     return aux.strHtml(`
         <section data-tool="${o.title}">
             <h1>${o.title}</h1>

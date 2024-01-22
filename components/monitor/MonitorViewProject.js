@@ -18,7 +18,7 @@ export default () => {
         </picture>
 <!--        <div>BACKGROUND IMAGE</div>-->
         <script>${attachListeners()}</script>
-        <link href="/components/monitor/MonitorViewProject.css" rel="stylesheet"/>
+<!--        <link href="/components/monitor/MonitorViewProject.css" rel="stylesheet"/>-->
     </article>
     `;
 
