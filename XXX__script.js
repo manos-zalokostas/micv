@@ -215,20 +215,20 @@ function ajax_retrieve_skill_data() {
 
     if (oXML) {
         __INITIALIZE_PAGE_DATA(oXML);
-        proccess_ajax_data(gmode);
+        process_ajax_data(gmode);
         return;
     }
 
     $.ajax(
         {
-            url: 'items.xml',
+            url: 'index.xml',
             dataType: 'xml',
             success: function (data) {
 
                 __SET_CACHE_DATA('sXML', data, true);
 
                 __INITIALIZE_PAGE_DATA(data);
-                proccess_ajax_data(gmode);
+                process_ajax_data(gmode);
             },
             error: function () {
                 console.log('Failed 2 Tech-Logos file ...');
@@ -242,7 +242,7 @@ function ajax_retrieve_skill_data() {
  *
  * @param field
  */
-function proccess_ajax_data(field) {
+function process_ajax_data(field) {
 
     var p = {}, c = {};
     var t = [];
@@ -425,7 +425,7 @@ function animate_skills(mode) {
                 return;
             } else {
                 if (counter >= max) {
-                    proccess_ajax_data(mode);
+                    process_ajax_data(mode);
                     index = sindex;
                     counter = 0
                     /* mode='off';*/
@@ -530,7 +530,7 @@ function reveal_list_subcategories(element) {
 
     $.ajax(
         {
-            url: 'items.xml',
+            url: 'index.xml',
             dataType: 'xml',
             success: function (data) {
                 __RESOLVE_AND_DISPLAY_SUBSECTION(element, data);
@@ -583,7 +583,7 @@ function nav_bar_designer(item_requested, function_caller) {
     // CALL THE AJAX TO RETRIEVE RELATED DATA AND POPULATE THE NAVIGATION LIST MENE
     $.ajax(
         {
-            url: 'items.xml',
+            url: 'index.xml',
             dataType: 'xml',
             success: function (data) {
                 __RESOLVE_AND_POPULATE_MAIN_BOARD(item_requested, function_caller, data)
@@ -649,7 +649,7 @@ function build_selected_item_content(current_list_item, curr_list) {
 
     $.ajax(
         {
-            url: 'items.xml',
+            url: 'index.xml',
             dataType: 'xml',
             success: function (data) {
                 __RESOLVE_AND_DISPLAY_ITEM_FULL_DESCRIPTION(current_list_item, curr_list, data);

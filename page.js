@@ -1,33 +1,24 @@
-export function handle_banner_input(caller, target) {
-    target = target ? target : '';
+/**
+ * // CLEARS ALL THE DATA DISPLAYED ON SCREEN BY THE LATEST PREVIEWED ITEM, AND DISPLAY, THEM, OFF
+ *
+ *
+ */
+export function clean_page_data() {
+    const idElems = Array.from(document.querySelectorAll('#description #iextra *[id]'));
+    const elemSpans = Array.from(document.querySelectorAll('#description span'));
+    const navigationList = document.getElementById('list');
 
-    if (caller === 'project') {
-        if (!target) {
-            target = document.querySelector('#' + caller + ' h3').textContent;
-        }
-        animate_page('projects');
-        build_selected_item_content(target, 'default');
-        return;
+    idElems.forEach(elem => {
+        elem.style.display = 'none';
+    });
+
+    elemSpans.forEach(span => {
+        span.innerHTML = '';
+    });
+
+    if (navigationList) {
+        navigationList.innerHTML = '';
     }
-
-    if (caller === 'reference') {
-        target = document.querySelector('#' + caller + ' h3').getAttribute('title');
-        animate_page('projects');
-        build_selected_item_content(target, 'studies');
-        return;
-    }
-
-    if (caller === 'tool') {
-        if (!target) {
-            target = document.event.target.previousElementSibling.textContent.replace(/ /g, '_');
-        }
-        document.querySelector('#context').setAttribute('style', 'left: 0;');
-        animate_page('projects');
-        nav_bar_designer(target, 'keyword');
-        return;
-    }
-
-    console.log('FUNCTION HANDLE_BANNER_INPUT RUNS WITH A DEFAULT, PLEASE CHECK!');
 }
 
 
@@ -91,33 +82,51 @@ export function animate_page(current_page) {
 
 
 /**
- * @param currentListItem
- * @param currList
+ *
+ * @param {string} domain
  */
-export function build_selected_item_content(currentListItem, currList) {
-    const oXML = __GET_CACHED_DATA('sXML', true);
+export function navigate_resume_page(domain) {
+    const id = '#' + domain;
+    const domainSelector = '#' + domain + '_field';
 
-    if (oXML) {
-        __RESOLVE_AND_DISPLAY_ITEM_FULL_DESCRIPTION(currentListItem, currList, oXML);
-        return;
+    const selectedIntroductionMenu = document.querySelector('#introduction_menu a.selected');
+    if (selectedIntroductionMenu) {
+        selectedIntroductionMenu.removeAttribute('class');
+    }
+    document.querySelector(id).classList.add('selected');
+
+    if (domainSelector === '#document_cv_field') {
+        clean_page_data();
+        animate_page('projects');
+
+        document.querySelector('#context').setAttribute('style', 'left: -100%;');
+        content_handler('images/cv_document/micv.pdf', 'pdf');
     }
 
-    // CALL THE FETCH API TO RETRIEVE RELATED DATA AND DISPLAY THE ITEM FULL DESCRIPTION
-    fetch('items.xml')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Failed to fetch data');
-            }
-            return response.text();
-        })
-        .then(data => {
-            const parser = new DOMParser();
-            const xmlData = parser.parseFromString(data, 'application/xml');
-            __RESOLVE_AND_DISPLAY_ITEM_FULL_DESCRIPTION(currentListItem, currList, xmlData);
-        })
-        .catch(error => {
-            console.error('Failed to open:', error.message);
-        });
+    document.querySelectorAll(domainSelector).forEach(element => {
+        if (element.id.match('cv_field')) {
+            element.animate(
+                {'opacity': '0', 'left': '-100%'},
+                'swing',
+                function () {
+                }
+            );
+        }
+    });
+
+    document.querySelector(domainSelector).animate({'opacity': '1', 'left': '0'});
+    document.querySelector(domainSelector + ' .main_txt > p').animate(
+        {'left': '0'},
+        function () {
+            document.querySelector(domainSelector + ' .main_txt > h2').animate({'opacity': '1'});
+        }
+    );
+    document.querySelector(domainSelector + ' .aux_txt > p').animate(
+        {'right': '0'},
+        function () {
+            document.querySelector(domainSelector + ' .aux_txt > h3').animate({'opacity': '1'});
+        }
+    );
 }
 
 

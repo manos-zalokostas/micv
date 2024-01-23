@@ -1,6 +1,11 @@
-export const listerner = () => {
+import {handle_pause_action, configure_banner_display, animate_skills, handle_banner_input} from "./monitor";
+import {build_selected_item_content, preview_extras, content_handler} from "./page-description";
+import {nav_bar_designer, reveal_list_subcategories} from "./page-project";
+import {animate_page, navigate_resume_page} from "./page";
+import {animate_opacity} from "./visual";
 
 
+export function initializeListeners() {
     const rootElement = document; // You can replace this with the actual root element
 
     rootElement.addEventListener('click', (event) => {
@@ -22,7 +27,13 @@ export const listerner = () => {
 
         // Input[list] change
         if (target.matches("input[list]")) {
-            handleInputListChange.call(target);
+            if (this.getAttribute('list') === 'project_list') {
+                handle_banner_input('project', this.value.split(' ').shift());
+            }
+            if (this.getAttribute('list') === 'skill_list') {
+                handle_banner_input('tool', this.value.split(' ').shift());
+            }
+            document.querySelector("input[list]").value = '';
         }
 
         // #site_menu a click
@@ -308,4 +319,3 @@ export const listerner = () => {
 
 
 }
-
