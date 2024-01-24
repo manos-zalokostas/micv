@@ -1,9 +1,10 @@
-import {storage.get} from "./storage";
-import {animate_page, clean_page_data} from "./page";
+import Storage from "../core/storage.mjs";
+import Layout from "../component/layout.mjs";
+
 import {build_selected_item_content} from "./page-description";
 
 export function nav_bar_designer(item_requested, function_caller) {
-    const oXML = storage.get('sXML', true);
+    const oXML = Storage.get('sXML', true);
 
     if (oXML) {
         __RESOLVE_AND_POPULATE_MAIN_BOARD(item_requested, function_caller, oXML);
@@ -34,7 +35,7 @@ export function nav_bar_designer(item_requested, function_caller) {
  * @param {HTMLElement} element
  */
 export function reveal_list_subcategories(element) {
-    const oXML = storage.get('sXML', true);
+    const oXML = Storage.get('sXML', true);
 
     if (oXML) {
         __RESOLVE_AND_DISPLAY_SUBSECTION(element, oXML);
@@ -73,7 +74,7 @@ export function __RESOLVE_AND_POPULATE_MAIN_BOARD(item_requested, function_calle
 
     // CLEAN ALL THE DATA DISPLAYED BY THE LATEST PREVIEWED ITM
     // AND DISPLAY, THEM, OFF
-    clean_page_data();
+    Layout.reset()
 
     //THIS SCRIPT HANDLES THE MAIN NAVIGATION BUTTON ANIMES AND CHANGES THE BACKGROUND IMAGE ON CLICK
     if (caller === 'navigation') {

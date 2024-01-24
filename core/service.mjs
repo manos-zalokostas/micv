@@ -1,5 +1,5 @@
 // import {__GET_CACHED_DATA, __SET_CACHE_DATA} from "./storage";
-import {MonitorLoadNextDataViews} from "./template";
+import {MonitorLoadNextDataViews} from "./template.mjs";
 // import {_BUILD_SEARCH_LISTS} from "./search";
 
 import Storage from "./storage.mjs"

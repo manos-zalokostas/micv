@@ -1,4 +1,4 @@
-export function animate_opacity(selector) {
+function opacity(selector) {
     const element = document.querySelector(selector);
 
     if (element) {
@@ -21,4 +21,9 @@ export function animate_opacity(selector) {
 
         requestAnimationFrame(animate);
     }
+}
+
+
+export default {
+    opacity
 }

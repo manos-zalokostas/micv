@@ -1,11 +1,12 @@
 import Monitor from "../component/monitor.mjs";
+import PageDescription from "../route/page-description.js";
 
 /**
  * // CLEARS ALL THE DATA DISPLAYED ON SCREEN BY THE LATEST PREVIEWED ITEM, AND DISPLAY, THEM, OFF
  *
  *
  */
-export function clean_page_data() {
+function reset() {
     const idElems = Array.from(document.querySelectorAll('#description #iextra *[id]'));
     const elemSpans = Array.from(document.querySelectorAll('#description span'));
     const navigationList = document.getElementById('list');
@@ -29,7 +30,7 @@ export function clean_page_data() {
  *
  * @param {string} current_page
  */
-export function animate_page(current_page) {
+function open(current_page) {
     if (document.querySelector('#site_menu a.selected').getAttribute('title') === current_page) {
         return;
     }
@@ -91,7 +92,7 @@ export function animate_page(current_page) {
  *
  * @param {string} domain
  */
-export function navigate_resume_page(domain) {
+function openResume(domain) {
     const id = '#' + domain;
     const domainSelector = '#' + domain + '_field';
 
@@ -102,11 +103,11 @@ export function navigate_resume_page(domain) {
     document.querySelector(id).classList.add('selected');
 
     if (domainSelector === '#document_cv_field') {
-        clean_page_data();
-        animate_page('projects');
+        reset();
+        open('projects');
 
         document.querySelector('#context').setAttribute('style', 'left: -100%;');
-        content_handler('images/cv_document/micv.pdf', 'pdf');
+        PageDescription.openSlider('images/cv_document/micv.pdf', 'pdf');
     }
 
     document.querySelectorAll(domainSelector).forEach(element => {
@@ -136,3 +137,8 @@ export function navigate_resume_page(domain) {
 }
 
 
+export default {
+    openResume,
+    open,
+    reset,
+}

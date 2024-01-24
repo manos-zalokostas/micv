@@ -3,9 +3,11 @@
 // import {nav_bar_designer, reveal_list_subcategories} from "./page-project";
 // import {animate_page, navigate_resume_page} from "./page";
 // import {animate_opacity} from "./visual";
-
 import Monitor from "component/monitor.mjs";
-
+import Layout from "./component/layout.mjs";
+import Visual from "./core/visual.mjs";
+import PageDescription from "./route/page-description";
+import DescriptionAside from "./route/description-aside.mjs";
 
 export function initializeListeners() {
     const rootElement = document; // You can replace this with the actual root element
@@ -41,7 +43,7 @@ export function initializeListeners() {
         // #site_menu a click
         if (target.matches("#site_menu a")) {
             const current_page = target.innerHTML;
-            animate_page(current_page);
+            Layout.open(current_page);
         }
 
 
@@ -78,7 +80,7 @@ export function initializeListeners() {
 
         if (target.closest('#introduction_menu a')) {
             const domain = target.id;
-            navigate_resume_page(domain);
+            Layout.openResume(domain);
         }
 
         // #cv_comments click
@@ -87,9 +89,9 @@ export function initializeListeners() {
             const cvDescriptionI = document.querySelector('#cv_description i');
             if (cvDescriptionI.style.display === 'none' || !cvDescriptionI.hasAttribute('style')) {
                 cvDescriptionI.style.display = 'block';
-                animate_opacity(cvDescriptionI, 1);
+                Visual.opacity(cvDescriptionI, 1);
             } else {
-                animate_opacity(cvDescriptionI, 0, () => {
+                Visual.opacity(cvDescriptionI, 0, () => {
                     cvDescriptionI.style.display = 'none';
                 });
             }
@@ -203,7 +205,7 @@ export function initializeListeners() {
             target.style.backgroundColor = 'white';
             target.style.color = 'orange';
 
-            build_selected_item_content(target.innerHTML, document.querySelector('.list').id);
+            PageDescription.refresh(target.innerHTML, document.querySelector('.list').id);
 
             window.dataLayer = window.dataLayer || [];
             window.dataLayer.push({
@@ -215,7 +217,7 @@ export function initializeListeners() {
             // EXTRA BUTTONS 'CLICK'
 
             if (target.tagName === 'DIV' && target.parentElement.id === 'iextra') {
-                preview_extras(target);
+                DescriptionAside.open(target);
             }
 
 
@@ -235,7 +237,7 @@ export function initializeListeners() {
                 }
 
                 target.classList.remove('item_previewed');
-                content_handler(item_src, app);
+                PageDescription.openSlider(item_src, app);
                 event.preventDefault();
             }
 
@@ -265,7 +267,7 @@ export function initializeListeners() {
 
             if (target.tagName === 'LI' && target.parentElement.id === 'temp_list') {
                 list_item = target.innerHTML;
-                build_selected_item_content(list_item, null);
+                PageDescription.refresh(list_item, null);
             }
 
 

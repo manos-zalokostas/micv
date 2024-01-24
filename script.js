@@ -551,20 +551,7 @@ function reveal_list_subcategories(element) {
 
  * @param element
  */
-function preview_extras(element) {
 
-    var elem = element
-
-    // HIDES THE PREVIEWED SIBLING
-    $('#iextra').find('.extra_preview').animate({'height': '5%'}).find('span').css('display', 'none');
-
-    // ANIMATES-IN THE SELECTED FIELD
-    $(elem).attr('class', 'extra_preview').animate(
-        {'height': '80%'}, 'medium', 'linear', function () {
-            $(this).find('span').css({'display': 'block'});
-        }
-    );
-}
 
 
 /**

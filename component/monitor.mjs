@@ -1,9 +1,10 @@
 // import {build_selected_item_content} from "./page-description";
 // import {nav_bar_designer} from "./page-project";
-// import {animate_page} from "./page";
-
+// import {Layout.open} from "./page";
 
 import Service from "../core/service.mjs";
+import Layout from "./layout.mjs";
+import PageDescription from "../route/page-description.js";
 
 
 let animation,
@@ -143,7 +144,7 @@ function start() {
 
         if (icounter === 10) {
             child1.style.opacity = '1';
-            navigate_resume_page('introduction_cv');
+            Layout.openResume('introduction_cv');
         }
 
         if (icounter === 18) {
@@ -206,15 +207,15 @@ function select(caller, target) {
         if (!target) {
             target = document.querySelector('#' + caller + ' h3').textContent;
         }
-        animate_page('projects');
-        build_selected_item_content(target, 'default');
+        Layout.open('projects');
+        PageDescription.refresh(target, 'default');
         return;
     }
 
     if (caller === 'reference') {
         target = document.querySelector('#' + caller + ' h3').getAttribute('title');
-        animate_page('projects');
-        build_selected_item_content(target, 'studies');
+        Layout.open('projects');
+        PageDescription.refresh(target, 'studies');
         return;
     }
 
@@ -223,7 +224,7 @@ function select(caller, target) {
             target = document.event.target.previousElementSibling.textContent.replace(/ /g, '_');
         }
         document.querySelector('#context').setAttribute('style', 'left: 0;');
-        animate_page('projects');
+        Layout.open('projects');
         nav_bar_designer(target, 'keyword');
         return;
     }
