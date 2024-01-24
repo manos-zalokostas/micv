@@ -16,11 +16,11 @@ export function MonitorLoadNextDataViews(project, comment, tools, field, process
 
     let pdiv = document.querySelector('#project > div:first-child ');
     let pdivl = document.querySelector('#project > div:last-child');
-    let cdiv = document.querySelector('#reference > div');
     let cdivl = document.querySelector('#reference > div:last-child');
     let tdiv = document.querySelectorAll('#tool > div > div');
-    let counter = 0;
+    let cdiv = document.querySelector('#reference > div');
     let data_loaded = false;
+    let counter = 0;
 
     let pct = process_string;
     let pctl = pct.length;
@@ -35,13 +35,13 @@ export function MonitorLoadNextDataViews(project, comment, tools, field, process
         pdivl.style.backgroundPosition = '50%';
 
         pct = pct.replace('p', '');
-        if (pct === '' && !animation_running) {
+        if (pct === '' && !Monitor.animation_running) {
             Service.gmode = 'project';
-            animate_skills(gmode);
+            Monitor.invoke(gmode);
             return;
         }
     }
-
+debugger
     if (pct.includes('c')) {
         cdiv.querySelector('h3').innerHTML = c.name;
         cdiv.querySelector('h3').setAttribute('title', c.item);
@@ -53,9 +53,9 @@ export function MonitorLoadNextDataViews(project, comment, tools, field, process
         cdivl.style.backgroundPosition = '50%';
 
         pct = pct.replace('c', '');
-        if (pct === '' && !animation_running) {
+        if (pct === '' && !Monitor.animation_running) {
             Service.gmode = 'reference';
-            Monitor.invoke(gmode);
+            Monitor.invoke(Service.gmode);
             return;
         }
     }
@@ -80,13 +80,14 @@ export function MonitorLoadNextDataViews(project, comment, tools, field, process
  */
 export function resolveViewTools(divs, skills, counter, field, pctl) {
     let node = divs[counter];
-    let name = skills[counter].tagName;
-
+    // let name = skills[counter].tagName || "TSIKIS";
+    let name = skills[counter];
+debugger
     node.innerHTML = `<h4>${name.replace(/_/g, ' ')}</h4><img src="images/tech_logos/${name}.jpg" />`;
 
     counter++;
 
-    if (animation_running) {
+    if (Monitor.animation_running) {
         return;
     }
     if (counter < divs.length) {
@@ -94,5 +95,5 @@ export function resolveViewTools(divs, skills, counter, field, pctl) {
     }
 
     Service.gmode = (pctl > 1) ? 'global' : 'tool';
-    Monitor.invoke(gmode);
+    Monitor.invoke(Service.gmode);
 }

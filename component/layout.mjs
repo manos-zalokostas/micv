@@ -1,5 +1,6 @@
 import Monitor from "../component/monitor.mjs";
 import PageDescription from "../route/page-description.js";
+import Service from "../core/service.mjs";
 
 /**
  * // CLEARS ALL THE DATA DISPLAYED ON SCREEN BY THE LATEST PREVIEWED ITEM, AND DISPLAY, THEM, OFF
@@ -50,8 +51,8 @@ function open(current_page) {
                 }
             );
             document.querySelector('#author_presentation > img').animate({'left': 0}, 'slow');
-            if (!animation_running && !animation_paused) {
-                Monitor.invoke(gmode);
+            if (!Monitor.animation_running && !animation_paused) {
+                Monitor.invoke(Service.gmode);
             }
             break;
 

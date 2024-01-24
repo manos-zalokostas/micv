@@ -7,10 +7,6 @@ import {init} from "./core/service.mjs";
 document.addEventListener('DOMContentLoaded', async () => {
     console.log('MCV1');
 
-    let animation = '';
-    let animation_running = false;
-    let gmode = 'global';
-
     localStorage.clear();
 
     await init();

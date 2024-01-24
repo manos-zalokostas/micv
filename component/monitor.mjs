@@ -5,6 +5,7 @@
 import Service from "../core/service.mjs";
 import Layout from "./layout.mjs";
 import PageDescription from "../route/page-description.js";
+import TabletMenu from "./tablet-menu.mjs";
 
 
 let animation,
@@ -225,7 +226,7 @@ function select(caller, target) {
         }
         document.querySelector('#context').setAttribute('style', 'left: 0;');
         Layout.open('projects');
-        nav_bar_designer(target, 'keyword');
+        TabletMenu.refresh(target, 'keyword');
         return;
     }
 
@@ -234,8 +235,8 @@ function select(caller, target) {
 
 
 export default {
-    animation,
     animation_running,
+    animation,
     select,
     invoke,
     pause,

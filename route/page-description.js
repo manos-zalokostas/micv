@@ -1,7 +1,8 @@
-import DescriptionAside from "./description-aside.mjs";
+import AsideContent from "../component/aside-content.mjs";
 import Layout from "../component/layout.mjs";
 import Slider from "../component/slider.mjs";
 import Storage from "../core/storage.mjs";
+
 
 function openSlider(src) {
 
@@ -30,38 +31,6 @@ function openSlider(src) {
     Slider.open();
 
 }
-
-
-/**
- * @param currentListItem
- * @param currList
- */
-// export function build_selected_item_content(currentListItem, currList) {
-//
-//
-//
-//     // if (oXML) {
-//     refresh(currentListItem, currList, oXML);
-//     // return;
-//     // }
-//
-//     // // CALL THE FETCH API TO RETRIEVE RELATED DATA AND DISPLAY THE ITEM FULL DESCRIPTION
-//     // fetch('index.xml')
-//     //     .then(response => {
-//     //         if (!response.ok) {
-//     //             throw new Error('Failed to fetch data');
-//     //         }
-//     //         return response.text();
-//     //     })
-//     //     .then(data => {
-//     //         const parser = new DOMParser();
-//     //         const xmlData = parser.parseFromString(data, 'application/xml');
-//     //         __RESOLVE_AND_DISPLAY_ITEM_FULL_DESCRIPTION(currentListItem, currList, xmlData);
-//     //     })
-//     //     .catch(error => {
-//     //         console.error('Failed to open:', error.message);
-//     //     });
-// }
 
 
 /**
@@ -100,11 +69,11 @@ function refresh(currentListItem, currList) {
 
 
     if (currList) {
-        const field = DescriptionAside.activate(currList);
+        const field = AsideContent.activate(currList);
         const context = document.getElementById('context');
         if (context) {
             context.style.left = '-100%';
-            DescriptionAside.open(field);
+            AsideContent.open(field);
         }
         return;
     }

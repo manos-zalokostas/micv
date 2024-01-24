@@ -29,9 +29,7 @@ async function init() {
 
         const response = await fetch('index.xml');
 
-        if (!response.ok) {
-            throw new Error('Failed to fetch index.xml');
-        }
+        if (!response.ok) throw new Error('Failed to fetch index.xml');
 
         const data = await response.text();
         const parser = new DOMParser();
@@ -52,7 +50,7 @@ async function init() {
  * @param xml The data to initialize.
  * @private
  */
-export function parseRawDataToGroups(xml) {
+function parseRawDataToGroups(xml) {
     try {
 
         let a = [];
@@ -64,7 +62,7 @@ export function parseRawDataToGroups(xml) {
         temp_references = references.slice()
         tech_tools = _suffleArray(parseGroupTool(xml))
         temp_tools = tech_tools.slice()
-
+        debugger
         Search.list(projects, tech_tools);
 
     } catch (error) {
@@ -80,7 +78,7 @@ export function parseRawDataToGroups(xml) {
  * @returns {[]} The array containing all projects.
  * @private
  */
-export function parseGroupProject(xml) {
+function parseGroupProject(xml) {
     try {
 
         const index = 'all_projects';
@@ -128,7 +126,7 @@ export function parseGroupProject(xml) {
  * @returns {Array} - An array of reference items.
  * @private
  */
-export function parseGroupReference(data) {
+function parseGroupReference(data) {
     try {
 
         const index = 'all_references';
@@ -137,7 +135,6 @@ export function parseGroupReference(data) {
         let aTemp = [];
         let a = [];
 
-        debugger
 
         if (cache) {
             aSerialized = JSON.parse(cache);
@@ -175,14 +172,13 @@ export function parseGroupReference(data) {
  * @returns {[]} The array containing all tools.
  * @private
  */
-export function parseGroupTool(xml) {
+function parseGroupTool(xml) {
     try {
 
         const index = 'all_tools';
         const cache = Storage.get(index, false);
         let a = [];
 
-        debugger
 
         if (cache) {
             return JSON.parse(cache);
@@ -215,7 +211,7 @@ export function parseGroupTool(xml) {
  *
  * @param {string} field
  */
-export function resolveNextEntry(field) {
+function resolveNextEntry(field) {
     let p = {}, c = {}, t = [];
     let prun = false, crun = false, trun = false;
     let procstr = '';
@@ -248,7 +244,7 @@ export function resolveNextEntry(field) {
  * @returns {{img: string, data: string, name: string, label: string}|Document|any|null} The project data.
  * @private
  */
-export function __GET_PROJECT() {
+function __GET_PROJECT() {
     let currProject = {};
     let cacheIdx = '';
 
@@ -281,7 +277,7 @@ export function __GET_PROJECT() {
  * @returns {{img: string, item: string, data: string, name: string, label: string}|Document|any|null} The reference data.
  * @private
  */
-export function __GET_REFERENCE() {
+function __GET_REFERENCE() {
     let currReference = {};
     let cacheIdx = '';
 
@@ -311,8 +307,8 @@ export function __GET_REFERENCE() {
         name: name.substring(0, name.indexOf('</h4>') + 5),
         label: name.substring(name.indexOf('<p>'), name.indexOf('</p>') + 4),
         img: (name.includes('linkedin') > -1) ? 'images/tech_logos/linkedin_user.jpg' : 'images/tech_logos/facebook_user.jpg',
-        data: data,
-        item: currReference[3]
+        item: currReference[3],
+        data
     };
 
     // THROUGH (POP) THE ITEM FROM THE ARRAY, SO THAT IT WILL NOT BE RETRIEVED AGAIN LATER
@@ -327,17 +323,19 @@ export function __GET_REFERENCE() {
  * @returns {[]} The tools data.
  * @private
  */
-export function __GET_TOOLS() {
+function __GET_TOOLS() {
     let currTools = [];
     let tools = [];
     let size;
 
     // Assuming 'skills_preview', '#tool', and 'h4' are classes and tags in the HTML structure
-    const skillsPreview = document.getElementById('skills_preview');
-    const toolElements = skillsPreview.getElementsByClassName('tool');
+    const skills = document.querySelectorAll('#skills_preview #tool h4');
+    // const toolElements = skillsPreview.getElementsByClassName('tool');
 
     // Assuming the size is the number of 'h4' elements inside each 'tool' element
-    size = toolElements.length > 0 ? toolElements[0].getElementsByTagName('h4').length : 0;
+    size = skills?.length > 0
+        ? skills.length
+        : 0;
 
     for (let i = 0; i < size; i++) {
         if (temp_tools.length === 0) {
@@ -356,7 +354,7 @@ export function __GET_TOOLS() {
  * @returns {string} - The converted cache index.
  * @private
  */
-export function _toIndex(str) {
+function _toIndex(str) {
     return str.toLowerCase().replace(/ /g, '_');
 }
 
@@ -367,7 +365,7 @@ export function _toIndex(str) {
  * @returns {Array} - The shuffled array.
  * @private
  */
-export function _suffleArray(a) {
+function _suffleArray(a) {
     const b = [];
     let x = null;
 
@@ -393,7 +391,7 @@ export default {
 //  * Evaluates external URL commands from the window location search.
 //  * @returns {boolean} Returns true if a command was successfully evaluated, otherwise false.
 //  */
-// export function EVAL_EXTERNAL_URL_COMMAND() {
+//  function EVAL_EXTERNAL_URL_COMMAND() {
 //     const search = window.location.search;
 //     if (search) {
 //         const entries = search.replace('?', '').split('=');

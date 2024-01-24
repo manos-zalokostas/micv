@@ -1,13 +1,10 @@
-// import {handle_pause_action, configure_banner_display, animate_skills, handle_banner_input} from "./monitor";
-// import {build_selected_item_content, preview_extras, content_handler} from "./page-description";
-// import {nav_bar_designer, reveal_list_subcategories} from "./page-project";
-// import {animate_page, navigate_resume_page} from "./page";
-// import {animate_opacity} from "./visual";
+import AsideContent from "./component/aside-content.mjs";
+import TabletMenu from "./component/tablet-menu.mjs";
+import PageDescription from "./route/page-description";
 import Monitor from "component/monitor.mjs";
 import Layout from "./component/layout.mjs";
 import Visual from "./core/visual.mjs";
-import PageDescription from "./route/page-description";
-import DescriptionAside from "./route/description-aside.mjs";
+
 
 export function initializeListeners() {
     const rootElement = document; // You can replace this with the actual root element
@@ -185,7 +182,7 @@ export function initializeListeners() {
                 document.querySelector('#context').style.left = '0';
             }
 
-            nav_bar_designer(target.innerHTML, 'navigation');
+            TabletMenu.refresh(target.innerHTML, 'navigation');
         }
 
 
@@ -217,7 +214,7 @@ export function initializeListeners() {
             // EXTRA BUTTONS 'CLICK'
 
             if (target.tagName === 'DIV' && target.parentElement.id === 'iextra') {
-                DescriptionAside.open(target);
+                AsideContent.open(target);
             }
 
 
@@ -246,7 +243,7 @@ export function initializeListeners() {
 
 
             if (target.tagName === 'A' && target.classList.contains('keys')) {
-                nav_bar_designer(target.innerHTML, 'keyword');
+                TabletMenu.refresh(target.innerHTML, 'keyword');
                 document.getElementById('context').style.left = '0';
                 event.preventDefault();
             }
@@ -256,7 +253,7 @@ export function initializeListeners() {
 
 
             if (target.tagName === 'A' && target.classList.contains('cat_key')) {
-                nav_bar_designer(target.innerHTML, 'category');
+                TabletMenu.refresh(target.innerHTML, 'category');
                 document.getElementById('context').style.left = '0';
                 event.preventDefault();
             }
@@ -266,7 +263,7 @@ export function initializeListeners() {
 
 
             if (target.tagName === 'LI' && target.parentElement.id === 'temp_list') {
-                list_item = target.innerHTML;
+                let list_item = target.innerHTML;
                 PageDescription.refresh(list_item, null);
             }
 
@@ -283,7 +280,7 @@ export function initializeListeners() {
 
             if (target.tagName === 'LI' && (target.parentElement.classList.contains('list') || target.parentElement.classList.contains('sublist'))) {
                 if (target.parentElement.classList.contains('list')) {
-                    reveal_list_subcategories(target);
+                    TabletMenu.listContents(target);
                 } else {
                     event.stopPropagation();
                 }
