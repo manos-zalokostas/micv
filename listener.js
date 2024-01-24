@@ -1,8 +1,10 @@
-import {handle_pause_action, configure_banner_display, animate_skills, handle_banner_input} from "./monitor";
-import {build_selected_item_content, preview_extras, content_handler} from "./page-description";
-import {nav_bar_designer, reveal_list_subcategories} from "./page-project";
-import {animate_page, navigate_resume_page} from "./page";
-import {animate_opacity} from "./visual";
+// import {handle_pause_action, configure_banner_display, animate_skills, handle_banner_input} from "./monitor";
+// import {build_selected_item_content, preview_extras, content_handler} from "./page-description";
+// import {nav_bar_designer, reveal_list_subcategories} from "./page-project";
+// import {animate_page, navigate_resume_page} from "./page";
+// import {animate_opacity} from "./visual";
+
+import Monitor from "component/monitor.mjs";
 
 
 export function initializeListeners() {
@@ -28,10 +30,10 @@ export function initializeListeners() {
         // Input[list] change
         if (target.matches("input[list]")) {
             if (this.getAttribute('list') === 'project_list') {
-                handle_banner_input('project', this.value.split(' ').shift());
+                Monitor.select('project', this.value.split(' ').shift());
             }
             if (this.getAttribute('list') === 'skill_list') {
-                handle_banner_input('tool', this.value.split(' ').shift());
+                Monitor.select('tool', this.value.split(' ').shift());
             }
             document.querySelector("input[list]").value = '';
         }
@@ -48,10 +50,10 @@ export function initializeListeners() {
         if (target.matches("#skill_fields b")) {
             const pauseBtn = document.querySelector('#skills_preview > div > em');
             if (pauseBtn.classList.contains('paused')) {
-                handle_pause_action();
+                Monitor.pause();
             }
-            animate_skills('off');
-            configure_banner_display(target.getAttribute('title'));
+            Monitor.invoke('off');
+            Monitor.filter(target.getAttribute('title'));
         }
 
 
@@ -59,7 +61,7 @@ export function initializeListeners() {
 
 
         if (target.matches('#skills_preview > div > em')) {
-            handle_pause_action();
+            Monitor.pause();
         }
 
 
@@ -67,7 +69,7 @@ export function initializeListeners() {
 
 
         if (target.closest('#skills_preview ul>li>div')) {
-            handle_banner_input(target.parentNode.id);
+            Monitor.select(target.parentNode.id);
         }
 
 

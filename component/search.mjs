@@ -4,7 +4,7 @@
  * @param tools The tools to build the search list for.
  * @private
  */
-export function _BUILD_SEARCH_LISTS(projects, tools) {
+ function list(projects, tools) {
     let htmlProjects = [];
     let htmlTools = [];
 
@@ -18,4 +18,9 @@ export function _BUILD_SEARCH_LISTS(projects, tools) {
 
     document.querySelector(('#project_list')).innerHTML = htmlProjects.join('');
     document.querySelector(('#skill_list')).innerHTML = htmlTools.join('');
+}
+
+
+export default {
+     list
 }

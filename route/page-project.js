@@ -1,9 +1,9 @@
-import {__GET_CACHED_DATA} from "./storage";
+import {storage.get} from "./storage";
 import {animate_page, clean_page_data} from "./page";
 import {build_selected_item_content} from "./page-description";
 
 export function nav_bar_designer(item_requested, function_caller) {
-    const oXML = __GET_CACHED_DATA('sXML', true);
+    const oXML = storage.get('sXML', true);
 
     if (oXML) {
         __RESOLVE_AND_POPULATE_MAIN_BOARD(item_requested, function_caller, oXML);
@@ -34,7 +34,7 @@ export function nav_bar_designer(item_requested, function_caller) {
  * @param {HTMLElement} element
  */
 export function reveal_list_subcategories(element) {
-    const oXML = __GET_CACHED_DATA('sXML', true);
+    const oXML = storage.get('sXML', true);
 
     if (oXML) {
         __RESOLVE_AND_DISPLAY_SUBSECTION(element, oXML);

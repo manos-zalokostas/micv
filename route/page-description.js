@@ -1,4 +1,4 @@
-import {__GET_CACHED_DATA} from "./storage";
+import {storage.get} from "./storage";
 
 
 /**
@@ -6,7 +6,7 @@ import {__GET_CACHED_DATA} from "./storage";
  * @param currList
  */
 export function build_selected_item_content(currentListItem, currList) {
-    const oXML = __GET_CACHED_DATA('sXML', true);
+    const oXML = storage.get('sXML', true);
 
     if (oXML) {
         __RESOLVE_AND_DISPLAY_ITEM_FULL_DESCRIPTION(currentListItem, currList, oXML);

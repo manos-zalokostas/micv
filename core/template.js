@@ -1,4 +1,5 @@
-import {animate_skills} from "./monitor";
+import Service from "./service.mjs";
+import Monitor from "../component/monitor.mjs";
 
 /**
  *
@@ -8,7 +9,7 @@ import {animate_skills} from "./monitor";
  * @param {string} field
  * @param {string} process_string
  */
-export function convert_data_to_html(project, comment, tools, field, process_string) {
+export function MonitorLoadNextDataViews(project, comment, tools, field, process_string) {
     let p = project;
     let c = comment;
     let t = tools;
@@ -35,7 +36,7 @@ export function convert_data_to_html(project, comment, tools, field, process_str
 
         pct = pct.replace('p', '');
         if (pct === '' && !animation_running) {
-            gmode = 'project';
+            Service.gmode = 'project';
             animate_skills(gmode);
             return;
         }
@@ -53,14 +54,14 @@ export function convert_data_to_html(project, comment, tools, field, process_str
 
         pct = pct.replace('c', '');
         if (pct === '' && !animation_running) {
-            gmode = 'reference';
-            animate_skills(gmode);
+            Service.gmode = 'reference';
+            Monitor.invoke(gmode);
             return;
         }
     }
 
     if (pct.includes('t')) {
-        place_skill_images(tdiv, t, counter, field, pctl);
+        resolveViewTools(tdiv, t, counter, field, pctl);
     }
 }
 
@@ -77,7 +78,7 @@ export function convert_data_to_html(project, comment, tools, field, process_str
  * @param {string} field
  * @param {number} pctl
  */
-export function place_skill_images(divs, skills, counter, field, pctl) {
+export function resolveViewTools(divs, skills, counter, field, pctl) {
     let node = divs[counter];
     let name = skills[counter].tagName;
 
@@ -85,14 +86,13 @@ export function place_skill_images(divs, skills, counter, field, pctl) {
 
     counter++;
 
-    if (counter < divs.length) {
-        place_skill_images(divs, skills, counter, field, pctl);
-    } else {
-        if (animation_running) {
-            return;
-        }
-
-        gmode = (pctl > 1) ? 'global' : 'tool';
-        animate_skills(gmode);
+    if (animation_running) {
+        return;
     }
+    if (counter < divs.length) {
+        resolveViewTools(divs, skills, counter, field, pctl);
+    }
+
+    Service.gmode = (pctl > 1) ? 'global' : 'tool';
+    Monitor.invoke(gmode);
 }

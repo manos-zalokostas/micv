@@ -4,7 +4,7 @@
     <title>Manos Portfolio</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YPNDHPEG7N"></script>
-    <script defer type="text/javascript" src="index.js"></script>
+    <!--    <script defer type="text/javascript" src="index.mjs"></script>-->
     <link href="index.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
@@ -643,18 +643,33 @@
     </div>
 </div>
 <!-- Google tag (gtag.js) -->
-<script>
-    window.dataLayer = window.dataLayer || [];
+<script type="module">
+    import Service from "./core/service.mjs";
 
-    function gtag() {
-        dataLayer.push(arguments);
-    }
 
-    gtag('js', new Date());
+    document.addEventListener('DOMContentLoaded', async () => {
+        console.log('MCV1');
 
-    gtag('config', 'G-YPNDHPEG7N');
+        let animation = '';
+        let animation_running = false;
+        let gmode = 'global';
+
+        localStorage.clear();
+
+        await Service.init();
+        //
+        // EVAL_EXTERNAL_URL_COMMAND();
+        //
+        // start_projector_display();
+        //
+        // initializeListeners()
+    });
+
+
 </script>
+
 </body>
+
 </html>
 
 

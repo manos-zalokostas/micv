@@ -1,3 +1,5 @@
+import Monitor from "../component/monitor.mjs";
+
 /**
  * // CLEARS ALL THE DATA DISPLAYED ON SCREEN BY THE LATEST PREVIEWED ITEM, AND DISPLAY, THEM, OFF
  *
@@ -39,6 +41,7 @@ export function animate_page(current_page) {
     document.querySelector('#site_menu').animate({'top': '-10%'});
 
     switch (current_page) {
+
         case 'about':
             document.querySelector('#wrapper').animate(
                 {'top': '0%'}, 'slow', 'swing', function () {
@@ -47,9 +50,10 @@ export function animate_page(current_page) {
             );
             document.querySelector('#author_presentation > img').animate({'left': 0}, 'slow');
             if (!animation_running && !animation_paused) {
-                animate_skills(gmode);
+                Monitor.invoke(gmode);
             }
             break;
+
         case 'projects':
             document.querySelector('#wrapper').animate({'top': '-100%'}, 'slow', 'swing');
             document.querySelector('#author_presentation > img').animate(
@@ -57,8 +61,9 @@ export function animate_page(current_page) {
                     document.querySelector('#site_menu').animate({'top': 0});
                 }
             );
-            animate_skills('off');
+            Monitor.invoke('off');
             break;
+
         case 'certificates':
             document.querySelector('#wrapper').animate(
                 {'top': '-200%'}, 'slow', 'swing', function () {
@@ -66,8 +71,9 @@ export function animate_page(current_page) {
                 }
             );
             document.querySelector('#author_presentation > img').animate({'left': '-100%'});
-            animate_skills('off');
+            Monitor.invoke('off');
             break;
+
         default:
             // DEFAULT:: TOP LEVEL PAGE
             console.log('FUNCTION: ANIMATE_PAGE -> RUNS DEFAULT - PLEASE CHECK !');

@@ -152,7 +152,7 @@ function navigate_resume_page(domain) {
  * @param current_page
  */
 function animate_page(current_page) {
-debugger
+    debugger
     if ($('#site_menu a.selected').attr('title') == current_page) {
         return;
     }

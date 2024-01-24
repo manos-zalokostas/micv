@@ -1,82 +1,86 @@
-import {process_ajax_data} from "./service";
-import {build_selected_item_content} from "./page-description";
-import {nav_bar_designer} from "./page-project";
-import {animate_page} from "./page";
+// import {build_selected_item_content} from "./page-description";
+// import {nav_bar_designer} from "./page-project";
+// import {animate_page} from "./page";
+
+
+import Service from "../core/service.mjs";
+
+
+let animation,
+    animation_running;
 
 
 /**
  *
  * @param {string} mode
  */
-export function animate_skills(mode) {
-    if (mode === 'off') {
-        stop_animation();
-    } else {
-        let frames = 10000;
-        let counter = 0,
-            max = 0,
-            index = 0,
-            sindex = 0;
-        let anime_items;
-        let animate_next = true;
+function invoke(mode) {
 
-        if (mode === 'global') {
-            max = document.querySelectorAll('#skills_preview> ul> li').length;
-        } else {
-            if (mode === 'reference') {
-                sindex += 1;
-            } else {
-                if (mode === 'tool') {
-                    sindex += 2;
-                }
-            }
-            max = 1;
-        }
+    if (mode === 'off') return stop();
 
-        index = sindex;
+    let frames = 10000;
+    let counter = 0,
+        max = 0,
+        index = 0,
+        sindex = 0;
+    let anime_items;
+    let animate_next = true;
 
-        let num = 0;
-        animation = self.setInterval(
-            function () {
-                animation_running = true;
-                if (mode === 'off') {
-                    stop_animation();
-                } else {
-                    if (counter >= max) {
-                        process_ajax_data(mode);
-                        index = sindex;
-                        counter = 0;
-                    }
-
-                    let anime_child = document.querySelector('#skills_preview> ul> li:nth-child(' + (index + 1) + ')');
-
-                    if (document.querySelector('.slide_animated')) {
-                        reset_animation();
-                    }
-
-                    anime_child.setAttribute('class', 'slide_animated');
-                    anime_child.animate(
-                        {'left': 0},
-                        function () {
-                            anime_child.querySelector('img').animate({'right': 0});
-                            anime_child.querySelector('div:last-child').animate({'bottom': 0});
-                        }
-                    );
-
-                    counter++;
-                    index = counter;
-                }
-            },
-            frames
-        );
+    if (mode === 'global') {
+        max = document.querySelectorAll('#skills_preview> ul> li').length;
     }
+    if (mode === 'reference') {
+        sindex += 1;
+        max = 1;
+    }
+    if (mode === 'tool') {
+        sindex += 2;
+        max = 1;
+    }
+
+    index = sindex;
+
+    let num = 0;
+    animation = self.setInterval(
+        function () {
+            animation_running = true;
+            if (mode === 'off') {
+                stop();
+            } else {
+                if (counter >= max) {
+                    Service.resolveNextEntry(mode);
+                    index = sindex;
+                    counter = 0;
+                }
+
+                let anime_child = document.querySelector('#skills_preview> ul> li:nth-child(' + (index + 1) + ')');
+
+                if (document.querySelector('.slide_animated')) {
+                    reset();
+                }
+
+                anime_child.setAttribute('class', 'slide_animated');
+                anime_child.animate(
+                    {'left': 0},
+                    function () {
+                        anime_child.querySelector('img').animate({'right': 0});
+                        anime_child.querySelector('div:last-child').animate({'bottom': 0});
+                    }
+                );
+
+                counter++;
+                index = counter;
+            }
+        },
+        frames
+    );
 }
 
 
 /**
  * Reset the animation state.
  */
-export function reset_animation() {
+function reset() {
     document.querySelector('.slide_animated img').style.right = '-100%';
     document.querySelector('.slide_animated div:last-child').style.bottom = '-100%';
     document.querySelector('.slide_animated').removeAttribute('class');
@@ -87,7 +91,7 @@ export function reset_animation() {
 /**
  * Stop the animation.
  */
-export function stop_animation() {
+function stop() {
     window.clearTimeout(animation);
     animation_running = false;
     animation = null;
@@ -97,21 +101,21 @@ export function stop_animation() {
 /**
  *
  */
-export function handle_pause_action() {
+function pause() {
     const pauseBtn = document.querySelector('#skills_preview > div > em');
     if (pauseBtn.getAttribute('class')) {
         pauseBtn.classList.remove();
         animation_running = true;
-        animate_skills(gmode);
+        invoke(Service.gmode);
     } else {
         pauseBtn.classList.add('paused');
         animation_running = false;
-        animate_skills('off');
+        invoke('off');
     }
 }
 
 
-export function start_projector_display() {
+function start() {
     let icounter = 0;
 
     const introAnime = setInterval(() => {
@@ -129,16 +133,19 @@ export function start_projector_display() {
         if (icounter >= 1) {
             document.querySelector('#skills_preview').style.left = '0';
         }
+
         if (icounter === 5) {
             document.querySelectorAll('#skill_fields b').forEach(skill => {
                 skill.style.top = '0';
                 skill.style.opacity = '1';
             });
         }
+
         if (icounter === 10) {
             child1.style.opacity = '1';
             navigate_resume_page('introduction_cv');
         }
+
         if (icounter === 18) {
             child1.style.opacity = '0';
         }
@@ -172,9 +179,9 @@ export function start_projector_display() {
  *
  * @param {string} filter
  */
-export function configure_banner_display(filter) {
-    if (gmode === 'global' || gmode !== filter) {
-        gmode = filter;
+function filter(filter) {
+    if (Service.gmode === 'global' || Service.gmode !== filter) {
+        Service.gmode = filter;
 
         const filteronElement = document.querySelector('.filteron');
         if (filteronElement) {
@@ -184,16 +191,15 @@ export function configure_banner_display(filter) {
         const filterElement = document.querySelector(`#skill_fields>b[title="${filter}"]`);
         filterElement.setAttribute('class', 'filteron');
     } else {
-        gmode = 'global';
+        Service.gmode = 'global';
         document.querySelector(`#skill_fields>b[title="${filter}"]`).removeAttribute('class');
     }
 
-    animate_skills(gmode);
+    invoke(Service.gmode);
 }
 
 
-
-export function handle_banner_input(caller, target) {
+function select(caller, target) {
     target = target ? target : '';
 
     if (caller === 'project') {
@@ -223,4 +229,14 @@ export function handle_banner_input(caller, target) {
     }
 
     console.log('FUNCTION HANDLE_BANNER_INPUT RUNS WITH A DEFAULT, PLEASE CHECK!');
+}
+
+
+export default {
+    animation,
+    animation_running,
+    select,
+    invoke,
+    pause,
+    filter,
 }

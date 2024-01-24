@@ -5,7 +5,7 @@
  * @param {boolean} isXML - Whether the data is XML.
  * @private
  */
-export function __SET_CACHE_DATA(index, data, isXML) {
+function set(index, data, isXML) {
     if (isXML) {
         const oSerializer = new XMLSerializer();
         const sXML = oSerializer.serializeToString(data);
@@ -23,7 +23,7 @@ export function __SET_CACHE_DATA(index, data, isXML) {
  * @returns {Document | any | null} - The cached data.
  * @private
  */
-export function __GET_CACHED_DATA(index, isXML) {
+function get(index, isXML) {
     const data = localStorage.getItem(index);
 
     if (data && isXML) {
@@ -36,4 +36,10 @@ export function __GET_CACHED_DATA(index, isXML) {
     }
 
     return null;
+}
+
+
+export default {
+    set,
+    get,
 }
