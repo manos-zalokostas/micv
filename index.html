@@ -645,24 +645,24 @@
 <!-- Google tag (gtag.js) -->
 <script type="module">
     import Service from "./core/service.mjs";
+    import Route from "./component/route.mjs";
+    import Monitor from "./component/monitor.mjs";
+    import Interaction from "./interaction.mjs";
 
 
     document.addEventListener('DOMContentLoaded', async () => {
         console.log('MCV1');
 
-        // let animation = '';
-        // let animation_running = false;
-        // let gmode = 'global';
-
-        localStorage.clear();
 
         await Service.init();
-        //
-        // EVAL_EXTERNAL_URL_COMMAND();
-        //
-        // start_projector_display();
-        //
-        // initializeListeners()
+
+        Route.redirect();
+
+        Interaction.attach()
+
+        Monitor.intro()
+
+
     });
 
 

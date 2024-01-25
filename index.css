@@ -560,6 +560,11 @@ div {
     border-bottom: 1px solid tomato;
 }
 
+#introduction #skills_preview .slide_animated {
+    position: initial;
+    /*display: block;*/
+}
+
 #introduction .monitor > ul {
     float: left;
     width: 100%;
@@ -1044,7 +1049,7 @@ div {
     font-size: 2em;
     text-transform: lowercase;
     font-family: Tahoma, Geneva, sans-serif;
-    width:100%;
+    width: 100%;
     text-align: center;
 }
 

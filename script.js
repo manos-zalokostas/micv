@@ -17,6 +17,301 @@ $(document).ready(
 
         start_projector_display();
 
+        // LISTENER FOR THE PAGES
+        $("#search_radio input[value=project]").click(
+            function () {
+                document.querySelector(('input[list]')).setAttribute('list', 'project_list')
+            }
+        );
+        $("#search_radio input[value=skill]").click(
+            function () {
+                document.querySelector(('input[list]')).setAttribute('list', 'skill_list')
+            }
+        );
+        $("input[list]").change(
+            function () {
+                if ($(this).attr('list') === 'project_list') {
+                    handle_banner_input('project', $(this).context.value.split(' ').shift());
+                }
+                if ($(this).attr('list') === 'skill_list') {
+                    handle_banner_input('tool', $(this).context.value.split(' ').shift());
+                }
+                $("input[list]")[0].value = '';
+            }
+        );
+
+        // LISTENER FOR THE PAGES
+        $("#site_menu a").click(
+            function () {
+                var current_page = $(this).context.innerHTML;
+                animate_page(current_page)
+            }
+        );
+
+        // LISTENERS FOR THE BANNER BUTTONS
+        $("#skill_fields b").each(
+            function () {
+                $(this).click(
+                    function () {
+                        var pause_btn = $('#skills_preview > div > em');
+                        if ($(pause_btn).hasClass('paused')) {
+                            handle_pause_action();
+                        }
+                        animate_skills('off');
+                        configure_banner_display($(this).attr('title'));
+                    }
+                )
+            }
+        );
+
+        // LISTENER FOR THE 'PAUSE' BUTTON
+        var pause_btn = $('#skills_preview > div > em');
+        $(pause_btn).click(handle_pause_action);
+
+
+        // LISTENER FOR THE SKILLS - BANNER
+        $('#skills_preview').mouseenter(
+            function () {
+                var pause_btn = $('#skills_preview > div > em');
+                if ($(pause_btn).hasClass('paused')) {
+                    return;
+                }
+                $(pause_btn).css('display', 'block');
+            }
+        )
+
+        $('#skills_preview').mouseleave(
+            function () {
+                var pause_btn = $('#skills_preview > div > em');
+                if ($(pause_btn).hasClass('paused')) {
+                    return;
+                }
+                $(pause_btn).css('display', 'none');
+            }
+        )
+
+        // LISTENERS FOR THE BANNER - SHOWCASE - ITEMS
+        $('#skills_preview').delegate(
+            'ul>li>div', 'click', function () {
+                $(this).click(handle_banner_input(this.parentNode.id));
+            }
+        )
+
+        //LISTENERS FOR THE 'INTRODUCTION' PAGE
+        $("#introduction_menu a").each(
+            function () {
+                $(this).click(
+                    function () {
+                        var domain = this.id;
+                        navigate_resume_page(domain)
+                    }
+                );
+            }
+        );
+
+        $('#cv_comments').click(
+            function () {
+                if (document.querySelector('#cv_description i').style.display == 'none' || !(document.querySelector('#cv_description i').hasAttribute('style'))) {
+                    $('#cv_description i').css({'display': 'block'}).animate({'opacity': '1'});
+                } else {
+                    $('#cv_description i').animate(
+                        {'opacity': '0'}, function () {
+                            $(this).css({'display': 'none'})
+                        }
+                    );
+
+                }
+            }
+        )
+
+        // LISTENERS FOR THE BUTTONS THAT ISSUE THE TIMELINE DATES  (2001, 2002 etc) TO SCALE AND CHANGE COLOR
+        $("#timeline_btns a").each(
+            function () {
+                $(this).click(
+                    function () {
+                        var domain = this.id;
+
+                        if (domain == 'mlt') {
+                            color = 'gainsboro';
+                        } else {
+                            if (domain == 'std') {
+                                color = 'teal';
+                            } else {
+                                color = 'goldenrod';
+                            }
+                        }
+
+                        if (document.querySelector('#timeline a.selected')) {
+                            $('#timeline a.selected').removeClass().css('paddingBottom', 0);
+                            $('#objectives').css('opacity', 0);
+                        }
+
+                        if (document.querySelector('#timeline_btns a[style]')) {
+                            document.querySelector('#timeline_btns a[style]').removeAttribute('style')
+                        }
+                        $(this).css({'background-color': color});
+                        $('#label').css('color', color)
+
+                        $('#timeline li').each(
+                            function () {
+                                if (this.className.match(domain)) {
+                                    this.setAttribute('class', this.getAttribute('class').replace('_off', ''));
+                                    $(this).css({'opacity': '0'});
+                                    $(this).animate({'padding-left': '6px', 'opacity': '1'}, 'slow', 'swing');
+                                } else {
+                                    if (!(this.getAttribute('class').match('_off')) && this.getAttribute('class') != 'default') {
+                                        this.setAttribute('class', this.getAttribute('class') + '_off');
+                                        $(this).animate({'padding-left': '0px'}, 'slow', 'swing');
+                                    }
+                                }
+                            }
+                        )
+                    }
+                );
+            }
+        );
+
+        // LISTENERS FOR THE TIMELINE DATES (2001,2005 etc) TO DELIVER (ONCLICKED) THEIR CONTENT ONSCREEN
+        $("#timeline > li  a").each(
+            function () {
+                $(this).click(
+                    function () {
+
+                        if (document.querySelector('#timeline > li a.selected')) {
+                            $('#timeline > li a.selected').removeClass('selected').removeAttr('style');
+                        }
+
+                        $(this).addClass('selected').animate({'paddingBottom': '100px'});
+
+                        $('#objectives').css({'opacity': '0'});
+
+                        var label = this.parentNode.querySelector('p[title="item_label"]').innerHTML;
+                        var skill = this.parentNode.querySelector('p[title="item_skills"]').innerHTML;
+                        document.querySelector('#label').innerHTML = label;
+                        document.querySelector('#skills').innerHTML = skill;
+
+                        $('#objectives').animate({'opacity': '1'}, 'slow', 'swing');
+                    }
+                )
+            }
+        );
+
+        //LISTENERS FOR THE ''WORK'' PAGE
+        // $("#menu_tabs li a").hover(hover_in_menu_buttons, hover_out_menu_buttons);
+
+        //MAIN BUTTONS 'CLICK'
+        $("#menu_tabs li a").click(
+            function (event) {
+
+                if (document.querySelector('#context').style.left != 0) {
+                    $('#context').animate({'left': 0})
+                }
+                nav_bar_designer(event.target.innerHTML, 'navigation');
+            }
+        );
+
+        // LIST BUTTONS 'CLICK'
+        $('#list').delegate(
+            '.sublist>li', 'click', function (event) {
+
+                if ($('li').hasClass('previewed') && !(($(this).siblings('li').hasClass('previewed')))) {
+                    $('.previewed').parent().parent().css('background-color', 'white');
+                    $('.previewed').parent().remove()
+                }
+
+                $(this).attr('class', 'previewed').parent().parent().css('background-color', '#eee');
+                $(this).css({'background-color': 'white', 'color': 'orange'});
+
+                build_selected_item_content(event.target.innerHTML, $('.list').attr('id'));
+
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                    'event': 'evt-project-preview',
+                    'project-previewed': event.target.innerText
+                });
+
+            }
+        );
+
+        // LIST BUTTONS 'MOUSEENTER'
+        $('#list').delegate(
+            'ul.list>li, ul.sublist>li', 'mouseenter', (function (event) {
+
+                if ($(this).parent().hasClass('list')) {
+                    reveal_list_subcategories(event.target);
+                } else {
+                    event.stopPropagation();
+                }
+            })
+        );
+
+        // LIST BUTTON 'MOUSELEAVE'
+        $('#list').delegate(
+            'ul.list>li', 'mouseleave', (function (event) {
+
+                if (!($(this).children('ul').children('li').hasClass('previewed'))) {
+                    $(this).children('ul').remove();
+                }
+
+            })
+        );
+
+        // EXTRA BUTTONS 'CLICK'
+        $('#iextra > div').click(
+            function (event) {
+
+                preview_extras(this);
+            }
+        )
+
+        // media / files / IMAGES  ELEMENTS 'CLICK'
+        $('#imedia, #ifiles, #iscreenshots').delegate(
+            'a', 'click', function (event) {
+
+                var item_src = $(this).attr('href');
+                var app = "";
+                if ($(this).parent().parent().attr('id').search('media') > -1) {
+                    app = 'avi';
+                } else {
+                    if ($(this).parent().parent().attr('id').search('files') > -1) {
+                        app = 'pdf';
+                    } else {
+                        app = 'jpg';
+                    }
+                }
+                $(this).attr('class', 'item_previewed', '');
+                content_handler(item_src, app)
+                return false;
+            }
+        )
+
+        // HEAD - KEYWORDS LINKS 'CLICK'
+        $('#description').delegate(
+            'a.keys', 'click', function (event) {
+                nav_bar_designer(event.target.innerHTML, 'keyword')
+                $('#context').animate({'left': 0});
+                return false;
+            }
+        )
+
+        // HEAD - CATEGORY-KEYWORDS 'CLICK'
+        $('#description').delegate(
+            'a.cat_key', 'click', function (event) {
+                nav_bar_designer(event.target.innerHTML, 'category')
+                $('#context').animate({'left': 0});
+                return false;
+            }
+        )
+
+        // LIST CREATED BY KEYWORDS 'CLICK'
+        $('#list').delegate(
+            '#temp_list li', 'click', function (event) {
+
+                list_item = event.target.innerHTML;
+                build_selected_item_content(list_item, null)
+            }
+        )
+
     }
 );
 
@@ -152,7 +447,7 @@ function navigate_resume_page(domain) {
  * @param current_page
  */
 function animate_page(current_page) {
-    
+
     if ($('#site_menu a.selected').attr('title') == current_page) {
         return;
     }
@@ -215,20 +510,20 @@ function ajax_retrieve_skill_data() {
 
     if (oXML) {
         __INITIALIZE_PAGE_DATA(oXML);
-        process_ajax_data(gmode);
+        proccess_ajax_data(gmode);
         return;
     }
 
     $.ajax(
         {
-            url: 'index.xml',
+            url: 'items.xml',
             dataType: 'xml',
             success: function (data) {
 
                 __SET_CACHE_DATA('sXML', data, true);
 
                 __INITIALIZE_PAGE_DATA(data);
-                process_ajax_data(gmode);
+                proccess_ajax_data(gmode);
             },
             error: function () {
                 console.log('Failed 2 Tech-Logos file ...');
@@ -242,7 +537,7 @@ function ajax_retrieve_skill_data() {
  *
  * @param field
  */
-function process_ajax_data(field) {
+function proccess_ajax_data(field) {
 
     var p = {}, c = {};
     var t = [];
@@ -425,7 +720,7 @@ function animate_skills(mode) {
                 return;
             } else {
                 if (counter >= max) {
-                    process_ajax_data(mode);
+                    proccess_ajax_data(mode);
                     index = sindex;
                     counter = 0
                     /* mode='off';*/
@@ -530,7 +825,7 @@ function reveal_list_subcategories(element) {
 
     $.ajax(
         {
-            url: 'index.xml',
+            url: 'items.xml',
             dataType: 'xml',
             success: function (data) {
                 __RESOLVE_AND_DISPLAY_SUBSECTION(element, data);
@@ -551,7 +846,20 @@ function reveal_list_subcategories(element) {
 
  * @param element
  */
+function preview_extras(element) {
 
+    var elem = element
+
+    // HIDES THE PREVIEWED SIBLING
+    $('#iextra').find('.extra_preview').animate({'height': '5%'}).find('span').css('display', 'none');
+
+    // ANIMATES-IN THE SELECTED FIELD
+    $(elem).attr('class', 'extra_preview').animate(
+        {'height': '80%'}, 'medium', 'linear', function () {
+            $(this).find('span').css({'display': 'block'});
+        }
+    );
+}
 
 
 /**
@@ -570,7 +878,7 @@ function nav_bar_designer(item_requested, function_caller) {
     // CALL THE AJAX TO RETRIEVE RELATED DATA AND POPULATE THE NAVIGATION LIST MENE
     $.ajax(
         {
-            url: 'index.xml',
+            url: 'items.xml',
             dataType: 'xml',
             success: function (data) {
                 __RESOLVE_AND_POPULATE_MAIN_BOARD(item_requested, function_caller, data)
@@ -636,7 +944,7 @@ function build_selected_item_content(current_list_item, curr_list) {
 
     $.ajax(
         {
-            url: 'index.xml',
+            url: 'items.xml',
             dataType: 'xml',
             success: function (data) {
                 __RESOLVE_AND_DISPLAY_ITEM_FULL_DESCRIPTION(current_list_item, curr_list, data);
@@ -823,12 +1131,11 @@ function slide_images(direction, button_clicked) {
             //THE ABOVE HANDLES THE WHETHER THE BUTTON WILL BE ENABLED OR NOT
             //TO DO THAT i TAKE THE src OF THE ITEM THAT WILL BE DISPLAYED DURING THIS
             //CODE EXECUTION (--NOT THE ONE THAT WAS ALREADY DISPLAYED ON SCREEN--)
-            $('#preview').children(':first')
-                .animate(
-                    {'opacity': 0, 'right': '100%'}, function () {
-                        $('#preview').children(':first').attr('src', src).css({'right': '-100%'})
-                    }
-                ).animate({'opacity': 1, 'right': 0});
+            $('#preview').children(':first').animate(
+                {'opacity': 0, 'right': '100%'}, function () {
+                    $('#preview').children(':first').attr('src', src).css({'right': '-100%'})
+                }
+            ).animate({'opacity': 1, 'right': 0});
         } else {
             $(btnnext).attr('class', 'nochild')
         }

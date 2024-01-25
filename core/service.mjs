@@ -1,5 +1,5 @@
 // import {__GET_CACHED_DATA, __SET_CACHE_DATA} from "./storage";
-import {MonitorLoadNextDataViews} from "./template.mjs";
+// import {MonitorLoadNextDataViews} from "./template.mjs";
 // import {_BUILD_SEARCH_LISTS} from "./search";
 
 import Storage from "./storage.mjs"
@@ -19,19 +19,15 @@ let gmode = 'global',
  */
 async function init() {
 
-    let oXML = Storage.get('sXML', true);
-    if (oXML) {
-        parseRawDataToGroups(oXML);
-        resolveNextEntry(gmode);
-        return;
-    }
+    localStorage.clear();
+
     try {
 
         const response = await fetch('index.xml');
 
         if (!response.ok) throw new Error('Failed to fetch index.xml');
-
         const data = await response.text();
+
         const parser = new DOMParser();
         const xmlDoc = parser.parseFromString(data, 'application/xml');
 
@@ -62,7 +58,7 @@ function parseRawDataToGroups(xml) {
         temp_references = references.slice()
         tech_tools = _suffleArray(parseGroupTool(xml))
         temp_tools = tech_tools.slice()
-        debugger
+
         Search.list(projects, tech_tools);
 
     } catch (error) {
@@ -235,7 +231,8 @@ function resolveNextEntry(field) {
         t = __GET_TOOLS();
     }
 
-    MonitorLoadNextDataViews(p, c, t, field, procstr);
+    return [p, c, t, field, procstr]
+    // MonitorLoadNextDataViews(p, c, t, field, procstr);
 }
 
 

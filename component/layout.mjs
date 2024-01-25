@@ -1,5 +1,5 @@
+import PageDescription from "../route/page-description.mjs";
 import Monitor from "../component/monitor.mjs";
-import PageDescription from "../route/page-description.js";
 import Service from "../core/service.mjs";
 
 /**
@@ -111,13 +111,23 @@ function openResume(domain) {
         PageDescription.openSlider('images/cv_document/micv.pdf', 'pdf');
     }
 
+    /*
+     [
+        // keyframes
+        { transform: "translateY(0px)" },
+        { transform: "translateY(-300px)" },
+      ],
+      {
+        // timing options
+        duration: 1000,
+        iterations: Infinity,
+      },
+     */
+
     document.querySelectorAll(domainSelector).forEach(element => {
         if (element.id.match('cv_field')) {
             element.animate(
                 {'opacity': '0', 'left': '-100%'},
-                'swing',
-                function () {
-                }
             );
         }
     });
