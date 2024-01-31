@@ -183,19 +183,19 @@ function listen() {
 
 function html() {
     return `
-    <div id="list" class="tablet" style="overflow-x: hidden;">
+    <div class="mi-tablet">
         <h5>WEB</h5>
-        <ul id="WEB" class="list">
-            <li class="tgroupi" style="left: 0px;">Education</li>
-            <li class="tgroupi" style="left: 0px;">Merchandise</li>
-            <li class="tgroupi" style="left: 0px;">Portfolio</li>
-            <li class="tgroupi" style="left: 0px;">Safekeeping</li>
-            <li class="tgroupi" style="left: 0px;">Mobile Applications</li>
-            <li class="tgroupi" style="left: 0px;">Banking</li>
-            <li class="tgroupi" style="left: 0px;">Conferences</li>
-            <li class="tgroupi" style="left: 0px;">Warehouse</li>
-            <li class="tgroupi" style="left: 0px;">Hospitality</li>
-            <li class="tgroupi" style="left: 0px;">Energy</li>
+        <ul id="WEB">
+            <li class="tgroupi" >Education</li>
+            <li class="tgroupi" >Merchandise</li>
+            <li class="tgroupi" >Portfolio</li>
+            <li class="tgroupi" >Safekeeping</li>
+            <li class="tgroupi" >Mobile Applications</li>
+            <li class="tgroupi" >Banking</li>
+            <li class="tgroupi" >Conferences</li>
+            <li class="tgroupi" >Warehouse</li>
+            <li class="tgroupi" >Hospitality</li>
+            <li class="tgroupi" >Energy</li>
         </ul>
     </div>
             ${css()}
@@ -208,18 +208,18 @@ function css() {
     
     
 
-.tablet {
+.mi-tablet {
     position: absolute;
     border: solid 12px #ccc;
-    width: 100%;
-    height: 100%;
+    height: calc(100% - 20px);
+    width: calc(100% - 20px);
     font-family: Tahoma, Geneva, sans-serif;
     background-color: #555;
     cursor: pointer;
 }
 
 
-.tablet > h5 {
+.mi-tablet > h5 {
     font-size: 20em;
     color: lightslategrey;
     margin: 1%;
@@ -228,7 +228,7 @@ function css() {
     text-align: center;
 }
 
-.tablet > ul {
+.mi-tablet > ul {
     margin: 0;
     width: 100%;
     height: 100%;
@@ -242,16 +242,13 @@ function css() {
 
 
 .tgroupi {
-    float: left;
-    list-style-type: none;
-    text-align: right;
+    display: inline-block;
+    box-sizing: content-box;
     color: white;
-    width: 30%;
-    height: 26%;
-    padding-right: 1%;
-    margin: 2px;
+    margin: 4px 2px;
+    min-height: 300px;
+    width: calc(100vw / 5);
     background-color: rgba(255, 255, 255, 0.2);
-    position: relative;
 }
 
 .tgroupi > h4 {

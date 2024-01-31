@@ -42,27 +42,28 @@ function reset() {
  */
 function open(current_page) {
     const $wrapper = $('#wrapper'),
-        $menu = $('#site_menu'),
-        $img = $('#author_presentation > img'),
-        $linkActive = $('#site_menu a.selected');
+        $img = $('#author_presentation > img')
+    // $menu = $('#site_menu'),
+    // $linkActive = $('#site_menu a.selected')
+    // ;
 
 
-    if ($linkActive.getAttribute('title') === current_page) {
-        return;
-    }
-    let animation_paused = $('#skill_fields > em').classList.contains('paused');
-
-    $linkActive.removeAttribute('class');
-    $('#site_menu a[title="' + current_page + '"]').classList.add('selected');
-
-
-    $menu.animate({'top': '-10%'});
+    // if ($linkActive.getAttribute('title') === current_page) {
+    //     return;
+    // }
+    // let animation_paused = $('#skill_fields > em').classList.contains('paused');
+    //
+    // $linkActive.removeAttribute('class');
+    // $('#site_menu a[title="' + current_page + '"]').classList.add('selected');
+    //
+    //
+    // $menu.animate({'top': '-10%'});
 
     switch (current_page) {
 
         case 'about':
             Visual.set(
-                {$wrapper, 'top': 0},
+                {$wrapper, 'top': 0, left: 0},
                 {$img, 'left': 0},
             )
             Introduction.load()
@@ -74,8 +75,19 @@ function open(current_page) {
         case 'projects':
 
             Visual.set(
-                {$wrapper, top: '-100%'},
+                {$wrapper, top: '-100%', left: 0},
                 {$img, left: '-100%'},
+            )
+            Content.load()
+
+            // Monitor.invoke('off');
+            break;
+
+        case 'projects-content':
+
+            Visual.set(
+                {$wrapper, left: '-100%'},
+                // {$img, left: '-100%'},
             )
             Content.load()
 
@@ -85,7 +97,7 @@ function open(current_page) {
         case 'certificates':
 
             Visual.set(
-                {$wrapper, top: '-200%'},
+                {$wrapper, top: '-200%', left: 0},
                 {$img, left: '-100%'},
             )
             Reference.load();

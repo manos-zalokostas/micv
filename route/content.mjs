@@ -1,14 +1,11 @@
-import PageMenuIntro from "../component/page-menu-intro.mjs";
 import Monitor from "../component/monitor.mjs";
-import QuoteAuthor from "../component/quote-author.mjs";
-import Timeline from "../component/timeline.mjs";
-import TimelineInteractive from "../component/timeline-interactive.mjs";
-import QuoteWelcome from "../component/quote-welcome.mjs";
-import QuoteSiteinfo from "../component/quote-siteinfo.mjs";
 import PageContentMenu from "../component/page-content-menu.mjs";
 import BadgeCategory from "../component/badge-category.mjs";
 import BadgeTools from "../component/badge-tools.mjs";
 import Extra from "../component/extra.mjs";
+import TabletMenu from "../component/tablet-menu.mjs";
+
+
 
 function html() {
 
@@ -16,15 +13,13 @@ function html() {
 
             <div id="mi-page-content-menu"></div>
 
-            <div id="context">
+            <div id="mi-description-wrapper">
 
-                <div id="list" class='monitor'></div>
+                <div id="mi-description-tablet" > TABLET</div>
 
-                <div id="description">
+                <div id="mi-description-content">DESCRIPTION
 
-                    <div id="ititle">
-                        <h3><span></span></h3>
-                    </div>
+                    <div id="ititle"></div>
 
                     <div id="mi-badge-cateogry"></div>
 
@@ -32,64 +27,61 @@ function html() {
 
                     <div id="ibody">
 
-                        <div id="idescription">
-                            <span></span>
-                            </div>
+                        <div id="idescription"></div>
 
-                        <div id="iscreenshots">
-                            <style>
-                            </style>
-                            <span></span>
-                        </div>
+                        <div id="iscreenshots"></div>
 
                     </div>
 
-                    <div id="mi-content-extra"></div>
+<!--                    <div id="mi-content-extra"></div>-->
             ${css()}
     `
 
 }
 
+
 function css() {
 
     return `
     <style>
-        /* #interactive_intro {*/
-        /*    position: absolute;*/
-        /*    bottom: 0;*/
-        /*    left: 0;*/
-        /*    float: left;*/
-        /*    overflow: hidden;*/
-        /*    margin: 1%;*/
-        /*    border-radius: 30px;*/
-        /*    border: 4px solid #ddd;*/
-        /*    width: 97%;*/
-        /*    height: 50%;*/
-        /*}*/
-        
-        /*#interactive_intro > div {*/
-        /*    position: absolute;*/
-        /*    top: 2%;*/
-        /*    float: left;*/
-        /*    overflow: hidden;*/
-        /*    text-align: left;*/
-        /*    font-size: 0.9em;*/
-        /*    font-family: calibri;*/
-        /*    color: #777;*/
-        /*    opacity: 0;*/
-        /*    margin: 0 0 0 1%;*/
-        /*    border-radius: 17px;*/
-        /*    width: 98%;*/
-        /*    height: 97%;*/
-        /*}*/
-        
-        #context {
-            margin: 0;
-            height: 104%;
-            width: 200%;
-            position: relative;
-            left: 0;
+    
+        #mi-page-content-menu {
+            position: absolute;
+            z-index: 10;
+            left:0;
+            top:0;
+            width: 25%;
+            height: 75px
         }
+    
+    
+        #mi-description-wrapper {
+            position: absolute;
+            z-index: 5;
+            top:0;
+            left: 0;
+            height: 100%;
+            width: 200%;
+            background: silver;
+        }
+        
+        #mi-description-wrapper > div {
+             position: relative;
+             float: left;
+             width: 50%;
+             height: 100%;
+             /*margin: 100px;*/
+        }
+
+            
+         #mi-description-tablet {
+             /*background: #efe;*/
+         }
+            
+         #mi-description-content {
+             /*background: #eef;*/
+         }
+            
             
          #ititle {
             float: left;
@@ -199,14 +191,15 @@ function load(id="mi-page-content") {
 
     document.getElementById(id).innerHTML = html();
 
-    Monitor.install("list")
+    TabletMenu.install('mi-description-tablet')
     PageContentMenu.install('mi-page-content-menu')
-    BadgeCategory.install("mi-badge-cateogry")
-    BadgeTools.install('mi-badge-tools')
-    Extra.install('mi-content-extra')
+    // BadgeCategory.install("mi-badge-cateogry")
+    // BadgeTools.install('mi-badge-tools')
+    // Extra.install('mi-content-extra')
 
     // listen();
 }
+
 
 export default {
     load

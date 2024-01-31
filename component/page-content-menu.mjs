@@ -1,15 +1,16 @@
-import Monitor from "./monitor.mjs";
 import Layout from "./layout.mjs";
-import TabletMenu from "./tablet-menu.mjs";
+import {$} from "../core/util.mjs";
 
 
 /**
  *
  */
 function listen() {
-    document.addEventListener(
+    $("#menu_tabs").addEventListener(
         'click', (event) => {
-            const target = event.target;
+            const $elem = event.target;
+
+            Layout.open('projects-content');
 
             // if (target.tagName === 'A' && target.parentNode.tagName === 'LI' && target.parentNode.parentNode.id === 'menu_tabs') {
             //     const contextLeft = document.querySelector('#context').style.left;
@@ -46,41 +47,35 @@ function html() {
 function css() {
     return `
     <style>
-    #menu_tabs {
-    background-color: #555;
-    border-bottom: 8px solid #ddd;
+#menu_tabs {
+    width: 100%;
+    height: 100%;;
 }
 
 #menu_tabs ul {
     margin: 0;
-    width: 60%;
 }
 
 #menu_tabs ul li {
-    float: left;
-    z-index: 0;
-    position: relative;
-    display: inline;
+    display: inline-block;
     cursor: pointer;
-    border-top-right-radius: 10px;
-    width: 25%;
     text-align: center;
+    margin: 0 15px;;
 }
 
 #menu_tabs ul li a {
     font-family: Tahoma, Geneva, sans-serif;
     font-size: 2em;
     text-decoration: none;
-    color: #aaa;
     text-transform: lowercase;
 }
 
 #menu_tabs ul li a:hover {
-    color: lightsteelblue;
+    /*color: lightsteelblue;*/
 }
 
 #menu_tabs ul li a.selected {
-    color: lightsteelblue;
+    /*color: lightsteelblue;*/
 }
 </style>
     `

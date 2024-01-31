@@ -44,6 +44,7 @@ function css() {
     
 #site_menu {
     position: fixed;
+    z-index: 15;
     top: 0;
     right: 0;
     list-style-type: none;
@@ -51,7 +52,6 @@ function css() {
     height: 3%;
     padding: 4px;
     margin: 0;
-    z-index: 10;
     font-family: arial;
 }
 
