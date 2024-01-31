@@ -1,17 +1,18 @@
 import PageMenuIntro from "../component/page-menu-intro.mjs";
-import Monitor from "../component/monitor.mjs";
 import QuoteAuthor from "../component/quote-author.mjs";
+import QuotesIntro from "../component/quotes-intro.mjs";
+import Monitor from "../component/monitor.mjs";
 import Timeline from "../component/timeline.mjs";
 import TimelineInteractive from "../component/timeline-interactive.mjs";
 import QuoteWelcome from "../component/quote-welcome.mjs";
 import QuoteSiteinfo from "../component/quote-siteinfo.mjs";
-import QuotesIntro from "../component/quotes-intro.mjs";
 
 function html() {
 
     return `
               <div id="mi-page-introduction-menu"></div>
-
+            
+            <br /><br /><br />
             <div id="mi-monitor"></div>
 
             <div id="mi-quote-author"></div>
@@ -33,6 +34,15 @@ function css() {
 
     return `
     <style>
+    
+            
+        #mi-monitor {
+            position: relative;
+            margin: 25px 15px;
+            height: 35%;
+            width: 75%;
+        }
+    
          #interactive_intro {
             position: absolute;
             bottom: 0;

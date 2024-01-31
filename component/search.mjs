@@ -34,30 +34,30 @@ function listen() {
             const elem = event.target;
 
 
-            // Input[value=project] click
-            if (elem.matches("#search_radio input[value=project]")) {
-                
-                document.querySelector(('input[list]')).setAttribute('list', 'project_list');
-            }
-
-
-            // // Input[value=skill] click
-            if (elem.matches("#search_radio input[value=skill]")) {
-                document.querySelector(('input[list]')).setAttribute('list', 'skill_list');
-            }
-
-
-            // Input[list] change
-            if (elem.matches("input[list]")) {
-                
-                if (elem.getAttribute('list') === 'project_list') {
-                    Monitor.select('project', elem.value.split(' ').shift());
-                }
-                if (elem.getAttribute('list') === 'skill_list') {
-                    Monitor.select('tool', elem.value.split(' ').shift());
-                }
-                document.querySelector("input[list]").value = '';
-            }
+            // // Input[value=project] click
+            // if (elem.matches("#search_radio input[value=project]")) {
+            //
+            //     document.querySelector(('input[list]')).setAttribute('list', 'project_list');
+            // }
+            //
+            //
+            // // // Input[value=skill] click
+            // if (elem.matches("#search_radio input[value=skill]")) {
+            //     document.querySelector(('input[list]')).setAttribute('list', 'skill_list');
+            // }
+            //
+            //
+            // // Input[list] change
+            // if (elem.matches("input[list]")) {
+            //
+            //     if (elem.getAttribute('list') === 'project_list') {
+            //         Monitor.select('project', elem.value.split(' ').shift());
+            //     }
+            //     if (elem.getAttribute('list') === 'skill_list') {
+            //         Monitor.select('tool', elem.value.split(' ').shift());
+            //     }
+            //     document.querySelector("input[list]").value = '';
+            // }
 
         }
     )

@@ -72,7 +72,7 @@ function refresh(item_requested, function_caller) {
 
     for (let i = 0; i < temp_array.length; i++) {
         if (i === temp_array.indexOf(temp_array[i])) {
-            document.getElementById('list').insertAdjacentHTML('beforeend', '<li class="mgroupi" style="left:' + num + 'px">' + temp_array[i] + '</li>');
+            document.getElementById('list').insertAdjacentHTML('beforeend', '<li class="tgroupi" style="left:' + num + 'px">' + temp_array[i] + '</li>');
             num -= 50;
         }
     }
@@ -81,7 +81,7 @@ function refresh(item_requested, function_caller) {
         const createdUl = document.createElement('ul');
         createdUl.id = item;
         createdUl.classList.add('list');
-        const listItems = document.getElementById('list').querySelectorAll('li.mgroupi');
+        const listItems = document.getElementById('list').querySelectorAll('li.tgroupi');
         listItems.forEach(item => {
             item.animate({'left': 0}, 'slow');
             createdUl.appendChild(item);
@@ -90,7 +90,7 @@ function refresh(item_requested, function_caller) {
     } else {
         const tempUl = document.createElement('ul');
         tempUl.id = 'temp_list';
-        const listItems = document.getElementById('list').querySelectorAll('li.mgroupi');
+        const listItems = document.getElementById('list').querySelectorAll('li.tgroupi');
         listItems.forEach(item => {
             item.animate({'left': 0}, 'slow');
             tempUl.appendChild(item);
@@ -153,50 +153,49 @@ function listen() {
         'click', (event) => {
             const target = event.target;
 
-            if (target.tagName === 'LI' && target.parentNode.classList.contains('sublist')) {
-                const liElements = document.querySelectorAll('li');
-                const previewedExists = Array.from(liElements).some(li => li.classList.contains('previewed') && !li.nextElementSibling?.classList.contains('previewed'));
-
-                if (previewedExists) {
-                    document.querySelector('.previewed').parentElement.parentElement.style.backgroundColor = 'white';
-                    document.querySelector('.previewed').parentElement.remove();
-                }
-
-                target.classList.add('previewed');
-                target.parentElement.parentElement.style.backgroundColor = '#eee';
-                target.style.backgroundColor = 'white';
-                target.style.color = 'orange';
-
-                PageDescription.refresh(target.innerHTML, document.querySelector('.list').id);
-
-                window.dataLayer = window.dataLayer || [];
-                window.dataLayer.push({
-                    'event': 'evt-project-preview',
-                    'project-previewed': target.innerText
-                });
-
-            }
+            //     if (target.tagName === 'LI' && target.parentNode.classList.contains('sublist')) {
+            //         const liElements = document.querySelectorAll('li');
+            //         const previewedExists = Array.from(liElements).some(li => li.classList.contains('previewed') && !li.nextElementSibling?.classList.contains('previewed'));
+            //
+            //         if (previewedExists) {
+            //             document.querySelector('.previewed').parentElement.parentElement.style.backgroundColor = 'white';
+            //             document.querySelector('.previewed').parentElement.remove();
+            //         }
+            //
+            //         target.classList.add('previewed');
+            //         target.parentElement.parentElement.style.backgroundColor = '#eee';
+            //         target.style.backgroundColor = 'white';
+            //         target.style.color = 'orange';
+            //
+            //         PageDescription.refresh(target.innerHTML, document.querySelector('.list').id);
+            //
+            //         window.dataLayer = window.dataLayer || [];
+            //         window.dataLayer.push({
+            //             'event': 'evt-project-preview',
+            //             'project-previewed': target.innerText
+            //         });
+            //
+            //     }
         }
     )
 }
 
 
-
 function html() {
     return `
-    <div id="list" class="monitor" style="overflow-x: hidden;">
+    <div id="list" class="tablet" style="overflow-x: hidden;">
         <h5>WEB</h5>
         <ul id="WEB" class="list">
-            <li class="mgroupi" style="left: 0px;">Education</li>
-            <li class="mgroupi" style="left: 0px;">Merchandise</li>
-            <li class="mgroupi" style="left: 0px;">Portfolio</li>
-            <li class="mgroupi" style="left: 0px;">Safekeeping</li>
-            <li class="mgroupi" style="left: 0px;">Mobile Applications</li>
-            <li class="mgroupi" style="left: 0px;">Banking</li>
-            <li class="mgroupi" style="left: 0px;">Conferences</li>
-            <li class="mgroupi" style="left: 0px;">Warehouse</li>
-            <li class="mgroupi" style="left: 0px;">Hospitality</li>
-            <li class="mgroupi" style="left: 0px;">Energy</li>
+            <li class="tgroupi" style="left: 0px;">Education</li>
+            <li class="tgroupi" style="left: 0px;">Merchandise</li>
+            <li class="tgroupi" style="left: 0px;">Portfolio</li>
+            <li class="tgroupi" style="left: 0px;">Safekeeping</li>
+            <li class="tgroupi" style="left: 0px;">Mobile Applications</li>
+            <li class="tgroupi" style="left: 0px;">Banking</li>
+            <li class="tgroupi" style="left: 0px;">Conferences</li>
+            <li class="tgroupi" style="left: 0px;">Warehouse</li>
+            <li class="tgroupi" style="left: 0px;">Hospitality</li>
+            <li class="tgroupi" style="left: 0px;">Energy</li>
         </ul>
     </div>
             ${css()}
@@ -209,7 +208,7 @@ function css() {
     
     
 
-.monitor {
+.tablet {
     position: absolute;
     border: solid 12px #ccc;
     width: 100%;
@@ -220,7 +219,7 @@ function css() {
 }
 
 
-.monitor > h5 {
+.tablet > h5 {
     font-size: 20em;
     color: lightslategrey;
     margin: 1%;
@@ -229,7 +228,7 @@ function css() {
     text-align: center;
 }
 
-.monitor > ul {
+.tablet > ul {
     margin: 0;
     width: 100%;
     height: 100%;
@@ -242,7 +241,7 @@ function css() {
 }
 
 
-.mgroupi {
+.tgroupi {
     float: left;
     list-style-type: none;
     text-align: right;
@@ -255,7 +254,7 @@ function css() {
     position: relative;
 }
 
-.mgroupi > h4 {
+.tgroupi > h4 {
     float: left;
     font-size: 1.5em;
     font-family: calibri;
@@ -263,7 +262,7 @@ function css() {
     margin-top: 6%;
 }
 
-.mgroupi > img {
+.tgroupi > img {
     position: relative;
     bottom: -5%;
     right: -100%;
@@ -272,12 +271,12 @@ function css() {
     border: 4px solid gainsboro;
 }
 
-.mgroupi > img:hover {
+.tgroupi > img:hover {
     cursor: pointer;
     border: 4px solid gold;
 }
 
-.mgroupi div > div {
+.tgroupi div > div {
     height: 24%;
     width: 30%;
     float: left;
@@ -292,7 +291,7 @@ function css() {
 
 
 
-.mgroupi .sublist {
+.tgroupi .sublist {
     position: relative;
     font-size: 0.8em;
     color: white;
@@ -305,13 +304,13 @@ function css() {
     float: left;
 }
 
-.mgroupi .sublist ul {
+.tgroupi .sublist ul {
     margin: 0;
     padding: 0;
     border: none;
 }
 
-.mgroupi .sublist > li {
+.tgroupi .sublist > li {
     margin: 2px;
     background-color: orange;
     padding: 1%;
@@ -322,7 +321,7 @@ function css() {
     float: left;
 }
 
-.mgroupi > ul > li:hover {
+.tgroupi > ul > li:hover {
     color: white;
     background-color: tan;
 }
@@ -360,10 +359,6 @@ function install(id) {
     document.getElementById(id).innerHTML = html();
     listen();
 }
-
-
-
-
 
 
 export default {

@@ -51,11 +51,11 @@ function listen() {
         'click', (event) => {
             const target = event.target;
 
-            if (target.tagName === 'A' && target.classList.contains('cat_key')) {
-                TabletMenu.refresh(target.innerHTML, 'category');
-                document.getElementById('context').style.left = '0';
-                event.preventDefault();
-            }
+            // if (target.tagName === 'A' && target.classList.contains('cat_key')) {
+            //     TabletMenu.refresh(target.innerHTML, 'category');
+            //     document.getElementById('context').style.left = '0';
+            //     event.preventDefault();
+            // }
 
         }
     )

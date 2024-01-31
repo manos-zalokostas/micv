@@ -76,11 +76,11 @@ function listen() {
         'click', (event) => {
             const target = event.target;
 
-            if (target.tagName === 'A' && target.classList.contains('keys')) {
-                TabletMenu.refresh(target.innerHTML, 'keyword');
-                document.getElementById('context').style.left = '0';
-                event.preventDefault();
-            }
+            // if (target.tagName === 'A' && target.classList.contains('keys')) {
+            //     TabletMenu.refresh(target.innerHTML, 'keyword');
+            //     document.getElementById('context').style.left = '0';
+            //     event.preventDefault();
+            // }
 
         }
     )

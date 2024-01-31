@@ -112,11 +112,6 @@ function openResume(domain) {
     const id = '#' + domain + '_field',
         hostId = "interactive_intro";
 
-    /**
-     @TODO:: CHECK THE LOADING OF 'INTODUCTION QUOTES' BEFORE OTHER VIEWS DISPLAYED
-      => USE DEBUGGER TO SEE THE ALWAYS LOADING 'QUOTES' BEFORE SWITCHED W/ SELECTED LAYOUT
-     *
-     */
 
     if ('#resume_cv_field' === id) return Timeline.install(hostId)
 

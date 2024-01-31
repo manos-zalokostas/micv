@@ -13,18 +13,22 @@
 
 <script type="module">
 
-    import Slider from "./component/slider.mjs";
+    import monitor from "./component/monitor.mjs";
 
-    Slider.install('dev')
-
-    document.addEventListener('DOMContentLoaded', async () => {
-
-    });
+    monitor.install('dev')
 
 </script>
 
 </body>
+<style>
+    #dev {
+        position: relative;
+        width: 100%;
+        height: 600px;
+        background: #ddd;
 
+    }
+</style>
 </html>
 
 

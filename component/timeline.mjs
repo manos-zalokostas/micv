@@ -5,19 +5,19 @@ function listen() {
         'click', (event) => {
             const target = event.target;
 
-            if (!target.matches('#cv_comments')) return;
-
-            const comments = document.querySelectorAll('#cv_description i');
-
-            [...comments].forEach(
-                o => {
-                    if (o.style.display === 'none' || !o.hasAttribute('style')) {
-                        o.style.display = 'block';
-                        return Visual.opacity(o, 1);
-                    }
-                    Visual.opacity(o, 0);
-                }
-            )
+            // if (!target.matches('#cv_comments')) return;
+            //
+            // const comments = document.querySelectorAll('#cv_description i');
+            //
+            // [...comments].forEach(
+            //     o => {
+            //         if (o.style.display === 'none' || !o.hasAttribute('style')) {
+            //             o.style.display = 'block';
+            //             return Visual.opacity(o, 1);
+            //         }
+            //         Visual.opacity(o, 0);
+            //     }
+            // )
         }
     )
 }

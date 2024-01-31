@@ -1,5 +1,6 @@
 import Monitor from "./monitor.mjs";
 import Layout from "./layout.mjs";
+import {$} from "../core/util.mjs";
 
 
 /**
@@ -7,9 +8,10 @@ import Layout from "./layout.mjs";
  */
 function listen() {
 
-    document.addEventListener(
+    $('#introduction_menu').addEventListener(
         'click',
         (event) => {
+            console.log('CKICKED INTROD PAGE MENU ')
             const target = event.target;
 
             const domain = target.id;

@@ -68,32 +68,32 @@ function listen() {
             const target = event.target;
 
 
-            // EXTRA BUTTONS 'CLICK'
-
-            if (target.tagName === 'DIV' && target.parentElement.id === 'iextra') {
-                open(target);
-            }
-
-
-            // MEDIA / FILES / IMAGES ELEMENTS 'CLICK'
-
-
-            if (target.tagName === 'A' && (target.parentElement.id === 'imedia' || target.parentElement.id === 'ifiles' || target.parentElement.id === 'iscreenshots')) {
-                let item_src = target.getAttribute('href');
-                let app = "";
-
-                if (target.parentElement.parentElement.id.includes('media')) {
-                    app = 'avi';
-                } else if (target.parentElement.parentElement.id.includes('files')) {
-                    app = 'pdf';
-                } else {
-                    app = 'jpg';
-                }
-
-                target.classList.remove('item_previewed');
-                PageDescription.openSlider(item_src, app);
-                event.preventDefault();
-            }
+            // // EXTRA BUTTONS 'CLICK'
+            //
+            // if (target.tagName === 'DIV' && target.parentElement.id === 'iextra') {
+            //     open(target);
+            // }
+            //
+            //
+            // // MEDIA / FILES / IMAGES ELEMENTS 'CLICK'
+            //
+            //
+            // if (target.tagName === 'A' && (target.parentElement.id === 'imedia' || target.parentElement.id === 'ifiles' || target.parentElement.id === 'iscreenshots')) {
+            //     let item_src = target.getAttribute('href');
+            //     let app = "";
+            //
+            //     if (target.parentElement.parentElement.id.includes('media')) {
+            //         app = 'avi';
+            //     } else if (target.parentElement.parentElement.id.includes('files')) {
+            //         app = 'pdf';
+            //     } else {
+            //         app = 'jpg';
+            //     }
+            //
+            //     target.classList.remove('item_previewed');
+            //     PageDescription.openSlider(item_src, app);
+            //     event.preventDefault();
+            // }
 
         }
     )

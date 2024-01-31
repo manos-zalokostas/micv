@@ -11,15 +11,15 @@ function listen() {
         'click', (event) => {
             const target = event.target;
 
-            if (target.tagName === 'A' && target.parentNode.tagName === 'LI' && target.parentNode.parentNode.id === 'menu_tabs') {
-                const contextLeft = document.querySelector('#context').style.left;
-
-                if (contextLeft !== '0') {
-                    document.querySelector('#context').style.left = '0';
-                }
-
-                // TabletMenu.refresh(target.innerHTML, 'navigation');
-            }
+            // if (target.tagName === 'A' && target.parentNode.tagName === 'LI' && target.parentNode.parentNode.id === 'menu_tabs') {
+            //     const contextLeft = document.querySelector('#context').style.left;
+            //
+            //     if (contextLeft !== '0') {
+            //         document.querySelector('#context').style.left = '0';
+            //     }
+            //
+            //     // TabletMenu.refresh(target.innerHTML, 'navigation');
+            // }
         }
     )
 }
