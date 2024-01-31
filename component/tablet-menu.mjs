@@ -1,6 +1,7 @@
 import Storage from "../core/storage.mjs";
 import Layout from "./layout.mjs";
 import Slider from "./slider.mjs";
+import PageDescription from "../route/page-description.mjs";
 
 function refresh(item_requested, function_caller) {
 
@@ -139,14 +140,235 @@ export function listContents(element) {
  * // AUX-FUNCTION THAT ASSISTS 'NAV_BAR_DESIGNER' FUNCTION TO CLEAN THE FORMAT OF SELECTED MENU BUTTONS
  * @param {HTMLElement} btn
  */
- function _activateButton(btns) {
+function _activateButton(btns) {
     Array.from(btns).forEach(
         btn => btn.animate({'padding-top': 0})
     )
 }
 
 
+function listen() {
+
+    document.addEventListener(
+        'click', (event) => {
+            const target = event.target;
+
+            if (target.tagName === 'LI' && target.parentNode.classList.contains('sublist')) {
+                const liElements = document.querySelectorAll('li');
+                const previewedExists = Array.from(liElements).some(li => li.classList.contains('previewed') && !li.nextElementSibling?.classList.contains('previewed'));
+
+                if (previewedExists) {
+                    document.querySelector('.previewed').parentElement.parentElement.style.backgroundColor = 'white';
+                    document.querySelector('.previewed').parentElement.remove();
+                }
+
+                target.classList.add('previewed');
+                target.parentElement.parentElement.style.backgroundColor = '#eee';
+                target.style.backgroundColor = 'white';
+                target.style.color = 'orange';
+
+                PageDescription.refresh(target.innerHTML, document.querySelector('.list').id);
+
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                    'event': 'evt-project-preview',
+                    'project-previewed': target.innerText
+                });
+
+            }
+        }
+    )
+}
+
+
+
+function html() {
+    return `
+    <div id="list" class="monitor" style="overflow-x: hidden;">
+        <h5>WEB</h5>
+        <ul id="WEB" class="list">
+            <li class="mgroupi" style="left: 0px;">Education</li>
+            <li class="mgroupi" style="left: 0px;">Merchandise</li>
+            <li class="mgroupi" style="left: 0px;">Portfolio</li>
+            <li class="mgroupi" style="left: 0px;">Safekeeping</li>
+            <li class="mgroupi" style="left: 0px;">Mobile Applications</li>
+            <li class="mgroupi" style="left: 0px;">Banking</li>
+            <li class="mgroupi" style="left: 0px;">Conferences</li>
+            <li class="mgroupi" style="left: 0px;">Warehouse</li>
+            <li class="mgroupi" style="left: 0px;">Hospitality</li>
+            <li class="mgroupi" style="left: 0px;">Energy</li>
+        </ul>
+    </div>
+            ${css()}
+    `
+}
+
+function css() {
+    return `
+    <style>
+    
+    
+
+.monitor {
+    position: absolute;
+    border: solid 12px #ccc;
+    width: 100%;
+    height: 100%;
+    font-family: Tahoma, Geneva, sans-serif;
+    background-color: #555;
+    cursor: pointer;
+}
+
+
+.monitor > h5 {
+    font-size: 20em;
+    color: lightslategrey;
+    margin: 1%;
+    width: 50%;
+    position: absolute;
+    text-align: center;
+}
+
+.monitor > ul {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    float: left;
+    padding: 0;
+    margin: 0;
+    margin-left: 3%;
+    position: relative;
+    top: 8%;
+}
+
+
+.mgroupi {
+    float: left;
+    list-style-type: none;
+    text-align: right;
+    color: white;
+    width: 30%;
+    height: 26%;
+    padding-right: 1%;
+    margin: 2px;
+    background-color: rgba(255, 255, 255, 0.2);
+    position: relative;
+}
+
+.mgroupi > h4 {
+    float: left;
+    font-size: 1.5em;
+    font-family: calibri;
+    width: 44%;
+    margin-top: 6%;
+}
+
+.mgroupi > img {
+    position: relative;
+    bottom: -5%;
+    right: -100%;
+    border-radius: 6px;
+    width: 28%;
+    border: 4px solid gainsboro;
+}
+
+.mgroupi > img:hover {
+    cursor: pointer;
+    border: 4px solid gold;
+}
+
+.mgroupi div > div {
+    height: 24%;
+    width: 30%;
+    float: left;
+    margin: 2px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 2px solid #ddd;
+    list-style-type: none;
+}
+
+
+
+.mgroupi .sublist {
+    position: relative;
+    font-size: 0.8em;
+    color: white;
+    padding: 0;
+    border: none;
+    margin-left: 5%;
+    margin-top: 3%;
+    width: 100%;
+    height: 80%;
+    float: left;
+}
+
+.mgroupi .sublist ul {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.mgroupi .sublist > li {
+    margin: 2px;
+    background-color: orange;
+    padding: 1%;
+    color: white;
+    font-size: 1em;
+    width: 40%;
+    height: 20%;
+    float: left;
+}
+
+.mgroupi > ul > li:hover {
+    color: white;
+    background-color: tan;
+}
+
+
+    
+#temp_list {
+    position: relative;
+    float: left;
+    list-style-type: none;
+    text-decoration: none;
+    text-align: left;
+    color: #069;
+    padding: 3% 4%;
+    margin: 3% 0;
+    width: 100%;
+}
+
+#temp_list li {
+    color: orange;
+    background-color: rgba(1, 1, 1, 0.4);
+    border: 2px solid #555;
+}
+
+ #temp_list li:hover {
+    color: white;
+    border: 2px solid white;
+}
+</style>
+    `
+}
+
+
+function install(id) {
+    document.getElementById(id).innerHTML = html();
+    listen();
+}
+
+
+
+
+
+
 export default {
+    install,
+    listen,
     refresh,
     listContents,
 }

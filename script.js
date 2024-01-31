@@ -161,7 +161,7 @@ $(document).ready(
                                 } else {
                                     if (!(this.getAttribute('class').match('_off')) && this.getAttribute('class') != 'default') {
                                         this.setAttribute('class', this.getAttribute('class') + '_off');
-                                        $(this).animate({'padding-left': '0px'}, 'slow', 'swing');
+                                        $(this).animate({'padding-left': '0'}, 'slow', 'swing');
                                     }
                                 }
                             }
@@ -462,7 +462,7 @@ function animate_page(current_page) {
 
         case 'about' :
             $('#wrapper').animate(
-                {'top': '0%'}, 'slow', 'swing', function () {
+                {'top': '0'}, 'slow', 'swing', function () {
                     $('#site_menu').animate({'top': 0})
                 }
             );
@@ -493,7 +493,7 @@ function animate_page(current_page) {
             // DEFAULT:: TOP LEVEL PAGE
             console.log('FUNCTION: ANIMATE_PAGE -> RUNS DEFAULT - PLEASE CHECK !')
             $('#wrapper').animate(
-                {'top': '0%'}, 'slow', 'swing', function () {
+                {'top': '0'}, 'slow', 'swing', function () {
                     $('#site_menu').animate({'top': 0})
                 }
             )
@@ -1357,7 +1357,7 @@ function __INITIALIZE_PAGE_DATA(data) {
 function _BUILD_SEARCH_LISTS(projects, tools) {
     var htmlProjects = [],
         htmlTools = [];
-    // debugger
+    // 
     projects.forEach(function (project) {
         htmlProjects.push("<option value='" + project.name + "'>" + project.name + "</option>")
     });

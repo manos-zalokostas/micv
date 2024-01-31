@@ -3,664 +3,46 @@
 <head>
     <title>Manos Portfolio</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YPNDHPEG7N"></script>
-    <!--    <script defer type="text/javascript" src="index.mjs"></script>-->
     <link href="index.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
 
 <div id="view">
+
     <div id="wrapper">
-        <ul id="site_menu">
-            <li><a title="certificates">certificates</a></li>
-            <li><a title="projects">projects</a></li>
-            <li><a title="about" class='selected'>about</a></li>
-        </ul>
-        <div id="introduction">
-            <div id="introduction_menu">
-                <ul>
-                    <li><a id="introduction_cv" class='selected' href="#">Welcome</a></li>
-                    <li><a id="resume_cv" href="#">Timeline</a></li>
-                    <li><a id="interactive_cv" href="#">Interactive</a></li>
-                    <li><a id="document_cv" href="#">Document</a></li>
-                </ul>
 
-                <div id="search">
-                    <div id="search_radio">
-                        <div>
-                            <label>
-                                project
-                                <input type="radio" name="search" value="project" checked>
-                            </label>
-                        </div>
-                        <div>
-                            <label>
-                                skill
-                                <input type="radio" name="search" value="skill">
-                            </label>
-                        </div>
-                    </div>
-                    <div id="search_result">
-                        <input list="project_list">
-                        <datalist id="project_list">
-                        </datalist>
-                        <datalist id="skill_list">
-                        </datalist>
-                    </div>
-                </div>
+        <div id="mi-global-menu"></div>
 
-            </div>
-            <h1>Resume</h1>
-            <div id="skills_preview" class="monitor">
-                <div id='skill_fields' class='mbuttons'><b title='project'>projects</b><b
-                        title="reference">references</b><b title="tool">skills</b><em>||</em></div>
-                <div id="welcome">
-                    <h3>Web Development</h3>
-                    <h3>Web Design</h3>
-                    <h3>Graphics Design</h3>
-                    <h3 style="color:goldenrod">Welcome</h3>
-                </div>
+        <div id="mi-page-introduction"></div>
 
-                <ul>
-                    <li id='project' class='slide_animated'>
-                        <div class='mitem'>
-                            <h2>Projects</h2>
-                            <h3>Project Name</h3>
-                            <h4>Tech Field</h4>
-                            <p>Description</p>
-                            <img/>
-                        </div>
-                        <div>&nbsp;</div>
-                    </li>
-                    <li id='reference'>
-                        <div class='mitem'>
-                            <h2>References</h2>
-                            <h3>Instructor</h3>
-                            <h4>Instructor Title</h4>
-                            <p>Comment</p>
-                            <img/>
-                        </div>
-                        <div>&nbsp;</div>
-                    </li>
-                    <li id="tool">
-                        <div class='mitem'>
-                            <h2>Skills</h2>
-                            <div class='mgroupi'>
-                                <h4>Tools</h4>
-                            </div>
-                            <div class="mgroupi">
-                                <h4>Tools</h4>
-                            </div>
-                            <div class='mgroupi'>
-                                <h4>Tools</h4>
-                            </div>
-                            <div class='mgroupi'>
-                                <h4>Tools</h4>
-                            </div>
-                            <div class='mgroupi'>
-                                <h4>Tools</h4>
-                            </div>
-                            <div class='mgroupi'>
-                                <h4>Tools</h4>
-                            </div>
-                            <div class='mgroupi'>
-                                <h4>Tools</h4>
-                            </div>
-                            <div class='mgroupi'>
-                                <h4>Tools</h4>
-                            </div>
-                        </div>
-                        <div>&nbsp;</div>
-                    </li>
-                </ul>
-            </div>
-            <div id="author_presentation">
-                <p>Creativity is the tool that while enjoy using and practicing is leading me a nice journey throughout
-                    diverse educational and occupational experiences.
-                    Unfolding my need for being creative and enthousiasm for technology I started my training on
-                    graphics design. Leveraging my skills on the
-                    area have let me acknowledge spare concepts around web technology. The need for obtaining
-                    fundamental understanding has gradually overwhelmed me, and drove me to migrate interest on the
-                    field. <br/>
-                </p>
-                <img src="images/profile/manos2.jpg"/>
-            </div>
-            <div id="interactive_intro" class='citation'>
-                <div id="resume_cv_field">
-                    <div class="aux_txt">
-                        <h3>Timeline <span>comments<input type="checkbox" id="cv_comments"/></span></h3>
-                        <p id="cv_description">
+        <div id="mi-page-content"></div>
 
-                            <strong> 2023 </strong> Contracted by ICCS as standalone Full Stack Developer to design and
-                            develop "EcoEMS" consisting of 2 energy apps with Sveltekit.js / Nest.js / Sql Server /
-                            Docker,<i> The project was a part of European - Indian endeavor “Re-empowered” and its scope
-                            was to perform simulations so that renewable energy could find and claim its effective
-                            margin on the daily demand.</i>
-                            <br/><br/>
+        <div id="mi-page-reference"></div>
 
-                            <strong> 2021 </strong> Contracted by ICCS as standalone Full stack Developer to design and
-                            develop "Synergy" 2 energy apps and infrastructure with Next.js / Mysql / Docker <i>
-                            Deliverable was a part of multi European big-data project ‘Synergy” that roots and founded
-                            by greater movement “Horizon 2020”. Project
-                            customers are major national suppliers across Europe</i>
-                            <br/><br/>
-
-                            <strong> 2020 </strong> Contracted by ICCS as standalone Full stack Developer to design /
-                            develop "Hybrid" Energy App with Next.js / Mysql / Docker <i>Core scopes of the project:
-                            Power
-                            Production / Load / Availability, Technical status of units and ultimately alignment with
-                            the official Schedule announced by the national supplier on daily basis</i>
-                            <br/><br/>
-
-                            <strong> 2018<sup>/6</sup></strong> Employeed by Cosmores I designed and developed
-                            Rateparity as standalone Frontend Developer with Js / React.js <i> Decoupled,
-                            customizable, one-line-installation CORS Widgets for enriching the user experience on
-                            customers sites. Additionally developing the configuration app in the backend for widgets
-                            customization and usage monitoring and evaluation.</i>
-                            <br/><br/>
-
-                            <strong> 2017<sup>/7</sup></strong> Employeed by Cosmores as in-house Fullstack Developer to
-                            maintain / extend proprietary product with the Php / Mysql / Js / Jquery <i>in the backend
-                            and frontend respectively. The mission was to upgrade, extend, maintain and enforce security
-                            processes on many parts of the
-                            company's daily routines.</i>
-                            <br/><br/>
-
-                            <strong> 2017<sup>/1</sup></strong> Contracted as freelance, standalone Full stack Developer
-                            to design and build a warehouse inventory for Ecep Technologies Laravel (Php) / Mysql <i>
-                            The English, London enterpreneur needed a .weba monitoring system that could keep track of
-                            products, purchases,
-                            deliveries and sales activities of the company. The tool that was used was Laravel 5.1
-                            MVC</i>
-                            <br/><br/>
-
-                            <strong> 2016</strong> Contracted as freelance, standalone Full stack Developer for American
-                            project Noblelinx CRM upgrades and extensions with Php / Mysql
-                            <br/><br/>
-
-                            <strong> 2015</strong> Contracted by Interactive Data as freelance Front-end Developer for
-                            its new intranet project "Infobroker" hosted by Commerbank Germany with Js / Php / Mysql
-                            <br/><br/>
-
-                            <strong> 2014</strong> Short passings from "DeltaCosmos Security" and "CCS Education" as
-                            Fullstack PHP and Frontend Javascript Develper respectively
-                            <br/><br/>
-
-                            <strong> 2013</strong> Self-occupied as freelance "Web Developer and Graphics Designer"
-                            working with PHP and Js ecosystems.
-                            <br/><br/>
-
-                            <strong> 2012</strong> Graduated College with a 'first class honors' degree <i>and attached
-                            a 'student of the year' distinction for last year performance.</i>
-                            <br/><br/>
-
-                            <strong> 2011 </strong> I was released from Sanofi aventis after 11 years employment.<i>The
-                            recession that stroke the country has led company to unleash almost half of the crew in
-                            near three years time.</i>
-                            <br/><br/>
-
-                            <strong> 2009</strong> <i>I have decided to pursue a bachelor diploma on the domain of web
-                            technology. Nevertheless, while still occupied by 'sanofi aventis', has modified my decision
-                            in a way to select a title that would add value on the company as well. With those in
-                            mind </i> Enrolled 'Internet Engineering and Web Management' class from University of
-                            Greenwich associated with 'New York' College.
-                            <br/><br/>
-
-                            <strong> 2008</strong> Enrolled full-year class at Athenian Vocational Institute
-                            ‘Integraphics’ labeled ‘Web Designed & Development’. <i>During the class, I faced a well
-                            structured introduction to Web protocols like HMLT, CSS, javascript and an infantile meeting
-                            experience with PHP, MySQL and Apache. While the training turned out really advantageous and
-                            the outcome was my first web site, build with ajax technology, exclusively consisting on
-                            protocols, my appetite on comprehending web technologies was enormous and the need to
-                            integrate myself with a root understanding over the concepts has generated my interest to
-                            obtain more advanced education.</i>
-                            <br/><br/>
-
-
-                            <strong> 2006</strong> Graduated 'Graphics designer for printable mediums & Web' at 'AKMI'
-                            Vocational Institute<i>, and up until 2008 I have urged as one and primary target to
-                            familiarize and conform myself with the new business environment that had arose at ‘Sanofi
-                            Aventis’. Starting from the same year, up until 2008 I was gradually assigned to provide
-                            office assistance for the 'Facility and HSE Department' by recording, maintaining and draw
-                            out monthly reports for the data housekeeping.</i>
-                            <br/><br/>
-
-                            <strong> 2005</strong>, <i>while feeling the need to integrate a 'Graphic Designer'
-                            certificate that would ground further my qualifications in the area,</i> I have enrolled a
-                            full-year class at 'AKMI' Vocational Institute labeled 'Graphics Designer for Printable
-                            Mediums and Web'. <i>There I had my original experience with web concepts, namely site
-                            design and development, since we gained practicing skills on Macromedia's web tools such as
-                            Dreamweaver & Flash. At the same time in 2005 , while still occupied by 'Aventis Pharma'
-                            Pharmaceutical, there was a 'sudden merger announced by our company with 'Sanofi'
-                            Pharmaceutical. The merger was of a great value since the new-constitute company would climb
-                            high above previous competitive levels, gaining huge market shares would now strive c
-                            ompeting top ranking pharmaceuticals world-wide. </i>
-                            <br/><br/>
-
-                            <strong> 2002</strong> Graduated 3D-Animation class at 'AKMI' vocational institute <i> and
-                            for the later 3 years I primarily focused on my job, while as a hobby I continued to
-                            practice my skills with graphics design and 3D Animation components, as Adobe Photoshop,
-                            Corel Draw and 3D-Max respectively.
-                        </i>
-                            <br/><br/>
-
-
-                            <strong> 2001</strong> Employed by ‘aventis pharma’ world-wide pharmaceutical enterprise <i>,
-                            maintaining headquarters to France and establised subsidiaries word-wide.</i>
-                            <br/><br/>
-
-                            <strong> 2000</strong> Enrolled 2 years class, ‘3D Animation & Desktop Publishing’ at ‘AKMI’
-                            Athenian private vocational institute.
-                            <i>For the first year we have been practicing strictly working 'on-hand' as to 'Free Hand
-                                Drawing', 'Paper Drawing Animations' and issuing 'Page Models' for magazines etc, while
-                                also studying 'Art History' and 'Typography History'. The next year I had my first
-                                experience
-                                with computing using tools like 'Photoshop 5.5', 'Corel Draw 8' and '3D-Max 3'</i>
-                            <br/><br/>
-
-                        </p>
-                    </div>
-                </div>
-                <div id="interactive_cv_field">
-                    <h2>Interactive Timeline</h2>
-                    <ul id='timeline_btns'>
-                        <li><a id="mlt" href="#">Clear</a></li>
-                        <li><a id="std" href="#">Studies</a></li>
-                        <li><a id="job" href="#">Work</a></li>
-                    </ul>
-                    <ul id="objectives">
-                        <li id="label">Label</li>
-                        <li id="skills">Skills</li>
-                    </ul>
-                    <ul id="timeline">
-                        <li class="default">1999</li>
-                        <li class="std_start_off">
-                            <a href="#" title="Enroll 'Desktop Publising and 3D Animation' | ">2000</a>
-                            <p title="item_label">Enroll 'Desktop Publishing and 3D Animation' | AKMI Vocational
-                                Institute</p>
-                            <p title="item_skills">
-                                For the first year we have been practicing strictly working 'on-hand' as to 'Free Hand
-                                Drawing', 'Paper Drawing Animations' and issuing 'Page Models' for magazines etc, while
-                                also studying 'Art History' and
-                                'Typography
-                                History'. The next year I had my first experience with computing using tools like
-                                'Photoshop 5.5', 'Corel Draw 8' and '3D-Max 3'
-                            </p>
-                        </li>
-                        <li class="job_start_off">
-                            <a href="#" title="Employed in 'sanofi aventis' ">2001</a>
-                            <p title="item_label">Employed by 'Aventis Pharma'</p>
-                            <p title="item_skills">
-                                I was employed as 'messenger' of the company with the 'out world' partners, while also
-                                providing random assistance, whenever it was required, within the premises. At the
-                                moment ‘aventis pharma’ was a newly
-                                consisted
-                                company, the outcome merger of 'rhone pouleng rhorer' and 'hegst marrion russel'
-                                pharmaceuticals, that its competitiveness was ranking more or less at the middle.
-                            </p>
-                        </li>
-                        <li class="std_end_off"><a href="#"
-                                                   title="Graduate 'Desktop Publising and 3D Animation' ">2002</a>
-                            <p title="item_label">Graduate 'Desktop Publishing and 3D Animation' | AKMI Vocational
-                                Institute</p>
-                            <p title="item_skills">-</p>
-                        </li>
-                        <li class="default">2003</li>
-                        <li class="default">2004</li>
-                        <li class="std_start_off">
-                            <a href="#" title="Enroll 'Graphics Design for Printable Mediums and Web' ">2005</a>
-                            <p title="item_label">Enroll 'Graphics Design for Printable Mediums and Web' | AKMI
-                                Vocational Institute</p>
-                            <p title="item_skills">There I had my original experience with web concepts, namely site
-                                design and development, since we gained practicing skills on Macromedia's web tools such
-                                as Dreamweaver & Flash. </p>
-                        </li>
-                        <li class="std_end_off"><a href="#"
-                                                   title="Graduate 'Graphics Design for Printable Mediums and Web' ">2006</a>
-                            <p title="item_label">Graduate 'Graphics Design for Printable Mediums and Web' | AKMI
-                                Vocational Institute</p>
-                            <p title="item_skills">-</p>
-                        </li>
-                        <li class="job_start_off">
-                            <a href="#" title="'Aventis Pharma' merged with 'Sanofi' Pharmaceutical">2007</a>
-                            <p title="item_label">'Aventis Pharma' merged with 'Sanofi' Pharmaceutical</p>
-                            <p title="item_skills">
-                                At the same time in 2005 , while still occupied by 'Aventis Pharma' Pharmaceutical,
-                                there was a 'before the gate' major merger announced by our company with 'Sanofi'
-                                Pharmaceutical. The merger is purposely
-                                described as
-                                'major' since the newborn company would climb high above previous competitive
-                                placements, and gaining huge market shares would now strive in competition to top
-                                ranking pharmaceuticals world-wide.
-                            </p>
-                        </li>
-                        <li class="std_start_off">
-                            <a href="#" title="Enroll 'Web Design & Development' ">2008</a>
-                            <p title="item_label">Intergraphics | Enroll 'Web Design and Development'</p>
-                            <p title="item_skills"> During the class, I faced a well structured introduction to Web
-                                protocols like HMLT, CSS, javascript and an infantile meeting experience with PHP, MySQL
-                                and Apache. While the training turned out
-                                really advantageous and the outcome was my first web site, build with ajax technology,
-                                exclusively consisting on protocols, my appetite on comprehending web technologies was
-                                enormous and the need to integrate
-                                myself
-                                with a root understanding over the concepts has generated my interest to obtain more
-                                advanced education.</p>
-                        </li>
-                        <li class="std_start_off"><a href="#"
-                                                     title="Graduate 'Web Design & Development | Enroll 'Internet Engineering & Web Management' ">2009</a>
-                            <p title="item_label">New York College in Association to University of Greenwich | Internet
-                                Engineering and Web Management</p>
-                            <p title="item_skills">
-
-                            </p>
-                        </li>
-                        <li class="default">2010</li>
-                        <li class="job_start_off"><a href="#"
-                                                     title="Released from Sanofi-Aventis Pharmaceutical">2011</a>
-                            <p title="item_label">Released from Sanofi-Aventis Pharmaceutical</p>
-                            <p title="item_skills">
-                                I was released from Sanofi aventis after 11 years employment.The recession that stroke
-                                the country has led company to unleash almost half of the crew in near three years time;
-                            </p>
-                        </li>
-                        <li class="std_end_off"><a href="#" title="Graduate 'Internet Engineering & Web Management' ">2012</a>
-                            <p title="item_label">Graduate 'Internet Engineer and Web Management' | University of
-                                Greenwich</p>
-                            <p title="item_skills">
-                                Graduated College with a 'first class honors' degree from University and attached a
-                                'student of the year' distinction for last year performance. My final Thesis was
-                                proposed for adoption by the associated 'New York College' for Maintaining and
-                                Scheduling institute's
-                                year resources.
-                            </p>
-                        </li>
-                        <li class="job_start_off"><a href="#" title="Self-employed as 'Web Designer and Developer' ">2013</a>
-                            <p title="item_label">Self-Employeed 'Web Design and Development'</p>
-                            <p title="item_skills">
-                                Take over freelance projects for local merchants. Mainly invoked hardcoded storefronts
-                                and web solutions completely designed and developed from scratch, grounded on web
-                                technologies like PHP, JS, XSLT, HTML5, CSS3 more. Most prominent project, ELGREG, a
-                                mixture of all
-                                afordmentioned techs provided a hardcoded bottom-up storefront and backend portal.
-                            </p>
-                        </li>
-                        <li class="job_start_off"><a href="#"
-                                                     title="Short Passings from 'Deltacosmos' and 'CCS Education'' ">2014</a>
-                            <p title="item_label">Employeed shortly for 'Deltacosmos' and 'CCS Education'</p>
-                            <p title="item_skills">Occupied as Full stack and Front-end Developer for the companies
-                                corespondingly, maintaining, upgrading and extending 'Deltacosmos' ERP and building a
-                                JSON API for 'CSS Eduction' that would be
-                                consumed internally by HMTL5 - Javascript application
-                            </p>
-                        </li>
-                        <li class="job_start_off"><a href="#"
-                                                     title="Contracted to 'Interactive Data' as Front-end Developer for German 'Commerzbank' intranet">2015</a>
-                            <p title="item_label">Contracted 'Remote Web Developer' for German 'Commerzbank
-                                Infobroker'</p>
-                            <p title="item_skills">
-                                Occupied as a part of Scrum maintained, multicultural developers environment for the
-                                implementation of Commerzbank Intranet project, namely Infobroker. Main responsibility
-                                was to collect, design and retrieve proprietary data - or complete data-views - through
-                                Interactive Data web services, using a custom graphical interface of enterprise. The
-                                final output would be visually styled for web monitoring, dictated strictly through
-                                customer specifications.
-                            </p>
-                        </li>
-                        <li class="job_start_off"><a href="#"
-                                                     title="Contracted remotely as Full Stack Developer to 'Seecago' for American Noblelinx CRM">2016</a>
-                            <p title="item_label">Contracted 'Remote Full Stack Developer' for American 'Noblelinx
-                                CRM'</p>
-                            <p title="item_skills">
-                                Occupied remotely as standalone Full Stack Developer in Agile mode with the Manager, on
-                                a lecacy CRM system, originated nearly a decade backwards. Key assingment was to
-                                maintain and upgrade legacy coded mixed technologies, to more efficient, controllable
-                                environment
-                                and to design and adjust new features that would add value to company's daily routines.
-                            </p>
-                        </li>
-                        <li class="job_start_off"><a href="#"
-                                                     title="Contracted remotely as Full Stack Developer for London-based company 'ECEP Technologies' ">2017</a>
-                            <p title="item_label">Contracted remotely as Full Stack Developer for London-based company
-                                'ECEP Technologies'</p>
-                            <p title="item_skills">
-                                Contracted as freelance, standalone Full stack Developer to design and build a warehouse
-                                inventory for Ecep Technologies .The English, Londoner enterpreneur needed a .weba
-                                monitoring system that could keep track of products, purchases, deliveries and sales
-                                activities
-                                of the company. The tool that was used was Laravel 5.1 MVC
-                            </p>
-                        </li>
-                        <li class="job_start_off"><a href="#"
-                                                     title="Employeed by domestic company Cosmores as in-house Fullstack Developer ">2017</a>
-                            <p title="item_label">Employeed by domestic company Cosmores as in-house Fullstack Developer
-                                '</p>
-                            <p title="item_skills">
-                                Employeed by Cosmores as in-house Fullstack Developer with the PHP-MySQL and plain Js /
-                                Jquery in the backend and frontend respectively. The mission was to upgrade, extend,
-                                maintain and enforce security processes on many parts of the company's daily routines
-                            </p>
-                        </li>
-                        <li class="job_start_off"><a href="#"
-                                                     title="Employeed by Cosmores I started developing Rateparity as single Frontend Developer ">2018</a>
-                            <p title="item_label">Developing Rateparity as single Frontend Developer, while still
-                                employeed by Cosmores '</p>
-                            <p title="item_skills">
-                                Still employeed by Cosmores I started developing Rateparity as single Frontend Developer
-                                building with the latest ES6+ upgrade and the popular React Js library and in collab
-                                with a remote datastore in the Backend. Developing customizable, one-line-installation
-                                CORS
-                                Widgets for enriching the user experience on customers sites. Additionally developing
-                                the configuration app in the backend for widgets customization and usage monitoring and
-                                evaluation
-                            </p>
-                        </li>
-                        <li class="job_start_off"><a href="#"
-                                                     title="Contracted by ICCS as Fullstack Developer to building 'Hybrid' App ">2020</a>
-                            <p title="item_label">Employeed by ICCS as Fullstack Developer to building 'Hybrid' App
-                                '</p>
-                            <p title="item_skills">
-                                Core scopes of the project: Power
-                                Production / Load / Availability, Technical status of units and ultimately alignment
-                                with the official Schedule announced by the national supplier "DEDDIE" on daily basis
-                            </p>
-                        </li>
-                        <li class="job_start_off"><a href="#"
-                                                     title="Contracted by ICSS as Fullstack Developer to build 2 Synergy Energy Apps ">2021</a>
-                            <p title="item_label">Contracted by ICSS as Fullstack Developer to build 2 Synergy Energy
-                                Apps '</p>
-                            <p title="item_skills">
-                                Deliverable was a part of of multi European big-data project ‘Synergy” that roots and
-                                founded by greater movement “Horizon 2020”. Project
-                                customers are major national suppliers across Europe
-                            </p>
-                        </li>
-                        <li class="job_start_off"><a href="#"
-                                                     title="Contracted by ICSS as Fullstack Developer to build 2 EcoEMS Energy Apps ">2023</a>
-                            <p title="item_label">Contracted by ICSS as Fullstack Developer to build 2 EcoEMS Energy
-                                Apps </p>
-                            <p title="item_skills">
-                                The project, part of the European-Indian collaboration "Re-Empowered" required to
-                                structure and visualize the overall energy consumption generated daily by conventional
-                                units and eventually use input for administrators to perform simulations so that
-                                renewable empowered energy could find and claim its effective margin on the daily
-                                demand.
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-                <div id="introduction_cv_field">
-                    <div class="main_txt">
-                        <h2>Welcome</h2>
-                        <p>
-                            <span>Hi! My name is Manos.</span>
-                            For near the last and a half decade I have been studying and practicing my skills on diverse
-                            domains of educational interest,
-                            attending a bachelor degree from an English University while also taking multiple full-year
-                            trainings on Athenian private vocational institutes.
-                            The aspects of my study and research could be, in an abstruct manner, summarized to 'Web and
-                            Desktop Applications Development','Business Management and Marketing' and 'Graphics Design'.
-                            At the same time, speaking of my occupational experience, for more than a decade I have been
-                            occupied and have been evolving my competences and communication in a
-                            top-competent,world-wide extending
-                            pharmaceutical company, complying and assimilating to my profile highly strict and demanding
-                            business procedures.
-                        </p>
-                    </div>
-                    <div class="aux_txt">
-                        <h3>What is the site about</h3>
-                        <p>
-                            On site you may resume both of my occupational and educational timelines, how the two were
-                            drawn and evolve in parellel during previous years. Context may be indexed in detail,
-                            either as bulleted descriptions or guided by an interactive timeline. Along with the
-                            descriptive context you may also have an overview on some of the most critical projects that
-                            I have encountered.
-                            Therefore you may find available work-samples while working as a freelance developer on the
-                            Web, as officer occupied by pharmaceutical company, and last but not least as student at
-                            university.
-                            For the latter you may additionally index the scores attained, instructors’ comments, while
-                            also documentation and video reference whenever appropriate.
-                            Finally on the last page there are available links to the officials sites for each cited
-                            organization. You are suggested to request for reference where available. If you wish you
-                            may contact me
-                            using any of my personal accounts provided for some of the most popular social networks.
-                            Please suggest the context if you feel like.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="menu_tabs">
-            <ul>
-                <li><a href="#" title="web">WEB</a></li>
-                <li><a href="#" title="studies">STUDIES</a></li>
-                <li><a href="#" title="work">WORK</a></li>
-            </ul>
-        </div>
-        <div id="context">
-            <div id="list" class='monitor'></div>
-            <div id="description">
-                <div id="ititle"><h3><span></span></h3>
-                </div>
-                <p id="icategory">Category: <a href="#" class="cat_key"><span></span></a></p>
-                <h4 id="itools">Keywords: <span></span></h4>
-                <div id="ibody">
-                    <div id="idescription"><span></span></div>
-                    <div id="iscreenshots"><span></span></div>
-                </div>
-                <div id="iextra">
-                    <div id="ilinks">
-                        <strong>Link</strong>
-                        <span></span>
-                    </div>
-                    <div id="icomplements">
-                        <strong>Complements</strong>
-                        <div id="itutor"><span></span></div>
-                        <div id="iscore"><span></span></div>
-                        <div id="icomment"><span></span></div>
-                    </div>
-                    <div id="imedia">
-                        <strong>Media</strong>
-                        <span></span>
-                    </div>
-                    <div id="ifiles">
-                        <strong>Files</strong>
-                        <span></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="footer">
-            <h2>Useful Links</h2>
-            <ul id="work_links">
-                <li>Employers</li>
-                <li><a target="_blank" class='organization' href="https://www.sanofi.gr/l/gr/el/index.jsp"><span>Sanofi Aventis</span><img
-                        src="images/organizations/sanofiaventis_thumb.jpg"/> Pharmaceutical Company</a></li>
-                <li>References</a></li>
-                <li><a target="_blank" class='person'
-                       href="https://fr.linkedin.com/pub/markos-gerassopoulos/42/b92/b07">M.Gerassopoulos | GM
-                    Director</a></li>
-                <li><a target="_blank" class='person' href="https://gr.linkedin.com/pub/aspa-pispa/13/a3b/b67">A.Pispa |
-                    HR Director</a></li>
-                <li><a target="_blank" class='person' href="https://gr.linkedin.com/pub/andreas-katsis/17/1b2/3ba">A.Katsis
-                    | Finance Director</a></li>
-            </ul>
-            <ul id="study_links">
-                <li>Education</li>
-                <li><a target="_blank" class='organization'
-                       href="https://www2.gre.ac.uk/"><span>University of Greenwich</span><img
-                        src="images/organizations/greenwich_thumb.jpg"/></a> in Association with <a target="_blank"
-                                                                                                    class="organization"
-                                                                                                    href="https://www.nyc.gr"><span>New York College</span><img
-                        src="images/organizations/newyorkcollege_thumb.jpg"/> </a></li>
-                <li>References</li>
-                <li><a target="_blank" class='person' href="https://gr.linkedin.com/pub/michael-hands/30/8ba/61b">M.Hands
-                    | University of Greenwich</a></li>
-                <li><a target="_blank" class='person' href="https://gr.linkedin.com/pub/petros-bofakos/a/149/b90">P.Bofakos
-                    | University of Greenwich</a></li>
-                <li><a target="_blank" class='person' href="https://www.linkedin.com/in/ioannischatzis">I.Chatzis |
-                    University of Greenwich</a></li>
-                <li><a target="_blank" class='person'
-                       href="https://gr.linkedin.com/pub/ariadne-beatrice-kapetanaki/39/75b/50b">A.B.Kapetanaki |
-                    University of Greenwich</a></li>
-                <li><a target="_blank" class='person' href="https://www.facebook.com/ioannis.pandithas?fref=ts">G.Pandidas
-                    | University of Greenwich</a></li>
-                <li><a target="_blank" class='organization'
-                       href="https://www.intergraphics.gr/"><span>Intergraphics</span><img
-                        src="images/organizations/intergraphics_thumb.jpg"/> Vocational Institute</a></li>
-                <li>References</li>
-                <li><a target="_blank" class='person' href="https://gr.linkedin.com/pub/leonidas-tsaras/3/674/726">L.Tsaras
-                    | Intergraphics</a></li>
-                <li><a target="_blank" class='organization' href="https://www.iek-akmi.gr/"><span>AKMI </span><img
-                        src="images/organizations/akmi_thumb.jpg"/> Vocational Institute</a></li>
-            </ul>
-            <ul id="certificate_links">
-                <li>Certificates</li>
-                <li><a target="_blank" href="#"></a>Desktop Publishing and 3D Animation</li>
-                <li><a target="_blank" href="#"></a>Graphics Design for Web and Printable Mediums</li>
-                <li><a target="_blank" href="#"></a>Web Design and Development</li>
-                <li><a target="_blank" href="#"></a>Internet Engineering and Web Management</li>
-            </ul>
-            <ul id="social_links">
-                <li>Social Net</li>
-                <li>Share</li>
-                <li>
-                    <div class="fb-like" data-href="https://developers.facebook.com/docs/reference/plugins/like"
-                         data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
-                </li>
-                <li>
-                    <div class="g-plusone" data-annotation="inline" data-width="300"></div>
-                </li>
-                <li>Contact</li>
-                <li><a href="https://www.facebook.com/manoszalokostas" target="_blank"><img
-                        src="images/organizations/facebook.jpg"/>Facebook</a></li>
-                <li><a href="https://plus.google.com/116413132089341421459/posts" target="_blank"><img
-                        src="images/organizations/google.jpg"/>Google+</a></li>
-                <li><a href="https://www.linkedin.com/profile/view?id=115879291&trk=nav_responsive_tab_profile"
-                       target="_blank"><img src="images/organizations/linkedin.jpg"/>Linkedin</a></li>
-            </ul>
-        </div>
     </div>
+
 </div>
+
 <!-- Google tag (gtag.js) -->
 <script type="module">
-    import Service from "./core/service.mjs";
-    import Route from "./component/route.mjs";
-    import Monitor from "./component/monitor.mjs";
-    import Interaction from "./interaction.mjs";
 
+    import GlobalMenu from "./component/global-menu.mjs";
+    import Route from "./component/route.mjs";
 
     document.addEventListener('DOMContentLoaded', async () => {
-        console.log('MCV1');
 
+        console.log('MCV2');
 
-        await Service.init();
+        GlobalMenu.install('mi-global-menu')
 
-        Route.redirect();
+        Route.init();
+        // await Service.init();
 
-        Interaction.attach()
+        // Introduction.load('mi-page-introduction')
 
-        Monitor.intro()
+        // Interaction.attach()
+
+        // Monitor.intro()
 
 
     });
@@ -669,6 +51,57 @@
 </script>
 
 </body>
+<style>
+    #wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        float: left;
+        z-index: 1;
+        text-align: center;
+        font-size: 1em;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+    }
+
+    #wrapper ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    #view {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    #mi-page-introduction {
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    #mi-page-content {
+        position: absolute;
+        top:100%;
+        left:0;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    #mi-page-reference {
+        position: absolute;
+        top:200%;
+        left:0;
+        width: 100vw;
+        height: 100vh;
+    }
+</style>
 
 </html>
 

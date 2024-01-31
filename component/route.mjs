@@ -1,4 +1,21 @@
 import Monitor from "./monitor.mjs";
+import Content from "../route/content.mjs";
+import Reference from "../route/reference.mjs";
+import Introduction from "../route/introduction.mjs";
+
+
+function init() {
+// 
+    // let path = window.location.search
+    //
+    // if (path.includes('p=content')) return Content.load()
+    //
+    // if (path.includes('p=reference')) return Reference.load()
+
+    Introduction.load()
+
+}
+
 
 function query() {
 
@@ -33,6 +50,7 @@ function redirect() {
 
 
 export default {
+    init,
     redirect,
     query,
 }

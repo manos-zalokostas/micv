@@ -126,7 +126,7 @@ SEECAGO,  USA, FLORIDA | NOBLELINX CRM | REMOTE DEVELOPER
 Main Developments:
 Put application under SVN Versioning control
 Provide portability: Unroot the project that was harcoded  on the host and move all configuration data and links to custom-made external '.ini' configuration,
-Install and setup a Centos 5 copy of the Production to run as Staging environment and perform tests before updates publishing to Production.
+Install and setup a Centos 5 copy of the Production to set as Staging environment and perform tests before updates publishing to Production.
 Set up a Ubuntu-based virtual 'Local' and Centos-based remote 'Staging' hosts to deploy and test application before move on 'Production'
 Set up a clone virtual machine (vbox) for development environment
 Implement Utility classes and a Core class, with MVC-like capabilities, as a root class to extend and inherit all essential activities for the newly invoked classes afterwards.

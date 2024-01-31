@@ -582,7 +582,7 @@
         </li>
         <li>The application will allow a certain number of users to be registered and the program provides notification that informs dynamically the number of registered users.
         </li>
-        <li>A user that has applied erroneous data will be escaped from registered and the count want run is such case.
+        <li>A user that has applied erroneous data will be escaped from registered and the count want set is such case.
         </span>
         Pop-up windows alert and inform the users of prospect conflicts traced by the system while also a valid path that should be followed in order to resolve those conflicts.
         </li>
@@ -2001,7 +2001,7 @@ Key Responsibilities:
 <ul>
 <li>Put application under SVN Versioning control</li>
 <li>Provide portability: Unroot the project that was harcoded  on the host and move all configuration data and links to custom-made external '.ini' configuration,</li>
-<li>Install and setup a Centos 5 copy of the Production to run as Staging environment and perform tests before updates publishing to Production.</li>
+<li>Install and setup a Centos 5 copy of the Production to set as Staging environment and perform tests before updates publishing to Production.</li>
 <li>Set up a Ubuntu-based virtual 'Local' and Centos-based remote 'Staging' hosts to deploy and test application before move on 'Production'</li>
 <li>Set up a clone virtual machine (vbox) for development environment</li>
 <li>Implement Utility classes and a Core class, with MVC-like capabilities, as a root class to extend and inherit all essential activities for the newly invoked classes afterwards.</li>

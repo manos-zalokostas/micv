@@ -1,6 +1,6 @@
-import AsideContent from "../component/aside-content.mjs";
 import Layout from "../component/layout.mjs";
 import Slider from "../component/slider.mjs";
+import Extra from "../component/extra.mjs";
 import Storage from "../core/storage.mjs";
 
 
@@ -69,11 +69,11 @@ function refresh(currentListItem, currList) {
 
 
     if (currList) {
-        const field = AsideContent.activate(currList);
+        const field = Extra.activate(currList);
         const context = document.getElementById('context');
         if (context) {
             context.style.left = '-100%';
-            AsideContent.open(field);
+            Extra.open(field);
         }
         return;
     }
