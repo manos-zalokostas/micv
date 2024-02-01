@@ -679,7 +679,6 @@ function place_skill_images(divs, skills, counter, field, pctl) {
  * @param mode
  */
 function animate_skills(mode) {
-
     if (mode == 'off') {
         window.clearTimeout(animation);
         animation = null;
@@ -712,6 +711,14 @@ function animate_skills(mode) {
     animation = self.setInterval
     (
         function () {
+
+            // document.querySelectorAll('#skill_fields b')
+            //     .forEach((elem, i) => {
+            //             if (i === index && !document.querySelector("[class=filteron]")) elem.style.background = 'tomato';
+            //             else elem.style.background = 'slategrey'
+            //         }
+            //     )
+
             animation_running = true;
             if (mode == 'off') {
                 window.clearTimeout(animation);
@@ -1333,14 +1340,14 @@ function __INITIALIZE_PAGE_DATA(data) {
     // rnum = Math.floor((Math.random() * psize) + 1);
     // STORE A COMPLETE 'ITEM' THAT REFLECTS ALL DATA RELATED TO A 'PROJECT'
 
-    projects = _suffleArray(__GET_ALL_PROJECTS(data));
+    projects = __GET_ALL_PROJECTS(data)
     temp_projects = projects.slice();
 
-    references = _suffleArray(__GET_ALL_REFERENCES(data));
+    references = __GET_ALL_REFERENCES(data)
     temp_references = references.slice();
 
     // STORE - UNIQUELLY -  ALL SKILLS THAT WERE FOUND IN THE DOCUMENT. THIS IS AN ARRAY
-    tech_tools = _suffleArray(__GET_ALL_TOOLS(data));
+    tech_tools = __GET_ALL_TOOLS(data);
     temp_tools = tech_tools.slice();
 
     _BUILD_SEARCH_LISTS(projects, tech_tools);
@@ -1357,7 +1364,7 @@ function __INITIALIZE_PAGE_DATA(data) {
 function _BUILD_SEARCH_LISTS(projects, tools) {
     var htmlProjects = [],
         htmlTools = [];
-    // debugger
+
     projects.forEach(function (project) {
         htmlProjects.push("<option value='" + project.name + "'>" + project.name + "</option>")
     });
@@ -1425,7 +1432,6 @@ function __GET_ALL_PROJECTS(data) {
     var index = 'all_projects';
     var a = [], aSerialized = [];
     var cache = __GET_CACHED_DATA(index, false);
-
     if (cache) {
         var i = 0;
         aSerialized = JSON.parse(cache);
@@ -1453,6 +1459,8 @@ function __GET_ALL_PROJECTS(data) {
             aSerialized.push(JSON.stringify(proj));
         }
     );
+
+    aSerialized.reverse();
 
     __SET_CACHE_DATA(index, JSON.stringify(aSerialized), false);
 

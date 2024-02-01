@@ -2460,11 +2460,11 @@ Monitor the infrastructure safety with Prometheus and Grafana tools
  ]]>
         </description>
         <screenshots>
-            <shot>images/synergy/sfreq.png</shot>
-            <shot>images/synergy/sintro.png</shot>
-            <shot>images/synergy/splan.png</shot>
-            <shot>images/synergy/sscen.png</shot>
-            <shot>images/synergy/ssel.png</shot>
+            <shot>images/ecoems/ecosys.png</shot>
+            <shot>images/ecoems/ecostn.png</shot>
+            <shot>images/ecoems/ecoliveq.png</shot>
+            <shot>images/ecoems/ecospec.png</shot>
+            <shot>images/ecoems/ecoform.png</shot>
         </screenshots>
         <score>-</score>
         <tutor>-</tutor>

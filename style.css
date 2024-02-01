@@ -557,7 +557,7 @@ div {
 #skills_preview #skill_fields > b.filteron, #skills_preview #skill_fields > b:hover {
     background-color: tomato;
     color: white;
-    border-bottom: 1px solid tomato;
+    /*border-bottom: 1px solid tomato;*/
 }
 
 #introduction .monitor > ul {
@@ -667,6 +667,7 @@ div {
     right: -100%;
     border-radius: 6px;
     width: 28%;
+    height: 100px;
     border: 4px solid gainsboro;
 }
 
@@ -703,9 +704,6 @@ div {
     margin: 0;
 }
 
-#project .mitem > h2 {
-}
-
 #project .mitem > h3 {
     bottom: 9%;
     left: 1%;
@@ -739,7 +737,7 @@ div {
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     background-color: tomato;
-    padding: 1%;
+    padding: 5px;
     font-size: 1em;
 }
 
@@ -1044,7 +1042,7 @@ div {
     font-size: 2em;
     text-transform: lowercase;
     font-family: Tahoma, Geneva, sans-serif;
-    width:100%;
+    width: 100%;
     text-align: center;
 }
 
@@ -1195,16 +1193,17 @@ div {
 }
 
 .mgroupi {
+    position: relative;
+    overflow: hidden;
     float: left;
     list-style-type: none;
     text-align: right;
     color: white;
     width: 30%;
     height: 26%;
-    padding-right: 1%;
     margin: 2px;
+    padding-right: 1%;
     background-color: rgba(255, 255, 255, 0.2);
-    position: relative;
 }
 
 #context .mgroupi .sublist {
