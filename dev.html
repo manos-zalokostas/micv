@@ -13,9 +13,13 @@
 
 <script type="module">
 
-    import content from "./route/content.mjs";
 
-    content.load('dev')
+    import Monitor from "./component/monitor.mjs";
+
+    Monitor.install('dev')
+
+    Monitor.next()
+    // Monitor.intro()
 
 </script>
 

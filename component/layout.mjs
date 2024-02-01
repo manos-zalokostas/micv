@@ -67,9 +67,6 @@ function open(current_page) {
                 {$img, 'left': 0},
             )
             Introduction.load()
-            // if (!Monitor.animation_running && !animation_paused) {
-            //     Monitor.invoke(Service.gmode);
-            // }
             break;
 
         case 'projects':
@@ -80,18 +77,15 @@ function open(current_page) {
             )
             Content.load()
 
-            // Monitor.invoke('off');
             break;
 
         case 'projects-content':
 
             Visual.set(
                 {$wrapper, left: '-100%'},
-                // {$img, left: '-100%'},
             )
             Content.load()
 
-            // Monitor.invoke('off');
             break;
 
         case 'certificates':
@@ -101,7 +95,6 @@ function open(current_page) {
                 {$img, left: '-100%'},
             )
             Reference.load();
-            // Monitor.invoke('off');
             break;
 
         default:
@@ -124,64 +117,11 @@ function openResume(domain) {
     const id = '#' + domain + '_field',
         hostId = "interactive_intro";
 
-
     if ('#resume_cv_field' === id) return Timeline.install(hostId)
 
     if ('#interactive_cv_field' === id) return TimelineInteractive.install(hostId)
 
     QuotesIntro.install(hostId)
-
-    // if ( '#document_cv_field' === id )
-
-    // const linkActive = $('#introduction_menu a.selected');
-    // if (linkActive) linkActive.removeAttribute('class');
-    //
-    // $(`#${domain}`).classList.add('selected');
-    //
-    // if (id === '#document_cv_field') {
-    //     reset();
-    //     open('projects');
-    //
-    //     $('#context').setAttribute('style', 'left: -100%;');
-    //     PageDescription.openSlider('images/cv_document/micv.pdf', 'pdf');
-    // }
-    //
-    // $All(id).forEach(elem => {
-    //     if (elem.id.match('cv_field')) Visual.set({
-    //         elem, opacity: '0', left: '-100%'
-    //     })
-    // });
-    //
-    // const $pMain = `${id} .main_txt > p`,
-    //  $pAux = `${id}  .aux_txt > p`,
-    //  $h2Main = `${id}  .main_txt > h2`,
-    //  $h3Aux = `${id}  .main_txt > h3`;
-    //
-    //
-    // Visual.set(
-    //     {$elemActive, 'opacity': 1, 'left': 0},
-    //     {$pMain, left: 0},
-    //     {$pAux, right: 0}
-    // )
-    //
-    // Visual.set(
-    //     {$h2Main, opacity: 1},
-    //     {$h3Aux, opacity: 1}
-    // )
-
-    // $(id).animate({'opacity': '1', 'left': '0'});
-    // $(id + ' .main_txt > p').animate(
-    //     {'left': '0'},
-    //     function () {
-    //         $(id + ' .main_txt > h2').animate({'opacity': '1'});
-    //     }
-    // );
-    // $(id + ' .aux_txt > p').animate(
-    //     {'right': '0'},
-    //     function () {
-    //         $(id + ' .aux_txt > h3').animate({'opacity': '1'});
-    //     }
-    // );
 }
 
 

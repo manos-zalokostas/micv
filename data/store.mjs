@@ -1,54 +1,110 @@
-import Monitor from "./monitor.mjs";
+import data from "./index.mjs";
 
-let hostId = 'dev';
-//
-// function update(o) {
-//     document.getElementById(hostId).innerHTML = html(o);
-// }
 
-function html(o = SAM) {
+/*
 
-    let a = o.tools.tool;
+ */
+export const itemByIndex = (idx=0) => {
 
-    return `
-            <div id="tool" class='mitem'>
-                <h2>Skills</h2>
-                ${
-        a.map(
-            val => `
-            <div class='mgroupi'>
-                <h4>${val}</h4>
-            </div>
-`
-        ).join("")
-    }
-            </div>
-            ${css()}
-    `
+    let item = data[idx]
+
+    return item;
 }
 
 
-function css() {
-    return `
-    <style>
-</style>
-    `
+export const itemById = (itemId) => {
+
+    let item = data.find(o => o.id === itemId);
+
+    return item;
 }
 
 
-function install(id = "mi-monitor-view") {
-    document.getElementById(id).innerHTML = html(Monitor.curr());
-    // listen();
+/**
+ *
+ * @param tool
+ * @returns {[]}
+ */
+export const groupTools = () => {
+
+    let pack = data.map(o => Array.isArray(o.tools.tool) ? o.tools.tool : [])
+    pack = new Set(pack.flat());
+
+    return [...pack];
 }
 
 
-export default {
-    install,
-    html,
+/**
+ *
+ * @param tool
+ * @returns {[]}
+ */
+export const groupProjects = () => {
+
+    let pack = data.map(o => [o.id, o.title]);
+
+    return pack;
 }
 
 
-const SAM = {
+/**
+ *
+ * @param tool
+ * @returns {[]}
+ */
+export const groupByTool = (tool) => {
+
+    let tools = data.filter(o => o.tools.tool.includes(tool));
+
+    let pack = tools.map(item => [item.id, item.title])
+
+    return pack;
+}
+
+
+/**
+ *
+ * @param section
+ * @returns {[]}
+ */
+export const groupBySection = (section) => {
+
+    let a = data.filter(o => o.section === section);
+
+    let pack = a.map(item => [item.id, item.title]);
+
+    return pack;
+}
+
+
+/**
+ *
+ * @param domain
+ * @returns {[]}
+ */
+export const groupByDomain = (domain) => {
+
+    domain = domain.toUpperCase();
+
+    let domains = data.filter(o => o.domain === domain),
+        sections = domains.map(o => o.section);
+
+    sections = Array.from(new Set(sections));
+
+    let pack = [];
+    sections.forEach(str => {
+        let a = domains.reduce((acc, o) => {
+            if (o.section === str) acc[1].push([o.id, o.title]);
+            return acc;
+        }, [str, []])
+        pack.push(a);
+    })
+
+    return pack;
+}
+
+
+const SAM_WEB = {
     "domain": "WEB",
     "id": "WB12",
     "section": "Application Development",
@@ -107,3 +163,6 @@ const SAM = {
         ]
     }
 }
+
+
+// console.log(itemById('WB12'))

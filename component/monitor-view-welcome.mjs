@@ -53,7 +53,7 @@ function css() {
 
 
 
-function install(id = "mi-monitor-view-welcome") {
+function install(id = "mi-monitor-view") {
     document.getElementById(id).innerHTML = html();
     // listen();
 }

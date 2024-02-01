@@ -198,12 +198,12 @@ function css() {
 }
 
  #resume_cv_field h3 span {
-    float: right;
-    font-size: 0.5em;
-    color: gainsboro;
-    position: absolute;
-    left: 6%;
-    top: 85%;
+    /*float: right;*/
+    /*font-size: 0.5em;*/
+    /*color: gainsboro;*/
+    /*position: absolute;*/
+    /*left: 6%;*/
+    /*top: 85%;*/
 }
 
 </style>
