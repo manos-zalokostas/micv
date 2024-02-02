@@ -59,7 +59,7 @@ function css() {
             position: absolute;
             z-index: 5;
             top:0;
-            left: 0;
+            left: -100%;
             height: 100%;
             width: 200%;
             background: silver;

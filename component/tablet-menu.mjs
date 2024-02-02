@@ -2,136 +2,138 @@ import Storage from "../core/storage.mjs";
 import Layout from "./layout.mjs";
 import Slider from "./slider.mjs";
 import PageDescription from "../route/page-description.mjs";
+import * as Store from "../data/store.mjs";
+import {$, $All} from "../core/util.mjs";
 
 function refresh(item_requested, function_caller) {
-
-    const xml = Storage.get('sXML', true);
-
-    const item = item_requested;
-    const caller = function_caller;
-
-    // CLEAN ALL THE DATA DISPLAYED BY THE LATEST PREVIEWED ITM
-    // AND DISPLAY, THEM, OFF
-    Layout.reset()
-
-    //THIS SCRIPT HANDLES THE MAIN NAVIGATION BUTTON ANIMES AND CHANGES THE BACKGROUND IMAGE ON CLICK
-    if (caller === 'navigation') {
-        const selectedTab = document.querySelector('#menu_tabs a:contains(' + item + ')');
-        selectedTab.classList.add('selected');
-        // selectedTab.removeEventListener('hover', hover_in_menu_buttons);
-        const nonSelectedTabs = document.querySelectorAll('#menu_tabs a:not(:contains(' + item + '))');
-        nonSelectedTabs.forEach(tab => {
-            tab.animate({'padding-top': 0});
-            tab.classList.remove();
-        });
-    }
-
-    //IF ONE OF THE MAIN BUTTONS IS SELECTED AND THE '#MEDIA_CONTROL' IS STILL OPEN
-    //THE LINE BELOW  WILL HANDLE TO CLOSE IT
-    if (document.getElementById('media_control')) {
-        Slider.refresh('x', null)
-    }
-
-    const temp_array = [];
-    let num = -300;
-
-    let childs = [];
-
-    // A TEXT THAT INFORMS THE USER ABOUT THE CURRENT NAVIGATION LIST (BUILDS DYNAMIIC ALS0)
-    document.getElementById('list').insertAdjacentHTML('afterbegin', '<h5>' + item.replace(/_/g, " ") + '</h5>');
-
-    // A DISTINCTION IS MADE FOR THE CALLER, THAT WILL DEFINE THE QUERY TO THE XML FILE
-    // AND FINALLY SUSTAIN THE BEHAVIOUR OF THE DISPLAY
-    if (caller === "navigation") {
-        childs = xml.querySelectorAll('domain:contains(' + item + ') ~ section');
-    } else {
-        if (caller === "category") {
-
-            // THE SCRIPT QUERIES THE 'CATEGORY' TAG FROM THE XML FILE
-            childs = xml.querySelectorAll('category:contains(' + item + ') ~ title');
-            _activateButton(document.querySelectorAll('#menu_tabs a:not(:contains(' + item + '))'));
-        } else {
-
-            // THE SCRIPT QUERIES THE 'TOOLS' TAG FROM THE XML FILE (TOOLS ~ KEYWORDS)
-            const tools = xml.querySelectorAll('tools > tool:contains(' + item + ')');
-            tools.forEach(tool => {
-                if (tool.textContent === item) {
-                    childs.push(tool.parentNode.querySelector('title'));
-                }
-            });
-        }
-    }
-    _activateButton(document.querySelectorAll('#menu_tabs a:not(:contains(' + item + '))'));
-    // AFTER DECIDING WHICH DATA WILL BE PROCESSED AS 'CHILDS' ABOVE,
-    // NOW THEY ARE STORED IN AN ARRAY AND FURTHER PROCESSED AFTER 'COMPLETE' OF THE AJAX CALL
-    childs.forEach(
-        function (child) {
-            temp_array.push(child.textContent);
-        }
-    );
-
-    for (let i = 0; i < temp_array.length; i++) {
-        if (i === temp_array.indexOf(temp_array[i])) {
-            document.getElementById('list').insertAdjacentHTML('beforeend', '<li class="tgroupi" style="left:' + num + 'px">' + temp_array[i] + '</li>');
-            num -= 50;
-        }
-    }
-
-    if (caller === 'navigation') {
-        const createdUl = document.createElement('ul');
-        createdUl.id = item;
-        createdUl.classList.add('list');
-        const listItems = document.getElementById('list').querySelectorAll('li.tgroupi');
-        listItems.forEach(item => {
-            item.animate({'left': 0}, 'slow');
-            createdUl.appendChild(item);
-        });
-        document.getElementById('list').appendChild(createdUl);
-    } else {
-        const tempUl = document.createElement('ul');
-        tempUl.id = 'temp_list';
-        const listItems = document.getElementById('list').querySelectorAll('li.tgroupi');
-        listItems.forEach(item => {
-            item.animate({'left': 0}, 'slow');
-            tempUl.appendChild(item);
-        });
-        document.getElementById('list').appendChild(tempUl);
-    }
-
-
-}
-
-
-export function listContents(element) {
-
-    const xml = Storage.get('sXML', true);
-
-    const curr_section = element.innerHTML;
-    const curr_element = element;
-
-    let list_elem = "";
-    xml.querySelectorAll('section:contains(' + curr_section + ')').forEach(
-        function (child) {
-            list_elem += '<li>' + child.textContent + '</li>';
-        }
-    );
-
-    const lista = '<ul class="sublist">' + list_elem + '</ul>';
-
-    document.getElementById('list').style.overflowX = 'hidden';
-
-    if (!(curr_element.children[0].tagName.toLowerCase() === 'ul' && curr_element.children[0].classList.contains('sublist'))) {
-
-        curr_element.insertAdjacentHTML('beforeend', lista);
-
-        const sublistItems = document.querySelectorAll('.sublist li');
-
-        sublistItems.forEach(item => {
-            item.style.position = 'relative';
-            item.animate({'padding-left': '5%'}, 'medium');
-        });
-
-    }
+//
+//     const xml = Storage.get('sXML', true);
+//
+//     const item = item_requested;
+//     const caller = function_caller;
+//
+//     // CLEAN ALL THE DATA DISPLAYED BY THE LATEST PREVIEWED ITM
+//     // AND DISPLAY, THEM, OFF
+//     Layout.reset()
+//
+//     //THIS SCRIPT HANDLES THE MAIN NAVIGATION BUTTON ANIMES AND CHANGES THE BACKGROUND IMAGE ON CLICK
+//     if (caller === 'navigation') {
+//         const selectedTab = document.querySelector('#menu_tabs a:contains(' + item + ')');
+//         selectedTab.classList.add('selected');
+//         // selectedTab.removeEventListener('hover', hover_in_menu_buttons);
+//         const nonSelectedTabs = document.querySelectorAll('#menu_tabs a:not(:contains(' + item + '))');
+//         nonSelectedTabs.forEach(tab => {
+//             tab.animate({'padding-top': 0});
+//             tab.classList.remove();
+//         });
+//     }
+//
+//     //IF ONE OF THE MAIN BUTTONS IS SELECTED AND THE '#MEDIA_CONTROL' IS STILL OPEN
+//     //THE LINE BELOW  WILL HANDLE TO CLOSE IT
+//     if (document.getElementById('media_control')) {
+//         Slider.refresh('x', null)
+//     }
+//
+//     const temp_array = [];
+//     let num = -300;
+//
+//     let childs = [];
+//
+//     // A TEXT THAT INFORMS THE USER ABOUT THE CURRENT NAVIGATION LIST (BUILDS DYNAMIIC ALS0)
+//     document.getElementById('list').insertAdjacentHTML('afterbegin', '<h5>' + item.replace(/_/g, " ") + '</h5>');
+//
+//     // A DISTINCTION IS MADE FOR THE CALLER, THAT WILL DEFINE THE QUERY TO THE XML FILE
+//     // AND FINALLY SUSTAIN THE BEHAVIOUR OF THE DISPLAY
+//     if (caller === "navigation") {
+//         childs = xml.querySelectorAll('domain:contains(' + item + ') ~ section');
+//     } else {
+//         if (caller === "category") {
+//
+//             // THE SCRIPT QUERIES THE 'CATEGORY' TAG FROM THE XML FILE
+//             childs = xml.querySelectorAll('category:contains(' + item + ') ~ title');
+//             _activateButton(document.querySelectorAll('#menu_tabs a:not(:contains(' + item + '))'));
+//         } else {
+//
+//             // THE SCRIPT QUERIES THE 'TOOLS' TAG FROM THE XML FILE (TOOLS ~ KEYWORDS)
+//             const tools = xml.querySelectorAll('tools > tool:contains(' + item + ')');
+//             tools.forEach(tool => {
+//                 if (tool.textContent === item) {
+//                     childs.push(tool.parentNode.querySelector('title'));
+//                 }
+//             });
+//         }
+//     }
+//     _activateButton(document.querySelectorAll('#menu_tabs a:not(:contains(' + item + '))'));
+//     // AFTER DECIDING WHICH DATA WILL BE PROCESSED AS 'CHILDS' ABOVE,
+//     // NOW THEY ARE STORED IN AN ARRAY AND FURTHER PROCESSED AFTER 'COMPLETE' OF THE AJAX CALL
+//     childs.forEach(
+//         function (child) {
+//             temp_array.push(child.textContent);
+//         }
+//     );
+//
+//     for (let i = 0; i < temp_array.length; i++) {
+//         if (i === temp_array.indexOf(temp_array[i])) {
+//             document.getElementById('list').insertAdjacentHTML('beforeend', '<li class="tgroupi" style="left:' + num + 'px">' + temp_array[i] + '</li>');
+//             num -= 50;
+//         }
+//     }
+//
+//     if (caller === 'navigation') {
+//         const createdUl = document.createElement('ul');
+//         createdUl.id = item;
+//         createdUl.classList.add('list');
+//         const listItems = document.getElementById('list').querySelectorAll('li.tgroupi');
+//         listItems.forEach(item => {
+//             item.animate({'left': 0}, 'slow');
+//             createdUl.appendChild(item);
+//         });
+//         document.getElementById('list').appendChild(createdUl);
+//     } else {
+//         const tempUl = document.createElement('ul');
+//         tempUl.id = 'temp_list';
+//         const listItems = document.getElementById('list').querySelectorAll('li.tgroupi');
+//         listItems.forEach(item => {
+//             item.animate({'left': 0}, 'slow');
+//             tempUl.appendChild(item);
+//         });
+//         document.getElementById('list').appendChild(tempUl);
+//     }
+//
+//
+// }
+//
+//
+// export function listContents(element) {
+//
+//     const xml = Storage.get('sXML', true);
+//
+//     const curr_section = element.innerHTML;
+//     const curr_element = element;
+//
+//     let list_elem = "";
+//     xml.querySelectorAll('section:contains(' + curr_section + ')').forEach(
+//         function (child) {
+//             list_elem += '<li>' + child.textContent + '</li>';
+//         }
+//     );
+//
+//     const lista = '<ul class="sublist">' + list_elem + '</ul>';
+//
+//     document.getElementById('list').style.overflowX = 'hidden';
+//
+//     if (!(curr_element.children[0].tagName.toLowerCase() === 'ul' && curr_element.children[0].classList.contains('sublist'))) {
+//
+//         curr_element.insertAdjacentHTML('beforeend', lista);
+//
+//         const sublistItems = document.querySelectorAll('.sublist li');
+//
+//         sublistItems.forEach(item => {
+//             item.style.position = 'relative';
+//             item.animate({'padding-left': '5%'}, 'medium');
+//         });
+//
+//     }
 
 }
 
@@ -141,66 +143,53 @@ export function listContents(element) {
  * @param {HTMLElement} btn
  */
 function _activateButton(btns) {
-    Array.from(btns).forEach(
-        btn => btn.animate({'padding-top': 0})
-    )
+    // Array.from(btns).forEach(
+    //     btn => btn.animate({'padding-top': 0})
+    // )
 }
 
 
 function listen() {
 
-    document.addEventListener(
-        'click', (event) => {
-            const target = event.target;
+    [...$All(".mi-tablet .tgroupi .sublist a")]
+        .forEach($o => $o.addEventListener(
+                'click', (event) => {
+                    const target = event.target;
 
-            //     if (target.tagName === 'LI' && target.parentNode.classList.contains('sublist')) {
-            //         const liElements = document.querySelectorAll('li');
-            //         const previewedExists = Array.from(liElements).some(li => li.classList.contains('previewed') && !li.nextElementSibling?.classList.contains('previewed'));
-            //
-            //         if (previewedExists) {
-            //             document.querySelector('.previewed').parentElement.parentElement.style.backgroundColor = 'white';
-            //             document.querySelector('.previewed').parentElement.remove();
-            //         }
-            //
-            //         target.classList.add('previewed');
-            //         target.parentElement.parentElement.style.backgroundColor = '#eee';
-            //         target.style.backgroundColor = 'white';
-            //         target.style.color = 'orange';
-            //
-            //         PageDescription.refresh(target.innerHTML, document.querySelector('.list').id);
-            //
-            //         window.dataLayer = window.dataLayer || [];
-            //         window.dataLayer.push({
-            //             'event': 'evt-project-preview',
-            //             'project-previewed': target.innerText
-            //         });
-            //
-            //     }
-        }
-    )
+                    Layout.open('projects-content');
+                }
+            )
+        )
 }
 
 
 function html() {
+
+    let entries = SAM
+
     return `
     <div class="mi-tablet">
         <h5>WEB</h5>
         <ul id="WEB">
-            <li class="tgroupi" >Education</li>
-            <li class="tgroupi" >Merchandise</li>
-            <li class="tgroupi" >Portfolio</li>
-            <li class="tgroupi" >Safekeeping</li>
-            <li class="tgroupi" >Mobile Applications</li>
-            <li class="tgroupi" >Banking</li>
-            <li class="tgroupi" >Conferences</li>
-            <li class="tgroupi" >Warehouse</li>
-            <li class="tgroupi" >Hospitality</li>
-            <li class="tgroupi" >Energy</li>
+      ${
+        entries.map(
+            ([name, pack]) => `
+                <li class="tgroupi" >
+                    <section class="sublist">
+                        <h4>${name}</h4>
+                        <ul>
+                           ${pack.map(([childId, childName]) => `<li><a id=${childId}>${childName}</a></li>`).join("")}
+                        </ul>
+                    </section>
+                </li>`
+        ).join("")
+    }
         </ul>
     </div>
             ${css()}
     `
 }
+
 
 function css() {
     return `
@@ -362,5 +351,81 @@ export default {
     install,
     listen,
     refresh,
-    listContents,
+    // listContents,
 }
+
+const SAM = [
+    [
+        "Application Development",
+        [
+            [
+                "WB01",
+                "Schedule Handler"
+            ],
+            [
+                "WB08",
+                "Commerzbank Infobroker"
+            ],
+            [
+                "WB09",
+                "Noblelinx CRM"
+            ],
+            [
+                "WB10",
+                "Ecep Technologies Inventory"
+            ],
+            [
+                "WB11",
+                "Cosmores Booking Engine"
+            ],
+            [
+                "WB12",
+                "Rateparity"
+            ]
+        ]
+    ],
+    [
+        "Site Development",
+        [
+            [
+                "WB02",
+                "Elgreg"
+            ],
+            [
+                "WB03",
+                "ELGREG [2013]"
+            ],
+            [
+                "WB04",
+                "Curriculum Vitae"
+            ]
+        ]
+    ],
+    [
+        "Javascript Made E-learning",
+        [
+            [
+                "WB05",
+                "Pearson E-learning"
+            ]
+        ]
+    ],
+    [
+        "Employee Management System",
+        [
+            [
+                "WB06",
+                "DeltaComsos ERP"
+            ]
+        ]
+    ],
+    [
+        "Mobile Applications",
+        [
+            [
+                "WB07",
+                "Android Applications Development"
+            ]
+        ]
+    ]
+]

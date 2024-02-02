@@ -72,7 +72,7 @@ export const groupBySection = (section) => {
     let a = data.filter(o => o.section === section);
 
     let pack = a.map(item => [item.id, item.title]);
-
+    console.log("pack >>>>>>>>>>>>>>>>>", pack)
     return pack;
 }
 
@@ -82,7 +82,7 @@ export const groupBySection = (section) => {
  * @param domain
  * @returns {[]}
  */
-export const groupByDomain = (domain) => {
+export const groupByDomain = (domain = 'WEB') => {
 
     domain = domain.toUpperCase();
 
@@ -99,6 +99,8 @@ export const groupByDomain = (domain) => {
         }, [str, []])
         pack.push(a);
     })
+
+    console.log(">>>>>>>>>>>>>>>>>> ", pack)
 
     return pack;
 }

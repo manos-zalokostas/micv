@@ -10,8 +10,6 @@ function listen() {
         'click', (event) => {
             const $elem = event.target;
 
-            Layout.open('projects-content');
-
             // if (target.tagName === 'A' && target.parentNode.tagName === 'LI' && target.parentNode.parentNode.id === 'menu_tabs') {
             //     const contextLeft = document.querySelector('#context').style.left;
             //

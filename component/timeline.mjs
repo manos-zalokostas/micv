@@ -27,8 +27,8 @@ function html() {
 
     return `
              <div id="resume_cv_field">
-                    <div class="aux_txt">
-                        <h3>Timeline <span>comments<input type="checkbox" id="cv_comments"/></span></h3>
+                    <div id="resume-wrap">
+                        <h3><span>comments<input type="checkbox" id="cv_comments"/></span></h3>
                         <p id="cv_description">
 
                             <strong> 2023 </strong> Contracted by ICCS as standalone Full Stack Developer to design and
@@ -170,10 +170,28 @@ function css() {
     return `
     <style>
     
+ #resume_cv_field  {
+    /*background: red;*/
+}
+
+#resume-wrap {
+    width: 80%; 
+    margin: auto;
+}
+
+
+#cv_description {
+    overflow: auto;
+    height: 500px;
+}
+
  #resume_cv_field h2 {
     font-size: 4em;
 }
 
+#resume_cv_field h3 {
+
+}
 
  #resume_cv_field p i {
     font-style: normal;
@@ -193,18 +211,6 @@ function css() {
     content: ' -';
 }
 
-.citation #resume_cv_field h3 {
-
-}
-
- #resume_cv_field h3 span {
-    /*float: right;*/
-    /*font-size: 0.5em;*/
-    /*color: gainsboro;*/
-    /*position: absolute;*/
-    /*left: 6%;*/
-    /*top: 85%;*/
-}
 
 </style>
     `

@@ -376,7 +376,7 @@ function css(){
     font-family: calibri;
     border-top: #ccc 2px solid;
     border-bottom: #aaa 2px solid;
-    border-radius: 10px;
+    /*border-radius: 10px;*/
 }
 
 #interactive_cv_field #timeline_btns li a:hover {
@@ -452,7 +452,7 @@ function css(){
     background-color: #ccc;
     width: 1px;
     font-family: arial;
-    border-radius: 20px;
+    /*border-radius: 20px;*/
 }
 
  #interactive_cv_field #timeline li p {
