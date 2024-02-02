@@ -1,18 +1,12 @@
-import TabletMenu from "./tablet-menu.mjs";
 
-function html() {
+let data;
+
+
+function html(o) {
     return `
-        <p id="icategory">
-        Category: 
-        <a href="#" class="cat_key">
-            <span>CAT A</span>
-        </a>
-        <a href="#" class="cat_key">
-            <span>CAT B</span>
-        </a>
-        <a href="#" class="cat_key">
-            <span>CAT C</span>
-        </a>
+        <p id="icategory">Category:
+        <a href="#" class="cat_key" data-key=${o.category}>
+            <span>${o.category}</span>
         </p>
         ${css()}
     `
@@ -22,23 +16,20 @@ function css() {
     return `
     <style>
     #icategory {
+    float: left;
+    text-align: left;
     font-size: 0.8em;
     font-family: verdana;
     padding: 0;
     width: 60%;
-    float: left;
-    text-align: left;
-    margin: 0;
-    margin-top: 1%;
-    margin-left: 2%;
 }
 
 #icategory .cat_key {
-    background-color: #555;
+    color: white;
+    text-decoration: none;
     border-radius: 5px;
     padding: 5px;
-    text-decoration: none;
-    color: white;
+    background-color: #555;
 }
 </style>
     `
@@ -62,8 +53,8 @@ function listen() {
 }
 
 
-function install(id) {
-    document.getElementById(id).innerHTML = html();
+function install(id, data) {
+    document.getElementById(id).innerHTML = html(data);
     listen();
 }
 

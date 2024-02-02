@@ -1,20 +1,17 @@
-import Storage from "../core/storage.mjs";
-import Layout from "./layout.mjs";
-import Slider from "./slider.mjs";
-import TabletMenu from "./tablet-menu.mjs";
-
-function html() {
+function html(o) {
     return `
         <h4 id="itools">Keywords: 
-        <span><a href="#">TOOL 1</a></span>
-        <span><a href="#">TOOL 2</a></span>
-        <span><a href="#">TOOL 3</a></span>
+        ${
+            o.tools.tool.map(
+                val => `<span><a href="#">${val}</a></span>`
+            ).join("")
+        }
         </h4>
         ${css()}
     `
 }
 
-function css(){
+function css() {
     return `
     <style>
 
@@ -76,8 +73,8 @@ function listen() {
         'click', (event) => {
             const target = event.target;
 
-            // if (target.tagName === 'A' && target.classList.contains('keys')) {
-            //     TabletMenu.refresh(target.innerHTML, 'keyword');
+            // if (target.tagName === 'A' && target.classList.contains('cat_key')) {
+            //     TabletMenu.refresh(target.innerHTML, 'category');
             //     document.getElementById('context').style.left = '0';
             //     event.preventDefault();
             // }
@@ -87,14 +84,13 @@ function listen() {
 }
 
 
-function install(id){
-    document.getElementById(id).innerHTML = html();
+function install(id, data) {
+    document.getElementById(id).innerHTML = html(data);
     listen();
 }
 
 
 export default {
     install,
-    listen,
     html,
 }

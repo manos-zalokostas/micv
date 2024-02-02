@@ -1,14 +1,9 @@
-import PageMenuIntro from "../component/page-menu-intro.mjs";
-import Monitor from "../component/monitor.mjs";
-import QuoteAuthor from "../component/quote-author.mjs";
-import Timeline from "../component/timeline.mjs";
-import TimelineInteractive from "../component/timeline-interactive.mjs";
-import QuoteWelcome from "../component/quote-welcome.mjs";
-import QuoteSiteinfo from "../component/quote-siteinfo.mjs";
 import LinkpackWork from "../component/linkpack-work.mjs";
 import LinkpackStudy from "../component/linkpack-study.mjs";
-import LinkpackCert from "../component/linkpack-cert.mjs";
 import LinkpackSocial from "../component/linkpack-social.mjs";
+import LinkpackCert from "../component/linkpack-cert.mjs";
+
+
 
 function html() {
 
@@ -36,6 +31,9 @@ function css() {
 
     return `
     <style>
+        
+        h2 { visibility: hidden}
+        
          #footer {
                 display: block;
                 background-color: #ddd;
@@ -43,7 +41,7 @@ function css() {
                 padding-left: 4%;
             }
 
-            #footer > h2 {
+            #footer  h2 {
                 height: 10%;
                 margin: 0;
                 padding: 0;
@@ -58,46 +56,32 @@ function css() {
             #footer ul {
                 float: left;
                 list-style-type: none;
-                width: 22%;
-                height: 80%;
-                margin: 2px;
-                padding: 0 1%;
-                overflow: auto;
-                color: #aaa;
-                background-color: #555;
+                width: 25%;
+                margin: 0;
+                padding: 0;;
             }
 
             #footer ul li {
-                text-align: left;
-                width: 100%;
-                float: left;
-                color: grey;
                 font-family: calibri;
             }
 
             #footer ul li:first-child {
                 height: 8%;
                 text-align: center;
-                margin-bottom: 8%;
                 font-size: 3em;
                 color: slategrey;
-                width: 100%;
-                font-weight: bold;
             }
 
             #footer ul li a {
                 text-decoration: none;
-                color: white;
+                color: #444;
             }
 
             #footer ul li a img {
-                width: 24%;
-                border: solid 2px gainsboro;
-                margin-right: 4%;
             }
 
             #footer ul:last-child {
-                border-right: none;
+                /*border-right: none;*/
             }
 
 </style>

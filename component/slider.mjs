@@ -3,138 +3,6 @@
  * @param itemSrc
  * @param app
  */
-function open(itemSrc, app) {
-    const src = itemSrc;
-
-
-    // if (!document.getElementById('media_control')) {
-    // const mediaControl = document.createElement('div');
-    // mediaControl.id = 'media_control';
-    // mediaControl.innerHTML = `
-    //     <div id="cpanel">
-    //     <span title="next"> > </span>
-    //     <span title="previous"> < </span>
-    //     <span title="exit"> x </span>
-    //     </div>
-    //     <div id="preview"></div>
-    //     `;
-
-    // document.getElementById('description').appendChild(mediaControl);
-
-    const mediaControl = document.getElementById('media_control')
-
-    document.getElementById('iscreenshots').animate({bottom: '-100%'});
-    document.getElementById('idescription').animate({left: '-100%'});
-
-    mediaControl.animate({left: '51%'}, 'linear', () => {
-        document.getElementById('cpanel').animate({left: 0});
-    });
-    // }
-
-    let item = _resolveElemType(app, src);
-
-    document.getElementById('preview').innerHTML = item;
-
-    const preview = document.getElementById('preview');
-    // preview.style.right = '-100%';
-    // preview.children[0].style.opacity = 0;
-    // preview.children[0].style.right = '-100%';
-    // preview.children[0].style.opacity = 1;
-}
-
-
-/**
- *
- * @param direction
- * @param buttonClicked
- */
-function refresh(direction, buttonClicked) {
-    const handler = direction;
-    const button = buttonClicked;
-    let src = document.getElementById('preview').children[0].getAttribute('src');
-    const mediaBox = document.getElementById('media_control');
-    const selectedItem = document.querySelector('.item_previewed');
-    const btnNext = document.querySelector('#cpanel span[title="next"]');
-    const btnPrev = document.querySelector('#cpanel span[title="previous"]');
-
-    if (handler === "next") {
-        if (selectedItem.nextElementSibling && selectedItem.nextElementSibling.getAttribute('href')) {
-            src = selectedItem.nextElementSibling.getAttribute('href');
-            selectedItem.nextElementSibling.classList.add('item_previewed');
-            selectedItem.classList.remove('item_previewed');
-            btnNext.classList.add('haschild');
-            btnPrev.classList.add('haschild');
-
-            // The above handles whether the button will be enabled or not
-            // To do that, I take the src of the item that will be displayed during this
-            // code execution (--not the one that was already displayed on screen--)
-            document.getElementById('preview').children[0]
-                .animate(
-                    {opacity: 0, right: '100%'},
-                    {duration: 1000, fill: 'forwards'}
-                ).onfinish = function () {
-                // This code will run when the first animation finishes
-                document.getElementById('preview').children[0].setAttribute('src', src);
-                document.getElementById('preview').children[0].style.right = '-100%';
-
-                // Start the second animation
-                document.getElementById('preview').children[0].animate({opacity: 1, right: 0}, {
-                    duration: 1000,
-                    fill: 'forwards'
-                });
-            };
-        } else {
-            btnNext.classList.add('nochild');
-        }
-    } else if (handler === "previous") {
-        if (selectedItem.previousElementSibling && selectedItem.previousElementSibling.getAttribute('href')) {
-            src = selectedItem.previousElementSibling.getAttribute('href');
-            selectedItem.previousElementSibling.classList.add('item_previewed');
-            selectedItem.classList.remove('item_previewed');
-            btnPrev.classList.add('haschild');
-            btnNext.classList.add('haschild');
-
-            // The above handles whether the button will be enabled or not
-            // To do that, I take the src of the item that will be displayed during this
-            // code execution (--not the one that was already displayed on screen--)
-            const previewElement = document.getElementById('preview').children[0];
-
-            previewElement
-                .animate(
-                    {opacity: 0, right: '-100%'},
-                    {duration: 1000, fill: 'forwards'}
-                ).onfinish = function () {
-                // This code will run when the first animation finishes
-                previewElement.setAttribute('src', src);
-                previewElement.style.right = '100%';
-
-                // Start the second animation
-                previewElement.animate(
-                    {opacity: 1, right: 0},
-                    {duration: 1000, fill: 'forwards'}
-                );
-            };
-
-        } else {
-            btnPrev.classList.add('nochild');
-        }
-    } else {
-        mediaBox.animate(
-            {height: 0},
-            'fast',
-            () => {
-                document.getElementById('iscreenshots').animate({bottom: 0});
-                document.getElementById('idescription').animate({left: 0});
-                mediaBox.remove();
-            }
-        );
-
-        document.getElementById('ibody').firstElementChild.children.forEach(element => {
-            element.style.display = 'block';
-        });
-        document.getElementById('ibody').firstElementChild.children.animate({opacity: 1}, 'slow');
-    }
-}
 
 
 /**
@@ -173,18 +41,33 @@ function _resolveElemType(app, src) {
 }
 
 
-function html() {
+function html(o) {
 
     return `
         <div id="media_control">
-            <div id="cpanel">
-            <span title="next"> &gt; </span>
-            <span title="previous"> &lt; </span>
-            <span title="exit"> &times; </span>
-            </div>
+          
+          
             <div id="preview">
-            <img src="images/webdes_a1/welcome_page.jpg" style="opacity: 1; right: 0px;">
-</div>
+                <div id="cpanel">
+                    <span title="next"> &gt; </span>
+                    <span title="previous"> &lt; </span>
+                    <span title="exit"> &times; </span>
+                </div>
+                <img src=${o.screenshots.shot[0]}>
+            </div>
+        
+            <div id="iscreenshots" >
+              ${
+                    o.screenshots.shot.map(
+                        val => `
+                         <a class="item_previewed">
+                            <img src=${val} title="ttitle">
+                        </a>
+                        `
+                    ).join("")    
+                    
+                }
+            </div>
         </div>
     ${css()}
     `
@@ -198,21 +81,17 @@ function css() {
     #media_control {
     width: 100%;
     height:100%;
-    position: absolute;
-    background-color: #eee;
+    /*position: absolute;*/
 }
 
 #media_control span {
     float: left;
-    /*margin-top: 2%;*/
     width: 74%;
     height: 5%;
     border-top: 3px solid #eee;
     border-bottom: 3px solid;
     position: relative;
-    /*left: 4%;*/
     background-color: #ddd;
-    /*border-radius: 6px;*/
     font-family: monospace;
 }
 
@@ -247,7 +126,25 @@ function css() {
     background-color: white;
 }
 
+
+#cpanel {
+    float: left;
+    width: 12%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 20;
+    background-color: #555;
+    font-family: tahoma;
+    border: solid 2px white;
+    margin-top: 0;
+    padding-top: 4%;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
 #preview {
+    display: none;
     float: left;
     position: absolute;
     margin: 3% 2%;
@@ -285,23 +182,27 @@ function css() {
     border-radius: 12px;
 }
 
-#cpanel {
-    float: left;
-    width: 12%;
-    height: 100%;
-    overflow: hidden;
+
+#iscreenshots {
+    height: 16%;
+    padding-top: 1%;
     position: relative;
-    z-index: 20;
-    background-color: #555;
-    font-family: tahoma;
-    border: solid 2px white;
-    /*top: -3%;*/
-    margin-top: 0;
-    padding-top: 4%;
-    font-weight: bold;
-    /*border-radius: 30px;*/
-    /*left: -100%;*/
-    font-size: 1.5em;
+}
+
+
+#iscreenshots a {
+    float: left;
+    width: 15%;
+    margin-right: 2%;
+    overflow: hidden;
+}
+
+#iscreenshots img {
+}
+
+#iscreenshots img:hover {
+    border: solid 2px #CC0;
+    cursor: pointer;
 }
 
 </style>
@@ -312,14 +213,52 @@ function listen() {
 
 }
 
-function install(id) {
-    document.getElementById(id).innerHTML = html();
+function install(id, data) {
+    document.getElementById(id).innerHTML = html(data);
     listen();
 }
 
 
 export default {
     install,
-    open,
-    refresh,
+}
+
+
+
+const SAM = {
+    "domain": "STUDIES",
+    "id": "ST14",
+    "section": "Management and Communication",
+    "category": "Management",
+    "title": "Business Plan Proposal",
+    "tools": {
+        "tool": [
+            "business",
+            "research",
+            "marketing",
+            "requirements",
+            "teamwork",
+            "risk_management"
+        ]
+    },
+    "description": " <p>The report is a <span>part of a group project activity on a request to constitute a corporation and deliver a business plan for future growth. </p> <p>The domain that we have decided to do business was to provide inland e-learning solutions for the middle-state education of the country. </p></span> ",
+    "screenshots": {
+        "shot": [
+            "images/mc_a2/balance_sheet.jpg",
+            "images/mc_a2/break_even_analysis.jpg",
+            "images/mc_a2/business_structure.jpg",
+            "images/mc_a2/performance_grooup_expectations.jpg",
+            "images/mc_a2/products_for_group_target.jpg"
+        ]
+    },
+    "score": "75",
+    "tutor": " <h4><a target=\"_blank\" href=\"https://linkedin.com/pub/ariadne-beatrice-kapetanaki/39/75b/50b\">Ariadne-Beatrice, Kapetenaki PhD </h4> <p>Candidate at Centre for Food Policy</p> ",
+    "comment": " <ul> <li>Introduction and Conclusion of the report:Very good their initiative to include their notes in order to show evidence about their work and effort. </li> <li>Evidence and validity of business strategy:They have a well-designed strategic plan along with specific objectives for the future of the company</li> <li><span>Analysis of Business Environment and SWOT analysis:Very thorough analysis of the business micro and macro environment including SLEPT analysis and Porter's 5 forces. All these were very good interpreted into the SWOT analysis of the company.</li><li>Use of marketing concepts Fantastic analysis of the target audiences (consumers’ audit) and a very thorough marketing mix to support the suggested strategy and business objectives. Also, very good use of pull and push strategies.</span> </ul> <li>Application and validity of accounting and finance analysis:Very precise and quite valid financial plan and a four-year sales forecast create a clear picture of the financial aspects of the company. They have not used best and worst case scenarios. Very well formed profit and loss statement, while for the break-even point analysis there was a debate during the presentation about the existence of variable costs. Nevertheless, the use of two methods of capital investment (payback method and net present value) is a plus. </li> <li>Overall quality of report:The overall structure is very good, but the disadvantage is the lack of an introduction and a conclusion. Also, it is written in good and relatively concise English. </li> </ul> <ul><p> <b>Report’s marks</b></p> <li>5% Introduction and Conclusion 20</li> <li>15% Business Strategy 80</li> <li>15% Analysis of Business Environment 85</li> <li>10% SWOT analysis 85</li> <li>20% Marketing 90</li> <li>15% Accounting 75</li> <li>15% Finance 70</li> <li>5% Quality of report (professional) 75</li> </ul> <ul><p> <b>Presentation’s marks</b></p> <li>5% Introduction 80</li> <li>10% Evidence of strategic planning 75</li> <li>15% Application of business environment analysis 80</li> <li>15% Application of SWOT and marketing 85</li> <li>15% Application of Accounting and Finance Concepts 80</li> <li>15% Reflection on working as a team, team performance and suggestions for improvement 40</li> <li>10% Quality of presentation delivery 50</li> <li>10% Quality of slides 85</li> <li>5% Conclusion and recommendation 60</li> </ul> ",
+    "files": {
+        "file": [
+            "images/mc_a2/cproject_contents.pdf",
+            "images/mc_a2/mc_presentation.pdf"
+        ]
+    },
+    "media": {}
 }

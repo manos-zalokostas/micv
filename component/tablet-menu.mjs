@@ -1,8 +1,4 @@
-import Storage from "../core/storage.mjs";
 import Layout from "./layout.mjs";
-import Slider from "./slider.mjs";
-import PageDescription from "../route/page-description.mjs";
-import * as Store from "../data/store.mjs";
 import {$, $All} from "../core/util.mjs";
 
 function refresh(item_requested, function_caller) {

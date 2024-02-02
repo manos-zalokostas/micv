@@ -273,14 +273,11 @@ function html() {
 
     return `
 
-           <h1>Resume</h1>
-
             <div id="skills_preview" class="monitor">
 
                 <div id="skill_fields" class='mbuttons'>
-                    <b title='project'>projects</b>
-                    <b title="reference">references</b>
                     <b title="tool">skills</b>
+                    <b title='project'>projects</b>
                 </div>
 
                 <div id="skill_controls" class='mcontrols'>
@@ -304,8 +301,8 @@ function html() {
 function css() {
     return `
     <style>
-    
-    
+
+
 .mcontrols {
     position: absolute;
     top:75px;
@@ -335,7 +332,6 @@ function css() {
 }
 
 .mbuttons > b {
-    /*opacity: 0;*/
     float:right;
     border: solid 4px #555;
     text-transform: uppercase;
@@ -349,8 +345,6 @@ function css() {
     text-align: center;
     background-color: slategrey;
     font-style: normal;
-    /*width: 48px;*/
-    /*display: none;*/
 }
 
 .mbuttons > em.paused, 
@@ -372,6 +366,7 @@ function css() {
     height: 100%;
     background-color: #555;
     cursor: pointer;
+    overflow: hidden;
 }
 
 .monitor > ul  {
@@ -400,34 +395,32 @@ function css() {
 }
 
 .mitem > h4 {
-    position: absolute;;
-    bottom: 15%;
-    left: 2%;
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    color: #aaa;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
 }
 
 .mitem > h2 {
-    width: 10%;
-    text-align: left;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    background-color: tomato;
-    padding: 1%;
-    font-size: 1em;
+    /*width: 10%;*/
+    /*text-align: left;*/
+    /*border-top-right-radius: 15px;*/
+    /*border-bottom-right-radius: 15px;*/
+    /*background-color: tomato;*/
+    /*padding: 1%;*/
+    /*font-size: 1em;*/
 }
 
-.mitem > h3 {
+.mitem > h2 {
     font-family: arial;
     text-transform: uppercase;
     color: goldenrod;
     font-size: 2.8em;
 }
 
-.mitem > p > * {
-    display: inline;
-    font-size: 0.8em;
-    margin: 0;
-    padding: 0;
-}
 
 
 
