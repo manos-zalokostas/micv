@@ -4,7 +4,7 @@ import data from "./index.mjs";
 /*
 
  */
-export const itemByIndex = (idx=0) => {
+export const itemByIndex = (idx = 0) => {
 
     let item = data[idx]
 
@@ -167,4 +167,4 @@ const SAM_WEB = {
 }
 
 
-// console.log(itemById('WB12'))
+console.log(groupBySection())

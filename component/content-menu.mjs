@@ -1,5 +1,5 @@
-import Monitor from "./monitor.mjs";
-import Layout from "./layout.mjs";
+import Content from "../route/content.mjs";
+import * as Store from "../data/store.mjs";
 import {$} from "../core/util.mjs";
 
 
@@ -8,15 +8,17 @@ import {$} from "../core/util.mjs";
  */
 function listen() {
 
-    $('#introduction_menu').addEventListener(
+    $('#menu_tabs').addEventListener(
         'click',
         (event) => {
-            console.log('CKICKED INTROD PAGE MENU ')
+            console.log('CKICKED CONTENT PAGE MENU ')
             const target = event.target;
 
-            const domain = target.id;
-            Layout.openResume(domain);
-
+            const domain = target.id.split("_").pop().toUpperCase();
+            console.log(domain)
+            const entries = Store.groupByDomain(domain);
+            console.log({entries})
+            Content.load("mi-page-content", {tablet: entries, detail: null});
         }
     )
 }
@@ -25,13 +27,12 @@ function listen() {
 function html() {
 
     return `
-            <div id="introduction_menu">
+            <div id="menu_tabs">
           
                 <ul>
-                    <li><a id="introduction_cv" class='selected' href="#">Welcome</a></li>
-                    <li><a id="resume_cv" href="#">Timeline</a></li>
-                    <li><a id="interactive_cv" href="#">Interactive</a></li>
-                    <li><a id="document_cv" href="#">Document</a></li>
+                    <li><a id="domain_web" href="#">WEB</a></li>
+                    <li><a id="domain_study" href="#">STUDIES</a></li>
+                    <li><a id="domain_work" href="#">WORK</a></li>
                 </ul>
 
             </div>
@@ -44,26 +45,17 @@ function css() {
     return `
 <style>
     
-#introduction_menu {
+#menu_tabs {
     position: absolute;
-    top: 0;
-    width: 100%;
-    height: 4%;
-    z-index: 5;
-    background-color: #555;
-    border-bottom: 8px solid #ccc;
-}
-
-#introduction_menu ul {
-    float: left;
-    list-style-type: none;
-    padding: 0;
-    margin-left: 2%;
     height: 100%;
-    width: 40%;
+    width: 75%;
 }
 
-#introduction_menu ul li {
+#menu_tabs ul {
+    height: 100%;
+}
+
+#menu_tabs ul li {
     position: relative;
     bottom: 5%;
     float: left;
@@ -74,7 +66,7 @@ function css() {
     width: 20%;
 }
 
-#introduction_menu ul li a {
+#menu_tabs ul li a {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -87,44 +79,44 @@ function css() {
     text-align: center;
 }
 
-#introduction_menu #search {
+#menu_tabs #search {
     float: left;
     width: 30%;
     margin: 10px 0;
 }
 
-#introduction_menu #search_radio {
+#menu_tabs #search_radio {
     float: left;
     width: 40%;
 }
 
-#introduction_menu #search_radio > div {
+#menu_tabs #search_radio > div {
     float: left;
     width: 50%;
 }
 
-#introduction_menu #search_radio label :hover {
+#menu_tabs #search_radio label :hover {
     cursor: pointer;
 }
 
-#introduction_menu #search_radio input {
+#menu_tabs #search_radio input {
     float: right;
     width: 50%;
     margin: 4px 0 0;
 }
 
-#introduction_menu #search_radio label {
+#menu_tabs #search_radio label {
     color: white;
     text-transform: uppercase;
     font-size: small;
 }
 
 
-#introduction_menu #search_result {
+#menu_tabs #search_result {
     height: 100%;
 }
 
-#introduction_menu #search_result input {
+#menu_tabs #search_result input {
     float: right;
     width: 50%;
     height: 100%;
@@ -134,7 +126,7 @@ function css() {
 }
 
 
-#introduction_menu ul li a:hover, #introduction_menu ul li a.selected {
+#menu_tabs ul li a:hover, #menu_tabs ul li a.selected {
     color: goldenrod;
 }
 </style>

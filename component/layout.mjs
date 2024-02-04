@@ -40,21 +40,7 @@ function reset() {
 function open(current_page) {
     const $wrapper = $('#wrapper'),
         $img = $('#author_presentation > img')
-    // $menu = $('#site_menu'),
-    // $linkActive = $('#site_menu a.selected')
-    // ;
 
-
-    // if ($linkActive.getAttribute('title') === current_page) {
-    //     return;
-    // }
-    // let animation_paused = $('#skill_fields > em').classList.contains('paused');
-    //
-    // $linkActive.removeAttribute('class');
-    // $('#site_menu a[title="' + current_page + '"]').classList.add('selected');
-    //
-    //
-    // $menu.animate({'top': '-10%'});
 
     switch (current_page) {
 
@@ -72,7 +58,7 @@ function open(current_page) {
                 {$wrapper, top: '-100%', left: 0},
                 {$img, left: '-100%'},
             )
-            Content.load()
+            Content.load("mi-page-content", {tablet: null, detail: null});
 
             break;
 
@@ -81,7 +67,7 @@ function open(current_page) {
             Visual.set(
                 {$wrapper, left: '-100%'},
             )
-            Content.load()
+            // Content.load()
 
             break;
 

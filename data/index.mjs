@@ -323,7 +323,7 @@ export default [
         "media": {}
     },
     {
-        "domain": "STUDIES",
+        "domain": "STUDY",
         "id": "ST01",
         "section": "Programming Technologies",
         "category": "desktop application",
@@ -357,7 +357,7 @@ export default [
         "media": {}
     },
     {
-        "domain": "STUDIES",
+        "domain": "STUDY",
         "id": "ST09",
         "section": "Web Applications for Businesses",
         "category": "Design and Development",
@@ -393,7 +393,7 @@ export default [
         "media": {}
     },
     {
-        "domain": "STUDIES",
+        "domain": "STUDY",
         "id": "ST10",
         "section": "Systems Development",
         "category": "Design and Development",
@@ -428,7 +428,7 @@ export default [
         "media": {}
     },
     {
-        "domain": "STUDIES",
+        "domain": "STUDY",
         "id": "ST02",
         "section": "Systems Development",
         "category": "Design and Development",
@@ -460,7 +460,7 @@ export default [
         "media": {}
     },
     {
-        "domain": "STUDIES",
+        "domain": "STUDY",
         "id": "ST03",
         "section": "Advanced Database Systems and Applications",
         "category": "Design and Development",
@@ -494,7 +494,7 @@ export default [
         "media": {}
     },
     {
-        "domain": "STUDIES",
+        "domain": "STUDY",
         "id": "ST04",
         "section": "Advanced Database Systems and Applications",
         "category": "Design and Development",
@@ -527,7 +527,7 @@ export default [
         "media": {}
     },
     {
-        "domain": "STUDIES",
+        "domain": "STUDY",
         "id": "ST05",
         "section": "Systems Analysis and Visualizations",
         "category": "Management",
@@ -551,7 +551,7 @@ export default [
         "media": {}
     },
     {
-        "domain": "STUDIES",
+        "domain": "STUDY",
         "id": "ST06",
         "section": "Systems Analysis and Visualizations",
         "category": "Management",
@@ -576,7 +576,7 @@ export default [
         "media": {}
     },
     {
-        "domain": "STUDIES",
+        "domain": "STUDY",
         "id": "ST07",
         "section": "Learning and Communications",
         "category": "Management",
@@ -606,7 +606,7 @@ export default [
         "media": {}
     },
     {
-        "domain": "STUDIES",
+        "domain": "STUDY",
         "id": "ST08",
         "section": "Operating Systems",
         "category": "Design and Development",
@@ -637,7 +637,7 @@ export default [
         "media": {}
     },
     {
-        "domain": "STUDIES",
+        "domain": "STUDY",
         "id": "ST11",
         "section": "Database Applications",
         "category": "Design and Development",
@@ -671,7 +671,7 @@ export default [
         "media": {}
     },
     {
-        "domain": "STUDIES",
+        "domain": "STUDY",
         "id": "ST12",
         "section": "Database Applications",
         "category": "Design and Development",
@@ -701,7 +701,7 @@ export default [
         "media": {}
     },
     {
-        "domain": "STUDIES",
+        "domain": "STUDY",
         "id": "ST13",
         "section": "Management and Communication",
         "category": "Management",
@@ -731,7 +731,7 @@ export default [
         "media": {}
     },
     {
-        "domain": "STUDIES",
+        "domain": "STUDY",
         "id": "ST14",
         "section": "Management and Communication",
         "category": "Management",
@@ -768,7 +768,7 @@ export default [
         "media": {}
     },
     {
-        "domain": "STUDIES",
+        "domain": "STUDY",
         "id": "ST15",
         "section": "Information and Network Security Engineering",
         "category": "Networking",
@@ -796,7 +796,7 @@ export default [
         "media": {}
     },
     {
-        "domain": "STUDIES",
+        "domain": "STUDY",
         "id": "ST16",
         "section": "Software Engineering and Project Management",
         "category": "Management",
@@ -824,7 +824,7 @@ export default [
         "media": {}
     },
     {
-        "domain": "STUDIES",
+        "domain": "STUDY",
         "id": "ST17",
         "section": "Software Engineering and Project Management",
         "category": "Management",
@@ -854,7 +854,7 @@ export default [
         "media": {}
     },
     {
-        "domain": "STUDIES",
+        "domain": "STUDY",
         "id": "ST18",
         "section": "Software Engineering and Project Management",
         "category": "Management",
@@ -887,7 +887,7 @@ export default [
         "media": {}
     },
     {
-        "domain": "STUDIES",
+        "domain": "STUDY",
         "id": "ST19",
         "section": "Software Engineering and Project Management",
         "category": "Design and Development",
@@ -922,7 +922,7 @@ export default [
         "media": {}
     },
     {
-        "domain": "STUDIES",
+        "domain": "STUDY",
         "id": "ST20",
         "section": "Scheduler development with PHP and MySQL",
         "category": "Design and Development",

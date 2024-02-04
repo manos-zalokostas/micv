@@ -1,4 +1,4 @@
-import PageMenuIntro from "../component/page-menu-intro.mjs";
+import IntroMenu from "../component/intro-menu.mjs";
 import QuoteAuthor from "../component/quote-author.mjs";
 import QuotesIntro from "../component/quotes-intro.mjs";
 import Monitor from "../component/monitor.mjs";
@@ -80,7 +80,7 @@ function load(id="mi-page-introduction") {
 
     document.getElementById(id).innerHTML = html();
 
-    PageMenuIntro.install("mi-page-introduction-menu")
+    IntroMenu.install("mi-page-introduction-menu")
     QuoteAuthor.install("mi-quote-author")
     QuotesIntro.install('interactive_intro')
     Monitor.install("mi-monitor")

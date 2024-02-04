@@ -66,40 +66,12 @@ function listen() {
         'click', (event) => {
             const target = event.target;
 
-
-            // // EXTRA BUTTONS 'CLICK'
-            //
-            // if (target.tagName === 'DIV' && target.parentElement.id === 'iextra') {
-            //     open(target);
-            // }
-            //
-            //
-            // // MEDIA / FILES / IMAGES ELEMENTS 'CLICK'
-            //
-            //
-            // if (target.tagName === 'A' && (target.parentElement.id === 'imedia' || target.parentElement.id === 'ifiles' || target.parentElement.id === 'iscreenshots')) {
-            //     let item_src = target.getAttribute('href');
-            //     let app = "";
-            //
-            //     if (target.parentElement.parentElement.id.includes('media')) {
-            //         app = 'avi';
-            //     } else if (target.parentElement.parentElement.id.includes('files')) {
-            //         app = 'pdf';
-            //     } else {
-            //         app = 'jpg';
-            //     }
-            //
-            //     target.classList.remove('item_previewed');
-            //     PageDescription.openSlider(item_src, app);
-            //     event.preventDefault();
-            // }
-
         }
     )
 
 }
 
-function html() {
+function html(o) {
     return `
                     <div id="iextra">
                         <div id="ilinks">
@@ -257,8 +229,10 @@ function css() {
 }
 
 
-function install(id){
-    document.getElementById(id).innerHTML = html();
+function install(id, data){
+    if(!data) return;
+
+    document.getElementById(id).innerHTML = html(data);
     listen();
 }
 

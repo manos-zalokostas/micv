@@ -54,6 +54,8 @@ function listen() {
 
 
 function install(id, data) {
+    
+    if(!data) return;
     document.getElementById(id).innerHTML = html(data);
     listen();
 }

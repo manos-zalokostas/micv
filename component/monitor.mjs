@@ -335,7 +335,7 @@ function css() {
     float:right;
     border: solid 4px #555;
     text-transform: uppercase;
-    margin: 5px;;
+    margin: 5px;
     text-align: center;
     width: 125px;
 }
@@ -370,7 +370,7 @@ function css() {
 }
 
 .monitor > ul  {
-    list-style: none;;
+    list-style: none;
 }
 
 .monitor > ul > li > div:last-child {

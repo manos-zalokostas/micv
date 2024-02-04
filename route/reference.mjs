@@ -58,7 +58,7 @@ function css() {
                 list-style-type: none;
                 width: 25%;
                 margin: 0;
-                padding: 0;;
+                padding: 0;
             }
 
             #footer ul li {

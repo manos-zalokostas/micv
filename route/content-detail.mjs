@@ -1,24 +1,37 @@
+import BadgeCategory from "../component/badge-category.mjs";
 import ContentMenu from "../component/content-menu.mjs";
 import TabletMenu from "../component/tablet-menu.mjs";
-import ContentDetail from "./content-detail.mjs";
+import BadgeTools from "../component/badge-tools.mjs";
+import Slider from "../component/slider.mjs";
+import Extra from "../component/extra.mjs";
 
 
 
-function html() {
+function html(o) {
 
     return `
 
-            <div id="mi-page-content-menu"></div>
+        <div id="ititle" >
+            <h3>
+                <span>${o?.title}</span>
+            </h3>
+        </div>
+        
+        <div id="mi-badge-category"></div>
+        
+        <div id="mi-badge-tools"></div>
+        
+        <div id="ibody">
+        
+            <div id="idescription">${o?.description}</div>
+        
+            <div id="mi-content-slider"></div>
+        
+        </div>
+        
+        <div id="mi-content-extra"></div>
 
-            <div id="mi-content-wrapper">
-
-                <div id="mi-content-control" > TABLET</div>
-
-                <div id="mi-content-detail"> DETAIL </div>
-                
-            </div>
-
-            ${css()}
+        ${css()}
     `
 
 }
@@ -28,32 +41,57 @@ function css() {
 
     return `
     <style>
-    
-        #mi-page-content-menu {
-            position: absolute;
-            z-index: 10;
-            left:0;
-            top:0;
+            
+         #ititle {
+            float: left;
+            text-align: left;
+            color: orange;
+            font-size: 2.5em;
+            font-family: verdana;
             width: 100%;
-            height: 75px
+            padding: 0;
+            margin: 0;
+            margin-top: 5%;
         }
-    
-    
-        #mi-content-wrapper {
-            position: absolute;
-            z-index: 5;
-            top:0;
-            left: 0;
-            height: 100%;
-            width: 200%;
-            /*background: silver;*/
+
+        #ititle h3 {
+            display: inline;
+            font-family: verdana;
+            padding: 0;
+            width: 70%;
+            float: left;
+            margin: 0;
+            margin-bottom: 1%;
+            margin-left: 2%;
+        }
+
+        #ititle hr {
+            padding-bottom: 0;
+            margin-bottom: 0;
         }
         
-        #mi-content-wrapper > div {
-             position: relative;
-             float: left;
-             width: 50%;
-             height: 100%;
+        
+        #ibody {
+            float: left;
+            font-family: Verdana, Geneva, sans-serif;
+            font-size: 0.9em;
+            text-align: left;
+            width: 70%;
+            height: 70%;
+            overflow: hidden;
+            margin-top: 4%;
+        }
+
+        #idescription {
+            color: rgb(50, 71, 90);
+            font-family: calibri; 
+            height: 65%;
+            padding: 2%;
+        }
+
+        #idescription span {
+            padding: 0;
+            margin: 0;
         }
         
 </style>
@@ -62,15 +100,19 @@ function css() {
 }
 
 
-function load(id="mi-page-content", data={tablet: {}, detail:{}}) {
+function load(id="mi-page-content", entry = null) {
 
-    document.getElementById(id).innerHTML = html();
+    if(!entry) return;
 
-    ContentMenu.install('mi-page-content-menu')
+    document.getElementById(id).innerHTML = html(entry);
 
-    TabletMenu.install("mi-content-control", data.tablet)
+    BadgeCategory.install('mi-badge-category', entry)
 
-    ContentDetail.load("mi-content-detail", data.detail)
+    BadgeTools.install('mi-badge-tools', entry)
+
+    Slider.install('mi-content-slider', entry)
+
+    Extra.install('mi-content-extra', entry)
 
 }
 
