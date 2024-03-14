@@ -1,37 +1,6 @@
 export default [
     {
         "domain": "WEB",
-        "id": "WB01",
-        "section": "Application Development",
-        "category": "-",
-        "title": "Schedule Handler",
-        "tools": {
-            "tool": "-"
-        },
-        "description": " <ul> <p>The system is originally built for providing functionality with regard to the following sections: </p> <span> <li>The system is an instrument for users to arrange, conduct and maintain an annual school   schedule in a relative intuitive and easy way. The users should be provided with guidance to those cases where the operation of the system is ambiguous. </li> <li>The system will maintain hierarchically privileged accessing roles for its users, and top-privileged roles should maintain the faculty to adjust the privileges of the other user-roles.</li> <li>The system maintains diverse accessing level sections, where sections of high importance can only be accessed by the corresponding accessing user roles, as those are imposed by administration.</li> <li>The arrangement of the schedule can only be conducted by highly privileged roles and will be iterated automatically by the system, but verified manually by lower privileged roles, on a daily basis.</li> </span> <li>The schedule can override the formal arrangements or can change completely during a running semester. The system will need to easily integrate the changes and those must be provided for verification as well. </li> <li>The informative resources of the organizations (like registered courses, tutors, campuses addresses etc) can be accessed effectively by all user roles of the system, but only authorized users will be in position to add new resources to the system. </li> <li>The system will maintain a registry where the users interaction with the system can be monitored.</li> <li>The system should be deployed in a secure environment and will maintain the privacy of the registered records from unauthorized users.</li> <li><ul>The system should maintain extra faculties for top-level privileged roles as to: <li>make overall estimations for given time-periods, based on the daily recordings</li> <li>securely backup and/or retrieve the database data on demand</li> </ul></li> </ul> ",
-        "screenshots": {
-            "shot": [
-                "images/sheduler/pic_msch.jpg",
-                "images/sheduler/pic_hours.jpg",
-                "images/sheduler/pic_restrict.jpg",
-                "images/sheduler/pic_backup.jpg"
-            ]
-        },
-        "score": "-",
-        "tutor": "-",
-        "comment": "-",
-        "files": {
-            "file": [
-                "images/sheduler/fp_scheduler_contents.pdf",
-                "images/sheduler/fp_manual.pdf",
-                "images/sheduler/fp_database_design.pdf",
-                "images/sheduler/fp_technical_details.pdf"
-            ]
-        },
-        "media": " "
-    },
-    {
-        "domain": "WEB",
         "id": "WB02",
         "section": "Site Development",
         "category": "Design and Development",

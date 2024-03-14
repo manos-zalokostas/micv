@@ -4,7 +4,19 @@ import TabletMenu from "../component/tablet-menu.mjs";
 import BadgeTools from "../component/badge-tools.mjs";
 import Slider from "../component/slider.mjs";
 import Extra from "../component/extra.mjs";
+import Layout from "../component/layout.mjs";
+import {$, $All} from "../core/util.mjs";
+import * as Store from "../data/store.mjs";
+import Content from "./content.mjs";
 
+function listen() {
+
+    $('#ititle strong').addEventListener(
+        'click', (event) => {
+            Layout.open('projects-content-back');
+        }
+    )
+}
 
 
 function html(o) {
@@ -12,6 +24,7 @@ function html(o) {
     return `
 
         <div id="ititle" >
+            <strong>&lt;</strong>
             <h3>
                 <span>${o?.title}</span>
             </h3>
@@ -53,6 +66,16 @@ function css() {
             margin: 0;
             margin-top: 5%;
         }
+        
+         #ititle strong {
+            float: left;
+            line-height: 1;
+            padding: 4px 14px;
+            border-radius: 30px;
+            background: #eee;
+            margin: 0 25px;
+            cursor: pointer;
+         }
 
         #ititle h3 {
             display: inline;
@@ -70,6 +93,14 @@ function css() {
             margin-bottom: 0;
         }
         
+        #mi-badge-category {
+            display: none;
+            float:left;
+        }
+
+        #mi-badge-tools {
+            float:left;
+        }
         
         #ibody {
             float: left;
@@ -100,9 +131,9 @@ function css() {
 }
 
 
-function load(id="mi-page-content", entry = null) {
+function load(id = "mi-page-content", entry = null) {
 
-    if(!entry) return;
+    if (!entry) return;
 
     document.getElementById(id).innerHTML = html(entry);
 
@@ -112,7 +143,9 @@ function load(id="mi-page-content", entry = null) {
 
     Slider.install('mi-content-slider', entry)
 
-    Extra.install('mi-content-extra', entry)
+    // Extra.install('mi-content-extra', entry)
+    listen();
+
 
 }
 

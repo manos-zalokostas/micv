@@ -62,7 +62,7 @@ function css() {
 }
 
 
-function load(id="mi-page-content", data={tablet: {}, detail:{}}) {
+function load(id="mi-page-content", data={tablet: null, detail: null}) {
 
     document.getElementById(id).innerHTML = html();
 

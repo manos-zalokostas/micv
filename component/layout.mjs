@@ -1,11 +1,6 @@
-import {$, $All} from "../core/util.mjs";
-import Visual from "../core/visual.mjs";
-import TimelineInteractive from "./timeline-interactive.mjs";
-import Timeline from "./timeline.mjs";
-import QuotesIntro from "./quotes-intro.mjs";
-import Introduction from "../route/introduction.mjs";
 import Content from "../route/content.mjs";
-import Reference from "../route/reference.mjs";
+import Visual from "../core/visual.mjs";
+import {$, $All} from "../core/util.mjs";
 
 
 /**
@@ -44,41 +39,29 @@ function open(current_page) {
 
     switch (current_page) {
 
-        case 'about':
-            Visual.set(
-                {$wrapper, 'top': 0, left: 0},
-                {$img, 'left': 0},
-            )
-            Introduction.load()
-            break;
 
         case 'projects':
-
             Visual.set(
                 {$wrapper, top: '-100%', left: 0},
                 {$img, left: '-100%'},
             )
             Content.load("mi-page-content", {tablet: null, detail: null});
-
             break;
 
-        case 'projects-content':
 
+        case 'projects-content':
             Visual.set(
                 {$wrapper, left: '-100%'},
             )
-            // Content.load()
-
             break;
 
-        case 'certificates':
 
+        case 'projects-content-back':
             Visual.set(
-                {$wrapper, top: '-200%', left: 0},
-                {$img, left: '-100%'},
+                {$wrapper, left: 0},
             )
-            Reference.load();
             break;
+
 
         default:
             // DEFAULT:: TOP LEVEL PAGE
@@ -87,7 +70,9 @@ function open(current_page) {
                 {$wrapper, top: '-200%'}
             )
             break;
+
     }
+
 }
 
 
@@ -97,19 +82,19 @@ function open(current_page) {
  */
 function openResume(domain) {
 
-    const id = '#' + domain + '_field',
-        hostId = "interactive_intro";
-
-    if ('#resume_cv_field' === id) return Timeline.install(hostId)
-
-    if ('#interactive_cv_field' === id) return TimelineInteractive.install(hostId)
-
-    QuotesIntro.install(hostId)
+    // const id = '#' + domain + '_field',
+    //     hostId = "interactive_intro";
+    //
+    // if ('#resume_cv_field' === id) return Timeline.install(hostId)
+    //
+    // if ('#interactive_cv_field' === id) return TimelineInteractive.install(hostId)
+    //
+    // QuotesIntro.install(hostId)
 }
 
 
 export default {
-    openResume,
+    // openResume,
+    // reset,
     open,
-    reset,
 }
