@@ -1,13 +1,11 @@
 // JavaScript Document
 
+import swRegister from "./swRegister";
+
 $(document).ready(
     function () {
 
-        console.log('MCV1');
-
-        animation = '';
-        animation_running = false;
-        gmode = 'global';
+        // console.log('MCV2');
 
         localStorage.clear();
 
@@ -491,7 +489,7 @@ function animate_page(current_page) {
             break;
         default :
             // DEFAULT:: TOP LEVEL PAGE
-            console.log('FUNCTION: ANIMATE_PAGE -> RUNS DEFAULT - PLEASE CHECK !')
+            // console.log('FUNCTION: ANIMATE_PAGE -> RUNS DEFAULT - PLEASE CHECK !')
             $('#wrapper').animate(
                 {'top': '0'}, 'slow', 'swing', function () {
                     $('#site_menu').animate({'top': 0})
@@ -526,7 +524,7 @@ function ajax_retrieve_skill_data() {
                 proccess_ajax_data(gmode);
             },
             error: function () {
-                console.log('Failed 2 Tech-Logos file ...');
+                // console.log('Failed 2 Tech-Logos file ...');
             }
         }
     );
@@ -804,7 +802,7 @@ function handle_banner_input(caller, target) {
         return
     }
 
-    console.log('FUNCTION HANDLE_BANNER_INPUT RUNS WITH A DEFAULT, PLEASE CHECK !')
+    // console.log('FUNCTION HANDLE_BANNER_INPUT RUNS WITH A DEFAULT, PLEASE CHECK !')
 }
 
 
@@ -831,7 +829,7 @@ function reveal_list_subcategories(element) {
                 __RESOLVE_AND_DISPLAY_SUBSECTION(element, data);
             },
             error: function () {
-                console.log('Failed 2 Open ...');
+                // console.log('Failed 2 Open ...');
             }
         }
     );
@@ -885,7 +883,7 @@ function nav_bar_designer(item_requested, function_caller) {
             },
             error: function () {
 
-                console.log('Could trace the Main Menu Buttons File ...');
+                // console.log('Could trace the Main Menu Buttons File ...');
             }
             //END OF 'AJAX' FUNCTION
         }
@@ -951,7 +949,7 @@ function build_selected_item_content(current_list_item, curr_list) {
             },
             error: function () {
 
-                console.log('Failed 2 Open ...');
+                // console.log('Failed 2 Open ...');
             }
         }
     );
@@ -1121,7 +1119,7 @@ function slide_images(direction, button_clicked) {
 
     if (handler == "next") {
 
-        if ($(selected_item).next().attr('href')) { // console.log(' SIBILI');
+        if ($(selected_item).next().attr('href')) { // // console.log(' SIBILI');
             src = $(selected_item).next().attr('href');
             $(selected_item).next().attr('class', 'item_previewed');
             $(selected_item).removeAttr('class');
@@ -1357,7 +1355,7 @@ function __INITIALIZE_PAGE_DATA(data) {
 function _BUILD_SEARCH_LISTS(projects, tools) {
     var htmlProjects = [],
         htmlTools = [];
-    // 
+    //
     projects.forEach(function (project) {
         htmlProjects.push("<option value='" + project.name + "'>" + project.name + "</option>")
     });

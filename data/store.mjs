@@ -72,7 +72,7 @@ export const groupBySection = (section) => {
     let a = data.filter(o => o.section === section);
 
     let pack = a.map(item => [item.id, item.title]);
-    console.log("pack >>>>>>>>>>>>>>>>>", pack)
+    // console.log("pack >>>>>>>>>>>>>>>>>", pack)
     return pack;
 }
 
@@ -100,7 +100,7 @@ export const groupByDomain = (domain = 'WEB') => {
         pack.push(a);
     })
 
-    console.log(">>>>>>>>>>>>>>>>>> ", pack)
+    // console.log(">>>>>>>>>>>>>>>>>> ", pack)
 
     return pack;
 }
@@ -167,4 +167,4 @@ const SAM_WEB = {
 }
 
 
-console.log(groupBySection())
+// console.log(groupBySection())

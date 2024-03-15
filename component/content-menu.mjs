@@ -11,13 +11,13 @@ function listen() {
     $('#menu_tabs').addEventListener(
         'click',
         (event) => {
-            console.log('CKICKED CONTENT PAGE MENU ')
+            // console.log('CKICKED CONTENT PAGE MENU ')
             const target = event.target;
 
             const domain = target.id.split("_").pop().toUpperCase();
-            console.log(domain)
+            // console.log(domain)
             const entries = Store.groupByDomain(domain);
-            console.log({entries})
+            // console.log({entries})
             Content.load("mi-page-content", {tablet: entries, detail: null});
         }
     )

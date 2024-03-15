@@ -49,7 +49,7 @@ function set(...pack) {
                 param = Object.fromEntries(attrs),
                 $elem = target.pop();
 
-            // console.log({$elem, param})
+            // // console.log({$elem, param})
             $elem.animate(param, sets)
         }
     )

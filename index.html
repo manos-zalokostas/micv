@@ -21,11 +21,15 @@
 <!-- Google tag (gtag.js) -->
 <script type="module">
 
+    import swRegister from "./swRegister.mjs";
     import Route from "./component/route.mjs";
+
 
     document.addEventListener('DOMContentLoaded', async () => {
 
-        console.log('MCV2');
+         await swRegister();
+
+        console.log('MCV3');
 
         Route.init();
 
