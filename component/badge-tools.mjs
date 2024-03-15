@@ -56,6 +56,22 @@ function css() {
     /*color: white;*/
 }
 
+    #itools span a img {
+    width: 50px;
+    /*float: right;*/
+    /*display: inline;*/
+    /*font-family: verdana;*/
+    /*font-size: 1.1em;*/
+    /*text-align: right;*/
+    /*background-color: #555;*/
+    /*margin: 1px;*/
+    /*padding: 0;*/
+    /*padding: 1%;*/
+    /*border-radius: 4px;*/
+    /*text-decoration: none;*/
+    /*color: white;*/
+}
+
 #itools span a:hover {
     background-color: orange;
 }

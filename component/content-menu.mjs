@@ -47,83 +47,32 @@ function css() {
     
 #menu_tabs {
     position: absolute;
-    height: 100%;
-    width: 75%;
+    width: 100%;
+    background: orange;
 }
 
 #menu_tabs ul {
-    height: 100%;
-}
+    display: inline;
+    margin: auto;
+    background: red;
+    float: left;}
 
 #menu_tabs ul li {
-    position: relative;
-    bottom: 5%;
     float: left;
-    padding: 4px;
-    padding-top: 0;
-    font-family: Tahoma, Geneva, sans-serif;
-    height: 99%;
-    width: 20%;
 }
 
 #menu_tabs ul li a {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    text-decoration: none;
-    color: #aaa;
+    /*position: absolute;*/
+    color: white;
     font-size: 2em;
+    text-decoration: none;
     text-transform: lowercase;
     font-family: Tahoma, Geneva, sans-serif;
-    width: 100%;
-    text-align: center;
+    margin: 0 10px;
+    /*width: 100%;*/
+    /*text-align: center;*/
 }
 
-#menu_tabs #search {
-    float: left;
-    width: 30%;
-    margin: 10px 0;
-}
-
-#menu_tabs #search_radio {
-    float: left;
-    width: 40%;
-}
-
-#menu_tabs #search_radio > div {
-    float: left;
-    width: 50%;
-}
-
-#menu_tabs #search_radio label :hover {
-    cursor: pointer;
-}
-
-#menu_tabs #search_radio input {
-    float: right;
-    width: 50%;
-    margin: 4px 0 0;
-}
-
-#menu_tabs #search_radio label {
-    color: white;
-    text-transform: uppercase;
-    font-size: small;
-}
-
-
-#menu_tabs #search_result {
-    height: 100%;
-}
-
-#menu_tabs #search_result input {
-    float: right;
-    width: 50%;
-    height: 100%;
-    background: none;
-    border: none;
-    border-bottom: 1px solid #888;
-}
 
 
 #menu_tabs ul li a:hover, #menu_tabs ul li a.selected {

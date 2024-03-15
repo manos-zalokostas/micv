@@ -1,17 +1,11 @@
-import BadgeCategory from "../component/badge-category.mjs";
-import ContentMenu from "../component/content-menu.mjs";
-import TabletMenu from "../component/tablet-menu.mjs";
 import BadgeTools from "../component/badge-tools.mjs";
-import Slider from "../component/slider.mjs";
-import Extra from "../component/extra.mjs";
+// import Slider from "../component/slider.mjs";
 import Layout from "../component/layout.mjs";
-import {$, $All} from "../core/util.mjs";
-import * as Store from "../data/store.mjs";
-import Content from "./content.mjs";
+import {$} from "../core/util.mjs";
 
 function listen() {
 
-    $('#ititle strong').addEventListener(
+    $('strong').addEventListener(
         'click', (event) => {
             Layout.open('projects-content-back');
         }
@@ -24,13 +18,12 @@ function html(o) {
     return `
 
         <div id="ititle" >
-            <strong>&lt;</strong>
             <h3>
                 <span>${o?.title}</span>
             </h3>
         </div>
         
-        <div id="mi-badge-category"></div>
+<!--        <div id="mi-badge-category"></div>-->
         
         <div id="mi-badge-tools"></div>
         
@@ -38,97 +31,19 @@ function html(o) {
         
             <div id="idescription">${o?.description}</div>
         
-            <div id="mi-content-slider"></div>
+<!--            <div id="mi-content-slider"></div>-->
         
         </div>
         
         <div id="mi-content-extra"></div>
+
+        <strong class="mi-nav-back">&lt;</strong>
 
         ${css()}
     `
 
 }
 
-
-function css() {
-
-    return `
-    <style>
-            
-         #ititle {
-            float: left;
-            text-align: left;
-            color: orange;
-            font-size: 2.5em;
-            font-family: verdana;
-            width: 100%;
-            padding: 0;
-            margin: 0;
-            margin-top: 5%;
-        }
-        
-         #ititle strong {
-            float: left;
-            line-height: 1;
-            padding: 4px 14px;
-            border-radius: 30px;
-            background: #eee;
-            margin: 0 25px;
-            cursor: pointer;
-         }
-
-        #ititle h3 {
-            display: inline;
-            font-family: verdana;
-            padding: 0;
-            width: 70%;
-            float: left;
-            margin: 0;
-            margin-bottom: 1%;
-            margin-left: 2%;
-        }
-
-        #ititle hr {
-            padding-bottom: 0;
-            margin-bottom: 0;
-        }
-        
-        #mi-badge-category {
-            display: none;
-            float:left;
-        }
-
-        #mi-badge-tools {
-            float:left;
-        }
-        
-        #ibody {
-            float: left;
-            font-family: Verdana, Geneva, sans-serif;
-            font-size: 0.9em;
-            text-align: left;
-            width: 70%;
-            height: 70%;
-            overflow: hidden;
-            margin-top: 4%;
-        }
-
-        #idescription {
-            color: rgb(50, 71, 90);
-            font-family: calibri; 
-            height: 65%;
-            padding: 2%;
-        }
-
-        #idescription span {
-            padding: 0;
-            margin: 0;
-        }
-        
-</style>
-    `
-
-}
 
 
 function load(id = "mi-page-content", entry = null) {
@@ -137,11 +52,11 @@ function load(id = "mi-page-content", entry = null) {
 
     document.getElementById(id).innerHTML = html(entry);
 
-    BadgeCategory.install('mi-badge-category', entry)
+    // BadgeCategory.install('mi-badge-category', entry)
 
     BadgeTools.install('mi-badge-tools', entry)
 
-    Slider.install('mi-content-slider', entry)
+    // Slider.install('mi-content-slider', entry)
 
     // Extra.install('mi-content-extra', entry)
     listen();
@@ -153,6 +68,87 @@ function load(id = "mi-page-content", entry = null) {
 export default {
     load
 }
+
+
+
+function css() {
+
+    return `
+    <style>
+
+         .mi-nav-back {
+            position: fixed;
+            right: -13px;
+            bottom: 15px;
+            line-height: 1;
+            padding: 9px 14px;
+            border-radius: 30px;
+            background: rgba(250, 175, 0, 0.8);
+            margin: 0 25px;
+            cursor: pointer;
+            color: white;
+            font-size: x-large;
+         }
+            
+         #ititle {
+    float: left;
+    text-align: left;
+    color: orange;
+    font-size: 2.5em;
+    /* font-family: verdana; */
+    /* width: 100%; */
+    /* padding: 0; */
+    /* margin: 0; */
+        }
+        
+        #ititle h3 {
+        }
+
+        #ititle hr {
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+        
+        #mi-badge-category {
+            /*display: none;*/
+            /*float:left;*/
+        }
+
+        #mi-badge-tools {
+            /*float:left;*/
+        }
+        
+        #ibody {
+    float: left;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 0.9em;
+    text-align: left;
+    width: 60%;
+    height: 65%;
+    padding: 10px  ;
+    overflow: auto;
+    /* height: 70%; */
+    /* overflow: hidden; */
+    /* margin-top: 4%;
+        }
+
+        #idescription {
+            /*color: rgb(50, 71, 90);*/
+            /*font-family: calibri; */
+            /*height: 65%;*/
+            /*padding: 2%;*/
+        }
+
+        #idescription span {
+            /*padding: 0;*/
+            /*margin: 0;*/
+        }
+        
+</style>
+    `
+
+}
+
 
 const SAM = {
     "domain": "STUDIES",
