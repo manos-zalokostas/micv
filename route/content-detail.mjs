@@ -88,17 +88,24 @@ function css() {
             cursor: pointer;
             color: white;
             font-size: x-large;
+            /*
+            @PWA
+                > PREVENT CERTAIN AREAS (* AS BUTTONS) TO OPEN THE OS SELECT-DIALOGS
+             */
+             -webkit-user-select: none;
+             -webkit-touch-callout: none;
+             /*
+             @PWA
+                > CHECK APPLICABLE FOR ALL <BUTTON> TAGS (**OR MORE)
+              */
+             -webkit-tap-highlight-color: rgba(50, 150, 255, 0.4);
          }
             
          #ititle {
-    float: left;
-    text-align: left;
-    color: orange;
-    font-size: 2.5em;
-    /* font-family: verdana; */
-    /* width: 100%; */
-    /* padding: 0; */
-    /* margin: 0; */
+            float: left;
+            text-align: left;
+            color: orange;
+            font-size: 2.5em;
         }
         
         #ititle h3 {
@@ -110,38 +117,23 @@ function css() {
         }
         
         #mi-badge-category {
-            /*display: none;*/
-            /*float:left;*/
         }
 
         #mi-badge-tools {
-            /*float:left;*/
         }
         
         #ibody {
-    float: left;
-    font-family: Verdana, Geneva, sans-serif;
-    font-size: 0.9em;
-    text-align: left;
-    width: 60%;
-    height: 65%;
-    padding: 10px  ;
-    overflow: auto;
-    /* height: 70%; */
-    /* overflow: hidden; */
-    /* margin-top: 4%;
-        }
-
-        #idescription {
-            /*color: rgb(50, 71, 90);*/
-            /*font-family: calibri; */
-            /*height: 65%;*/
-            /*padding: 2%;*/
+            float: left;
+            font-family: Verdana, Geneva, sans-serif;
+            font-size: 0.9em;
+            text-align: left;
+            width: 60%;
+            height: 65%;
+            padding: 10px  ;
+            overflow: auto;
         }
 
         #idescription span {
-            /*padding: 0;*/
-            /*margin: 0;*/
         }
         
 </style>

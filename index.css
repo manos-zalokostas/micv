@@ -10,6 +10,47 @@ html, body {
     overflow: hidden;
 }
 
+
+body {
+
+    /**
+    @PWA
+        > CHECK THE OS TYPE AND ADD REGARDING CONTENT
+        > EXAMPLE
+            - CHECKS FOR I-OS / I-PAD-OS
+     */
+    @supports (-webkit-touch-callout: none) {
+        border: 5px solid tomato;
+
+}
+
+    /**
+    @PWA
+        > ADD CERTAIN FUNCTIONALITY TO DEVICE-TYPES, LIKE BROWSER, TABLETS etc, W/ MEDIA-QUERIES
+        > AVAILABLE ENTRIES
+            - STANDALONE
+            - BROWSER
+            - MINIMAL-UI
+            - FULLSCREEN
+     */
+    @media (display-mode: standalone) {
+        border: 5px solid orange;
+    }
+
+    /****
+    @PWA
+       > FONT THAT COVER MOST OF DEVICES FOR NATIVE-LIKE UX
+    */
+    font-family: --apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", serif;
+    /****
+
+    @PWA
+       > BLOCK 'PULL-TO-REFRESH' (** MIGHT NEED TO CHANGE THOUGH
+    */
+    overscroll-behavior-x: contain;
+}
+
+
 div {
     vertical-align: middle;
     padding: 0;
@@ -36,15 +77,12 @@ div {
 }
 
 
-
-
 #files {
     height: 15%;
     margin: 0 4%;
     margin-top: 4%;
     background-color: #EEE;
 }
-
 
 
 @media screen and (max-width: 1370px) and (min-height: 751px) {

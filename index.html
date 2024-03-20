@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Manos Portfolio</title>
+    <title>MiCV Portfolio</title>
     <meta charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="manifest" href="app.webmanifest">
+    <!--    @PWD
+                > USE 'PRELOAD' FOR SAFARI BROSERS TO HAVE AVAILABLE THE MANIFEST BEFORE INSTALLING THE APP / ICONS etc
+                -->
+    <link rel="preload" href="app.webmanifest">
+
+    <!--    @PWD
+                > BLOCK GOOGLES 'TRANSLATE' DIALOG
+                -->
+    <meta name="google" content="notranslate"/>
     <link href="index.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
@@ -27,7 +37,7 @@
 
     document.addEventListener('DOMContentLoaded', async () => {
 
-         await swRegister();
+        await swRegister();
 
         console.log('MCV3');
 
@@ -41,6 +51,20 @@
 
 </body>
 <style>
+
+    #view {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        /*
+        @PWA
+            > INHERIT THE RUNNING DEVICE DEFAULT MARGINS SO THAT CRITICAL DEVICE FEATURES NOT GET BLOCKED
+         */
+        margin: env(safe-are-inset-top) env(safe-are-inset-right) env(safe-are-inset-bottom) env(safe-are-inset-left) !important;
+    }
+
+
     #wrapper {
         position: absolute;
         top: 0;
@@ -60,12 +84,6 @@
         padding: 0;
     }
 
-    #view {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-    }
 
     #mi-page-introduction {
         position: absolute;

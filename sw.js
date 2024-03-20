@@ -1,23 +1,23 @@
 "use strict";
 
-
-const IMAGES_KEY = 'IMAGE_V1.5'
-const FILES_STATIC_KEY = 'FILE_V1.5'
+const CACHE_V=1;
+const IMAGES_KEY = 'IMAGE_V' + CACHE_V
+const FILES_STATIC_KEY = 'FILE_V1' + CACHE_V
 const FILES_STATIC = [
-    "index.html",
-    "index.css",
-    "swRegister.mjs",
-    "component/route.mjs",
-    "route/content.mjs",
-    "component/content-menu.mjs",
-    "component/tablet-menu.mjs",
-    "route/content-detail.mjs",
-    "data/store.mjs",
-    "core/util.mjs",
-    "component/layout.mjs",
-    "component/badge-tools.mjs",
-    "data/index.mjs",
-    "core/visual.mjs",
+    // "index.html",
+    // "index.css",
+    // "swRegister.mjs",
+    // "component/route.mjs",
+    // "route/content.mjs",
+    // "component/content-menu.mjs",
+    // "component/tablet-menu.mjs",
+    // "route/content-detail.mjs",
+    // "data/store.mjs",
+    // "core/util.mjs",
+    // "component/layout.mjs",
+    // "component/badge-tools.mjs",
+    // "data/index.mjs",
+    // "core/visual.mjs",
 ];
 
 const ALL_CACHE_KEYS = [
@@ -88,9 +88,14 @@ self.addEventListener("fetch", (evt) => {
         /*
         ALWAYS RETURN A FRESH COPY OF CERTAIN FILES ( i.e 'SW.JS' FILE)
          */
-        if (fileCurr === 'sw.js') return evt.respondWith(fetch(url));
+        if (['sw.js', 'app.webmanifest'].includes(fileCurr)) return evt.respondWith(fetch(url));
 
-        return evt.respondWith(SWStrategyCacheFirst(evt.request))
+
+        /*
+        @TODO:: ENABLE 'CACHE-FIRST' STRATEGO ON PUBLISH
+         */
+        // return evt.respondWith(SWStrategyCacheFirst(evt.request))
+        return evt.respondWith(SWStrategyNetworkFirst(evt.request))
 
         /*
         NETWORK-FIRST
@@ -108,6 +113,23 @@ self.addEventListener("message", (evt) => {
     console.log(" -- SW-EVENT:: --MESSAGE-CAPTURED | 2. @SW CAPTURED INIT DATA => ", evt.data)
     evt.source.postMessage({clientId: 'MOUTSOTRIGO', message: '-- 3. @SW REPLYING TO ##SG_REG:: PICATSU'})
 })
+
+
+/**
+ *
+ * @param req
+ * @returns {Promise<Response|Response>}
+ * @constructor
+ */
+const SWStrategyCacheFirst = async (req) => {
+    try {
+
+        return await caches.match(req) || SWStrategyNetworkFirst(req)
+
+    } catch (error) {
+        console.log(' -- STRATEGO::CACHE-FIRST', {error})
+    }
+}
 
 
 /**
@@ -142,21 +164,6 @@ const SWStrategyNetworkFirst = async (req) => {
 }
 
 
-/**
- *
- * @param req
- * @returns {Promise<Response|Response>}
- * @constructor
- */
-const SWStrategyCacheFirst = async (req) => {
-    try {
-
-        return await caches.match(req) || SWStrategyNetworkFirst(req)
-
-    } catch (error) {
-        console.log(' -- STRATEGO::CACHE-FIRST', {error})
-    }
-}
 
 
 /**

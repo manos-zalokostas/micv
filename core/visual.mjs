@@ -1,15 +1,17 @@
+const DURATION = 500;
+
 function opacity(elem) {
 
     if (elem) {
         elem.style.display = 'block';
         elem.style.opacity = '0';
 
-        const duration = 1000; // Set your desired duration in milliseconds
+        // const duration = 1000; // Set your desired duration in milliseconds
         const startTime = performance.now();
 
         function animate(currentTime) {
             const elapsed = currentTime - startTime;
-            const progress = elapsed / duration;
+            const progress = elapsed / DURATION;
 
             elem.style.opacity = progress < 1 ? progress : 1;
 
@@ -32,7 +34,7 @@ function set(...pack) {
 
     const sets = {
         // easing: "steps(4, end)",
-        duration: 1000,
+        duration: DURATION,
         fill: "forwards",
 
     };
