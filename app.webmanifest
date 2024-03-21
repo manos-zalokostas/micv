@@ -12,14 +12,22 @@
   "description": "Resume Projects with grouping and tagging capabilities while also fully fledged standalone descriptions",
   "icons": [
     {
-      "src": "icons/512.png",
+      "src": "/icons/512.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "512x512",
+      "purpose": "any"
     },
     {
-      "src": "icons/192.png",
+      "src": "/icons/192.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/192-maskable.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "maskable"
     }
   ],
   "categories": [
@@ -34,25 +42,25 @@
   ],
   "screenshots": [
     {
-      "src": "icons/512.png",
+      "src": "/icons/512.png",
       "type": "image/png",
       "sizes": "512x512",
-      "purpose": "badge"
+      "purpose": "monochrome"
     },
     {
-      "src": "icons/192-badge.png",
+      "src": "/icons/192-badge.png",
       "type": "image/png",
       "sizes": "192x192",
-      "purpose": "badge"
+      "purpose": "monochrome"
     },
     {
-      "src": "icons/192-maskable.png",
+      "src": "/icons/192-maskable.png",
       "type": "image/png",
       "sizes": "192x192",
       "purpose": "maskable"
     },
     {
-      "src": "icons/192.png",
+      "src": "/icons/192.png",
       "type": "image/png",
       "sizes": "192x192",
       "purpose": "any"

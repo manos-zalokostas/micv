@@ -1,24 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>MiCV Portfolio</title>
+    <title>MiCV</title>
     <meta charset=utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="manifest" href="app.webmanifest">
+    <!--    @PWD
+                > MAKE USE OF 100% AVAILABLE AREA + COVER THE 'NOTCH' OF THE DEVICES
+                -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+    <!--    @PWD
+                > OVERRIDES THE "WEB-MANIFEST" @THEME-COLOR ATTRIBUTE ('**WEB-MANIF IS A FALLBACK)
+                -->
+    <meta name="theme-color" content="#000000"/>
+    <link rel="manifest" href="app.webmanifest" crossorigin="use-credentials"/>
     <!--    @PWD
                 > USE 'PRELOAD' FOR SAFARI BROSERS TO HAVE AVAILABLE THE MANIFEST BEFORE INSTALLING THE APP / ICONS etc
                 -->
-    <link rel="preload" href="app.webmanifest">
-
+    <link rel="preload" href="app.webmanifest" crossorigin="use-credentials">
     <!--    @PWD
                 > BLOCK GOOGLES 'TRANSLATE' DIALOG
                 -->
     <meta name="google" content="notranslate"/>
     <link href="index.css" type="text/css" rel="stylesheet"/>
+    <!--    @PWD
+                > WEB-COMPONENT AVAILABLE TO INSTALL THE PWA W/ A BUTTON
+                -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall"></script>
 </head>
 <body>
 
 <div id="view">
+
+    <pwa-install></pwa-install>
 
     <div id="wrapper">
 
@@ -51,6 +63,22 @@
 
 </body>
 <style>
+    /*
+    @PWA
+        > INHERIT THE RUNNING DEVICE DEFAULT MARGINS SO THAT CRITICAL DEVICE FEATURES NOT GET BLOCKED
+     */
+    @media (prefers-color-scheme: dark) {
+        #view {
+            /*
+            @PWA
+                > RESET THE COLORS W/ NEW VALUES WHEN THE DEVICES SELECTED IN 'DARK-MODE'
+                > ** THIS SHOULD PROBABLY MOVE TO THE BOTTOM OF THE 'STYLES' **
+             */
+
+        }
+
+
+    }
 
     #view {
         position: absolute;

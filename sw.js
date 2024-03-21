@@ -1,6 +1,6 @@
 "use strict";
 
-const CACHE_V=1;
+const CACHE_V = 1.1;
 const IMAGES_KEY = 'IMAGE_V' + CACHE_V
 const FILES_STATIC_KEY = 'FILE_V1' + CACHE_V
 const FILES_STATIC = [
@@ -164,8 +164,6 @@ const SWStrategyNetworkFirst = async (req) => {
 }
 
 
-
-
 /**
  *
  * @param req
@@ -176,11 +174,12 @@ const resolveCacheKey = (req) => {
 
         const url = new URL(req.url);
         const PATH = {
-            IMG: '/images/'
+            IMG: '/images/',
+            ICON: '/icons/'
         }
 
         console.log(" --" + url.pathname)
-        if (url.pathname.startsWith(PATH.IMG)) return IMAGES_KEY;
+        if (url.pathname.startsWith(PATH.IMG) || url.pathname.startsWith(PATH.ICON)) return IMAGES_KEY;
 
         return FILES_STATIC_KEY;
     } catch (error) {
