@@ -1,6 +1,6 @@
-import {strJoin} from "/utils/ally.js";
+import {strJoin} from "/micv/utils/ally.js";
 
-const BUTTONS = ['introduction', 'resume', 'timeline', 'document'];
+const BUTTONS = ['introduction', 'resume', 'timeline'];
 
 
 class WCIntroductionNavigation extends HTMLElement {

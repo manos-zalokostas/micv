@@ -1,4 +1,4 @@
-import {itemById} from "../../service/DataStore.js";
+import {itemById} from "/micv/service/DataStore.js";
 
 class WCDescriptionText extends HTMLElement {
 

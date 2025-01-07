@@ -1,4 +1,4 @@
-import {strJoin} from "/utils/ally.js";
+import {strJoin} from "/micv/utils/ally.js";
 
 
 export default class WCProjectViewItemlist extends HTMLElement {

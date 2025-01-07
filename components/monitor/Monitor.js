@@ -1,6 +1,6 @@
-import VieProject from "./MonitorViewProject.js";
-import ViewQuote from "./MonitorViewQuote.js";
-import ViewTools from "./MonitorViewTools.js";
+import VieProject from "/micv/components/monitor/MonitorViewProject.js";
+import ViewQuote from "/micv/components/monitor/MonitorViewQuote.js";
+import ViewTools from "/micv/components/monitor/MonitorViewTools.js";
 
 
 const filters = ['project', 'quote', 'tools'];

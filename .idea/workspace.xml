@@ -5,23 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c2027ac-7fbf-48f5-b8a4-e62f9701cdf7" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_dev/wc-examples/WCDescriptionSlideshow.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/description/DescriptionSlideshow.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/description/DescriptionSlideshow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/global/GlobalSearch.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/global/GlobalSearch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/global/GlobalWrapper.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/global/GlobalWrapper.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/introduction/IntroductionNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/introduction/IntroductionNavigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/monitor/Monitor.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/monitor/Monitor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/monitor/MonitorViewProject.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/monitor/MonitorViewProject.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/monitor/MonitorViewQuote.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/monitor/MonitorViewQuote.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/monitor/MonitorViewTools.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/monitor/MonitorViewTools.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/project/ProjectNavigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/project/ProjectNavigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/project/ProjectViewItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/project/ProjectViewItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/project/ProjectViewItemlist.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/project/ProjectViewItemlist.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/reference/ReferenceGroup.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/reference/Reference.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/DataStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/service/DataStore.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wc-introduction.html" beforeDir="false" afterPath="$PROJECT_DIR$/wc-introduction.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_dev/tmp.json" beforeDir="false" afterPath="$PROJECT_DIR$/index.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +49,12 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "manos-zalokostas"
+  }
+}]]></component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
       <filtered-out-file-type name="LOCAL_BRANCH" />
@@ -92,29 +83,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
-    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
-    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
-    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
-    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="HTML" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/_dev" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="$USER_HOME$/.nvm/versions/node/v6.9.4/bin/node" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.JSONPath" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "git-widget-placeholder": "COMPONENTS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/_dev" />
@@ -124,8 +101,8 @@
       <recent name="$PROJECT_DIR$/pages" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/_dev/web-components" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/_dev/web-components" />
       <recent name="$PROJECT_DIR$/components/introduction" />
       <recent name="$PROJECT_DIR$/components/reference" />
       <recent name="$PROJECT_DIR$/components/global" />
@@ -142,6 +119,14 @@
         </serviceView>
       </list>
     </option>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-PS-243.21565.202" />
+        <option value="bundled-php-predefined-a98d8de5180a-5fbe0c30323e-com.jetbrains.php.sharedIndexes-PS-243.21565.202" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -413,15 +398,6 @@
     </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
     <option name="RECENT_FILTERS">
       <map>
         <entry key="Branch">
@@ -442,7 +418,15 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
@@ -469,6 +453,7 @@
     <MESSAGE value="#MULTI UPDATE&#10;*********************&#10; - CONVERTS JS MODULES TO 'WEB-COMPONENTS' CLASSES W/ 'SHADOW DOM' ( ** PARTIAL ) &#10; - USE 'TEMPLATE' ELEMENTS TO REPRESENT APP PAGES AND DEPRECATE THE 'LAYOUT' BASE CLASS&#10; - RESTRUCTURE PATHS AND DIRECTORIES FOR CLARITY + MAINTAINABILITY&#10;++ CLEANUPS" />
     <MESSAGE value="#WC-PAGES | INTRODUCTION / PROJECT&#10;********************************************&#10; - INTEGRATE PAGES W/ NESTED WEB-COMPONENTS" />
     <MESSAGE value="#WC-PAGES | DESCRIPTION PAGE&#10;****************************************&#10; - INTEGRATE PAGE" />
-    <option name="LAST_COMMIT_MESSAGE" value="#WC-PAGES | DESCRIPTION PAGE&#10;****************************************&#10; - INTEGRATE PAGE" />
+    <MESSAGE value="#JQOUT | STRIP OFF JQUERY #8&#10;==============================&#10; - TABLETS RESTRUCTURE #1" />
+    <option name="LAST_COMMIT_MESSAGE" value="#JQOUT | STRIP OFF JQUERY #8&#10;==============================&#10; - TABLETS RESTRUCTURE #1" />
   </component>
 </project>

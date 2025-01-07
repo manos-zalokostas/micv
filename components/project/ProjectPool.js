@@ -1,8 +1,8 @@
 import Projects from "./Project.js";
 import ProjectGroup from "./ProjectGroup.js";
-import {dq, strJoin} from "/utils/ally.js";
+import {dq, strJoin} from "/micv/utils/ally.js";
 import {loadRepetitive} from "/layout/main.js";
-import {groupByDomain, groupBySection, groupByTool} from "/service/DataStore.js";
+import {groupByDomain, groupBySection, groupByTool} from "/micv/service/DataStore.js";
 
 const CSSID = '#projects-syndication';
 

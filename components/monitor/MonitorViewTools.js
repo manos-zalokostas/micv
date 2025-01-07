@@ -1,4 +1,4 @@
-import * as aux from "/utils/ally.js";
+import * as aux from "/micv/utils/ally.js";
 
 const CSSID = 'content-tools';
 let dataclone = [];
@@ -97,7 +97,7 @@ const attachListeners = () => {
  */
 const makeData = () => {
 
-    let o = JSON.parse(sessionStorage.MIDATA)
+    let o = JSON.parse(sessionStorage.raw)
     let items = o.items.item;
     // let tools = items.filter(o => o.domain === domain);
     let tools = items.map(o => o.tools.tool);

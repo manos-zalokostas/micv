@@ -96,4 +96,4 @@ div#resume-contents .resume {
 `;
 
 
-run();
+// run();

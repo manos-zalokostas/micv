@@ -1,9 +1,5 @@
-import {groupByDomain} from "../../service/DataStore.js";
-import {groupBySection} from "../../service/DataStore.js";
-import {groupByTool} from "../../service/DataStore.js";
-
-import ProjectViewItem from "./ProjectViewItem.js";
-import ProjectViewItemlist from "./ProjectViewItemlist.js";
+import ProjectViewItemlist from "/micv/components/project/ProjectViewItemlist.js";
+import {groupByDomain} from "/micv/service/DataStore.js";
 
 
 let CATEGORY = 'domain';

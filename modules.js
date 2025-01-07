@@ -1,19 +1,21 @@
 import '/pages/projects.js'
 import '/pages/introduction.js'
 
-import "./components/IntroductionIntro.js";
-import "./components/IntroductionWelcome.js";
-import "./components/IntroductionAbout.js";
+import "./components/introduction/IntroductionIntro.js";
+import "./components/introduction/IntroductionWelcome.js";
+import "./components/introduction/IntroductionAbout.js";
 
 
-import "./components/IntroductionResume.js";
-import "./components/IntroductionTimeline.js";
+import "./components/introduction/IntroductionResume.js";
+import "./components/introduction/IntroductionTimeline.js";
 
 
-import "./components/GlobalSearch.js";
-import "./components/GlobalNavigation.js";
-import "./components/AboutNavigationMain.js";
-import "./components/Monitor.js";
+import "./components/global/GlobalSearch.js";
+import "./components/global/GlobalNavigation.js";
+
+// import "./components/AboutNavigationMain.js";
+// import "./components/global/GlobalNavigation"
+import "./components/monitor/Monitor.js";
 
 
 // import ProjectsNavigation from "./components/ProjectsNavigation.js";

@@ -3,71 +3,144 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Manos Portfolio</title>
-    <link type="text/css" rel="stylesheet" href="layout/main.css"/>
 </head>
+<script type="module">
+    import {load} from "./service/DataStore.js";
+    load();
+
+    import "/components/global/GlobalWrapper.js"
+    import "/components/global/GlobalNavigation.js"
+    import "/components/global/GlobalSearch.js"
+</script>
 <body style="background: #888">
 
-<div id="view">
 
-    <div id="wrapper">
+<wc-global-wrapper>
 
-        <div id="global-navigation"></div>
+    <div slot="global-search" class="global-search">
+        <wc-global-search></wc-global-search>
+    </div>
+    <div slot="global-navigation" class="global-navigation">
+        <wc-global-navigation></wc-global-navigation>
+    </div>
 
-        <div id="global-search"></div>
+</wc-global-wrapper>
 
-        <div id="page-introduction"></div>
 
-        <div id="page-projects" style="display:none"></div>
+<template id="introduction-tmpl">
 
-<!--        <div id="page-footer" style="display:none"></div>-->
+    <div class="introduction-navigation">
+        <wc-introduction-navigation></wc-introduction-navigation>
+    </div>
+
+    <div class="introduction-monitor">
+        <!--        <wc-monitor></wc-monitor>-->
+    </div>
+
+    <div class="introduction-topic">
+
+        <div class="introduction-introduction">
+            <wc-introduction-intro></wc-introduction-intro>
+        </div>
+
+        <div class="introduction-timeline" style="display:none">
+            <wc-introduction-timeline></wc-introduction-timeline>
+        </div>
+
+        <div class="introduction-resume" style="display:none">
+            <wc-introduction-resume></wc-introduction-resume>
+        </div>
 
     </div>
 
-</div>
+    <script type="module">
+        import "/components/introduction/IntroductionNavigation.js"
+        import "/components/introduction/IntroductionResume.js"
+        import "/components/introduction/IntroductionTimeline.js"
+        import "/components/introduction/IntroductionWelcome.js"
+        import "/components/introduction/IntroductionIntro.js"
+        import "/components/monitor/Monitor.js"
+    </script>
 
-<script type="module" src="./modules.js"></script>
-<script>
+    <style>
+    </style>
+</template>
 
-    fetch('http://localhost:4000/items')
-        .then(response => response.json())
-        .then(data => {
-            sessionStorage.MIDATA = JSON.stringify(data[0].data)
-            let script = document.createElement('script');
-            script.type = 'module';
-            script.src = './modules.js';
-            document.head.appendChild(script);
-        })
-    ;
 
-</script>
+<template id="projectlist-tmpl">
+
+    <article>
+
+        <div id="projects-navigation">
+            <wc-project-navigation></wc-project-navigation>
+        </div>
+
+        <div id="projects-topic">
+            <wc-project-map category="domain" filter="web"></wc-project-map>
+        </div>
+
+    </article>
+    <script type="module">
+        import "/components/project/ProjectNavigation.js"
+        import "/components/project/ProjectMap.js"
+    </script>
+    <style>
+    </style>
+</template>
+
+
+<template id="description-tmpl">
+    <article>
+
+        <div id="description-wrapper">
+
+            <div id=description-header">
+                <wc-description-header></wc-description-header>
+            </div>
+
+            <div id="description-text">
+                <wc-description-text></wc-description-text>
+            </div>
+
+            <div id="description-media">
+                <wc-description-media></wc-description-media>
+            </div>
+
+            <div id="description-extra">
+                <wc-description-extra></wc-description-extra>
+            </div>
+
+            <div id="description-slideshow">
+                <wc-description-slideshow></wc-description-slideshow>
+            </div>
+
+        </div>
+    </article>
+    <script type="module">
+        import "/components/description/DescriptionHeader.js"
+        import "/components/description/DescriptionText.js"
+        import "/components/description/DescriptionMedia.js"
+        import "/components/description/DescriptionExtra.js"
+        import "/components/description/DescriptionSlideshow.js"
+    </script>
+    <style>
+    </style>
+</template>
+
+
+<template id="reference-tmpl">
+
+    <div id="reference-wrapper">
+        <wc-reference></wc-reference>
+    </div>
+
+    <script type="module">
+        import "/components/reference/Reference.js"
+    </script>
+    <style>
+    </style>
+</template>
+
+
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

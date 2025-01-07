@@ -1,12 +1,11 @@
-import {strJoin} from "/utils/ally.js";
-import {groupTools, groupProjects} from "/service/DataStore.js";
+import {strJoin} from "/micv/utils/ally.js";
+import {groupTools, groupProjects} from "/micv/service/DataStore.js";
 
 
 class WCGlobalSearch extends HTMLElement {
 
     shadow = '';
     hasMount = false;
-
 
     constructor() {
         super();
@@ -65,11 +64,11 @@ class WCGlobalSearch extends HTMLElement {
                 <input name="search-input" list="project-list">
 
                 <datalist id="project-list">
-                    ${strJoin(DATA.projects.map(a => `<option value="${a[0]}">${a[1]}</option>`))}
+                    ${strJoin(groupProjects().map(a => `<option value="${a[0]}">${a[1]}</option>`))}
                 </datalist>
 
                 <datalist id="tool-list">
-                    ${strJoin(DATA.tools.map(name => `<option value="${name}">${name}</option>`))}
+                    ${strJoin(groupTools().map(name => `<option value="${name}">${name}</option>`))}
                 </datalist>
 
             </div>
@@ -79,15 +78,6 @@ class WCGlobalSearch extends HTMLElement {
 
 
     }
-}
-
-
-/*
-
- */
-const DATA = {
-    projects: groupProjects(),
-    tools: groupTools()
 }
 
 

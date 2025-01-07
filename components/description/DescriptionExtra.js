@@ -1,4 +1,4 @@
-import {itemById} from "../../service/DataStore.js";
+import {itemById} from "/micv/service/DataStore.js";
 
 class WCDescriptionExtra extends HTMLElement {
 
@@ -76,7 +76,7 @@ class WCDescriptionExtra extends HTMLElement {
  * @returns {{files: (*|[*]), links: (*|[*]), quotes: [{score: *, text: *, tutor: *}]}}
  */
 const makeData = (item) => {
-debugger
+
     let files = [],
         links = [];
 

@@ -64,7 +64,7 @@ const attachListeners = () => {
 const makeData = () => {
 
     let domain = 'WEB',
-        o = JSON.parse(sessionStorage.MIDATA),
+        o = JSON.parse(sessionStorage.raw),
         items = o.items.item,
         domains = items.filter(o => o.domain === domain);
 
