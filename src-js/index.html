@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Manos Portfolio</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="index.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+
+<div id="view">
+
+    <div id="wrapper">
+
+        <div id="mi-global-menu"></div>
+
+        <div id="mi-page-introduction"></div>
+
+        <div id="mi-page-content"></div>
+
+        <div id="mi-page-reference"></div>
+
+    </div>
+
+</div>
+
+<!-- Google tag (gtag.js) -->
+<script type="module">
+
+    import GlobalMenu from "/component/global/global-menu.mjs";
+    import Route from "/core/route.mjs";
+
+    document.addEventListener('DOMContentLoaded', async () => {
+
+        console.log('MCV2');
+
+        GlobalMenu.install('mi-global-menu')
+
+        Route.init();
+        // await Service.init();
+
+        // Introduction.load('mi-page-introduction')
+
+        // Interaction.attach()
+
+        // Monitor.intro()
+
+
+    });
+
+
+</script>
+
+</body>
+<style>
+    #wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        float: left;
+        z-index: 1;
+        text-align: center;
+        font-size: 1em;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+    }
+
+    #wrapper ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    #view {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    #mi-page-introduction {
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    #mi-page-content {
+        position: absolute;
+        top:100%;
+        left:0;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    #mi-page-reference {
+        position: absolute;
+        top:200%;
+        left:0;
+        width: 100vw;
+        height: 100vh;
+    }
+</style>
+
+</html>
