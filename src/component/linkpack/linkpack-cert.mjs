@@ -1,6 +1,6 @@
 import Storage from "/core/storage.mjs";
 import Layout from "/core/layout.mjs";
-import Slider from "/core/slider.mjs";
+import Slider from "./slider.mjs";
 
 function html(){
     return `

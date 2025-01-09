@@ -1,67 +1,53 @@
+import { LitElement, html, css } from 'lit';
 
-let data;
-
-
-function html(o) {
-    return `
-        <p id="icategory">Category:
-        <a href="#" class="cat_key" data-key=${o.category}>
-            <span>${o.category}</span>
-        </p>
-        ${css()}
-    `
-}
-
-function css() {
-    return `
-    <style>
-    #icategory {
-    float: left;
-    text-align: left;
-    font-size: 0.8em;
-    font-family: verdana;
-    padding: 0;
-    width: 60%;
-}
-
-#icategory .cat_key {
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    padding: 5px;
-    background-color: #555;
-}
-</style>
-    `
-}
-
-
-function listen() {
-
-    document.addEventListener(
-        'click', (event) => {
-            const target = event.target;
-
-            if (target.tagName === 'A' && target.classList.contains('cat_key')) {
-                TabletMenu.refresh(target.innerHTML, 'category');
-                document.getElementById('context').style.left = '0';
-                event.preventDefault();
-            }
-
+export class BadgeCategory extends LitElement {
+    static styles = css`
+        #icategory {
+            float: left;
+            text-align: left;
+            font-size: 0.8em;
+            font-family: verdana;
+            padding: 0;
+            width: 60%;
         }
-    )
+
+        #icategory .cat_key {
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            padding: 5px;
+            background-color: #555;
+        }
+    `;
+
+    static properties = {
+        category: { type: String }
+    };
+
+    constructor() {
+        super();
+        this.category = '';
+    }
+
+    render() {
+        return html`
+            <p id="icategory">Category:
+                <a href="#" class="cat_key" @click="${this._handleClick}">
+                    <span>${this.category}</span>
+                </a>
+            </p>
+        `;
+    }
+
+    _handleClick(event) {
+        event.preventDefault();
+        if (window.TabletMenu?.refresh) {
+            window.TabletMenu.refresh(this.category, 'category');
+            document.getElementById('context').style.left = '0';
+        } else {
+            console.warn('TabletMenu not available.');
+        }
+    }
 }
 
-
-function install(id, data) {
-
-    if(!data) return;
-    document.getElementById(id).innerHTML = html(data);
-    listen();
-}
-
-
-export default {
-    install,
-    html,
-}
+customElements.define('badge-category', BadgeCategory);
