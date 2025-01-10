@@ -13,6 +13,9 @@
     "lit": "^3.2.1"
   },
   "devDependencies": {
-    "vite": "^6.0.7"
+    "sass": "^1.83.1",
+    "sass-embedded": "^1.83.1",
+    "vite": "^6.0.7",
+    "vite-plugin-string": "^1.2.3"
   }
 }
