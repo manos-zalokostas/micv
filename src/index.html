@@ -5,102 +5,66 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link href="index.css" type="text/css" rel="stylesheet"/>
 </head>
-<body>
+<body style="background: lightgray">
 
-<div id="view">
-
-    <div id="wrapper">
-
-        <div id="mi-global-menu"></div>
-
-        <div id="mi-page-introduction"></div>
-
-        <div id="mi-page-content"></div>
-
-        <div id="mi-page-reference"></div>
-
-    </div>
-
-</div>
-
-<!-- Google tag (gtag.js) -->
 <script type="module">
-
-    import GlobalMenu from "/component/global/global-menu.mjs";
-    import Route from "/core/route.mjs";
-
-    document.addEventListener('DOMContentLoaded', async () => {
-
-        console.log('MCV2');
-
-        GlobalMenu.install('mi-global-menu')
-
-        Route.init();
-        // await Service.init();
-
-        // Introduction.load('mi-page-introduction')
-
-        // Interaction.attach()
-
-        // Monitor.intro()
-
-
-    });
-
+    // import "./badge-category";
+    // import "./badge-tool";
+    // import "./content-menu";
+    // import "./extra";
+    // import "./global-menu";
+    // import "./global-search";
+    // import "./intro-menu";
+    // import "./linkpack-cert";
+    // import "./linkpack-social";
+    // import "./linkpack-study";
+    // import "./linkpack-work";
+    // import "./monitor";
+    // import "./monitor-view-intro";
+    import "./monitor-view-project";
+    import "./monitor-view-reference";
+    import "./monitor-view-tool";
+    // import "./quote-author";
+    // import "./quote-intro";
+    // import "./quote-siteinfo";
+    // import "./quote-welcome";
+    // import "./tablet-badge-category";
+    // import "./tablet-badge-menu";
+    // import "./tablet-badge-tool";
+    // import "./timeline";
+    // import "./timeline-interactive"
 
 </script>
 
+
+<!--<badge-category></badge-category>-->
+<!--<badge-tool></badge-tool>-->
+<!--<content-menu></content-menu>-->
+<!--<extra></extra>-->
+<!--<global-menu></global-menu>-->
+<!--<global-search></global-search>-->
+<!--<intro-menu></intro-menu>-->
+<!--<linkpack-cert></linkpack-cert>-->
+<!--<linkpack-social></linkpack-social>-->
+<!--<linkpack-study></linkpack-study>-->
+<!--<linkpack-work></linkpack-work>-->
+<!--<monitor></monitor>-->
+<!--<monitor-view-intro></monitor-view-intro>-->
+<monitor-view-project></monitor-view-project>
+<hr />
+<monitor-view-reference></monitor-view-reference>
+<hr />
+<monitor-view-tool></monitor-view-tool>
+<hr />
+<!--<quote-author></quote-author>-->
+<!--<quote-intro></quote-intro>-->
+<!--<quote-siteinfo></quote-siteinfo>-->
+<!--<quote-welcome></quote-welcome>-->
+<!--<tablet-badge-category></tablet-badge-category>-->
+<!--<tablet-badge-menu></tablet-badge-menu>-->
+<!--<tablet-badge-tool></tablet-badge-tool>-->
+<!--<timeline></timeline>-->
+<!--<timeline-interactive></timeline-interactive>-->
+
 </body>
-<style>
-    #wrapper {
-        position: absolute;
-        top: 0;
-        left: 0;
-        float: left;
-        z-index: 1;
-        text-align: center;
-        font-size: 1em;
-        width: 100%;
-        height: 100%;
-        background-color: white;
-    }
-
-    #wrapper ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-    }
-
-    #view {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-    }
-
-    #mi-page-introduction {
-        position: absolute;
-        top:0;
-        left:0;
-        width: 100vw;
-        height: 100vh;
-    }
-
-    #mi-page-content {
-        position: absolute;
-        top:100%;
-        left:0;
-        width: 100vw;
-        height: 100vh;
-    }
-
-    #mi-page-reference {
-        position: absolute;
-        top:200%;
-        left:0;
-        width: 100vw;
-        height: 100vh;
-    }
-</style>
-
 </html>
