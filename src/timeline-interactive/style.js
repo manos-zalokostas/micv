@@ -117,106 +117,135 @@ export default () => css`
         left: 15%;
     }
 
-    #interactive_cv_field #timeline li {
-        position: relative;
-        margin: 0 2%;
-        float: left;
-        background-color: #ccc;
-        width: 1px;
-        font-family: arial;
-        /*border-radius: 20px;*/
+    //
+    //#interactive_cv_field #timeline li {
+    //    position: relative;
+    //    margin: 0 2%;
+    //    float: left;
+    //    background-color: #ccc;
+    //    width: 1px;
+    //    font-family: arial;
+    //    /*border-radius: 20px;*/
+    //}
+    //
+    //#interactive_cv_field #timeline li p {
+    //    visibility: hidden;
+    //    height: 1px;
+    //}
+    //
+    //#interactive_cv_field #timeline li.default {
+    //    color: #bbb;
+    //    font-size: inherit;
+    //    text-decoration: none;
+    //    position: relative;
+    //    bottom: 0;
+    //    left: -6px;
+    //    float: left;
+    //}
+    //
+    //#interactive_cv_field #timeline li.job_start {
+    //    color: #ca8;
+    //    font-size: 1.5em;
+    //    bottom: 20px;
+    //    background-color: #ca8;
+    //}
+    //
+    //#interactive_cv_field #timeline li.job_end {
+    //    color: darkkhaki;
+    //    margin-left: 19px;
+    //    font-size: 0.8em;
+    //}
+    //
+    //#interactive_cv_field #timeline li.std_start {
+    //    color: teal;
+    //    font-size: 1.5em;
+    //    position: relative;
+    //    margin-left: 22px;
+    //    bottom: 20px;
+    //    background-color: teal;
+    //}
+    //
+    //#interactive_cv_field #timeline li.std_start a {
+    //    left: -16px;
+    //    bottom: 20px;
+    //}
+    //
+    //#interactive_cv_field #timeline li.job_start a {
+    //    left: -15px;
+    //    bottom: 21px;
+    //    padding-bottom: 42px;
+    //}
+    //
+    //#interactive_cv_field #timeline li.std_end {
+    //    color: teal;
+    //    font-size: 0.8em;
+    //}
+    //
+    //#interactive_cv_field #timeline li.job_start_off,  #interactive_cv_field #timeline li.job_end_off,  #interactive_cv_field #timeline li.std_start_off,  #interactive_cv_field #timeline li.std_end_off {
+    //    color: #aaa;
+    //    font-size: 0.8em;
+    //}
+    //
+    //#interactive_cv_field #timeline li a {
+    //    color: inherit;
+    //    font-size: inherit;
+    //    text-decoration: none;
+    //    position: relative;
+    //    bottom: 10px;
+    //    left: -8px;
+    //    float: left;
+    //}
+    //
+    //#interactive_cv_field #timeline li a.default {
+    //    color: #888;
+    //    font-size: 0.8em;
+    //    text-decoration: none;
+    //    position: relative;
+    //    bottom: 10px;
+    //    left: -8px;
+    //    float: left;
+    //}
+    //
+    //#interactive_cv_field #timeline li a:hover {
+    //    font-size: 1.5em;
+    //    bottom: 1.5em;
+    //    padding: 0 0.5em;
+    //    padding-bottom: 2em;
+    //    left: -1.5em;
+    //}
+    //
+    //#interactive_cv_field #timeline li a.selected {
+    //    font-size: 1.5em;
+    //    bottom: 1.5em;
+    //    left: -1em;
+    //    font-weight: bold;
+    //}
+
+    #timeline {
+        section {
+            display: flex;
+            justify-content: space-evenly;
+            padding: 10px;
+
+            span {
+                display: block;
+                width: 100px;   
+                position: relative;
+
+                small {
+                    position: absolute;
+                    display: none;
+                }
+
+                &:hover {
+                    small {
+                        display: block;
+                    }
+                }
+
+            }
+
+        }
     }
 
-    #interactive_cv_field #timeline li p {
-        visibility: hidden;
-        height: 1px;
-    }
-
-    #interactive_cv_field #timeline li.default {
-        color: #bbb;
-        font-size: inherit;
-        text-decoration: none;
-        position: relative;
-        bottom: 0;
-        left: -6px;
-        float: left;
-    }
-
-    #interactive_cv_field #timeline li.job_start {
-        color: #ca8;
-        font-size: 1.5em;
-        bottom: 20px;
-        background-color: #ca8;
-    }
-
-    #interactive_cv_field #timeline li.job_end {
-        color: darkkhaki;
-        margin-left: 19px;
-        font-size: 0.8em;
-    }
-
-    #interactive_cv_field #timeline li.std_start {
-        color: teal;
-        font-size: 1.5em;
-        position: relative;
-        margin-left: 22px;
-        bottom: 20px;
-        background-color: teal;
-    }
-
-    #interactive_cv_field #timeline li.std_start a {
-        left: -16px;
-        bottom: 20px;
-    }
-
-    #interactive_cv_field #timeline li.job_start a {
-        left: -15px;
-        bottom: 21px;
-        padding-bottom: 42px;
-    }
-
-    #interactive_cv_field #timeline li.std_end {
-        color: teal;
-        font-size: 0.8em;
-    }
-
-    #interactive_cv_field #timeline li.job_start_off,  #interactive_cv_field #timeline li.job_end_off,  #interactive_cv_field #timeline li.std_start_off,  #interactive_cv_field #timeline li.std_end_off {
-        color: #aaa;
-        font-size: 0.8em;
-    }
-
-    #interactive_cv_field #timeline li a {
-        color: inherit;
-        font-size: inherit;
-        text-decoration: none;
-        position: relative;
-        bottom: 10px;
-        left: -8px;
-        float: left;
-    }
-
-    #interactive_cv_field #timeline li a.default {
-        color: #888;
-        font-size: 0.8em;
-        text-decoration: none;
-        position: relative;
-        bottom: 10px;
-        left: -8px;
-        float: left;
-    }
-
-    #interactive_cv_field #timeline li a:hover {
-        font-size: 1.5em;
-        bottom: 1.5em;
-        padding: 0 0.5em;
-        padding-bottom: 2em;
-        left: -1.5em;
-    }
-
-    #interactive_cv_field #timeline li a.selected {
-        font-size: 1.5em;
-        bottom: 1.5em;
-        left: -1em;
-        font-weight: bold;
-    }
 `

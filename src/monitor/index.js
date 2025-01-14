@@ -6,7 +6,7 @@ import _style from "./style";
 /**
  *
  */
-class GlobalMenu extends LitElement {
+class JoiMonitor extends LitElement {
 
 
     static properties = {
@@ -128,17 +128,17 @@ class GlobalMenu extends LitElement {
 
     listen() {
         this.shadowRoot.querySelector('#skills_preview').addEventListener('click', (event) => {
-            const $elem = event.target;
-
-            if ($elem.title === 'project') return MonitorViewProject.install();
-
-            if ($elem.title === 'reference') return MonitorViewReference.install();
-
-            if ($elem.title === 'tool') return MonitorViewTool.install();
-
-            if ($elem.title === 'next') return MonitorViewProject.update(this.next());
-
-            if ($elem.title === 'prev') return MonitorViewProject.update(this.prev());
+            // const $elem = event.target;
+            //
+            // if ($elem.title === 'project') return MonitorViewProject.install();
+            //
+            // if ($elem.title === 'reference') return MonitorViewReference.install();
+            //
+            // if ($elem.title === 'tool') return MonitorViewTool.install();
+            //
+            // if ($elem.title === 'next') return MonitorViewProject.update(this.next());
+            //
+            // if ($elem.title === 'prev') return MonitorViewProject.update(this.prev());
         });
     }
 
@@ -146,4 +146,4 @@ class GlobalMenu extends LitElement {
     render = () => _html(this)
 }
 
-customElements.define('global-menu', GlobalMenu);
+customElements.define('joi-monitor', JoiMonitor);

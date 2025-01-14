@@ -6,7 +6,7 @@ import _style from "./style";
 /**
  *
  */
-class GlobalMenu extends LitElement {
+class TimelineInteractive extends LitElement {
 
     static properties = {
         active: {type: Number}
@@ -100,4 +100,4 @@ class GlobalMenu extends LitElement {
     render = () => _html(this)
 }
 
-customElements.define('global-menu', GlobalMenu);
+customElements.define('timeline-interactive', TimelineInteractive);

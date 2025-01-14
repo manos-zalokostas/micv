@@ -6,7 +6,7 @@ import _style from "./style";
 /**
  *
  */
-class GlobalMenu extends LitElement {
+class QuoteIntro extends LitElement {
 
     static properties = {
         active: {type: Number}
@@ -27,4 +27,4 @@ class GlobalMenu extends LitElement {
     render = () => _html(this)
 }
 
-customElements.define('global-menu', GlobalMenu);
+customElements.define('quote-intro', QuoteIntro);
