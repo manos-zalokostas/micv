@@ -1,22 +1,31 @@
 import {html} from 'lit';
 import "/src/component/content-menu";
+import "/src/component/content-tablet";
 
-const assets = [
-];
+const assets = [];
+
 
 
 export default (elem) => html`
-    <div id="mi-page-content-menu">
-        <content-menu></content-menu>
-    </div>
+    
+    <section id="mi-page-content-wrap"
+             @domain-change=${elem.evtDomainChange}>
 
-    <div id="mi-content-wrapper">
+        <div id="mi-page-content-menu">
+            <content-menu></content-menu>
+        </div>
 
-        <div id="mi-content-control" > TABLET</div>
+        <div id="mi-content-wrapper">
 
-        <div id="mi-content-detail"> DETAIL </div>
+            <div id="mi-content-control">
+                <content-tablet></content-tablet>
+            </div>
 
-    </div>
+            <div id="mi-content-detail"> DETAIL</div>
+
+        </div>
+
+    </section>
 `;
 
 

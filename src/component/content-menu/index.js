@@ -18,9 +18,16 @@ class ContentMenu extends LitElement {
     }
 
 
-    action(idx) {
-        console.log(">>>>>> ", idx)
-        this.active = idx;
+    action(domain) {
+        console.log(">>>>>> ", domain)
+        this.active = domain;
+        // Child Component (global-menu)
+        this.dispatchEvent(new CustomEvent('domain-change', {
+            detail: {domain},
+            bubbles: true,        // Event travels up the DOM tree
+            composed: true        // Event crosses shadow DOM boundaries
+        }));
+
         // const domain = target.id.split("_").pop().toUpperCase();
         // const entries = Store.groupByDomain(domain);
         // Content.load("mi-page-content", {tablet: entries, detail: null});
