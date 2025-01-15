@@ -46,7 +46,7 @@ export default (elem) => html`
         <h3>
             <button
                     @click="${() => elem.dispatchEvent(
-                            new CustomEvent('page-transit', {
+                            new CustomEvent('content-transit', {
                                 detail: {
                                     transit: false,
                                 },

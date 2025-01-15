@@ -17,6 +17,7 @@ class PageContent extends LitElement {
         super();
         this.active = 1;
         this.transit = false;
+        this.visible = false;
     }
 
 
@@ -31,8 +32,8 @@ class PageContent extends LitElement {
         child.domain = evt.detail.domain;
     }
 
-    evtPageTransiton(evt) {
-        console.log(' -- PAGE TRANSIT FUNCTION: ', evt.detail)
+    evtContentTransit(evt) {
+        console.log(' -- CONTENT TRANSIT FUNCTION: ', evt.detail)
         const nodeWrap = this.shadowRoot.querySelector('#mi-content-wrapper');
         const nodeDetail = this.shadowRoot.querySelector('content-detail');
         if (evt.detail.transit) {

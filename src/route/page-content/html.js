@@ -10,7 +10,7 @@ const assets = [];
 export default (elem) => html`
     
     <section id="mi-page-content-wrap"
-             @page-transit=${elem.evtPageTransiton}
+             @content-transit=${elem.evtContentTransit}
              @domain-change=${elem.evtDomainChange}>
 
         <div id="mi-page-content-menu">

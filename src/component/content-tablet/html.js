@@ -15,7 +15,7 @@ export default (elem) => {
                                             <li>
                                                 <a id=${childId}
                                                    @click="${() => elem.dispatchEvent(
-                                                           new CustomEvent('page-transit', {
+                                                           new CustomEvent('content-transit', {
                                                                detail: {
                                                                    transit: true,
                                                                    entryId: childId

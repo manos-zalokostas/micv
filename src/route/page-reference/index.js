@@ -15,6 +15,7 @@ class PageReference extends LitElement {
     constructor() {
         super();
         this.active = 1
+        this.visible = false;
     }
 
 

@@ -5,122 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c2027ac-7fbf-48f5-b8a4-e62f9701cdf7" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/component/monitor/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/route/page-content-detail/html.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/route/page-content-detail/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/route/page-content-detail/style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/route/page-content/html.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/route/page-content/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/route/page-content/style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/route/page-introduction/html.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/route/page-introduction/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/route/page-introduction/style.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/route/page-reference/html.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/route/page-reference/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/route/page-reference/style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index-dev.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/html.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/style.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_route/content-detail.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/src/route/page-content-detail/content-detail.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_route/content.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/src/route/page-content/content.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_route/introduction.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/src/route/page-introduction/introduction.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_route/reference.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/src/route/page-reference/reference.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_sam/html.js" beforeDir="false" afterPath="$PROJECT_DIR$/_dev/_sam/html.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_sam/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/_dev/_sam/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_sam/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/_dev/_sam/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/badge-category/badge-category.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/badge-category/badge-category.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/badge-category/html.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/badge-category/html.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/badge-category/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/badge-category/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/badge-category/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/badge-category/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/badge-tool/badge-tools.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/badge-tool/badge-tools.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/badge-tool/html.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/badge-tool/html.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/badge-tool/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/badge-tool/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/badge-tool/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/badge-tool/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content-menu/html.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/content-menu/html.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content-menu/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/content-menu/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/content-menu/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/content-menu/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/extra/html.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/extra/html.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/extra/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/extra/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/extra/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/extra/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/global-menu/html.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/global-menu/html.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/global-menu/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/global-menu/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/global-menu/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/global-menu/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/global-search/html.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/global-search/html.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/global-search/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/global-search/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/global-search/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/global-search/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/intro-menu/html.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/intro-menu/html.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/intro-menu/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/intro-menu/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/intro-menu/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/intro-menu/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/linkpack-cert/html.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/linkpack-cert/html.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/linkpack-cert/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/linkpack-cert/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/linkpack-cert/linkpack-cert.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/linkpack-cert/linkpack-cert.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/linkpack-cert/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/linkpack-cert/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/linkpack-social/html.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/linkpack-social/html.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/linkpack-social/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/linkpack-social/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/linkpack-social/linkpack-social.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/linkpack-social/linkpack-social.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/linkpack-social/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/linkpack-social/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/linkpack-study/html.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/linkpack-study/html.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/linkpack-study/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/linkpack-study/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/linkpack-study/linkpack-study.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/linkpack-study/linkpack-study.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/linkpack-study/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/linkpack-study/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/linkpack-work/html.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/linkpack-work/html.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/linkpack-work/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/linkpack-work/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/linkpack-work/linkpack-work.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/linkpack-work/linkpack-work.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/linkpack-work/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/linkpack-work/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/monitor-view-intro/html.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/monitor-view-intro/html.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/monitor-view-intro/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/monitor-view-intro/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/monitor-view-intro/monitor-view-welcome.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/monitor-view-intro/monitor-view-welcome.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/monitor-view-intro/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/monitor-view-intro/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/monitor-view-project/html.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/monitor-view-project/html.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/monitor-view-project/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/monitor-view-project/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/monitor-view-project/monitor-view-project.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/monitor-view-project/monitor-view-project.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/monitor-view-project/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/monitor-view-project/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/monitor-view-reference/html.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/monitor-view-reference/html.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/monitor-view-reference/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/monitor-view-reference/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/monitor-view-reference/monitor-view-reference.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/monitor-view-reference/monitor-view-reference.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/monitor-view-reference/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/monitor-view-reference/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/monitor-view-tool/html.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/monitor-view-tool/html.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/monitor-view-tool/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/monitor-view-tool/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/monitor-view-tool/monitor-view-tool.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/monitor-view-tool/monitor-view-tool.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/monitor-view-tool/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/monitor-view-tool/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/monitor/html.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/monitor/html.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/monitor/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/monitor/monitor.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/monitor/monitor.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/monitor/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/monitor/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/quote-author/html.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/quote-author/html.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/quote-author/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/quote-author/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/quote-author/quote-author.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/quote-author/quote-author.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/quote-author/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/quote-author/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/quote-intro/html.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/quote-intro/html.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/quote-intro/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/quote-intro/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/quote-intro/quotes-intro.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/quote-intro/quotes-intro.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/quote-intro/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/quote-intro/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/quote-siteinfo/html.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/quote-siteinfo/html.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/quote-siteinfo/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/quote-siteinfo/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/quote-siteinfo/quote-siteinfo.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/quote-siteinfo/quote-siteinfo.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/quote-siteinfo/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/quote-siteinfo/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/quote-welcome/html.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/quote-welcome/html.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/quote-welcome/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/quote-welcome/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/quote-welcome/quote-welcome.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/quote-welcome/quote-welcome.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/quote-welcome/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/quote-welcome/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tablet-badge-category/badge-category.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/tablet-badge-category/badge-category.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tablet-badge-category/html.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/tablet-badge-category/html.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tablet-badge-category/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/tablet-badge-category/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tablet-badge-category/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/tablet-badge-category/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tablet-badge-menu/html.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/tablet-badge-menu/html.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tablet-badge-menu/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/tablet-badge-menu/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tablet-badge-menu/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/tablet-badge-menu/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tablet-badge-menu/tablet-menu.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/tablet-badge-menu/tablet-menu.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/timeline-interactive/html.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/timeline-interactive/html.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/timeline-interactive/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/timeline-interactive/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/timeline-interactive/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/timeline-interactive/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/timeline-interactive/timeline-interactive.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/timeline-interactive/timeline-interactive.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/timeline/html.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/timeline/html.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/timeline/html.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/timeline/html.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/timeline/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/timeline/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/timeline/style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/timeline/style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/timeline/timeline.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/timeline/timeline.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/content-detail/html.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/content-detail/html.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/content-tablet/html.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/content-tablet/html.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/global-menu/html.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/global-menu/html.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index-site.html" beforeDir="false" afterPath="$PROJECT_DIR$/index-org.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/route/page-content/html.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/route/page-content/html.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/route/page-content/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/route/page-content/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/route/page-introduction/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/route/page-introduction/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/route/page-reference/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/route/page-reference/index.js" afterDir="false" />
+    </list>
+    <list id="aed4c871-2e2b-40f9-bb70-6686a725d000" name="IGNORE" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,6 +84,18 @@
         <option value="https://github.com/manos-zalokostas/micv.git" />
       </set>
     </option>
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/.idea/workspace.xml">
+      <ranges>
+        <range start1="7" end1="20" start2="7" end2="22" changelist="7c2027ac-7fbf-48f5-b8a4-e62f9701cdf7" />
+        <range start1="21" end1="123" start2="23" end2="23" changelist="7c2027ac-7fbf-48f5-b8a4-e62f9701cdf7" />
+        <range start1="202" end1="203" start2="102" end2="103" changelist="aed4c871-2e2b-40f9-bb70-6686a725d000" />
+        <range start1="212" end1="212" start2="112" end2="114" changelist="aed4c871-2e2b-40f9-bb70-6686a725d000" />
+        <range start1="215" end1="217" start2="117" end2="117" changelist="aed4c871-2e2b-40f9-bb70-6686a725d000" />
+        <range start1="574" end1="574" start2="474" end2="478" changelist="aed4c871-2e2b-40f9-bb70-6686a725d000" />
+      </ranges>
+    </file>
   </component>
   <component name="PhpDebugGeneral" xdebug_debug_port="9009">
     <xdebug_debug_ports port="9009" />
