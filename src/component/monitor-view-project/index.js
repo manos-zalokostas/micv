@@ -1,7 +1,7 @@
+import {groupProjects, itemById, itemByIndex} from "/src/_service/store";
 import {LitElement} from 'lit';
-import _html from "./html"
 import _style from "./style";
-import {groupProjects, itemByIndex} from "../_service/store";
+import _html from "./html"
 
 
 /**
@@ -19,7 +19,7 @@ class MonitorViewProject extends LitElement {
         super();
         this.active = 1
         // this.project = Monitor.curr(); // Default project is the current one
-        this.project = itemByIndex()
+        this.project = itemById("WB12")
         console.log(this.project)
     }
 

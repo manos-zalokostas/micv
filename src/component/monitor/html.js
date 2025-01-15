@@ -1,8 +1,10 @@
 import {html} from 'lit';
+import "/src/component/monitor-view-intro"
+import "/src/component/monitor-view-project"
+import "/src/component/monitor-view-reference"
+import "/src/component/monitor-view-tool"
 
-
-const assets = [
-];
+const assets = [];
 
 
 export default (elem) => html`
@@ -19,7 +21,22 @@ export default (elem) => html`
         </div>
 
         <ul>
-            <li id="mi-monitor-view"></li>
+            <li id="mi-monitor-view">
+                ${
+                        ('INTRO' === elem.activeContent && html`
+                            <monitor-view-intro></monitor-view-intro>
+                        `)
+                        || ('PROJ' === elem.activeContent && html`
+                            <monitor-view-project></monitor-view-project>
+                        `)
+                        || ('REFF' === elem.activeContent && html`
+                            <monitor-view-reference></monitor-view-reference>
+                        `)
+                        || ('TOOL' === elem.activeContent && html`
+                            <monitor-view-tool></monitor-view-tool>
+                        `)
+                }
+            </li>
         </ul>
     </div>
 `;

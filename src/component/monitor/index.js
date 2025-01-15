@@ -10,16 +10,19 @@ class JoiMonitor extends LitElement {
 
 
     static properties = {
-        animation_running: { type: Boolean },
-        animation: { type: Object },
-        currIndex: { type: Number },
+
+        // animation_running: { type: Boolean },
+        // animation: { type: Object },
+        // currIndex: { type: Number },
+        activeContent: {type: String},
     };
 
     constructor() {
         super();
-        this.animation_running = false;
-        this.animation = null;
-        this.currIndex = 0;
+        // this.activeContent = 'INTRO'
+        this.activeContent = 'PROJ'
+        // this.activeContent = 'REFF'
+        // this.activeContent = 'TOOL'
     }
 
     // connectedCallback() {

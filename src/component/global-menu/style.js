@@ -4,43 +4,27 @@ export default () => css`
 
     #site_menu {
         position: fixed;
-        z-index: 15;
-        top: 0;
+        z-index: 100;
         right: 0;
-        list-style-type: none;
-        width: 30%;
-        height: 3%;
-        padding: 4px;
-        margin: 0;
-        font-family: $font-family;
+        //margin: 15px;
 
-        li {
-            float: left;
-            position: relative;
-            margin-left: 1px;
-            border: solid 1px #ccc;
-            background-color: $primary-color;
-            width: 30%;
-            height: 84%;
-            padding-top: 2%;
-            padding-bottom: 1%;
-            text-align: center;
+        a {
+            display: inline-block;
+            text-transform: uppercase;
+            font-size: 1em;
+            padding: 10px 15px;
+            border: 1px solid #ccc;
+            width: 100px;
 
-            a {
-                border-radius: 6px;
-                font-size: 1em;
-                //padding: 2% 22%;
+            &:hover {
+                color: indianred;
+            }
 
-                &:hover {
-                    cursor: pointer;
-                }
-
-                &.active {
-                    cursor: pointer;
-                    color: tomato;
-                    font-weight: bold;
-                }
+            &.active {
+                background: indianred;
+                color: white;
             }
         }
     }
+
 `

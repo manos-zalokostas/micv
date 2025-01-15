@@ -47,11 +47,9 @@ export default (elem) => html`
             <button
                     @click="${() => elem.dispatchEvent(
                             new CustomEvent('content-transit', {
-                                detail: {
-                                    transit: false,
-                                },
+                                detail: {transit: false},
+                                composed: true,        // Event crosses shadow DOM boundaries
                                 bubbles: true,        // Event travels up the DOM tree
-                                composed: true        // Event crosses shadow DOM boundaries
                             }))
                     }">
                 back

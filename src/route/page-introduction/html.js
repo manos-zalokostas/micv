@@ -3,31 +3,50 @@ import "/src/component/intro-menu"
 import "/src/component/monitor"
 import "/src/component/quote-author"
 import "/src/component/quote-intro"
-
+import "/src/component/timeline"
+import "/src/component/timeline-interactive"
 
 const assets = [];
 
 
 export default (elem) => html`
-    <!--    <global-menu></global-menu>-->
-    <!--    <global-search></global-search>-->
 
-    <div id="mi-page-introduction-menu">
+    <article @intro-transit="${elem.evtIntroTransit}">
+
+        <!--        <div id="mi-page-introduction-menu">-->
+        <!--            <global-search></global-search>-->
+        <!--        </div>-->
+
+        <div id="mi-monitor">
+            <joi-monitor></joi-monitor>
+
+        </div>
+
+        <div id="mi-quote-author">
+            <quote-author></quote-author>
+        </div>
+
         <intro-menu></intro-menu>
-    </div>
 
-    <div id="mi-monitor">
-        <joi-monitor></joi-monitor>
+        <div id="interactive_intro">
+            ${
+                    ('INTRO' === elem.activeContent && html`
+                        <quote-intro></quote-intro>
+                    `)
+                    || ('RESU' === elem.activeContent && html`
+                        <joi-timeline></joi-timeline>
+                    `)
+                    || ('INTER' === elem.activeContent && html`
+                        <timeline-interactive></timeline-interactive>
+                    `)
+                    || ('DOCU' === elem.activeContent && html`
+                        - PDF DOCUMENT -
+                    `)
+                    || ''
+            }
+        </div>
 
-    </div>
-
-    <div id="mi-quote-author">
-        <quote-author></quote-author>
-    </div>
-
-    <div id="interactive_intro">
-        <quote-intro></quote-intro>
-    </div>
+    </article>
 
 `;
 

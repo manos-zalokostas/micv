@@ -4,6 +4,7 @@ import "/src/route/page-content"
 import "/src/route/page-reference"
 
 import "/src/component/global-menu"
+// import "/src/component/global-search"
 
 const assets = [];
 
@@ -14,6 +15,8 @@ export default (elem) => html`
          @page-transit=${elem.evtPageTransit}>
 
         <div id="wrapper">
+
+            <!--                <global-search></global-search>-->
 
             <div id="mi-global-menu">
                 <global-menu>

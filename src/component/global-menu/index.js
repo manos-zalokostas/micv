@@ -9,19 +9,19 @@ import _style from "./style";
 class GlobalMenu extends LitElement {
 
     static properties = {
-        active: {type: Number}
+        activeElem: {type: String}
     };
 
     constructor() {
         super();
-        this.active = 1
+        this.activeElem = 'INTRO'
     }
 
 
     action(idx) {
         console.log('IDX: :', idx)
         console.log('DO SOMETHING ! ')
-        this.active = idx
+        this.activeElem = idx
     }
 
     static styles = _style();

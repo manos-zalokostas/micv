@@ -1,4 +1,5 @@
 import {html} from 'lit';
+import {unsafeHTML} from "lit/directives/unsafe-html.js";
 
 
 const assets = [];
@@ -12,7 +13,7 @@ export default (elem) => {
         <div id="project" class="mitem">
             <h2>${title}</h2>
             <h4>${section}</h4>
-            <div class="mtext">${description}</div>
+            <div class="mtext">${unsafeHTML(description)}</div>
             <img src="${screenshots.shot[0]}" alt="${screenshots.shot[0]}"/>
         </div>
         <div id="project_tools">
