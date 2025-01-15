@@ -1,6 +1,7 @@
 import {html} from 'lit';
 import "/src/component/content-menu";
 import "/src/component/content-tablet";
+import "/src/component/content-detail";
 
 const assets = [];
 
@@ -9,6 +10,7 @@ const assets = [];
 export default (elem) => html`
     
     <section id="mi-page-content-wrap"
+             @page-transit=${elem.evtPageTransiton}
              @domain-change=${elem.evtDomainChange}>
 
         <div id="mi-page-content-menu">
@@ -21,7 +23,9 @@ export default (elem) => html`
                 <content-tablet></content-tablet>
             </div>
 
-            <div id="mi-content-detail"> DETAIL</div>
+            <div id="mi-content-detail"> 
+                <content-detail></content-detail>
+            </div>
 
         </div>
 

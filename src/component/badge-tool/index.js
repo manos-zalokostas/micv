@@ -10,17 +10,17 @@ class BadgeTool extends LitElement {
 
     static properties = {
         active: {type: Number},
-        tools: { type: Array }
+        entries: {type: Array}
     };
 
     constructor() {
         super();
         this.active = 1
-        this.tools = [1,2,3,4,6];
+        // this.entries = [1,2,3,4,6];
     }
 
 
-   action(idx) {
+    action(idx) {
         this.active = idx;
         console.log("--- ", idx);
     }

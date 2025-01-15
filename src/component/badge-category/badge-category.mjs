@@ -1,12 +1,11 @@
-import { LitElement, html, css } from 'lit';
+import {LitElement, html, css} from 'lit';
+import _html from "./html"
+import _style from "./style";
 
 export class BadgeCategory extends LitElement {
-    static styles = css`
-
-    `;
 
     static properties = {
-        category: { type: String }
+        category: {type: String}
     };
 
     constructor() {
@@ -14,15 +13,10 @@ export class BadgeCategory extends LitElement {
         this.category = '';
     }
 
-    render() {
-        return html`
 
-        `;
-    }
+    static styles = _style();
+    render = () => _html(this)
 
-    _handleClick(event) {
-
-    }
 }
 
 customElements.define('badge-category', BadgeCategory);

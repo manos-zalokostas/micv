@@ -9,12 +9,12 @@ import _style from "./style";
 class BadgeCategory extends LitElement {
 
     static properties = {
-        active: {type: String}
+        entry: {type: String}
     };
 
     constructor() {
         super();
-        this.active = 1
+        // this.category = '';
     }
 
 

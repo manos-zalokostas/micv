@@ -1,20 +1,23 @@
 import {LitElement} from 'lit';
 import _html from "./html"
 import _style from "./style";
-
+import {itemByIndex} from "../../_service/store";
 
 /**
  *
  */
-class PageContentDetail extends LitElement {
+class ContentDetail extends LitElement {
 
     static properties = {
-        active: {type: Number}
+        active: {type: Number},
+        asset: {type: Object}
     };
 
     constructor() {
         super();
         this.active = 1
+        this.asset = itemByIndex(19)
+        console.log(">>> ", this.asset)
     }
 
 
@@ -27,4 +30,4 @@ class PageContentDetail extends LitElement {
     render = () => _html(this)
 }
 
-customElements.define('page-content-detail', PageContentDetail);
+customElements.define('content-detail', ContentDetail);
