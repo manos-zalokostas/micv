@@ -11,7 +11,10 @@ const assets = [];
 
 export default (elem) => html`
 
-    <article @intro-transit="${elem.evtIntroTransit}">
+    <article 
+            @intro-transit="${elem.evtIntroTransit}"
+            @monitor-content="${elem.evtMonitorContent}"
+    >
 
         <!--        <div id="mi-page-introduction-menu">-->
         <!--            <global-search></global-search>-->
@@ -19,7 +22,6 @@ export default (elem) => html`
 
         <div id="mi-monitor">
             <joi-monitor></joi-monitor>
-
         </div>
 
         <div id="mi-quote-author">

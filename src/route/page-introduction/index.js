@@ -2,7 +2,6 @@ import {LitElement} from 'lit';
 import _html from "./html"
 import _style from "./style";
 
-
 /**
  *
  */
@@ -17,6 +16,7 @@ class PageIntroduction extends LitElement {
         super();
         this.active = 1
         this.activeContent = 'INTRO'
+
     }
 
     action(idx) {
@@ -26,6 +26,13 @@ class PageIntroduction extends LitElement {
 
     evtIntroTransit(evt) {
         this.activeContent = evt.detail.code
+    }
+
+    evtMonitorContent(evt) {
+        debugger
+        console.log(evt.detail)
+        const Monitor = this.shadowRoot.querySelector('joi-monitor');
+        Monitor.forceConent(evt.detail.code)
     }
 
     static styles = _style();

@@ -4,37 +4,55 @@ import "/src/component/monitor-view-project"
 import "/src/component/monitor-view-reference"
 import "/src/component/monitor-view-tool"
 
-const assets = [];
+const assets = {
+    auto: [
+        ['tool', 'tools', 'TOOL',],
+        ['project', 'projects', 'PROJ'],
+    ],
+    manual: [
+        'pause', 'next', 'prev'
+    ],
+}
 
 
 export default (elem) => html`
     <div id="skills_preview" class="monitor">
         <div id="skill_fields" class="mbuttons">
-            <b title="tool">skills</b>
-            <b title="project">projects</b>
+            ${assets.auto.map(
+                    ([title, label, code]) => html`
+                        <button title="${title}"
+                                @click="${() => elem.loopContent(code)}">
+                            ${label}
+                        </button>
+                    `)}
         </div>
 
         <div id="skill_controls" class="mcontrols">
-            <b title="prev">&lt;</b>
-            <b title="pause">||</b>
-            <b title="next">&gt;</b>
+            ${assets.manual.map(
+                    val => html`
+                        <button title="${val}"
+                                @click="${() => elem.controContent(val)}">
+                            ${val}
+                        </button>
+                    `)}
         </div>
 
         <ul>
             <li id="mi-monitor-view">
                 ${
-                        ('INTRO' === elem.activeContent && html`
-                            <monitor-view-intro></monitor-view-intro>
-                        `)
-                        || ('PROJ' === elem.activeContent && html`
+                        // ('INTRO' === elem.activeContent && html`
+                        //     <monitor-view-intro></monitor-view-intro>
+                        // `)
+                        ('PROJ' === elem.activeContent && html`
                             <monitor-view-project></monitor-view-project>
-                        `)
-                        || ('REFF' === elem.activeContent && html`
-                            <monitor-view-reference></monitor-view-reference>
                         `)
                         || ('TOOL' === elem.activeContent && html`
                             <monitor-view-tool></monitor-view-tool>
                         `)
+                        || ('REFF' === elem.activeContent && html`
+                            <monitor-view-reference></monitor-view-reference>
+                        `)
+                        || ""
                 }
             </li>
         </ul>
