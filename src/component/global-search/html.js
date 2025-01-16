@@ -1,5 +1,5 @@
 import {html} from 'lit';
-import * as Store from "/_service/store"
+import * as Store from "/src/_core/store"
 
 const asset = {
     projects: Store.groupProjects(),

@@ -1,4 +1,4 @@
-import {itemByIndex} from "/src/_service/store";
+import {itemByIndex} from "/src/_core/store";
 import {LitElement} from 'lit';
 import _style from "./style";
 import _html from "./html"

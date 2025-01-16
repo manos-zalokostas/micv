@@ -1,7 +1,7 @@
 import {LitElement} from 'lit';
 import _html from "./html"
 import _style from "./style";
-import {itemById, itemByIndex} from "../../_service/store";
+import {itemById, itemByIndex} from "/src/_core/store";
 
 /**
  *

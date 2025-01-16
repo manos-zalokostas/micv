@@ -1,4 +1,4 @@
-import data from "./data.js";
+import data from "./_data.js";
 
 
 /*
