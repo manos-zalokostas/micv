@@ -17,7 +17,7 @@ class PageContent extends LitElement {
         super();
         this.active = 1;
         this.transit = false;
-        this.visible = false;
+        // this.visible = false;
     }
 
 

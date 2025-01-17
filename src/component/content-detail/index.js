@@ -1,7 +1,7 @@
 import {LitElement} from 'lit';
 import _html from "./html"
 import _style from "./style";
-import {itemByIndex} from "/src/_core/store";
+import {itemById, itemByIndex} from "/src/_core/store";
 
 /**
  *
@@ -16,7 +16,7 @@ class ContentDetail extends LitElement {
     constructor() {
         super();
         this.active = 1
-        this.asset = itemByIndex(19)
+        this.asset = itemById('WB15')
         console.log(">>> ", this.asset)
     }
 

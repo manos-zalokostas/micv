@@ -6,12 +6,10 @@ const assets = [
 
 
 export default (elem) => html`
-    <p id="icategory">Category:
-        <a href="#" class="cat_key" 
-           @click="${evt => _fn(evt, elem.action)}">
-            <span>${elem.entry}</span>
-        </a>
-    </p>
+    <button class="cat_key"
+            @click="${evt => _fn(evt, elem.action)}">
+        <span>${elem.entry}</span>
+    </button>
 `;
 
 

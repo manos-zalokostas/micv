@@ -225,10 +225,10 @@ div {
         top: -8%;
     }
 
-    #idescription {
-        height: 65%;
-        font-size: 1.2em;
-    }
+    /*#idescription {*/
+    /*    height: 65%;*/
+    /*    font-size: 1.2em;*/
+    /*}*/
 
     #ibody {
         margin-left: 3%;
@@ -573,42 +573,42 @@ div {
         font-size: 2.2em;
     }
 
-    #description {
-        font-size: 0.9em;
-    }
+    /*#description {*/
+    /*    font-size: 0.9em;*/
+    /*}*/
 
-    #ititle {
-        width: 70%;
-    }
+    /*#ititle {*/
+    /*    width: 70%;*/
+    /*}*/
 
-    #ititle h3 {
-        width: 100%;
-        font-size: 1em;
-        margin-top: 9%;
-        margin-left: 10%;
-    }
+    /*#ititle h3 {*/
+    /*    width: 100%;*/
+    /*    font-size: 1em;*/
+    /*    margin-top: 9%;*/
+    /*    margin-left: 10%;*/
+    /*}*/
 
-    #icategory {
-        position: absolute;
-        top: 6%;
-        right: 0.5%;
-        width: 15%;
-        text-align: right;
-        display: none;
-    }
+    /*#icategory {*/
+    /*    position: absolute;*/
+    /*    top: 6%;*/
+    /*    right: 0.5%;*/
+    /*    width: 15%;*/
+    /*    text-align: right;*/
+    /*    display: none;*/
+    /*}*/
 
-    #itools {
-        right: -200%;
-    }
+    /*#itools {*/
+    /*    right: -200%;*/
+    /*}*/
 
-    #iextra {
-        height: 68%;
-    }
+    /*#iextra {*/
+    /*    height: 68%;*/
+    /*}*/
 
-    #iextra > div > strong {
-        height: 10px;
-        font-size: 0.8em;
-    }
+    /*#iextra > div > strong {*/
+    /*    height: 10px;*/
+    /*    font-size: 0.8em;*/
+    /*}*/
 
     #footer > h2 {
         font-size: 5em;

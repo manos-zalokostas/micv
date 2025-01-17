@@ -1,22 +1,16 @@
 import {css} from 'lit';
 
 export default () => css`
-    
-    #icategory {
+
+    button {
         float: left;
-        text-align: left;
-        font-size: 0.8em;
+        color: white;
         font-family: verdana;
-        padding: 0;
-        width: 60%;
+        border: none;
+        outline: none;
+        padding: 4px 10px;
+        background-color: indianred;
     }
 
-    #icategory .cat_key {
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
-        padding: 5px;
-        background-color: #555;
-    }
 
 `

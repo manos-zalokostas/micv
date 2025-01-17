@@ -5,18 +5,16 @@ const assets = [];
 
 
 export default (elem) => html`
-    <h4 id="itools">Keywords:
+    <aside id="itools">
         ${elem.entries.map(
                 val => html`
-                    <span>
-                        <a href="#"
-                           @click="${evt => _fn(evt, elem.action(val))}">
-                            ${val}
-                        </a>
-                    </span>
+                    <a href="#"
+                       @click="${evt => _fn(evt, elem.action(val))}">
+                        <img src="/images/tech_logos/${val}.jpg" alt="icon ${val}"/>
+                    </a>
                 `
         )}
-    </h4>
+    </aside>
 `;
 
 
