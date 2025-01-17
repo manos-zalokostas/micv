@@ -1,37 +1,47 @@
 import {html} from 'lit';
+import {itemById} from "../../_core/store";
+
+const fn = elem => {
+    console.log(" ASSETS => ", elem.assets)
+    const items = elem.assets
+        .reverse()
+        .map(a => a[1])
+        .flat()
+        .map(([code]) => itemById(code))
+    console.log({items})
+    return items;
+}
+
 
 export default (elem) => {
     return html`
-        <div class="mi-tablet">
-            <h5>${elem.domain}</h5>
-            <ul id="${elem.domain}">
-                ${elem.assets.map(([name, pack]) => html`
-                    <li class="tgroupi">
-                        <section class="sublist">
-                            <h4>${name}</h4>
-                            <ul>
-                                ${pack.map(
-                                        ([childId, childName]) => html`
-                                            <li>
-                                                <a id=${childId}
-                                                   @click="${() => elem.dispatchEvent(
-                                                           new CustomEvent('content-transit', {
-                                                               detail: {
-                                                                   transit: true,
-                                                                   entryId: childId
-                                                               },
-                                                               bubbles: true,        // Event travels up the DOM tree
-                                                               composed: true        // Event crosses shadow DOM boundaries
-                                                           }))
-                                                   }">
-                                                    ${childName}</a>
-                                            </li>
-                                        `)}
-                            </ul>
-                        </section>
-                    </li>`)}
-            </ul>
-        </div>
+        <section class="mi-tablet">
+
+<!--            <header>-->
+<!--                <strong>${elem.domain === 'work' ? 'desktop' : elem.domain}</strong>-->
+<!--            </header>-->
+
+            <nav>
+                ${fn(elem).map((o) => html`
+                    <section class="tgroupi">
+                        <small>${o.category}</small>
+                        <strong>${o.title}
+                            <small>${o.id}</small>
+                        </strong>
+                        <aside>${Array.isArray(o.tools.tool) && o.tools.tool.map(
+                                    tool => html`
+                                        <img src='/images/tech_logos/${tool}.jpg' alt="${tool}"/>
+                                    `)}
+                        </aside>
+                        <p>
+                            <span>${o.description.substring(0, 200)}<em>&nbsp&nbsp;...more</em></span>
+                        </p>
+                        <img src="${o.screenshots.shot[0]}" alt=${o.title}>
+                    </section>
+                `)}
+            </nav>
+
+        </section>
     `;
 }
 

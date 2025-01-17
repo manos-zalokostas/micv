@@ -220,39 +220,7 @@ export default [
         },
         "media": "-"
     },
-    {
-        "domain": "WEB",
-        "id": "WB07",
-        "section": "Mobile Applications",
-        "category": "Design and Development",
-        "title": "Android Applications Development",
-        "tools": {
-            "tool": [
-                "web_application",
-                "android",
-                "java",
-                "oop",
-                "mobile"
-            ]
-        },
-        "description": " <p> Online certificate received with distinction by Coursera, covering the fundamental programming principles, software architecture and user experience considerations underlying handheld software applications and their development environments. To bring these concepts alive, the course involved in-depth, hands-on training, implemented in the Android Platform, Amongst others, I gained fundamental understating on the Android development API, delivered strictly supervised on-time assignments on a week basis, and deliver a cover-all final project implementing most of the above: </p> <ul> <span> <li>The Android Platform, The Android Development Environment</li> <li>The Activity Class</li> <li>The Intent Class, Permissions, The Fragment Class</li> <li>User Interface Classes</li> <li>User Notifications, The BroadcastReceiver Class, Threads, AsyncTask & Handlers</li> <li>Networking</li> <li>Graphics & Animation, Multi-touch & Gestures, MultiMedia</li> <li>Sensors, Location & Maps</li> <li>DataManagement, The ContentProvider Class, The Service Class</li> </span> </ul>",
-        "screenshots": {
-            "shot": [
-                "images/android/capture_video.png",
-                "images/android/capture_photo.png",
-                "images/android/avail_data_preview.png",
-                "images/android/filter_data.png"
-            ]
-        },
-        "score": "-",
-        "tutor": "-",
-        "comment": "-",
-        "files": {
-            "file": "images/android/android_applications_development.pdf"
-        },
-        "media": "",
-        "link": ""
-    },
+
     {
         "domain": "WEB",
         "id": "WB08",
@@ -852,7 +820,7 @@ export default [
             ]
         },
         "score": "-",
-        "tutor": "<h4><a target=\"_blank\" target=\"_blank\" href=\"https://linkedin.com/in/gprok\">Prokopakis, George MSc</a></h4> <p>US Naval Postgraduate School, CA</p>",
+        "tutor": "<h4><a target=\"_blank\" href=\"https://linkedin.com/in/gprok\">Prokopakis, George MSc</a></h4> <p>US Naval Postgraduate School, CA</p>",
         "comment": "-",
         "files": {
             "file": [
@@ -1501,7 +1469,7 @@ export default [
             ]
         },
         "score": "92",
-        "tutor": "<h4><a target=\"_blank\" target=\"_blank\" href=\"https://linkedin.com/in/gprok\">Prokopakis, George MSc</a></h4> <p>US Naval Postgraduate School, CA</p>",
+        "tutor": "<h4><a target=\"_blank\"  href=\"https://linkedin.com/in/gprok\">Prokopakis, George MSc</a></h4> <p>US Naval Postgraduate School, CA</p>",
         "comment": "<a target=\"_blank\" href=\"https://linkedin.com/in/gprok\">Prokopakis, George MSc</a> <p> <span>Mano, congratulations for your final assignment.  What you have implemented involves much complexity within it, and it is a rare thing for a tutor to see bachelor degree students build such developments </span>. </p>",
         "files": {
             "file": [
@@ -1515,4 +1483,37 @@ export default [
         "link": ""
     },
 
+    {
+        "domain": "STUDIES",
+        "id": "ST21",
+        "section": "Mobile Applications",
+        "category": "Design and Development",
+        "title": "Android Applications Development",
+        "tools": {
+            "tool": [
+                "web_application",
+                "android",
+                "java",
+                "oop",
+                "mobile"
+            ]
+        },
+        "description": " <p> Online certificate received with distinction by Coursera, covering the fundamental programming principles, software architecture and user experience considerations underlying handheld software applications and their development environments. To bring these concepts alive, the course involved in-depth, hands-on training, implemented in the Android Platform, Amongst others, I gained fundamental understating on the Android development API, delivered strictly supervised on-time assignments on a week basis, and deliver a cover-all final project implementing most of the above: </p> <ul> <span> <li>The Android Platform, The Android Development Environment</li> <li>The Activity Class</li> <li>The Intent Class, Permissions, The Fragment Class</li> <li>User Interface Classes</li> <li>User Notifications, The BroadcastReceiver Class, Threads, AsyncTask & Handlers</li> <li>Networking</li> <li>Graphics & Animation, Multi-touch & Gestures, MultiMedia</li> <li>Sensors, Location & Maps</li> <li>DataManagement, The ContentProvider Class, The Service Class</li> </span> </ul>",
+        "screenshots": {
+            "shot": [
+                "images/android/capture_video.png",
+                "images/android/capture_photo.png",
+                "images/android/avail_data_preview.png",
+                "images/android/filter_data.png"
+            ]
+        },
+        "score": "-",
+        "tutor": "-",
+        "comment": "-",
+        "files": {
+            "file": "images/android/android_applications_development.pdf"
+        },
+        "media": "",
+        "link": ""
+    },
 ]

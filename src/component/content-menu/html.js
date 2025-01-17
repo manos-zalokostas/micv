@@ -3,7 +3,7 @@ import {html} from 'lit';
 
 const assets = [
     'web',
-    'study',
+    'studies',
     'work'
 ];
 
@@ -11,20 +11,17 @@ const target = "a";
 
 
 export default (elem) => html`
-    <div id="menu_tabs">
-        <ul>
+    <nav id="menu_tabs">
             ${assets.map(
-                    (val, i) => html`
-                        <li>
-                            <a id="domain_${val}" href="#"
-                               class="${elem.active === val ? 'active' : ''}"
-                               @click="${(evt) => _fn(evt, () => elem.action(val))}">
-                                ${val.toUpperCase()}
-                            </a>
-                        </li>
+                    (val) => html`
+                        <a id="domain_${val}" href="#"
+                           class="${elem.active === val ? 'active' : ''}"
+                           @click="${(evt) => _fn(evt, () => elem.action(val))}">
+                            ${val.toUpperCase()}
+                        </a>
                     `)}
         </ul>
-    </div>
+    </nav>
 `;
 
 
