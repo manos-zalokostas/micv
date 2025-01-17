@@ -7,6 +7,7 @@ const assets = [
 
 export default (elem) => html`
     <div id="author_presentation">
+<!--        <img src="images/profile/manos2.jpg"/>-->
         <p>Creativity is the tool that while enjoy using and practicing is leading me a nice journey throughout
             diverse educational and occupational experiences.
             Unfolding my need for being creative and enthousiasm for technology I started my training on
@@ -15,7 +16,6 @@ export default (elem) => html`
             fundamental understanding has gradually overwhelmed me, and drove me to migrate interest on the
             field. <br/>
         </p>
-        <img src="images/profile/manos2.jpg"/>
 `;
 
 

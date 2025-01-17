@@ -11,10 +11,9 @@ const assets = [];
 
 export default (elem) => html`
 
-    <article 
+    <article
             @intro-transit="${elem.evtIntroTransit}"
-            @monitor-content="${elem.evtMonitorContent}"
-    >
+            @monitor-content="${elem.evtMonitorContent}">
 
         <!--        <div id="mi-page-introduction-menu">-->
         <!--            <global-search></global-search>-->

@@ -4,32 +4,38 @@ import {assets} from "./asset";
 
 export default (elem) => html`
     <div id="resume_cv_field">
-        <div id="resume-wrap">
+        
+        <div id="cv_description-control">
+            <em>comments</em>
+            <input type="checkbox" id="cv_comments"
+                   @click="${elem.action}"/>
+        </div>
 
-            <h3>
-                <span>comments
-                    <input type="checkbox" id="cv_comments"
-                           @click="${elem.action}"
-                    />
-                </span>
-            </h3>
+        <div id="resume-wrap">
 
             <p id="cv_description">
                 ${assets.map(
                         ([year, title, info, codes]) => html`
                             <section>
-                                ${codes && codes.map(code => html`
-                                    <button @click="${() => elem.dispatchEvent(
-                                            new CustomEvent('monitor-content', {
-                                                detail: {code},
-                                                bubbles: true,
-                                            }))}">
-                                        ${code}
-                                    </button>
-                                `)}
-                                <header>${year}</header>
-                                <em>${title}</em>
-                                <small class="${elem.active ? 'active' : ''}">${info}</small>
+
+                                <header>
+                                    <strong>${year}</strong>
+                                    <em>${title}</em>
+                                    <small class="${elem.active ? 'active' : ''}">${info}</small>
+                                </header>
+
+                                <div>
+                                    ${codes && codes.map(code => html`
+                                        <button @click="${() => elem.dispatchEvent(
+                                                new CustomEvent('monitor-content', {
+                                                    detail: {code},
+                                                    bubbles: true,
+                                                }))}">
+                                            ${code}
+                                        </button>
+                                    `)}
+                                </div>
+
                             </section>
                         `)}
             </p>

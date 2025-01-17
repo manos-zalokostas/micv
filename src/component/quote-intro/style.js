@@ -3,8 +3,8 @@ import {css} from 'lit';
 export default () => css`
     .main_txt,
     .aux_txt {
-        float: right;
-        text-align: right;
+        //float: right;
+        text-align: left;
         font-size: 1.2em;
         padding: 25px;
         //font-family: sans-serif;
