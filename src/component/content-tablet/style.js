@@ -28,6 +28,7 @@ export default () => css`
             overflow: auto;
             margin-top: 75px;
 
+
             .tgroupi {
                 display: flex;
                 flex-direction: column;
@@ -40,6 +41,13 @@ export default () => css`
                 min-height: 300px;
                 width: 675px;
                 background: #555;
+
+                button {
+                    position: absolute;
+                    z-index: 10;
+                    right: 5px;
+                    top: 5px;
+                }
 
                 strong {
                     font-size: 32px;
