@@ -16,7 +16,7 @@ class SiteIndex extends LitElement {
 
     constructor() {
         super();
-        this.display = 'INTRO'
+        this.display = 'CONT'
     }
 
     action(idx) {

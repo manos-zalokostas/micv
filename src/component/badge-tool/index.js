@@ -16,7 +16,6 @@ class BadgeTool extends LitElement {
     constructor() {
         super();
         this.active = 1
-        // this.entries = [1,2,3,4,6];
     }
 
 

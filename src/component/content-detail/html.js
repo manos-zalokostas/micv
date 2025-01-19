@@ -6,8 +6,6 @@ import {unsafeHTML} from 'lit/directives/unsafe-html.js';
 
 export default (elem) => {
 
-    console.log(" +++++++++++++++ ", elem.asset);
-
     return html`
 
         <div id="ititle">

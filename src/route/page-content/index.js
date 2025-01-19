@@ -1,13 +1,12 @@
-import {LitElement} from 'lit';
-import _html from "./html"
-import _style from "./style";
 import {itemById, itemByIndex} from "/src/_core/store";
+import {LitElement} from 'lit';
+import _style from "./style";
+import _html from "./html"
 
 /**
  *
  */
 class PageContent extends LitElement {
-    // @query("content-tablet") ContentTablet;
 
     static properties = {
         active: {type: Number}
@@ -17,7 +16,6 @@ class PageContent extends LitElement {
         super();
         this.active = 1;
         this.transit = false;
-        // this.visible = false;
     }
 
 
