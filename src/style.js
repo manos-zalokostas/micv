@@ -12,42 +12,44 @@ export default () => css`
         width: 100%;
         height: 100%;
         background-color: white;
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #view {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #mi-page-introduction {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #mi-page-content {
+            position: absolute;
+            //top:100%;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #mi-page-reference {
+            position: absolute;
+            //top:200%;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+        }
     }
 
-    #wrapper ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-    }
 
-    #view {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-    }
-
-    #mi-page-introduction {
-        position: absolute;
-        top:0;
-        left:0;
-        width: 100vw;
-        height: 100vh;
-    }
-
-    #mi-page-content {
-        position: absolute;
-        //top:100%;
-        left:0;
-        width: 100vw;
-        height: 100vh;
-    }
-
-    #mi-page-reference {
-        position: absolute;
-        //top:200%;
-        left:0;
-        width: 100vw;
-        height: 100vh;
-    }
 `

@@ -6,15 +6,16 @@ const assets = [
     ['projects', 'CONT'],
     ['certificates', "CERT"],
 ];
-const target = "#site_menu a";
+const target = "#site_menu button";
 
 
 export default (elem) => html`
     <nav id="site_menu">
         ${assets.map(([val, code], i) => html`
-            <a title="${val}"
+            <button title="${val}"
                class="${elem.activeElem === code ? 'active' : ''}"
                @click="${(evt) => _fn(evt, () => {
+                   console.log("--------- CLICKCKCKCKCKCKCKC")
                    elem.action(code);
                    elem.dispatchEvent(
                            new CustomEvent('page-transit', {
@@ -24,7 +25,7 @@ export default (elem) => html`
                            }));
                })}">
                 ${val}
-            </a>
+            </button>
         `)}
     </nav>
 `;
