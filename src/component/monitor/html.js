@@ -10,7 +10,7 @@ const assets = {
         ['project', 'projects', 'PROJ'],
     ],
     manual: [
-        'pause', 'next', 'prev'
+        'pause', 'prev', 'next'
     ],
 }
 

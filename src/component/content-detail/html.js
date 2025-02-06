@@ -1,16 +1,18 @@
-import {html} from 'lit';
-import "/src/component/image-slider"
-import "/src/component/badge-category"
-import "/src/component/badge-tool"
 import {unsafeHTML} from 'lit/directives/unsafe-html.js';
+import "/src/component/badge-category"
+import "/src/component/project-tool"
+import "/src/component/image-slider"
+import "/src/component/badge-tool"
+import {html} from 'lit';
 
 
 export default (elem) => {
 
     return html`
 
-        <div id="ititle">
-            <h3>
+        <header>
+
+            <div id="ititle">
                 <button
                         @click="${() => elem.dispatchEvent(
                                 new CustomEvent('content-transit', {
@@ -21,26 +23,42 @@ export default (elem) => {
                         }">
                     back
                 </button>
-                <span>${elem.asset.title}</span>
-            </h3>
-        </div>
-
-        <div id="mi-badge-category">
-            <badge-category entry="${elem.asset.category}"></badge-category>
-        </div>
-
-        <div id="mi-badge-tools">
-            <badge-tool .entries="${elem.asset.tools.tool}"></badge-tool>
-        </div>
-
-        <div id="ibody">
-            <div id="idescription">
-                ${unsafeHTML(elem.asset.description)}
+                <h3>
+                    <span>${elem.asset.title}</span>
+                </h3>
+                <div id="mi-badge-category">
+                    <badge-category entry="${elem.asset.category}"></badge-category>
+                </div>
             </div>
-            
-            <image-slider .asset="${elem.asset}"></image-slider>
 
-        </div>
+            <div id="project-tool">
+                <project-tool .entries="${elem.asset.tools.tool}"></project-tool>
+            </div>
+
+        </header>
+
+
+        <main>
+
+            <div id="ibody">
+
+                <div id="idescription">
+                    ${unsafeHTML(elem.asset.description)}
+                </div>
+
+                <image-slider .asset="${elem.asset}"></image-slider>
+
+            </div>
+
+
+        </main>
+
+
+        <footer>
+
+            <badge-tool .entries="${elem.asset.tools.tool}"></badge-tool>
+
+        </footer>
 
         <div id="mi-content-extra"></div>
     `;
