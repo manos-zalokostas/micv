@@ -39,4 +39,4 @@ yarn-error.log*
 /.idea
 /.dev/
 /.vite/
-#/_dev
+/_dev
