@@ -1,6 +1,7 @@
 import {LitElement} from 'lit';
 import _html from "./html"
 import _style from "./style";
+import {_DEV, PAGE} from "./env";
 
 
 
@@ -16,7 +17,7 @@ class SiteIndex extends LitElement {
 
     constructor() {
         super();
-        this.display = 'INTRO'
+        this.display = _DEV.PAGE
     }
 
     action(idx) {

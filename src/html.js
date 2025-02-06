@@ -4,6 +4,7 @@ import "/src/route/page-content"
 import "/src/route/page-reference"
 
 import "/src/component/global-menu"
+import {PAGE} from "./env";
 // import "/src/component/global-search"
 
 const assets = [];
@@ -23,19 +24,19 @@ export default (elem) => html`
             </div>
 
             ${
-                    ('INTRO' === elem.display && html`
+                    (PAGE.LAND === elem.display && html`
                         <div id="mi-page-introduction">
                             <page-introduction></page-introduction>
                         </div>
                     `)
 
-                    || ('CONT' === elem.display && html`
+                    || (PAGE.WORK === elem.display && html`
                         <div id="mi-page-content">
                             <page-content></page-content>
                         </div>
                     `)
 
-                    || ('CERT' === elem.display && html`
+                    || (PAGE.CERT === elem.display && html`
                         <div id="mi-page-reference">
                             <page-reference></page-reference>
                         </div>

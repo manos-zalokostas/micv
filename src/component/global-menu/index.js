@@ -1,6 +1,7 @@
 import {LitElement} from 'lit';
 import _html from "./html"
 import _style from "./style";
+import {PAGE} from "../../env";
 
 
 /**
@@ -14,7 +15,7 @@ class GlobalMenu extends LitElement {
 
     constructor() {
         super();
-        this.activeElem = 'INTRO'
+        this.activeElem = PAGE.LAND
     }
 
 

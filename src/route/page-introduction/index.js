@@ -1,6 +1,7 @@
 import {LitElement} from 'lit';
 import _html from "./html"
 import _style from "./style";
+import {PAGE, VIEW} from "../../env";
 
 /**
  *
@@ -15,7 +16,7 @@ class PageIntroduction extends LitElement {
     constructor() {
         super();
         this.active = 1
-        this.activeContent = 'RESU'
+        this.activeContent = VIEW.LAND.INTRO
 
     }
 
@@ -29,7 +30,7 @@ class PageIntroduction extends LitElement {
     }
 
     evtMonitorContent(evt) {
-        debugger
+        
         console.log(evt.detail)
         const Monitor = this.shadowRoot.querySelector('joi-monitor');
         Monitor.forceConent(evt.detail.code)

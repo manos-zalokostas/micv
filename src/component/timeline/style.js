@@ -14,16 +14,23 @@ export default () => css`
 
     #cv_description {
         overflow: auto;
-        height: 500px;
+        margin: auto;
+        //width: 100%;
     }
 
 
     #resume_cv_field {
+        
+        //> * {
+        //    border: 1px solid red;
+        //}
+        
         section {
             display: flex;
             justify-content: space-between;
             //padding: 10px 6px;
             border-bottom: 1px solid #bbb;
+            //width: calc(100% - 100px);
 
             header {
                 display: flex;

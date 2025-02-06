@@ -1,10 +1,12 @@
 import {html} from 'lit';
+import {PAGE} from "../../env";
+
 
 
 const assets = [
-    ['about', 'INTRO'],
-    ['projects', 'CONT'],
-    ['certificates', "CERT"],
+    ['about', PAGE.LAND],
+    ['projects', PAGE.WORK],
+    ['certificates', PAGE.CERT],
 ];
 const target = "#site_menu button";
 
@@ -13,17 +15,17 @@ export default (elem) => html`
     <nav id="site_menu">
         ${assets.map(([val, code], i) => html`
             <button title="${val}"
-               class="${elem.activeElem === code ? 'active' : ''}"
-               @click="${(evt) => _fn(evt, () => {
-                   console.log("--------- CLICKCKCKCKCKCKCKC")
-                   elem.action(code);
-                   elem.dispatchEvent(
-                           new CustomEvent('page-transit', {
-                               detail: {code},
-                               bubbles: true,        // Event travels up the DOM tree
-                               composed: true        // Event crosses shadow DOM boundaries
-                           }));
-               })}">
+                    class="${elem.activeElem === code ? 'active' : ''}"
+                    @click="${(evt) => _fn(evt, () => {
+                        console.log("--------- CLICKCKCKCKCKCKCKC")
+                        elem.action(code);
+                        elem.dispatchEvent(
+                                new CustomEvent('page-transit', {
+                                    detail: {code},
+                                    bubbles: true,        // Event travels up the DOM tree
+                                    composed: true        // Event crosses shadow DOM boundaries
+                                }));
+                    })}">
                 ${val}
             </button>
         `)}

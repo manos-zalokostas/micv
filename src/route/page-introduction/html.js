@@ -5,6 +5,7 @@ import "/src/component/quote-author"
 import "/src/component/quote-intro"
 import "/src/component/timeline"
 import "/src/component/timeline-interactive"
+import {VIEW} from "../../env";
 
 const assets = [];
 
@@ -31,18 +32,18 @@ export default (elem) => html`
 
         <div id="interactive_intro">
             ${
-                    ('INTRO' === elem.activeContent && html`
+                    (VIEW.LAND.INTRO === elem.activeContent && html`
                         <quote-intro></quote-intro>
                     `)
-                    || ('RESU' === elem.activeContent && html`
+                    || (VIEW.LAND.RESU === elem.activeContent && html`
                         <joi-timeline></joi-timeline>
                     `)
-                    || ('INTER' === elem.activeContent && html`
+                    || (VIEW.LAND.DOCU === elem.activeContent && html`
                         <timeline-interactive></timeline-interactive>
                     `)
-                    || ('DOCU' === elem.activeContent && html`
-                        - PDF DOCUMENT -
-                    `)
+                    // || ('DOCU' === elem.activeContent && html`
+                    //     - PDF DOCUMENT -
+                    // `)
                     || ''
             }
         </div>

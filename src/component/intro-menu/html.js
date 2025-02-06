@@ -1,11 +1,10 @@
 import {html} from 'lit';
+import {PAGE, VIEW} from "../../env";
 
 
 const assets = [
-    ['introduction', 'INTRO'],
-    ['resume', 'RESU'],
-    ['interactive', 'INTER'],
-    ['document', 'DOCU']
+    ['introduction', VIEW.LAND.INTRO],
+    ['resume', VIEW.LAND.RESU],
 ];
 
 

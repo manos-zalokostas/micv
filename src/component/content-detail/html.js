@@ -1,4 +1,5 @@
 import {html} from 'lit';
+import "/src/component/image-slider"
 import "/src/component/badge-category"
 import "/src/component/badge-tool"
 import {unsafeHTML} from 'lit/directives/unsafe-html.js';
@@ -33,20 +34,11 @@ export default (elem) => {
         </div>
 
         <div id="ibody">
-
             <div id="idescription">
                 ${unsafeHTML(elem.asset.description)}
             </div>
-
-            <div id="mi-content-slider">
-                ${
-                    elem.asset.screenshots.shot.map(
-                        val => html`
-                            <img src=${val} alt="${val}"/>
-                        `
-                    )
-                }
-            </div>
+            
+            <image-slider .asset="${elem.asset}"></image-slider>
 
         </div>
 

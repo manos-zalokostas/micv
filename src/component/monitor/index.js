@@ -39,11 +39,11 @@ class JoiMonitor extends LitElement {
     }
 
     forceConent(code) {
-        debugger
+        
         this.activeContent = 'PROJ'
         const ViewProject = this.shadowRoot.querySelector("monitor-view-project")
         ViewProject.pause();
-        debugger
+        
         ViewProject.project = itemById(code)
     }
 

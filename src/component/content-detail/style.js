@@ -24,7 +24,7 @@ export default () => css`
         z-index: 10;
         font-family: Verdana, Geneva, sans-serif;
         text-align: left;
-        overflow: hidden;
+        //overflow: hidden;
         margin: 50px;
 
 
@@ -41,11 +41,18 @@ export default () => css`
 
         img {
             width: 400px;
-            max-height: 300px;
+            height: 250px;
             margin: 15px;
             background: white;
             padding: 15px;
             border: 1px solid #eee;
+            transition: all 1s;
+
+            &.showcase {
+                position: absolute;
+                width: 94vw;
+                height: 50vw;
+            }
         }
     }
 
