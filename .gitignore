@@ -36,5 +36,7 @@ yarn-error.log*
 
 # phpstorm
 .idea
+/.idea
 /.dev/
 /.vite/
+#/_dev
