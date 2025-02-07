@@ -11,15 +11,15 @@ const _style = () => {
 }
 
 const mix = (a) => {
-    console.log(">>>>>> IN ", a)
+    // console.log(">>>>>> IN ", a)
     const num = +(Math.random() * 10).toFixed()
     a.forEach((v, i) => i % num && a.unshift(i % 2 ? a.shift() : a.pop()));
-    console.log(">>>>>> OUT ", a)
+    // console.log(">>>>>> OUT ", a)
     return a;
 }
 
 export default (elem) => html`
-    <aside id="itools">
+    <aside >
         ${mix(elem.entries)
                 .map(
                         val => html`

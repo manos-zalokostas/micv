@@ -6,16 +6,24 @@ export default () => css`
         
         #mi-monitor {
             position: relative;
-            margin: 25px 15px;
             height: 375px;
             width: 75%;
         }
 
         #interactive_intro {
             overflow: hidden;
-            //height: 525px;
         }
 
+        .page-nav {
+            position: absolute;
+            z-index: 100;
+            top: 75px;
+            right: 15px;
+            display: flex;
+            justify-content: flex-end;
+            width: 300px;
+            text-align: center;
+        }
 
     }
 

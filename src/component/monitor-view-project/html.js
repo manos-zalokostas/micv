@@ -9,14 +9,16 @@ export default (elem) => {
 
     const {title, section, description, screenshots, tools} = elem.project;
 
+    if(Array.isArray(tools.tool)) tools.tool.length = 15;
+
     return html`
-        <div id="project" class="mitem">
+        <article id="project" class="mitem">
             <h2>${title}</h2>
             <h4>${section}</h4>
-            <div class="mtext">${unsafeHTML(description)}</div>
+            <p>${unsafeHTML(description)}</p>
             <img src="${screenshots.shot[0]}" alt="${screenshots.shot[0]}"/>
-        </div>
-        <div id="project_tools">
+        </article>
+        <aside >
             ${Array.isArray(tools.tool)
                     ? tools.tool.map(
                             (val) => html`
@@ -26,7 +28,7 @@ export default (elem) => {
                             `
                     )
                     : ''}
-        </div>
+        </aside>
     `;
 
 }

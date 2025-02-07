@@ -14,7 +14,7 @@ export default (elem) => html`
              @content-transit=${elem.evtContentTransit}
              @domain-change=${elem.evtDomainChange}>
 
-        <div id="mi-page-content-menu">
+        <div class="page-nav">
             <content-menu></content-menu>
         </div>
 

@@ -13,8 +13,6 @@ class MonitorViewTool extends LitElement {
     static properties = {
         active: {type: Number},
         tools: {type: Array},
-
-        // slice: {type: Array, state: true},
         activeIndex: {type: Number, state: true},
         timer: {type: Object, state: true}
     };
@@ -34,7 +32,7 @@ class MonitorViewTool extends LitElement {
     loop() {
         this.timer = setInterval(
             () => {
-                const step = 8;
+                const step = 12;
                 const start = this.activeIndex * step,
                     end = start + step;
                 // const pid = list[this.activeIndex][0]

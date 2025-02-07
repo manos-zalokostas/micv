@@ -2,7 +2,7 @@ import {css} from 'lit';
 
 export default () => css`
 
-    #project.mitem {
+    article {
 
         img {
             position: absolute;
@@ -20,35 +20,34 @@ export default () => css`
             color: tomato;
         }
 
-         h4 {
+        h4 {
             text-align: left;
             margin-left: 15px;
             color: goldenrod;
         }
 
-        .mtext {
-            float: left;
-            text-align: left;
-            overflow: hidden;
-            max-height: 245px;
-            margin-left: 50px;
-            width: 75%;
+        p {
             color: white;
-
-            #project.mitem .mtext > * {
-                display: inline;
-                margin: 0;
-                padding: 0;
-            }
+            text-align: left;
+            max-height: 200px;
+            max-width: 1000px;
+            overflow: hidden;
+            padding: 0 10px 10px 25px;
+            margin: 0;
         }
+
     }
 
 
-    #project_tools {
+    aside {
         position: absolute;
         bottom: 0;
+        display: flex;
+        justify-content: center;
+        gap: 2px;
         width: 100%;
 
+        
         img {
             max-height: 48px;
         }

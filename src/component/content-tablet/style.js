@@ -5,18 +5,6 @@ export default () => css`
         position: absolute;
         font-family: Tahoma, Geneva, sans-serif;
 
-        //header {
-        //    position: fixed;
-        //    z-index: 1;
-        //    //opacity: 0.3;
-        //    text-align: center;
-        //    font-size: 200em;
-        //    //color: black;
-        //    color:gainsboro;
-        //    line-height: 0.34;
-        //    width: 100%;
-        //}
-
         nav {
             display: flex;
             z-index: 5;
@@ -39,7 +27,7 @@ export default () => css`
                 color: white;
                 padding: 10px;
                 min-height: 300px;
-                width: 675px;
+                width: 575px;
                 background: #555;
 
                 button {

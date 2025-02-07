@@ -12,7 +12,7 @@ export default (elem) => {
 
         <header>
 
-            <div id="ititle">
+            <div>
                 <button
                         @click="${() => elem.dispatchEvent(
                                 new CustomEvent('content-transit', {
@@ -23,16 +23,15 @@ export default (elem) => {
                         }">
                     back
                 </button>
+
+                <badge-category entry="${elem.asset.category}"></badge-category>
+
                 <h3>
                     <span>${elem.asset.title}</span>
                 </h3>
-                <div id="mi-badge-category">
-                    <badge-category entry="${elem.asset.category}"></badge-category>
-                </div>
-            </div>
 
-            <div id="project-tool">
                 <project-tool .entries="${elem.asset.tools.tool}"></project-tool>
+
             </div>
 
         </header>
@@ -40,16 +39,11 @@ export default (elem) => {
 
         <main>
 
-            <div id="ibody">
-
-                <div id="idescription">
-                    ${unsafeHTML(elem.asset.description)}
-                </div>
-
-                <image-slider .asset="${elem.asset}"></image-slider>
-
+            <div>
+                ${unsafeHTML(elem.asset.description)}
             </div>
 
+            <image-slider .asset="${elem.asset}"></image-slider>
 
         </main>
 

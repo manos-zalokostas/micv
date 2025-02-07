@@ -8,6 +8,9 @@ export default (elem) => {
 
     return html`
         <div id="mi-content-slider">
+            <img alt="image preview" src=${elem.active}
+                 class="placeholder ${elem.active ? 'active' : ''}"
+                 @click="${elem.showcase}"/>
             ${
                     elem.asset.screenshots.shot.map(
                             val => html`

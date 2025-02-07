@@ -16,46 +16,49 @@ const assets = {
 
 
 export default (elem) => html`
-    <div id="skills_preview" class="monitor">
-        <div id="skill_fields" class="mbuttons">
-            ${assets.auto.map(
-                    ([title, label, code]) => html`
-                        <button title="${title}"
-                                @click="${() => elem.loopContent(code)}">
-                            ${label}
-                        </button>
-                    `)}
-        </div>
+    <div class="monitor">
 
-        <div id="skill_controls" class="mcontrols">
-            ${assets.manual.map(
-                    val => html`
-                        <button title="${val}"
-                                @click="${() => elem.controContent(val)}">
-                            ${val}
-                        </button>
-                    `)}
-        </div>
+        <header>
+            <div class="mbuttons">
+                ${assets.auto.map(
+                        ([title, label, code]) => html`
+                            <button title="${title}"
+                                    @click="${() => elem.loopContent(code)}">
+                                ${label}
+                            </button>
+                        `)}
+            </div>
 
-        <ul>
-            <li id="mi-monitor-view">
-                ${
-                        // ('INTRO' === elem.activeContent && html`
-                        //     <monitor-view-intro></monitor-view-intro>
-                        // `)
-                        ('PROJ' === elem.activeContent && html`
-                            <monitor-view-project></monitor-view-project>
-                        `)
-                        || ('TOOL' === elem.activeContent && html`
-                            <monitor-view-tool></monitor-view-tool>
-                        `)
-                        || ('REFF' === elem.activeContent && html`
-                            <monitor-view-reference></monitor-view-reference>
-                        `)
-                        || ""
-                }
-            </li>
-        </ul>
+            <div class="mcontrols">
+                ${assets.manual.map(
+                        val => html`
+                            <button title="${val}"
+                                    @click="${() => elem.controContent(val)}">
+                                ${val}
+                            </button>
+                        `)}
+            </div>
+        </header>
+
+        <section>
+            <nav>
+                <a id="mi-monitor-view">
+                    ${
+                            ('PROJ' === elem.activeContent && html`
+                                <monitor-view-project></monitor-view-project>
+                            `)
+                            || ('TOOL' === elem.activeContent && html`
+                                <monitor-view-tool></monitor-view-tool>
+                            `)
+                            || ('REFF' === elem.activeContent && html`
+                                <monitor-view-reference></monitor-view-reference>
+                            `)
+                            || ""
+                    }
+                </a>
+            </nav>
+        </section>
+
     </div>
 `;
 

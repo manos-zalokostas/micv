@@ -6,7 +6,7 @@ import {PAGE} from "../../env";
 const assets = [
     ['about', PAGE.LAND],
     ['projects', PAGE.WORK],
-    ['certificates', PAGE.CERT],
+    // ['certificates', PAGE.CERT],
 ];
 const target = "#site_menu button";
 

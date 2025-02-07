@@ -2,22 +2,23 @@ import {css} from 'lit';
 
 export default () => css`
 
-    #menu_tabs {
-        font-family: Tahoma, Geneva, sans-serif;
-        text-align: left;
-        background: black;
+    nav {
+        display: flex;
+        gap: 10px;
 
-        a {
-            color: white;
-            text-decoration: none;
-            //font-size: 2em;
-            width: 100%;
+        button {
+            text-transform: uppercase;
+            font-family: Tahoma, Geneva, sans-serif;
+            border: none;
+            outline: none;
+            background: none;
 
             &:hover,
             &.active {
                 color: goldenrod;
             }
         }
+
     }
 
 `

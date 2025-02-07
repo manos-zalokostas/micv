@@ -9,17 +9,25 @@ export default () => css`
         position: relative;
         top: 50px;
 
-        #ititle {
-            h3 {
-                font-size: 2.5em;
-                color: orange;
-                display: inline;
-            }
-
+        h3 {
+            font-size: 2em;
+            color: orange;
         }
+
+        button {
+            color: white;
+            text-transform: uppercase;
+            font-family: verdana;
+            //width: 125px;
+            border: none;
+            outline: none;
+            padding: 10px;
+            background-color: #444;
+        }
+        
     }
 
-    #ibody {
+    main {
         position: relative;
         z-index: 10;
         display: flex;
@@ -27,12 +35,12 @@ export default () => css`
         gap: 50px;
         font-family: Verdana, Geneva, sans-serif;
         text-align: left;
-        margin: 50px;
+        margin: 100px 50px;
+        line-height: 3;
+    }
 
+    footer {
 
-        > div {
-            flex-basis: 50%;
-        }
     }
 
 `

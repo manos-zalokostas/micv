@@ -11,15 +11,15 @@ const target = "a";
 
 
 export default (elem) => html`
-    <nav id="menu_tabs">
-            ${assets.map(
-                    (val) => html`
-                        <a id="domain_${val}" href="#"
-                           class="${elem.active === val ? 'active' : ''}"
-                           @click="${(evt) => _fn(evt, () => elem.action(val))}">
-                            ${val.toUpperCase()}
-                        </a>
-                    `)}
+    <nav>
+        ${assets.map(
+                (val) => html`
+                    <button id="domain_${val}"
+                            class="${elem.active === val ? 'active' : ''}"
+                            @click="${(evt) => _fn(evt, () => elem.action(val))}">
+                        ${val.toUpperCase()}
+                    </button>
+                `)}
         </ul>
     </nav>
 `;

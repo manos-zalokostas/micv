@@ -18,6 +18,6 @@ export const VIEW = {
 
 
 export const _DEV = {
-    PAGE: PAGE.WORK,
+    PAGE: PAGE.LAND,
     // VIEW: VIEW.LAND.INTRO
 }

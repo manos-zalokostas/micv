@@ -9,20 +9,22 @@ const assets = [
 
 
 export default (elem) => html`
-    <nav id="introduction_menu">
-        ${assets.map(([val, code], i) => html`
-            <button class="${elem.active === i + 1 ? 'active' : ''}"
-                    @click="${(evt) => _fn(evt, () => {
-                        elem.action(i + 1);
-                        elem.dispatchEvent(
-                                new CustomEvent('intro-transit', {
-                                    detail: {code},
-                                    bubbles: true,
-                                }))
-                    })}">
-                ${val}
-            </button>
-        `)}
+    <nav>
+        ${assets.map(
+                ([val, code], i) => html`
+                    <button
+                            class="${elem.active === i + 1 ? 'active' : ''}"
+                            @click="${(evt) => _fn(evt, () => {
+                                elem.action(i + 1);
+                                elem.dispatchEvent(
+                                        new CustomEvent('intro-transit', {
+                                            detail: {code},
+                                            bubbles: true,
+                                        }))
+                            })}">
+                        ${val}
+                    </button>
+                `)}
     </nav>
 `;
 

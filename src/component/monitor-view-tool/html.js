@@ -6,11 +6,11 @@ const assets = [];
 
 export default (elem) => {
     return html`
-        <div id="tool" class="mitem">
+        <div id="view-tool" >
             ${elem.tools.map(
                     val => html`
-                        <div class="mgroupi">
-                            <h4>${val}</h4>
+                        <div>
+                            <h4>${val.replaceAll("_", " ")}</h4>
                             <img src="/images/tech_logos/${val}.jpg" alt="${val}"/>
                         </div>
                     `

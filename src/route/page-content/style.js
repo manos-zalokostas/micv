@@ -2,13 +2,15 @@ import {css} from 'lit';
 
 export default () => css`
 
-    #mi-page-content-menu {
+    .page-nav {
         position: absolute;
-        z-index: 10;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 75px
+        z-index: 100;
+        top: 75px;
+        right: 15px;
+        display: flex;
+        justify-content: flex-end;
+        width: 300px;
+        text-align: center;
     }
 
 

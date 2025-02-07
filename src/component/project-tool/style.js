@@ -5,7 +5,7 @@ export default () => css`
         a {
             text-decoration: none;
             img {
-                height: 48px;
+                height: 36px;
             }
         }
     }

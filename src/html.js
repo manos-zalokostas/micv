@@ -17,8 +17,6 @@ export default (elem) => html`
 
         <div id="wrapper">
 
-            <!--                <global-search></global-search>-->
-
             <div id="mi-global-menu">
                 <global-menu>
             </div>

@@ -1,13 +1,11 @@
-import {html} from 'lit';
-import "/src/component/intro-menu"
-import "/src/component/monitor"
+import "/src/component/timeline-interactive"
 import "/src/component/quote-author"
 import "/src/component/quote-intro"
+import "/src/component/intro-menu"
+import "/src/component/monitor"
 import "/src/component/timeline"
-import "/src/component/timeline-interactive"
+import {html} from 'lit';
 import {VIEW} from "../../env";
-
-const assets = [];
 
 
 export default (elem) => html`
@@ -16,19 +14,14 @@ export default (elem) => html`
             @intro-transit="${elem.evtIntroTransit}"
             @monitor-content="${elem.evtMonitorContent}">
 
-        <!--        <div id="mi-page-introduction-menu">-->
-        <!--            <global-search></global-search>-->
-        <!--        </div>-->
+        <div class="page-nav">
+            <intro-menu></intro-menu>
+        </div>
 
         <div id="mi-monitor">
             <joi-monitor></joi-monitor>
         </div>
 
-        <div id="mi-quote-author">
-            <quote-author></quote-author>
-        </div>
-
-        <intro-menu></intro-menu>
 
         <div id="interactive_intro">
             ${
@@ -41,9 +34,6 @@ export default (elem) => html`
                     || (VIEW.LAND.DOCU === elem.activeContent && html`
                         <timeline-interactive></timeline-interactive>
                     `)
-                    // || ('DOCU' === elem.activeContent && html`
-                    //     - PDF DOCUMENT -
-                    // `)
                     || ''
             }
         </div>
