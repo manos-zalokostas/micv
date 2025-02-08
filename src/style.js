@@ -19,35 +19,34 @@ export default () => css`
             height: 100%;
             padding: 15px;
             background-color: white;
-            
-            #mi-global-menu {
+
+            nav {
                 position: absolute;
+                z-index: 20;
                 right: 50px;
+                background: red;
             }
 
-            #mi-page-introduction {
+            article {
                 position: absolute;
-                top: 0;
                 left: 0;
                 width: 100vw;
                 height: 100vh;
+
+                #introduction {
+                    top: 0;
+                }
+
+                #content {
+                    top: 100%;
+                }
+
+                #credentials {
+                    top: 200%;
+                }
+
             }
 
-            #mi-page-content {
-                position: absolute;
-                //top:100%;
-                left: 0;
-                width: 100vw;
-                height: 100vh;
-            }
-
-            #mi-page-reference {
-                position: absolute;
-                //top:200%;
-                left: 0;
-                width: 100vw;
-                height: 100vh;
-            }
 
         }
 

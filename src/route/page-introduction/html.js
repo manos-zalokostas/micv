@@ -40,7 +40,3 @@ export default (elem) => html`
     </article>
 
 `;
-
-
-const target = "#site_menu a";
-const _fn = (evt, fn) => evt.target.matches(target) && fn();

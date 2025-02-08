@@ -7,7 +7,7 @@ import {unsafeHTML} from 'lit/directives/unsafe-html.js';
 export default (elem) => {
 
     return html`
-        <div id="mi-content-slider">
+        <section>
             <img alt="image preview" src=${elem.active}
                  class="placeholder ${elem.active ? 'active' : ''}"
                  @click="${elem.showcase}"/>
@@ -19,7 +19,7 @@ export default (elem) => {
                             `
                     )
             }
-        </div>
+            </div>
     `;
 }
 

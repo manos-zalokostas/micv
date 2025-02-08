@@ -1,7 +1,9 @@
 import {css} from 'lit';
 
 export default () => css`
-    #mi-content-slider {
+
+    section {
+
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-end;
@@ -28,4 +30,5 @@ export default () => css`
                 }
             }
         }
+
     }`

@@ -29,7 +29,7 @@ export default () => css`
 
     main {
         position: relative;
-        z-index: 10;
+        z-index: 5;
         display: flex;
         justify-content: space-between;
         gap: 50px;

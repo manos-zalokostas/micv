@@ -26,11 +26,12 @@ class PageIntroduction extends LitElement {
     }
 
     evtIntroTransit(evt) {
+        debugger
         this.activeContent = evt.detail.code
     }
 
     evtMonitorContent(evt) {
-        
+
         console.log(evt.detail)
         const Monitor = this.shadowRoot.querySelector('joi-monitor');
         Monitor.forceConent(evt.detail.code)

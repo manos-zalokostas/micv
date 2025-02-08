@@ -3,23 +3,20 @@ import "/src/component/content-menu";
 import "/src/component/content-tablet";
 import "/src/component/content-detail";
 
-const assets = [];
 
-const TMP_CSSCLASS = 'mi-transit-detail';
-// const TMP_CSSCLASS = '';
 
 export default (elem) => html`
 
-    <section id="mi-page-content-wrap "
-             @content-transit=${elem.evtContentTransit}
-             @domain-change=${elem.evtDomainChange}>
+    <article
+            @content-transit=${elem.evtContentTransit}
+            @domain-change=${elem.evtDomainChange}>
 
-        <div class="page-nav">
+        <header>
             <content-menu></content-menu>
-        </div>
+        </header>
 
-        <div id="mi-content-wrapper"
-             class="${TMP_CSSCLASS}">
+        <main id="mi-content-wrapper"
+              class="mi-transit-detail'">
 
             <div id="mi-content-control">
                 <content-tablet></content-tablet>
@@ -29,12 +26,8 @@ export default (elem) => html`
                 <content-detail></content-detail>
             </div>
 
-        </div>
+        </main>
 
-    </section>
+    </article>
 
 `;
-
-
-const target = "#site_menu a";
-const _fn = (evt, fn) => evt.target.matches(target) && fn();

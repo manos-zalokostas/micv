@@ -2,37 +2,39 @@ import {css} from 'lit';
 
 export default () => css`
 
-    .page-nav {
-        position: absolute;
-        z-index: 100;
-        top: 75px;
-        right: 15px;
+    article {
+
         display: flex;
-        justify-content: flex-end;
-        width: 300px;
-        text-align: center;
-    }
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100vw;
+        height: 100vh;
 
-
-    #mi-content-wrapper {
-        position: absolute;
-        z-index: 5;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 200%;
-        transition: all;
-        /*background: silver;*/
-
-        &.mi-transit-detail {
-            left: -100%;
+        header {
+            flex-basis: 100px;
         }
-    }
 
-    #mi-content-wrapper > div {
-        position: relative;
-        float: left;
-        width: 50%;
-        height: 100%;
+        main {
+            flex-basis: calc(100vh - 100px);
+            position: relative;
+            //z-index: 5;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 200%;
+            transition: all;
+
+            &.mi-transit-detail {
+                left: -100%;
+            }
+
+            > div {
+                position: relative;
+                float: left;
+                width: 50%;
+                height: 100%;
+            }
+
+        }
     }
 `

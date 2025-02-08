@@ -14,14 +14,17 @@ export default (elem) => html`
                 ([val, code], i) => html`
                     <button
                             class="${elem.active === i + 1 ? 'active' : ''}"
-                            @click="${(evt) => _fn(evt, () => {
+                            @click="${() => {
                                 elem.action(i + 1);
                                 elem.dispatchEvent(
                                         new CustomEvent('intro-transit', {
-                                            detail: {code},
-                                            bubbles: true,
-                                        }))
-                            })}">
+                                                    detail: {code},
+                                                    bubbles: true,
+                                                }
+                                        )
+                                )
+                            }
+                            }">
                         ${val}
                     </button>
                 `)}

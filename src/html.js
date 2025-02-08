@@ -17,36 +17,38 @@ export default (elem) => html`
 
         <div id="wrapper">
 
-            <div id="mi-global-menu">
+            <nav>
                 <global-menu>
-            </div>
+            </nav>
 
-            ${
-                    (PAGE.LAND === elem.display && html`
-                        <div id="mi-page-introduction">
-                            <page-introduction></page-introduction>
-                        </div>
-                    `)
+            <article>
+                ${
+                        (PAGE.LAND === elem.display && html`
+                            <div id="introduction">
+                                <page-introduction></page-introduction>
+                            </div>
+                        `)
 
-                    || (PAGE.WORK === elem.display && html`
-                        <div id="mi-page-content">
-                            <page-content></page-content>
-                        </div>
-                    `)
+                        || (PAGE.WORK === elem.display && html`
+                            <div id="content">
+                                <page-content></page-content>
+                            </div>
+                        `)
 
-                    || (PAGE.CERT === elem.display && html`
-                        <div id="mi-page-reference">
-                            <page-reference></page-reference>
-                        </div>
-                    `)
-                    || ''
+                        || (PAGE.CERT === elem.display && html`
+                            <div id="credentials">
+                                <page-reference></page-reference>
+                            </div>
+                        `)
+                        || ''
 
-            }
+                }
+            </article>
         </div>
 
     </div>
 `;
 
 
-const target = "#site_menu a";
-const _fn = (evt, fn) => evt.target.matches(target) && fn();
+// const target = "#site_menu a";
+// const _fn = (evt, fn) => evt.target.matches(target) && fn();
