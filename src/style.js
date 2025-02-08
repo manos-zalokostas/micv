@@ -19,6 +19,11 @@ export default () => css`
             height: 100%;
             padding: 15px;
             background-color: white;
+            
+            #mi-global-menu {
+                position: absolute;
+                right: 50px;
+            }
 
             #mi-page-introduction {
                 position: absolute;

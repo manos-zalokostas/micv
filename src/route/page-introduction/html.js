@@ -14,16 +14,15 @@ export default (elem) => html`
             @intro-transit="${elem.evtIntroTransit}"
             @monitor-content="${elem.evtMonitorContent}">
 
-        <div class="page-nav">
+        <header>
             <intro-menu></intro-menu>
-        </div>
+        </header>
 
-        <div id="mi-monitor">
+        <aside id="mi-monitor">
             <joi-monitor></joi-monitor>
-        </div>
+        </aside>
 
-
-        <div id="interactive_intro">
+        <main>
             ${
                     (VIEW.LAND.INTRO === elem.activeContent && html`
                         <quote-intro></quote-intro>
@@ -36,7 +35,7 @@ export default (elem) => html`
                     `)
                     || ''
             }
-        </div>
+        </main>
 
     </article>
 

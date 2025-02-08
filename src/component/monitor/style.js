@@ -2,13 +2,11 @@ import {css} from 'lit';
 
 export default () => css`
 
-    .monitor {
-
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+    article {
+        position: relative;
+        width: 96vw;
+        margin: 0 2vw;
+        height: 400px;
         cursor: pointer;
         overflow: hidden;
         border-bottom: 4px solid black;
@@ -16,12 +14,11 @@ export default () => css`
         background-color: #444;
 
         header {
-            position: absolute;
-            z-index: 5;
-            top: -4px;
+            position: relative;
+            z-index: 10;
             display: flex;
-            justify-content: center;
-            background: radial-gradient(black, transparent);
+            justify-content: space-between;
+            background: linear-gradient(0,#555, #444);
             width: 100%;
 
             button {
@@ -32,7 +29,7 @@ export default () => css`
                 border: none;
                 outline: none;
                 width: 75px;
-                background: black;
+                background: #555
             }
 
         }

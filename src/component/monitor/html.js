@@ -16,7 +16,7 @@ const assets = {
 
 
 export default (elem) => html`
-    <div class="monitor">
+    <article>
 
         <header>
             <div class="mbuttons">
@@ -59,7 +59,7 @@ export default (elem) => html`
             </nav>
         </section>
 
-    </div>
+    </article>
 `;
 
 
