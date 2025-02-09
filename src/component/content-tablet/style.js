@@ -1,23 +1,20 @@
 import {css} from 'lit';
 
 export default () => css`
-    .mi-tablet {
-        position: absolute;
-        font-family: Tahoma, Geneva, sans-serif;
 
         nav {
             display: flex;
-            z-index: 5;
             flex-wrap: wrap;
             justify-content: space-evenly;
             gap: 10px;
             position: relative;
+            z-index: 5;
+            font-family: Tahoma, Geneva, sans-serif;
             height: 90vh;
             overflow: auto;
-            margin-top: 75px;
 
 
-            .tgroupi {
+            section {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-evenly;
@@ -28,7 +25,7 @@ export default () => css`
                 padding: 10px;
                 min-height: 300px;
                 width: 575px;
-                background: #555;
+                background: #444;
 
                 button {
                     position: absolute;
@@ -49,8 +46,6 @@ export default () => css`
                 }
 
                 aside {
-                    display: flex;
-                    display: none;
                     position: absolute;
                     z-index: 6;
                     right: 15px;

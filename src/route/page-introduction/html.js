@@ -30,9 +30,9 @@ export default (elem) => html`
                     || (VIEW.LAND.RESU === elem.activeContent && html`
                         <joi-timeline></joi-timeline>
                     `)
-                    || (VIEW.LAND.DOCU === elem.activeContent && html`
-                        <timeline-interactive></timeline-interactive>
-                    `)
+                    // || (VIEW.LAND.DOCU === elem.activeContent && html`
+                    //     <timeline-interactive></timeline-interactive>
+                    // `)
                     || ''
             }
         </main>

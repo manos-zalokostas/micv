@@ -3,19 +3,19 @@ import {assets} from "./asset";
 
 
 export default (elem) => html`
-    <div id="resume_cv_field">
-        
-        <div id="cv_description-control">
-            <em>comments</em>
-            <input type="checkbox" id="cv_comments"
-                   @click="${elem.action}"/>
-        </div>
 
-        <div id="resume-wrap">
+    <article>
 
-            <p id="cv_description">
+        <fieldset>
+            <label>comments</label>
+            <input type="checkbox" @click="${elem.action}"/>
+        </fieldset>
+
+        <nav>
+            <p>
                 ${assets.map(
                         ([year, title, info, codes]) => html`
+
                             <section>
 
                                 <header>
@@ -39,10 +39,8 @@ export default (elem) => html`
                             </section>
                         `)}
             </p>
+
         </div>
-    </div>
+
+    </article>
 `;
-
-
-const target = "#site_menu a";
-const _fn = (evt, fn) => evt.target.matches(target) && fn();

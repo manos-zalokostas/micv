@@ -1,18 +1,14 @@
 import {css} from 'lit';
 
 export default () => css`
-    .main_txt,
-    .aux_txt {
-        //float: right;
-        text-align: left;
-        font-size: 1.2em;
+    article {
         padding: 25px;
-        //font-family: sans-serif;
-        //width: 90%;
-        //margin: 0;
-        //color: #555;
-        //border-radius: 10px;
-    }
+        font-size: 1.2em;
 
+        section {
+            text-align: left;
+            margin: 50px 0;
+        }
+    }
 
 `

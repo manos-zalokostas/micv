@@ -11,15 +11,18 @@ export default () => css`
         height: 100vh;
 
         header {
-            flex-basis: 100px;
+            height: 100px;
+            margin: 0;
         }
 
         aside {
-            flex-basis: 375px;
+            height: 375px;
+            margin: 10px 0 50px 0;
         }
 
         main {
-            flex-basis: calc(100vh - 475px);
+            height: calc(100vh - 475px);
+            overflow: auto;
         }
 
     }

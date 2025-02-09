@@ -15,49 +15,41 @@ const fn = elem => {
 
 export default (elem) => {
     return html`
-        <section class="mi-tablet">
+        <nav class="mi-tablet">
 
-            <!--            <header>-->
-                <!--                <strong>${elem.domain === 'work' ? 'desktop' : elem.domain}</strong>-->
-            <!--            </header>-->
-
-            <nav>
-                ${fn(elem).map((o) => html`
-                    <section class="tgroupi">
-                        <button @click="${() => elem.dispatchEvent(
-                                new CustomEvent('content-transit', {
-                                            detail: {
-                                                transit: true,
-                                                entryId: o.id
-                                            },
-                                            bubbles: true,        // Event travels up the DOM tree
-                                        }
-                                ))}">
-                            open
-                        </button>
+            ${fn(elem).map((o) => html`
+                <section>
+                    <button @click="${() => elem.dispatchEvent(
+                            new CustomEvent('content-transit', {
+                                        detail: {
+                                            transit: true,
+                                            entryId: o.id
+                                        },
+                                        bubbles: true,        // Event travels up the DOM tree
+                                    }
+                            ))}">
+                        open
+                    </button>
 
 
-                        <small>${o.category}</small>
-                        <strong>${o.title}
-                            <small>${o.id}</small>
-                        </strong>
-                        <aside>${Array.isArray(o.tools.tool) && o.tools.tool.map(
-                                tool => html`
-                                    <img src='/images/tech_logos/${tool}.jpg' alt="${tool}"/>
-                                `)}
-                        </aside>
-                        <p>
-                            <span>${o.description.substring(0, 200)}<em>&nbsp&nbsp;...more</em></span>
-                        </p>
-                        <img src=" ${o.screenshots.shot[0]}
+                    <small>${o.category}</small>
+                    <strong>${o.title}
+                        <small>${o.id}</small>
+                    </strong>
+                    <aside>${Array.isArray(o.tools.tool) && o.tools.tool.map(
+                            tool => html`
+                                <img src='/images/tech_logos/${tool}.jpg' alt="${tool}"/>
+                            `)}
+                    </aside>
+                    <p>
+                        <span>${o.description.substring(0, 200)}<em>&nbsp&nbsp;...more</em></span>
+                    </p>
+                    <img src=" ${o.screenshots.shot[0]}
                         " alt=${o.title}>
-                    </section>
-                `)}
-            </nav>
+                </section>
+            `)}
 
-        </section>
+        </nav>
     `;
 }
 
-const target = "#site_menu a";
-const _fn = (evt, fn) => evt.target.matches(target) && fn();

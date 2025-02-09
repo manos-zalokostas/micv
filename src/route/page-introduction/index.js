@@ -26,7 +26,6 @@ class PageIntroduction extends LitElement {
     }
 
     evtIntroTransit(evt) {
-        debugger
         this.activeContent = evt.detail.code
     }
 
