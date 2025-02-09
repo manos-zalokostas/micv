@@ -2,6 +2,7 @@ import {html} from 'lit';
 import "/src/component/content-menu";
 import "/src/component/content-tablet";
 import "/src/component/content-detail";
+import {_DEV, VIEW} from "../../env";
 
 
 
@@ -15,14 +16,13 @@ export default (elem) => html`
             <content-menu></content-menu>
         </header>
 
-        <main id="mi-content-wrapper"
-              class="mi-transit-detail'">
+        <main class="${_DEV.VIEW === VIEW.WORK.CONT ? 'mi-transit-detail' : ''}">
 
-            <div id="mi-content-control">
+            <div>
                 <content-tablet></content-tablet>
             </div>
 
-            <div id="mi-content-detail">
+            <div>
                 <content-detail></content-detail>
             </div>
 

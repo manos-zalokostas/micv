@@ -3,12 +3,12 @@ import {css} from 'lit';
 export default () => css`
 
     article {
-
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         width: 100vw;
         height: 100vh;
+        //padding: 25px;
 
         header {
             flex-basis: 100px;
@@ -23,6 +23,7 @@ export default () => css`
             height: 100%;
             width: 200%;
             transition: all;
+            //padding: 25px;
 
             &.mi-transit-detail {
                 left: -100%;

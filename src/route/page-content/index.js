@@ -32,7 +32,7 @@ class PageContent extends LitElement {
 
     evtContentTransit(evt) {
         console.log(' -- CONTENT TRANSIT FUNCTION: ', evt.detail)
-        const nodeWrap = this.shadowRoot.querySelector('#mi-content-wrapper');
+        const nodeWrap = this.shadowRoot.querySelector('main');
         const nodeDetail = this.shadowRoot.querySelector('content-detail');
         if (evt.detail.transit) {
             const entry=itemById(evt.detail.entryId);

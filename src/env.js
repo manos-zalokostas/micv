@@ -11,13 +11,16 @@ export const VIEW = {
         RESU: 2,
         DOCU: 3,
     },
-    WORK: {},
+    WORK: {
+        NAVI: 1,
+        CONT: 2,
+    },
     CERT: {},
 
 }
 
 
 export const _DEV = {
-    PAGE: PAGE.LAND,
-    // VIEW: VIEW.LAND.INTRO
+    PAGE: PAGE.WORK,
+    VIEW: VIEW.WORK.CONT
 }

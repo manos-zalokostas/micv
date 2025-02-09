@@ -2,92 +2,92 @@ import {css} from 'lit';
 
 export default () => css`
 
-        nav {
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 10px;
+        position: relative;
+        z-index: 5;
+        font-family: Tahoma, Geneva, sans-serif;
+        height: 90vh;
+        overflow: auto;
+
+
+        a {
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
             justify-content: space-evenly;
-            gap: 10px;
             position: relative;
-            z-index: 5;
-            font-family: Tahoma, Geneva, sans-serif;
-            height: 90vh;
-            overflow: auto;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            min-height: 300px;
+            width: 575px;
+            overflow: hidden;
+            background: #444;
 
+            //button {
+            //    position: absolute;
+            //    z-index: 10;
+            //    right: 5px;
+            //    top: 5px;
+            //}
 
-            section {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
-                position: relative;
-                overflow: hidden;
+            strong {
+                font-size: 32px;
+                color: tomato;
+                width: 50%;
+            }
 
-                color: white;
-                padding: 10px;
-                min-height: 300px;
-                width: 575px;
-                background: #444;
+            small {
+                color: goldenrod;
+                width: 50%;
+            }
 
-                button {
-                    position: absolute;
-                    z-index: 10;
-                    right: 5px;
-                    top: 5px;
+            aside {
+                position: absolute;
+                z-index: 6;
+                right: 15px;
+                top: 15px;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+                gap: 5px;
+                width: 46%;
+
+                img {
+                    position: initial;
+                    opacity: 0;
+                    width: 32px;
+                    height: 32px;
                 }
+            }
 
-                strong {
-                    font-size: 32px;
-                    color: tomato;
-                    width: 50%;
-                }
+            img {
+                position: absolute;
+                z-index: 5;
+                left: 50%;
+                opacity: .2;
+                border: 4px solid gainsboro;
+                width: 100%;
 
-                small {
-                    color: goldenrod;
-                    width: 50%;
+            }
+
+            &:hover {
+                img {
+                    left: 40%;
                 }
 
                 aside {
-                    position: absolute;
-                    z-index: 6;
-                    right: 15px;
-                    top: 15px;
-                    flex-wrap: wrap;
-                    justify-content: flex-end;
-                    gap: 5px;
-                    width: 46%;
-
                     img {
-                        position: initial;
-                        opacity: 0;
-                        width: 32px;
-                        height: 32px;
+                        opacity: 1;
                     }
                 }
-
-                img {
-                    position: absolute;
-                    z-index: 5;
-                    left: 50%;
-                    opacity: .2;
-                    border: 4px solid gainsboro;
-                    width: 100%;
-
-                }
-
-                &:hover {
-                    img {
-                        left: 40%;
-                    }
-
-                    aside {
-                        img {
-                            opacity: 1;
-                        }
-                    }
-                }
-
             }
+
         }
     }
+}
 
 
 `

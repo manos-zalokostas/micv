@@ -18,8 +18,9 @@ export default (elem) => {
         <nav class="mi-tablet">
 
             ${fn(elem).map((o) => html`
-                <section>
-                    <button @click="${() => elem.dispatchEvent(
+                <a href="#" @click="${(evt) => {
+                    evt.preventDefault()
+                    elem.dispatchEvent(
                             new CustomEvent('content-transit', {
                                         detail: {
                                             transit: true,
@@ -27,9 +28,9 @@ export default (elem) => {
                                         },
                                         bubbles: true,        // Event travels up the DOM tree
                                     }
-                            ))}">
-                        open
-                    </button>
+                            ))
+                }
+                }">
 
 
                     <small>${o.category}</small>
@@ -46,7 +47,7 @@ export default (elem) => {
                     </p>
                     <img src=" ${o.screenshots.shot[0]}
                         " alt=${o.title}>
-                </section>
+                </a>
             `)}
 
         </nav>

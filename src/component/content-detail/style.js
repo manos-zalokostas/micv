@@ -4,10 +4,13 @@ export default () => css`
 
     header {
         display: flex;
-        justify-content: space-between;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
         align-items: center;
-        position: relative;
-        top: 50px;
+        width: 100%;
+        max-height: 175px;
+        
+        //background: red;
 
         h3 {
             font-size: 2em;
@@ -28,19 +31,27 @@ export default () => css`
     }
 
     main {
+        
         position: relative;
         z-index: 5;
         display: flex;
         justify-content: space-between;
+        align-items: flex-start;
         gap: 50px;
         font-family: Verdana, Geneva, sans-serif;
         text-align: left;
-        margin: 100px 50px;
-        line-height: 3;
+        //margin: 100px 50px;
+        line-height: 2;
+        padding: 25px;
+        height: calc(100vh - 300px);
+        overflow: auto;
+        }
+        //background: yellowgreen;
     }
 
     footer {
 
+        background: dodgerblue;
     }
 
 `
