@@ -3,8 +3,8 @@ import {PAGE} from "../../env";
 
 
 const assets = [
-    ['about', PAGE.LAND],
-    ['projects', PAGE.WORK],
+    ['RESUME', PAGE.LAND],
+    ['PROJECTS', PAGE.WORK],
     // ['certificates', PAGE.CERT],
 ];
 

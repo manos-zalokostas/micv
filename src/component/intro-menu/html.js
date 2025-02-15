@@ -3,8 +3,8 @@ import {PAGE, VIEW} from "../../env";
 
 
 const assets = [
-    ['introduction', VIEW.LAND.INTRO],
-    ['resume', VIEW.LAND.RESU],
+    ['welcome', VIEW.LAND.INTRO],
+    ['timeline', VIEW.LAND.RESU],
 ];
 
 

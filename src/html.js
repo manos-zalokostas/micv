@@ -48,7 +48,3 @@ export default (elem) => html`
 
     </div>
 `;
-
-
-// const target = "#site_menu a";
-// const _fn = (evt, fn) => evt.target.matches(target) && fn();

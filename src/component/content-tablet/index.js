@@ -16,7 +16,7 @@ class ContentTablet extends LitElement {
 
     constructor() {
         super();
-        this.domain = 'WEB';
+        this.domain = 'WORK';
         this.assets = groupByDomain(this.domain);
     }
 

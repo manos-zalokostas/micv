@@ -82,7 +82,7 @@ export const groupBySection = (section) => {
  * @param domain
  * @returns {[]}
  */
-export const groupByDomain = (domain = 'WEB') => {
+export const groupByDomain = (domain = 'WORK') => {
 
     domain = domain.toUpperCase();
 
@@ -107,7 +107,7 @@ export const groupByDomain = (domain = 'WEB') => {
 
 
 const SAM_WEB = {
-    "domain": "WEB",
+    "domain": "WORK",
     "id": "WB12",
     "section": "Application Development",
     "category": "Design and Development",

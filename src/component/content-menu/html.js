@@ -2,9 +2,8 @@ import {html} from 'lit';
 
 
 const assets = [
-    'web',
+    'work',
     'studies',
-    'work'
 ];
 
 

@@ -13,18 +13,17 @@ export default () => css`
             top: 0;
             left: 0;
             z-index: 1;
-            text-align: center;
-            font-size: 1em;
+            //text-align: center;
             width: 100%;
             height: 100%;
             padding: 15px;
-            background-color: white;
+            //background-color: white;
 
             nav {
                 position: absolute;
                 z-index: 20;
-                right: 50px;
-                background: red;
+                left: 50px;
+                //background: red;
             }
 
             article {

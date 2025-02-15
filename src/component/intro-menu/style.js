@@ -3,21 +3,23 @@ import {css} from 'lit';
 export default () => css`
 
     nav {
+        text-align: right;
 
         button {
             text-transform: uppercase;
             font-family: Tahoma, Geneva, sans-serif;
             border: none;
             outline: none;
-            border-bottom: 2px solid;
+            border-bottom: 1px solid #ccc;
             padding: 5px 10px;
             width: 150px;
-            margin: 15px;
-            background: none;
+            margin: 5px;
+            text-align: right;
+            background: white;
 
             &:hover,
             &.active {
-                color: goldenrod;
+                color: darkgoldenrod;
             }
         }
 

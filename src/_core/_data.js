@@ -1,596 +1,4 @@
 export default [
-    {
-        "domain": "WEB",
-        "id": "WB01",
-        "section": "Education",
-        "category": "-",
-        "title": "Schedule Handler",
-        "tools": {
-            "tool": "-"
-        },
-        "description": " <ul> <p>The system is originally built for providing functionality with regard to the following sections: </p> <span> <li>The system is an instrument for users to arrange, conduct and maintain an annual school   schedule in a relative intuitive and easy way. The users should be provided with guidance to those cases where the operation of the system is ambiguous. </li> <li>The system will maintain hierarchically privileged accessing roles for its users, and top-privileged roles should maintain the faculty to adjust the privileges of the other user-roles.</li> <li>The system maintains diverse accessing level sections, where sections of high importance can only be accessed by the corresponding accessing user roles, as those are imposed by administration.</li> <li>The arrangement of the schedule can only be conducted by highly privileged roles and will be iterated automatically by the system, but verified manually by lower privileged roles, on a daily basis.</li> </span> <li>The schedule can override the formal arrangements or can change completely during a running semester. The system will need to easily integrate the changes and those must be provided for verification as well. </li> <li>The informative resources of the organizations (like registered courses, tutors, campuses addresses etc) can be accessed effectively by all user roles of the system, but only authorized users will be in position to add new resources to the system. </li> <li>The system will maintain a registry where the users interaction with the system can be monitored.</li> <li>The system should be deployed in a secure environment and will maintain the privacy of the registered records from unauthorized users.</li> <li><ul>The system should maintain extra faculties for top-level privileged roles as to: <li>make overall estimations for given time-periods, based on the daily recordings</li> <li>securely backup and/or retrieve the database data on demand</li> </ul></li> </ul>",
-        "screenshots": {
-            "shot": [
-                "images/sheduler/pic_msch.jpg",
-                "images/sheduler/pic_hours.jpg",
-                "images/sheduler/pic_restrict.jpg",
-                "images/sheduler/pic_backup.jpg"
-            ]
-        },
-        "score": "-",
-        "tutor": "-",
-        "comment": "-",
-        "files": {
-            "file": [
-                "images/sheduler/fp_scheduler_contents.pdf",
-                "images/sheduler/fp_manual.pdf",
-                "images/sheduler/fp_database_design.pdf",
-                "images/sheduler/fp_technical_details.pdf"
-            ]
-        },
-        "media": ""
-    },
-    {
-        "domain": "WEB",
-        "id": "WB02",
-        "section": "Merchandise",
-        "category": "Design and Development",
-        "title": "Elgreg",
-        "tools": {
-            "tool": [
-                "web_application",
-                "web_standards",
-                "xml",
-                "javascript",
-                "ajax",
-                "dreamweaver",
-                "flash"
-            ]
-        },
-        "description": " <span><p>Elgreg is a building constructions company that provides customers with goods such as marbles, granites, tiles etc, while at the erection state of the premise. </p> <p>Throught the web site the company wishes to showcase its products and provide the 'look and feel' of the company to its prospect customers.</p> <p style=\"font-size:x-small\"><i>*The site is not concluded when it comes to textual material. Therefore most text areas that are found within this domain were originaly placed only for visual matters. </i></p></span>",
-        "screenshots": {
-            "shot": [
-                "images/elgreg/elgreg_home.jpg",
-                "images/elgreg/contact.jpg",
-                "images/elgreg/full_preview.jpg",
-                "images/elgreg/prods_preview.jpg",
-                "images/elgreg/slide_show.jpg"
-            ]
-        },
-        "score": "-",
-        "tutor": "-",
-        "comment": "-",
-        "files": {
-            "file": ""
-        },
-        "media": {
-            "movie": ""
-        }
-    },
-    {
-        "domain": "WEB",
-        "id": "WB03",
-        "section": "Merchandise",
-        "category": "Design and Development",
-        "title": "ELGREG [2013]",
-        "tools": {
-            "tool": [
-                "web_application",
-                "web_standards",
-                "javascript",
-                "ajax",
-                "xml",
-                "xslt",
-                "xpath",
-                "php",
-                "html5",
-                "css3",
-                "responsive_design",
-                "seo",
-                "eclipse"
-            ]
-        },
-        "description": " <h5>STORE-FRONT</h5> <ul> <li>• SEO-Friendly Design - Readable Seo-Friendly URLS</li> <li>• Breadcrumb (dynamic user navigation)</li> <li>• Sitemap</li> <li>• Responsive Design</li> <li>• Back-end Administration - Customizable</li> <li>• Language Translation </li> <li>• Animating Features (Javascript)</li> <li>• Javascript History API</li> </ul> <h5>BACK-END ADMINISTRATION</h5> <ul> <span> <li>A. Insert Data</li> <li> - Insert Data Row (with form)</li> <li> - Insert Complete Files (.CSV)</li> <li>B Update Data </li> <li> - Data Row (inline)</li> <li> - Distinct Values</li> <li>C. Delete Data</li> <li>D. Filter Data (+ Multiple Filters)</li> <li>E. Avoid Duplicate Values</li> <li>F. Messages to Users (Saved, Not Saved etc)</li> <li>G. Ascend/Descend Order (+ filtered)</li> <li>H. Upload Images -> 1 upload produces 3 images with scaled image sizes</li> </span> </ul>",
-        "screenshots": {
-            "shot": [
-                "images/elgreg_upd/home.jpg",
-                "images/elgreg_upd/product_category.jpg",
-                "images/elgreg_upd/partner.jpg",
-                "images/elgreg_upd/product_full_description.jpg",
-                "images/elgreg_upd/administration.jpg"
-            ]
-        },
-        "score": "-",
-        "tutor": "-",
-        "comment": "-",
-        "files": {
-            "file": ""
-        },
-        "media": {
-            "movie": ""
-        }
-    },
-    {
-        "domain": "WEB",
-        "id": "WB04",
-        "section": "Portfolio",
-        "category": "Design and Development",
-        "title": "Curriculum Vitae",
-        "tools": {
-            "tool": [
-                "web_application",
-                "web_standards",
-                "javascript",
-                "jquery",
-                "xml",
-                "chrome_developer_tools",
-                "eclipse",
-                "css3",
-                "html"
-            ]
-        },
-        "description": " <span> <ul> <li>Restrictively Dynamic Implementation (Every element designed with jQuery-Javascript)</li> <li>Animating Features - Dynamicaly Navigating menus - Scrolable Main Pages (Not loaded)</li> <li>Use Keywords to Categorize Projects and Groups-Navigates upon</li> <li>Dynimacally makes the decisions and creates hosts for presenting :</li> <li> 1. Images - JPEG</li> <li> 2. Documents - PDF</li> <li> 2. Videos - AVI (builds connection to Google Drive)</li> </ul> </span>",
-        "screenshots": {
-            "shot": [
-                "images/micv/studies_grouped.jpg",
-                "images/micv/skills_showcase.jpg",
-                "images/micv/video_hosted.jpg",
-                "images/micv/projects_preview.jpg",
-                "images/micv/extra_info.jpg"
-            ]
-        },
-        "score": "-",
-        "tutor": "-",
-        "comment": "-",
-        "files": {
-            "file": ""
-        },
-        "media": {
-            "movie": "-"
-        }
-    },
-    {
-        "domain": "WEB",
-        "id": "WB05",
-        "section": "Education",
-        "category": "Design and Development",
-        "title": "Pearson E-learning",
-        "tools": {
-            "tool": [
-                "web_application",
-                "javascript",
-                "jquery",
-                "json",
-                "git",
-                "sourcetree",
-                "html5",
-                "css3"
-            ]
-        },
-        "description": " <p> E-learning system delivered for Pearson USA, totally consisting by Javascript-Jquery and JSON folded data. During a short-time period that I have been occupied for CSSEducation company I have delivered a demo of the Javascript engine. Its operation is described below: </p> <ul> <span> <li>Design a Json string-patterned API that plain users would need to issue for giving instructions to Javascript engine.</li> <li>Following the pattern-instructions, Javascript engine distincts and allocates page content as: </li> <li> •  Interactive Page Title and Page Description on top of the page, </li> <li> •  Interactive Page Content Description on the left of the page, </li> <li> •  Main Interactive Content on the right, </li> <li> Main Content issues most of interactivity addressed as: </li> <li> •  Aligns multiple interactive paragraph examples along with their functionality-initializing handlers</li> <li> •  Paragraph content-parts come preformated with styles, according to user instructions issued by the API</li> <li> •  Paragraph parts deliver text animating effects</li> <li> •  Paragraph handlers mostly issue video/audio emerging events</li> <li> •  Audio/Video events are synchronized with prioritized text animating effects</li> <li> •  Handler events bring paragraphs to the original preformated state and immediately address the anime</li> <li> •  A variety of text animating effects are addressed, regarded to API issued instructions</li> </span> </ul>",
-        "screenshots": {
-            "shot": [
-                "images/pearson/simple_words.png",
-                "images/pearson/tutor_intro.png",
-                "images/pearson/anime_audio_synch_1.png",
-                "images/pearson/anime_audio_synch_2.png"
-            ]
-        },
-        "score": "-",
-        "tutor": "-",
-        "comment": "-",
-        "files": "",
-        "media": {
-            "movie": ""
-        }
-    },
-    {
-        "domain": "WEB",
-        "id": "WB06",
-        "section": "Safekeeping",
-        "category": "Design and Development",
-        "title": "DeltaComsos ERP",
-        "tools": {
-            "tool": [
-                "web_application",
-                "php",
-                "mvc",
-                "yii_mvc",
-                "mysql",
-                "oop",
-                "jquery",
-                "css3"
-            ]
-        },
-        "description": " <p> Company's Employee Management systems build with the power of MVC, Yii Framework, that extends to thousands lines long functionality. The system mainly implements PHP, MySQL, JQuery and multiple Javascript plugins like Bootstrap for CSS, Ajaxplorer file sytems, Lightbox and more. During a short time period that I was employeed for the company I have delivered the following results: </p> <ul> <span> <li>1. Plan an all-over from-scratch design for measuring employees monthly workhours. The legacy design had to be upgraded so that we could now count each working second instead of simply adding the succeeding hours. The proccess revealed erronous deliverables granted by the legacy workhour counter. The new design delivered accurate-to-second results, taking into perception each correlation among the business rules listed above: </li> <li> • DateZone Type: Simple Day - Holiday/Sunday.</li> <li> • ShiftZone Type : Plain Shift (8 Hours) - OverHour (81 Hour) - ExtraHours (9+ Hours).</li> <li> • HourZone Type: Morning - Night .</li> <li>2. Moreover the Shifts display, figured on an Interactive Board, would now need to visually alert Administration when the following conflicts occured: </li> <li> • Employees were prohibited from taking a Shift 12 Hours before their last Shift</li> <li> • Employees would need to follow a \"5-2\" Shifts Rule, issuing 5 working days and 2 Dayoffs during a week long time period</li> <li>3. An application migration to a new Host Server that brough various mulfunctions to extension plugins operation</li> <li>4. A major front-end facelift update, conforming the visual display to latest CSS3 standards with overall Crossbrowser Compatibility efficiency</li> </span> </ul>",
-        "screenshots": {
-            "shot": [
-                "images/deltacosmos/interactive_board.png",
-                "images/deltacosmos/month_workhour.png",
-                "images/deltacosmos/employee_info.png",
-                "images/deltacosmos/customer_guard.png",
-                "images/deltacosmos/map_monitor.png"
-            ]
-        },
-        "score": "-",
-        "tutor": "-",
-        "comment": "-",
-        "files": {
-            "file": "images/deltacosmos/delta_development.pdf"
-        },
-        "media": "-"
-    },
-
-    {
-        "domain": "WEB",
-        "id": "WB08",
-        "section": "Banking",
-        "category": "Design and Development",
-        "title": "Commerzbank Infobroker",
-        "tools": {
-            "tool": [
-                "web_application",
-                "javascript",
-                "php",
-                "css3",
-                "jquery",
-                "chrome_developer_tools",
-                "oop",
-                "requirements",
-                "teamwork",
-                "json",
-                "zend",
-                "twig",
-                "bootstrap",
-                "svn",
-                "phpstorm",
-                "security",
-                "testing",
-                "mvc"
-            ]
-        },
-        "description": "<h3>Contracted as a Frontend Developer part of multinational, scrum maintained team of web developers.</h3> <p>The objective was for the team to build a concurrent web solution for the German Commerzbank that would be used internally by company's employees, namely Infobroker.  The intranet would assist bank's employees to monitor,  evaluate and gain insight from data visualizations. <br /> My role was to adhere to design blueprints dictated by company's UI/UX experts and deliver interactive pages and widgets. Enabling daily web meetings with with foreign colleagues and data maintainers, we would need to resolve the required data and the paths to collect before delivering the solutions. <br /> Data would need to get collected with the use of a graphical interface that would ensure data security all the way through. By the time the project reached to a certain level of completeness, my job was moved to provide ticketing support services. </p> Key Responsibilities: <ul> <li>Front-end developer with OOP PHP Zend Framework & Javascript / Jquery (backend was a remote service)</li> <li>Follow explicit instructions to consume required data from remote web services and blueprint layouts to deliver UIs</li> <li>Provide ticketing solutions for acknowledged bugs</li> </ul>",
-        "screenshots": {
-            "shot": [
-                "images/commerzbank/certificates.png",
-                "images/commerzbank/indexsystem.png",
-                "images/commerzbank/indexwerte.png",
-                "images/commerzbank/stockexchange.png",
-                "images/commerzbank/topflop.png"
-            ]
-        },
-        "score": "-",
-        "tutor": "-",
-        "comment": "-",
-        "files": "-",
-        "media": "",
-        "link": ""
-    },
-    {
-        "domain": "WEB",
-        "id": "WB09",
-        "section": "Conferences",
-        "category": "Design and Development",
-        "title": "Noblelinx CRM",
-        "tools": {
-            "tool": [
-                "web_application",
-                "javascript",
-                "php",
-                "css3",
-                "jquery",
-                "chrome_developer_tools",
-                "oop",
-                "requirements",
-                "json",
-                "svn",
-                "phpstorm",
-                "virtualbox",
-                "linux_terminal",
-                "mysql",
-                "security",
-                "project_management",
-                "testing",
-                "mvc",
-                "apache",
-                "ubuntu",
-                "centos"
-            ]
-        },
-        "description": " <h3>Contracted as standalone Full Stack Developer to partner with an assigned American coordinator that would guide me through development tasks by providing the respective business requirements. Daily web meetings.</h3> <p>The overall objective was to upgrade, extend and maintain a legacy CRM commercial system that was build on top of PHP legacy constructs. My role was to make the app portable by detaching all hardcoded paths of the project from the server, invoke svn versioning, launch on an updated server and afterwards extend with new features. <br /> The project was large, consisting of more than 500 DB tables and the lack of any viable coding formation to separate diverse technologies was making it difficult to maintain. <br /> The result was to work on the same page with all mixed-up  on  thousand-lined pages. </p> <h4>Main Developments</h4> <ul> <li>Put application under SVN Versioning control</li> <li>Provide portability: Unroot the project that was harcoded  on the host and move all configuration data and links to custom-made external '.ini' configuration,</li> <li>Install and setup a Centos 5 copy of the Production to run as Staging environment and perform tests before updates publishing to Production.</li> <li>Set up a Ubuntu-based virtual 'Local' and Centos-based remote 'Staging' hosts to deploy and test application before move on 'Production'</li> <li>Set up a clone virtual machine (vbox) for development environment</li> <li>Implement Utility classes and a Core class, with MVC-like capabilities, as a root class to extend and inherit all essential activities for the newly invoked classes afterwards.</li> <li>Amongst others, newly initialized child classes, would genuinely have access to: Main and own Configuration, Database storage, Session storage, Access Restrictions, Self-Debug, Debug-Logs, Exceptions, Helper methods, and more.</li> <li>Synchronize 2 legacy Calendar libraries (1 php, 1 js) with Exchange Web Services (EWS) to enable control over Microsoft Calendar Events, User Tasks, Emails, Contacts etc</li> <li>Launch time evaluated,filtered, charts for performance auditing Employees / Teams / Managers / Directors</li> <li>Enforce 90-Days expiring passwords for all users, validated with unique tokens and time restricted activation boundaries,</li> </ul>",
-        "screenshots": {
-            "shot": [
-                "images/noblelinx/performance-manager.png",
-                "images/noblelinx/performance-director.png",
-                "images/noblelinx/logs.png"
-            ]
-        },
-        "score": "-",
-        "tutor": "-",
-        "comment": "-",
-        "files": {
-            "file": [
-                "images/noblelinx/diagram1.png",
-                "images/noblelinx/diagram2.png"
-            ]
-        },
-        "media": "",
-        "link": ""
-    },
-    {
-        "domain": "WEB",
-        "id": "WB10",
-        "section": "Warehouse",
-        "category": "Design and Development",
-        "title": "Ecep Technologies Inventory",
-        "tools": {
-            "tool": [
-                "web_application",
-                "javascript",
-                "php",
-                "css3",
-                "php",
-                "oop",
-                "requirements",
-                "mysql",
-                "laravel",
-                "bootstrap",
-                "git",
-                "phpstorm",
-                "mvc",
-                "rest_api"
-            ]
-        },
-        "description": "<h3>Contracted as standalone Full Stack Developer to design and build the company's warehouse inventory from scratch using a contemporary web framework, and utilizing the business requirement discussed daily with the owner on web calls.</h3> <p> The objective was to build a web system that would allow company's employees to perform daily workflow procedures handily and reduce the times needed to perform such tasks with spreadsheets and manpower. <br /> My role was to bring that system to life right from the ground, by communicating with the entrepreneur on a daily basis, to collect and elicit requirements. <br /> The initial task was to design and build a database of a centralized inventory application for company's products, and replace spreadsheets that were used instead. Following steps would issue the extensions  activities required to cover companies processes like purchases, deliveries, sales etc.</p> <h4>Main Developments</h4> <ul> <li>Design and build an efficient DB system by analyzing and evaluating legacy spreadsheet procedures for more than 500K distinct barcodes</li> <li>Use the Laravel MVC 5.1 Framework to as a robust and secure foundation to build the application and a REST-like API</li> <li>Use remote Git Repository to control development progress but also for deployments</li> <li>Create a Local virtual (VBOX) clone of Production for development purposes</li> <li> <p>Develop the core parts of the Application, ilke <br />- Product Imports with spreadsheets, barcode recognition, manually <br />- Product CRUD & Products Indexing w/ numerous filter combinations <br />- Indexing products lack / surplus <br />- Indexing of Purchases / Deliveries / Sales <br />- Instant evaluation of a devery in a way to identify lack / surplus on time <br />- Instant monitoring of past delivery status like complete / pending items </p> </li> </ul>",
-        "screenshots": {
-            "shot": [
-                "images/ecep/delivery_status.png",
-                "images/ecep/pending_purchaces.png",
-                "images/ecep/search_tool.png",
-                "images/ecep/purchase_details.png"
-            ]
-        },
-        "score": "-",
-        "tutor": "-",
-        "comment": "-",
-        "files": {
-            "file": [
-                "images/ecep/erd.png",
-                "images/ecep/search_tool_description.png",
-                "images/ecep/api_feed_json.png"
-            ]
-        },
-        "media": "",
-        "link": ""
-    },
-    {
-        "domain": "WEB",
-        "id": "WB11",
-        "section": "Hospitality",
-        "category": "Design and Development",
-        "title": "Cosmores Booking Engine",
-        "tools": {
-            "tool": [
-                "web_application",
-                "php",
-                "javascript",
-                "jquery",
-                "css3",
-                "oop",
-                "requirements",
-                "mysql",
-                "centos",
-                "security",
-                "git",
-                "rest_api"
-            ]
-        },
-        "description": "<h3>Employed as standalone Fullstack Developer to maintain and extend the company's products.</h3> <p> The objective was to update the company's products, increase and enforce security on critical fields and launch new tools and features <br /> My role as a fullstack developer was to update the overall environment of a more than a decade past developed PHP system, without any coding formation style and mixed up technologies (php, js, css) on huge pages. Additionally I would need to create some common reusable helper structures to assist me build new things properly. </p> Main Developments <ul> <li>Build common and explicit PHP helper structures to make development lifecycle natively simple and secure</li> <li> <p> Build a configurable, Javascript CORS widget for displaying best price of an affiliate hotels.</p> <br />- A new REST-like, PHP API build to accommodate the exchange of CORS data consumed by widget <br />- The widget travels from Cosmores to customer site in string formate and then self-installed with included javascript launcher <br />- The widget is build with vanilla Js and plain CSS in order to avoid confiict with installed Jquery / Bootstrap or own site styles <br />- The widget is compatible with IE 8, Safari, Chrome etc <br />- The widget is fully controllable and customizable from respective backend app. </p> </li> <li>Put the application under GIT versioning and create a master repository on a remote server</li> <li>Create a portable, local virtual clone (vbox) of the Production environment server, so that development and testing activities</li> restrain from Production.</li> <li> <p>Leverage the security processes overall: <br /> - Leverage the security of entry by blocking the front entrance and allow only recognizable devices to log in. The activity uses expirable tokens that are only accepted for limited amount of time, and provide respective messages to users for guidance. <br />- Enforce strong passwords with mixed char types and length <br />- Leverage the encryption/decryption procedures for all sensitive data in the DB, which led to more than 1M rows update <br />- Enforce a finite number of times informative data can be displayed before locked for ever <br />- Leverage the restriction rules for image uploads and malicious code indexing methods <br />- Invoke sanitize/filtering on data import/display respectively <br />- Enforce PDO with MySQL inserts <br />- Make extensive use of .httaccess for filtering urls, root and child directories with explicit rules for each </p> </li> </ul>",
-        "screenshots": {
-            "shot": [
-                "images/cosmores/compareme_config.png",
-                "images/cosmores/compareme_info.png"
-            ]
-        },
-        "score": "-",
-        "tutor": "-",
-        "comment": "-",
-        "files": {
-            "file": "images/cosmores/notificatons_info.png"
-        },
-        "media": "",
-        "link": ""
-    },
-    {
-        "domain": "WEB",
-        "id": "WB12",
-        "section": "Hospitality",
-        "category": "Design and Development",
-        "title": "Rateparity - Enhanced User Experince",
-        "tools": {
-            "tool": [
-                "web_application",
-                "javascript",
-                "reactjs",
-                "es6",
-                "css3",
-                "scss",
-                "requirements",
-                "nodejs",
-                "webpack",
-                "git",
-                "rest_api"
-            ]
-        },
-        "description": "<h3>Employed as standalone Frontend Developer to build fully customizable UI widgets and the backend configuration app  in association with a backend data api developer.</h3> <p> The objective was to create a new product that would explore the potentials of UI widgets and thus enter a new market for the company <br /> My role as a Frontend developer was to create the independable CORS empowered Javascript widgets that would load on affiliate sites. The widgets should invoke the latest Js trends, load on sites without causing or receiving Js / CSS defects and should be as lightweight as possible restraining from vaguely loading countless libraries. Additianally I was attached to build the backend configuration application. </p> <h4>Main Developments</h4> <u>FRONTEND WIDGETS</u> <ul> <li>Design and develop the app's Installer that can be used on affiliate sites with a single HTML “Head”entry</li> <li>Design and develop decoupled SPA widgets, that reside on their own domains and can be launched by installer on demand</li> <li> <p> Publish 5 distinct widget types, with 4 viewport layouts for each, to accommodate diversity of screen displays: <br /> - Price checks::          Integrates calendar that helps users check hotel prices per accommodation and compare with major booking channels <br />- Active offers::          Registered offers can be displayed with a user click <br />- Notifications::          Intresting metrics, in the form of notifications are displayed on sites screen <br />- Popup offers::          Offers can popup on user display at navigation time, based on submitted configuration </p> </li> <li>Utilize the latest React 16.8 build and make use of powerful features like Hooks, Code splitting, Lazy loading, Context api, Dynamic imports etc</li> <li>Make extensive use of cache so that widgets restrain from excessive calls to the remote service</li> <li>Structure the development environment with NodeJs, Webpack, Babel etc</li> </ul> <br /> <u>BACKEND APPLICATION</u> <ul> <li> <p>Create a React 16.4 application based on a helper theme with some main group activities <br />- Configuration domains per widget <br />- Metrics and evaluation of widget usage <br />- Main Dashboard, Install and more.. </p> </li> <li> <p> The widgets configuration includes <br />- Configurable, on screen, positioning <br />- Configurable colors and literals <br />- Configurable activation / deactivation periods </p> </li> </ul>",
-        "screenshots": {
-            "shot": [
-                "images/rateparity/widget_max_roomstream.png",
-                "images/rateparity/widget_price_full.png",
-                "images/rateparity/widget_offer_full.png",
-                "images/rateparity/config_price_position.png",
-                "images/rateparity/config_offer_colors.png"
-            ]
-        },
-        "score": "-",
-        "tutor": "-",
-        "comment": "-",
-        "files": {
-            "file": [
-                "images/rateparity/config_snippet_content.png",
-                "images/rateparity/config_disparity_details.png",
-                "images/rateparity/config_welcome.png",
-                "images/rateparity/widget_price_mobile.png",
-                "images/rateparity/widget_max_teaser.png"
-            ]
-        },
-        "media": "",
-        "links": ""
-    },
-    {
-        "domain": "WEB",
-        "id": "WB13",
-        "section": "Energy",
-        "category": "Design and Development",
-        "title": "Hybrid Power Management",
-        "tools": {
-            "tool": [
-                "web_application",
-                "javascript",
-                "reactjs",
-                "nextjs",
-                "es6",
-                "css3",
-                "scss",
-                "requirements",
-                "analysis",
-                "nodejs",
-                "webpack",
-                "git",
-                "rest_api",
-                "docker",
-                "mysql",
-                "nginx"
-            ]
-        },
-        "description": "<h3>Contracted as standalone Full stack Developer to design and develop energy management application that address energy planning amongst the national energy supplier and official subsidiaries distributed across islands</h3> <ul> <li> Core scopes of the project: Power Production / Load / Availability, Technical status of units and ultimately alignment with the official Schedule announced by the national supplier on daily basis </li> <li> The project consists of several policy restrictions applied at all levels and impose strict time submissions compliance and algorithmic data dependencies </li> <li> Communication amongst all members addressed within the app with Notifications and Message exchanges </li> <li> Dockerized infrastructure was installed remotely to national supplier premises at project completion </li> </ul>",
-        "screenshots": {
-            "shot": [
-                "images/hybrid/htos.png",
-                "images/hybrid/hintro.png",
-                "images/hybrid/hload.png",
-                "images/hybrid/hprod.png",
-                "images/hybrid/hshed.png"
-            ]
-        },
-        "score": "-",
-        "tutor": "-",
-        "comment": "-",
-        "files": "",
-        "media": "",
-        "links": ""
-    },
-    {
-        "domain": "WEB",
-        "id": "WB14",
-        "section": "Energy",
-        "category": "Design and Development",
-        "title": "Synergy - Energy Analytics Apps",
-        "tools": {
-            "tool": [
-                "web_application",
-                "javascript",
-                "reactjs",
-                "nextjs",
-                "expressjs",
-                "swagger",
-                "es6",
-                "css3",
-                "scss",
-                "analysis",
-                "requirements",
-                "nodejs",
-                "webpack",
-                "git",
-                "rest_api",
-                "docker",
-                "docker_compose",
-                "redis",
-                "keycloak",
-                "mysql",
-                "prometheus",
-                "grafana",
-                "monitoring",
-                "sequelize",
-                "goaccess",
-                "nginx"
-            ]
-        },
-        "description": "<h3>Contracted as standalone Full stack Developer to design and develop infrastructure and 2 energy apps, parts of the multi European big-data project ‘Synergy” founded by the greater movement “Horizon 2020”. Project customers are major national suppliers across Europe</h3> <ul> <li> Scopes of the project are to build infrastructure for the Greek domains hosting the 2 GUI Applications </li> <li> Delegate apps 'authentication / authorization' processes and SSO features to remote core platform invoking the Keycloak IAM controls </li> <li> Provide analytics and chart visualizations in a way to enhance the customers understanding and tendencies of excessive, collaborative amounts of data </li> <li> Dockerized infrastructure utilized to maintain the interconnections active between infrastructure nodes </li> <li> Monitor the infrastructure safety with Prometheus, Grafana and GoAccess tools </li> </ul>",
-        "screenshots": {
-            "shot": [
-                "images/synergy/sfreq.png",
-                "images/synergy/sintro.png",
-                "images/synergy/splan.png",
-                "images/synergy/sscen.png",
-                "images/synergy/ssel.png"
-            ]
-        },
-        "score": "-",
-        "tutor": "-",
-        "comment": "-",
-        "files": "",
-        "media": "",
-        "links": ""
-    },
-    {
-        "domain": "WEB",
-        "id": "WB15",
-        "section": "Energy",
-        "category": "Design and Development",
-        "title": "EcoEms - Energy Analytics Apps",
-        "tools": {
-            "tool": [
-                "web_application",
-                "javascript",
-                "sveltekit",
-                "vite",
-                "es6",
-                "css3",
-                "scss",
-                "analysis",
-                "requirements",
-                "nodejs",
-                "git",
-                "rest_api",
-                "docker",
-                "docker_compose",
-                "keycloak",
-                "sql_server",
-                "prometheus",
-                "grafana",
-                "monitoring",
-                "prisma",
-                "rabbitmq"
-            ]
-        },
-        "description": "<h3>Contracted as standalone Full Stack Developer to design and develop 2 energy apps, parts of European - Indian endeavor in the field of Renewable energy, labeled \"EcoEms\" rooted and empowered by the greater movement “Re-empowered”.</h3> <p> The scope of the project was to structure and visualize the overall energy consumption generated by conventional units and eventually use input for administrators to perform simulations so that renewable empowered energy could find and claim its effective margin on the daily demand. </p> <ul> <li> In technical perspective, the workload dealt with design and implement the infrastructure and 2 web applications for the Greek and Denmark counterparts. </li> <li> Invole Keycloak IAM controls server to control the authentication, authorization of users and resources </li> <li> Retrieve daily measurements from extrnal resources, both real-time / scheduled-time using MQTT protocol </li> <li> Provide the visuals for the administrators to analylize load / demand / deficit of energy </li> <li> Monitor the infrastructure safety with Prometheus and Grafana tools </li> </ul>",
-        "screenshots": {
-            "shot": [
-                "images/ecoems/ecosys.png",
-                "images/ecoems/ecostn.png",
-                "images/ecoems/ecoliveq.png",
-                "images/ecoems/ecospec.png",
-                "images/ecoems/ecoform.png"
-            ]
-        },
-        "score": "-",
-        "tutor": "-",
-        "comment": "-",
-        "files": "",
-        "media": "",
-        "links": ""
-    },
 
     {
         "domain": "WORK",
@@ -793,6 +201,599 @@ export default [
             "movie": ""
         },
         "link": ""
+    },
+
+    {
+        "domain": "WORK",
+        "id": "WK07",
+        "section": "Education",
+        "category": "-",
+        "title": "Schedule Handler",
+        "tools": {
+            "tool": "-"
+        },
+        "description": " <ul> <p>The system is originally built for providing functionality with regard to the following sections: </p> <span> <li>The system is an instrument for users to arrange, conduct and maintain an annual school   schedule in a relative intuitive and easy way. The users should be provided with guidance to those cases where the operation of the system is ambiguous. </li> <li>The system will maintain hierarchically privileged accessing roles for its users, and top-privileged roles should maintain the faculty to adjust the privileges of the other user-roles.</li> <li>The system maintains diverse accessing level sections, where sections of high importance can only be accessed by the corresponding accessing user roles, as those are imposed by administration.</li> <li>The arrangement of the schedule can only be conducted by highly privileged roles and will be iterated automatically by the system, but verified manually by lower privileged roles, on a daily basis.</li> </span> <li>The schedule can override the formal arrangements or can change completely during a running semester. The system will need to easily integrate the changes and those must be provided for verification as well. </li> <li>The informative resources of the organizations (like registered courses, tutors, campuses addresses etc) can be accessed effectively by all user roles of the system, but only authorized users will be in position to add new resources to the system. </li> <li>The system will maintain a registry where the users interaction with the system can be monitored.</li> <li>The system should be deployed in a secure environment and will maintain the privacy of the registered records from unauthorized users.</li> <li><ul>The system should maintain extra faculties for top-level privileged roles as to: <li>make overall estimations for given time-periods, based on the daily recordings</li> <li>securely backup and/or retrieve the database data on demand</li> </ul></li> </ul>",
+        "screenshots": {
+            "shot": [
+                "images/sheduler/pic_msch.jpg",
+                "images/sheduler/pic_hours.jpg",
+                "images/sheduler/pic_restrict.jpg",
+                "images/sheduler/pic_backup.jpg"
+            ]
+        },
+        "score": "-",
+        "tutor": "-",
+        "comment": "-",
+        "files": {
+            "file": [
+                "images/sheduler/fp_scheduler_contents.pdf",
+                "images/sheduler/fp_manual.pdf",
+                "images/sheduler/fp_database_design.pdf",
+                "images/sheduler/fp_technical_details.pdf"
+            ]
+        },
+        "media": ""
+    },
+    {
+        "domain": "WORK",
+        "id": "WK08",
+        "section": "Merchandise",
+        "category": "Design and Development",
+        "title": "Elgreg",
+        "tools": {
+            "tool": [
+                "web_application",
+                "web_standards",
+                "xml",
+                "javascript",
+                "ajax",
+                "dreamweaver",
+                "flash"
+            ]
+        },
+        "description": " <span><p>Elgreg is a building constructions company that provides customers with goods such as marbles, granites, tiles etc, while at the erection state of the premise. </p> <p>Throught the web site the company wishes to showcase its products and provide the 'look and feel' of the company to its prospect customers.</p> <p style=\"font-size:x-small\"><i>*The site is not concluded when it comes to textual material. Therefore most text areas that are found within this domain were originaly placed only for visual matters. </i></p></span>",
+        "screenshots": {
+            "shot": [
+                "images/elgreg/elgreg_home.jpg",
+                "images/elgreg/contact.jpg",
+                "images/elgreg/full_preview.jpg",
+                "images/elgreg/prods_preview.jpg",
+                "images/elgreg/slide_show.jpg"
+            ]
+        },
+        "score": "-",
+        "tutor": "-",
+        "comment": "-",
+        "files": {
+            "file": ""
+        },
+        "media": {
+            "movie": ""
+        }
+    },
+    {
+        "domain": "WORK",
+        "id": "WK09",
+        "section": "Merchandise",
+        "category": "Design and Development",
+        "title": "ELGREG [2013]",
+        "tools": {
+            "tool": [
+                "web_application",
+                "web_standards",
+                "javascript",
+                "ajax",
+                "xml",
+                "xslt",
+                "xpath",
+                "php",
+                "html5",
+                "css3",
+                "responsive_design",
+                "seo",
+                "eclipse"
+            ]
+        },
+        "description": " <h5>STORE-FRONT</h5> <ul> <li>• SEO-Friendly Design - Readable Seo-Friendly URLS</li> <li>• Breadcrumb (dynamic user navigation)</li> <li>• Sitemap</li> <li>• Responsive Design</li> <li>• Back-end Administration - Customizable</li> <li>• Language Translation </li> <li>• Animating Features (Javascript)</li> <li>• Javascript History API</li> </ul> <h5>BACK-END ADMINISTRATION</h5> <ul> <span> <li>A. Insert Data</li> <li> - Insert Data Row (with form)</li> <li> - Insert Complete Files (.CSV)</li> <li>B Update Data </li> <li> - Data Row (inline)</li> <li> - Distinct Values</li> <li>C. Delete Data</li> <li>D. Filter Data (+ Multiple Filters)</li> <li>E. Avoid Duplicate Values</li> <li>F. Messages to Users (Saved, Not Saved etc)</li> <li>G. Ascend/Descend Order (+ filtered)</li> <li>H. Upload Images -> 1 upload produces 3 images with scaled image sizes</li> </span> </ul>",
+        "screenshots": {
+            "shot": [
+                "images/elgreg_upd/home.jpg",
+                "images/elgreg_upd/product_category.jpg",
+                "images/elgreg_upd/partner.jpg",
+                "images/elgreg_upd/product_full_description.jpg",
+                "images/elgreg_upd/administration.jpg"
+            ]
+        },
+        "score": "-",
+        "tutor": "-",
+        "comment": "-",
+        "files": {
+            "file": ""
+        },
+        "media": {
+            "movie": ""
+        }
+    },
+    {
+        "domain": "WORK",
+        "id": "WK10",
+        "section": "Portfolio",
+        "category": "Design and Development",
+        "title": "Curriculum Vitae",
+        "tools": {
+            "tool": [
+                "web_application",
+                "web_standards",
+                "javascript",
+                "jquery",
+                "xml",
+                "chrome_developer_tools",
+                "eclipse",
+                "css3",
+                "html"
+            ]
+        },
+        "description": " <span> <ul> <li>Restrictively Dynamic Implementation (Every element designed with jQuery-Javascript)</li> <li>Animating Features - Dynamicaly Navigating menus - Scrolable Main Pages (Not loaded)</li> <li>Use Keywords to Categorize Projects and Groups-Navigates upon</li> <li>Dynimacally makes the decisions and creates hosts for presenting :</li> <li> 1. Images - JPEG</li> <li> 2. Documents - PDF</li> <li> 2. Videos - AVI (builds connection to Google Drive)</li> </ul> </span>",
+        "screenshots": {
+            "shot": [
+                "images/micv/studies_grouped.jpg",
+                "images/micv/skills_showcase.jpg",
+                "images/micv/video_hosted.jpg",
+                "images/micv/projects_preview.jpg",
+                "images/micv/extra_info.jpg"
+            ]
+        },
+        "score": "-",
+        "tutor": "-",
+        "comment": "-",
+        "files": {
+            "file": ""
+        },
+        "media": {
+            "movie": "-"
+        }
+    },
+    {
+        "domain": "WORK",
+        "id": "WK11",
+        "section": "Education",
+        "category": "Design and Development",
+        "title": "Pearson E-learning",
+        "tools": {
+            "tool": [
+                "web_application",
+                "javascript",
+                "jquery",
+                "json",
+                "git",
+                "sourcetree",
+                "html5",
+                "css3"
+            ]
+        },
+        "description": " <p> E-learning system delivered for Pearson USA, totally consisting by Javascript-Jquery and JSON folded data. During a short-time period that I have been occupied for CSSEducation company I have delivered a demo of the Javascript engine. Its operation is described below: </p> <ul> <span> <li>Design a Json string-patterned API that plain users would need to issue for giving instructions to Javascript engine.</li> <li>Following the pattern-instructions, Javascript engine distincts and allocates page content as: </li> <li> •  Interactive Page Title and Page Description on top of the page, </li> <li> •  Interactive Page Content Description on the left of the page, </li> <li> •  Main Interactive Content on the right, </li> <li> Main Content issues most of interactivity addressed as: </li> <li> •  Aligns multiple interactive paragraph examples along with their functionality-initializing handlers</li> <li> •  Paragraph content-parts come preformated with styles, according to user instructions issued by the API</li> <li> •  Paragraph parts deliver text animating effects</li> <li> •  Paragraph handlers mostly issue video/audio emerging events</li> <li> •  Audio/Video events are synchronized with prioritized text animating effects</li> <li> •  Handler events bring paragraphs to the original preformated state and immediately address the anime</li> <li> •  A variety of text animating effects are addressed, regarded to API issued instructions</li> </span> </ul>",
+        "screenshots": {
+            "shot": [
+                "images/pearson/simple_words.png",
+                "images/pearson/tutor_intro.png",
+                "images/pearson/anime_audio_synch_1.png",
+                "images/pearson/anime_audio_synch_2.png"
+            ]
+        },
+        "score": "-",
+        "tutor": "-",
+        "comment": "-",
+        "files": "",
+        "media": {
+            "movie": ""
+        }
+    },
+    {
+        "domain": "WORK",
+        "id": "WK12",
+        "section": "Safekeeping",
+        "category": "Design and Development",
+        "title": "DeltaComsos ERP",
+        "tools": {
+            "tool": [
+                "web_application",
+                "php",
+                "mvc",
+                "yii_mvc",
+                "mysql",
+                "oop",
+                "jquery",
+                "css3"
+            ]
+        },
+        "description": " <p> Company's Employee Management systems build with the power of MVC, Yii Framework, that extends to thousands lines long functionality. The system mainly implements PHP, MySQL, JQuery and multiple Javascript plugins like Bootstrap for CSS, Ajaxplorer file sytems, Lightbox and more. During a short time period that I was employeed for the company I have delivered the following results: </p> <ul> <span> <li>1. Plan an all-over from-scratch design for measuring employees monthly workhours. The legacy design had to be upgraded so that we could now count each working second instead of simply adding the succeeding hours. The proccess revealed erronous deliverables granted by the legacy workhour counter. The new design delivered accurate-to-second results, taking into perception each correlation among the business rules listed above: </li> <li> • DateZone Type: Simple Day - Holiday/Sunday.</li> <li> • ShiftZone Type : Plain Shift (8 Hours) - OverHour (81 Hour) - ExtraHours (9+ Hours).</li> <li> • HourZone Type: Morning - Night .</li> <li>2. Moreover the Shifts display, figured on an Interactive Board, would now need to visually alert Administration when the following conflicts occured: </li> <li> • Employees were prohibited from taking a Shift 12 Hours before their last Shift</li> <li> • Employees would need to follow a \"5-2\" Shifts Rule, issuing 5 working days and 2 Dayoffs during a week long time period</li> <li>3. An application migration to a new Host Server that brough various mulfunctions to extension plugins operation</li> <li>4. A major front-end facelift update, conforming the visual display to latest CSS3 standards with overall Crossbrowser Compatibility efficiency</li> </span> </ul>",
+        "screenshots": {
+            "shot": [
+                "images/deltacosmos/interactive_board.png",
+                "images/deltacosmos/month_workhour.png",
+                "images/deltacosmos/employee_info.png",
+                "images/deltacosmos/customer_guard.png",
+                "images/deltacosmos/map_monitor.png"
+            ]
+        },
+        "score": "-",
+        "tutor": "-",
+        "comment": "-",
+        "files": {
+            "file": "images/deltacosmos/delta_development.pdf"
+        },
+        "media": "-"
+    },
+
+    {
+        "domain": "WORK",
+        "id": "WK13",
+        "section": "Banking",
+        "category": "Design and Development",
+        "title": "Commerzbank Infobroker",
+        "tools": {
+            "tool": [
+                "web_application",
+                "javascript",
+                "php",
+                "css3",
+                "jquery",
+                "chrome_developer_tools",
+                "oop",
+                "requirements",
+                "teamwork",
+                "json",
+                "zend",
+                "twig",
+                "bootstrap",
+                "svn",
+                "phpstorm",
+                "security",
+                "testing",
+                "mvc"
+            ]
+        },
+        "description": "<h3>Contracted as a Frontend Developer part of multinational, scrum maintained team of web developers.</h3> <p>The objective was for the team to build a concurrent web solution for the German Commerzbank that would be used internally by company's employees, namely Infobroker.  The intranet would assist bank's employees to monitor,  evaluate and gain insight from data visualizations. <br /> My role was to adhere to design blueprints dictated by company's UI/UX experts and deliver interactive pages and widgets. Enabling daily web meetings with with foreign colleagues and data maintainers, we would need to resolve the required data and the paths to collect before delivering the solutions. <br /> Data would need to get collected with the use of a graphical interface that would ensure data security all the way through. By the time the project reached to a certain level of completeness, my job was moved to provide ticketing support services. </p> Key Responsibilities: <ul> <li>Front-end developer with OOP PHP Zend Framework & Javascript / Jquery (backend was a remote service)</li> <li>Follow explicit instructions to consume required data from remote web services and blueprint layouts to deliver UIs</li> <li>Provide ticketing solutions for acknowledged bugs</li> </ul>",
+        "screenshots": {
+            "shot": [
+                "images/commerzbank/certificates.png",
+                "images/commerzbank/indexsystem.png",
+                "images/commerzbank/indexwerte.png",
+                "images/commerzbank/stockexchange.png",
+                "images/commerzbank/topflop.png"
+            ]
+        },
+        "score": "-",
+        "tutor": "-",
+        "comment": "-",
+        "files": "-",
+        "media": "",
+        "link": ""
+    },
+    {
+        "domain": "WORK",
+        "id": "WK14",
+        "section": "Conferences",
+        "category": "Design and Development",
+        "title": "Noblelinx CRM",
+        "tools": {
+            "tool": [
+                "web_application",
+                "javascript",
+                "php",
+                "css3",
+                "jquery",
+                "chrome_developer_tools",
+                "oop",
+                "requirements",
+                "json",
+                "svn",
+                "phpstorm",
+                "virtualbox",
+                "linux_terminal",
+                "mysql",
+                "security",
+                "project_management",
+                "testing",
+                "mvc",
+                "apache",
+                "ubuntu",
+                "centos"
+            ]
+        },
+        "description": " <h3>Contracted as standalone Full Stack Developer to partner with an assigned American coordinator that would guide me through development tasks by providing the respective business requirements. Daily web meetings.</h3> <p>The overall objective was to upgrade, extend and maintain a legacy CRM commercial system that was build on top of PHP legacy constructs. My role was to make the app portable by detaching all hardcoded paths of the project from the server, invoke svn versioning, launch on an updated server and afterwards extend with new features. <br /> The project was large, consisting of more than 500 DB tables and the lack of any viable coding formation to separate diverse technologies was making it difficult to maintain. <br /> The result was to work on the same page with all mixed-up  on  thousand-lined pages. </p> <h4>Main Developments</h4> <ul> <li>Put application under SVN Versioning control</li> <li>Provide portability: Unroot the project that was harcoded  on the host and move all configuration data and links to custom-made external '.ini' configuration,</li> <li>Install and setup a Centos 5 copy of the Production to run as Staging environment and perform tests before updates publishing to Production.</li> <li>Set up a Ubuntu-based virtual 'Local' and Centos-based remote 'Staging' hosts to deploy and test application before move on 'Production'</li> <li>Set up a clone virtual machine (vbox) for development environment</li> <li>Implement Utility classes and a Core class, with MVC-like capabilities, as a root class to extend and inherit all essential activities for the newly invoked classes afterwards.</li> <li>Amongst others, newly initialized child classes, would genuinely have access to: Main and own Configuration, Database storage, Session storage, Access Restrictions, Self-Debug, Debug-Logs, Exceptions, Helper methods, and more.</li> <li>Synchronize 2 legacy Calendar libraries (1 php, 1 js) with Exchange Web Services (EWS) to enable control over Microsoft Calendar Events, User Tasks, Emails, Contacts etc</li> <li>Launch time evaluated,filtered, charts for performance auditing Employees / Teams / Managers / Directors</li> <li>Enforce 90-Days expiring passwords for all users, validated with unique tokens and time restricted activation boundaries,</li> </ul>",
+        "screenshots": {
+            "shot": [
+                "images/noblelinx/performance-manager.png",
+                "images/noblelinx/performance-director.png",
+                "images/noblelinx/logs.png"
+            ]
+        },
+        "score": "-",
+        "tutor": "-",
+        "comment": "-",
+        "files": {
+            "file": [
+                "images/noblelinx/diagram1.png",
+                "images/noblelinx/diagram2.png"
+            ]
+        },
+        "media": "",
+        "link": ""
+    },
+    {
+        "domain": "WORK",
+        "id": "WK15",
+        "section": "Warehouse",
+        "category": "Design and Development",
+        "title": "Ecep Technologies Inventory",
+        "tools": {
+            "tool": [
+                "web_application",
+                "javascript",
+                "php",
+                "css3",
+                "php",
+                "oop",
+                "requirements",
+                "mysql",
+                "laravel",
+                "bootstrap",
+                "git",
+                "phpstorm",
+                "mvc",
+                "rest_api"
+            ]
+        },
+        "description": "<h3>Contracted as standalone Full Stack Developer to design and build the company's warehouse inventory from scratch using a contemporary web framework, and utilizing the business requirement discussed daily with the owner on web calls.</h3> <p> The objective was to build a web system that would allow company's employees to perform daily workflow procedures handily and reduce the times needed to perform such tasks with spreadsheets and manpower. <br /> My role was to bring that system to life right from the ground, by communicating with the entrepreneur on a daily basis, to collect and elicit requirements. <br /> The initial task was to design and build a database of a centralized inventory application for company's products, and replace spreadsheets that were used instead. Following steps would issue the extensions  activities required to cover companies processes like purchases, deliveries, sales etc.</p> <h4>Main Developments</h4> <ul> <li>Design and build an efficient DB system by analyzing and evaluating legacy spreadsheet procedures for more than 500K distinct barcodes</li> <li>Use the Laravel MVC 5.1 Framework to as a robust and secure foundation to build the application and a REST-like API</li> <li>Use remote Git Repository to control development progress but also for deployments</li> <li>Create a Local virtual (VBOX) clone of Production for development purposes</li> <li> <p>Develop the core parts of the Application, ilke <br />- Product Imports with spreadsheets, barcode recognition, manually <br />- Product CRUD & Products Indexing w/ numerous filter combinations <br />- Indexing products lack / surplus <br />- Indexing of Purchases / Deliveries / Sales <br />- Instant evaluation of a devery in a way to identify lack / surplus on time <br />- Instant monitoring of past delivery status like complete / pending items </p> </li> </ul>",
+        "screenshots": {
+            "shot": [
+                "images/ecep/delivery_status.png",
+                "images/ecep/pending_purchaces.png",
+                "images/ecep/search_tool.png",
+                "images/ecep/purchase_details.png"
+            ]
+        },
+        "score": "-",
+        "tutor": "-",
+        "comment": "-",
+        "files": {
+            "file": [
+                "images/ecep/erd.png",
+                "images/ecep/search_tool_description.png",
+                "images/ecep/api_feed_json.png"
+            ]
+        },
+        "media": "",
+        "link": ""
+    },
+    {
+        "domain": "WORK",
+        "id": "WK16",
+        "section": "Hospitality",
+        "category": "Design and Development",
+        "title": "Cosmores Booking Engine",
+        "tools": {
+            "tool": [
+                "web_application",
+                "php",
+                "javascript",
+                "jquery",
+                "css3",
+                "oop",
+                "requirements",
+                "mysql",
+                "centos",
+                "security",
+                "git",
+                "rest_api"
+            ]
+        },
+        "description": "<h3>Employed as standalone Fullstack Developer to maintain and extend the company's products.</h3> <p> The objective was to update the company's products, increase and enforce security on critical fields and launch new tools and features <br /> My role as a fullstack developer was to update the overall environment of a more than a decade past developed PHP system, without any coding formation style and mixed up technologies (php, js, css) on huge pages. Additionally I would need to create some common reusable helper structures to assist me build new things properly. </p> Main Developments <ul> <li>Build common and explicit PHP helper structures to make development lifecycle natively simple and secure</li> <li> <p> Build a configurable, Javascript CORS widget for displaying best price of an affiliate hotels.</p> <br />- A new REST-like, PHP API build to accommodate the exchange of CORS data consumed by widget <br />- The widget travels from Cosmores to customer site in string formate and then self-installed with included javascript launcher <br />- The widget is build with vanilla Js and plain CSS in order to avoid confiict with installed Jquery / Bootstrap or own site styles <br />- The widget is compatible with IE 8, Safari, Chrome etc <br />- The widget is fully controllable and customizable from respective backend app. </p> </li> <li>Put the application under GIT versioning and create a master repository on a remote server</li> <li>Create a portable, local virtual clone (vbox) of the Production environment server, so that development and testing activities</li> restrain from Production.</li> <li> <p>Leverage the security processes overall: <br /> - Leverage the security of entry by blocking the front entrance and allow only recognizable devices to log in. The activity uses expirable tokens that are only accepted for limited amount of time, and provide respective messages to users for guidance. <br />- Enforce strong passwords with mixed char types and length <br />- Leverage the encryption/decryption procedures for all sensitive data in the DB, which led to more than 1M rows update <br />- Enforce a finite number of times informative data can be displayed before locked for ever <br />- Leverage the restriction rules for image uploads and malicious code indexing methods <br />- Invoke sanitize/filtering on data import/display respectively <br />- Enforce PDO with MySQL inserts <br />- Make extensive use of .httaccess for filtering urls, root and child directories with explicit rules for each </p> </li> </ul>",
+        "screenshots": {
+            "shot": [
+                "images/cosmores/compareme_config.png",
+                "images/cosmores/compareme_info.png"
+            ]
+        },
+        "score": "-",
+        "tutor": "-",
+        "comment": "-",
+        "files": {
+            "file": "images/cosmores/notificatons_info.png"
+        },
+        "media": "",
+        "link": ""
+    },
+    {
+        "domain": "WORK",
+        "id": "WK17",
+        "section": "Hospitality",
+        "category": "Design and Development",
+        "title": "Rateparity - Enhanced User Experince",
+        "tools": {
+            "tool": [
+                "web_application",
+                "javascript",
+                "reactjs",
+                "es6",
+                "css3",
+                "scss",
+                "requirements",
+                "nodejs",
+                "webpack",
+                "git",
+                "rest_api"
+            ]
+        },
+        "description": "<h3>Employed as standalone Frontend Developer to build fully customizable UI widgets and the backend configuration app  in association with a backend data api developer.</h3> <p> The objective was to create a new product that would explore the potentials of UI widgets and thus enter a new market for the company <br /> My role as a Frontend developer was to create the independable CORS empowered Javascript widgets that would load on affiliate sites. The widgets should invoke the latest Js trends, load on sites without causing or receiving Js / CSS defects and should be as lightweight as possible restraining from vaguely loading countless libraries. Additianally I was attached to build the backend configuration application. </p> <h4>Main Developments</h4> <u>FRONTEND WIDGETS</u> <ul> <li>Design and develop the app's Installer that can be used on affiliate sites with a single HTML “Head”entry</li> <li>Design and develop decoupled SPA widgets, that reside on their own domains and can be launched by installer on demand</li> <li> <p> Publish 5 distinct widget types, with 4 viewport layouts for each, to accommodate diversity of screen displays: <br /> - Price checks::          Integrates calendar that helps users check hotel prices per accommodation and compare with major booking channels <br />- Active offers::          Registered offers can be displayed with a user click <br />- Notifications::          Intresting metrics, in the form of notifications are displayed on sites screen <br />- Popup offers::          Offers can popup on user display at navigation time, based on submitted configuration </p> </li> <li>Utilize the latest React 16.8 build and make use of powerful features like Hooks, Code splitting, Lazy loading, Context api, Dynamic imports etc</li> <li>Make extensive use of cache so that widgets restrain from excessive calls to the remote service</li> <li>Structure the development environment with NodeJs, Webpack, Babel etc</li> </ul> <br /> <u>BACKEND APPLICATION</u> <ul> <li> <p>Create a React 16.4 application based on a helper theme with some main group activities <br />- Configuration domains per widget <br />- Metrics and evaluation of widget usage <br />- Main Dashboard, Install and more.. </p> </li> <li> <p> The widgets configuration includes <br />- Configurable, on screen, positioning <br />- Configurable colors and literals <br />- Configurable activation / deactivation periods </p> </li> </ul>",
+        "screenshots": {
+            "shot": [
+                "images/rateparity/widget_max_roomstream.png",
+                "images/rateparity/widget_price_full.png",
+                "images/rateparity/widget_offer_full.png",
+                "images/rateparity/config_price_position.png",
+                "images/rateparity/config_offer_colors.png"
+            ]
+        },
+        "score": "-",
+        "tutor": "-",
+        "comment": "-",
+        "files": {
+            "file": [
+                "images/rateparity/config_snippet_content.png",
+                "images/rateparity/config_disparity_details.png",
+                "images/rateparity/config_welcome.png",
+                "images/rateparity/widget_price_mobile.png",
+                "images/rateparity/widget_max_teaser.png"
+            ]
+        },
+        "media": "",
+        "links": ""
+    },
+    {
+        "domain": "WORK",
+        "id": "WK18",
+        "section": "Energy",
+        "category": "Design and Development",
+        "title": "Hybrid Power Management",
+        "tools": {
+            "tool": [
+                "web_application",
+                "javascript",
+                "reactjs",
+                "nextjs",
+                "es6",
+                "css3",
+                "scss",
+                "requirements",
+                "analysis",
+                "nodejs",
+                "webpack",
+                "git",
+                "rest_api",
+                "docker",
+                "mysql",
+                "nginx"
+            ]
+        },
+        "description": "<h3>Contracted as standalone Full stack Developer to design and develop energy management application that address energy planning amongst the national energy supplier and official subsidiaries distributed across islands</h3> <ul> <li> Core scopes of the project: Power Production / Load / Availability, Technical status of units and ultimately alignment with the official Schedule announced by the national supplier on daily basis </li> <li> The project consists of several policy restrictions applied at all levels and impose strict time submissions compliance and algorithmic data dependencies </li> <li> Communication amongst all members addressed within the app with Notifications and Message exchanges </li> <li> Dockerized infrastructure was installed remotely to national supplier premises at project completion </li> </ul>",
+        "screenshots": {
+            "shot": [
+                "images/hybrid/htos.png",
+                "images/hybrid/hintro.png",
+                "images/hybrid/hload.png",
+                "images/hybrid/hprod.png",
+                "images/hybrid/hshed.png"
+            ]
+        },
+        "score": "-",
+        "tutor": "-",
+        "comment": "-",
+        "files": "",
+        "media": "",
+        "links": ""
+    },
+    {
+        "domain": "WORK",
+        "id": "WK19",
+        "section": "Energy",
+        "category": "Design and Development",
+        "title": "Synergy - Energy Analytics Apps",
+        "tools": {
+            "tool": [
+                "web_application",
+                "javascript",
+                "reactjs",
+                "nextjs",
+                "expressjs",
+                "swagger",
+                "es6",
+                "css3",
+                "scss",
+                "analysis",
+                "requirements",
+                "nodejs",
+                "webpack",
+                "git",
+                "rest_api",
+                "docker",
+                "docker_compose",
+                "redis",
+                "keycloak",
+                "mysql",
+                "prometheus",
+                "grafana",
+                "monitoring",
+                "sequelize",
+                "goaccess",
+                "nginx"
+            ]
+        },
+        "description": "<h3>Contracted as standalone Full stack Developer to design and develop infrastructure and 2 energy apps, parts of the multi European big-data project ‘Synergy” founded by the greater movement “Horizon 2020”. Project customers are major national suppliers across Europe</h3> <ul> <li> Scopes of the project are to build infrastructure for the Greek domains hosting the 2 GUI Applications </li> <li> Delegate apps 'authentication / authorization' processes and SSO features to remote core platform invoking the Keycloak IAM controls </li> <li> Provide analytics and chart visualizations in a way to enhance the customers understanding and tendencies of excessive, collaborative amounts of data </li> <li> Dockerized infrastructure utilized to maintain the interconnections active between infrastructure nodes </li> <li> Monitor the infrastructure safety with Prometheus, Grafana and GoAccess tools </li> </ul>",
+        "screenshots": {
+            "shot": [
+                "images/synergy/sfreq.png",
+                "images/synergy/sintro.png",
+                "images/synergy/splan.png",
+                "images/synergy/sscen.png",
+                "images/synergy/ssel.png"
+            ]
+        },
+        "score": "-",
+        "tutor": "-",
+        "comment": "-",
+        "files": "",
+        "media": "",
+        "links": ""
+    },
+    {
+        "domain": "WORK",
+        "id": "WK20",
+        "section": "Energy",
+        "category": "Design and Development",
+        "title": "EcoEms - Energy Analytics Apps",
+        "tools": {
+            "tool": [
+                "web_application",
+                "javascript",
+                "sveltekit",
+                "vite",
+                "es6",
+                "css3",
+                "scss",
+                "analysis",
+                "requirements",
+                "nodejs",
+                "git",
+                "rest_api",
+                "docker",
+                "docker_compose",
+                "keycloak",
+                "sql_server",
+                "prometheus",
+                "grafana",
+                "monitoring",
+                "prisma",
+                "rabbitmq"
+            ]
+        },
+        "description": "<h3>Contracted as standalone Full Stack Developer to design and develop 2 energy apps, parts of European - Indian endeavor in the field of Renewable energy, labeled \"EcoEms\" rooted and empowered by the greater movement “Re-empowered”.</h3> <p> The scope of the project was to structure and visualize the overall energy consumption generated by conventional units and eventually use input for administrators to perform simulations so that renewable empowered energy could find and claim its effective margin on the daily demand. </p> <ul> <li> In technical perspective, the workload dealt with design and implement the infrastructure and 2 web applications for the Greek and Denmark counterparts. </li> <li> Invole Keycloak IAM controls server to control the authentication, authorization of users and resources </li> <li> Retrieve daily measurements from extrnal resources, both real-time / scheduled-time using MQTT protocol </li> <li> Provide the visuals for the administrators to analylize load / demand / deficit of energy </li> <li> Monitor the infrastructure safety with Prometheus and Grafana tools </li> </ul>",
+        "screenshots": {
+            "shot": [
+                "images/ecoems/ecosys.png",
+                "images/ecoems/ecostn.png",
+                "images/ecoems/ecoliveq.png",
+                "images/ecoems/ecospec.png",
+                "images/ecoems/ecoform.png"
+            ]
+        },
+        "score": "-",
+        "tutor": "-",
+        "comment": "-",
+        "files": "",
+        "media": "",
+        "links": ""
     },
 
 

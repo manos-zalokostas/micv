@@ -21,6 +21,6 @@ export const VIEW = {
 
 
 export const _DEV = {
-    PAGE: PAGE.WORK,
-    VIEW: VIEW.WORK.CONT
+    PAGE: PAGE.LAND,
+    // VIEW: VIEW.WORK.CONT
 }
