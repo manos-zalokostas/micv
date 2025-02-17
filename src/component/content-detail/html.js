@@ -4,6 +4,7 @@ import "/src/component/project-tool"
 import "/src/component/image-slider"
 import "/src/component/badge-tool"
 import {html} from 'lit';
+import {EVT} from "../../env";
 
 
 export default (elem) => {
@@ -14,7 +15,7 @@ export default (elem) => {
 
             <button
                     @click="${() => elem.dispatchEvent(
-                            new CustomEvent('content-transit', {
+                            new CustomEvent(EVT.CONTENT_TRANSIT, {
                                 detail: {transit: false},
                                 composed: true,        // Event crosses shadow DOM boundaries
                                 bubbles: true,        // Event travels up the DOM tree

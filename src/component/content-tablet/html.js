@@ -1,5 +1,6 @@
 import {html} from 'lit';
 import {itemById} from "../../_core/store";
+import {EVT} from "../../env";
 
 const fn = elem => {
     console.log(" ASSETS => ", elem.assets)
@@ -21,7 +22,7 @@ export default (elem) => {
                 <a href="#" @click="${(evt) => {
                     evt.preventDefault()
                     elem.dispatchEvent(
-                            new CustomEvent('content-transit', {
+                            new CustomEvent(EVT.CONTENT_TRANSIT, {
                                         detail: {
                                             transit: true,
                                             entryId: o.id

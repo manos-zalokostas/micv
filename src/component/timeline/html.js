@@ -1,5 +1,6 @@
 import {html} from 'lit';
 import {assets} from "./asset";
+import {EVT} from "../../env";
 
 
 export default (elem) => html`
@@ -27,7 +28,7 @@ export default (elem) => html`
                                 <div>
                                     ${codes && codes.map(code => html`
                                         <button @click="${() => elem.dispatchEvent(
-                                                new CustomEvent('monitor-content', {
+                                                new CustomEvent(EVT.MONITOR_CONTENT, {
                                                     detail: {code},
                                                     bubbles: true,
                                                 }))}">

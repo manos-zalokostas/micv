@@ -1,5 +1,5 @@
 import {html} from 'lit';
-import {PAGE, VIEW} from "../../env";
+import {EVT, PAGE, VIEW} from "../../env";
 
 
 const assets = [
@@ -17,7 +17,7 @@ export default (elem) => html`
                             @click="${() => {
                                 elem.action(i + 1);
                                 elem.dispatchEvent(
-                                        new CustomEvent('intro-transit', {
+                                        new CustomEvent(EVT.INTRO_TRANSIT, {
                                                     detail: {code},
                                                     bubbles: true,
                                                 }

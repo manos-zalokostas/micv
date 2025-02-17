@@ -16,7 +16,7 @@ class ContentDetail extends LitElement {
     constructor() {
         super();
         this.active = 1
-        this.asset = itemById('WB15')
+        this.asset = itemById('WK15')
         console.log(">>> ", this.asset)
     }
 

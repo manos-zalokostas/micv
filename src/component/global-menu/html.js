@@ -1,5 +1,5 @@
 import {html} from 'lit';
-import {PAGE} from "../../env";
+import {EVT, PAGE} from "../../env";
 
 
 const assets = [
@@ -18,7 +18,7 @@ export default (elem) => html`
                         console.log("--------- CLICKCKCKCKCKCKCKC")
                         elem.action(code);
                         elem.dispatchEvent(
-                                new CustomEvent('page-transit', {
+                                new CustomEvent(EVT.PAGE_TRANSIT, {
                                             detail: {code},
                                             bubbles: true,        // Event travels up the DOM tree
                                             composed: true        // Event crosses shadow DOM boundaries

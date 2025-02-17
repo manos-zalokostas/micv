@@ -1,3 +1,10 @@
+export const EVT = {
+    PAGE_TRANSIT: 'page-transit',
+    INTRO_TRANSIT: 'intro-transit',
+    CONTENT_TRANSIT: 'content-transit',
+    DOMAIN_CHANGE: 'domain-change',
+    MONITOR_CONTENT: 'monitor-content'
+}
 
 export const PAGE = {
     LAND: 1,
@@ -16,7 +23,6 @@ export const VIEW = {
         CONT: 2,
     },
     CERT: {},
-
 }
 
 
