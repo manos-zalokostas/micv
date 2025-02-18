@@ -2,8 +2,10 @@ export const EVT = {
     PAGE_TRANSIT: 'page-transit',
     INTRO_TRANSIT: 'intro-transit',
     CONTENT_TRANSIT: 'content-transit',
+    MONITOR_CONTENT: 'monitor-content',
+
     DOMAIN_CHANGE: 'domain-change',
-    MONITOR_CONTENT: 'monitor-content'
+    TOOL_CHANGE: 'tool-change',
 }
 
 export const PAGE = {
@@ -27,6 +29,6 @@ export const VIEW = {
 
 
 export const _DEV = {
-    PAGE: PAGE.LAND,
-    // VIEW: VIEW.WORK.CONT
+    PAGE: PAGE.WORK,
+    VIEW: VIEW.WORK.NAVI
 }

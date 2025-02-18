@@ -25,7 +25,7 @@ customElements.define('content-menu',
         }
 
 
-        action(domain) {
+        changeDomain(domain) {
             console.log(">>>>>> ", domain)
             this.active = domain;
             // Child Component (global-menu)
@@ -37,16 +37,16 @@ customElements.define('content-menu',
 
         }
 
+
+
         render = () => html`
             <nav>
                 ${assets.map((val) => html`
-                    <button id="domain_${val}"
-                            class="${this.active === val ? 'active' : ''}"
-                            @click="${(evt) => this.action(val)}">
+                    <button class="${this.active === val ? 'active' : ''}"
+                            @click="${(evt) => this.changeDomain(val)}">
                         ${val.toUpperCase()}
                     </button>
                 `)}
-                </ul>
             </nav>
         `;
 

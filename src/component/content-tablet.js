@@ -1,17 +1,17 @@
 import {css, html, LitElement} from 'lit';
-import {groupByDomain, itemById} from "/src/_core/store";
+import {groupByDomain, groupByTool, itemById} from "/src/_core/store";
 import {EVT} from "/src/env";
 
-const fn = elem => {
-    console.log(" ASSETS => ", elem.assets)
-    const items = elem.assets
-        .reverse()
-        .map(a => a[1])
-        .flat()
-        .map(([code]) => itemById(code))
-    console.log({items})
-    return items;
-}
+// const fn = elem => {
+//     console.log(" ASSETS => ", elem.assets)
+//     const items = elem.assets
+//         .reverse()
+//         .map(a => a[1])
+//         .flat()
+//         .map(([code]) => itemById(code))
+//     console.log({items})
+//     return items;
+// }
 
 
 customElements.define('content-tablet',
@@ -19,13 +19,15 @@ customElements.define('content-tablet',
     class ContentTablet extends LitElement {
 
         static properties = {
-            domain: {type: String},
+            tool: {type: String},
+            domain: {type: String, default: 'WORK'},
             assets: {type: Array}
         };
 
         constructor() {
             super();
-            this.domain = 'WORK';
+            // this.tool = null;
+            // this.domain = 'WORK';
             this.assets = groupByDomain(this.domain);
         }
 
@@ -36,6 +38,12 @@ customElements.define('content-tablet',
             if (changedProperties.has('domain')) {
                 this.assets = groupByDomain(this.domain);
             }
+
+            if (changedProperties.has('tool')) {
+                this.assets = [[this.tool, groupByTool(this.tool)]]
+            }
+
+
         }
 
 
@@ -43,41 +51,47 @@ customElements.define('content-tablet',
             console.log(idx, {domain: this.domain})
         }
 
+
         render = () => html`
             <nav class="mi-tablet">
 
-                ${fn(this).map((o) => html`
-                    <a href="#" @click="${(evt) => {
-                        evt.preventDefault()
-                        this.dispatchEvent(
-                                new CustomEvent(EVT.CONTENT_TRANSIT, {
-                                            detail: {
-                                                transit: true,
-                                                entryId: o.id
-                                            },
-                                            bubbles: true,        // Event travels up the DOM tree
-                                        }
-                                ))
-                    }
-                    }">
+                ${this.assets
+                        .map(a => a[1])
+                        .flat()
+                        .map(([code]) => itemById(code))
+                        .map((o) => html`
+                            <a href="#" @click="${(evt) => {
+                                // debugger
+                                evt.preventDefault()
+                                this.dispatchEvent(
+                                        new CustomEvent(EVT.CONTENT_TRANSIT, {
+                                                    detail: {
+                                                        transit: true,
+                                                        entryId: o.id
+                                                    },
+                                                    bubbles: true,        // Event travels up the DOM tree
+                                                }
+                                        ))
+                            }
+                            }">
 
 
-                        <small>${o.category}</small>
-                        <strong>${o.title}
-                            <small>${o.id}</small>
-                        </strong>
-                        <aside>${Array.isArray(o.tools.tool) && o.tools.tool.map(
-                                tool => html`
-                                    <img src='/images/tech_logos/${tool}.jpg' alt="${tool}"/>
-                                `)}
-                        </aside>
-                        <p>
-                            <span>${o.description.substring(0, 200)}<em>&nbsp&nbsp;...more</em></span>
-                        </p>
-                        <img src=" ${o.screenshots.shot[0]}
+                                <small>${o.category}</small>
+                                <strong>${o.title}
+                                    <small>${o.id}</small>
+                                </strong>
+                                <aside>${Array.isArray(o.tools.tool) && o.tools.tool.map(
+                                        tool => html`
+                                            <img src='/images/tech_logos/${tool}.jpg' alt="${tool}"/>
+                                        `)}
+                                </aside>
+                                <p>
+                                    <span>${o.description.substring(0, 200)}<em>&nbsp&nbsp;...more</em></span>
+                                </p>
+                                <img src=" ${o.screenshots.shot[0]}
                         " alt=${o.title}>
-                    </a>
-                `)}
+                            </a>
+                        `)}
 
             </nav>
         `;

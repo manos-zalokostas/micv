@@ -1,7 +1,6 @@
 import {itemById, itemByIndex} from "/src/_core/store";
 import {html, css, LitElement} from 'lit';
-import {_DEV, VIEW} from "/src/env";
-
+import {_DEV, EVT, VIEW} from "/src/env";
 
 
 customElements.define('page-content',
@@ -25,18 +24,27 @@ customElements.define('page-content',
         }
 
         evtDomainChange(evt) {
-            console.log(' -- DOMAIN CHANGE FUNCTION: ', evt.detail.domain)
+            // console.log(' -- DOMAIN CHANGE FUNCTION: ', evt.detail.domain)
             const child = this.shadowRoot.querySelector('content-tablet');
             child.domain = evt.detail.domain;
         }
 
+        evtToolChange(evt) {
+
+            // console.log(' -- DOMAIN CHANGE FUNCTION: ', evt.detail.domain)
+            const child = this.shadowRoot.querySelector('content-tablet');
+            child.tool = evt.detail.tool;
+
+
+        }
+
         evtContentTransit(evt) {
-            console.log(' -- CONTENT TRANSIT FUNCTION: ', evt.detail)
+
+            // console.log(' -- CONTENT TRANSIT FUNCTION: ', evt.detail)
             const nodeWrap = this.shadowRoot.querySelector('main');
             const nodeDetail = this.shadowRoot.querySelector('content-detail');
             if (evt.detail.transit) {
                 const entry = itemById(evt.detail.entryId);
-                console.log("--- ", {entry})
                 nodeDetail.asset = entry;
                 return nodeWrap.classList.add('mi-transit-detail')
             }
@@ -47,7 +55,8 @@ customElements.define('page-content',
 
             <article
                     @content-transit=${this.evtContentTransit}
-                    @domain-change=${this.evtDomainChange}>
+                    @domain-change=${this.evtDomainChange}
+                    @tool-change=${this.evtToolChange}>
 
                 <header>
                     <content-menu></content-menu>
