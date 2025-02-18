@@ -1,7 +1,5 @@
 import {html, css, LitElement} from 'lit';
-import "/src/component/monitor-view-project"
-import "/src/component/monitor-view-tool"
-import {itemById} from "../../_core/store";
+import {itemById} from "/src/_core/store";
 
 const assets = {
     auto: [
@@ -64,7 +62,7 @@ customElements.define('joi-monitor',
                         ${assets.auto.map(
                                 ([title, label, code]) => html`
                                     <button title="${title}"
-                                            @click="${() => elem.loopContent(code)}">
+                                            @click="${() => this.loopContent(code)}">
                                         ${label}
                                     </button>
                                 `)}
@@ -74,7 +72,7 @@ customElements.define('joi-monitor',
                         ${assets.manual.map(
                                 val => html`
                                     <button title="${val}"
-                                            @click="${() => elem.controContent(val)}">
+                                            @click="${() => this.controContent(val)}">
                                         ${val}
                                     </button>
                                 `)}
@@ -85,13 +83,13 @@ customElements.define('joi-monitor',
                     <nav>
                         <a id="mi-monitor-view">
                             ${
-                                    ('PROJ' === elem.activeContent && html`
+                                    ('PROJ' === this.activeContent && html`
                                         <monitor-view-project></monitor-view-project>
                                     `)
-                                    || ('TOOL' === elem.activeContent && html`
+                                    || ('TOOL' === this.activeContent && html`
                                         <monitor-view-tool></monitor-view-tool>
                                     `)
-                                    || ('REFF' === elem.activeContent && html`
+                                    || ('REFF' === this.activeContent && html`
                                         <monitor-view-reference></monitor-view-reference>
                                     `)
                                     || ""

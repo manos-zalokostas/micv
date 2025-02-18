@@ -41,8 +41,8 @@ customElements.define('content-menu',
             <nav>
                 ${assets.map((val) => html`
                     <button id="domain_${val}"
-                            class="${elem.active === val ? 'active' : ''}"
-                            @click="${(evt) => elem.action(val)}">
+                            class="${this.active === val ? 'active' : ''}"
+                            @click="${(evt) => this.action(val)}">
                         ${val.toUpperCase()}
                     </button>
                 `)}

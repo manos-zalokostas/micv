@@ -1,5 +1,5 @@
 import {css, html, LitElement} from 'lit';
-import * as Store from "../../_core/store";
+import * as Store from "/src/_core/store";
 
 
 const asset = {
@@ -41,7 +41,7 @@ customElements.define('global-search',
 
         actionItemSel(value) {
             console.log(">>>>>> VALUE", value)
-            // Monitor.select('project', elem.value.split(' ').shift());
+            // Monitor.select('project', this.value.split(' ').shift());
         }
 
         render = () => html`
@@ -53,7 +53,7 @@ customElements.define('global-search',
                                 <div>
                                     <label for="search_${v}">${v}</label>
                                     <input id="search_${v}" type="radio" name="search" value="${v}"
-                                           @click="${(evt) => _listChange(evt, () => elem.action(v))}">
+                                           @click="${(evt) => _listChange(evt, () => this.action(v))}">
                                 </div>
                             `)}
                 </div>
@@ -62,9 +62,9 @@ customElements.define('global-search',
                 <div id="search_result">
 
                     <input
-                            id="${elem.active}"
-                            list="${elem.active}_list"
-                            @change="${(evt) => _selItem(evt, () => elem.actionItemSel(evt.target.value))}">
+                            id="${this.active}"
+                            list="${this.active}_list"
+                            @change="${(evt) => _selItem(evt, () => this.actionItemSel(evt.target.value))}">
 
                     <datalist id="${asset.list[0]}_list">
                         ${asset.projects.map(([id, name]) => html`

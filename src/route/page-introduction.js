@@ -1,9 +1,6 @@
 import {html, css, LitElement} from 'lit';
 import {PAGE, VIEW} from "/src/env";
 
-/**
- *
- */
 
 customElements.define('page-introduction',
 

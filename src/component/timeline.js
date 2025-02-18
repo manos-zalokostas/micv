@@ -1,5 +1,5 @@
 import {html, css, LitElement} from 'lit';
-import {assets} from "./asset";
+import {assets} from "./timeline_asset";
 import {EVT} from "/src/env";
 
 

@@ -85,7 +85,7 @@ customElements.define('monitor-view-project',
 
             if (!this.project) return '';
 
-            const {title, section, description, screenshots, tools} = elem.project;
+            const {title, section, description, screenshots, tools} = this.project;
 
             if (Array.isArray(tools.tool)) tools.tool.length = 15;
 

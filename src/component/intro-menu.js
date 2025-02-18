@@ -1,5 +1,5 @@
 import {css, html, LitElement} from 'lit';
-import {VIEW} from "/src/env";
+import {EVT, VIEW} from "/src/env";
 
 const assets = [
     ['welcome', VIEW.LAND.INTRO],

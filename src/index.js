@@ -54,11 +54,12 @@ customElements.define('site-index',
                                     </div>
                                 `)
 
-                                || (PAGE.CERT === this.display && html`
-                                    <div id="credentials">
-                                        <page-reference></page-reference>
-                                    </div>
-                                `)
+                                // || (PAGE.CERT === this.display && html`
+                                //     <div id="credentials">
+                                //         <page-reference></page-reference>
+                                //     </div>
+                                // `)
+                                        
                                 || ''
 
                         }
