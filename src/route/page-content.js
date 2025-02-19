@@ -24,23 +24,18 @@ customElements.define('page-content',
         }
 
         evtDomainChange(evt) {
-            // console.log(' -- DOMAIN CHANGE FUNCTION: ', evt.detail.domain)
             const child = this.shadowRoot.querySelector('content-tablet');
             child.domain = evt.detail.domain;
         }
 
         evtToolChange(evt) {
-
-            // console.log(' -- DOMAIN CHANGE FUNCTION: ', evt.detail.domain)
             const child = this.shadowRoot.querySelector('content-tablet');
             child.tool = evt.detail.tool;
-
-
         }
 
-        evtContentTransit(evt) {
 
-            // console.log(' -- CONTENT TRANSIT FUNCTION: ', evt.detail)
+        evtContentTransit(evt) {
+            debugger
             const nodeWrap = this.shadowRoot.querySelector('main');
             const nodeDetail = this.shadowRoot.querySelector('content-detail');
             if (evt.detail.transit) {
@@ -56,7 +51,8 @@ customElements.define('page-content',
             <article
                     @content-transit=${this.evtContentTransit}
                     @domain-change=${this.evtDomainChange}
-                    @tool-change=${this.evtToolChange}>
+                    @tool-change=${this.evtToolChange}
+            >
 
                 <header>
                     <content-menu></content-menu>

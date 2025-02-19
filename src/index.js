@@ -1,5 +1,5 @@
 import {html, css, LitElement} from 'lit';
-import {_DEV, PAGE} from "./env";
+import {_DEV, EVT, PAGE} from "./env";
 
 
 customElements.define('site-index',
@@ -28,11 +28,45 @@ customElements.define('site-index',
             this.display = evt.detail.code;
         }
 
+        async evtProjectSelect(evt) {
+            debugger
+            this.display = PAGE.WORK;
+
+            await this.updateComplete;
+
+            const pageContent = this.shadowRoot.querySelector('page-content');
+
+            pageContent.evtContentTransit({
+                detail: {
+                    transit: true,
+                    entryId: evt.detail.id
+                }
+            })
+        }
+
+
+        async evtToolSelect(evt) {
+            debugger
+            this.display = PAGE.WORK;
+
+            await this.updateComplete;
+
+            const pageContent = this.shadowRoot.querySelector('page-content');
+
+            pageContent.evtToolChange({
+                detail: {
+                    tool: evt.detail.tool
+                }
+            })
+        }
 
         render = () => html`
 
             <div id="view"
-                 @page-transit=${this.evtPageTransit}>
+                 @page-transit=${this.evtPageTransit}
+                 @project-select=${this.evtProjectSelect}
+                 @tool-select=${this.evtToolSelect}
+            >
 
                 <div id="wrapper">
 
@@ -59,7 +93,7 @@ customElements.define('site-index',
                                 //         <page-reference></page-reference>
                                 //     </div>
                                 // `)
-                                        
+
                                 || ''
 
                         }

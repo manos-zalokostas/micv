@@ -6,6 +6,9 @@ export const EVT = {
 
     DOMAIN_CHANGE: 'domain-change',
     TOOL_CHANGE: 'tool-change',
+
+    PROJECT_SELECT: 'project-select',
+    TOOL_SELECT: 'tool-select',
 }
 
 export const PAGE = {
@@ -27,8 +30,17 @@ export const VIEW = {
     CERT: {},
 }
 
+export const MONIT = {
+    WORK: 1,
+    TOOL: 2,
+    PAUS: 3,
+    PREV: 4,
+    NEXT: 5,
+}
+
 
 export const _DEV = {
-    PAGE: PAGE.WORK,
-    VIEW: VIEW.WORK.NAVI
+    PAGE: PAGE.LAND,
+    // VIEW: VIEW.WORK.NAVI,
+    MONIT: MONIT.TOOL,
 }

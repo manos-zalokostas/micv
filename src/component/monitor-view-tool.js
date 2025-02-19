@@ -1,5 +1,6 @@
 import {html, css, LitElement} from 'lit';
 import {groupProjects, groupTools, itemById, itemByIndex} from "/src/_core/store";
+import {EVT} from "../env";
 
 const list = groupTools();
 
@@ -70,6 +71,23 @@ customElements.define('monitor-view-tool',
             this.clear()
         }
 
+
+        chooseTool(evt) {
+            debugger
+            evt.preventDefault();
+            console.log(">>>>>> ", evt.target.id)
+            // this.active = id;
+
+            this.dispatchEvent(
+                new CustomEvent(EVT.TOOL_SELECT, {
+                        detail: {tool: evt.target.id},
+                        bubbles: true,        // Event travels up the DOM tree
+                        composed: true        // Event crosses shadow DOM boundaries
+                    }
+                )
+            )
+        }
+
         render = () => {
             if (!this.tools) return '';
 
@@ -77,10 +95,11 @@ customElements.define('monitor-view-tool',
                 <div id="view-tool">
                     ${this.tools.map(
                             val => html`
-                                <div>
+                                <a id="${val}"
+                                   @click="${this.chooseTool}">
                                     <h4>${val.replaceAll("_", " ")}</h4>
                                     <img src="/images/tech_logos/${val}.jpg" alt="${val}"/>
-                                </div>
+                                </a>
                             `
                     )}
                 </div>
@@ -95,7 +114,7 @@ customElements.define('monitor-view-tool',
                 gap: 15px;
                 padding: 30px 15px 15px;
 
-                > div {
+                a {
                     display: flex;
                     justify-content: space-between;
                     color: white;
@@ -107,6 +126,7 @@ customElements.define('monitor-view-tool',
                     img {
                         width: 100px;
                         height: 100px;
+                        pointer-events: none;
                     }
                 }
             }

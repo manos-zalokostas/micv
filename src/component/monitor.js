@@ -1,13 +1,16 @@
 import {html, css, LitElement} from 'lit';
 import {itemById} from "/src/_core/store";
+import {_DEV, MONIT} from "../env";
 
 const assets = {
     auto: [
-        ['tool', 'tools', 'TOOL',],
-        ['project', 'projects', 'PROJ'],
+        ['tool', 'tools', MONIT.TOOL],
+        ['project', 'projects', MONIT.WORK],
     ],
     manual: [
-        'pause', 'prev', 'next'
+        ['pause', MONIT.PAUS],
+        ['prev', MONIT.PREV],
+        ['next', MONIT.NEXT],
     ],
 }
 
@@ -24,7 +27,7 @@ customElements.define('joi-monitor',
         constructor() {
             super();
             // this.activeContent = 'INTRO'
-            this.activeContent = 'TOOL'
+            this.activeContent = _DEV.MONIT
         }
 
         loopContent(val) {
@@ -33,20 +36,21 @@ customElements.define('joi-monitor',
         }
 
         controContent(val) {
-            const View = this.activeContent === "PROJ"
+            debugger
+            const View = this.activeContent === MONIT.WORK
                 ? this.shadowRoot.querySelector("monitor-view-project")
                 : this.shadowRoot.querySelector("monitor-view-tool")
 
-            if ('pause' === val) return View.pause()
+            if (MONIT.PAUS === val) return View.pause()
 
-            if ('prev' === val) return View.prev()
+            if (MONIT.PREV === val) return View.prev()
 
             View.next();
         }
 
         forceConent(code) {
 
-            this.activeContent = 'PROJ'
+            this.activeContent = MONIT.WORK
             const ViewProject = this.shadowRoot.querySelector("monitor-view-project")
             ViewProject.pause();
 
@@ -70,10 +74,10 @@ customElements.define('joi-monitor',
 
                     <div class="mcontrols">
                         ${assets.manual.map(
-                                val => html`
-                                    <button title="${val}"
+                                ([name, val]) => html`
+                                    <button title="${name}"
                                             @click="${() => this.controContent(val)}">
-                                        ${val}
+                                        ${name}
                                     </button>
                                 `)}
                     </div>
@@ -83,15 +87,15 @@ customElements.define('joi-monitor',
                     <nav>
                         <a id="mi-monitor-view">
                             ${
-                                    ('PROJ' === this.activeContent && html`
+                                    (MONIT.WORK === this.activeContent && html`
                                         <monitor-view-project></monitor-view-project>
                                     `)
-                                    || ('TOOL' === this.activeContent && html`
+                                    || (MONIT.TOOL === this.activeContent && html`
                                         <monitor-view-tool></monitor-view-tool>
                                     `)
-                                    || ('REFF' === this.activeContent && html`
-                                        <monitor-view-reference></monitor-view-reference>
-                                    `)
+                                    // || ('REFF' === this.activeContent && html`
+                                    //     <monitor-view-reference></monitor-view-reference>
+                                    // `)
                                     || ""
                             }
                         </a>
