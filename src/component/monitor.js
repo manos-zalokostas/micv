@@ -31,12 +31,12 @@ customElements.define('joi-monitor',
         }
 
         loopContent(val) {
-            console.log("-- ", val)
+            // console.log("-- ", val)
             this.activeContent = val
         }
 
         controContent(val) {
-            debugger
+            
             const View = this.activeContent === MONIT.WORK
                 ? this.shadowRoot.querySelector("monitor-view-project")
                 : this.shadowRoot.querySelector("monitor-view-tool")

@@ -1,18 +1,6 @@
 import {css, html, LitElement} from 'lit';
-import {groupByDomain, groupByTool, itemById} from "/src/_core/store";
-import {EVT} from "/src/env";
-
-// const fn = elem => {
-//     console.log(" ASSETS => ", elem.assets)
-//     const items = elem.assets
-//         .reverse()
-//         .map(a => a[1])
-//         .flat()
-//         .map(([code]) => itemById(code))
-//     console.log({items})
-//     return items;
-// }
-
+import {groupByDomain, groupByTool, groupTools, itemById} from "/src/_core/store";
+import {DOMA, EVT} from "/src/env";
 
 customElements.define('content-tablet',
 
@@ -20,81 +8,109 @@ customElements.define('content-tablet',
 
         static properties = {
             tool: {type: String},
-            domain: {type: String, default: 'WORK'},
+            domain: {type: String, default: DOMA.WORK},
             assets: {type: Array}
         };
 
+        #view = '';
+
         constructor() {
             super();
-            // this.tool = null;
-            // this.domain = 'WORK';
-            this.assets = groupByDomain(this.domain);
+            this.assets = groupTools();
+            this.#view = this._viewTool();
         }
 
         // Lifecycle method triggered when properties are updated
-        updated(changedProperties) {
+        updated(changedProperties, x, z) {
             super.updated(changedProperties);
 
             if (changedProperties.has('domain')) {
-                this.assets = groupByDomain(this.domain);
+
+                if (this.domain === DOMA.TOOL) {
+                    this.assets = groupTools();
+                    this.#view = this._viewTool()
+                    return;
+                }
+                this.assets = this._packProjects(groupByDomain(this.domain))
+                this.#view = this._viewProject();
             }
 
             if (changedProperties.has('tool')) {
-                this.assets = [[this.tool, groupByTool(this.tool)]]
+                debugger
+                this.assets = this._packProjects([[this.tool, groupByTool(this.tool)]])
+                this.#view = this._viewProject();
             }
 
-
         }
 
 
-        action(idx) {
-            console.log(idx, {domain: this.domain})
+        _packProjects(entries) {
+            return entries.map(a => a[1])
+                .flat()
+                .map(([code]) => itemById(code))
         }
 
 
-        render = () => html`
+        chooseTool(evt) {
+            this.tool = evt.target.id;
+        }
+
+
+        chooseProject(evt) {
+            evt.preventDefault()
+            this.dispatchEvent(
+                new CustomEvent(EVT.CONTENT_TRANSIT, {
+                    detail: {
+                        transit: true,
+                        entryId: evt.target.id
+                    },
+                    bubbles: true,
+                })
+            )
+        }
+
+
+        _viewProject = () => html`
             <nav class="mi-tablet">
 
-                ${this.assets
-                        .map(a => a[1])
-                        .flat()
-                        .map(([code]) => itemById(code))
-                        .map((o) => html`
-                            <a href="#" @click="${(evt) => {
-                                // debugger
-                                evt.preventDefault()
-                                this.dispatchEvent(
-                                        new CustomEvent(EVT.CONTENT_TRANSIT, {
-                                                    detail: {
-                                                        transit: true,
-                                                        entryId: o.id
-                                                    },
-                                                    bubbles: true,        // Event travels up the DOM tree
-                                                }
-                                        ))
-                            }
-                            }">
-
-
-                                <small>${o.category}</small>
-                                <strong>${o.title}
-                                    <small>${o.id}</small>
-                                </strong>
-                                <aside>${Array.isArray(o.tools.tool) && o.tools.tool.map(
-                                        tool => html`
-                                            <img src='/images/tech_logos/${tool}.jpg' alt="${tool}"/>
-                                        `)}
-                                </aside>
-                                <p>
-                                    <span>${o.description.substring(0, 200)}<em>&nbsp&nbsp;...more</em></span>
-                                </p>
-                                <img src=" ${o.screenshots.shot[0]}
-                        " alt=${o.title}>
-                            </a>
-                        `)}
+                ${this.assets.map((o) => html`
+                    <a href="#"
+                       @click="${this.chooseProject}">
+                        <small>${o.category}</small>
+                        <strong>${o.title}
+                            <small>${o.id}</small>
+                        </strong>
+                        <aside>${Array.isArray(o.tools.tool) && o.tools.tool.map(
+                                tool => html`
+                                    <img src='/images/tech_logos/${tool}.jpg' alt="${tool}"/>
+                                `)}
+                        </aside>
+                        <p>
+                            <span>${o.description.substring(0, 200)}<em>&nbsp&nbsp;...more</em></span>
+                        </p>
+                        <img src="${o.screenshots.shot[0]}" alt=${o.title}>
+                    </a>
+                `)}
 
             </nav>
         `;
+
+        _viewTool = () => html`
+            <nav class="mi-tablet">
+                ${this.assets.map(
+                        val => html`
+                            <a id="${val}" class="mi-tool"
+                               @click="${this.chooseTool}">
+                                <h4>${val.replaceAll("_", " ").toUpperCase()}</h4>
+                                <img src="/images/tech_logos/${val}.jpg" alt="${val}"/>
+                            </a>
+                        `
+                )}
+            </nav>
+        `;
+
+
+        render = () => this.#view
 
 
         static styles = css`
@@ -102,7 +118,7 @@ customElements.define('content-tablet',
             nav {
                 display: flex;
                 flex-wrap: wrap;
-                justify-content: space-evenly;
+                justify-content: center;
                 gap: 10px;
                 position: relative;
                 z-index: 5;
@@ -114,15 +130,38 @@ customElements.define('content-tablet',
                 a {
                     display: flex;
                     flex-direction: column;
-                    justify-content: space-evenly;
+                    justify-content: space-around;
                     position: relative;
                     color: white;
                     text-decoration: none;
                     padding: 10px;
                     min-height: 300px;
-                    width: 575px;
+                    width: 250px;
                     overflow: hidden;
                     background: #444;
+
+                    * {
+                        pointer-events: none;
+                    }
+
+                    &.mi-tool {
+                        font-size: 28px;
+                        color: white;
+                        width: 225px;
+                        height: 100px;
+
+                        h4 {
+                            text-align: center;
+                        }
+                        
+                        img {
+                            height: 100%;
+
+                            &:hover {
+                                //left: 10%;
+                            }
+                        }
+                    }
 
                     strong {
                         font-size: 32px;
@@ -160,7 +199,6 @@ customElements.define('content-tablet',
                         opacity: .2;
                         border: 4px solid gainsboro;
                         width: 100%;
-
                     }
 
                     &:hover {

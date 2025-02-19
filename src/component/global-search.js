@@ -35,12 +35,12 @@ customElements.define('global-search',
 
 
         action(list) {
-            console.log(">>>>>> VALUE", list)
+            // console.log(">>>>>> VALUE", list)
             this.active = list;
         }
 
         actionItemSel(value) {
-            console.log(">>>>>> VALUE", value)
+            // console.log(">>>>>> VALUE", value)
             // Monitor.select('project', this.value.split(' ').shift());
         }
 

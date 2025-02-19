@@ -20,7 +20,7 @@ customElements.define('page-introduction',
 
         action(idx) {
             this.active = idx;
-            console.log("--- ", idx);
+            // console.log("--- ", idx);
         }
 
         evtIntroTransit(evt) {
@@ -29,7 +29,7 @@ customElements.define('page-introduction',
 
         evtMonitorContent(evt) {
 
-            console.log(evt.detail)
+            // console.log(evt.detail)
             const Monitor = this.shadowRoot.querySelector('joi-monitor');
             Monitor.forceConent(evt.detail.code)
         }

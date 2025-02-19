@@ -16,7 +16,7 @@ customElements.define('monitor-view-reference',
             this.active = 1;
             // this.reference = Monitor.curr(); // Default reference is the current one
             this.reference = itemByIndex(10);
-            console.log(this.reference)
+            // console.log(this.reference)
         }
 
 

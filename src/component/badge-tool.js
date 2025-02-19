@@ -32,7 +32,7 @@ customElements.define('badge-tool',
 
         action(idx) {
             this.active = idx;
-            console.log("--- ", idx);
+            // console.log("--- ", idx);
         }
 
         render = () => html`

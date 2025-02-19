@@ -21,13 +21,13 @@ customElements.define('content-detail',
             super();
             this.active = 1
             this.asset = itemById('WK15')
-            console.log(">>> ", this.asset)
+            // console.log(">>> ", this.asset)
         }
 
 
         action(idx) {
             this.active = idx;
-            console.log("--- ", idx);
+            // console.log("--- ", idx);
         }
 
         render = () => html`

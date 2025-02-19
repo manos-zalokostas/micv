@@ -20,10 +20,11 @@ customElements.define('page-content',
 
         action(idx) {
             this.active = idx;
-            console.log("--- ", idx);
+            // console.log("--- ", idx);
         }
 
         evtDomainChange(evt) {
+            // console.log(" >>>>> domain", evt.detail.domain)
             const child = this.shadowRoot.querySelector('content-tablet');
             child.domain = evt.detail.domain;
         }
@@ -35,7 +36,7 @@ customElements.define('page-content',
 
 
         evtContentTransit(evt) {
-            debugger
+            
             const nodeWrap = this.shadowRoot.querySelector('main');
             const nodeDetail = this.shadowRoot.querySelector('content-detail');
             if (evt.detail.transit) {
@@ -49,9 +50,9 @@ customElements.define('page-content',
         render = () => html`
 
             <article
+                    @tool-change=${this.evtToolChange}
                     @content-transit=${this.evtContentTransit}
                     @domain-change=${this.evtDomainChange}
-                    @tool-change=${this.evtToolChange}
             >
 
                 <header>

@@ -21,11 +21,11 @@ customElements.define('project-tool',
             this.active = 'git'
             this.entries = itemByIndex(5).tools.tool
 
-            console.log(this.project)
+            // console.log(this.project)
         }
 
         changeTool(tool='git') {
-            console.log(">>>>>> ", tool)
+            // console.log(">>>>>> ", tool)
             this.active = tool;
             // Child Component (global-menu)
             this.dispatchEvent(new CustomEvent(EVT.TOOL_CHANGE, {

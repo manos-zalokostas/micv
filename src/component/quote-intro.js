@@ -17,7 +17,7 @@ customElements.define('quote-intro',
 
         action(idx) {
             this.active = idx;
-            console.log("--- ", idx);
+            // console.log("--- ", idx);
         }
 
 

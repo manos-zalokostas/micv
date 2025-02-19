@@ -38,9 +38,14 @@ export const MONIT = {
     NEXT: 5,
 }
 
+export const DOMA = {
+    WORK: 'WORK',
+    STUD: 'STUDY',
+    TOOL: 'TOOL',
+}
 
 export const _DEV = {
-    PAGE: PAGE.LAND,
+    PAGE: PAGE.WORK,
     // VIEW: VIEW.WORK.NAVI,
-    MONIT: MONIT.TOOL,
+    // MONIT: MONIT.TOOL,
 }

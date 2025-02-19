@@ -82,7 +82,7 @@ function open(current_page) {
 
         default:
             // DEFAULT:: TOP LEVEL PAGE
-            console.log('FUNCTION: ANIMATE_PAGE -> RUNS DEFAULT - PLEASE CHECK !');
+            // console.log('FUNCTION: ANIMATE_PAGE -> RUNS DEFAULT - PLEASE CHECK !');
             Visual.set(
                 {$wrapper, top: '-200%'}
             )

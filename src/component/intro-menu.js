@@ -22,10 +22,10 @@ customElements.define('intro-menu',
 
 
         action(idx) {
-            console.log(">>>>>> ", idx)
+            // console.log(">>>>>> ", idx)
             this.active = idx;
 
-            console.log('CLICKED INTROD PAGE MENU');
+            // console.log('CLICKED INTROD PAGE MENU');
         }
 
         render = () => html`

@@ -19,17 +19,17 @@ customElements.define('site-index',
 
         action(idx) {
             this.active = idx;
-            console.log("--- ", idx);
+            // console.log("--- ", idx);
         }
 
 
         evtPageTransit(evt) {
-            console.log(" >>>  ", evt.detail);
+            // console.log(" >>>  ", evt.detail);
             this.display = evt.detail.code;
         }
 
         async evtProjectSelect(evt) {
-            debugger
+            
             this.display = PAGE.WORK;
 
             await this.updateComplete;
@@ -46,7 +46,7 @@ customElements.define('site-index',
 
 
         async evtToolSelect(evt) {
-            debugger
+            
             this.display = PAGE.WORK;
 
             await this.updateComplete;

@@ -27,7 +27,7 @@ customElements.define('monitor-view-project',
             this.activeIndex = 0;
             this.project = null;
             // this.loop();
-            console.log(this.project)
+            // console.log(this.project)
         }
 
         loop() {
@@ -65,13 +65,13 @@ customElements.define('monitor-view-project',
 
         action(idx) {
             this.active = idx;
-            console.log("--- ", idx);
+            // console.log("--- ", idx);
         }
 
         chooseProject(evt) {
-            debugger
+            
             evt.preventDefault();
-            console.log(">>>>>> ", evt.target.id)
+            // console.log(">>>>>> ", evt.target.id)
             // this.active = id;
 
             this.dispatchEvent(
@@ -86,13 +86,13 @@ customElements.define('monitor-view-project',
 
         connectedCallback() {
             super.connectedCallback();
-            console.log('Element launced the DOM!');
+            // console.log('Element launced the DOM!');
             this.loop();
         }
 
         disconnectedCallback() {
             super.disconnectedCallback();
-            console.log('Element removed from the DOM!');
+            // console.log('Element removed from the DOM!');
             this.clear()
         }
 

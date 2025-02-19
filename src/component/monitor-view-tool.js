@@ -43,7 +43,7 @@ customElements.define('monitor-view-tool',
                     this.tools = list.slice(start, end)
                     this.activeIndex++;
                     if (!this.tools.length) this.activeIndex = 0;
-                    console.log({start, end, index: this.activeIndex})
+                    // console.log({start, end, index: this.activeIndex})
                     // this.clear();
                 }, 5000
             )
@@ -61,21 +61,21 @@ customElements.define('monitor-view-tool',
 
         connectedCallback() {
             super.connectedCallback();
-            console.log('Element launced the DOM!');
+            // console.log('Element launced the DOM!');
             this.loop();
         }
 
         disconnectedCallback() {
             super.disconnectedCallback();
-            console.log('Element removed from the DOM!');
+            // console.log('Element removed from the DOM!');
             this.clear()
         }
 
 
         chooseTool(evt) {
-            debugger
+            
             evt.preventDefault();
-            console.log(">>>>>> ", evt.target.id)
+            // console.log(">>>>>> ", evt.target.id)
             // this.active = id;
 
             this.dispatchEvent(

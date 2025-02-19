@@ -1,10 +1,12 @@
 import {html, css, LitElement} from 'lit';
-import {EVT} from "/src/env";
+import {DOMA, EVT} from "/src/env";
 
-const assets = [
-    'work',
-    'studies',
-];
+
+// const domains = [
+//     ['tools', DOMA.TOOL],
+//     ['work', DOMA.WORK],
+//     ['study', DOMA.STUD],
+// ];
 
 
 /**
@@ -26,7 +28,7 @@ customElements.define('content-menu',
 
 
         changeDomain(domain) {
-            console.log(">>>>>> ", domain)
+            // console.log(">>>>>> ", domain)
             this.active = domain;
             // Child Component (global-menu)
             this.dispatchEvent(new CustomEvent(EVT.DOMAIN_CHANGE, {
@@ -38,13 +40,12 @@ customElements.define('content-menu',
         }
 
 
-
         render = () => html`
             <nav>
-                ${assets.map((val) => html`
-                    <button class="${this.active === val ? 'active' : ''}"
-                            @click="${(evt) => this.changeDomain(val)}">
-                        ${val.toUpperCase()}
+                ${Object.values(DOMA).map((domain) => html`
+                    <button class="${this.active === domain ? 'active' : ''}"
+                            @click="${() => this.changeDomain(domain)}">
+                        ${domain}
                     </button>
                 `)}
             </nav>

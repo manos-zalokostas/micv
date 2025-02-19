@@ -23,8 +23,8 @@ customElements.define('global-menu',
 
 
         action(idx) {
-            console.log('IDX: :', idx)
-            console.log('DO SOMETHING ! ')
+            // console.log('IDX: :', idx)
+            // console.log('DO SOMETHING ! ')
             this.activeElem = idx
         }
 

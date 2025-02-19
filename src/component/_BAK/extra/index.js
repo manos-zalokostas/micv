@@ -20,7 +20,7 @@ class GlobalMenu extends LitElement {
 
    action(idx) {
         this.active = idx;
-        console.log("--- ", idx);
+        // console.log("--- ", idx);
     }
 
     static styles = _style();
