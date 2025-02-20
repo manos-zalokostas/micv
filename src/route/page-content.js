@@ -82,7 +82,6 @@ customElements.define('page-content',
                 justify-content: flex-start;
                 width: 100vw;
                 height: 100vh;
-                //padding: 25px;
 
                 header {
                     flex-basis: 100px;
@@ -91,15 +90,12 @@ customElements.define('page-content',
                 main {
                     flex-basis: calc(100vh - 100px);
                     position: relative;
-                    //z-index: 5;
                     top: 0;
                     left: 0;
-                    //height: calc(100% - 200px);
                     width: 200%;
                     transition: all;
-                    //background: red;
-                    //padding: 25px;
 
+                    
                     &.mi-transit-detail {
                         left: -100%;
                     }
@@ -109,7 +105,6 @@ customElements.define('page-content',
                         float: left;
                         padding: 50px 0;
                         width: 50%;
-                        //height: 100%;
                         
                     }
 

@@ -78,7 +78,7 @@ customElements.define('content-detail',
             header {
                 display: flex;
                 flex-wrap: wrap;
-                justify-content: space-evenly;
+                justify-content: space-around;
                 align-items: center;
                 width: 100%;
                 max-height: 175px;

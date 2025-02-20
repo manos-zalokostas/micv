@@ -3,20 +3,17 @@ import * as Store from "/src/_core/store";
 
 
 const asset = {
-    projects: Store.groupProjects(),
+    work: Store.groupProjects(),
     tools: Store.groupTools(),
-    list: [
-        'project',
-        'skill',
-    ]
+    list: ['work', 'skill',]
 }
 
 
-let targetListChange = "#search_radio input";
-const _listChange = (evt, fn) => evt.target.matches(targetListChange) && fn();
-
-let targetList = "#search_result input[list]";
-const _selItem = (evt, fn) => evt.target.matches(targetList) && fn();
+// let targetListChange = "#search_radio input";
+// const _listChange = (evt, fn) => evt.target.matches(targetListChange) && fn();
+//
+// let targetList = "#search_result input[list]";
+// const _selItem = (evt, fn) => evt.target.matches(targetList) && fn();
 
 
 customElements.define('global-search',
@@ -45,76 +42,96 @@ customElements.define('global-search',
         }
 
         render = () => html`
-            <div id="search">
+            <section>
 
-                <div id="search_radio">
-                    ${asset.list.map(
-                            (v, i) => html`
-                                <div>
-                                    <label for="search_${v}">${v}</label>
-                                    <input id="search_${v}" type="radio" name="search" value="${v}"
-                                           @click="${(evt) => _listChange(evt, () => this.action(v))}">
-                                </div>
-                            `)}
-                </div>
+                <input id="${this.active}"
+                       @change="${(evt) => this.actionItemSel(evt.target.value)}">
 
+                <nav>
+                    ${asset.work.map(([key, name, img]) => html`
+                        <a data-key="${key}" data-type="work">
+                            <em>${name}</em>
+                            <img src="${img}" alt="logo ${name}"/>
+                        </a>
+                    `)}
+                    ${asset.tools.map(name => html`
+                        <a data-key="${name}" data-type="tool">
+                            <em>${name.replaceAll("_", " ")}</em>
+                            <img src="/images/tech_logos/${name}.jpg" alt="logo ${name}"/>
+                        </a>
+                    `)}
+                </nav>
 
-                <div id="search_result">
-
-                    <input
-                            id="${this.active}"
-                            list="${this.active}_list"
-                            @change="${(evt) => _selItem(evt, () => this.actionItemSel(evt.target.value))}">
-
-                    <datalist id="${asset.list[0]}_list">
-                        ${asset.projects.map(([id, name]) => html`
-                            <option value="${id}">${name}</option>`)}
-                    </datalist>
-                    <datalist id="${asset.list[1]}_list">
-                        ${asset.tools.map(name => html`
-                            <option value="${name}">${name}</option>`)}
-                    </datalist>
-
-                </div>
-
-            </div>
+            </section>
         `;
 
 
         static styles = css`
 
-            #search {
+            section {
+                position: absolute;
+                z-index: 50;
+                right: 0;
                 display: flex;
                 flex-direction: column;
-                margin: 10px;
-            }
+                align-items: flex-end;
+                gap: 20px;
+                margin: 0 50px;
+                //width: 500px;
+                padding: 15px 25px;
 
-            #search_radio {
-                display: flex;
-                justify-content: space-between;
-                margin-bottom: 10px;
-            }
 
-            #search_radio label {
-                font-size: 16px;
-            }
+                input {
+                    display: block;
+                    padding: 5px;
+                    border: none;
+                    outline: none;
+                    border-bottom: 4px solid #ddd;
+                    //&::before {
+                    //    content: "search";
+                    //}
+                }
 
-            #search_result {
-                display: flex;
-                flex-direction: column;
-            }
 
-            #search_result input {
-                width: 200px;
-                padding: 5px;
-                margin-top: 5px;
-            }
+                nav {
+                    display: none;
+                    //display: flex;
+                    //flex-direction: column;
+                    //max-height: 85vh;
+                    max-width: 97vw;
+                    overflow: auto;
+                    background: #eee;
+                    padding: 10px 5px 0;
 
-            #search_result datalist {
-                max-height: 150px;
-                overflow-y: auto;
-            }
 
+                    a {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin: 5px;
+                        padding: 4px 10px;
+                        border-bottom: 1px solid #ddd;
+                        min-width: 225px;
+                        background: white;
+
+
+                        em {
+                            font-style: normal;
+                        }
+
+                        img {
+                            width: 75px;
+                            height: 75px;
+                        }
+                    }
+                }
+
+                &:hover {
+                    nav {
+                        display: flex;
+                    }
+                }
+            }
         `
     }
 );

@@ -30,23 +30,28 @@ customElements.define('global-menu',
 
         render = () => html`
             <nav>
-                ${assets.map(([val, code], i) => html`
-                    <button title="${val}"
-                            class="${this.activeElem === code ? 'active' : ''}"
-                            @click="${(evt) => {
-                                this.action(code);
-                                this.dispatchEvent(
-                                        new CustomEvent(EVT.PAGE_TRANSIT, {
-                                                    detail: {code},
-                                                    bubbles: true,        // Event travels up the DOM tree
-                                                    composed: true        // Event crosses shadow DOM boundaries
-                                                }
-                                        )
-                                )
-                            }}">
-                        ${val}
-                    </button>
-                `)}
+                <div>
+                    ${assets.map(([val, code], i) => html`
+                        <button title="${val}"
+                                class="${this.activeElem === code ? 'active' : ''}"
+                                @click="${(evt) => {
+                                    this.action(code);
+                                    this.dispatchEvent(
+                                            new CustomEvent(EVT.PAGE_TRANSIT, {
+                                                        detail: {code},
+                                                        bubbles: true,        // Event travels up the DOM tree
+                                                        composed: true        // Event crosses shadow DOM boundaries
+                                                    }
+                                            )
+                                    )
+                                }}">
+                            ${val}
+                        </button>
+                    `)}
+                </div>
+                <div>
+                    <global-search></global-search>
+                </div>
             </nav>
         `;
 
@@ -54,6 +59,8 @@ customElements.define('global-menu',
         static styles = css`
 
             nav {
+                display: flex;
+                justify-content: space-between;
 
                 button {
                     //color: white;

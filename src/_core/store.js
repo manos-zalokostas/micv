@@ -41,7 +41,7 @@ export const groupTools = () => {
  */
 export const groupProjects = () => {
 
-    let pack = data.map(o => [o.id, o.title]);
+    let pack = data.map(o => [o.id, o.title, o.screenshots?.shot?.[0]]);
 
     return pack;
 }

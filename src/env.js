@@ -46,6 +46,6 @@ export const DOMA = {
 
 export const _DEV = {
     PAGE: PAGE.WORK,
-    // VIEW: VIEW.LAND.RESU,
+    VIEW: VIEW.WORK.CONT,
     // MONIT: MONIT.TOOL,
 }
