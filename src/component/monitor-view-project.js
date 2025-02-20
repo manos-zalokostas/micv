@@ -69,10 +69,8 @@ customElements.define('monitor-view-project',
         }
 
         chooseProject(evt) {
-            
+
             evt.preventDefault();
-            // console.log(">>>>>> ", evt.target.id)
-            // this.active = id;
 
             this.dispatchEvent(
                 new CustomEvent(EVT.PROJECT_SELECT, {

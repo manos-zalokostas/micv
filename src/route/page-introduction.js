@@ -1,5 +1,5 @@
 import {html, css, LitElement} from 'lit';
-import {PAGE, VIEW} from "/src/env";
+import {_DEV, PAGE, VIEW} from "/src/env";
 
 
 customElements.define('page-introduction',
@@ -14,7 +14,7 @@ customElements.define('page-introduction',
         constructor() {
             super();
             this.active = 1
-            this.activeContent = VIEW.LAND.INTRO
+            this.activeContent = _DEV.VIEW
 
         }
 
@@ -28,8 +28,6 @@ customElements.define('page-introduction',
         }
 
         evtMonitorContent(evt) {
-
-            // console.log(evt.detail)
             const Monitor = this.shadowRoot.querySelector('joi-monitor');
             Monitor.forceConent(evt.detail.code)
         }

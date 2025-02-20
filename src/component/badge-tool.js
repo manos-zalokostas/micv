@@ -54,11 +54,11 @@ customElements.define('badge-tool',
                 z-index: 1;
                 bottom: 10%;
                 opacity: 0.1;
-                /* width: 100%; */
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
                 align-items: center;
+                width: 100vw;
 
                 img {
                     width: 200px;

@@ -29,7 +29,7 @@ customElements.define('site-index',
         }
 
         async evtProjectSelect(evt) {
-            
+
             this.display = PAGE.WORK;
 
             await this.updateComplete;
@@ -46,7 +46,7 @@ customElements.define('site-index',
 
 
         async evtToolSelect(evt) {
-            
+            console.log(" tsikis ")
             this.display = PAGE.WORK;
 
             await this.updateComplete;
@@ -70,9 +70,7 @@ customElements.define('site-index',
 
                 <div id="wrapper">
 
-                    <nav>
-                        <global-menu>
-                    </nav>
+                    <global-menu></global-menu>
 
                     <article>
                         ${

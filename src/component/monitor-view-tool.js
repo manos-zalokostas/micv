@@ -73,10 +73,7 @@ customElements.define('monitor-view-tool',
 
 
         chooseTool(evt) {
-            
             evt.preventDefault();
-            // console.log(">>>>>> ", evt.target.id)
-            // this.active = id;
 
             this.dispatchEvent(
                 new CustomEvent(EVT.TOOL_SELECT, {
@@ -87,6 +84,7 @@ customElements.define('monitor-view-tool',
                 )
             )
         }
+
 
         render = () => {
             if (!this.tools) return '';

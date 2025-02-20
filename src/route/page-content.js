@@ -20,11 +20,9 @@ customElements.define('page-content',
 
         action(idx) {
             this.active = idx;
-            // console.log("--- ", idx);
         }
 
         evtDomainChange(evt) {
-            // console.log(" >>>>> domain", evt.detail.domain)
             const child = this.shadowRoot.querySelector('content-tablet');
             child.domain = evt.detail.domain;
         }
@@ -36,7 +34,6 @@ customElements.define('page-content',
 
 
         evtContentTransit(evt) {
-            
             const nodeWrap = this.shadowRoot.querySelector('main');
             const nodeDetail = this.shadowRoot.querySelector('content-detail');
             if (evt.detail.transit) {
@@ -47,13 +44,14 @@ customElements.define('page-content',
             nodeWrap.classList.remove('mi-transit-detail')
         }
 
+
+
         render = () => html`
 
             <article
                     @tool-change=${this.evtToolChange}
                     @content-transit=${this.evtContentTransit}
-                    @domain-change=${this.evtDomainChange}
-            >
+                    @domain-change=${this.evtDomainChange}>
 
                 <header>
                     <content-menu></content-menu>
@@ -96,9 +94,10 @@ customElements.define('page-content',
                     //z-index: 5;
                     top: 0;
                     left: 0;
-                    height: 100%;
+                    //height: calc(100% - 200px);
                     width: 200%;
                     transition: all;
+                    //background: red;
                     //padding: 25px;
 
                     &.mi-transit-detail {
@@ -108,8 +107,10 @@ customElements.define('page-content',
                     > div {
                         position: relative;
                         float: left;
+                        padding: 50px 0;
                         width: 50%;
-                        height: 100%;
+                        //height: 100%;
+                        
                     }
 
                 }

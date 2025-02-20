@@ -36,7 +36,7 @@ customElements.define('joi-monitor',
         }
 
         controContent(val) {
-            
+
             const View = this.activeContent === MONIT.WORK
                 ? this.shadowRoot.querySelector("monitor-view-project")
                 : this.shadowRoot.querySelector("monitor-view-tool")
@@ -124,18 +124,18 @@ customElements.define('joi-monitor',
                     z-index: 10;
                     display: flex;
                     justify-content: space-between;
-                    background: linear-gradient(0, #555, #444);
+                    //background: linear-gradient(0, #555, #444);
                     width: 100%;
 
                     button {
-                        color: white;
-                        font-family: verdana;
-                        padding: 4px 10px;
-                        margin: 2px;
-                        border: none;
-                        outline: none;
-                        width: 75px;
-                        background: #555
+                        //color: white;
+                        //font-family: verdana;
+                        //padding: 4px 10px;
+                        //margin: 2px;
+                        //border: none;
+                        //outline: none;
+                        //width: 75px;
+                        //background: #555
                     }
 
                 }

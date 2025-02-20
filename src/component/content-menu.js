@@ -2,17 +2,6 @@ import {html, css, LitElement} from 'lit';
 import {DOMA, EVT} from "/src/env";
 
 
-// const domains = [
-//     ['tools', DOMA.TOOL],
-//     ['work', DOMA.WORK],
-//     ['study', DOMA.STUD],
-// ];
-
-
-/**
- *
- */
-
 customElements.define('content-menu',
 
     class ContentMenu extends LitElement {
@@ -55,19 +44,19 @@ customElements.define('content-menu',
         static styles = css`
 
             nav {
-                text-align: right;
+                text-align: center;
 
                 button {
-                    text-transform: uppercase;
-                    font-family: Tahoma, Geneva, sans-serif;
-                    border: none;
-                    outline: none;
-                    border-bottom: 1px solid #ccc;
-                    padding: 5px 10px;
-                    width: 100px;
-                    margin: 5px;
-                    text-align: right;
-                    background: white;
+                    //text-transform: uppercase;
+                    //font-family: Tahoma, Geneva, sans-serif;
+                    //border: none;
+                    //outline: none;
+                    //border-bottom: 1px solid #ccc;
+                    //padding: 5px 10px;
+                    //width: 100px;
+                    //margin: 5px;
+                    //text-align: right;
+                    //background: white;
 
                     &:hover,
                     &.active {

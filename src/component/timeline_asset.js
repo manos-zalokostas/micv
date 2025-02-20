@@ -4,7 +4,7 @@ export const assets = [
         ' Contracted by ICCS as standalone Full Stack Developer to design and develop "EcoEMS" consisting of 2 energy apps with Sveltekit.js / Nest.js / Sql Server / Docker, ',
         ' The project was a part of European - Indian endeavor “Re-empowered” and its scope was to perform simulations so that renewable energy could find and claim its effective margin on the daily demand. ',
         [
-            "WB15",
+            "WK20",
         ],
     ],
     [
@@ -12,7 +12,7 @@ export const assets = [
         ' Contracted by ICCS as standalone Full stack Developer to design and develop "Synergy" 2 energy apps and infrastructure with Next.js / Mysql / Docker ',
         ' Deliverable was a part of multi European big-data project ‘Synergy” that roots and founded by greater movement “Horizon 2020”. Project customers are major national suppliers across Europe ',
         [
-            "WB14",
+            "WK19",
         ],
     ],
     [
@@ -20,7 +20,7 @@ export const assets = [
         ' Contracted by ICCS as standalone Full stack Developer to design / develop "Hybrid" Energy App with Next.js / Mysql / Docker ',
         ' Core scopes of the project: Power Production / Load / Availability, Technical status of units and ultimately alignment with the official Schedule announced by the national supplier on daily basis ',
         [
-            "WB13",
+            "WK18",
         ],
     ],
     [
@@ -28,7 +28,7 @@ export const assets = [
         ' Employeed by Cosmores I designed and developed Rateparity as standalone Frontend Developer with Js / React.js ',
         ' Decoupled, customizable, one-line-installation CORS Widgets for enriching the user experience on customers sites. Additionally developing the configuration app in the backend for widgets customization and usage monitoring and evaluation. ',
         [
-            "WB12",
+            "WK17",
         ],
     ],
     [
@@ -36,7 +36,7 @@ export const assets = [
         ' Employeed by Cosmores as in-house Fullstack Developer to maintain / extend proprietary product with the Php / Mysql / Js / Jquery ',
         " in the backend and frontend respectively. The mission was to upgrade, extend, maintain and enforce security processes on many parts of the company's daily routines. ",
         [
-            "WB11",
+            "WK16",
         ],
     ],
     [
@@ -44,7 +44,7 @@ export const assets = [
         ' Contracted as freelance, standalone Full stack Developer to design and build a warehouse inventory for Ecep Technologies Laravel (Php) / Mysql ',
         ' The English, London enterpreneur needed a .weba monitoring system that could keep track of products, purchases, deliveries and sales activities of the company. The tool that was used was Laravel 5.1 MVC ',
         [
-            "WB10",
+            "WK15",
         ],
     ],
     [
@@ -52,7 +52,7 @@ export const assets = [
         ' Contracted as freelance, standalone Full stack Developer for American project Noblelinx CRM upgrades and extensions with Php / Mysql ',
         "-",
         [
-            "WB09",
+            "WK14",
         ],
     ],
     [
@@ -60,7 +60,7 @@ export const assets = [
         ' Contracted by Interactive Data as freelance Front-end Developer for its new intranet project "Infobroker" hosted by Commerbank Germany with Js / Php / Mysql ',
         "-",
         [
-            "WB08",
+            "WK13",
         ],
     ],
     [
@@ -68,8 +68,9 @@ export const assets = [
         ' Short passings from "DeltaCosmos Security" and "CCS Education" as Fullstack PHP and Frontend Javascript Develper respectively ',
         "-",
         [
-            "WB06",
-            "WB05",
+            "WK11",
+            "WK12",
+            // "WK10",
         ],
     ],
     [
@@ -77,9 +78,9 @@ export const assets = [
         ' Self-occupied as freelance "Web Developer and Graphics Designer" working with PHP and Js ecosystems. ',
         "-",
         [
-            "WB03",
-            "WB04",
-            "WB07",
+            "WK10",
+            "WK08",
+            // "WB07",
         ],
     ],
     [
@@ -87,7 +88,7 @@ export const assets = [
         " Graduated College with a 'first class honors' degree ",
         " and attached a 'student of the year' distinction for last year performance. ",
         [
-            "WB01",
+            "WK07",
         ],
     ],
     [
@@ -107,7 +108,7 @@ export const assets = [
         ' 2009 ',
         " I have decided to pursue a bachelor diploma on the domain of web technology. Nevertheless, while still occupied by 'sanofi aventis', has modified my decision in a way to select a title that would add value on the company as well. With those in mind Enrolled 'Internet Engineering and Web Management' class from University of Greenwich associated with 'New York' College. ",
         [
-            "WB01",
+            "WK07",
         ],
     ],
     [
@@ -115,7 +116,7 @@ export const assets = [
         ' Enrolled full-year class at Athenian Vocational Institute ‘Integraphics’ labeled ‘Web Designed & Development’. ',
         ' During the class, I faced a well structured introduction to Web protocols like HMLT, CSS, javascript and an infantile meeting experience with PHP, MySQL and Apache. While the training turned out really advantageous and the outcome was my first web site, build with ajax technology, exclusively consisting on protocols, my appetite on comprehending web technologies was enormous and the need to integrate myself with a root understanding over the concepts has generated my interest to obtain more advanced education. ',
         [
-            "WB02",
+            "WK08",
         ],
     ],
     [

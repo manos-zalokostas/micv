@@ -69,26 +69,28 @@ customElements.define('content-tablet',
             )
         }
 
+        // <aside>${Array.isArray(o.tools.tool) && o.tools.tool.map(
+        //         tool => html`
+        //             <img src='/images/tech_logos/${tool}.jpg' alt="${tool}"/>
+        //         `)}
+        // </aside>
 
         _viewProject = () => html`
-            <nav class="mi-tablet">
-
+            <nav class="mi-tablet"
+                 style="background-image: url('images/tech_logos/${this.tool}.jpg')">
+<!--                <b>${this.tool}</b>-->
                 ${this.assets.map((o) => html`
-                    <a href="#"
+                    <a href="#" id="${o.id}"
+                       style="background-image: url('${o.screenshots.shot[0]}')"
                        @click="${this.chooseProject}">
                         <small>${o.category}</small>
                         <strong>${o.title}
                             <small>${o.id}</small>
                         </strong>
-                        <aside>${Array.isArray(o.tools.tool) && o.tools.tool.map(
-                                tool => html`
-                                    <img src='/images/tech_logos/${tool}.jpg' alt="${tool}"/>
-                                `)}
-                        </aside>
                         <p>
                             <span>${o.description.substring(0, 200)}<em>&nbsp&nbsp;...more</em></span>
                         </p>
-                        <img src="${o.screenshots.shot[0]}" alt=${o.title}>
+                            <!--                        <img src="${o.screenshots.shot[0]}" alt=${o.title}>-->
                     </a>
                 `)}
 
@@ -100,6 +102,7 @@ customElements.define('content-tablet',
                 ${this.assets.map(
                         val => html`
                             <a id="${val}" class="mi-tool"
+                               style="background-image: url('images/tech_logos/${val}.jpg')"
                                @click="${this.chooseTool}">
                                 <h4>${val.replaceAll("_", " ").toUpperCase()}</h4>
                                 <img src="/images/tech_logos/${val}.jpg" alt="${val}"/>
@@ -119,12 +122,18 @@ customElements.define('content-tablet',
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
+                align-items: center;
                 gap: 10px;
                 position: relative;
                 z-index: 5;
                 font-family: Tahoma, Geneva, sans-serif;
                 height: 90vh;
                 overflow: auto;
+                background-image: url(http://localhost:3000/images/tech_logos/access.jpg);
+                background-blend-mode: screen;
+                background-position: 50%;
+                background-color: #eee;
+                background-size: 750px;
 
 
                 a {
@@ -135,27 +144,33 @@ customElements.define('content-tablet',
                     color: white;
                     text-decoration: none;
                     padding: 10px;
-                    min-height: 300px;
+                    margin: 10px;
                     width: 250px;
+                    height: 400px;
                     overflow: hidden;
-                    background: #444;
+                    background-color: #444;
+                    background-blend-mode: soft-light;
+                    background-repeat: no-repeat;
+                    background-position: 150px;
 
                     * {
                         pointer-events: none;
                     }
 
                     &.mi-tool {
-                        font-size: 28px;
                         color: white;
+                        font-size: 24px;
                         width: 225px;
-                        height: 100px;
+                        height: 175px;
+                        background-size: 100%;
 
                         h4 {
-                            text-align: center;
+                            //text-align: center;
                         }
-                        
+
                         img {
-                            height: 100%;
+                            width: 50px;
+                            //margin: auto;
 
                             &:hover {
                                 //left: 10%;
@@ -185,20 +200,20 @@ customElements.define('content-tablet',
                         width: 46%;
 
                         img {
-                            position: initial;
-                            opacity: 0;
-                            width: 32px;
-                            height: 32px;
+                            //position: initial;
+                            //opacity: 0;
+                            //width: 32px;
+                            //height: 32px;
                         }
                     }
 
                     img {
-                        position: absolute;
-                        z-index: 5;
-                        left: 50%;
-                        opacity: .2;
-                        border: 4px solid gainsboro;
-                        width: 100%;
+                        //position: absolute;
+                        //z-index: 5;
+                        //left: 50%;
+                        //opacity: .2;
+                        //border: 4px solid gainsboro;
+                        //width: 100%;
                     }
 
                     &:hover {

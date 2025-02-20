@@ -133,7 +133,7 @@ function css() {
     height: 100%;
     overflow: hidden;
     position: relative;
-    z-index: 100;
+    z-index: 150;
     background-color: #555;
     font-family: tahoma;
     border: solid 2px white;

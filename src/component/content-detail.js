@@ -20,7 +20,7 @@ customElements.define('content-detail',
         constructor() {
             super();
             this.active = 1
-            this.asset = itemById('WK15')
+            this.asset = itemById('WK13')
             // console.log(">>> ", this.asset)
         }
 
@@ -90,14 +90,14 @@ customElements.define('content-detail',
                 }
 
                 button {
-                    color: white;
-                    text-transform: uppercase;
-                    font-family: verdana;
+                    //color: white;
+                    //text-transform: uppercase;
+                    //font-family: verdana;
                     //width: 125px;
-                    border: none;
-                    outline: none;
-                    padding: 10px;
-                    background-color: #444;
+                    //border: none;
+                    //outline: none;
+                    //padding: 10px;
+                    //background-color: #444;
                 }
 
             }

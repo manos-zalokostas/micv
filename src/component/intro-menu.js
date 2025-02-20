@@ -54,19 +54,19 @@ customElements.define('intro-menu',
         static styles = css`
 
             nav {
-                text-align: right;
+                text-align: center;
 
                 button {
                     text-transform: uppercase;
-                    font-family: Tahoma, Geneva, sans-serif;
-                    border: none;
-                    outline: none;
-                    border-bottom: 1px solid #ccc;
-                    padding: 5px 10px;
-                    width: 150px;
-                    margin: 5px;
-                    text-align: right;
-                    background: white;
+                    //font-family: Tahoma, Geneva, sans-serif;
+                    //border: none;
+                    //outline: none;
+                    //border-bottom: 1px solid #ccc;
+                    //padding: 5px 10px;
+                    //width: 150px;
+                    //margin: 5px;
+                    //text-align: right;
+                    //background: white;
 
                     &:hover,
                     &.active {
