@@ -16,18 +16,31 @@ customElements.define('image-slider',
             this.active = "";
         }
 
-        showcase = evt => {
+        showcase(evt) {
             if (this.active) return this.active = '';
             this.active = evt.target.src;
+        }
+
+        showcaseOrder(order = 'next', evt) {
+            // debugger
+            const shots = this.asset.screenshots.shot;
+            let indexCurr = shots.findIndex(x => x === this.active),
+                activeNext = order === 'next'
+                    ? shots[indexCurr + 1] || shots[0]
+                    : shots[indexCurr - 1] || shots[shots.length - 1]
+            debugger
+            // console.log(" >>>>>>>>>> NEXT:: ", activeNext);
+            this.active = activeNext;
         }
 
         render = () => html`
             <section>
                 <div class="placeholder ${this.active ? 'active' : ''}">
                     <nav>
-                        <button>next</button>
-                        <button>prev</button>
+                        <button @click="${evt => this.showcaseOrder("prev", evt)}">prev</button>
+                        <button @click="${evt => this.showcaseOrder("next", evt)}">next</button>
                     </nav>
+
                     <img alt="image preview" src=${this.active}
                          @click="${this.showcase}"/>
                 </div>
@@ -57,20 +70,22 @@ customElements.define('image-slider',
                     top: 0;
                     display: none;
                     flex-direction: column;
+                    justify-content: flex-start;
                     align-items: center;
-                    justify-content: center;
                     width: 100vw;
                     height: 100vh;
                     background: rgba(0, 0, 0, .8);
-                    
+
                     nav {
-                        color: white;
+                        button {
+                            background: #ddd;
+                        }
                     }
 
                     &.active {
                         display: flex;
                     }
-                    
+
                     img {
                         width: initial;
                         height: initial;

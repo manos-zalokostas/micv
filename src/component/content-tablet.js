@@ -36,7 +36,7 @@ customElements.define('content-tablet',
             }
 
             if (changedProperties.has('tool')) {
-                debugger
+                
                 this.assets = this._packProjects([[this.tool, groupByTool(this.tool)]])
                 this.#view = this._viewProject();
             }

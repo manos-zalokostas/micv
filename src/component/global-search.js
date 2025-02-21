@@ -31,7 +31,7 @@ customElements.define('global-search',
 
         chooseProject(evt) {
             evt.preventDefault()
-            debugger
+            
             this.dispatchEvent(
                 new CustomEvent(EVT.PROJECT_SELECT, {
                         detail: {id: evt.target.dataset.key},
@@ -44,7 +44,7 @@ customElements.define('global-search',
 
         chooseTool(evt) {
             evt.preventDefault()
-            debugger
+            
             this.dispatchEvent(
                 new CustomEvent(EVT.TOOL_SELECT, {
                         detail: {tool: evt.target.dataset.key},
