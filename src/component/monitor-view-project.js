@@ -75,8 +75,8 @@ customElements.define('monitor-view-project',
             this.dispatchEvent(
                 new CustomEvent(EVT.PROJECT_SELECT, {
                         detail: {id: evt.target.id},
-                        composed: true,        // Event crosses shadow DOM boundaries
-                        bubbles: true,        // Event travels up the DOM tree
+                        composed: true,        
+                        bubbles: true,        
                     }
                 )
             )

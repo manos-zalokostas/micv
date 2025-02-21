@@ -78,8 +78,8 @@ customElements.define('monitor-view-tool',
             this.dispatchEvent(
                 new CustomEvent(EVT.TOOL_SELECT, {
                         detail: {tool: evt.target.id},
-                        bubbles: true,        // Event travels up the DOM tree
-                        composed: true        // Event crosses shadow DOM boundaries
+                        bubbles: true,        
+                        composed: true        
                     }
                 )
             )

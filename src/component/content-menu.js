@@ -22,8 +22,8 @@ customElements.define('content-menu',
             // Child Component (global-menu)
             this.dispatchEvent(new CustomEvent(EVT.DOMAIN_CHANGE, {
                 detail: {domain},
-                bubbles: true,        // Event travels up the DOM tree
-                composed: true        // Event crosses shadow DOM boundaries
+                bubbles: true,        
+                composed: true        
             }));
 
         }

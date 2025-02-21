@@ -39,8 +39,8 @@ customElements.define('global-menu',
                                     this.dispatchEvent(
                                             new CustomEvent(EVT.PAGE_TRANSIT, {
                                                         detail: {code},
-                                                        bubbles: true,        // Event travels up the DOM tree
-                                                        composed: true        // Event crosses shadow DOM boundaries
+                                                        bubbles: true,       
+                                                        composed: true        
                                                     }
                                             )
                                     )

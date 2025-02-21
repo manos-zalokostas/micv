@@ -37,8 +37,8 @@ customElements.define('content-detail',
                 <button @click="${() => this.dispatchEvent(
                         new CustomEvent(EVT.CONTENT_TRANSIT, {
                             detail: {transit: false},
-                            composed: true,        // Event crosses shadow DOM boundaries
-                            bubbles: true,        // Event travels up the DOM tree
+                            composed: true,        
+                            bubbles: true,        
                         }))
                 }">
                     back

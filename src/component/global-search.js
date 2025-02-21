@@ -1,5 +1,6 @@
 import {css, html, LitElement} from 'lit';
 import * as Store from "/src/_core/store";
+import {EVT} from "../env";
 
 
 const asset = {
@@ -7,13 +8,6 @@ const asset = {
     tools: Store.groupTools(),
     list: ['work', 'skill',]
 }
-
-
-// let targetListChange = "#search_radio input";
-// const _listChange = (evt, fn) => evt.target.matches(targetListChange) && fn();
-//
-// let targetList = "#search_result input[list]";
-// const _selItem = (evt, fn) => evt.target.matches(targetList) && fn();
 
 
 customElements.define('global-search',
@@ -27,39 +21,64 @@ customElements.define('global-search',
 
         constructor() {
             super();
-            this.active = 'project';
+            this.active = '';
+        }
+
+        search(evt) {
+            this.active = evt.target.value.toLowerCase()
         }
 
 
-        action(list) {
-            // console.log(">>>>>> VALUE", list)
-            this.active = list;
+        chooseProject(evt) {
+            evt.preventDefault()
+            debugger
+            this.dispatchEvent(
+                new CustomEvent(EVT.PROJECT_SELECT, {
+                        detail: {id: evt.target.dataset.key},
+                        composed: true,
+                        bubbles: true,
+                    }
+                )
+            )
         }
 
-        actionItemSel(value) {
-            // console.log(">>>>>> VALUE", value)
-            // Monitor.select('project', this.value.split(' ').shift());
+        chooseTool(evt) {
+            evt.preventDefault()
+            debugger
+            this.dispatchEvent(
+                new CustomEvent(EVT.TOOL_SELECT, {
+                        detail: {tool: evt.target.dataset.key},
+                        bubbles: true,
+                        composed: true
+                    }
+                )
+            )
         }
+
 
         render = () => html`
             <section>
 
-                <input id="${this.active}"
-                       @change="${(evt) => this.actionItemSel(evt.target.value)}">
+                <input type="text" id="${this.active}"
+                       @input="${this.search}">
 
                 <nav>
-                    ${asset.work.map(([key, name, img]) => html`
-                        <a data-key="${key}" data-type="work">
-                            <em>${name}</em>
-                            <img src="${img}" alt="logo ${name}"/>
-                        </a>
-                    `)}
-                    ${asset.tools.map(name => html`
-                        <a data-key="${name}" data-type="tool">
-                            <em>${name.replaceAll("_", " ")}</em>
-                            <img src="/images/tech_logos/${name}.jpg" alt="logo ${name}"/>
-                        </a>
-                    `)}
+                    ${asset.work.filter(([key, name, img]) => !this.active || name.toLowerCase().includes(this.active))
+                            .map(([key, name, img]) => html`
+                                <a data-key="${key}" data-type="work"
+                                   @click="${this.chooseProject}">
+                                    <em>${name}</em>
+                                    <img src="${img}" alt="logo ${name}"/>
+                                </a>
+                            `)}
+                    ${asset.tools.filter((name) => !this.active || name.toLowerCase().includes(this.active))
+                            .map((name) => html`
+                                <a data-key="${name}" data-type="tool"
+                                   @click="${this.chooseTool}">
+                                    <em>${name.replaceAll("_", " ")}</em>
+                                    <img src="/images/tech_logos/${name}.jpg" alt="logo ${name}"/>
+                                </a>
+                            `)}
                 </nav>
 
             </section>
@@ -77,7 +96,6 @@ customElements.define('global-search',
                 align-items: flex-end;
                 gap: 20px;
                 margin: 0 50px;
-                //width: 500px;
                 padding: 15px 25px;
 
 
@@ -87,21 +105,18 @@ customElements.define('global-search',
                     border: none;
                     outline: none;
                     border-bottom: 4px solid #ddd;
-                    //&::before {
-                    //    content: "search";
-                    //}
                 }
 
 
                 nav {
                     display: none;
-                    //display: flex;
-                    //flex-direction: column;
-                    //max-height: 85vh;
-                    max-width: 97vw;
-                    overflow: auto;
-                    background: #eee;
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+                    align-items: flex-start;
                     padding: 10px 5px 0;
+                    max-height: 90vh;
+                    overflow: auto;
+                    background: rgba(0, 0, 0, 0.6);
 
 
                     a {
@@ -111,8 +126,12 @@ customElements.define('global-search',
                         margin: 5px;
                         padding: 4px 10px;
                         border-bottom: 1px solid #ddd;
-                        min-width: 225px;
+                        width: 250px;
                         background: white;
+
+                        * {
+                            pointer-events: none;
+                        }
 
 
                         em {

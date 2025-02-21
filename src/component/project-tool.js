@@ -30,15 +30,15 @@ customElements.define('project-tool',
             // Child Component (global-menu)
             this.dispatchEvent(new CustomEvent(EVT.TOOL_CHANGE, {
                 detail: {tool},
-                bubbles: true,        // Event travels up the DOM tree
-                composed: true        // Event crosses shadow DOM boundaries
+                bubbles: true,        
+                composed: true        
             }));
 
             this.dispatchEvent(
                 new CustomEvent(EVT.CONTENT_TRANSIT, {
                     detail: {transit: false},
-                    composed: true,        // Event crosses shadow DOM boundaries
-                    bubbles: true,        // Event travels up the DOM tree
+                    composed: true,        
+                    bubbles: true,        
                 }))
         }
 

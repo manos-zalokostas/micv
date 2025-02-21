@@ -2,6 +2,7 @@ import {itemById, itemByIndex} from "/src/_core/store";
 import {html, css, LitElement} from 'lit';
 import {_DEV, EVT, VIEW} from "/src/env";
 
+const CSSCLASS_TRANSIT = 'mi-transit-detail';
 
 customElements.define('page-content',
 
@@ -30,20 +31,20 @@ customElements.define('page-content',
         evtToolChange(evt) {
             const child = this.shadowRoot.querySelector('content-tablet');
             child.tool = evt.detail.tool;
+            this.evtContentTransit({detail: {transit: false}})
         }
 
 
         evtContentTransit(evt) {
             const nodeWrap = this.shadowRoot.querySelector('main');
             const nodeDetail = this.shadowRoot.querySelector('content-detail');
-            if (evt.detail.transit) {
-                const entry = itemById(evt.detail.entryId);
-                nodeDetail.asset = entry;
-                return nodeWrap.classList.add('mi-transit-detail')
-            }
-            nodeWrap.classList.remove('mi-transit-detail')
-        }
 
+            if (!evt.detail.transit) return nodeWrap.classList.remove(CSSCLASS_TRANSIT)
+
+            const entry = itemById(evt.detail.entryId);
+            nodeDetail.asset = entry;
+            nodeWrap.classList.add(CSSCLASS_TRANSIT)
+        }
 
 
         render = () => html`
@@ -57,7 +58,7 @@ customElements.define('page-content',
                     <content-menu></content-menu>
                 </header>
 
-                <main class="${_DEV.VIEW === VIEW.WORK.CONT ? 'mi-transit-detail' : ''}">
+                <main class="${_DEV.VIEW === VIEW.WORK.CONT ? CSSCLASS_TRANSIT : ''}">
 
                     <div>
                         <content-tablet></content-tablet>
@@ -95,7 +96,7 @@ customElements.define('page-content',
                     width: 200%;
                     transition: all;
 
-                    
+
                     &.mi-transit-detail {
                         left: -100%;
                     }
@@ -105,11 +106,12 @@ customElements.define('page-content',
                         float: left;
                         padding: 50px 0;
                         width: 50%;
-                        
+
                     }
 
                 }
             }
         `
     }
-);
+)
+;
