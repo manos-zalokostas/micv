@@ -2,6 +2,7 @@ import {css, html, LitElement} from 'lit';
 import {itemById, itemByIndex} from "/src/_core/store";
 import {unsafeHTML} from "lit/directives/unsafe-html.js";
 import {EVT} from "/src/env";
+import {theme} from "../theme";
 
 /**
  *
@@ -37,8 +38,8 @@ customElements.define('content-detail',
                 <button @click="${() => this.dispatchEvent(
                         new CustomEvent(EVT.CONTENT_TRANSIT, {
                             detail: {transit: false},
-                            composed: true,        
-                            bubbles: true,        
+                            composed: true,
+                            bubbles: true,
                         }))
                 }">
                     back
@@ -73,57 +74,45 @@ customElements.define('content-detail',
         `;
 
 
-        static styles = css`
+        static styles = [
+            theme,
+            css`
 
-            header {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-around;
-                align-items: center;
-                width: 100%;
-                max-height: 175px;
+                header {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+                    align-items: center;
+                    width: 100%;
+                    max-height: 175px;
 
-
-                h3 {
-                    font-size: 2em;
-                    color: orange;
+                    h3 {
+                        font-size: 2em;
+                        color: orange;
+                    }
                 }
 
-                button {
-                    //color: white;
-                    //text-transform: uppercase;
-                    //font-family: verdana;
-                    //width: 125px;
-                    //border: none;
-                    //outline: none;
-                    //padding: 10px;
-                    //background-color: #444;
+                main {
+                    position: relative;
+                    z-index: 5;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    gap: 50px;
+                    font-family: Verdana, Geneva, sans-serif;
+                    text-align: left;
+                    line-height: 2;
+                    padding: 25px;
+                    height: calc(100vh - 300px);
+                    overflow: auto;
                 }
 
-            }
+                footer {
+                    background: dodgerblue;
+                }
+            `
 
-            main {
-
-                position: relative;
-                z-index: 5;
-                display: flex;
-                justify-content: space-between;
-                align-items: flex-start;
-                gap: 50px;
-                font-family: Verdana, Geneva, sans-serif;
-                text-align: left;
-                //margin: 100px 50px;
-                line-height: 2;
-                padding: 25px;
-                height: calc(100vh - 300px);
-                overflow: auto;
-            }
-
-            footer {
-                background: dodgerblue;
-            }
-        `
-
+        ]
 
     }
 );

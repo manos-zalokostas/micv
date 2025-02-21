@@ -1,6 +1,7 @@
 import {html, css, LitElement} from 'lit';
 import {assets} from "./timeline_asset";
 import {EVT} from "/src/env";
+import {theme} from "../theme";
 
 
 customElements.define('joi-timeline',
@@ -40,8 +41,10 @@ customElements.define('joi-timeline',
 
                                         <header>
                                             <strong>${year}</strong>
-                                            <em>${title}</em>
-                                            <small class="${this.active ? 'active' : ''}">${info}</small>
+                                            <p>
+                                                <em>${title}</em>
+                                                <small class="${this.active ? 'active' : ''}">${info}</small>
+                                            </p>
                                         </header>
 
                                         <div>
@@ -65,57 +68,65 @@ customElements.define('joi-timeline',
             </article>
         `;
 
-        static styles = css`
+        static styles = [
+            theme,
+            css`
+                article {
+                    padding: 25px;
 
-            article {
-                padding: 25px;
-
-                fieldset {
-                    text-align: right;
-                    border: none;
-                    margin: 10px 0;
-                }
-
-                nav {
-                    display: flex;
-                    margin: auto;
-
-
-                    p {
-                        overflow: auto;
-                        margin: auto;
-                        width: 100%;
+                    fieldset {
+                        text-align: right;
+                        border: none;
+                        margin: 10px 0;
                     }
 
-                    section {
+                    nav {
                         display: flex;
-                        justify-content: space-between;
-                        border-bottom: 1px solid #bbb;
+                        margin: auto;
 
-                        header {
+                        p {
+                            overflow: auto;
+                            margin: auto;
+                            width: 100%;
+                        }
+
+                        section {
                             display: flex;
-                            flex-direction: column;
-                            align-items: flex-start;
-                            text-align: left;
-                            padding: 10px;
+                            align-items: center;
+                            justify-content: space-between;
+                            border-bottom: 1px solid #bbb;
 
-                            small {
-                                opacity: 0;
-                                display: none;
+                            header {
+                                display: flex;
+                                align-items: flex-start;
+                                gap: 40px;
+                                text-align: left;
+                                padding: 10px;
 
-                                &.active {
-                                    display: initial;
-                                    opacity: 1;
+                                strong {
+                                    font-size: 1.5em;
+                                    width: 50px;
+                                }
+
+                                em {
+                                    font-style: initial;
+                                }
+
+                                small {
+                                    font-size: initial;
+                                    opacity: 0;
+                                    display: none;
+
+                                    &.active {
+                                        display: initial;
+                                        opacity: 1;
+                                    }
                                 }
                             }
                         }
                     }
-
                 }
-
-            }
-
-
-        `
+            `
+        ]
     }
 );

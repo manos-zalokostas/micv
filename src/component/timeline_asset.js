@@ -24,7 +24,7 @@ export const assets = [
         ],
     ],
     [
-        ' 2018/6 ',
+        ' 2018 ',
         ' Employeed by Cosmores I designed and developed Rateparity as standalone Frontend Developer with Js / React.js ',
         ' Decoupled, customizable, one-line-installation CORS Widgets for enriching the user experience on customers sites. Additionally developing the configuration app in the backend for widgets customization and usage monitoring and evaluation. ',
         [
@@ -32,7 +32,7 @@ export const assets = [
         ],
     ],
     [
-        ' 2017/7 ',
+        ' 2017 ',
         ' Employeed by Cosmores as in-house Fullstack Developer to maintain / extend proprietary product with the Php / Mysql / Js / Jquery ',
         " in the backend and frontend respectively. The mission was to upgrade, extend, maintain and enforce security processes on many parts of the company's daily routines. ",
         [
@@ -40,7 +40,7 @@ export const assets = [
         ],
     ],
     [
-        ' 2017/1 ',
+        ' 2017 ',
         ' Contracted as freelance, standalone Full stack Developer to design and build a warehouse inventory for Ecep Technologies Laravel (Php) / Mysql ',
         ' The English, London enterpreneur needed a .weba monitoring system that could keep track of products, purchases, deliveries and sales activities of the company. The tool that was used was Laravel 5.1 MVC ',
         [

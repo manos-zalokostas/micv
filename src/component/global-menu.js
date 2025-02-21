@@ -1,5 +1,6 @@
 import {css, html, LitElement} from 'lit';
 import {EVT, PAGE} from "/src/env";
+import {theme} from "../theme";
 
 
 const assets = [
@@ -39,8 +40,8 @@ customElements.define('global-menu',
                                     this.dispatchEvent(
                                             new CustomEvent(EVT.PAGE_TRANSIT, {
                                                         detail: {code},
-                                                        bubbles: true,       
-                                                        composed: true        
+                                                        bubbles: true,
+                                                        composed: true
                                                     }
                                             )
                                     )
@@ -56,24 +57,13 @@ customElements.define('global-menu',
         `;
 
 
-        static styles = css`
-
-            nav {
-                display: flex;
-                justify-content: space-between;
-
-                button {
-                    //color: white;
-                    //text-transform: uppercase;
-                    //font-family: Tahoma, Geneva, sans-serif;
-                    //width: 125px;
-                    //outline: none;
-                    //padding: 10px;
-                    //border: 1px solid #ddd;
-                    //background: none;
+        static styles = [
+            theme,
+            css`
+                nav {
+                    display: flex;
+                    justify-content: space-between;
                 }
-
-            }
-
-        `
+            `
+        ]
     });

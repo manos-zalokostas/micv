@@ -78,8 +78,8 @@ customElements.define('monitor-view-tool',
             this.dispatchEvent(
                 new CustomEvent(EVT.TOOL_SELECT, {
                         detail: {tool: evt.target.id},
-                        bubbles: true,        
-                        composed: true        
+                        bubbles: true,
+                        composed: true
                     }
                 )
             )
@@ -95,7 +95,7 @@ customElements.define('monitor-view-tool',
                             val => html`
                                 <a id="${val}"
                                    @click="${this.chooseTool}">
-                                    <h4>${val.replaceAll("_", " ")}</h4>
+                                    <h4>${val.replaceAll("_", " ").toUpperCase()}</h4>
                                     <img src="/images/tech_logos/${val}.jpg" alt="${val}"/>
                                 </a>
                             `
@@ -120,6 +120,10 @@ customElements.define('monitor-view-tool',
                     padding: 0 10px;
                     background: #444;
                     border-bottom: 2px solid #555;
+                    
+                    &:hover {
+                        border-color: greenyellow;
+                    }
 
                     img {
                         width: 100px;

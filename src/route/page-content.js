@@ -26,6 +26,7 @@ customElements.define('page-content',
         evtDomainChange(evt) {
             const child = this.shadowRoot.querySelector('content-tablet');
             child.domain = evt.detail.domain;
+            this.evtContentTransit({detail: {transit: false}})
         }
 
         evtToolChange(evt) {

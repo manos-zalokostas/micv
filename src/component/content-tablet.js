@@ -36,7 +36,7 @@ customElements.define('content-tablet',
             }
 
             if (changedProperties.has('tool')) {
-                
+
                 this.assets = this._packProjects([[this.tool, groupByTool(this.tool)]])
                 this.#view = this._viewProject();
             }
@@ -130,10 +130,10 @@ customElements.define('content-tablet',
                 height: 90vh;
                 overflow: auto;
                 background-image: url(http://localhost:3000/images/tech_logos/access.jpg);
-                background-blend-mode: screen;
+                background-blend-mode: multiply;
                 background-position: 50%;
-                background-color: #eee;
-                background-size: 750px;
+                background-color: rgba(0, 0, 0, .9);
+                background-size: 600px;
 
 
                 a {

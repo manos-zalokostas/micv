@@ -1,6 +1,7 @@
 import {html, css, LitElement} from 'lit';
 import {itemById} from "/src/_core/store";
 import {_DEV, MONIT} from "../env";
+import {theme} from "../theme";
 
 const assets = {
     auto: [
@@ -27,7 +28,7 @@ customElements.define('joi-monitor',
         constructor() {
             super();
             // this.activeContent = 'INTRO'
-            this.activeContent = _DEV.MONIT
+            this.activeContent = MONIT.WORK
         }
 
         loopContent(val) {
@@ -65,7 +66,7 @@ customElements.define('joi-monitor',
                     <div class="mbuttons">
                         ${assets.auto.map(
                                 ([title, label, code]) => html`
-                                    <button title="${title}"
+                                    <button title="${title}" class="${this.activeContent === code ? 'active' : ''}"
                                             @click="${() => this.loopContent(code)}">
                                         ${label}
                                     </button>
@@ -106,41 +107,28 @@ customElements.define('joi-monitor',
         `;
 
 
-        static styles = css`
-
-            article {
-                position: relative;
-                width: 96vw;
-                margin: 0 2vw;
-                height: 400px;
-                cursor: pointer;
-                overflow: hidden;
-                border-bottom: 4px solid black;
-                padding: 15px 5px 5px;
-                background-color: #444;
-
-                header {
+        static styles = [
+            theme,
+            css`
+                article {
                     position: relative;
-                    z-index: 10;
-                    display: flex;
-                    justify-content: space-between;
-                    //background: linear-gradient(0, #555, #444);
-                    width: 100%;
+                    width: 96vw;
+                    margin: 0 2vw;
+                    height: 400px;
+                    cursor: pointer;
+                    overflow: hidden;
+                    border-bottom: 4px solid black;
+                    padding: 15px 5px 5px;
+                    background-color: #444;
 
-                    button {
-                        //color: white;
-                        //font-family: verdana;
-                        //padding: 4px 10px;
-                        //margin: 2px;
-                        //border: none;
-                        //outline: none;
-                        //width: 75px;
-                        //background: #555
+                    header {
+                        position: relative;
+                        z-index: 10;
+                        display: flex;
+                        justify-content: space-between;
+                        width: 100%;
                     }
-
                 }
-
-            }
-        `
+            `]
     }
 );

@@ -1,5 +1,6 @@
 import {css, html, LitElement} from 'lit';
 import {EVT, VIEW} from "/src/env";
+import {theme} from "../theme";
 
 const assets = [
     ['welcome', VIEW.LAND.INTRO],
@@ -51,32 +52,12 @@ customElements.define('intro-menu',
             </nav>
         `;
 
-        static styles = css`
-
-            nav {
-                text-align: center;
-
-                button {
-                    text-transform: uppercase;
-                    //font-family: Tahoma, Geneva, sans-serif;
-                    //border: none;
-                    //outline: none;
-                    //border-bottom: 1px solid #ccc;
-                    //padding: 5px 10px;
-                    //width: 150px;
-                    //margin: 5px;
-                    //text-align: right;
-                    //background: white;
-
-                    &:hover,
-                    &.active {
-                        color: darkgoldenrod;
-                    }
+        static styles = [
+            theme,
+            css`
+                nav {
+                    text-align: center;
                 }
-
-            }
-
-
-        `
+            `]
     }
 );

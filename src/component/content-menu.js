@@ -1,5 +1,6 @@
 import {html, css, LitElement} from 'lit';
 import {DOMA, EVT} from "/src/env";
+import {theme} from "../theme";
 
 
 customElements.define('content-menu',
@@ -22,8 +23,8 @@ customElements.define('content-menu',
             // Child Component (global-menu)
             this.dispatchEvent(new CustomEvent(EVT.DOMAIN_CHANGE, {
                 detail: {domain},
-                bubbles: true,        
-                composed: true        
+                composed: true,
+                bubbles: true,
             }));
 
         }
@@ -32,7 +33,7 @@ customElements.define('content-menu',
         render = () => html`
             <nav>
                 ${Object.values(DOMA).map((domain) => html`
-                    <button class="${this.active === domain ? 'active' : ''}"
+                    <button class="mi-button ${this.active === domain ? 'active' : ''}"
                             @click="${() => this.changeDomain(domain)}">
                         ${domain}
                     </button>
@@ -41,32 +42,12 @@ customElements.define('content-menu',
         `;
 
 
-        static styles = css`
-
-            nav {
-                text-align: center;
-
-                button {
-                    //text-transform: uppercase;
-                    //font-family: Tahoma, Geneva, sans-serif;
-                    //border: none;
-                    //outline: none;
-                    //border-bottom: 1px solid #ccc;
-                    //padding: 5px 10px;
-                    //width: 100px;
-                    //margin: 5px;
-                    //text-align: right;
-                    //background: white;
-
-                    &:hover,
-                    &.active {
-                        color: darkgoldenrod;
-                    }
+        static styles = [
+            theme,
+            css`
+                nav {
+                    text-align: center;
                 }
-
-            }
-
-
-        `
+            `]
     }
 );

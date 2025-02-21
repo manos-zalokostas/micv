@@ -17,6 +17,7 @@ customElements.define('global-search',
 
         static properties = {
             active: {type: String},
+            visible: {type: Boolean, default: false},
         };
 
         constructor() {
@@ -31,7 +32,7 @@ customElements.define('global-search',
 
         chooseProject(evt) {
             evt.preventDefault()
-            
+            this.visible = false;
             this.dispatchEvent(
                 new CustomEvent(EVT.PROJECT_SELECT, {
                         detail: {id: evt.target.dataset.key},
@@ -44,7 +45,8 @@ customElements.define('global-search',
 
         chooseTool(evt) {
             evt.preventDefault()
-            
+            this.visible = false;
+
             this.dispatchEvent(
                 new CustomEvent(EVT.TOOL_SELECT, {
                         detail: {tool: evt.target.dataset.key},
@@ -57,10 +59,13 @@ customElements.define('global-search',
 
 
         render = () => html`
-            <section>
+            <section class="${this.visible ? 'active' : ''}">
 
-                <input type="text" id="${this.active}"
-                       @input="${this.search}">
+                <input type="text" placeholder="..search projects or tools"
+                       @input="${this.search}"
+                       @focus="${(evt) => {
+                           this.visible = true
+                       }}">
 
                 <nav>
                     ${asset.work.filter(([key, name, img]) => !this.active || name.toLowerCase().includes(this.active))
@@ -89,7 +94,7 @@ customElements.define('global-search',
 
             section {
                 position: absolute;
-                z-index: 50;
+                z-index: 20;
                 right: 0;
                 display: flex;
                 flex-direction: column;
@@ -101,10 +106,11 @@ customElements.define('global-search',
 
                 input {
                     display: block;
+                    text-align: right;
                     padding: 5px;
                     border: none;
                     outline: none;
-                    border-bottom: 4px solid #ddd;
+                    border-bottom: 2px solid #999;
                 }
 
 
@@ -145,7 +151,7 @@ customElements.define('global-search',
                     }
                 }
 
-                &:hover {
+                &.active {
                     nav {
                         display: flex;
                     }
