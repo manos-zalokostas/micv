@@ -23,13 +23,13 @@ customElements.define('image-slider',
         }
 
         showcaseOrder(order = 'next', evt) {
-            // debugger
+            // 
             const shots = this.asset.screenshots.shot;
             let indexCurr = shots.findIndex(x => x === this.active),
                 activeNext = order === 'next'
                     ? shots[indexCurr + 1] || shots[0]
                     : shots[indexCurr - 1] || shots[shots.length - 1]
-            debugger
+            
             // console.log(" >>>>>>>>>> NEXT:: ", activeNext);
             this.active = activeNext;
         }

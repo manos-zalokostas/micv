@@ -75,8 +75,8 @@ customElements.define('monitor-view-project',
             this.dispatchEvent(
                 new CustomEvent(EVT.PROJECT_SELECT, {
                         detail: {id: evt.target.id},
-                        composed: true,        
-                        bubbles: true,        
+                        composed: true,
+                        bubbles: true,
                     }
                 )
             )
@@ -132,6 +132,7 @@ customElements.define('monitor-view-project',
 
             a {
                 text-decoration: none;
+                //border-bottom: 4px solid tomato;
 
                 * {
                     pointer-events: none;

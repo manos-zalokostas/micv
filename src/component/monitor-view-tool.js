@@ -21,6 +21,8 @@ customElements.define('monitor-view-tool',
             timer: {type: Object, state: true}
         };
 
+        #step = 12;
+
         constructor() {
             super();
             this.active = 1;
@@ -33,18 +35,19 @@ customElements.define('monitor-view-tool',
             // this.tools = itemByIndex(20).tools.tool
         }
 
+        display() {
+            const start = this.activeIndex * this.#step,
+                end = start + this.#step;
+
+            this.tools = list.slice(start, end)
+        }
+
         loop() {
             this.timer = setInterval(
                 () => {
-                    const step = 12;
-                    const start = this.activeIndex * step,
-                        end = start + step;
-                    // const pid = list[this.activeIndex][0]
-                    this.tools = list.slice(start, end)
+                    this.display()
                     this.activeIndex++;
                     if (!this.tools.length) this.activeIndex = 0;
-                    // console.log({start, end, index: this.activeIndex})
-                    // this.clear();
                 }, 5000
             )
         }
@@ -53,6 +56,24 @@ customElements.define('monitor-view-tool',
             clearInterval(this.timer)
             // this.tools = null;
         }
+
+
+        next() {
+            
+            this.pause();
+            this.activeIndex++;
+            console.log(this.activeIndex, "<<<<<<<<<<<** ")
+            if (((this.activeIndex * this.#step) > list.length - 1)) this.activeIndex = 0;
+            this.display()
+        }
+
+        prev() {
+            this.pause();
+            this.activeIndex--;
+            if (this.activeIndex < 0) this.activeIndex = (list.length / this.#step) - 1;
+            this.display()
+        }
+
 
         clear() {
             clearInterval(this.timer)
@@ -120,7 +141,7 @@ customElements.define('monitor-view-tool',
                     padding: 0 10px;
                     background: #444;
                     border-bottom: 2px solid #555;
-                    
+
                     &:hover {
                         border-color: greenyellow;
                     }
