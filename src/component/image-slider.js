@@ -23,13 +23,13 @@ customElements.define('image-slider',
         }
 
         showcaseOrder(order = 'next', evt) {
-            // 
+            //
             const shots = this.asset.screenshots.shot;
             let indexCurr = shots.findIndex(x => x === this.active),
                 activeNext = order === 'next'
                     ? shots[indexCurr + 1] || shots[0]
                     : shots[indexCurr - 1] || shots[shots.length - 1]
-            
+
             // console.log(" >>>>>>>>>> NEXT:: ", activeNext);
             this.active = activeNext;
         }
@@ -37,6 +37,7 @@ customElements.define('image-slider',
         render = () => html`
             <section>
                 <div class="placeholder ${this.active ? 'active' : ''}">
+                    
                     <nav>
                         <button @click="${evt => this.showcaseOrder("prev", evt)}">prev</button>
                         <button @click="${evt => this.showcaseOrder("next", evt)}">next</button>
@@ -75,6 +76,8 @@ customElements.define('image-slider',
                         flex-direction: column;
                         justify-content: flex-start;
                         align-items: center;
+                        gap: 50px;
+                        padding: 25px;
                         width: 100vw;
                         height: 100vh;
                         background: rgba(0, 0, 0, .8);

@@ -1,7 +1,7 @@
 import {html, css, LitElement} from 'lit';
 import {assets} from "./timeline_asset";
-import {EVT} from "/src/env";
 import {theme} from "../theme";
+import {EVT} from "/src/env";
 
 
 customElements.define('joi-timeline',
@@ -25,14 +25,14 @@ customElements.define('joi-timeline',
 
         render = () => html`
 
-            <article>
+            <div>
 
                 <fieldset>
                     <label>comments</label>
                     <input type="checkbox" @click="${this.action}"/>
                 </fieldset>
 
-                <nav>
+                <article>
                     <p>
                         ${assets.map(
                                 ([year, title, info, codes]) => html`
@@ -65,14 +65,14 @@ customElements.define('joi-timeline',
 
                     </div>
 
-            </article>
+            </div>
         `;
 
         static styles = [
             theme,
             css`
-                article {
-                    padding: 25px;
+                div {
+                    padding: 10px;
 
                     fieldset {
                         text-align: right;
@@ -80,11 +80,12 @@ customElements.define('joi-timeline',
                         margin: 10px 0;
                     }
 
-                    nav {
+                    article {
                         display: flex;
                         margin: auto;
 
                         p {
+                            font-family: var(--font);
                             overflow: auto;
                             margin: auto;
                             width: 100%;

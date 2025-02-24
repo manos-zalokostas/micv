@@ -73,13 +73,9 @@ customElements.define('page-introduction',
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-start;
+                gap: 25px;
                 width: 100vw;
                 height: 100vh;
-
-                header {
-                    height: 100px;
-                    margin: 0;
-                }
 
                 aside {
                     height: 375px;

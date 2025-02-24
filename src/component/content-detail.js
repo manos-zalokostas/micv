@@ -1,12 +1,8 @@
 import {css, html, LitElement} from 'lit';
 import {itemById, itemByIndex} from "/src/_core/store";
 import {unsafeHTML} from "lit/directives/unsafe-html.js";
-import {EVT} from "/src/env";
 import {theme} from "../theme";
-
-/**
- *
- */
+import {EVT} from "/src/env";
 
 
 customElements.define('content-detail',
@@ -45,8 +41,9 @@ customElements.define('content-detail',
                     back
                 </button>
 
-                <h3>
-                    <span>${this.asset.title}</span>
+                <h3> 
+                    ${this.asset.title} 
+                    <sup class="pill ${this.asset.domain.toLocaleLowerCase()}">${this.asset.domain}</sup> 
                 </h3>
 
                 <badge-category entry="${this.asset.category}"></badge-category>
@@ -83,6 +80,7 @@ customElements.define('content-detail',
                     flex-wrap: wrap;
                     justify-content: space-around;
                     align-items: center;
+                    font-family: var(--font);
                     width: 100%;
                     max-height: 175px;
 

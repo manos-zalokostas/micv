@@ -1,5 +1,6 @@
 import {html, css, LitElement} from 'lit';
 import {groupProjects, groupTools, itemById, itemByIndex} from "/src/_core/store";
+import {theme} from "../theme";
 import {EVT} from "../env";
 
 const list = groupTools();
@@ -59,7 +60,7 @@ customElements.define('monitor-view-tool',
 
 
         next() {
-            
+
             this.pause();
             this.activeIndex++;
             console.log(this.activeIndex, "<<<<<<<<<<<** ")
@@ -125,35 +126,37 @@ customElements.define('monitor-view-tool',
             `;
         }
 
-        static styles = css`
-            #view-tool {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-                gap: 15px;
-                padding: 30px 15px 15px;
-
-                a {
+        static styles = [
+            theme,
+            css`
+                #view-tool {
                     display: flex;
+                    flex-wrap: wrap;
                     justify-content: space-between;
-                    color: white;
-                    width: 20%;
-                    padding: 0 10px;
-                    background: #444;
-                    border-bottom: 2px solid #555;
+                    gap: 15px;
+                    padding: 30px 15px 15px;
 
-                    &:hover {
-                        border-color: greenyellow;
-                    }
+                    a {
+                        display: flex;
+                        justify-content: space-between;
+                        color: var(--color-tool);
+                        padding: 0 10px;
+                        border-bottom: 2px solid #555;
+                        background: #444;
+                        width: 20%;
 
-                    img {
-                        width: 100px;
-                        height: 100px;
-                        pointer-events: none;
+                        &:hover {
+                            border-color: var(--color-tool)
+                        }
+
+                        img {
+                            width: 100px;
+                            height: 100px;
+                            pointer-events: none;
+                        }
                     }
                 }
-            }
-
-        `
+            `
+        ]
     }
 );

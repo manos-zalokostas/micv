@@ -1,6 +1,7 @@
-import {css, html, LitElement} from 'lit';
 import {groupByDomain, groupByTool, groupTools, itemById} from "/src/_core/store";
+import {css, html, LitElement} from 'lit';
 import {DOMA, EVT} from "/src/env";
+import {theme} from "../theme";
 
 customElements.define('content-tablet',
 
@@ -20,7 +21,6 @@ customElements.define('content-tablet',
             this.#view = this._viewTool();
         }
 
-        // Lifecycle method triggered when properties are updated
         updated(changedProperties, x, z) {
             super.updated(changedProperties);
 
@@ -69,28 +69,21 @@ customElements.define('content-tablet',
             )
         }
 
-        // <aside>${Array.isArray(o.tools.tool) && o.tools.tool.map(
-        //         tool => html`
-        //             <img src='/images/tech_logos/${tool}.jpg' alt="${tool}"/>
-        //         `)}
-        // </aside>
 
         _viewProject = () => html`
             <nav class="mi-tablet"
                  style="background-image: url('images/tech_logos/${this.tool}.jpg')">
-<!--                <b>${this.tool}</b>-->
                 ${this.assets.map((o) => html`
                     <a href="#" id="${o.id}"
                        style="background-image: url('${o.screenshots.shot[0]}')"
                        @click="${this.chooseProject}">
                         <small>${o.category}</small>
-                        <strong>${o.title}
-                            <small>${o.id}</small>
+                        <strong class="${o.domain.toLowerCase()}">${o.title}
+                            <small class="pill ${o.domain.toLowerCase()}">${o.id}</small>
                         </strong>
                         <p>
                             <span>${o.description.substring(0, 200)}<em>&nbsp&nbsp;...more</em></span>
                         </p>
-                            <!--                        <img src="${o.screenshots.shot[0]}" alt=${o.title}>-->
                     </a>
                 `)}
 
@@ -116,122 +109,125 @@ customElements.define('content-tablet',
         render = () => this.#view
 
 
-        static styles = css`
+        static styles = [
+            theme,
+            css`
 
-            nav {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                align-items: center;
-                gap: 10px;
-                position: relative;
-                z-index: 5;
-                font-family: Tahoma, Geneva, sans-serif;
-                height: 90vh;
-                overflow: auto;
-                background-image: url(http://localhost:3000/images/tech_logos/access.jpg);
-                background-blend-mode: multiply;
-                background-position: 50%;
-                background-color: rgba(0, 0, 0, .9);
-                background-size: 600px;
-
-
-                a {
+                nav {
                     display: flex;
-                    flex-direction: column;
-                    justify-content: space-around;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
                     position: relative;
-                    color: white;
-                    text-decoration: none;
-                    padding: 10px;
-                    margin: 10px;
-                    width: 250px;
-                    height: 400px;
-                    overflow: hidden;
-                    background-color: #444;
-                    background-blend-mode: soft-light;
-                    background-repeat: no-repeat;
-                    background-position: 150px;
+                    z-index: 5;
+                    font-family: Tahoma, Geneva, sans-serif;
+                    height: 90vh;
+                    overflow: auto;
+                    background-image: url(http://localhost:3000/images/tech_logos/access.jpg);
+                    background-blend-mode: multiply;
+                    background-position: 50%;
+                    background-color: rgba(0, 0, 0, .9);
+                    background-size: 600px;
+                    padding: 50px 10px;
 
-                    * {
-                        pointer-events: none;
-                    }
 
-                    &.mi-tool {
+                    a {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-around;
+                        position: relative;
                         color: white;
-                        font-size: 24px;
-                        width: 225px;
-                        height: 175px;
-                        background-size: 100%;
-
-                        h4 {
-                            //text-align: center;
+                        text-decoration: none;
+                        padding: 10px;
+                        margin: 10px;
+                        width: 250px;
+                        height: 400px;
+                        overflow: hidden;
+                        background-color: #444;
+                        background-blend-mode: multiply;
+                        background-repeat: no-repeat;
+                        background-position: 150px;
+                        border: 2px solid white;
+                        
+                        &:hover {
+                            border-color: white;
                         }
 
-                        img {
-                            width: 50px;
-                            //margin: auto;
+                        * {
+                            pointer-events: none;
+                        }
 
-                            &:hover {
-                                //left: 10%;
+                        &.mi-tool {
+                            color: var(--color-tool);
+                            font-size: 24px;
+                            //width: 225px;
+                            height: 175px;
+                            background-size: 100%;
+
+                            h4 {
+                            }
+
+                            img {
+                                width: 50px;
+
+                                &:hover {
+                                }
                             }
                         }
-                    }
 
-                    strong {
-                        font-size: 32px;
-                        color: tomato;
-                        width: 50%;
-                    }
+                        strong {
+                            font-size: 32px;
+                            width: 50%;
 
-                    small {
-                        color: goldenrod;
-                        width: 50%;
-                    }
+                            &.work {
+                                color: var(--color-work)
+                            }
 
-                    aside {
-                        position: absolute;
-                        z-index: 6;
-                        right: 15px;
-                        top: 15px;
-                        flex-wrap: wrap;
-                        justify-content: flex-end;
-                        gap: 5px;
-                        width: 46%;
-
-                        img {
-                            //position: initial;
-                            //opacity: 0;
-                            //width: 32px;
-                            //height: 32px;
+                            &.study {
+                                color: var(--color-study)
+                            }
                         }
-                    }
 
-                    img {
-                        //position: absolute;
-                        //z-index: 5;
-                        //left: 50%;
-                        //opacity: .2;
-                        //border: 4px solid gainsboro;
-                        //width: 100%;
-                    }
-
-                    &:hover {
-                        img {
-                            left: 40%;
+                        small {
+                            color: goldenrod;
+                            width: 50%;
                         }
 
                         aside {
+                            position: absolute;
+                            z-index: 6;
+                            right: 15px;
+                            top: 15px;
+                            flex-wrap: wrap;
+                            justify-content: flex-end;
+                            gap: 5px;
+                            width: 46%;
+
                             img {
-                                opacity: 1;
                             }
                         }
+
+                        img {
+                        }
+
+                        &:hover {
+                            img {
+                                left: 40%;
+                            }
+
+                            aside {
+                                img {
+                                    opacity: 1;
+                                }
+                            }
+                        }
+
                     }
-
                 }
-            }
 
-        `
+            `
+        ]
 
     }
 );

@@ -30,19 +30,20 @@ export const VIEW = {
     CERT: {},
 }
 
-export const MONIT = {
-    WORK: 1,
-    TOOL: 2,
-    PAUS: 3,
-    PREV: 4,
-    NEXT: 5,
-}
-
 export const DOMA = {
     WORK: 'WORK',
     STUD: 'STUDY',
     TOOL: 'TOOL',
 }
+
+export const MONIT = {
+    WORK: DOMA.WORK,
+    TOOL: DOMA.TOOL,
+    PAUS: 3,
+    PREV: 4,
+    NEXT: 5,
+}
+
 
 export const _DEV = {
     PAGE: PAGE.LAND,

@@ -5,8 +5,8 @@ import {theme} from "../theme";
 
 const assets = {
     auto: [
-        ['tool', 'tools', MONIT.TOOL],
         ['project', 'projects', MONIT.WORK],
+        ['tool', 'tools', MONIT.TOOL],
     ],
     manual: [
         ['pause', MONIT.PAUS],
@@ -66,7 +66,7 @@ customElements.define('joi-monitor',
                     <div class="mbuttons">
                         ${assets.auto.map(
                                 ([title, label, code]) => html`
-                                    <button title="${title}" class="${this.activeContent === code ? 'active' : ''}"
+                                    <button title="${title}" class="${code.toLowerCase()} ${this.activeContent === code ? 'active' : ''}"
                                             @click="${() => this.loopContent(code)}">
                                         ${label}
                                     </button>
@@ -112,14 +112,16 @@ customElements.define('joi-monitor',
             css`
                 article {
                     position: relative;
-                    width: 96vw;
-                    margin: 0 2vw;
-                    height: 400px;
-                    cursor: pointer;
                     overflow: hidden;
+                    font-family: var(--font);
+                    font-size: large;
                     border-bottom: 4px solid black;
                     padding: 15px 5px 5px;
+                    margin: auto;
+                    height: 400px;
+                    width: 96vw;
                     background-color: #444;
+                    cursor: pointer;
 
                     header {
                         position: relative;

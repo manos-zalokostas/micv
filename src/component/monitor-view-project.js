@@ -2,6 +2,7 @@ import {groupProjects, itemById, itemByIndex} from "/src/_core/store";
 import {unsafeHTML} from "lit/directives/unsafe-html.js";
 import {html, css, LitElement} from 'lit';
 import {EVT, PAGE} from "../env";
+import {theme} from "../theme";
 
 const entries = groupProjects()
 
@@ -84,13 +85,11 @@ customElements.define('monitor-view-project',
 
         connectedCallback() {
             super.connectedCallback();
-            // console.log('Element launced the DOM!');
             this.loop();
         }
 
         disconnectedCallback() {
             super.disconnectedCallback();
-            // console.log('Element removed from the DOM!');
             this.clear()
         }
 
@@ -99,16 +98,15 @@ customElements.define('monitor-view-project',
 
             if (!this.project) return '';
 
-            const {id, title, section, description, screenshots, tools} = this.project;
-
+            const {id, title, section, description, screenshots, tools, domain} = this.project;
             if (Array.isArray(tools.tool)) tools.tool.length = 15;
 
             return html`
-                <a href="#"  id="${id}"
+                <a href="#" id="${id}"
                    @click="${this.chooseProject}">
                     <article id="project" class="mitem">
                         <h2>${title}</h2>
-                        <h4>${section}</h4>
+                        <h4>${section}<sup class="pill ${domain.toLowerCase()}">${domain}</sup></h4>
                         <p>${unsafeHTML(description)}</p>
                         <img src="${screenshots.shot[0]}" alt="${screenshots.shot[0]}"/>
                     </article>
@@ -128,65 +126,67 @@ customElements.define('monitor-view-project',
         }
 
 
-        static styles = css`
+        static styles = [
+            theme,
+            css`
+                a {
+                    text-decoration: none;
 
-            a {
-                text-decoration: none;
-                //border-bottom: 4px solid tomato;
+                    * {
+                        pointer-events: none;
+                    }
 
-                * {
-                    pointer-events: none;
-                }
-                
-                article {
+                    article {
 
-                    img {
+                        img {
+                            position: absolute;
+                            opacity: 0.3;
+                            top: 0;
+                            right: 0;
+                            width: 50%;
+                            padding: 15px;
+                        }
+
+                        h2 {
+                            text-align: left;
+                            text-transform: uppercase;
+                            margin-left: 15px;
+                            color: tomato;
+                        }
+
+                        h4 {
+                            text-align: left;
+                            margin-left: 15px;
+                            color: goldenrod;
+
+                        }
+
+                        p {
+                            color: white;
+                            text-align: left;
+                            max-height: 200px;
+                            overflow: hidden;
+                            padding: 0 10px 10px 25px;
+                            margin: 0;
+                        }
+
+                    }
+
+                    aside {
                         position: absolute;
-                        opacity: 0.3;
-                        top: 0;
-                        right: 0;
-                        width: 50%;
-                        padding: 15px;
-                    }
+                        bottom: 0;
+                        right: 25px;
+                        display: flex;
+                        justify-content: flex-end;
+                        gap: 2px;
+                        width: 100%;
 
-                    h2 {
-                        text-align: left;
-                        text-transform: uppercase;
-                        margin-left: 15px;
-                        color: tomato;
-                    }
-
-                    h4 {
-                        text-align: left;
-                        margin-left: 15px;
-                        color: goldenrod;
-                    }
-
-                    p {
-                        color: white;
-                        text-align: left;
-                        max-height: 200px;
-                        max-width: 1000px;
-                        overflow: hidden;
-                        padding: 0 10px 10px 25px;
-                        margin: 0;
-                    }
-
-                }
-
-                aside {
-                    position: absolute;
-                    bottom: 0;
-                    display: flex;
-                    justify-content: center;
-                    gap: 2px;
-                    width: 100%;
-
-                    img {
-                        max-height: 48px;
+                        img {
+                            max-height: 48px;
+                        }
                     }
                 }
-            }
-        `
+            `
+        ]
     }
 );

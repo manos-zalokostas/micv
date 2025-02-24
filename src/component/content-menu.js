@@ -18,9 +18,7 @@ customElements.define('content-menu',
 
 
         changeDomain(domain) {
-            // console.log(">>>>>> ", domain)
             this.active = domain;
-            // Child Component (global-menu)
             this.dispatchEvent(new CustomEvent(EVT.DOMAIN_CHANGE, {
                 detail: {domain},
                 composed: true,
@@ -33,7 +31,7 @@ customElements.define('content-menu',
         render = () => html`
             <nav>
                 ${Object.values(DOMA).map((domain) => html`
-                    <button class="mi-button ${this.active === domain ? 'active' : ''}"
+                    <button class="mi-button ${domain.toLowerCase()} ${this.active === domain ? 'active' : ''} "
                             @click="${() => this.changeDomain(domain)}">
                         ${domain}
                     </button>
