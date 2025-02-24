@@ -139,9 +139,11 @@ customElements.define('monitor-view-tool',
                     a {
                         display: flex;
                         justify-content: space-between;
+                        font-family: var(--font);
+                        font-size: large;
                         color: var(--color-tool);
                         padding: 0 10px;
-                        border-bottom: 2px solid #555;
+                        border-bottom: 2px solid black;
                         background: #444;
                         width: 20%;
 

@@ -1,7 +1,7 @@
 import {css, html, LitElement} from 'lit';
 import * as Store from "/src/_core/store";
+import {theme} from "../theme";
 import {EVT} from "../env";
-
 
 const asset = {
     work: Store.groupProjects(),
@@ -46,7 +46,6 @@ customElements.define('global-search',
         chooseTool(evt) {
             evt.preventDefault()
             this.visible = false;
-
             this.dispatchEvent(
                 new CustomEvent(EVT.TOOL_SELECT, {
                         detail: {tool: evt.target.dataset.key},
@@ -59,9 +58,12 @@ customElements.define('global-search',
 
 
         render = () => html`
-            <section class="${this.visible ? 'active' : ''}">
+            <section class="${this.visible ? 'active' : ''}"
+                     @click="${() => this.visible = false}">
 
-                <input type="text" placeholder="..search projects or tools"
+
+                <input type="text" placeholder="..search project / tool"
+                       @click="${evt => evt.stopPropagation()}"
                        @input="${this.search}"
                        @focus="${(evt) => {
                            this.visible = true
@@ -90,73 +92,87 @@ customElements.define('global-search',
         `;
 
 
-        static styles = css`
+        static styles = [
+            theme,
+            css`
 
-            section {
-                position: absolute;
-                z-index: 20;
-                right: 0;
-                display: flex;
-                flex-direction: column;
-                align-items: flex-end;
-                gap: 20px;
-                margin: 0 50px;
-                padding: 15px 25px;
-
-
-                input {
-                    display: block;
-                    text-align: right;
-                    padding: 5px;
-                    border: none;
-                    outline: none;
-                    border-bottom: 2px solid #999;
-                }
+                section {
+                    position: absolute;
+                    z-index: 20;
+                    right: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    gap: 20px;
+                    font-family: var(--font);
+                    margin: auto;
+                    //background: white;
 
 
-                nav {
-                    display: none;
-                    flex-wrap: wrap;
-                    justify-content: space-around;
-                    align-items: flex-start;
-                    padding: 10px 5px 0;
-                    max-height: 90vh;
-                    overflow: auto;
-                    background: rgba(0, 0, 0, 0.6);
-
-
-                    a {
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        margin: 5px;
-                        padding: 4px 10px;
-                        border-bottom: 1px solid #ddd;
-                        width: 250px;
-                        background: white;
-
-                        * {
-                            pointer-events: none;
-                        }
-
-
-                        em {
-                            font-style: normal;
-                        }
-
-                        img {
-                            width: 75px;
-                            height: 75px;
-                        }
+                    input {
+                        margin: 25px 30px 10px;
+                        //position: relative;
+                        //right: 50px;
+                        //display: block;
+                        text-align: right;
+                        border: none;
+                        outline: none;
+                        padding: 5px;
+                        border-bottom: 2px solid;
+                        //background-color: white;
                     }
-                }
 
-                &.active {
+
                     nav {
-                        display: flex;
+                        display: none;
+                        flex-wrap: wrap;
+                        justify-content: space-around;
+                        align-items: flex-start;
+                        padding: 10px 5px 0;
+                        max-height: 90vh;
+                        overflow: auto;
+
+
+                        a {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            margin: 5px;
+                            padding: 4px 10px;
+                            border-bottom: 1px solid #ddd;
+                            width: 250px;
+                            background: white;
+
+                            * {
+                                pointer-events: none;
+                            }
+
+
+                            em {
+                                font-style: normal;
+                            }
+
+                            img {
+                                width: 75px;
+                                height: 75px;
+                            }
+                        }
+                    }
+
+                    &.active {
+                        background-color: rgba(0, 0, 0, 0.6);
+
+                        input {
+                            background-color: transparent;
+                            color: white;
+                        }
+
+                        nav {
+                            display: flex;
+                        }
                     }
                 }
-            }
-        `
+            `
+        ]
     }
 );

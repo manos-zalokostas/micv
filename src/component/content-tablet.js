@@ -74,7 +74,7 @@ customElements.define('content-tablet',
             <nav class="mi-tablet"
                  style="background-image: url('images/tech_logos/${this.tool}.jpg')">
                 ${this.assets.map((o) => html`
-                    <a href="#" id="${o.id}"
+                    <a href="#" id="${o.id}" class="${o.domain.toLowerCase()}"
                        style="background-image: url('${o.screenshots.shot[0]}')"
                        @click="${this.chooseProject}">
                         <small>${o.category}</small>
@@ -94,7 +94,7 @@ customElements.define('content-tablet',
             <nav class="mi-tablet">
                 ${this.assets.map(
                         val => html`
-                            <a id="${val}" class="mi-tool"
+                            <a id="${val}" class="tool mi-tool"
                                style="background-image: url('images/tech_logos/${val}.jpg')"
                                @click="${this.chooseTool}">
                                 <h4>${val.replaceAll("_", " ").toUpperCase()}</h4>
@@ -112,7 +112,6 @@ customElements.define('content-tablet',
         static styles = [
             theme,
             css`
-
                 nav {
                     display: flex;
                     flex-wrap: wrap;
@@ -124,7 +123,6 @@ customElements.define('content-tablet',
                     font-family: Tahoma, Geneva, sans-serif;
                     height: 90vh;
                     overflow: auto;
-                    background-image: url(http://localhost:3000/images/tech_logos/access.jpg);
                     background-blend-mode: multiply;
                     background-position: 50%;
                     background-color: rgba(0, 0, 0, .9);
@@ -148,10 +146,11 @@ customElements.define('content-tablet',
                         background-blend-mode: multiply;
                         background-repeat: no-repeat;
                         background-position: 150px;
-                        border: 2px solid white;
-                        
+                        //border: 4px solid #222;
+                        border: 4px solid #aaa;
+
                         &:hover {
-                            border-color: white;
+                            border-color: inherit;
                         }
 
                         * {
@@ -159,34 +158,27 @@ customElements.define('content-tablet',
                         }
 
                         &.mi-tool {
-                            color: var(--color-tool);
+                            text-align: center;
                             font-size: 24px;
-                            //width: 225px;
                             height: 175px;
                             background-size: 100%;
 
-                            h4 {
-                            }
-
                             img {
                                 width: 50px;
+                                margin: auto;
 
                                 &:hover {
                                 }
                             }
                         }
 
+                        p {
+                            color: white;
+                        }
+                        
                         strong {
-                            font-size: 32px;
+                            font-size: 24px;
                             width: 50%;
-
-                            &.work {
-                                color: var(--color-work)
-                            }
-
-                            &.study {
-                                color: var(--color-study)
-                            }
                         }
 
                         small {
@@ -194,33 +186,12 @@ customElements.define('content-tablet',
                             width: 50%;
                         }
 
-                        aside {
-                            position: absolute;
-                            z-index: 6;
-                            right: 15px;
-                            top: 15px;
-                            flex-wrap: wrap;
-                            justify-content: flex-end;
-                            gap: 5px;
-                            width: 46%;
-
-                            img {
-                            }
-                        }
-
-                        img {
-                        }
 
                         &:hover {
                             img {
                                 left: 40%;
                             }
 
-                            aside {
-                                img {
-                                    opacity: 1;
-                                }
-                            }
                         }
 
                     }
