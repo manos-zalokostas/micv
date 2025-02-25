@@ -48,7 +48,7 @@ customElements.define('content-detail',
 
                 <badge-category entry="${this.asset.category}"></badge-category>
 
-                <project-tool .entries="${this.asset.tools.tool}"></project-tool>
+                <project-tool .entries="${this.asset.tools}"></project-tool>
 
             </header>
 
@@ -64,7 +64,7 @@ customElements.define('content-detail',
 
             <footer>
 
-                <badge-tool .entries="${this.asset.tools.tool}"></badge-tool>
+                <badge-tool .entries="${this.asset.tools}"></badge-tool>
 
             </footer>
 

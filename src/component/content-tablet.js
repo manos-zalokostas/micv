@@ -75,7 +75,7 @@ customElements.define('content-tablet',
                  style="background-image: url('images/tech_logos/${this.tool}.jpg')">
                 ${this.assets.map((o) => html`
                     <a href="#" id="${o.id}" class="${o.domain.toLowerCase()}"
-                       style="background-image: url('${o.screenshots.shot[0]}')"
+                       style="background-image: url('${o.shots[0]}')"
                        @click="${this.chooseProject}">
                         <small>${o.category}</small>
                         <strong class="${o.domain.toLowerCase()}">${o.title}

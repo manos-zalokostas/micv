@@ -24,7 +24,7 @@ customElements.define('image-slider',
 
         showcaseOrder(order = 'next', evt) {
             //
-            const shots = this.asset.screenshots.shot;
+            const shots = this.asset.shots;
             let indexCurr = shots.findIndex(x => x === this.active),
                 activeNext = order === 'next'
                     ? shots[indexCurr + 1] || shots[0]
@@ -47,7 +47,7 @@ customElements.define('image-slider',
                          @click="${this.showcase}"/>
                 </div>
                 ${
-                        this.asset.screenshots.shot.map(
+                        this.asset.shots.map(
                                 val => html`
                                     <img src=${val} alt="${val}" class=${this.active.endsWith(val) ? 'active' : ''}
                                          @click="${this.showcase}"/>

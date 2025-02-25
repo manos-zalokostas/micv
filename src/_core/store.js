@@ -12,6 +12,11 @@ export const itemByIndex = (idx = 0) => {
 }
 
 
+/**
+ *
+ * @param itemId
+ * @returns {T}
+ */
 export const itemById = (itemId) => {
 
     let item = data.find(o => o.id === itemId);
@@ -20,29 +25,25 @@ export const itemById = (itemId) => {
 }
 
 
-/**
- *
- * @param tool
- * @returns {[]}
+/*
+
  */
 export const groupTools = () => {
 
-    let pack = data.map(o => Array.isArray(o.tools.tool) ? o.tools.tool : [])
+    let pack = data.map(o => Array.isArray(o.tools) ? o.tools : [])
     pack = new Set(pack.flat());
 
     return [...pack];
 }
 
 
-/**
- *
- * @param tool
- * @returns {[]}
+
+/*
+
  */
 export const groupProjects = () => {
 
-    let pack = data.map(o => [o.id, o.title, o.screenshots?.shot?.[0]]);
-
+    let pack = data.map(o => [o.id, o.title, o.shots?.[0]]);
     return pack;
 }
 
@@ -54,7 +55,7 @@ export const groupProjects = () => {
  */
 export const groupByTool = (tool) => {
 
-    let tools = data.filter(o => o.tools.tool.includes(tool));
+    let tools = data.filter(o => o.tools.includes(tool));
 
     let pack = tools.map(item => [item.id, item.title])
 

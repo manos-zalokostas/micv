@@ -32,8 +32,8 @@ customElements.define('monitor-view-tool',
             this.activeIndex = 0;
             this.slice = null;
 
-            // this.tools = Monitor.curr().tools.tool || []; // Default tools array from the current monitor object
-            // this.tools = itemByIndex(20).tools.tool
+            // this.tools = Monitor.curr().tools || []; // Default tools array from the current monitor object
+            // this.tools = itemByIndex(20).tools
         }
 
         display() {

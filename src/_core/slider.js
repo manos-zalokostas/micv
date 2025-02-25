@@ -53,12 +53,12 @@ function html(o) {
                     <span title="previous"> &lt; </span>
                     <span title="exit"> &times; </span>
                 </div>
-                <img src=${o.screenshots.shot[0]}>
+                <img src=${o.shots[0]}>
             </div>
         
             <div id="iscreenshots" >
               ${
-                    o.screenshots.shot.map(
+                    o.shots.map(
                         val => `
                          <a class="item_previewed">
                             <img src=${val} title="ttitle">

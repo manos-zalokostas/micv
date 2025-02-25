@@ -83,7 +83,7 @@ customElements.define('global-search',
                                 <a data-key="${name}" data-type="tool"
                                    @click="${this.chooseTool}">
                                     <em>${name.replaceAll("_", " ")}</em>
-                                    <img src="/images/tech_logos/${name}.jpg" alt="logo ${name}"/>
+                                    <img src="images/tech_logos/${name}.jpg" alt="logo ${name}"/>
                                 </a>
                             `)}
                 </nav>
@@ -106,14 +106,10 @@ customElements.define('global-search',
                     gap: 20px;
                     font-family: var(--font);
                     margin: auto;
-                    //background: white;
 
 
                     input {
                         margin: 25px 30px 10px;
-                        //position: relative;
-                        //right: 50px;
-                        //display: block;
                         text-align: right;
                         border: none;
                         outline: none;

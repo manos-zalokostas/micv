@@ -19,7 +19,7 @@ customElements.define('project-tool',
         constructor() {
             super();
             this.active = 'git'
-            this.entries = itemByIndex(5).tools.tool
+            this.entries = itemByIndex(5).tools
 
             // console.log(this.project)
         }

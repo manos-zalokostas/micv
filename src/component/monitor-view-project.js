@@ -98,8 +98,8 @@ customElements.define('monitor-view-project',
 
             if (!this.project) return '';
 
-            const {id, title, section, description, screenshots, tools, domain} = this.project;
-            if (Array.isArray(tools.tool)) tools.tool.length = 15;
+            const {id, title, section, description, shots, tools, domain} = this.project;
+            if (Array.isArray(tools)) tools.length = 15;
 
             return html`
                 <a href="#" id="${id}"
@@ -108,11 +108,11 @@ customElements.define('monitor-view-project',
                         <h2>${title}</h2>
                         <h4>${section}<sup class="pill ${domain.toLowerCase()}">${domain}</sup></h4>
                         <p>${unsafeHTML(description)}</p>
-                        <img src="${screenshots.shot[0]}" alt="${screenshots.shot[0]}"/>
+                        <img src="${shots[0]}" alt="${shots[0]}"/>
                     </article>
                     <aside>
-                        ${Array.isArray(tools.tool)
-                                ? tools.tool.map(
+                        ${Array.isArray(tools)
+                                ? tools.map(
                                         (val) => html`
                                             <a href="${val}">
                                                 <img src="images/tech_logos/${val}.jpg" alt="${val}"/>
