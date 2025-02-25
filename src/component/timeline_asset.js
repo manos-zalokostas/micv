@@ -1,10 +1,43 @@
 export const assets = [
     [
+        ' 2025 ',
+        ' Contracted by ICCS as standalone Full stack Developer to design and develop "R2D2" environmental events repository app and infrastructure with Sveltekit / Mysql / Docker ',
+        ' Deliverable was a part of multi European endevour that roots and founded by greater movement “Horizon 2020',
+        [
+            "WK23",
+        ],
+    ],
+    [
+        ' 2024 ',
+        ' Contracted by contractor in the field of "Facilities Climate" installations as standalone Full Stack Developer to design and develop "Electro" equipment management / maintenance solution w/  / Sveltekit in the Google Cloud, ',
+        ' ....',
+        [
+            "WK25",
+        ],
+    ],
+    [
+        ' 2024 ',
+        ' Contracted by ICCS as standalone Full stack Developer to design and develop "Synergies" 2 energy apps and infrastructure with Sveltekit / Nest.js / Mysql / Docker ',
+        ' Deliverable was a part of multi European big-data project ‘Synergies” that comes as a continuity of v.1 "Synergy" project  that roots and founded by greater movement “Horizon 2020”. Project customers are major national energy suppliers across Europe ',
+        [
+            "WK22",
+        ],
+    ],
+    [
         ' 2023 ',
         ' Contracted by ICCS as standalone Full Stack Developer to design and develop "EcoEMS" consisting of 2 energy apps with Sveltekit.js / Nest.js / Sql Server / Docker, ',
         ' The project was a part of European - Indian endeavor “Re-empowered” and its scope was to perform simulations so that renewable energy could find and claim its effective margin on the daily demand. ',
         [
             "WK20",
+            "WK21",
+        ],
+    ],
+    [
+        ' 2022 ',
+        ' Contracted by merchandizer as standalone Full Stack Developer to design and develop "Marine Service Parts" maintenance and shopping solution w/  / React / Mysql Database, ',
+        ' ....',
+        [
+            "WK24",
         ],
     ],
     [

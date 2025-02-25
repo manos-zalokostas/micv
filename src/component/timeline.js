@@ -97,6 +97,12 @@ customElements.define('joi-timeline',
                             justify-content: space-between;
                             border-bottom: 1px solid #bbb;
 
+                            &:hover {
+                                font-weight: bold;
+                                background-color: #eee;
+                                border-color: #888;
+                            }
+
                             header {
                                 display: flex;
                                 align-items: flex-start;

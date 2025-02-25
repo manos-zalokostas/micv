@@ -137,6 +137,7 @@ customElements.define('monitor-view-project',
                     }
 
                     article {
+                        max-width: 75%;
 
                         img {
                             position: absolute;
@@ -180,6 +181,7 @@ customElements.define('monitor-view-project',
                         justify-content: flex-end;
                         gap: 2px;
                         width: 100%;
+
 
                         img {
                             max-height: 48px;
