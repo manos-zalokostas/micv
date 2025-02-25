@@ -93,14 +93,16 @@ customElements.define('content-tablet',
         _viewTool = () => html`
             <nav class="mi-tablet">
                 ${this.assets.map(
-                        val => html`
-                            <a id="${val}" class="tool mi-tool"
-                               style="background-image: url('images/tech_logos/${val}.jpg')"
-                               @click="${this.chooseTool}">
-                                <h4>${val.replaceAll("_", " ").toUpperCase()}</h4>
-                                <img src="/images/tech_logos/${val}.jpg" alt="${val}"/>
-                            </a>
-                        `
+                        val => val
+                                && html`
+                                    <a id="${val}" class="tool mi-tool"
+                                       style="background-image: url('images/tech_logos/${val}.jpg')"
+                                       @click="${this.chooseTool}">
+                                        <h4>${val.replaceAll("_", " ").toUpperCase()}</h4>
+                                        <img src="/images/tech_logos/${val}.jpg" alt="${val}"/>
+                                    </a>
+                                `
+                                || ""
                 )}
             </nav>
         `;
@@ -175,7 +177,7 @@ customElements.define('content-tablet',
                         p {
                             color: white;
                         }
-                        
+
                         strong {
                             font-size: 24px;
                             width: 50%;
