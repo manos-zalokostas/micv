@@ -9,27 +9,80 @@ export const theme = css`
         //--color-work: indianred;
         //--color-study: mediumseagreen;
         //--color-default: cornflowerblue;;
-        --color-tool: skyblue;
-        --color-work: tomato;
-        --color-study: limegreen;
-        --color-default: orange;
 
+        --color-tool: orange;
+        --color-work: tomato;
+        --color-study: mediumseagreen;
+        --color-default: dimgrey;
+
+        //color: dimgrey;
 
     }
 
     .work {
         color: var(--color-work);
-        background-color: rgba(100, 90, 90);
+        //background-color: rgba(100, 90, 90);
     }
 
     .study {
         color: var(--color-study);
-        background-color: rgba(90, 100, 90);
+        //background-color: rgba(90, 100, 90);
     }
 
     .tool {
         color: var(--color-tool);
-        background-color: rgba(90, 90, 100);
+        //background-color: rgba(90, 90, 100);
+    }
+
+
+    button {
+        color: #888;
+        outline: none;
+        font-weight: bold;
+        border: none;
+        border-bottom: 2px solid;
+        padding: 6px 12px;
+        width: 150px;
+        cursor: pointer;
+        background-color: transparent;
+
+        &:hover {
+            //border-color: inherit;
+        }
+
+        &.active {
+            color: white;
+            border-bottom-color: var(--color-default);
+            background-color: var(--color-default);
+        }
+
+        &.work {
+            //color: white;
+            border-color: var(--color-work);
+
+            &.active {
+                background-color: var(--color-work);
+            }
+        }
+
+        &.study {
+            //color: white;
+            border-color: var(--color-study);
+
+            &.active {
+                background-color: var(--color-study);
+            }
+        }
+
+        &.tool {
+            //color: white;
+            border-color: var(--color-tool);
+
+            &.active {
+                background-color: var(--color-tool);
+            }
+        }
+
     }
 
     .pill {
@@ -47,55 +100,5 @@ export const theme = css`
         &.study {
             background-color: var(--color-study);
         }
-    }
-
-    button {
-        color: white;
-        outline: none;
-        font-weight: bold;
-        //border: 2px solid #ddd;
-        border: none;
-        border-bottom: 4px solid var(--color-default);
-        padding: 6px 12px;
-        width: 150px;
-        cursor: pointer;
-        background-color: #555;
-
-        &:hover {
-            //border-color: inherit;
-        }
-
-        &.active {
-            background-color: var(--color-default);
-        }
-
-        &.work {
-            color: white;
-            border-color: var(--color-work);
-
-            &.active {
-                background-color: var(--color-work);
-                //background-color: indianred;
-            }
-        }
-
-        &.study {
-            color: white;
-            border-color: var(--color-study);
-
-            &.active {
-                background-color: var(--color-study);
-            }
-        }
-
-        &.tool {
-            color: white;
-            border-color: var(--color-tool);
-
-            &.active {
-                background-color: var(--color-tool);
-            }
-        }
-
     }
 `;

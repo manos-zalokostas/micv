@@ -1,5 +1,5 @@
 import {html, css, LitElement} from 'lit';
-
+import {theme} from "../theme";
 
 customElements.define('quote-intro',
 
@@ -67,16 +67,19 @@ customElements.define('quote-intro',
         `;
 
 
-        static styles = css`
-            article {
-                padding: 25px;
-                font-size: 1.2em;
+        static styles = [
+            theme,
+            css`
+                article {
+                    padding: 25px;
+                    font-size: 1.2em;
+                    font-family: var(--font);
 
-                section {
-                    text-align: left;
-                    margin: 50px 0;
+                    section {
+                        text-align: left;
+                        margin: 50px 0;
+                    }
                 }
-            }
-        `
+            `]
     }
 );

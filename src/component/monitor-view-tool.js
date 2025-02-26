@@ -144,7 +144,7 @@ customElements.define('monitor-view-tool',
                         color: var(--color-tool);
                         padding: 0 10px;
                         border-bottom: 2px solid black;
-                        background: #444;
+                        //background: #444;
                         width: 20%;
 
                         &:hover {
@@ -152,9 +152,12 @@ customElements.define('monitor-view-tool',
                         }
 
                         img {
-                            width: 100px;
-                            height: 100px;
+                            max-width: 90px;
+                            max-height: 90px;
                             pointer-events: none;
+                            padding: 4px 8px;
+                            background-color: white;
+                            border-radius: 4px;
                         }
                     }
                 }

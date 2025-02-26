@@ -179,12 +179,23 @@ customElements.define('monitor-view-project',
                         right: 25px;
                         display: flex;
                         justify-content: flex-end;
-                        gap: 2px;
+                        gap: 5px;
                         width: 100%;
 
+                        a {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            padding: 4px 6px;
+                            background-color: white;
+                            width: 56px;
+                            border-radius: 4px;
 
-                        img {
-                            max-height: 48px;
+                            img {
+                                max-height: 48px;
+                                max-width: 48px;
+                            }
+
                         }
                     }
                 }

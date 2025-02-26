@@ -106,7 +106,7 @@ export default [
         id: 'WK25',
         section: 'Facilities Monitoring',
         category: 'Design and Development',
-        title: 'ELECTRO',
+        title: 'Electro  - Facilities Management',
         tools: [
             T.WEBA, T.JSCR, T.SVEL,
             T.VITE, T.ES6, T.CSS3,
@@ -175,7 +175,7 @@ export default [
         id: 'WK23',
         section: 'Energy',
         category: 'Design and Development',
-        title: 'R2D2 | Reliability, Resilience and Defense technology for the griD',
+        title: 'R2D2 - Reliability Resilience & Grid Defence',
         tools: [
             T.WEBA, T.JSCR, T.SVEL,
             T.VITE, T.ES6, T.CSS3,
@@ -235,7 +235,7 @@ export default [
         id: 'WK21',
         section: 'Energy',
         category: 'Design and Development',
-        title: 'EcoEms Denmark version - Energy Analytics Apps',
+        title: 'EcoEms Energy Analytics - Denmark',
         tools: [
             T.WEBA, T.JSCR, T.SVEL,
             T.VITE, T.ES6, T.CSS3,
@@ -263,7 +263,7 @@ export default [
         id: 'WK20',
         section: 'Energy',
         category: 'Design and Development',
-        title: 'EcoEms - Energy Analytics Apps',
+        title: 'EcoEms Energy Analytics - Greece',
         tools: [
             T.WEBA, T.JSCR, T.SVEL,
             T.VITE, T.ES6, T.CSS3,
@@ -350,7 +350,7 @@ export default [
         id: 'WK17',
         section: 'Hospitality',
         category: 'Design and Development',
-        title: 'Rateparity - Enhanced User Experince',
+        title: 'Rateparity - Hospitality Tools',
         tools: [
             T.WEBA, T.JSCR,
             T.REAC, T.ES6,
@@ -1037,7 +1037,7 @@ export default [
         id: 'ST19',
         section: 'Software Engineering and Project Management',
         category: 'Design and Development',
-        title: 'Project Implementation and Testing',
+        title: 'Project Implementation / Testing',
         tools: [T.WEBA, T.JOOM, T.TEST, T.TEAM],
         description: '<p>The report is a part of group project assignment that its ultimate purpose is to conduct and propose and deliver an e-commerce solution to one of our partners. </p> <p>During this 4TH step we are moving to the actual ‘implementation’ of the project. </p> <p>Therefore during this report we are about to demonstrate the functionality implemented on the web portal. The portal was developed upon making use of “Joomla!” development tool. This phase also includes the ‘testing’ of the product by showcasing how the functionality that has been arranged by stakeholders can now be verified. Additionally, this last report is also a handy guiding manual. Therefore front-end and, back-end users, reading this document can acknowledge of how to make an effective use of the web tool.</p> <p>Streaming procedures are demonstrated within the use of both textual and visual material (screenshotss) and reference the portal’s functionality to readers, confiding that the system incorporates most of current trend services found on the web today.</p> <ul> <span> <p> Amongst other, the functionality described verifies: </p> <li> Core functionality for the domains of: Information, Communication, e-Commerce <li> <li> User communication: Article releases, RSS feeds, Calendar, Newsletters</li> <li> User Registration</li> <li>Products Availability, Search, Shopping Cart</li> <li>Forums, Polls</li> <li>Sitemap</li> <li>Administration extended functionality </li> </span> </ul>',
         score: '82',

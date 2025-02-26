@@ -129,6 +129,7 @@ customElements.define('joi-monitor',
                         display: flex;
                         justify-content: space-between;
                         width: 100%;
+                        background: linear-gradient(270deg, white, transparent)
                     }
                 }
             `]
