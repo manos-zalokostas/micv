@@ -107,7 +107,7 @@ customElements.define('monitor-view-project',
                     <article id="project" class="mitem">
                         <h2>${title}</h2>
                         <h4>${section}<sup class="pill ${domain.toLowerCase()}">${domain}</sup></h4>
-                        <p>${unsafeHTML(description)}</p>
+                        <p> ${unsafeHTML(description)}</p>
                         <img src="${shots[0]}" alt="${shots[0]}"/>
                     </article>
                     <aside>
@@ -165,7 +165,7 @@ customElements.define('monitor-view-project',
                         p {
                             color: white;
                             text-align: left;
-                            max-height: 200px;
+                            max-height: 175px;
                             overflow: hidden;
                             padding: 0 10px 10px 25px;
                             margin: 0;
