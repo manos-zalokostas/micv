@@ -8,7 +8,8 @@ customElements.define('content-menu',
     class ContentMenu extends LitElement {
 
         static properties = {
-            active: {type: Number}
+            active: {type: Number},
+            activeTool: {type: String, default: null},
         };
 
         constructor() {
@@ -33,7 +34,13 @@ customElements.define('content-menu',
                 ${Object.values(DOMA).map((domain) => html`
                     <button class="mi-button ${domain.toLowerCase()} ${this.active === domain ? 'active' : ''} "
                             @click="${() => this.changeDomain(domain)}">
-                        ${domain}
+                        <strong>${domain}</strong>
+                        ${(domain === DOMA.TOOL && this.activeTool && html`
+                            <span>
+                                <img src="/images/tech_logos/${this.activeTool}.jpg" alt="tech logo">
+                                <small>${this.activeTool.replace("_", " ")}</small>
+                            </span>
+                        `) || ''}
                     </button>
                 `)}
             </nav>
@@ -45,6 +52,31 @@ customElements.define('content-menu',
             css`
                 nav {
                     text-align: center;
+
+                    button {
+                        position: relative;
+
+                        span {
+                            position: absolute;
+                            left: 90%;
+                            bottom: -12px;
+                            display: flex;
+                            align-items: center;
+                            padding: 10px;
+                            border-radius: 30px;
+                            border: 4px solid var(--color-tool);
+                            background: white;
+
+                            img {
+                                width: 24px;
+                                padding: 4px;
+                            }
+                            
+                            small {
+                                color: var(--color-tool)
+                            }
+                        }
+                    }
                 }
             `]
     }

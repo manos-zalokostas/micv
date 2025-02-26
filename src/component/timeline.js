@@ -10,17 +10,17 @@ customElements.define('joi-timeline',
     class JoiTimeline extends LitElement {
 
         static properties = {
-            active: {type: Number}
+            activeWork: {type: String},
+            activeComment: {type: Boolean, default: false}
         };
 
         constructor() {
             super();
-            this.active = 0
         }
 
 
-        action(idx) {
-            this.active = !this.active
+        action() {
+            this.activeComment = !this.activeComment;
         }
 
         render = () => html`
@@ -43,17 +43,22 @@ customElements.define('joi-timeline',
                                             <strong>${year}</strong>
                                             <p>
                                                 <em>${title}</em>
-                                                <small class="${this.active ? 'active' : ''}">${info}</small>
+                                                <small class="${this.activeComment ? 'active' : ''}">${info}</small>
                                             </p>
                                         </header>
 
                                         <div>
                                             ${codes && codes.map(code => html`
-                                                <button @click="${() => this.dispatchEvent(
-                                                        new CustomEvent(EVT.MONITOR_CONTENT, {
-                                                            detail: {code},
-                                                            bubbles: true,
-                                                        }))}">
+                                                <button class="work ${code === this.activeWork ? 'active' : ''}"
+                                                        @click="${() => {
+                                                            this.activeWork = code;
+                                                            this.dispatchEvent(
+                                                                    new CustomEvent(EVT.MONITOR_CONTENT, {
+                                                                        detail: {code},
+                                                                        bubbles: true,
+                                                                    }))
+                                                        }
+                                                        }">
                                                     ${code}
                                                 </button>
                                             `)}
@@ -63,7 +68,7 @@ customElements.define('joi-timeline',
                                 `)}
                     </p>
 
-                    </div>
+            </div>
 
             </div>
         `;

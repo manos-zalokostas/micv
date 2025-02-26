@@ -30,9 +30,12 @@ customElements.define('page-content',
         }
 
         evtToolChange(evt) {
-            const child = this.shadowRoot.querySelector('content-tablet');
-            child.tool = evt.detail.tool;
+            const childTablet = this.shadowRoot.querySelector('content-tablet');
+            childTablet.tool = evt.detail.tool;
             this.evtContentTransit({detail: {transit: false}})
+
+            const childMenu = this.shadowRoot.querySelector('content-menu');
+            childMenu.activeTool = evt.detail.tool
         }
 
 

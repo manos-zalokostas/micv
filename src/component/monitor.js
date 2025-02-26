@@ -23,6 +23,7 @@ customElements.define('joi-monitor',
 
         static properties = {
             activeContent: {type: String},
+            activePause: {type: Boolean, default: false}
         };
 
         constructor() {
@@ -42,11 +43,13 @@ customElements.define('joi-monitor',
                 ? this.shadowRoot.querySelector("monitor-view-project")
                 : this.shadowRoot.querySelector("monitor-view-tool")
 
-            if (MONIT.PAUS === val) return View.pause()
 
             if (MONIT.PREV === val) return View.prev()
 
-            View.next();
+            if (MONIT.NEXT === val) return View.next()
+
+            View.pause()
+            this.activePause = !this.activePause;
         }
 
         forceConent(code) {
@@ -66,7 +69,8 @@ customElements.define('joi-monitor',
                     <div class="mbuttons">
                         ${assets.auto.map(
                                 ([title, label, code]) => html`
-                                    <button title="${title}" class="${code.toLowerCase()} ${this.activeContent === code ? 'active' : ''}"
+                                    <button title="${title}"
+                                            class="${code.toLowerCase()} ${this.activeContent === code ? 'active' : ''}"
                                             @click="${() => this.loopContent(code)}">
                                         ${label}
                                     </button>
@@ -77,6 +81,7 @@ customElements.define('joi-monitor',
                         ${assets.manual.map(
                                 ([name, val]) => html`
                                     <button title="${name}"
+                                            class="${val === MONIT.PAUS && this.activePause ? 'active' : ''}"
                                             @click="${() => this.controContent(val)}">
                                         ${name}
                                     </button>

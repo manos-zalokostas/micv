@@ -53,6 +53,12 @@ customElements.define('content-tablet',
 
         chooseTool(evt) {
             this.tool = evt.target.id;
+
+            this.dispatchEvent(new CustomEvent(EVT.TOOL_CHANGE, {
+                detail: {tool: evt.target.id},
+                bubbles: true,
+                composed: true
+            }));
         }
 
 

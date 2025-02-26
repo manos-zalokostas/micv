@@ -118,7 +118,9 @@ customElements.define('monitor-view-tool',
                                 <a id="${val}"
                                    @click="${this.chooseTool}">
                                     <h4>${val.replaceAll("_", " ").toUpperCase()}</h4>
-                                    <img src="/images/tech_logos/${val}.jpg" alt="${val}"/>
+                                    <span>
+                                        <img src="/images/tech_logos/${val}.jpg" alt="${val}"/>
+                                    </span>
                                 </a>
                             `
                     )}
@@ -139,26 +141,37 @@ customElements.define('monitor-view-tool',
                     a {
                         display: flex;
                         justify-content: space-between;
-                        font-family: var(--font);
                         font-size: large;
+                        font-family: var(--font);
                         color: var(--color-tool);
-                        padding: 0 10px;
+                        padding: 6px;
                         border-bottom: 2px solid black;
-                        //background: #444;
                         width: 20%;
 
                         &:hover {
-                            border-color: var(--color-tool)
+                            text-decoration: underline;
                         }
 
-                        img {
-                            max-width: 90px;
-                            max-height: 90px;
-                            pointer-events: none;
+                        span {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 80px;
+                            height: 80px;
                             padding: 4px 8px;
+                            border-radius: 8px;
+                            border: 2px solid;
                             background-color: white;
-                            border-radius: 4px;
+
+                            img {
+                                max-width: 72px;
+                                max-height: 72px;
+                                pointer-events: none;
+                                //padding: 4px 8px;
+                                border-radius: 4px;
+                            }
                         }
+
                     }
                 }
             `
