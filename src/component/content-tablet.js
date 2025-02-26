@@ -99,7 +99,9 @@ customElements.define('content-tablet',
                                        style="background-image: url('images/tech_logos/${val}.jpg')"
                                        @click="${this.chooseTool}">
                                         <h4>${val.replaceAll("_", " ").toUpperCase()}</h4>
-                                        <img src="/images/tech_logos/${val}.jpg" alt="${val}"/>
+                                        <span>
+                                            <img src="/images/tech_logos/${val}.jpg" alt="${val}"/>
+                                        </span>
                                     </a>
                                 `
                                 || ""
@@ -160,16 +162,29 @@ customElements.define('content-tablet',
                         }
 
                         &.mi-tool {
-                            text-align: center;
-                            font-size: 24px;
+                            justify-content: flex-start;
+                            font-size: 18px;
                             height: 175px;
                             background-size: 100%;
 
-                            img {
-                                width: 50px;
-                                margin: auto;
+                            span {
+                                position: absolute;
+                                left: 5px;
+                                bottom: 5px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                width: 100px;
+                                height: 100px;
+                                background-color: white;
 
-                                &:hover {
+                                img {
+                                    max-width: 64px;
+                                    max-height: 64px;
+                                    padding: 4px 8px;
+                                    border-radius: 4px;
+                                    pointer-events: none;
+
                                 }
                             }
                         }
