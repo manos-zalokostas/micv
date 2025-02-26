@@ -56,6 +56,11 @@ customElements.define('global-search',
             )
         }
 
+        _rslvType(id) {
+            if (id.startsWith("WK")) return 'work'
+            if (id.startsWith("ST")) return 'study'
+            return 'tool'
+        }
 
         render = () => html`
             <section class="${this.visible ? 'active' : ''}"
@@ -71,10 +76,10 @@ customElements.define('global-search',
 
                 <nav>
                     ${asset.work.filter(([key, name, img]) => !this.active || name.toLowerCase().includes(this.active))
-                            .map(([key, name, img]) => html`
+                            .map(([key, name, img, id]) => html`
                                 <a data-key="${key}" data-type="work"
                                    @click="${this.chooseProject}">
-                                    <em>${name}</em>
+                                    <em>${name}<sup class="pill ${this._rslvType(id)}">${id}</sup> </em>
                                     <img src="${img}" alt="logo ${name}"/>
                                 </a>
                             `)}
@@ -82,7 +87,7 @@ customElements.define('global-search',
                             .map((name) => html`
                                 <a data-key="${name}" data-type="tool"
                                    @click="${this.chooseTool}">
-                                    <em>${name.replaceAll("_", " ")}</em>
+                                    <em>${name.replaceAll("_", " ")}<sup class="pill tool">tool</sup> </em>
                                     <img src="images/tech_logos/${name}.jpg" alt="logo ${name}"/>
                                 </a>
                             `)}
@@ -103,9 +108,8 @@ customElements.define('global-search',
                     display: flex;
                     flex-direction: column;
                     align-items: flex-end;
-                    gap: 20px;
+                    //gap: 5px;
                     font-family: var(--font);
-                    margin: auto;
 
 
                     input {
@@ -122,7 +126,7 @@ customElements.define('global-search',
                     nav {
                         display: none;
                         flex-wrap: wrap;
-                        justify-content: space-around;
+                        justify-content: space-evenly;
                         align-items: flex-start;
                         padding: 10px 5px 0;
                         max-height: 90vh;
@@ -133,11 +137,18 @@ customElements.define('global-search',
                             display: flex;
                             justify-content: space-between;
                             align-items: center;
-                            margin: 5px;
-                            padding: 4px 10px;
+                            gap: 20px;
+                            position: relative;
+                            margin: 10px;
+                            padding: 15px;
+                            border-radius: 4px;
                             border-bottom: 1px solid #ddd;
                             width: 250px;
                             background: white;
+
+                            &:hover {
+                                text-decoration: underline;
+                            }
 
                             * {
                                 pointer-events: none;
@@ -145,7 +156,16 @@ customElements.define('global-search',
 
 
                             em {
+                                text-transform: uppercase;
                                 font-style: normal;
+                                color: #555;
+
+                                sup {
+                                    position: absolute;
+                                    top: 5px;
+                                    left: 0;
+                                    font-size: xx-small !important;
+                                }
                             }
 
                             img {

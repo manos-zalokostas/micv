@@ -100,5 +100,9 @@ export const theme = css`
         &.study {
             background-color: var(--color-study);
         }
+
+        &.tool {
+            background-color: var(--color-tool);
+        }
     }
 `;
