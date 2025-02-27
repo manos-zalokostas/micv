@@ -7,21 +7,18 @@ customElements.define('page-introduction',
     class PageIntroduction extends LitElement {
 
         static properties = {
-            active: {type: Number},
-            activeContent: {type: String},
+            // active: {type: Number},
+            activeContent: {type: String, default: VIEW.LAND.INTRO},
         };
 
         constructor() {
             super();
-            this.active = 1
-            this.activeContent = _DEV.VIEW
-
+            this.activeContent = VIEW.LAND.INTRO
         }
 
-        action(idx) {
-            this.active = idx;
-            // console.log("--- ", idx);
-        }
+        // action(idx) {
+        //     this.active = idx;
+        // }
 
         evtIntroTransit(evt) {
             this.activeContent = evt.detail.code
