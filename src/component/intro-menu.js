@@ -1,10 +1,12 @@
+import {unsafeHTML} from "lit/directives/unsafe-html.js";
+import {SVGI} from "../_core/svg-icon";
 import {css, html, LitElement} from 'lit';
 import {EVT, VIEW} from "/src/env";
 import {theme} from "../theme";
 
 const assets = [
-    ['welcome', VIEW.LAND.INTRO],
-    ['timeline', VIEW.LAND.RESU],
+    ['WELCOME', VIEW.LAND.INTRO, SVGI.USER],
+    ['TIMELINE', VIEW.LAND.RESU, SVGI.RESU],
 ];
 
 
@@ -32,7 +34,7 @@ customElements.define('intro-menu',
         render = () => html`
             <nav>
                 ${assets.map(
-                        ([val, code], i) => html`
+                        ([val, code, svg], i) => html`
                             <button
                                     class="${this.active === i + 1 ? 'active' : ''}"
                                     @click="${() => {
@@ -46,7 +48,10 @@ customElements.define('intro-menu',
                                         )
                                     }
                                     }">
-                                ${val}
+                                <strong>${val}</strong>
+                                <span class="buttonico">
+                                    ${unsafeHTML(svg({color: "#ccc"}))}
+                                </span>
                             </button>
                         `)}
             </nav>

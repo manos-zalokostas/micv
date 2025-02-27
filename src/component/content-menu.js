@@ -1,7 +1,14 @@
+import {unsafeHTML} from "lit/directives/unsafe-html.js";
+import {SVGI} from "../_core/svg-icon";
 import {html, css, LitElement} from 'lit';
 import {DOMA, EVT} from "/src/env";
 import {theme} from "../theme";
 
+const SVGS = [
+    SVGI.WORK,
+    SVGI.STUDY,
+    SVGI.TOOL,
+]
 
 customElements.define('content-menu',
 
@@ -31,16 +38,20 @@ customElements.define('content-menu',
 
         render = () => html`
             <nav>
-                ${Object.values(DOMA).map((domain) => html`
+                ${Object.values(DOMA).map((domain, i) => html`
                     <button class="mi-button ${domain.toLowerCase()} ${this.active === domain ? 'active' : ''} "
                             @click="${() => this.changeDomain(domain)}">
+                        ${(domain === DOMA.TOOL && this.activeTool
+                                && html`
+                                    <aside>
+                                        <img src="/images/tech_logos/${this.activeTool}.jpg" alt="tech logo">
+                                        <small>${this.activeTool.replaceAll("_", " ")}</small>
+                                    </aside>`
+                        ) || ''}
                         <strong>${domain}</strong>
-                        ${(domain === DOMA.TOOL && this.activeTool && html`
-                            <span>
-                                <img src="/images/tech_logos/${this.activeTool}.jpg" alt="tech logo">
-                                <small>${this.activeTool.replace("_", " ")}</small>
-                            </span>
-                        `) || ''}
+                        <span class="buttonico">
+                            ${unsafeHTML(SVGS[i]({color: "#ccc"}))}
+                        </span>
                     </button>
                 `)}
             </nav>
@@ -56,22 +67,18 @@ customElements.define('content-menu',
                     button {
                         position: relative;
 
-                        span {
-                            position: absolute;
-                            left: 90%;
-                            bottom: -12px;
+                        aside {
                             display: flex;
                             align-items: center;
-                            padding: 10px;
+                            padding: 0 10px;
                             border-radius: 30px;
-                            border: 4px solid var(--color-tool);
-                            background: white;
+                            border: none;
 
                             img {
-                                width: 24px;
-                                padding: 4px;
+                                width: 20px;
+                                margin: 0 5px;
                             }
-                            
+
                             small {
                                 color: var(--color-tool)
                             }

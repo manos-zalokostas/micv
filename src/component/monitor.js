@@ -1,17 +1,20 @@
-import {html, css, LitElement} from 'lit';
+import {unsafeHTML} from "lit/directives/unsafe-html.js";
 import {itemById} from "/src/_core/store";
+import {html, css, LitElement} from 'lit';
+import {SVGI} from "../_core/svg-icon";
 import {_DEV, MONIT} from "../env";
 import {theme} from "../theme";
 
+
 const assets = {
     auto: [
-        ['project', 'projects', MONIT.WORK],
-        ['tool', 'tools', MONIT.TOOL],
+        ['project', 'work', MONIT.WORK, SVGI.WORK],
+        ['tool', 'tool', MONIT.TOOL, SVGI.TOOL],
     ],
     manual: [
-        ['pause', MONIT.PAUS],
-        ['prev', MONIT.PREV],
-        ['next', MONIT.NEXT],
+        ['pause', MONIT.PAUS, SVGI.PAUS],
+        ['prev', MONIT.PREV, SVGI.PREV],
+        ['next', MONIT.NEXT, SVGI.NEXT],
     ],
 }
 
@@ -68,22 +71,28 @@ customElements.define('joi-monitor',
                 <header>
                     <div class="mbuttons">
                         ${assets.auto.map(
-                                ([title, label, code]) => html`
+                                ([title, label, code, svg]) => html`
                                     <button title="${title}"
                                             class="${code.toLowerCase()} ${this.activeContent === code ? 'active' : ''}"
                                             @click="${() => this.loopContent(code)}">
-                                        ${label}
+                                        <strong>${label}</strong>
+                                        <span class="buttonico">
+                                            ${unsafeHTML(svg({color: "white"}))}
+                                        </span>
                                     </button>
                                 `)}
                     </div>
 
                     <div class="mcontrols">
                         ${assets.manual.map(
-                                ([name, val]) => html`
+                                ([name, val, svg]) => html`
                                     <button title="${name}"
                                             class="${val === MONIT.PAUS && this.activePause ? 'active' : ''}"
                                             @click="${() => this.controContent(val)}">
                                         ${name}
+                                        <span class="buttonico">
+                                            ${unsafeHTML(svg({color: "#999"}))}
+                                        </span>
                                     </button>
                                 `)}
                     </div>

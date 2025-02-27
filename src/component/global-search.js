@@ -1,5 +1,7 @@
+import {unsafeHTML} from "lit/directives/unsafe-html.js";
 import {css, html, LitElement} from 'lit';
 import * as Store from "/src/_core/store";
+import {SVGI} from "../_core/svg-icon";
 import {theme} from "../theme";
 import {EVT} from "../env";
 
@@ -67,12 +69,17 @@ customElements.define('global-search',
                      @click="${() => this.visible = false}">
 
 
-                <input type="text" placeholder="..search project / tool"
-                       @click="${evt => evt.stopPropagation()}"
-                       @input="${this.search}"
-                       @focus="${(evt) => {
-                           this.visible = true
-                       }}">
+                <fieldset>
+                    <span class="buttonico">
+                        ${unsafeHTML(SVGI.SERC({color: "#ccc"}))}
+                    </span>
+                    <input type="text" placeholder="..search project or tool"
+                           @click="${evt => evt.stopPropagation()}"
+                           @input="${this.search}"
+                           @focus="${(evt) => {
+                               this.visible = true
+                           }}">
+                </fieldset>
 
                 <nav>
                     ${asset.work.filter(([key, name, img]) => !this.active || name.toLowerCase().includes(this.active))
@@ -108,18 +115,16 @@ customElements.define('global-search',
                     display: flex;
                     flex-direction: column;
                     align-items: flex-end;
-                    //gap: 5px;
+                    padding: 25px;                    
                     font-family: var(--font);
 
 
                     input {
-                        margin: 25px 30px 10px;
                         text-align: right;
                         border: none;
                         outline: none;
                         padding: 5px;
-                        border-bottom: 2px solid;
-                        //background-color: white;
+                        border-bottom: 2px solid var(--color-default);
                     }
 
 
@@ -156,7 +161,7 @@ customElements.define('global-search',
 
 
                             em {
-                                text-transform: uppercase;
+                                //text-transform: uppercase;
                                 font-style: normal;
                                 color: #555;
 

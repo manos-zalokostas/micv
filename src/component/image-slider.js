@@ -1,4 +1,6 @@
+import {unsafeHTML} from "lit/directives/unsafe-html.js";
 import {css, html, LitElement} from 'lit';
+import {SVGI} from "../_core/svg-icon";
 import {theme} from "../theme";
 
 
@@ -39,8 +41,18 @@ customElements.define('image-slider',
                 <div class="placeholder ${this.active ? 'active' : ''}">
                     
                     <nav>
-                        <button @click="${evt => this.showcaseOrder("prev", evt)}">prev</button>
-                        <button @click="${evt => this.showcaseOrder("next", evt)}">next</button>
+                        <button @click="${evt => this.showcaseOrder("prev", evt)}">
+                            <strong>prev</strong>
+                            <span class="buttonico">
+                                ${unsafeHTML(SVGI.PREV({color: "#ccc"}))}
+                            </span>
+                        </button>
+                        <button @click="${evt => this.showcaseOrder("next", evt)}">
+                            <strong>next</strong>
+                            <span class="buttonico">
+                                ${unsafeHTML(SVGI.NEXT({color: "#ccc"}))}
+                            </span>
+                        </button>
                     </nav>
 
                     <img alt="image preview" src=${this.active}

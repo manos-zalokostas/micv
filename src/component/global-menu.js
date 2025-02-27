@@ -1,11 +1,13 @@
+import {unsafeHTML} from "lit/directives/unsafe-html.js";
+import {SVGI} from "../_core/svg-icon";
 import {css, html, LitElement} from 'lit';
 import {EVT, PAGE} from "/src/env";
 import {theme} from "../theme";
 
 
 const assets = [
-    ['RESUME', PAGE.LAND],
-    ['PROJECTS', PAGE.WORK],
+    ['RESUME', PAGE.LAND, SVGI.INTRO],
+    ['HIGHLIGHT', PAGE.WORK, SVGI.STARS],
     // ['certificates', PAGE.CERT],
 ];
 
@@ -24,15 +26,13 @@ customElements.define('global-menu',
 
 
         action(idx) {
-            // console.log('IDX: :', idx)
-            // console.log('DO SOMETHING ! ')
             this.activeElem = idx
         }
 
         render = () => html`
             <nav>
                 <div>
-                    ${assets.map(([val, code], i) => html`
+                    ${assets.map(([val, code, svg], i) => html`
                         <button title="${val}"
                                 class="${this.activeElem === code ? 'active' : ''}"
                                 @click="${(evt) => {
@@ -46,7 +46,10 @@ customElements.define('global-menu',
                                             )
                                     )
                                 }}">
-                            ${val}
+                            <strong>${val}</strong>
+                            <span class="buttonico">
+                                ${unsafeHTML(svg({color: "#ccc"}))}
+                            </span>
                         </button>
                     `)}
                 </div>

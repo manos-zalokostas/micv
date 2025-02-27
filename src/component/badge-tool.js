@@ -53,12 +53,17 @@ customElements.define('badge-tool',
                 position: fixed;
                 z-index: 1;
                 bottom: 10%;
-                opacity: 0.1;
+                opacity: 0.09;
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
                 align-items: center;
                 width: 100vw;
+                pointer-events: none;
+
+                * {
+                    pointer-events: none;
+                }
 
                 img {
                     width: 200px;

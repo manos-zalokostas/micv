@@ -13,9 +13,9 @@ export const theme = css`
         --color-tool: orange;
         --color-work: tomato;
         --color-study: mediumseagreen;
-        --color-default: dimgrey;
+        --color-default: #888;
 
-        //color: dimgrey;
+        //color: steelblue;
 
     }
 
@@ -34,26 +34,43 @@ export const theme = css`
         //background-color: rgba(90, 90, 100);
     }
 
-
-    button {
-        color: #888;
-        outline: none;
+    
+    button,
+    fieldset{
+        position: relative;
+        display: inline-flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        color: var(--color-default);
+        font-size: 1em;
         font-weight: bold;
+        outline: none;
+        border-radius: 4px;
         border: none;
-        border-bottom: 2px solid;
-        padding: 6px 12px;
-        width: 150px;
-        cursor: pointer;
         background-color: transparent;
+        //width: 150px;
+        cursor: pointer;
+        padding: 4px 16px;
+
+        span {
+            display: block;
+            width: 20px;
+            border-radius: 30px;
+            line-height: 0;
+        }
 
         &:hover {
             //border-color: inherit;
         }
+        
+        &:active {
+            background-color: #eee;
+        }
 
         &.active {
-            color: white;
-            border-bottom-color: var(--color-default);
-            background-color: var(--color-default);
+            border: 2px solid var(--color-default);
         }
 
         &.work {
@@ -61,7 +78,8 @@ export const theme = css`
             border-color: var(--color-work);
 
             &.active {
-                background-color: var(--color-work);
+                color: var(--color-work);
+                //background-color: var(--color-work);
             }
         }
 
@@ -70,7 +88,8 @@ export const theme = css`
             border-color: var(--color-study);
 
             &.active {
-                background-color: var(--color-study);
+                color: var(--color-study);
+                //background-color: var(--color-study);
             }
         }
 
@@ -79,7 +98,8 @@ export const theme = css`
             border-color: var(--color-tool);
 
             &.active {
-                background-color: var(--color-tool);
+                color: var(--color-tool);
+                //background-color: var(--color-tool);
             }
         }
 

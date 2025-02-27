@@ -1,5 +1,7 @@
+import {unsafeHTML} from "lit/directives/unsafe-html.js";
 import {html, css, LitElement} from 'lit';
 import {assets} from "./timeline_asset";
+import {SVGI} from "../_core/svg-icon";
 import {theme} from "../theme";
 import {EVT} from "/src/env";
 
@@ -59,7 +61,10 @@ customElements.define('joi-timeline',
                                                                     }))
                                                         }
                                                         }">
-                                                    ${code}
+                                                    <strong>${code}</strong>
+                                                    <span class="buttonico">
+                                                        ${unsafeHTML(SVGI.STAR({color: "#ccc"}))}
+                                                    </span>
                                                 </button>
                                             `)}
                                         </div>
@@ -103,7 +108,8 @@ customElements.define('joi-timeline',
                             border-bottom: 1px solid #bbb;
 
                             &:hover {
-                                font-weight: bold;
+                                //color: indianred;
+                                text-decoration: underline;
                                 background-color: #eee;
                                 border-color: #888;
                             }

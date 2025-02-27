@@ -1,6 +1,7 @@
-import {css, html, LitElement} from 'lit';
-import {itemById, itemByIndex} from "/src/_core/store";
 import {unsafeHTML} from "lit/directives/unsafe-html.js";
+import {itemById} from "/src/_core/store";
+import {css, html, LitElement} from 'lit';
+import {SVGI} from "../_core/svg-icon";
 import {theme} from "../theme";
 import {EVT} from "/src/env";
 
@@ -18,27 +19,29 @@ customElements.define('content-detail',
             super();
             this.active = 1
             this.asset = itemById('WK13')
-            // console.log(">>> ", this.asset)
         }
 
 
         action(idx) {
             this.active = idx;
-            // console.log("--- ", idx);
         }
 
         render = () => html`
 
             <header>
 
-                <button @click="${() => this.dispatchEvent(
+                <button class="active" 
+                        @click="${() => this.dispatchEvent(
                         new CustomEvent(EVT.CONTENT_TRANSIT, {
                             detail: {transit: false},
                             composed: true,
                             bubbles: true,
                         }))
                 }">
-                    back
+                    <strong>back</strong>
+                    <span class="buttonico">
+                        ${unsafeHTML(SVGI.BACK({color: "#ccc"}))}
+                    </span>
                 </button>
 
                 <h3> 
