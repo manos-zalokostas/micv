@@ -15,17 +15,20 @@ customElements.define('content-menu',
     class ContentMenu extends LitElement {
 
         static properties = {
-            active: {type: Number},
+            active: {type: Number, default: DOMA.WORK},
             activeTool: {type: String, default: null},
         };
 
         constructor() {
             super();
-            this.active = 1
+            this.active = DOMA.WORK
         }
 
 
         changeDomain(domain) {
+            if (this.active === domain) return;
+
+            this.activeTool = '';
             this.active = domain;
             this.dispatchEvent(new CustomEvent(EVT.DOMAIN_CHANGE, {
                 detail: {domain},

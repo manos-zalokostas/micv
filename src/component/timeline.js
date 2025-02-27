@@ -132,7 +132,6 @@ customElements.define('joi-timeline',
 
                                 small {
                                     font-size: initial;
-                                    opacity: 0;
                                     display: none;
 
                                     &.active {

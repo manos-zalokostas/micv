@@ -69,11 +69,11 @@ customElements.define('global-search',
                      @click="${() => this.visible = false}">
 
 
-                <fieldset>
+                <fieldset class="active">
                     <span class="buttonico">
                         ${unsafeHTML(SVGI.SERC({color: "#ccc"}))}
                     </span>
-                    <input type="text" placeholder="..search project or tool"
+                    <input type="text" placeholder="project or tool"
                            @click="${evt => evt.stopPropagation()}"
                            @input="${this.search}"
                            @focus="${(evt) => {
@@ -111,11 +111,10 @@ customElements.define('global-search',
                 section {
                     position: absolute;
                     z-index: 20;
-                    right: 10px;
+                    right: 0;
                     display: flex;
                     flex-direction: column;
                     align-items: flex-end;
-                    padding: 25px;                    
                     font-family: var(--font);
 
 
@@ -124,7 +123,7 @@ customElements.define('global-search',
                         border: none;
                         outline: none;
                         padding: 5px;
-                        border-bottom: 2px solid var(--color-default);
+                        background-color: transparent;
                     }
 
 

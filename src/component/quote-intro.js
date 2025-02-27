@@ -71,13 +71,13 @@ customElements.define('quote-intro',
             theme,
             css`
                 article {
-                    padding: 25px;
+                    padding: 10px 25px;
                     font-size: 1.2em;
                     font-family: var(--font);
 
                     section {
                         text-align: left;
-                        margin: 50px 0;
+                        //margin: 50px 0;
                     }
                 }
             `]

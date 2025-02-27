@@ -36,7 +36,7 @@ customElements.define('intro-menu',
                 ${assets.map(
                         ([val, code, svg], i) => html`
                             <button
-                                    class="${this.active === i + 1 ? 'active' : ''}"
+                                    class=" generic ${this.active === i + 1 ? 'active' : ''}"
                                     @click="${() => {
                                         this.action(i + 1);
                                         this.dispatchEvent(

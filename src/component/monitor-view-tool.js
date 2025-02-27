@@ -27,9 +27,8 @@ customElements.define('monitor-view-tool',
         constructor() {
             super();
             this.active = 1;
-            this.tools = null;
-
             this.activeIndex = 0;
+            this.tools = null;
             this.slice = null;
 
             // this.tools = Monitor.curr().tools || []; // Default tools array from the current monitor object
@@ -95,13 +94,14 @@ customElements.define('monitor-view-tool',
 
 
         chooseTool(evt) {
-            evt.preventDefault();
 
+            evt.preventDefault();
+debugger
             this.dispatchEvent(
                 new CustomEvent(EVT.TOOL_SELECT, {
                         detail: {tool: evt.target.id},
+                        composed: true,
                         bubbles: true,
-                        composed: true
                     }
                 )
             )
@@ -150,6 +150,10 @@ customElements.define('monitor-view-tool',
 
                         &:hover {
                             text-decoration: underline;
+                        }
+                        
+                        * {
+                            pointer-events: none;
                         }
 
                         span {

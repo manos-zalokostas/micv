@@ -13,6 +13,7 @@ export const theme = css`
         --color-tool: orange;
         --color-work: tomato;
         --color-study: mediumseagreen;
+        --color-generic: dodgerblue;
         --color-default: #888;
 
         //color: steelblue;
@@ -31,6 +32,11 @@ export const theme = css`
 
     .tool {
         color: var(--color-tool);
+        //background-color: rgba(90, 90, 100);
+    }
+
+    .generic {
+        color: var(--color-generic);
         //background-color: rgba(90, 90, 100);
     }
 
@@ -99,6 +105,16 @@ export const theme = css`
 
             &.active {
                 color: var(--color-tool);
+                //background-color: var(--color-tool);
+            }
+        }
+
+        &.generic {
+            //color: white;
+            border-color: var(--color-generic);
+
+            &.active {
+                color: var(--color-generic);
                 //background-color: var(--color-tool);
             }
         }

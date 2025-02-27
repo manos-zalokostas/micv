@@ -49,7 +49,7 @@ customElements.define('content-detail',
                     <sup class="pill ${this.asset.domain.toLocaleLowerCase()}">${this.asset.domain}</sup> 
                 </h3>
 
-                <badge-category entry="${this.asset.category}"></badge-category>
+<!--                <badge-category entry="${this.asset.category}"></badge-category>-->
 
                 <project-tool .entries="${this.asset.tools}"></project-tool>
 

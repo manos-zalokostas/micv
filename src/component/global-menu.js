@@ -1,6 +1,6 @@
 import {unsafeHTML} from "lit/directives/unsafe-html.js";
-import {SVGI} from "../_core/svg-icon";
 import {css, html, LitElement} from 'lit';
+import {SVGI} from "../_core/svg-icon";
 import {EVT, PAGE} from "/src/env";
 import {theme} from "../theme";
 
@@ -8,7 +8,6 @@ import {theme} from "../theme";
 const assets = [
     ['RESUME', PAGE.LAND, SVGI.INTRO],
     ['HIGHLIGHT', PAGE.WORK, SVGI.STARS],
-    // ['certificates', PAGE.CERT],
 ];
 
 customElements.define('global-menu',
@@ -52,9 +51,6 @@ customElements.define('global-menu',
                             </span>
                         </button>
                     `)}
-                </div>
-                <div>
-                    <global-search></global-search>
                 </div>
             </nav>
         `;

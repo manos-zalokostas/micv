@@ -1,6 +1,6 @@
 import {itemById, itemByIndex} from "/src/_core/store";
 import {html, css, LitElement} from 'lit';
-import {_DEV, EVT, VIEW} from "/src/env";
+import {_DEV, DOMA, EVT, VIEW} from "/src/env";
 
 const CSSCLASS_TRANSIT = 'mi-transit-detail';
 
@@ -30,12 +30,14 @@ customElements.define('page-content',
         }
 
         evtToolChange(evt) {
+            const childMenu = this.shadowRoot.querySelector('content-menu');
+            childMenu.activeTool = evt.detail.tool
+            childMenu.active = DOMA.TOOL;
+
             const childTablet = this.shadowRoot.querySelector('content-tablet');
             childTablet.tool = evt.detail.tool;
             this.evtContentTransit({detail: {transit: false}})
 
-            const childMenu = this.shadowRoot.querySelector('content-menu');
-            childMenu.activeTool = evt.detail.tool
         }
 
 
@@ -62,7 +64,8 @@ customElements.define('page-content',
                     <content-menu></content-menu>
                 </header>
 
-                <main class="${_DEV.VIEW === VIEW.WORK.CONT ? CSSCLASS_TRANSIT : ''}">
+                    <!--                <main class="${_DEV.VIEW === VIEW.WORK.CONT ? CSSCLASS_TRANSIT : ''}">-->
+                <main>
 
                     <div>
                         <content-tablet></content-tablet>

@@ -65,12 +65,14 @@ customElements.define('site-index',
             <div id="view"
                  @page-transit=${this.evtPageTransit}
                  @project-select=${this.evtProjectSelect}
-                 @tool-select=${this.evtToolSelect}
-            >
+                 @tool-select=${this.evtToolSelect}>
 
                 <div id="wrapper">
 
-                    <global-menu></global-menu>
+                    <header>
+                        <global-menu></global-menu>
+                        <global-search></global-search>
+                    </header>
 
                     <article>
                         ${
@@ -115,24 +117,26 @@ customElements.define('site-index',
                     top: 0;
                     left: 0;
                     z-index: 1;
-                    //text-align: center;
                     width: 100%;
                     height: 100%;
                     padding: 15px;
-                    //background-color: white;
 
-                    nav {
-                        position: absolute;
-                        z-index: 20;
-                        left: 50px;
-                        //background: red;
+                    header {
+                        position: relative;
+                        display: flex;
+                        justify-content: space-between;
+                        width: 95vw;
+                        padding: 10px 25px;
+
                     }
+
 
                     article {
                         position: absolute;
                         left: 0;
                         width: 100vw;
                         height: 100vh;
+
 
                         #introduction {
                             top: 0;
