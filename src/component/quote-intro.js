@@ -29,18 +29,18 @@ customElements.define('quote-intro',
                     <p>
                         <span>My name is Manos.</span>
                         For the last two and a half decades I have been occupied by several organizations in diverse
-                        business
-                        perspectives that each played their parts in shaping my profile.
-                        The last and a half decade I have been explicitly working my competencies building web
-                        applications and environments. Major business models that I have delved and aquired experience
+                        business perspectives that each played their parts in shaping my profile.
+                        The last and a half decade I have been explicitly working on my competencies building web
+                        applications and environments. Major business models that I have delved and acquired experience
                         include Energy, Hospitality, Warehouse, eShopping, Conferences, Banking.
                         The other half of my occupational experience comes by working for a top-competent, world-wide
-                        extended pharmaceutical company, SanofiAventis, that saturated my profile with highly strict
-                        and demanding business procedures that helped me transform my overall qualities.
-                        Educational research offered me a first flass Honnors Bachelor Degree from Greenwich university
-                        in 'Internert Engineering and Web Management. Additionaly I maintain diplomas and certifications
-                        in fields like 'Web and Desktop Applications Development','Business Management and Marketing',
-                        'Graphics Design' after attending and training for several annual classes in the fields.
+                        extended pharmaceutical company, SanofiAventis, that saturated my profile with highly strict and
+                        demanding business procedures that helped me transform my overall occupational qualities.
+                        Educational research offered me "first class Honours" Bachelor Degree from Greenwich university
+                        in 'Internet Engineering and Web Management.
+                        Additionally I maintain insights and diplomas / certificates in fields like 'Web and Desktop
+                        Applications Development','Business Management and Marketing', 'Graphics Design' after attending
+                        and training for several annual classes in the fields.
                     </p>
                 </section>
 
