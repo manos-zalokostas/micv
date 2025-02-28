@@ -122,16 +122,16 @@ export default [
         comment: '-',
         links: '',
         shots: [
-            'images/electro/elec-dam-handl.png',
-            'images/electro/elec-dam-multi.png',
-            'images/electro/elec-land.png',
-            'images/electro/elec-param.png',
-            'images/electro/elec-sche-freon.png',
-            'images/electro/elec-serv-new.png',
-            'images/electro/elec-unit-filter.png',
-            'images/electro/elec-unit-qrcode.png',
-            'images/electro/elec-unit-search.png',
-            'images/electro/elec-unit-status.png'
+            'micv/images/electro/elec-dam-handl.png',
+            'micv/images/electro/elec-dam-multi.png',
+            'micv/images/electro/elec-land.png',
+            'micv/images/electro/elec-param.png',
+            'micv/images/electro/elec-sche-freon.png',
+            'micv/images/electro/elec-serv-new.png',
+            'micv/images/electro/elec-unit-filter.png',
+            'micv/images/electro/elec-unit-qrcode.png',
+            'micv/images/electro/elec-unit-search.png',
+            'micv/images/electro/elec-unit-status.png'
         ]
     },
     {
@@ -155,19 +155,19 @@ export default [
         comment: '-',
         links: '',
         shots: [
-            'images/mare/mare-land.png',
-            'images/mare/mare-part-prev.png',
-            'images/mare/mare-search-thermo.png',
-            'images/mare/mare-book.png',
-            'images/mare/mare-buy-conf.png',
-            'images/mare/mare-buy-end.png',
-            'images/mare/mare-cart.png',
-            'images/mare/mare-engine.png',
-            'images/mare/mare-engine-part.png',
-            'images/mare/mare-search.png',
-            'images/mare/mare-search-belt.png',
-            'images/mare/mare-search-gasket.png',
-            'images/mare/mare-user.png'
+            'micv/images/mare/mare-land.png',
+            'micv/images/mare/mare-part-prev.png',
+            'micv/images/mare/mare-search-thermo.png',
+            'micv/images/mare/mare-book.png',
+            'micv/images/mare/mare-buy-conf.png',
+            'micv/images/mare/mare-buy-end.png',
+            'micv/images/mare/mare-cart.png',
+            'micv/images/mare/mare-engine.png',
+            'micv/images/mare/mare-engine-part.png',
+            'micv/images/mare/mare-search.png',
+            'micv/images/mare/mare-search-belt.png',
+            'micv/images/mare/mare-search-gasket.png',
+            'micv/images/mare/mare-user.png'
         ]
     },
     {
@@ -191,11 +191,11 @@ export default [
         comment: '-',
         links: '',
         shots: [
-            'images/r2d2/r2d2-search.png',
-            'images/r2d2/r2d2-resilience.png',
-            'images/r2d2/r2d2-create.png',
-            'images/r2d2/r2d2-latest.png',
-            'images/r2d2/r2d2-spat.png'
+            'micv/images/r2d2/r2d2-search.png',
+            'micv/images/r2d2/r2d2-resilience.png',
+            'micv/images/r2d2/r2d2-create.png',
+            'micv/images/r2d2/r2d2-latest.png',
+            'micv/images/r2d2/r2d2-spat.png'
         ]
     },
     {
@@ -219,15 +219,15 @@ export default [
         comment: '-',
         links: '',
         shots: [
-            'images/synergies/sgsflex-agr-search.png',
-            'images/synergies/sgsflex-land.png',
-            'images/synergies/sgsflex-log.png',
-            'images/synergies/sgsflex-tso.png',
-            'images/synergies/sgsflex-tso-asset.png',
-            'images/synergies/sgsplan-planres.png',
-            'images/synergies/sgsplan-scen-res.png',
-            'images/synergies/sgsplan-scennew.png',
-            'images/synergies/sgsplan-scenover.png'
+            'micv/images/synergies/sgsflex-agr-search.png',
+            'micv/images/synergies/sgsflex-land.png',
+            'micv/images/synergies/sgsflex-log.png',
+            'micv/images/synergies/sgsflex-tso.png',
+            'micv/images/synergies/sgsflex-tso-asset.png',
+            'micv/images/synergies/sgsplan-planres.png',
+            'micv/images/synergies/sgsplan-scen-res.png',
+            'micv/images/synergies/sgsplan-scennew.png',
+            'micv/images/synergies/sgsplan-scenover.png'
         ]
     },
     {
@@ -251,11 +251,11 @@ export default [
         comment: '-',
         links: '',
         shots: [
-            'images/ecodk/ecodk-elec.png',
-            'images/ecodk/ecodk-tank.png',
-            'images/ecodk/ecodk-heatdem.png',
-            'images/ecodk/ecodk-dem.png',
-            'images/ecodk/ecodk-heat.png'
+            'micv/images/ecodk/ecodk-elec.png',
+            'micv/images/ecodk/ecodk-tank.png',
+            'micv/images/ecodk/ecodk-heatdem.png',
+            'micv/images/ecodk/ecodk-dem.png',
+            'micv/images/ecodk/ecodk-heat.png'
         ]
     },
     {
@@ -279,11 +279,11 @@ export default [
         comment: '-',
         links: '',
         shots: [
-            'images/ecoems/ecosys.png',
-            'images/ecoems/ecostn.png',
-            'images/ecoems/ecoliveq.png',
-            'images/ecoems/ecospec.png',
-            'images/ecoems/ecoform.png'
+            'micv/images/ecoems/ecosys.png',
+            'micv/images/ecoems/ecostn.png',
+            'micv/images/ecoems/ecoliveq.png',
+            'micv/images/ecoems/ecospec.png',
+            'micv/images/ecoems/ecoform.png'
         ]
     },
     {
@@ -309,11 +309,11 @@ export default [
         comment: '-',
         links: '',
         shots: [
-            'images/synergy/sfreq.png',
-            'images/synergy/sintro.png',
-            'images/synergy/splan.png',
-            'images/synergy/sscen.png',
-            'images/synergy/ssel.png'
+            'micv/images/synergy/sfreq.png',
+            'micv/images/synergy/sintro.png',
+            'micv/images/synergy/splan.png',
+            'micv/images/synergy/sscen.png',
+            'micv/images/synergy/ssel.png'
         ]
     },
     {
@@ -338,11 +338,11 @@ export default [
         comment: '-',
         links: '',
         shots: [
-            'images/hybrid/htos.png',
-            'images/hybrid/hintro.png',
-            'images/hybrid/hload.png',
-            'images/hybrid/hprod.png',
-            'images/hybrid/hshed.png'
+            'micv/images/hybrid/htos.png',
+            'micv/images/hybrid/hintro.png',
+            'micv/images/hybrid/hload.png',
+            'micv/images/hybrid/hprod.png',
+            'micv/images/hybrid/hshed.png'
         ]
     },
     {
@@ -365,11 +365,11 @@ export default [
         comment: '-',
         links: '',
         shots: [
-            'images/rateparity/widget_max_roomstream.png',
-            'images/rateparity/widget_price_full.png',
-            'images/rateparity/widget_offer_full.png',
-            'images/rateparity/config_price_position.png',
-            'images/rateparity/config_offer_colors.png'
+            'micv/images/rateparity/widget_max_roomstream.png',
+            'micv/images/rateparity/widget_price_full.png',
+            'micv/images/rateparity/widget_offer_full.png',
+            'micv/images/rateparity/config_price_position.png',
+            'micv/images/rateparity/config_offer_colors.png'
         ]
     },
     {
@@ -391,8 +391,8 @@ export default [
         tutor: '-',
         comment: '-',
         shots: [
-            'images/cosmores/compareme_config.png',
-            'images/cosmores/compareme_info.png'
+            'micv/images/cosmores/compareme_config.png',
+            'micv/images/cosmores/compareme_info.png'
         ]
     },
     {
@@ -415,10 +415,10 @@ export default [
         tutor: '-',
         comment: '-',
         shots: [
-            'images/ecep/delivery_status.png',
-            'images/ecep/pending_purchaces.png',
-            'images/ecep/search_tool.png',
-            'images/ecep/purchase_details.png'
+            'micv/images/ecep/delivery_status.png',
+            'micv/images/ecep/pending_purchaces.png',
+            'micv/images/ecep/search_tool.png',
+            'micv/images/ecep/purchase_details.png'
         ]
     },
     {
@@ -441,9 +441,9 @@ export default [
         tutor: '-',
         comment: '-',
         shots: [
-            'images/noblelinx/performance-manager.png',
-            'images/noblelinx/performance-director.png',
-            'images/noblelinx/logs.png'
+            'micv/images/noblelinx/performance-manager.png',
+            'micv/images/noblelinx/performance-director.png',
+            'micv/images/noblelinx/logs.png'
         ]
     },
     {
@@ -465,11 +465,11 @@ export default [
         tutor: '-',
         comment: '-',
         shots: [
-            'images/commerzbank/certificates.png',
-            'images/commerzbank/indexsystem.png',
-            'images/commerzbank/indexwerte.png',
-            'images/commerzbank/stockexchange.png',
-            'images/commerzbank/topflop.png'
+            'micv/images/commerzbank/certificates.png',
+            'micv/images/commerzbank/indexsystem.png',
+            'micv/images/commerzbank/indexwerte.png',
+            'micv/images/commerzbank/stockexchange.png',
+            'micv/images/commerzbank/topflop.png'
         ]
     },
     {
@@ -489,11 +489,11 @@ export default [
         tutor: '-',
         comment: '-',
         shots: [
-            'images/deltacosmos/interactive_board.png',
-            'images/deltacosmos/month_workhour.png',
-            'images/deltacosmos/employee_info.png',
-            'images/deltacosmos/customer_guard.png',
-            'images/deltacosmos/map_monitor.png'
+            'micv/images/deltacosmos/interactive_board.png',
+            'micv/images/deltacosmos/month_workhour.png',
+            'micv/images/deltacosmos/employee_info.png',
+            'micv/images/deltacosmos/customer_guard.png',
+            'micv/images/deltacosmos/map_monitor.png'
         ]
     },
     {
@@ -513,10 +513,10 @@ export default [
         tutor: '-',
         comment: '-',
         shots: [
-            'images/pearson/simple_words.png',
-            'images/pearson/tutor_intro.png',
-            'images/pearson/anime_audio_synch_1.png',
-            'images/pearson/anime_audio_synch_2.png'
+            'micv/images/pearson/simple_words.png',
+            'micv/images/pearson/tutor_intro.png',
+            'micv/images/pearson/anime_audio_synch_1.png',
+            'micv/images/pearson/anime_audio_synch_2.png'
         ]
     },
     {
@@ -537,11 +537,11 @@ export default [
         tutor: '-',
         comment: '-',
         shots: [
-            'images/micv/studies_grouped.jpg',
-            'images/micv/skills_showcase.jpg',
-            'images/micv/video_hosted.jpg',
-            'images/micv/projects_preview.jpg',
-            'images/micv/extra_info.jpg'
+            'micv/images/micv/studies_grouped.jpg',
+            'micv/images/micv/skills_showcase.jpg',
+            'micv/images/micv/video_hosted.jpg',
+            'micv/images/micv/projects_preview.jpg',
+            'micv/images/micv/extra_info.jpg'
         ]
     },
     {
@@ -564,11 +564,11 @@ export default [
         tutor: '-',
         comment: '-',
         shots: [
-            'images/elgreg_upd/home.jpg',
-            'images/elgreg_upd/product_category.jpg',
-            'images/elgreg_upd/partner.jpg',
-            'images/elgreg_upd/product_full_description.jpg',
-            'images/elgreg_upd/administration.jpg'
+            'micv/images/elgreg_upd/home.jpg',
+            'micv/images/elgreg_upd/product_category.jpg',
+            'micv/images/elgreg_upd/partner.jpg',
+            'micv/images/elgreg_upd/product_full_description.jpg',
+            'micv/images/elgreg_upd/administration.jpg'
         ]
     },
     {
@@ -588,11 +588,11 @@ export default [
         tutor: '-',
         comment: '-',
         shots: [
-            'images/elgreg/elgreg_home.jpg',
-            'images/elgreg/contact.jpg',
-            'images/elgreg/full_preview.jpg',
-            'images/elgreg/prods_preview.jpg',
-            'images/elgreg/slide_show.jpg'
+            'micv/images/elgreg/elgreg_home.jpg',
+            'micv/images/elgreg/contact.jpg',
+            'micv/images/elgreg/full_preview.jpg',
+            'micv/images/elgreg/prods_preview.jpg',
+            'micv/images/elgreg/slide_show.jpg'
         ]
     },
     {
@@ -607,10 +607,10 @@ export default [
         tutor: '-',
         comment: '-',
         shots: [
-            'images/sheduler/pic_msch.jpg',
-            'images/sheduler/pic_hours.jpg',
-            'images/sheduler/pic_restrict.jpg',
-            'images/sheduler/pic_backup.jpg'
+            'micv/images/sheduler/pic_msch.jpg',
+            'micv/images/sheduler/pic_hours.jpg',
+            'micv/images/sheduler/pic_restrict.jpg',
+            'micv/images/sheduler/pic_backup.jpg'
         ]
     },
     {
@@ -625,9 +625,9 @@ export default [
         tutor: '-',
         comment: '-',
         shots: [
-            'images/hse_newsletter/p1.jpg',
-            'images/hse_newsletter/p2.jpg',
-            'images/hse_newsletter/p3.jpg'
+            'micv/images/hse_newsletter/p1.jpg',
+            'micv/images/hse_newsletter/p2.jpg',
+            'micv/images/hse_newsletter/p3.jpg'
         ]
     },
     {
@@ -642,10 +642,10 @@ export default [
         tutor: '-',
         comment: '-',
         shots: [
-            'images/innovation_club/logo_final.jpg',
-            'images/innovation_club/banner1.jpg',
-            'images/innovation_club/banner2.jpg',
-            'images/innovation_club/banner3.jpg'
+            'micv/images/innovation_club/logo_final.jpg',
+            'micv/images/innovation_club/banner1.jpg',
+            'micv/images/innovation_club/banner2.jpg',
+            'micv/images/innovation_club/banner3.jpg'
         ]
     },
     {
@@ -660,8 +660,8 @@ export default [
         tutor: '-',
         comment: '-',
         shots: [
-            'images/daily_schedule/application_main.jpg',
-            'images/daily_schedule/report_sent.jpg'
+            'micv/images/daily_schedule/application_main.jpg',
+            'micv/images/daily_schedule/report_sent.jpg'
         ]
     },
     {
@@ -676,10 +676,10 @@ export default [
         tutor: '-',
         comment: '-',
         shots: [
-            'images/month_bills/month_report.jpg',
-            'images/month_bills/excel_file_inside_access.jpg',
-            'images/month_bills/month_bills_excel_file.jpg',
-            'images/month_bills/request_report_month.jpg'
+            'micv/images/month_bills/month_report.jpg',
+            'micv/images/month_bills/excel_file_inside_access.jpg',
+            'micv/images/month_bills/month_bills_excel_file.jpg',
+            'micv/images/month_bills/request_report_month.jpg'
         ]
     },
     {
@@ -694,11 +694,11 @@ export default [
         tutor: '-',
         comment: '-',
         shots: [
-            'images/meeting_rooms/meeting_rooms_main.jpg',
-            'images/meeting_rooms/message_box_alert.jpg',
-            'images/meeting_rooms/coffee_break_policy.jpg',
-            'images/meeting_rooms/successful_registration.jpg',
-            'images/meeting_rooms/click_preview_report.jpg'
+            'micv/images/meeting_rooms/meeting_rooms_main.jpg',
+            'micv/images/meeting_rooms/message_box_alert.jpg',
+            'micv/images/meeting_rooms/coffee_break_policy.jpg',
+            'micv/images/meeting_rooms/successful_registration.jpg',
+            'micv/images/meeting_rooms/click_preview_report.jpg'
         ]
     },
     {
@@ -713,11 +713,11 @@ export default [
         tutor: '-',
         comment: '-',
         shots: [
-            'images/hse_db/person_alone.jpg',
-            'images/hse_db/accidents.jpg',
-            'images/hse_db/annual_safetrack_rates.jpg',
-            'images/hse_db/welcome_page.jpg',
-            'images/hse_db/cars_alone_km.jpg'
+            'micv/images/hse_db/person_alone.jpg',
+            'micv/images/hse_db/accidents.jpg',
+            'micv/images/hse_db/annual_safetrack_rates.jpg',
+            'micv/images/hse_db/welcome_page.jpg',
+            'micv/images/hse_db/cars_alone_km.jpg'
         ]
     },
 
@@ -733,11 +733,11 @@ export default [
         tutor: '<h4><a target="_blank" href="https://linkedin.com/in/gprok">Prokopakis, George MSc</a></h4> <p>US Naval Postgraduate School, CA</p>',
         comment: '-',
         shots: [
-            'images/ptech_a2/alert_2_invalid_input_value.jpg',
-            'images/ptech_a2/alert_1_value.jpg',
-            'images/ptech_a2/alert_3_dublicate_value_inputs.jpg',
-            'images/ptech_a2/alert_4_invalid_input_values.jpg',
-            'images/ptech_a2/information_board.jpg'
+            'micv/images/ptech_a2/alert_2_invalid_input_value.jpg',
+            'micv/images/ptech_a2/alert_1_value.jpg',
+            'micv/images/ptech_a2/alert_3_dublicate_value_inputs.jpg',
+            'micv/images/ptech_a2/alert_4_invalid_input_values.jpg',
+            'micv/images/ptech_a2/information_board.jpg'
         ]
     },
     {
@@ -752,11 +752,11 @@ export default [
         tutor: '<h4><a target="_blank"  href="https://facebook.com/ioannis.pandithas?fref=ts">Pandidas, John Phd</a></h4> <p>PhD, University of Liverpool, UK; </p>',
         comment: '-',
         shots: [
-            'images/webdes_a1/welcome_page.jpg',
-            'images/webdes_a1/add_product_to_basket.jpg',
-            'images/webdes_a1/single_product_description.jpg',
-            'images/webdes_a1/preview_registered_products.jpg',
-            'images/webdes_a1/preview_registered_users.jpg'
+            'micv/images/webdes_a1/welcome_page.jpg',
+            'micv/images/webdes_a1/add_product_to_basket.jpg',
+            'micv/images/webdes_a1/single_product_description.jpg',
+            'micv/images/webdes_a1/preview_registered_products.jpg',
+            'micv/images/webdes_a1/preview_registered_users.jpg'
         ]
     },
     {
@@ -771,11 +771,11 @@ export default [
         tutor: '<h4><a target="_blank" href="https://linkedin.com/in/ioannischatzis">Chatzis, Ioannis Phd</a></h4> <p> Machine Vision, University of Patras</p>',
         comment: ' <span>Very well analyzed and explained. Very thorough in every aspect of the desing and implementation. Very well commented code. Good functionality. Well designed and user friendly interface. All the extra features asked are added succesfully</span>',
         shots: [
-            'images/sysdev_a1/play_playlist_selected_only.jpg',
-            'images/sysdev_a1/media_player_welcome_page.jpg',
-            'images/sysdev_a1/create_playlist.jpg',
-            'images/sysdev_a1/copy_multiple_file_to_playlist.jpg',
-            'images/sysdev_a1/list_view_navigation.jpg'
+            'micv/images/sysdev_a1/play_playlist_selected_only.jpg',
+            'micv/images/sysdev_a1/media_player_welcome_page.jpg',
+            'micv/images/sysdev_a1/create_playlist.jpg',
+            'micv/images/sysdev_a1/copy_multiple_file_to_playlist.jpg',
+            'micv/images/sysdev_a1/list_view_navigation.jpg'
         ]
     },
     {
@@ -790,10 +790,10 @@ export default [
         tutor: '<h4><a target="_blank" href="https://linkedin.com/in/ioannischatzis">Chatzis, Ioannis Phd</a></h4> <p> Machine Vision, University of Patras</p>',
         comment: ' <span>The features asked where implemented and were justified adequately. Moreover an additional feature was added as a trial to implement a better filtering method.I was pleased with the presentation, the implementation and the justification of the various steps </span>',
         shots: [
-            'images/sysdev_a2/program_interface.jpg',
-            'images/sysdev_a2/load_file.jpg',
-            'images/sysdev_a2/apply_filter.jpg',
-            'images/sysdev_a2/remove_filter.jpg'
+            'micv/images/sysdev_a2/program_interface.jpg',
+            'micv/images/sysdev_a2/load_file.jpg',
+            'micv/images/sysdev_a2/apply_filter.jpg',
+            'micv/images/sysdev_a2/remove_filter.jpg'
         ]
     },
     {
@@ -808,11 +808,11 @@ export default [
         tutor: '<h4><a target="_blank" href="https://linkedin.com/pub/petros-bofakos/a/149/b90">Bofakos, Petros PhD </a></h4> <p>Computer Science Keele University UK </p>',
         comment: ' <span>The student work stands out for clarity. All phases of the assignment (data cleaning, data conversion, pre-processing, classification, forecasting) were performed and described in a remarkably clear and systematic manner. The report structure and presentation is excellent. </span> A minor point: For increased readability of the Table of Contents, please use shorter. Section titles. The  Conclusion summarizes the student’s work. It does not provide a  critical evaluation of the data mining process as experienced by the student during the assignment.',
         shots: [
-            'images/adsa_a1/weka_tool.jpg',
-            'images/adsa_a1/j48_weka_classifier.jpg',
-            'images/adsa_a1/bayes_net_graph_visualizer_2.jpg',
-            'images/adsa_a1/j48_graph_visualizer.jpg',
-            'images/adsa_a1/unpruned_m5rules.jpg'
+            'micv/images/adsa_a1/weka_tool.jpg',
+            'micv/images/adsa_a1/j48_weka_classifier.jpg',
+            'micv/images/adsa_a1/bayes_net_graph_visualizer_2.jpg',
+            'micv/images/adsa_a1/j48_graph_visualizer.jpg',
+            'micv/images/adsa_a1/unpruned_m5rules.jpg'
         ]
     },
     {
@@ -827,11 +827,11 @@ export default [
         tutor: '<h4><a target="_blank" href="https://linkedin.com/pub/petros-bofakos/a/149/b90">Bofakos, Petros PhD </a></h4> <p>Computer Science Keele University UK </p>',
         comment: ' <span>An excellent piece of work! The student has answered correctly all question items including the complex queries of the last section. His answers are clear, detailed and well-presented in an excellent report. It is quite hard to spot any significant area of improvement to the student’s work. </span>',
         shots: [
-            'images/adsa_a2/entity_file_transfer.jpg',
-            'images/adsa_a2/advanced_subqueries_oracle.jpg',
-            'images/adsa_a2/bitmap_indexes.jpg',
-            'images/adsa_a2/sequences_in_oracle.jpg',
-            'images/adsa_a2/advanced_subqueries_oracle2.jpg'
+            'micv/images/adsa_a2/entity_file_transfer.jpg',
+            'micv/images/adsa_a2/advanced_subqueries_oracle.jpg',
+            'micv/images/adsa_a2/bitmap_indexes.jpg',
+            'micv/images/adsa_a2/sequences_in_oracle.jpg',
+            'micv/images/adsa_a2/advanced_subqueries_oracle2.jpg'
         ]
     },
     {
@@ -845,7 +845,7 @@ export default [
         score: '95',
         tutor: `<h4><a target="_blank" href="https://linkedin.com/pub/michael-hands/30/8ba/61b">Hands, Mike Ph.D</a></h4> <p> Part-Time Ph.D Optoelectronics, King's College London, UK</p>`,
         comment: ' <p>Manos Zalokostas has placed significant effort on this first coursework assignment. His descriptions develop the background of the topic well, although his descriptions in English do not present the topic concisely. However, the message within his descriptions is correct.  </p> <p>The only issue with the content is that it has limited consideration of “What did the developers of the technology do to try and make the transition to it better / simpler?“ which was a question that was presented in the assignment description to be considered as part of the essay task. However, he has brought together concepts with a broader consideration than the main suggested questions, relating the development of computer programming languages to social impact, and that such impact will be greater as the development of programming languages continues towards greater levels of abstraction. </p> <p>He has provided material that shows that he made notes from the references he used, and that these notes were used to help him develop a plan regarding the content of the essay. My review of the references that he used suggests that most of the wording used in the construction of the essay is his own. His references include texts that are not accessible simply through accessing internet sites and are some of the more significant texts covering the topic. </p> <p>My personal discussions with Manos on this topic show that he has benefited from this research exercise and that he is motivated to learn about such interesting topics. <span> I am very satisfied with his performance. His enthusiasm for the topic shows from the quality of his work and my personal discussions with him </span>. </p> <ul><p> My recommendations are: </p> <li> Marks for working notes (out of a possible 30%) : 30% - A thorough set of working notes was provided. </li> <li>Marks for essay (out of a possible 70%) :  65%.</li> </ul>',
-        shots: 'images/sav_a1/designers_engineers.jpg'
+        shots: 'micv/images/sav_a1/designers_engineers.jpg'
     },
     {
         domain: 'STUDY',
@@ -858,7 +858,7 @@ export default [
         score: '90',
         tutor: `<h4><a target="_blank" href="https://linkedin.com/pub/michael-hands/30/8ba/61b">Hands, Mike Ph.D</a></h4> <p> Part-Time Ph.D Optoelectronics, King's College London, UK</p>`,
         comment: ' <p> Manos Zalokostas provides a well composed product concept development and places it within a significantly well developed business proposal. </p> <p> He has placed significant work to research the technical considerations that affect the market and the market potential in order to quote “real numbers” than use a simpler estimation process, even though the lecturer suggested that simple estimation process for his particular scenario. This led Manos to spend more effort than was really required to complete this assignment, but he admitted that his interest in the topic caused him to get carried away. Since he did this extra work, Manos has exposed himself to wider considerations than this assignment had intended but his lecturer is able to appreciate from his submission and from discussions with him that he has truly learned practical research-quality skills that he will benefit from. </p> <p>He has presented the market niche and product concepts succinctly. </p> <p>  He has considered the requirements for the product and service that he suggests. He has considered the variations of how the service could be provided; leading to an optimum form. His considerations cover the balance between the service variety of e-learning topics, the likely demand and capacity factors that limit the ability to deliver the service. He has that a mix of content delivery would be appropriate, including videos (it is not certain whether this is real-time or downloaded in delivery from his text) and other online material. </p> <p>Manos used “above-average” quality English throughout his report. He has used an appropriate report structure. Significantly, Manos has provided a large body of references that support his technical and business focus. </p> <ul> <li>Lecturer recommendations are: FINAL MARK = 90%</li> <li>Marks for presentation (out of a possible 10) : 0/10</li> <li>Marks for working notes (out of a possible 30) : 30/30 - A thorough set of working notes was provided, running to 32 pages! Significantly, these notes document his progression of thought and questions he is considering about the topics.  </li> <li>Marks for essay (out of a possible 60) :  60/60 -  The information provided in the report is of sufficient depth to believe that the market niche exists and can be serviced by the “optimal form of product” that Manos proposes. Many aspects of the technical considerations are put into context with real-world problems in order to arrive at the considered optimal service form. The length of the report is excessive but reflects the completeness and professional approach to providing in-depth researched information on the topic. </li> </ul> <p><span>This assignment has proved to be a useful learning vehicle for Manos, beyond all expectations and requirements. His enthusiasm for learning is obvious by his general approach to his assignments </span> but Manos should take note of the advice of the lecturer to moderate his enthusiasm, taking into consideration the learning objectives of an assignment and the “required level of effort” to achieve these objectives. </p>',
-        shots: 'images/sav_a2/prospect_languages.jpg'
+        shots: 'micv/images/sav_a2/prospect_languages.jpg'
     },
     {
         domain: 'STUDY',
@@ -872,10 +872,10 @@ export default [
         tutor: '<h4><a target="_blank" href="https://linkedin.com/pub/anna-serefeas-koulas/1/490/a15</a></h4> <p>Marketing at Drexel University </p>',
         comment: '-',
         shots: [
-            'images/lc_a3/initiatives.jpg',
-            'images/lc_a3/certificates.jpg',
-            'images/lc_a3/charts.jpg',
-            'images/lc_a3/21century_school.jpg'
+            'micv/images/lc_a3/initiatives.jpg',
+            'micv/images/lc_a3/certificates.jpg',
+            'micv/images/lc_a3/charts.jpg',
+            'micv/images/lc_a3/21century_school.jpg'
         ]
     },
     {
@@ -890,11 +890,11 @@ export default [
         tutor: '<h4><a target="_blank"  href="https://www.facebook.com/ioannis.pandithas?fref=ts">Pandidas, John Phd</a></h4> <p>PhD, University of Liverpool, UK; </p>',
         comment: ' <span>Excellent work that was written in a very professional manner </span>',
         shots: [
-            'images/os_a1/compile_file_with_emacs.jpg',
-            'images/os_a1/compile_file_from_linux_terminal.jpg',
-            'images/os_a1/emacs_version_control_facility.jpg',
-            'images/os_a1/make_file_graph.jpg',
-            'images/os_a1/calculator_running_terminal.jpg'
+            'micv/images/os_a1/compile_file_with_emacs.jpg',
+            'micv/images/os_a1/compile_file_from_linux_terminal.jpg',
+            'micv/images/os_a1/emacs_version_control_facility.jpg',
+            'micv/images/os_a1/make_file_graph.jpg',
+            'micv/images/os_a1/calculator_running_terminal.jpg'
         ]
     },
     {
@@ -909,11 +909,11 @@ export default [
         tutor: '<h4><a target="_blank" href="https://old.nyc.gr/informatics_dept_members">Bofakos, Petros PhD </a></h4> <p>Computer Science Keele University UK</p>',
         comment: '-',
         shots: [
-            'images/dba_a1/entity_task_described.jpg',
-            'images/dba_a1/form_proposal.jpg',
-            'images/dba_a1/form_work_assignment.jpg',
-            'images/dba_a1/keepwarm_business_model.jpg',
-            'images/dba_a1/form_invoice.jpg'
+            'micv/images/dba_a1/entity_task_described.jpg',
+            'micv/images/dba_a1/form_proposal.jpg',
+            'micv/images/dba_a1/form_work_assignment.jpg',
+            'micv/images/dba_a1/keepwarm_business_model.jpg',
+            'micv/images/dba_a1/form_invoice.jpg'
         ]
     },
     {
@@ -928,11 +928,11 @@ export default [
         tutor: '<h4><a target="_blank" href="https://old.nyc.gr/informatics_dept_members">Bofakos, Petros PhD </a></h4> <p>Computer Science Keele University UK</p>',
         comment: '-',
         shots: [
-            'images/dba_a2/select_group_orderby.jpg',
-            'images/dba_a2/miultiple_joins.jpg',
-            'images/dba_a2/normalization_2nd_form.jpg',
-            'images/dba_a2/the_resource_entity.jpg',
-            'images/dba_a2/normalization_to_3rd_form.jpg'
+            'micv/images/dba_a2/select_group_orderby.jpg',
+            'micv/images/dba_a2/miultiple_joins.jpg',
+            'micv/images/dba_a2/normalization_2nd_form.jpg',
+            'micv/images/dba_a2/the_resource_entity.jpg',
+            'micv/images/dba_a2/normalization_to_3rd_form.jpg'
         ]
     },
     {
@@ -947,10 +947,10 @@ export default [
         tutor: ' <h4><a target="_blank" href="https://linkedin.com/pub/ariadne-beatrice-kapetanaki/39/75b/50b">Ariadne-Beatrice, Kapetenaki PhD </h4> <p>Candidate at Centre for Food Policy</p>',
         comment: ' I would like to see more personal reflections, talking about your challenges and how you have been improved through this process. <span>Very good work </span>though.',
         shots: [
-            'images/mc_rfg/balance_sheet.jpg',
-            'images/mc_rfg/demand_and_supply_curves.jpg',
-            'images/mc_rfg/net_presennt_vallue.jpg',
-            'images/mc_rfg/variable_cost_scale_effect.jpg'
+            'micv/images/mc_rfg/balance_sheet.jpg',
+            'micv/images/mc_rfg/demand_and_supply_curves.jpg',
+            'micv/images/mc_rfg/net_presennt_vallue.jpg',
+            'micv/images/mc_rfg/variable_cost_scale_effect.jpg'
         ]
     },
     {
@@ -965,11 +965,11 @@ export default [
         tutor: '<h4><a target="_blank" href="https://linkedin.com/pub/ariadne-beatrice-kapetanaki/39/75b/50b">Ariadne-Beatrice, Kapetenaki PhD </h4> <p>Candidate at Centre for Food Policy</p>',
         comment: "<ul> <li>Introduction and Conclusion of the report:Very good their initiative to include their notes in order to show evidence about their work and effort. </li> <li>Evidence and validity of business strategy:They have a well-designed strategic plan along with specific objectives for the future of the company</li> <li><span>Analysis of Business Environment and SWOT analysis:Very thorough analysis of the business micro and macro environment including SLEPT analysis and Porter's 5 forces. All these were very good interpreted into the SWOT analysis of the company.</li><li>Use of marketing concepts Fantastic analysis of the target audiences (consumers’ audit) and a very thorough marketing mix to support the suggested strategy and business objectives. Also, very good use of pull and push strategies.</span> </ul> <li>Application and validity of accounting and finance analysis:Very precise and quite valid financial plan and a four-year sales forecast create a clear picture of the financial aspects of the company. They have not used best and worst case scenarios. Very well formed profit and loss statement, while for the break-even point analysis there was a debate during the presentation about the existence of variable costs. Nevertheless, the use of two methods of capital investment (payback method and net present value) is a plus. </li> <li>Overall quality of report:The overall structure is very good, but the disadvantage is the lack of an introduction and a conclusion. Also, it is written in good and relatively concise English. </li> </ul> <ul><p> <b>Report’s marks</b></p> <li>5% Introduction and Conclusion 20</li> <li>15% Business Strategy 80</li> <li>15% Analysis of Business Environment 85</li> <li>10% SWOT analysis 85</li> <li>20% Marketing 90</li> <li>15% Accounting 75</li> <li>15% Finance 70</li> <li>5% Quality of report (professional) 75</li> </ul> <ul><p> <b>Presentation’s marks</b></p> <li>5% Introduction 80</li> <li>10% Evidence of strategic planning 75</li> <li>15% Application of business environment analysis 80</li> <li>15% Application of SWOT and marketing 85</li> <li>15% Application of Accounting and Finance Concepts 80</li> <li>15% Reflection on working as a team, team performance and suggestions for improvement 40</li> <li>10% Quality of presentation delivery 50</li> <li>10% Quality of slides 85</li> <li>5% Conclusion and recommendation 60</li> </ul> ",
         shots: [
-            'images/mc_a2/balance_sheet.jpg',
-            'images/mc_a2/break_even_analysis.jpg',
-            'images/mc_a2/business_structure.jpg',
-            'images/mc_a2/performance_grooup_expectations.jpg',
-            'images/mc_a2/products_for_group_target.jpg'
+            'micv/images/mc_a2/balance_sheet.jpg',
+            'micv/images/mc_a2/break_even_analysis.jpg',
+            'micv/images/mc_a2/business_structure.jpg',
+            'micv/images/mc_a2/performance_grooup_expectations.jpg',
+            'micv/images/mc_a2/products_for_group_target.jpg'
         ]
     },
     {
@@ -984,9 +984,9 @@ export default [
         tutor: '<h4><a target="_blank"  href="https://facebook.com/ioannis.pandithas?fref=ts">Pandidas, John Phd</a></h4> <p>PhD, University of Liverpool, UK; </p>',
         comment: ' <span>Excellent effort. The subject was covered in well placed examples in a prefessional style with a very good report.  The examples are concise and to the point. </span> Text is well written and the  references  cover the resources needed',
         shots: [
-            'images/inse_a1/blind_sql_injection_regex.jpg',
-            'images/inse_a1/blind_sql_injection.jpg',
-            'images/inse_a1/prepared_statements.jpg'
+            'micv/images/inse_a1/blind_sql_injection_regex.jpg',
+            'micv/images/inse_a1/blind_sql_injection.jpg',
+            'micv/images/inse_a1/prepared_statements.jpg'
         ]
     },
     {
@@ -1000,7 +1000,7 @@ export default [
         score: '70',
         tutor: ' <h4><a target="_blank" href="https://linkedin.com/pub/vaggelis-nikas/51/a6b/372">Nikas, Evaggelos PhD</a></h4> <p> National Technical University of Athens </p>',
         comment: '-',
-        shots: 'images/sepm_a3/user_role_features.jpg'
+        shots: 'micv/images/sepm_a3/user_role_features.jpg'
     },
     {
         domain: 'STUDY',
@@ -1013,7 +1013,7 @@ export default [
         score: '86',
         tutor: ' <h4><a target="_blank" href="https://linkedin.com/pub/vaggelis-nikas/51/a6b/372">Nikas, Evaggelos PhD</a></h4> <p> National Technical University of Athens </p>',
         comment: '-',
-        shots: 'images/sepm_a3/portal_navigation.jpg'
+        shots: 'micv/images/sepm_a3/portal_navigation.jpg'
     },
     {
         domain: 'STUDY',
@@ -1027,9 +1027,9 @@ export default [
         tutor: ' <h4><a target="_blank" href="https://linkedin.com/pub/vaggelis-nikas/51/a6b/372">Nikas, Evaggelos PhD</a></h4> <p> National Technical University of Athens </p>',
         comment: '-',
         shots: [
-            'images/sepm_a3/portal_domains.jpg',
-            'images/sepm_a3/portal_navigation.jpg',
-            'images/sepm_a3/user_role_features.jpg'
+            'micv/images/sepm_a3/portal_domains.jpg',
+            'micv/images/sepm_a3/portal_navigation.jpg',
+            'micv/images/sepm_a3/user_role_features.jpg'
         ]
     },
     {
@@ -1044,11 +1044,11 @@ export default [
         tutor: ' <h4><a target="_blank" href="https://linkedin.com/pub/vaggelis-nikas/51/a6b/372">Nikas, Evaggelos PhD</a></h4> <p> National Technical University of Athens </p>',
         comment: '-',
         shots: [
-            'images/sepm_a4/home_page.jpg',
-            'images/sepm_a4/product_description.jpg',
-            'images/sepm_a4/forum.jpg',
-            'images/sepm_a4/administratin_backend.jpg',
-            'images/sepm_a4/polls.jpg'
+            'micv/images/sepm_a4/home_page.jpg',
+            'micv/images/sepm_a4/product_description.jpg',
+            'micv/images/sepm_a4/forum.jpg',
+            'micv/images/sepm_a4/administratin_backend.jpg',
+            'micv/images/sepm_a4/polls.jpg'
         ]
     },
     {
@@ -1068,10 +1068,10 @@ export default [
         tutor: '<h4><a target="_blank"  href="https://linkedin.com/in/gprok">Prokopakis, George MSc</a></h4> <p>US Naval Postgraduate School, CA</p>',
         comment: '<a target="_blank" href="https://linkedin.com/in/gprok">Prokopakis, George MSc</a> <p> <span>Mano, congratulations for your final assignment.  What you have implemented involves much complexity within it, and it is a rare thing for a tutor to see bachelor degree students build such developments </span>. </p>',
         shots: [
-            'images/sheduler/pic_msch.jpg',
-            'images/sheduler/pic_hours.jpg',
-            'images/sheduler/pic_restrict.jpg',
-            'images/sheduler/pic_backup.jpg'
+            'micv/images/sheduler/pic_msch.jpg',
+            'micv/images/sheduler/pic_hours.jpg',
+            'micv/images/sheduler/pic_restrict.jpg',
+            'micv/images/sheduler/pic_backup.jpg'
         ]
     },
     {
@@ -1086,10 +1086,10 @@ export default [
         tutor: '-',
         comment: '-',
         shots: [
-            'images/android/capture_video.png',
-            'images/android/capture_photo.png',
-            'images/android/avail_data_preview.png',
-            'images/android/filter_data.png'
+            'micv/images/android/capture_video.png',
+            'micv/images/android/capture_photo.png',
+            'micv/images/android/avail_data_preview.png',
+            'micv/images/android/filter_data.png'
         ]
     }
 ]

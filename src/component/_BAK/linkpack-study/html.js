@@ -11,10 +11,10 @@ export default (elem) => html`
         <li>
             <a target="_blank" class='organization' href="https://www2.gre.ac.uk/">
                 <span>University of Greenwich</span>
-                <!--            <img src="images/organizations/greenwich_thumb.jpg"/>-->
+                <!--            <img src="micv/images/organizations/greenwich_thumb.jpg"/>-->
                 <!--        </a> in Association with <a target="_blank" class="organization" href="https://www.nyc.gr">-->
                 <span>[New York College]</span>
-                <!--        <img src="images/organizations/newyorkcollege_thumb.jpg"/> -->
+                <!--        <img src="micv/images/organizations/newyorkcollege_thumb.jpg"/> -->
             </a>
         </li>
         <li>References</li>
@@ -41,7 +41,7 @@ export default (elem) => html`
         <li>
             <a target="_blank" class='organization' href="https://www.intergraphics.gr/">
                 <span>Intergraphics</span>
-                <!--            <img src="images/organizations/intergraphics_thumb.jpg"/>-->
+                <!--            <img src="micv/images/organizations/intergraphics_thumb.jpg"/>-->
                 Vocational Institute</a>
         </li>
         <li>References</li>
@@ -52,7 +52,7 @@ export default (elem) => html`
         <li>
             <a target="_blank" class='organization' href="https://www.iek-akmi.gr/">
                 <span>AKMI </span>
-                <!--            <img src="images/organizations/akmi_thumb.jpg"/>-->
+                <!--            <img src="micv/images/organizations/akmi_thumb.jpg"/>-->
                 Vocational Institute</a>
         </li>
     </ul>

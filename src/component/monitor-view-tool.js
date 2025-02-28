@@ -119,7 +119,7 @@ customElements.define('monitor-view-tool',
                                    @click="${this.chooseTool}">
                                     <h4>${val.replaceAll("_", " ").toUpperCase()}</h4>
                                     <span>
-                                        <img src="/images/tech_logos/${val}.jpg" alt="${val}"/>
+                                        <img src="/micv/images/tech_logos/${val}.jpg" alt="${val}"/>
                                     </span>
                                 </a>
                             `

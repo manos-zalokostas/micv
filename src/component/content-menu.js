@@ -47,7 +47,7 @@ customElements.define('content-menu',
                         ${(domain === DOMA.TOOL && this.activeTool
                                 && html`
                                     <aside>
-                                        <img src="/images/tech_logos/${this.activeTool}.jpg" alt="tech logo">
+                                        <img src="/micv/images/tech_logos/${this.activeTool}.jpg" alt="tech logo">
                                         <small>${this.activeTool.replaceAll("_", " ")}</small>
                                     </aside>`
                         ) || ''}

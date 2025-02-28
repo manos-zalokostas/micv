@@ -41,7 +41,7 @@ customElements.define('badge-tool',
                         .map(
                                 val => html`
                                     <img class="${_style()}"
-                                         src="/images/tech_logos/${val}.jpg" alt="icon ${val}"/>
+                                         src="/micv/images/tech_logos/${val}.jpg" alt="icon ${val}"/>
                                 `
                         )}
             </aside>

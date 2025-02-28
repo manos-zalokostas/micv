@@ -43,7 +43,7 @@ customElements.define('project-tool',
         }
 
         render = () => {
-            const PATHIMG = "images/tech_logos";
+            const PATHIMG = "micv/images/tech_logos";
             const {entries} = this;
 
             return html`

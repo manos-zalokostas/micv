@@ -4,18 +4,18 @@ import string from 'vite-plugin-string'; // This handles importing SCSS files as
 export default defineConfig({
     base: "/micv",
     server: {
-        open: true,  // Automatically open browser on server start
-        host: true,  // Allow external access for testing
-        port: 3000,  // Set the dev server port
+        // open: true,  // Automatically open browser on server start
+        // host: true,  // Allow external access for testing
+        // port: 3000,  // Set the dev server port
         allowedHosts: ["appjoi.com"]
     },
     build: {
         target: 'esnext',  // Use modern ES syntax for the build
-        outDir: 'dist',
+        // outDir: 'dist',
     },
     plugins: [
         string({
-            include: '**/*.scss',  // Include all .scss files to be treated as raw strings
+            // include: '**/*.scss',  // Include all .scss files to be treated as raw strings
         }),
     ],
     css: {

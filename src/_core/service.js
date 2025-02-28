@@ -303,7 +303,7 @@ function __GET_REFERENCE() {
     const reference = {
         name: name.substring(0, name.indexOf('</h4>') + 5),
         label: name.substring(name.indexOf('<p>'), name.indexOf('</p>') + 4),
-        img: (name.includes('linkedin') > -1) ? 'images/tech_logos/linkedin_user.jpg' : 'images/tech_logos/facebook_user.jpg',
+        img: (name.includes('linkedin') > -1) ? 'micv/images/tech_logos/linkedin_user.jpg' : 'micv/images/tech_logos/facebook_user.jpg',
         item: currReference[3],
         data
     };
