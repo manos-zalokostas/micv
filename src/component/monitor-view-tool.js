@@ -96,7 +96,7 @@ customElements.define('monitor-view-tool',
         chooseTool(evt) {
 
             evt.preventDefault();
-debugger
+
             this.dispatchEvent(
                 new CustomEvent(EVT.TOOL_SELECT, {
                         detail: {tool: evt.target.id},
@@ -145,7 +145,7 @@ debugger
                         font-family: var(--font);
                         color: var(--color-tool);
                         padding: 6px;
-                        border-bottom: 2px solid black;
+                        border-bottom: 1px solid #777;
                         width: 20%;
 
                         &:hover {
@@ -164,14 +164,13 @@ debugger
                             height: 80px;
                             padding: 4px 8px;
                             border-radius: 8px;
-                            border: 2px solid;
+                            border: 2px solid #ddd;
                             background-color: white;
 
                             img {
                                 max-width: 72px;
                                 max-height: 72px;
                                 pointer-events: none;
-                                //padding: 4px 8px;
                                 border-radius: 4px;
                             }
                         }

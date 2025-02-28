@@ -30,15 +30,15 @@ customElements.define('project-tool',
             // Child Component (global-menu)
             this.dispatchEvent(new CustomEvent(EVT.TOOL_CHANGE, {
                 detail: {tool},
-                bubbles: true,        
-                composed: true        
+                bubbles: true,
+                composed: true
             }));
 
             this.dispatchEvent(
                 new CustomEvent(EVT.CONTENT_TRANSIT, {
                     detail: {transit: false},
-                    composed: true,        
-                    bubbles: true,        
+                    composed: true,
+                    bubbles: true,
                 }))
         }
 
@@ -47,7 +47,7 @@ customElements.define('project-tool',
             const {entries} = this;
 
             return html`
-                <div id="tools">
+                <nav >
                     ${Array.isArray(entries)
                             ? entries.map(
                                     (val) => html`
@@ -62,17 +62,26 @@ customElements.define('project-tool',
                                     `
                             )
                             : ''}
-                </div>
+                </nav>
             `;
         }
 
         static styles = css`
-            #tools {
+            nav {
+                display: flex;
+                justify-content: flex-end;
+                gap: 2px;
+
                 a {
-                    text-decoration: none;
+                    border-radius: 2px;
+                    background-color: white;
+                    padding: 2px 4px;
+                    height: 32px;
+                    width: 32px;
 
                     img {
-                        height: 36px;
+                        width: 98%;
+                        height: 98%;
                     }
                 }
             }

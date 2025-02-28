@@ -85,7 +85,9 @@ customElements.define('joi-timeline',
                     padding: 10px;
 
                     fieldset {
+                        color: #ddd;
                         text-align: right;
+                        font-family: var(--font);
                         border: none;
                         margin: 10px 0;
                     }

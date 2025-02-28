@@ -5,16 +5,12 @@ export const theme = css`
     :host {
         --font: sans-serif;
 
-        //--color-tool: goldenrod;
-        //--color-work: indianred;
-        //--color-study: mediumseagreen;
-        //--color-default: cornflowerblue;;
-
         --color-tool: orange;
         --color-work: tomato;
         --color-study: mediumseagreen;
-        --color-generic: dodgerblue;
+        --color-generic: lightskyblue;
         --color-default: #888;
+        --color-top: white;
 
         //color: steelblue;
 
@@ -50,13 +46,12 @@ export const theme = css`
         justify-content: center;
         gap: 10px;
         color: var(--color-default);
-        font-size: 1em;
+        font-size: 16px;
         font-weight: bold;
         outline: none;
         border-radius: 4px;
         border: none;
         background-color: transparent;
-        //width: 150px;
         cursor: pointer;
         padding: 4px 16px;
 
@@ -76,7 +71,7 @@ export const theme = css`
         }
 
         &.active {
-            border: 2px solid var(--color-default);
+            border: 1px solid var(--color-default);
         }
 
         &.work {
@@ -115,6 +110,16 @@ export const theme = css`
 
             &.active {
                 color: var(--color-generic);
+                //background-color: var(--color-tool);
+            }
+        }
+
+        &.top {
+            //color: white;
+            border-color: var(--color-top);
+
+            &.active {
+                color: var(--color-top);
                 //background-color: var(--color-tool);
             }
         }

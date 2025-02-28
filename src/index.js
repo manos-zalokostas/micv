@@ -111,6 +111,7 @@ customElements.define('site-index',
                 width: 100%;
                 height: 100%;
                 overflow: hidden;
+                background: linear-gradient(180deg, black, transparent);
 
                 #wrapper {
                     position: absolute;

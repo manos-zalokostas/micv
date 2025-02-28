@@ -49,7 +49,6 @@ customElements.define('content-detail',
                     <sup class="pill ${this.asset.domain.toLocaleLowerCase()}">${this.asset.domain}</sup> 
                 </h3>
 
-<!--                <badge-category entry="${this.asset.category}"></badge-category>-->
 
                 <project-tool .entries="${this.asset.tools}"></project-tool>
 
@@ -106,6 +105,10 @@ customElements.define('content-detail',
                     padding: 25px;
                     height: calc(100vh - 300px);
                     overflow: auto;
+                    
+                    > * {
+                        flex-basis: 50%;
+                    }
                 }
 
                 footer {

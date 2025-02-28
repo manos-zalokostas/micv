@@ -66,10 +66,14 @@ customElements.define('badge-tool',
                 }
 
                 img {
-                    width: 200px;
+                    width: 175px;
+                    //height: 150px;
+                    padding: 12px;
+                    background-color: white;
+                    border-radius: 10px;
 
                     &.mi-scale-min {
-                        transform: scale(1.1);
+                        transform: scale(1.3);
                     }
 
                     &.mi-scale-mid {
@@ -77,7 +81,7 @@ customElements.define('badge-tool',
                     }
 
                     &.mi-scale-max {
-                        transform: scale(.9);
+                        transform: scale(.8);
                     }
 
                 }

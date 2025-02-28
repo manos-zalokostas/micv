@@ -110,7 +110,7 @@ customElements.define('image-slider',
                         height: 200px;
                         margin: 15px;
                         background: white;
-                        padding: 15px;
+                        padding: 10px;
                         border: 1px solid #eee;
                         transition: all .5s;
                     }

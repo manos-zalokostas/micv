@@ -69,7 +69,7 @@ customElements.define('global-search',
                      @click="${() => this.visible = false}">
 
 
-                <fieldset class="active">
+                <fieldset class="top active">
                     <span class="buttonico">
                         ${unsafeHTML(SVGI.SERC({color: "#ccc"}))}
                     </span>

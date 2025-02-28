@@ -33,7 +33,7 @@ customElements.define('global-menu',
                 <div>
                     ${assets.map(([val, code, svg], i) => html`
                         <button title="${val}"
-                                class="${this.activeElem === code ? 'active' : ''}"
+                                class="top ${this.activeElem === code ? 'active' : ''}"
                                 @click="${(evt) => {
                                     this.action(code);
                                     this.dispatchEvent(

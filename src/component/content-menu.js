@@ -78,8 +78,11 @@ customElements.define('content-menu',
                             border: none;
 
                             img {
+                                padding: 2px;
                                 width: 20px;
+                                height: 20px;
                                 margin: 0 5px;
+                                background-color: white;
                             }
 
                             small {

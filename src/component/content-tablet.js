@@ -126,7 +126,7 @@ customElements.define('content-tablet',
                     display: flex;
                     flex-wrap: wrap;
                     justify-content: center;
-                    align-items: center;
+                    align-items: flex-start;
                     gap: 10px;
                     position: relative;
                     z-index: 5;
