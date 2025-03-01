@@ -18,14 +18,14 @@ export default (elem) => html`
         </li>
         <li>Contact</li>
         <li><a href="https://www.facebook.com/manoszalokostas" target="_blank">
-            <!--                <img src="micv/images/organizations/facebook.jpg"/>-->
+            <!--                <img src="/micv/images/organizations/facebook.jpg"/>-->
             Facebook</a></li>
         <li><a href="https://plus.google.com/116413132089341421459/posts" target="_blank">
-            <!--                <img src="micv/images/organizations/google.jpg"/>-->
+            <!--                <img src="/micv/images/organizations/google.jpg"/>-->
             Google+</a></li>
         <li><a href="https://www.linkedin.com/profile/view?id=115879291&trk=nav_responsive_tab_profile"
                target="_blank">
-            <!--                       <img src="micv/images/organizations/linkedin.jpg"/>-->
+            <!--                       <img src="/micv/images/organizations/linkedin.jpg"/>-->
             Linkedin</a></li>
     </ul>
 `;

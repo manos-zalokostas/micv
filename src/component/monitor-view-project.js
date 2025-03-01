@@ -115,7 +115,7 @@ customElements.define('monitor-view-project',
                                 ? tools.map(
                                         (val) => html`
                                             <a href="${val}">
-                                                <img src="micv/images/tech_logos/${val}.jpg" alt="${val}"/>
+                                                <img src="/micv/images/tech_logos/${val}.jpg" alt="${val}"/>
                                             </a>
                                         `
                                 )

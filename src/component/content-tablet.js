@@ -78,7 +78,7 @@ customElements.define('content-tablet',
 
         _viewProject = () => html`
             <nav class="mi-tablet"
-                 style="background-image: url('micv/images/tech_logos/${this.tool}.jpg')">
+                 style="background-image: url('/micv/images/tech_logos/${this.tool}.jpg')">
                 ${this.assets.map((o) => html`
                     <a href="#" id="${o.id}" class="${o.domain.toLowerCase()}"
                        style="background-image: url('${o.shots[0]}')"
@@ -102,7 +102,7 @@ customElements.define('content-tablet',
                         val => val
                                 && html`
                                     <a id="${val}" class="tool mi-tool"
-                                       style="background-image: url('micv/images/tech_logos/${val}.jpg')"
+                                       style="background-image: url('/micv/images/tech_logos/${val}.jpg')"
                                        @click="${this.chooseTool}">
                                         <h4>${val.replaceAll("_", " ").toUpperCase()}</h4>
                                         <span>

@@ -11,7 +11,7 @@ export default (elem) => html`
         <li>
             <a target="_blank" class='organization' href="https://www.sanofi.gr/l/gr/el/index.jsp">
                 <span>Sanofi Aventis</span>
-                <!--<img  src="micv/images/organizations/sanofiaventis_thumb.jpg"/> Pharmaceutical Company-->
+                <!--<img  src="/micv/images/organizations/sanofiaventis_thumb.jpg"/> Pharmaceutical Company-->
             </a>
         </li>
 

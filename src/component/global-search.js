@@ -95,7 +95,7 @@ customElements.define('global-search',
                                 <a data-key="${name}" data-type="tool"
                                    @click="${this.chooseTool}">
                                     <em>${name.replaceAll("_", " ")}<sup class="pill tool">tool</sup> </em>
-                                    <img src="micv/images/tech_logos/${name}.jpg" alt="logo ${name}"/>
+                                    <img src="/micv/images/tech_logos/${name}.jpg" alt="logo ${name}"/>
                                 </a>
                             `)}
                 </nav>
