@@ -1,5 +1,10 @@
 export default async () => {
 
+
+
+    return;
+
+
     if (!'serviceWorker' in navigator) return;
     let sw;
 
