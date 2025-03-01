@@ -1,6 +1,31 @@
 import {html, css, LitElement} from 'lit';
 import {_DEV, EVT, PAGE} from "./env";
 
+import "/src/component/badge-category.js";
+import "/src/component/badge-tool.js";
+import "/src/component/content-detail.js";
+import "/src/component/content-menu.js";
+import "/src/component/content-tablet.js";
+import "/src/component/global-menu.js";
+import "/src/component/global-search.js";
+import "/src/component/image-slider.js";
+import "/src/component/intro-menu.js";
+import "/src/component/monitor.js";
+import "/src/component/monitor-view-project.js";
+import "/src/component/monitor-view-reference.js";
+import "/src/component/monitor-view-tool.js";
+import "/src/component/project-tool.js";
+import "/src/component/quote-intro.js";
+import "/src/component/timeline.js";
+import "/src/component/timeline_asset.js";
+
+import "/src/route/page-content.js";
+import "/src/route/page-introduction.js";
+
+import SWRegister from "/swRegister.js";
+
+SWRegister();
+
 
 customElements.define('site-index',
 
