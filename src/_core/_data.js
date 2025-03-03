@@ -122,16 +122,16 @@ export default [
         comment: '-',
         links: '',
         shots: [
-            '/micv/images/electro/elec-dam-handl.png',
-            '/micv/images/electro/elec-dam-multi.png',
-            '/micv/images/electro/elec-land.png',
-            '/micv/images/electro/elec-param.png',
-            '/micv/images/electro/elec-sche-freon.png',
-            '/micv/images/electro/elec-serv-new.png',
-            '/micv/images/electro/elec-unit-filter.png',
-            '/micv/images/electro/elec-unit-qrcode.png',
-            '/micv/images/electro/elec-unit-search.png',
-            '/micv/images/electro/elec-unit-status.png'
+            '/micv/images/elec/elec-dam-handl.png',
+            '/micv/images/elec/elec-dam-multi.png',
+            '/micv/images/elec/elec-land.png',
+            '/micv/images/elec/elec-param.png',
+            '/micv/images/elec/elec-sche-freon.png',
+            '/micv/images/elec/elec-serv-new.png',
+            '/micv/images/elec/elec-unit-filter.png',
+            '/micv/images/elec/elec-unit-qrcode.png',
+            '/micv/images/elec/elec-unit-search.png',
+            '/micv/images/elec/elec-unit-status.png'
         ]
     },
     {
