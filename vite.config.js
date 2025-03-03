@@ -13,7 +13,7 @@ export default defineConfig({
     },
     build: {
         target: 'esnext',  // Use modern ES syntax for the build
-        // outDir: 'dist',
+        outDir: 'dist',
     },
     plugins: [
         string({

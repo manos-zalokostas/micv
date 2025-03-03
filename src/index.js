@@ -22,8 +22,7 @@ import "/src/component/timeline_asset.js";
 import "/src/route/page-content.js";
 import "/src/route/page-introduction.js";
 
-import SWRegister from "/swRegister.js";
-
+import SWRegister from "/micv-sw-register";
 SWRegister();
 
 

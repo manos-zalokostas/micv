@@ -1,17 +1,15 @@
 export default async () => {
 
 
-
-    return;
-
-
     if (!'serviceWorker' in navigator) return;
     let sw;
 
     try {
 
+        // navigator.serviceWorker.register('/app2/sw-app2.js', { scope: '/app2/' })
 
-        const reg = await navigator.serviceWorker.register("sw.js");
+        const APP_SCOPE = "/micv";
+        const reg = await navigator.serviceWorker.register("/micv-sw.js", {scope: APP_SCOPE});
         console.log(' -- SW_REGISTRATION-INIT', reg);
 
 
@@ -49,11 +47,14 @@ export default async () => {
 
         navigator.serviceWorker.addEventListener('message', (evt) => {
             let {clientId, message} = evt.data;
-            console.log(" -- SW_REGISTRATION__NAVIGATOR__EVENT:: -- 4. ##SG_REG CAPTURED @SW MESSAGE  => ", {clientId, message})
+            console.log(" -- SW_REGISTRATION__NAVIGATOR__EVENT:: -- 4. ##SG_REG CAPTURED @SW MESSAGE  => ", {
+                clientId,
+                message
+            })
         })
 
 
-        if(navigator.serviceWorker.controller){
+        if (navigator.serviceWorker.controller) {
             navigator.serviceWorker.controller.postMessage(" -- 1. #SW_REG POSTING INIT DATA")
         }
 
