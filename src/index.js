@@ -22,8 +22,7 @@ import "/src/component/timeline_asset.js";
 import "/src/route/page-content.js";
 import "/src/route/page-introduction.js";
 
-import SWRegister from "/src/micv-sw-register";
-SWRegister();
+import  "/src/micv-sw-register";
 
 
 customElements.define('site-index',
