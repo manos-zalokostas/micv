@@ -32,7 +32,7 @@ const ALL_CACHE_KEYS = [
 self.addEventListener("install", (evt) => {
     try {
 
-        // console.log(" -- SW-EVENT-LISTENER:: INSTALL", evt);
+        console.log(" -- SW-EVENT-LISTENER:: INSTALL", evt);
         self.skipWaiting();
         const preCache = async () => {
             const cacheAsset = await caches.open(FILES_STATIC_KEY);
@@ -53,7 +53,7 @@ self.addEventListener("install", (evt) => {
 self.addEventListener("activate", (evt) => {
     try {
 
-        // console.log(" -- SW-EVENT-LISTENER:: ACTIVATE", evt)
+        console.log(" -- SW-EVENT-LISTENER:: ACTIVATE", evt)
         self.clients.claim();
         const clearDeprecatedCaches = async () => {
 
@@ -79,7 +79,7 @@ self.addEventListener("fetch", (evt) => {
     try {
 
         if (!evt.request.url.startsWith("http")) return;
-        // console.log(" -- SW-EVENT:: --FETCH --REQUEST-CAPTURED", evt)
+        console.log(" -- SW-EVENT:: --FETCH --REQUEST-CAPTURED", evt)
 
         const url = new URL(evt.request.url),
             pathCurr = url.pathname,
