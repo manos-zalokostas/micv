@@ -82,8 +82,9 @@ self.addEventListener("activate", (evt) => {
 self.addEventListener("fetch", (evt) => {
     try {
 
+        console.log(" -- SW-EVENT:: --FETCH --REQUEST", evt.request)
+
         if (!evt.request.url.startsWith("http")) return;
-        console.log(" -- SW-EVENT:: --FETCH --REQUEST-CAPTURED", evt)
 
         const url = new URL(evt.request.url),
             pathCurr = url.pathname,
