@@ -1,6 +1,12 @@
 "use strict";
 
-const CACHE_V = "B";
+const CACHE_V = "C";
+
+
+
+
+const HOST_PATH = "/micv/"
+
 const IMAGES_KEY = 'IMAGE_V' + CACHE_V
 const FILES_STATIC_KEY = 'FILE_V1' + CACHE_V
 const FILES_STATIC = [
@@ -178,8 +184,8 @@ const resolveCacheKey = (req) => {
 
         const url = new URL(req.url);
         const PATH = {
-            IMG: '/images/',
-            ICON: '/icons/'
+            IMG: HOST_PATH + 'images/',
+            ICON: HOST_PATH + 'icons/'
         }
 
         console.log(" --" + url.pathname)
@@ -190,41 +196,3 @@ const resolveCacheKey = (req) => {
         console.log(' -- XXXXXXXXXXXXXXX', {error})
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
