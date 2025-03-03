@@ -3,8 +3,6 @@
 const CACHE_V = "C";
 
 
-
-
 const HOST_PATH = "/micv/"
 
 const IMAGES_KEY = 'IMAGE_V' + CACHE_V
@@ -45,7 +43,7 @@ self.addEventListener("install", (evt) => {
             return cacheAsset.addAll(FILES_STATIC);
         }
 
-        evt.waitUntil(preCache());
+        if (FILES_STATIC[0]) evt.waitUntil(preCache());
 
     } catch (error) {
         console.log(' -- XXXXXXXXXXXXXXX', {error})
@@ -94,7 +92,7 @@ self.addEventListener("fetch", (evt) => {
         /*
         ALWAYS RETURN A FRESH COPY OF CERTAIN FILES ( i.e 'SW.JS' FILE)
          */
-        if (['sw.js', 'app.webmanifest'].includes(fileCurr)) return evt.respondWith(fetch(url));
+        if (['micv-sw.js', 'app.webmanifest'].includes(fileCurr)) return evt.respondWith(fetch(url));
 
 
         /*
@@ -130,7 +128,7 @@ self.addEventListener("message", (evt) => {
 const SWStrategyCacheFirst = async (req) => {
     try {
 
-        return await caches.match(req) || SWStrategyNetworkFirst(req)
+        return await (caches.match(req) || SWStrategyNetworkFirst(req))
 
     } catch (error) {
         console.log(' -- STRATEGO::CACHE-FIRST', {error})
@@ -149,9 +147,7 @@ const SWStrategyNetworkFirst = async (req) => {
 
         const resp = await fetch(req);
 
-        if (!resp || resp.status !== 200 || resp.type !== "basic") {
-            return resp;
-        }
+        if (!resp || resp.status !== 200 || resp.type !== "basic") return resp;
 
         const respClone = resp.clone();
 
