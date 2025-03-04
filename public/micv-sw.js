@@ -1,6 +1,9 @@
 "use strict";
 
 const CACHE_V = 1.1;
+const HOST_PATH = "/micv/"
+const FILE_SW = 'micv-sw.js'
+const FILE_MANIFEST = 'app.webmanifest'
 const IMAGES_KEY = 'IMAGE_V' + CACHE_V
 const FILES_STATIC_KEY = 'FILE_V1' + CACHE_V
 const FILES_STATIC = [
@@ -20,7 +23,7 @@ const FILES_STATIC = [
     // "core/visual.mjs",
 ];
 
-const ALL_CACHE_KEYS = [
+const LATEST_VERSION_CACHE_KEYS = [
     FILES_STATIC_KEY,
     IMAGES_KEY,
 ]
@@ -60,7 +63,7 @@ self.addEventListener("activate", (evt) => {
             const cacheKeysCurr = await caches.keys();
 
             cacheKeysCurr.forEach(
-                async key => (!ALL_CACHE_KEYS.includes(key) && await caches.delete(key))
+                async key => (!LATEST_VERSION_CACHE_KEYS.includes(key) && await caches.delete(key))
             )
         }
 
@@ -89,14 +92,14 @@ self.addEventListener("fetch", (evt) => {
         /*
         ALWAYS RETURN A FRESH COPY OF CERTAIN FILES ( i.e 'SW.JS' FILE)
          */
-        if (['sw.js', 'app.webmanifest'].includes(fileCurr)) return evt.respondWith(fetch(url));
+        if ([FILE_SW, FILE_MANIFEST].includes(fileCurr)) return evt.respondWith(fetch(url));
 
 
         /*
         @TODO:: ENABLE 'CACHE-FIRST' STRATEGO ON PUBLISH
          */
         // return evt.respondWith(SWStrategyCacheFirst(evt.request))
-        return evt.respondWith(SWStrategyNetworkFirst(evt.request))
+        return evt.respondWith(SWStrategyCacheFirst(evt.request))
 
         /*
         NETWORK-FIRST
@@ -126,7 +129,7 @@ const SWStrategyCacheFirst = async (req) => {
     try {
 
         // return await caches.match(req) || SWStrategyNetworkFirst(req)
-        return await caches.match(req) || SWStrategyCacheFirst(req)
+        return await caches.match(req) || SWStrategyNetworkFirst(req)
 
     } catch (error) {
         console.log(' -- STRATEGO::CACHE-FIRST', {error})
@@ -176,8 +179,8 @@ const resolveCacheKey = (req) => {
 
         const url = new URL(req.url);
         const PATH = {
-            IMG: '/images/',
-            ICON: '/icons/'
+            IMG: HOST_PATH + 'images/',
+            ICON: HOST_PATH + 'icons/'
         }
 
         console.log(" --" + url.pathname)
