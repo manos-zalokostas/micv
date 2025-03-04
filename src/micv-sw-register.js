@@ -1,12 +1,14 @@
 export default async () => {
 
     if (!'serviceWorker' in navigator) return;
+    const HOST_PATH = "/micv/"
+    const FILE_SW = 'micv-sw.js'
     let sw;
 
     try {
 
 
-        const reg = await navigator.serviceWorker.register("micv-sw.js");
+        const reg = await navigator.serviceWorker.register(HOST_PATH + FILE_SW);
         console.log(' -- SW_REGISTRATION-INIT', reg);
 
 
