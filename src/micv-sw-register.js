@@ -8,7 +8,7 @@ export default async () => {
     try {
 
 
-        const reg = await navigator.serviceWorker.register(HOST_PATH + FILE_SW);
+        const reg = await navigator.serviceWorker.register(HOST_PATH + FILE_SW, {scope: HOST_PATH});
         console.log(' -- SW_REGISTRATION-INIT', reg);
 
 
