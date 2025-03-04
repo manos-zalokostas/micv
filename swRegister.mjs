@@ -6,7 +6,7 @@ export default async () => {
     try {
 
 
-        const reg = await navigator.serviceWorker.register("micv-sw.js");
+        const reg = await navigator.serviceWorker.register("sw.js");
         console.log(' -- SW_REGISTRATION-INIT', reg);
 
 

@@ -79,7 +79,6 @@ self.addEventListener("fetch", (evt) => {
     try {
 
         // console.log(" -- SW-EVENT:: --FETCH --REQUEST-CAPTURED", evt)
-        if (!(evt.request.url.startsWith("http"))) return;
 
         const url = new URL(evt.request.url),
             pathCurr = url.pathname,
@@ -125,8 +124,7 @@ self.addEventListener("message", (evt) => {
 const SWStrategyCacheFirst = async (req) => {
     try {
 
-        // return await caches.match(req) || SWStrategyNetworkFirst(req)
-        return await caches.match(req) || SWStrategyCacheFirst(req)
+        return await caches.match(req) || SWStrategyNetworkFirst(req)
 
     } catch (error) {
         console.log(' -- STRATEGO::CACHE-FIRST', {error})
@@ -188,3 +186,41 @@ const resolveCacheKey = (req) => {
         console.log(' -- XXXXXXXXXXXXXXX', {error})
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
