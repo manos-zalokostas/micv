@@ -96,8 +96,6 @@ self.addEventListener("fetch", (evt) => {
         if (evt.request.method !== "GET") return;
 
 
-
-
         // console.log(" -- SW-EVENT:: --FETCH --REQUEST-CAPTURED", evt)
 
         const url = new URL(evt.request.url),
@@ -163,8 +161,9 @@ const SWStrategyNetworkFirst = async (req) => {
     try {
 
         const resp = await fetch(req);
-        const respClone = resp.clone();
+        if (!(resp && resp.type === "basic" && resp.ok)) return resp;
 
+        const respClone = resp.clone();
 
         const cacheKeyCurr = resolveCacheKey(req);
         const cacheCurr = await caches.open(cacheKeyCurr);
