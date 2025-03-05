@@ -1,6 +1,6 @@
 "use strict";
 
-const CACHE_V = 1.7;
+const CACHE_V = 1.8;
 const HOST_PATH = "/micv/"
 const FILE_SW = 'micv-sw.js'
 const FILE_MANIFEST = 'app.webmanifest'
@@ -81,19 +81,19 @@ self.addEventListener("activate", (evt) => {
 self.addEventListener("fetch", (evt) => {
     try {
 
-        if (!(evt.request.url.startsWith("http"))) return;
+        if (!(evt.request.url.startsWith("http"))) return evt.respondWith(fetch(evt.request.url));
 
         /*
         LET 'SW' HANDLE ONLY REQUESTS THAT REFER TO THE APP SUBPATH
         ** THIS IS TEMPORARY AS THERE MIGHT OCCUR SCENARIOS THAT
         ** EXTERNAL RESOURCES NEED CACHED ALSO
          */
-        if (!(evt.request.url.includes(HOST_PATH))) return;
+        if (!(evt.request.url.includes(HOST_PATH))) return evt.respondWith(fetch(evt.request.url));
 
         /*
         LET 'SW' HANDLE ONLY 'GET' REQUESTS
          */
-        if (evt.request.method !== "GET") return;
+        if (evt.request.method !== "GET") return evt.respondWith(fetch(evt.request.url));
 
 
         // console.log(" -- SW-EVENT:: --FETCH --REQUEST-CAPTURED", evt)
