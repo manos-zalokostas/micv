@@ -98,7 +98,7 @@ export const assets = [
     ],
     [
         ' 2014 ',
-        ' Short passings from "DeltaCosmos Security" and "CCS Education" as Fullstack PHP and Frontend Javascript Develper respectively ',
+        ' Short time employments from "DeltaCosmos Security" and "CCS Education" as Fullstack PHP and Frontend Javascript Develper respectively ',
         "-",
         [
             "WK11",
@@ -126,7 +126,7 @@ export const assets = [
     ],
     [
         ' 2011 ',
-        ' I was released from Sanofi aventis after 11 years employment. ',
+        ' Released from Sanofi aventis pharmaceutical after 11 years employment. ',
         ' The recession that stroke the country has led company to unleash almost half of the crew in near three years time. ',
         [
             "WK01",
@@ -139,7 +139,8 @@ export const assets = [
     ],
     [
         ' 2009 ',
-        " I have decided to pursue a bachelor diploma on the domain of web technology. Nevertheless, while still occupied by 'sanofi aventis', has modified my decision in a way to select a title that would add value on the company as well. With those in mind Enrolled 'Internet Engineering and Web Management' class from University of Greenwich associated with 'New York' College. ",
+        " Enrolled for a bachelor diploma on the domain of 'Internet Engineering and Web Management'",
+        " While still occupied by 'Sanofi Aventis', my decision was infuenced in a way to pursue a diploma that could potentially add value to my evolution within the company. With this in mind I signed for training that offered 'Business Management' courses as well, from University of Greenwich associated with 'New York' College. ",
         [
             "WK07",
         ],
@@ -159,7 +160,7 @@ export const assets = [
     ],
     [
         ' 2005 ',
-        " , while feeling the need to integrate a 'Graphic Designer' certificate that would ground further my qualifications in the area, I have enrolled a full-year class at 'AKMI' Vocational Institute labeled 'Graphics Designer for Printable Mediums and Web'. ",
+        " Enrolled a full-year class at 'AKMI' Vocational Institute labeled 'Graphics Designer for Printable Mediums and Web'. ",
         " There I had my original experience with web concepts, namely site design and development, since we gained practicing skills on Macromedia's web tools such as Dreamweaver & Flash. At the same time in 2005 , while still occupied by 'Aventis Pharma' Pharmaceutical, there was a 'sudden merger announced by our company with 'Sanofi' Pharmaceutical. The merger was of a great value since the new-constitute company would climb high above previous competitive levels, gaining huge market shares would now strive c ompeting top ranking pharmaceuticals world-wide. "
     ],
     [
@@ -169,7 +170,7 @@ export const assets = [
     ],
     [
         ' 2001 ',
-        ' Employed by ‘aventis pharma’ world-wide pharmaceutical enterprise ',
+        ' Employed by ‘Aventis Pharma’ world-wide pharmaceutical enterprise ',
         ' , maintaining headquarters to France and establised subsidiaries word-wide. '
     ],
     [

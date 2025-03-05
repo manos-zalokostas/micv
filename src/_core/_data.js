@@ -94,7 +94,11 @@ export const T = {
     XPAT: 'xpath',
     XSLT: 'xslt',
     YIIM: 'yii_mvc',
-    ZEND: 'zend'
+    ZEND: 'zend',
+    LIT3: 'lit3',
+    GCP: 'gcp',
+    WEBC: 'web_components',
+    SERW: 'service_worker',
 }
 
 // let  t = Object.entries(T).map(a => a.reverse());
@@ -103,18 +107,76 @@ export const T = {
 export default [
     {
         domain: 'WORK',
+        id: 'WK26',
+        section: 'Resume Showcase',
+        category: 'Design and Development',
+        title: 'Portfolio Upgrade - 2025',
+        tools: [
+            T.LIT3,
+            T.WEBC,
+            T.SERW,
+            T.GCP,
+            T.JSCR,
+            T.VITE,
+            T.ES6,
+            T.CSS3,
+            T.SCSS,
+            T.NODE,
+            T.GIT,
+            T.RESP,
+            T.NGIN,
+            T.WEBA,
+        ],
+        description: `<p>scope of the project</p>
+            <ul>
+                <li> refactor old implementation to current standards </li>
+                <li> implement web components spa application </li>
+                <li> implement web components application design </li>
+                <li> sw | service worker integration for static asset caching</li>
+                <li> responsive web design for better UX</li>
+                <li> installed on Google Cloud Platform</li>
+                <li> published online / nginx server w/ reverse proxy</li>
+                <li> https renewable ssl certificates</li>
+            </ul>'`,
+        score: '-',
+        tutor: '-',
+        comment: '-',
+        links: '',
+        shots: [
+            'micv/images/micv24/micv24-work.png',
+            'micv/images/micv24/micv24-land.png',
+            'micv/images/micv24/micv24-proj.png',
+            'micv/images/micv24/micv24-search.png',
+            'micv/images/micv24/micv24-study.png',
+            'micv/images/micv24/micv24-tool.png',
+            'micv/images/micv24/micv24-php.png',
+        ]
+    },
+
+    {
+        domain: 'WORK',
         id: 'WK25',
         section: 'Facilities Monitoring',
         category: 'Design and Development',
         title: 'Electro  - Facilities Management',
         tools: [
-            T.WEBA, T.JSCR, T.SVEL,
-            T.VITE, T.ES6, T.CSS3,
-            T.SCSS, T.ANAL, T.REQU,
-            T.NODE, T.GIT, T.REST,
-            T.DOCK, T.DCOM, T.KEYC,
-            T.SQLS, T.PROM, T.GRAF,
-            T.MONI, T.PRIS, T.RABB
+            T.WEBA,
+            T.SVEL,
+            T.SERW,
+            T.JSCR,
+            T.GCP,
+            T.NGIN,
+            T.PRIS,
+            T.VITE,
+            T.ES6,
+            T.CSS3,
+            T.SCSS,
+            T.ANAL,
+            T.REQU,
+            T.NODE,
+            T.GIT,
+            T.REST,
+            T.MYSQ,
         ],
         description: '<p>scope of the project</p><ul><li> analyze business processes, gather and structure their data relations</li><li> responsive layouts for desktop / mobile viewing</li><li> users can register numerous companies that they maintain</li><li> provide numerous searching / filtering features that apply special meaning to units-status / -damages /-services /-freon installments</li><li> crud operations on units, units status and scheduling</li><li> data importing / exporting w/ .xsl files + .xls templates for consistent usage of the services</li><li> units actions scheduling and historical search</li><li> register multiple entries w/ single commands / .xls imports</li><li> application parameters configuration + create new properties etc</li><li> user profile + authentication / authorization integrations</li><li> qrcodes that when scanned will direct users to unit status page where all unit details are presentable</li><li> exportable qrcodes for printing in high resolution + company log on top</li><li> multiple language support</li><li> installed on google cloud platform</li><li> refreshable app access while using the app</li><li> user authentication - resources access authorization</li><li> sw | service worker integration for better app performance and static asset caching</li><li> published online / nginx server w/ reverse proxy</li><li> https renewable ssl certificates</li></ul>\n',
         score: '-',
@@ -141,13 +203,19 @@ export default [
         category: 'Design and Development',
         title: 'Marine Service Parts',
         tools: [
-            T.WEBA, T.JSCR, T.SVEL,
-            T.VITE, T.ES6, T.CSS3,
-            T.SCSS, T.ANAL, T.REQU,
-            T.NODE, T.GIT, T.REST,
-            T.DOCK, T.DCOM, T.KEYC,
-            T.SQLS, T.PROM, T.GRAF,
-            T.MONI, T.PRIS, T.RABB
+            T.WEBA,
+            T.JSCR,
+            T.NEXT,
+            T.ES6,
+            T.CSS3,
+            T.SCSS,
+            T.ANAL,
+            T.REQU,
+            T.NODE,
+            T.GIT,
+            T.REST,
+            T.SEQU,
+            T.MYSQ,
         ],
         description: '<ul><li> internal housekeeping + eshop services for marine service parts</li><li> analyze business processes, gather and structure their data relations</li><li> responsive layouts for desktop / mobile viewing</li><li> integrate payments online / offline w/ paypal and on-delivery respectively</li><li> create carts and bookmark features</li><li> send emails after online / offline purchases commited</li><li> provide several filters / search areas for products indexing + global search w/ barcode / service part keywords indxing</li><li> user profile + authentication / authorization integrations</li><li> provide meaningfull urls / page content for increased seo indexability</li><li> multiple language support</li><li> https renewable ssl certificates</li></ul>',
         score: '-',
@@ -177,13 +245,32 @@ export default [
         category: 'Design and Development',
         title: 'R2D2 - Reliability Resilience & Grid Defence',
         tools: [
-            T.WEBA, T.JSCR, T.SVEL,
-            T.VITE, T.ES6, T.CSS3,
-            T.SCSS, T.ANAL, T.REQU,
-            T.NODE, T.GIT, T.REST,
-            T.DOCK, T.DCOM, T.KEYC,
-            T.SQLS, T.PROM, T.GRAF,
-            T.MONI, T.PRIS, T.RABB
+            T.WEBA,
+            T.JSCR,
+            T.SVEL,
+
+            T.VITE,
+            T.ES6,
+            T.CSS3,
+
+            T.SCSS,
+            T.ANAL,
+            T.REQU,
+
+            T.NODE,
+            T.GIT,
+            T.REST,
+
+            T.DOCK,
+            T.DCOM,
+            T.KEYC,
+
+            T.MYSQ,
+            T.PROM,
+            T.GRAF,
+
+            T.MONI,
+            T.PRIS,
         ],
         description: `<p>deliverable was a part of multi european endevour that roots and founded by greater movement “horizon 2020"</p><ul><li> 2 energy web appls</li><li> remote user authentication "keycloak" + sso</li><li> resposive mobile / desktop layouts</li><li> integrate python api to simulate feedback</li><li> run preconfigured daily scheduling to run simulations</li><li> use redis for session management / caching</li><li> use monitoring tools to supervise the infrastructure status</li><li> publish applications onlne w/ nginx proxy</li></ul><h6>> app 'flexibility'</h6><ul><li> integrate layouts for 3 different roles 'tso / dso / aggregators'</li><li> numerous charts to provide a solid understanding of the data flow in a daily basis</li><li> numerous filters + chronological searches to examine data</li></ul><h6>> app 'planning'</h6><ul><li> scenarios builder forms</li><li> build scenarios and use numerous charts to gain understanding of the resuts</li><li> push effective results to remove services</li></ul>\n`,
         score: '-',
@@ -201,17 +288,31 @@ export default [
     {
         domain: 'WORK',
         id: 'WK22',
-        section: 'Energy',
+        section: 'Energy Analytics',
         category: 'Design and Development',
-        title: 'Synergies',
+        title: 'Synergies Energy Analytics',
         tools: [
-            T.WEBA, T.JSCR, T.SVEL,
-            T.VITE, T.ES6, T.CSS3,
-            T.SCSS, T.ANAL, T.REQU,
-            T.NODE, T.GIT, T.REST,
-            T.DOCK, T.DCOM, T.KEYC,
-            T.SQLS, T.PROM, T.GRAF,
-            T.MONI, T.PRIS, T.RABB
+            T.WEBA,
+            T.JSCR,
+            T.SVEL,
+            T.VITE,
+            T.ES6,
+            T.CSS3,
+            T.PROM,
+            T.MYSQ,
+            T.GRAF,
+            T.MONI,
+            T.PRIS,
+            T.RABB,
+            T.SCSS,
+            T.ANAL,
+            T.REQU,
+            T.NODE,
+            T.GIT,
+            T.REST,
+            T.DOCK,
+            T.DCOM,
+            T.KEYC,
         ],
         description: `<p>Deliverable was a part of multi European big-data project ‘Synergies” that comes as a continuity of v.1 "Synergy" project  that roots and founded by greater movement “Horizon 2020”. Project customers are major national energy suppliers across Europe</p><ul><li> 2 energy web appls</li><li> remote user authentication "keycloak" + sso</li><li> resposive mobile / desktop layouts</li><li> integrate python api to simulate feedback</li><li> run preconfigured daily scheduling to run simulations</li><li> use redis for session management / caching</li><li> use monitoring tools to supervise the infrastructure status</li><li> publish applications onlne w/ nginx proxy</li></ul><h6>> app 'flexibility'</h6><ul><li> integrate layouts for 3 different roles 'tso / dso / aggregators'</li><li> numerous charts to provide a solid understanding of the data flow in a daily basis</li><li> numerous filters + chronological searches to examine data</li></ul><h6>> app 'planning'</h6><ul><li> scenarios builder forms</li><li> build scenarios and use numerous charts to gain understanding of the resuts</li><li> push effective results to remove services</li></ul>\n`,
         score: '-',
@@ -237,13 +338,33 @@ export default [
         category: 'Design and Development',
         title: 'EcoEms Energy Analytics - Denmark',
         tools: [
-            T.WEBA, T.JSCR, T.SVEL,
-            T.VITE, T.ES6, T.CSS3,
-            T.SCSS, T.ANAL, T.REQU,
-            T.NODE, T.GIT, T.REST,
-            T.DOCK, T.DCOM, T.KEYC,
-            T.SQLS, T.PROM, T.GRAF,
-            T.MONI, T.PRIS, T.RABB
+            T.WEBA,
+            T.JSCR,
+            T.SVEL,
+
+            T.VITE,
+            T.ES6,
+            T.CSS3,
+
+            T.SCSS,
+            T.ANAL,
+            T.REQU,
+
+            T.NODE,
+            T.GIT,
+            T.REST,
+
+            T.DOCK,
+            T.DCOM,
+            T.KEYC,
+
+            T.SQLS,
+            T.PROM,
+            T.GRAF,
+
+            T.MONI,
+            T.PRIS,
+            T.RABB
         ],
         description: '<p>the scope of the project was to attain a good overview of partners resources state and in return simulate and pushback an optimised schedule for their resources in order to achieve this we would requilarly consume data like forecasts, weather reports, temperature levels, resources status etc in different intervals during the day. internally then after maintaining and evaluating data we would dispatch python simulations and come up w/ the base case scenarios. eventually we would push back our estimations to partners remote services.</p><ul><li>compose a complete system infrastructure to perform respective routines at each phase - subscribe to remote channels w/ rabbitmq & mqtt to retrieve datasets in spare intervals - create internal scheduling system that would invoke procedures at predefined times - create a python api that would provide endpoints for simulating different tasks - publish our processes estimations at several remote channels</li><li>invole keycloak iam controls server to control the authentication, authorization of users and resources</li><li>retrieve daily measurements from extrnal resources, both real-time / scheduled-time using mqtt protocol</li><li>provide the visuals for the administrators to analylize the original datasets consumed daily/hourly by remote services but also for the final results pushed back after performing simlulations</li><li>monitor the infrastructure safety with prometheus and grafana tools</li></ul>,',
         score: '-',
@@ -265,13 +386,33 @@ export default [
         category: 'Design and Development',
         title: 'EcoEms Energy Analytics - Greece',
         tools: [
-            T.WEBA, T.JSCR, T.SVEL,
-            T.VITE, T.ES6, T.CSS3,
-            T.SCSS, T.ANAL, T.REQU,
-            T.NODE, T.GIT, T.REST,
-            T.DOCK, T.DCOM, T.KEYC,
-            T.SQLS, T.PROM, T.GRAF,
-            T.MONI, T.PRIS, T.RABB
+            T.WEBA,
+            T.JSCR,
+            T.SVEL,
+
+            T.VITE,
+            T.ES6,
+            T.CSS3,
+
+            T.SCSS,
+            T.ANAL,
+            T.REQU,
+
+            T.NODE,
+            T.GIT,
+            T.REST,
+
+            T.DOCK,
+            T.DCOM,
+            T.KEYC,
+
+            T.SQLS,
+            T.PROM,
+            T.GRAF,
+
+            T.MONI,
+            T.PRIS,
+            T.RABB
         ],
         description: '<p> The scope of the project was to structure and visualize the overall energy consumption generated by conventional units and eventually use input for administrators to perform simulations so that renewable empowered energy could find and claim its effective margin on the daily demand. </p> <ul> <li> In technical perspective, the workload dealt with design and implement the infrastructure and 2 web applications for the Greek and Denmark counterparts. </li> <li> Invole Keycloak IAM controls server to control the authentication, authorization of users and resources </li> <li> Retrieve daily measurements from extrnal resources, both real-time / scheduled-time using MQTT protocol </li> <li> Provide the visuals for the administrators to analylize load / demand / deficit of energy </li> <li> Monitor the infrastructure safety with Prometheus and Grafana tools </li> </ul>',
         score: '-',
@@ -293,15 +434,40 @@ export default [
         category: 'Design and Development',
         title: 'Synergy - Energy Analytics Apps',
         tools: [
-            T.WEBA, T.JSCR, T.REAC,
-            T.NEXT, T.EXPR, T.SWAG,
-            T.ES6, T.CSS3, T.SCSS,
-            T.ANAL, T.REQU, T.NODE,
-            T.WEBP, T.GIT, T.REST,
-            T.DOCK, T.DCOM, T.REDI,
-            T.KEYC, T.MYSQ, T.PROM,
-            T.GRAF, T.MONI, T.SEQU,
-            T.GOAC, T.NGIN
+            T.WEBA,
+            T.JSCR,
+            T.REAC,
+
+            T.NEXT,
+            T.EXPR,
+            T.SWAG,
+
+            T.ES6,
+            T.CSS3,
+            T.SCSS,
+
+            T.ANAL,
+            T.REQU,
+            T.NODE,
+
+            T.WEBP,
+            T.GIT,
+            T.REST,
+
+            T.DOCK,
+            T.DCOM,
+            T.REDI,
+
+            T.KEYC,
+            T.MYSQ,
+            T.PROM,
+
+            T.GRAF,
+            T.MONI,
+            T.SEQU,
+
+            T.GOAC,
+            T.NGIN
         ],
         description: "<ul> <li> Scopes of the project are to build infrastructure for the Greek domains hosting the 2 GUI Applications </li> <li> Delegate apps 'authentication / authorization' processes and SSO features to remote core platform invoking the Keycloak IAM controls </li> <li> Provide analytics and chart visualizations in a way to enhance the customers understanding and tendencies of excessive, collaborative amounts of data </li> <li> Dockerized infrastructure utilized to maintain the interconnections active between infrastructure nodes </li> <li> Monitor the infrastructure safety with Prometheus, Grafana and GoAccess tools </li> </ul>",
         score: '-',
@@ -359,7 +525,7 @@ export default [
             T.WEBP, T.GIT,
             T.REST
         ],
-        description: "<h3>Employed as standalone Frontend Developer to build fully customizable UI widgets and the backend configuration app  in association with a backend data api developer.</h3> <p> The objective was to create a new product that would explore the potentials of UI widgets and thus enter a new market for the company <br /> My role as a Frontend developer was to create the independable CORS empowered Javascript widgets that would load on affiliate sites. The widgets should invoke the latest Js trends, load on sites without causing or receiving Js / CSS defects and should be as lightweight as possible restraining from vaguely loading countless libraries. Additianally I was attached to build the backend configuration application. </p> <h4>Main Developments</h4> <u>FRONTEND WIDGETS</u> <ul> <li>Design and develop the app's Installer that can be used on affiliate sites with a single HTML “Head”entry</li> <li>Design and develop decoupled SPA widgets, that reside on their own domains and can be launched by installer on demand</li> <li> <p> Publish 5 distinct widget types, with 4 viewport layouts for each, to accommodate diversity of screen displays: <br /> - Price checks::          Integrates calendar that helps users check hotel prices per accommodation and compare with major booking channels <br />- Active offers::          Registered offers can be displayed with a user click <br />- Notifications::          Intresting metrics, in the form of notifications are displayed on sites screen <br />- Popup offers::          Offers can popup on user display at navigation time, based on submitted configuration </p> </li> <li>Utilize the latest React 16.8 build and make use of powerful features like Hooks, Code splitting, Lazy loading, Context api, Dynamic imports etc</li> <li>Make extensive use of cache so that widgets restrain from excessive calls to the remote service</li> <li>Structure the development environment with NodeJs, Webpack, Babel etc</li> </ul> <br /> <u>BACKEND APPLICATION</u> <ul> <li> <p>Create a React 16.4 application based on a helper theme with some main group activities <br />- Configuration domains per widget <br />- Metrics and evaluation of widget usage <br />- Main Dashboard, Install and more.. </p> </li> <li> <p> The widgets configuration includes <br />- Configurable, on screen, positioning <br />- Configurable colors and literals <br />- Configurable activation / deactivation periods </p> </li> </ul>",
+        description: " <p> The objective was to create a new product that would explore the potentials of UI widgets and thus enter a new market for the company <br /> My role as a Frontend developer was to create the independable CORS empowered Javascript widgets that would load on affiliate sites. The widgets should invoke the latest Js trends, load on sites without causing or receiving Js / CSS defects and should be as lightweight as possible restraining from vaguely loading countless libraries. Additianally I was attached to build the backend configuration application. </p> <h4>Main Developments</h4> <u>FRONTEND WIDGETS</u> <ul> <li>Design and develop the app's Installer that can be used on affiliate sites with a single HTML “Head”entry</li> <li>Design and develop decoupled SPA widgets, that reside on their own domains and can be launched by installer on demand</li> <li> <p> Publish 5 distinct widget types, with 4 viewport layouts for each, to accommodate diversity of screen displays: <br /> - Price checks::          Integrates calendar that helps users check hotel prices per accommodation and compare with major booking channels <br />- Active offers::          Registered offers can be displayed with a user click <br />- Notifications::          Intresting metrics, in the form of notifications are displayed on sites screen <br />- Popup offers::          Offers can popup on user display at navigation time, based on submitted configuration </p> </li> <li>Utilize the latest React 16.8 build and make use of powerful features like Hooks, Code splitting, Lazy loading, Context api, Dynamic imports etc</li> <li>Make extensive use of cache so that widgets restrain from excessive calls to the remote service</li> <li>Structure the development environment with NodeJs, Webpack, Babel etc</li> </ul> <br /> <u>BACKEND APPLICATION</u> <ul> <li> <p>Create a React 16.4 application based on a helper theme with some main group activities <br />- Configuration domains per widget <br />- Metrics and evaluation of widget usage <br />- Main Dashboard, Install and more.. </p> </li> <li> <p> The widgets configuration includes <br />- Configurable, on screen, positioning <br />- Configurable colors and literals <br />- Configurable activation / deactivation periods </p> </li> </ul>",
         score: '-',
         tutor: '-',
         comment: '-',
@@ -386,7 +552,7 @@ export default [
             T.CENT, T.SECU,
             T.GIT, T.REST
         ],
-        description: "<h3>Employed as standalone Fullstack Developer to maintain and extend the company's products.</h3> <p> The objective was to update the company's products, increase and enforce security on critical fields and launch new tools and features <br /> My role as a fullstack developer was to update the overall environment of a more than a decade past developed PHP system, without any coding formation style and mixed up technologies (php, js, css) on huge pages. Additionally I would need to create some common reusable helper structures to assist me build new things properly. </p> Main Developments <ul> <li>Build common and explicit PHP helper structures to make development lifecycle natively simple and secure</li> <li> <p> Build a configurable, Javascript CORS widget for displaying best price of an affiliate hotels.</p> <br />- A new REST-like, PHP API build to accommodate the exchange of CORS data consumed by widget <br />- The widget travels from Cosmores to customer site in string formate and then self-installed with included javascript launcher <br />- The widget is build with vanilla Js and plain CSS in order to avoid confiict with installed Jquery / Bootstrap or own site styles <br />- The widget is compatible with IE 8, Safari, Chrome etc <br />- The widget is fully controllable and customizable from respective backend app. </p> </li> <li>Put the application under GIT versioning and create a master repository on a remote server</li> <li>Create a portable, local virtual clone (vbox) of the Production environment server, so that development and testing activities</li> restrain from Production.</li> <li> <p>Leverage the security processes overall: <br /> - Leverage the security of entry by blocking the front entrance and allow only recognizable devices to log in. The activity uses expirable tokens that are only accepted for limited amount of time, and provide respective messages to users for guidance. <br />- Enforce strong passwords with mixed char types and length <br />- Leverage the encryption/decryption procedures for all sensitive data in the DB, which led to more than 1M rows update <br />- Enforce a finite number of times informative data can be displayed before locked for ever <br />- Leverage the restriction rules for image uploads and malicious code indexing methods <br />- Invoke sanitize/filtering on data import/display respectively <br />- Enforce PDO with MySQL inserts <br />- Make extensive use of .httaccess for filtering urls, root and child directories with explicit rules for each </p> </li> </ul>",
+        description: " <p> The objective was to update the company's products, increase and enforce security on critical fields and launch new tools and features <br /> My role as a fullstack developer was to update the overall environment of a more than a decade past developed PHP system, without any coding formation style and mixed up technologies (php, js, css) on huge pages. Additionally I would need to create some common reusable helper structures to assist me build new things properly. </p> Main Developments <ul> <li>Build common and explicit PHP helper structures to make development lifecycle natively simple and secure</li> <li> <p> Build a configurable, Javascript CORS widget for displaying best price of an affiliate hotels.</p> <br />- A new REST-like, PHP API build to accommodate the exchange of CORS data consumed by widget <br />- The widget travels from Cosmores to customer site in string formate and then self-installed with included javascript launcher <br />- The widget is build with vanilla Js and plain CSS in order to avoid confiict with installed Jquery / Bootstrap or own site styles <br />- The widget is compatible with IE 8, Safari, Chrome etc <br />- The widget is fully controllable and customizable from respective backend app. </p> </li> <li>Put the application under GIT versioning and create a master repository on a remote server</li> <li>Create a portable, local virtual clone (vbox) of the Production environment server, so that development and testing activities</li> restrain from Production.</li> <li> <p>Leverage the security processes overall: <br /> - Leverage the security of entry by blocking the front entrance and allow only recognizable devices to log in. The activity uses expirable tokens that are only accepted for limited amount of time, and provide respective messages to users for guidance. <br />- Enforce strong passwords with mixed char types and length <br />- Leverage the encryption/decryption procedures for all sensitive data in the DB, which led to more than 1M rows update <br />- Enforce a finite number of times informative data can be displayed before locked for ever <br />- Leverage the restriction rules for image uploads and malicious code indexing methods <br />- Invoke sanitize/filtering on data import/display respectively <br />- Enforce PDO with MySQL inserts <br />- Make extensive use of .httaccess for filtering urls, root and child directories with explicit rules for each </p> </li> </ul>",
         score: '-',
         tutor: '-',
         comment: '-',
