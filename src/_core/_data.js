@@ -143,13 +143,13 @@ export default [
         comment: '-',
         links: '',
         shots: [
-            'micv/images/micv24/micv24-work.png',
-            'micv/images/micv24/micv24-land.png',
-            'micv/images/micv24/micv24-proj.png',
-            'micv/images/micv24/micv24-search.png',
-            'micv/images/micv24/micv24-study.png',
-            'micv/images/micv24/micv24-tool.png',
-            'micv/images/micv24/micv24-php.png',
+            '/micv/images/micv24/micv24-work.png',
+            '/micv/images/micv24/micv24-land.png',
+            '/micv/images/micv24/micv24-proj.png',
+            '/micv/images/micv24/micv24-search.png',
+            '/micv/images/micv24/micv24-study.png',
+            '/micv/images/micv24/micv24-tool.png',
+            '/micv/images/micv24/micv24-php.png',
         ]
     },
 

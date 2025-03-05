@@ -1,6 +1,6 @@
 "use strict";
 
-const CACHE_V = 1.8;
+const CACHE_V = 1.9;
 const HOST_PATH = "/micv/"
 const FILE_SW = 'micv-sw.js'
 const FILE_MANIFEST = 'app.webmanifest'
@@ -88,6 +88,7 @@ self.addEventListener("fetch", (evt) => {
         ** THIS IS TEMPORARY AS THERE MIGHT OCCUR SCENARIOS THAT
         ** EXTERNAL RESOURCES NEED CACHED ALSO
          */
+        debugger
         if (!(evt.request.url.includes(HOST_PATH))) return evt.respondWith(fetch(evt.request.url));
 
         /*
