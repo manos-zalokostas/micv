@@ -1,6 +1,6 @@
 "use strict";
 
-const CACHE_V = 1.5;
+const CACHE_V = 1.6;
 const HOST_PATH = "/micv/"
 const FILE_SW = 'micv-sw.js'
 const FILE_MANIFEST = 'app.webmanifest'
