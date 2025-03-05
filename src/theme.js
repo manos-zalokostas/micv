@@ -3,6 +3,7 @@ import {css} from 'lit';
 export const theme = css`
 
     :host {
+ 
         --font: sans-serif;
 
         --color-tool: orange;
@@ -12,7 +13,38 @@ export const theme = css`
         --color-default: #888;
         --color-top: white;
 
-        //color: steelblue;
+
+        .mi-txt-h1 {
+            font-size: 1.8rem;
+        }
+
+        .mi-txt-h2 {
+            font-size: 1.5rem;
+        }
+
+        .mi-txt-h3 {
+            font-size: 1.2rem;
+        }
+
+        .mi-txt-h4 {
+            font-size: 1.1rem;
+        }
+
+        .mi-txt-h5 {
+            font-size: 1rem;
+        }
+
+        .mi-txt-max {
+            font-size: .9rem;
+        }
+
+        .mi-txt-mid {
+            font-size: .8rem;
+        }
+
+        .mi-txt-min {
+            font-size: .7rem;
+        }
 
     }
 
@@ -36,9 +68,8 @@ export const theme = css`
         //background-color: rgba(90, 90, 100);
     }
 
-    
     button,
-    fieldset{
+    fieldset {
         position: relative;
         display: inline-flex;
         flex-direction: row-reverse;
@@ -46,7 +77,7 @@ export const theme = css`
         justify-content: center;
         gap: 10px;
         color: var(--color-default);
-        font-size: 16px;
+        // font-size: 16px;
         font-weight: bold;
         outline: none;
         border-radius: 4px;
@@ -65,7 +96,7 @@ export const theme = css`
         &:hover {
             //border-color: inherit;
         }
-        
+
         &:active {
             background-color: #eee;
         }
@@ -128,7 +159,7 @@ export const theme = css`
 
     .pill {
         color: white;
-        font-size: 14px;
+        // font-size: 14px;
         padding: 4px 8px;
         margin: 0 10px;
         border-radius: 10px;
@@ -144,6 +175,12 @@ export const theme = css`
 
         &.tool {
             background-color: var(--color-tool);
+        }
+    }
+
+    .nomob {
+        @media (max-width: 768px) {
+            display: none !important;
         }
     }
 `;

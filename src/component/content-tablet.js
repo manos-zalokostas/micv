@@ -84,8 +84,8 @@ customElements.define('content-tablet',
                        style="background-image: url('${o.shots[0]}')"
                        @click="${this.chooseProject}">
                         <small>${o.category}</small>
-                        <strong class="${o.domain.toLowerCase()}">${o.title}
-                            <small class="pill ${o.domain.toLowerCase()}">${o.id}</small>
+                        <strong class="mi-txt-h2 ${o.domain.toLowerCase()}">${o.title}
+                            <small class="mi-txt-min pill ${o.domain.toLowerCase()}">${o.id}</small>
                         </strong>
                         <p>
                             <span>${o.description.substring(0, 200)}<em>&nbsp&nbsp;...more</em></span>
@@ -169,7 +169,7 @@ customElements.define('content-tablet',
 
                         &.mi-tool {
                             justify-content: flex-start;
-                            font-size: 18px;
+                            // font-size: 18px;
                             height: 175px;
                             background-size: 100%;
 
@@ -200,7 +200,6 @@ customElements.define('content-tablet',
                         }
 
                         strong {
-                            font-size: 24px;
                             width: 50%;
                         }
 

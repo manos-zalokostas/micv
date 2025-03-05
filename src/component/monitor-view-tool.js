@@ -31,6 +31,7 @@ customElements.define('monitor-view-tool',
             this.tools = null;
             this.slice = null;
 
+            this.display();
             // this.tools = Monitor.curr().tools || []; // Default tools array from the current monitor object
             // this.tools = itemByIndex(20).tools
         }
@@ -117,7 +118,7 @@ customElements.define('monitor-view-tool',
                             val => html`
                                 <a id="${val}"
                                    @click="${this.chooseTool}">
-                                    <h4>${val.replaceAll("_", " ").toUpperCase()}</h4>
+                                    <h4 class="mi-txt-min nomob">${val.replaceAll("_", " ").toUpperCase()}</h4>
                                     <span>
                                         <img src="/micv/images/tech_logos/${val}.jpg" alt="${val}"/>
                                     </span>
@@ -141,7 +142,7 @@ customElements.define('monitor-view-tool',
                     a {
                         display: flex;
                         justify-content: space-between;
-                        font-size: large;
+                        // font-size: large;
                         font-family: var(--font);
                         color: var(--color-tool);
                         padding: 6px;

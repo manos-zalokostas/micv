@@ -15,7 +15,7 @@ export default () => css`
     //
     //#author_presentation p {
     //    width: 98%;
-    //    font-size: 1em;
+    //    // font-size: 1em;
     //    position: absolute;
     //    left: -6%;
     //    top: 0;

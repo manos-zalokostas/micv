@@ -1,5 +1,6 @@
 import {html, css, LitElement} from 'lit';
 import {_DEV, PAGE, VIEW} from "/src/env";
+import {theme} from "../theme";
 
 
 customElements.define('page-introduction',
@@ -63,7 +64,9 @@ customElements.define('page-introduction',
         `;
 
 
-        static styles = css`
+        static styles = [
+            theme,
+            css`
 
             article {
 
@@ -85,6 +88,6 @@ customElements.define('page-introduction',
                 }
 
             }
-        `
+        `]
     }
 );

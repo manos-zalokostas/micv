@@ -7,7 +7,7 @@ export default () => css`
         position: absolute;
         bottom:10%;
         text-align: right;
-        font-size: 1.2em;
+        // font-size: 1.2em;
         overflow: auto;
     }
 

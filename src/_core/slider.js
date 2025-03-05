@@ -140,7 +140,7 @@ function css() {
     margin-top: 0;
     padding-top: 4%;
     font-weight: bold;
-    font-size: 1.5em;
+    // font-size: 1.5em;
 }
 
 #preview {

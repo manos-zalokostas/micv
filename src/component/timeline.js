@@ -44,7 +44,7 @@ customElements.define('joi-timeline',
                                         <header>
                                             <strong>${year}</strong>
                                             <p>
-                                                <em>${title}</em>
+                                                <em class="mi-txt-mid">${title}</em>
                                                 <small class="${this.activeComment ? 'active' : ''}">${info}</small>
                                             </p>
                                         </header>
@@ -124,7 +124,7 @@ customElements.define('joi-timeline',
                                 padding: 10px;
 
                                 strong {
-                                    font-size: 1.5em;
+                                    // font-size: 1.5em;
                                     width: 50px;
                                 }
 
@@ -133,7 +133,7 @@ customElements.define('joi-timeline',
                                 }
 
                                 small {
-                                    font-size: initial;
+                                    // font-size: initial;
                                     display: none;
 
                                     &.active {

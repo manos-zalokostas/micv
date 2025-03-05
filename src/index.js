@@ -1,5 +1,5 @@
 import {html, css, LitElement} from 'lit';
-import {_DEV, EVT, PAGE} from "./env";
+import {_DEV, DOMA, EVT, PAGE} from "./env";
 
 import "/src/component/badge-category.js";
 import "/src/component/badge-tool.js";
@@ -22,7 +22,8 @@ import "/src/component/timeline_asset.js";
 import "/src/route/page-content.js";
 import "/src/route/page-introduction.js";
 
-import  SWRegister from "/src/micv-sw-register";
+import SWRegister from "/src/micv-sw-register";
+
 await SWRegister();
 
 
@@ -47,9 +48,22 @@ customElements.define('site-index',
         }
 
 
-        evtPageTransit(evt) {
+        async evtPageTransit(evt) {
             // console.log(" >>>  ", evt.detail);
+            debugger
             this.display = evt.detail.code;
+
+            if (this.display !== PAGE.WORK) return;
+
+            await this.updateComplete;
+
+            const pageContent = this.shadowRoot.querySelector('page-content');
+
+            pageContent.evtDomainChange({
+                detail: {domain: DOMA.WORK},
+                composed: true,
+                bubbles: true,
+            })
         }
 
         async evtProjectSelect(evt) {

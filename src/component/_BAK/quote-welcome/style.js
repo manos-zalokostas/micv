@@ -6,7 +6,7 @@ export default () => css`
         left:10%;
         /*top: 0;*/
         float: right;
-        font-size: 1.2em;
+        // font-size: 1.2em;
         font-family: sans-serif;
         width: 90%;
         padding: 0;

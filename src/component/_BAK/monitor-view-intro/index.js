@@ -45,7 +45,7 @@ customElements.define('monitor-view-intro',
                 float: left;
                 width: 40%;
                 text-align: left;
-                font-size: 2em;
+                // font-size: 2em;
             }
 
             #welcome h3 {
@@ -63,7 +63,7 @@ customElements.define('monitor-view-intro',
                 position: absolute;
                 left: 4%;
                 font-family: arial;
-                font-size: 2em;
+                // font-size: 2em;
                 text-align: center;
                 height: 100%;
                 width: 95%;

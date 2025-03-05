@@ -129,7 +129,7 @@ customElements.define('joi-monitor',
                     overflow: hidden;
                     font-family: var(--font);
                     border: 1px solid #999;
-                    //font-size: large;
+                    //// font-size: large;
                     //border-bottom: 4px solid black;
                     padding: 15px 5px 5px;
                     margin: auto;

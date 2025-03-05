@@ -5,7 +5,7 @@ export default () => css`
         color: #aaa;
         float: right;
         width: 10%;
-        font-size: 2.5em;
+        // font-size: 2.5em;
         padding: 0;
         margin: 1%;
         position: absolute;
@@ -86,7 +86,7 @@ export default () => css`
         font-family: calibri;
         color: darkcyan;
         font-weight: bold;
-        font-size: 2em;
+        // font-size: 2em;
         border-bottom: solid 2px #aaa;
     }
 
@@ -99,7 +99,7 @@ export default () => css`
         color: #888;
         font-family: calibri;
         text-align: left;
-        font-size: 1.5em;
+        // font-size: 1.5em;
     }
 
     #interactive_cv_field #timeline {
@@ -108,7 +108,7 @@ export default () => css`
         width: 70%;
         height: 2px;
         padding: 0 1%;
-        font-size: 0.8em;
+        // font-size: 0.8em;
         font-weight: bold;
         font-family: calibri;
         float: left;
@@ -135,7 +135,7 @@ export default () => css`
     //
     //#interactive_cv_field #timeline li.default {
     //    color: #bbb;
-    //    font-size: inherit;
+    //    // font-size: inherit;
     //    text-decoration: none;
     //    position: relative;
     //    bottom: 0;
@@ -145,7 +145,7 @@ export default () => css`
     //
     //#interactive_cv_field #timeline li.job_start {
     //    color: #ca8;
-    //    font-size: 1.5em;
+    //    // font-size: 1.5em;
     //    bottom: 20px;
     //    background-color: #ca8;
     //}
@@ -153,12 +153,12 @@ export default () => css`
     //#interactive_cv_field #timeline li.job_end {
     //    color: darkkhaki;
     //    margin-left: 19px;
-    //    font-size: 0.8em;
+    //    // font-size: 0.8em;
     //}
     //
     //#interactive_cv_field #timeline li.std_start {
     //    color: teal;
-    //    font-size: 1.5em;
+    //    // font-size: 1.5em;
     //    position: relative;
     //    margin-left: 22px;
     //    bottom: 20px;
@@ -178,17 +178,17 @@ export default () => css`
     //
     //#interactive_cv_field #timeline li.std_end {
     //    color: teal;
-    //    font-size: 0.8em;
+    //    // font-size: 0.8em;
     //}
     //
     //#interactive_cv_field #timeline li.job_start_off,  #interactive_cv_field #timeline li.job_end_off,  #interactive_cv_field #timeline li.std_start_off,  #interactive_cv_field #timeline li.std_end_off {
     //    color: #aaa;
-    //    font-size: 0.8em;
+    //    // font-size: 0.8em;
     //}
     //
     //#interactive_cv_field #timeline li a {
     //    color: inherit;
-    //    font-size: inherit;
+    //    // font-size: inherit;
     //    text-decoration: none;
     //    position: relative;
     //    bottom: 10px;
@@ -198,7 +198,7 @@ export default () => css`
     //
     //#interactive_cv_field #timeline li a.default {
     //    color: #888;
-    //    font-size: 0.8em;
+    //    // font-size: 0.8em;
     //    text-decoration: none;
     //    position: relative;
     //    bottom: 10px;
@@ -207,7 +207,7 @@ export default () => css`
     //}
     //
     //#interactive_cv_field #timeline li a:hover {
-    //    font-size: 1.5em;
+    //    // font-size: 1.5em;
     //    bottom: 1.5em;
     //    padding: 0 0.5em;
     //    padding-bottom: 2em;
@@ -215,7 +215,7 @@ export default () => css`
     //}
     //
     //#interactive_cv_field #timeline li a.selected {
-    //    font-size: 1.5em;
+    //    // font-size: 1.5em;
     //    bottom: 1.5em;
     //    left: -1em;
     //    font-weight: bold;

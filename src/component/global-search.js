@@ -168,7 +168,7 @@ customElements.define('global-search',
                                     position: absolute;
                                     top: 5px;
                                     left: 0;
-                                    font-size: xx-small !important;
+                                    // font-size: xx-small !important;
                                 }
                             }
 

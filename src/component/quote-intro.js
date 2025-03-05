@@ -26,7 +26,7 @@ customElements.define('quote-intro',
 
                 <section>
                     <h2>Welcome</h2>
-                    <p>
+                    <p class="mi-txt-mid">
                         <span>My name is Manos.</span>
                         For the last two and a half decades I have been occupied by several organizations in diverse
                         business perspectives that each played their parts in shaping my profile.
@@ -46,7 +46,7 @@ customElements.define('quote-intro',
 
                 <section>
                     <h3>What is the site about</h3>
-                    <p>
+                    <p class="mi-txt-mid">
                         On site you may resume both of my occupational and educational timelines, how the two were drawn
                         and evolve in parellel during previous years. Context may be indexed in detail, either as
                         bulleted descriptions or guided by an interactive timeline. Along with the descriptive context
@@ -71,7 +71,7 @@ customElements.define('quote-intro',
             css`
                 article {
                     padding: 10px 25px;
-                    font-size: 1.2em;
+                    // font-size: 1.2em;
                     font-family: var(--font);
 
                     section {

@@ -30,27 +30,28 @@ customElements.define('content-detail',
 
             <header>
 
-                <button class="active" 
+                <button class="active"
                         @click="${() => this.dispatchEvent(
-                        new CustomEvent(EVT.CONTENT_TRANSIT, {
-                            detail: {transit: false},
-                            composed: true,
-                            bubbles: true,
-                        }))
-                }">
+                                new CustomEvent(EVT.CONTENT_TRANSIT, {
+                                    detail: {transit: false},
+                                    composed: true,
+                                    bubbles: true,
+                                }))
+                        }">
                     <strong>back</strong>
                     <span class="buttonico">
                         ${unsafeHTML(SVGI.BACK({color: "#ccc"}))}
                     </span>
                 </button>
 
-                <h3> 
-                    ${this.asset.title} 
-                    <sup class="pill ${this.asset.domain.toLocaleLowerCase()}">${this.asset.domain}</sup> 
+                <h3 class="mi-txt-h1">
+                    ${this.asset.title}
+                    <sup class="mi-txt-min pill ${this.asset.domain.toLocaleLowerCase()}">${this.asset.domain}</sup>
                 </h3>
 
-
-                <project-tool .entries="${this.asset.tools}"></project-tool>
+                <div class="nomob">
+                    <project-tool .entries="${this.asset.tools}"></project-tool>
+                </div>
 
             </header>
 
@@ -87,7 +88,7 @@ customElements.define('content-detail',
                     max-height: 175px;
 
                     h3 {
-                        font-size: 2em;
+                        // font-size: 2em;
                         color: orange;
                     }
                 }

@@ -102,6 +102,7 @@ customElements.define('image-slider',
                             width: initial;
                             height: initial;
                             max-height: 75vh;
+                            max-width: 75vw;
                         }
                     }
 

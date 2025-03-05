@@ -26,7 +26,7 @@ customElements.define('monitor-view-project',
             super();
             this.active = 1
             this.activeIndex = 0;
-            this.project = null;
+            this.project = itemByIndex(0);
             // this.loop();
             // console.log(this.project)
         }
@@ -110,7 +110,7 @@ customElements.define('monitor-view-project',
                         <p> ${unsafeHTML(description)}</p>
                         <img src="${shots[0]}" alt="${shots[0]}"/>
                     </article>
-                    <aside>
+                    <aside class="nomob">
                         ${Array.isArray(tools)
                                 ? tools.map(
                                         (val) => html`
@@ -141,11 +141,11 @@ customElements.define('monitor-view-project',
 
                         img {
                             position: absolute;
-                            opacity: 0.3;
-                            top: 0;
                             right: 0;
-                            width: 50%;
-                            padding: 15px;
+                            top: 0;
+                            opacity: 0.3;
+                            height: 100%;
+                            width: 45vw;
                         }
 
                         h2 {
@@ -164,6 +164,7 @@ customElements.define('monitor-view-project',
 
                         p {
                             color: white;
+                            font-size: .8em;
                             text-align: left;
                             max-height: 175px;
                             overflow: hidden;
