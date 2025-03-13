@@ -1,6 +1,6 @@
 "use strict";
 
-const CACHE_V = "1.9A";
+const CACHE_V = "1.9B";
 const HOST_PATH = "/micv/"
 const FILE_SW = 'micv-sw.js'
 const FILE_MANIFEST = 'app.webmanifest'
@@ -88,7 +88,7 @@ self.addEventListener("fetch", (evt) => {
         ** THIS IS TEMPORARY AS THERE MIGHT OCCUR SCENARIOS THAT
         ** EXTERNAL RESOURCES NEED CACHED ALSO
          */
-        
+
         if (!(evt.request.url.includes(HOST_PATH))) return evt.respondWith(fetch(evt.request.url));
 
         /*
@@ -167,10 +167,11 @@ const SWStrategyNetworkFirst = async (req) => {
         const respClone = resp.clone();
 
         const cacheKeyCurr = resolveCacheKey(req);
-        const cacheCurr = await caches.open(cacheKeyCurr);
+        if (cacheKeyCurr) {
+            const cacheCurr = await caches.open(cacheKeyCurr);
+            cacheCurr.put(req, resp);
+        }
 
-
-        cacheCurr.put(req, resp);
 
         return respClone;
 
@@ -202,7 +203,7 @@ const resolveCacheKey = (req) => {
         console.log(" --" + url.pathname)
         if (url.pathname.startsWith(PATH.IMG) || url.pathname.startsWith(PATH.ICON)) return IMAGES_KEY;
 
-        return FILES_STATIC_KEY;
+        return null;
     } catch (error) {
         console.log(' -- XXXXXXXXXXXXXXX', {error})
     }
