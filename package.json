@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build": "vite build",
-    "start": "serve -s dist"
+    "start": "vite preview"
   },
   "keywords": [],
   "author": "",
