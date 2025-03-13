@@ -88,7 +88,7 @@ self.addEventListener("fetch", (evt) => {
         ** THIS IS TEMPORARY AS THERE MIGHT OCCUR SCENARIOS THAT
         ** EXTERNAL RESOURCES NEED CACHED ALSO
          */
-        debugger
+        
         if (!(evt.request.url.includes(HOST_PATH))) return evt.respondWith(fetch(evt.request.url));
 
         /*

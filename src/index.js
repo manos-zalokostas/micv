@@ -50,7 +50,7 @@ customElements.define('site-index',
 
         async evtPageTransit(evt) {
             // console.log(" >>>  ", evt.detail);
-            debugger
+            
             this.display = evt.detail.code;
 
             if (this.display !== PAGE.WORK) return;
