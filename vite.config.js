@@ -5,7 +5,7 @@ export default defineConfig({
     base: "/micv",
     server: {
         hmr: false,
-        allowedHosts: ["appjoi.com"],
+        allowedHosts: ["appjoi.online"],
 
     },
     define: {
