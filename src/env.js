@@ -15,6 +15,7 @@ export const PAGE = {
     LAND: 1,
     WORK: 2,
     CERT: 3,
+    PDF: 4
 }
 
 export const VIEW = {
@@ -46,7 +47,7 @@ export const MONIT = {
 
 
 export const _DEV = {
-    PAGE: PAGE.LAND,
+    PAGE: PAGE.PDF,
     VIEW: VIEW.LAND.RESU,
     // MONIT: MONIT.TOOL,
 }

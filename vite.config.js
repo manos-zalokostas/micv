@@ -4,15 +4,19 @@ import string from 'vite-plugin-string'; // This handles importing SCSS files as
 export default defineConfig({
     base: "/micv",
     server: {
+        // *** PRODUCTION ONLY COFNIG | DISABLE HMR LOCALLY
+        // ==============================================
+        // @TODO:: ENABLE / DISABLE HMR FOR DEV / PROD
+        // --------------
         hmr: false,
         allowedHosts: ["appjoi.online"],
-
+        // ==============================================
     },
     define: {
         'process.env.NODE_ENV': '"production"',
     },
     build: {
-        target: 'esnext',  // Use modern ES syntax for the build
+        target: 'esnext',
         outDir: 'dist',
     },
     plugins: [
