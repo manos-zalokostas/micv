@@ -26,7 +26,7 @@ import "/src/route/page-text-cv.js";
 import SWRegister from "/src/micv-sw-register";
 
 // @TODO:: ENABLE / DISABLE SW FOR PROD / DEV
-await SWRegister();
+// await SWRegister();
 
 
 customElements.define('site-index',

@@ -8,8 +8,8 @@ export default defineConfig({
         // ==============================================
         // @TODO:: ENABLE / DISABLE HMR FOR DEV / PROD
         // --------------
-        hmr: false,
-        allowedHosts: ["appjoi.online"],
+        // hmr: false,
+        // allowedHosts: ["appjoi.online"],
         // ==============================================
     },
     define: {
