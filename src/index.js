@@ -1,5 +1,6 @@
 import {html, css, LitElement} from 'lit';
 import {_DEV, DOMA, EVT, PAGE} from "./env";
+import {theme} from "./theme";
 
 import "/src/component/badge-category.js";
 import "/src/component/badge-tool.js";
@@ -108,7 +109,7 @@ customElements.define('site-index',
 
                 <div id="wrapper">
 
-                    <header>
+                    <header class="noprint">
                         <global-menu></global-menu>
                         <global-search></global-search>
                     </header>
@@ -147,60 +148,65 @@ customElements.define('site-index',
             </div>
         `;
 
-        static styles = css`
+        static styles = [
+            theme,
+            css`
 
-            #view {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                overflow: hidden;
-                background: linear-gradient(180deg, black, transparent);
-
-                #wrapper {
+                #view {
                     position: absolute;
                     top: 0;
                     left: 0;
-                    z-index: 1;
-                    width: 100%;
-                    height: 100%;
-                    padding: 15px;
+                    width: 100vw;
+                    height: 100vh;
+                    overflow: hidden;
+                    background: linear-gradient(180deg, black, transparent);
 
-                    header {
-                        position: relative;
-                        display: flex;
-                        justify-content: space-between;
-                        width: 95vw;
-                        padding: 10px 25px;
-
-                    }
-
-
-                    article {
+                    #wrapper {
                         position: absolute;
+                        top: 0;
                         left: 0;
+                        z-index: 1;
                         width: 100vw;
                         height: 100vh;
+                        //padding: 15px;
 
+                        header {
+                            position: relative;
+                            display: flex;
+                            justify-content: space-between;
+                            width: 95vw;
+                            padding: 10px 25px;
 
-                        #introduction {
-                            top: 0;
                         }
 
-                        #content {
-                            top: 100%;
+
+                        article {
+                            position: absolute;
+                            left: 0;
+                            width: 100vw;
+                            height: 100vh;
+
+
+                            #introduction {
+                                top: 0;
+                            }
+
+                            #content {
+                                top: 100%;
+                            }
+
+                            #credentials {
+                                top: 200%;
+                            }
+
                         }
 
-                        #credentials {
-                            top: 200%;
-                        }
 
                     }
-
 
                 }
 
-            }
-
-        `
+            `
+        ]
     }
 );

@@ -183,4 +183,10 @@ export const theme = css`
             display: none !important;
         }
     }
+
+    .noprint {
+        @media print {
+            display: none !important;
+        }
+    }
 `;

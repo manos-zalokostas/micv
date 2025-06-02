@@ -1,6 +1,6 @@
 import {html, css, LitElement} from 'lit';
 import {theme} from "../theme";
-import {work, study, tool, ide, os, lang} from "./data-cv";
+import {work, study, tool, lang} from "./data-cv";
 
 customElements.define('page-text-cv',
 
@@ -33,7 +33,9 @@ customElements.define('page-text-cv',
                         <h2>creative - structured - disciplined - commtted</h2>
                         <em>https://gr.linkedin.com/in/manos-zalokostas-93798332</em>
                         <br/>
-                        <em>online portfolio: https://appjoi.online/micv</em>
+                        <u>
+                            <em>online: https://appjoi.online/micv</em>
+                        </u>
                         </p>
                     </div>
                 </header>
@@ -58,7 +60,7 @@ customElements.define('page-text-cv',
                 </div>
 
                 <div class="topic">
-                    <em class="topic-title">studies & training</em>
+                    <em class="topic-title">education & training</em>
                     ${study.map(({type, tasks}, i) => html`
                         <section>
                             <header>
@@ -83,11 +85,12 @@ customElements.define('page-text-cv',
                                 <h3>${type.toUpperCase()}</h3>
                             </header>
                             <nav>
-                                <a>
-                                    ${tasks.map(detail => html`
+                                ${tasks.map(([title, detail], ii) => html`
+                                    <a>
+                                        <h4>${title.toUpperCase()}</h4>
                                         <p>${detail}</p>
-                                        </a>
-                                    `)}
+                                    </a>
+                                `)}
                             </nav>
                         </section>
                     `)}
@@ -95,57 +98,25 @@ customElements.define('page-text-cv',
 
 
                 <div class="topic">
-                    <em class="topic-title">operating systems</em>
-                    ${os.map(({type, tasks}, i) => html`
-                        <section>
-                            <header>
-                                <h3>${type.toUpperCase()}</h3>
-                            </header>
-                            <nav>
-                                <a>
-                                    ${tasks.map(detail => html`
-                                        <p>${detail}</p>
-                                        </a>
-                                    `)}
-                            </nav>
-                        </section>
-                    `)}
-                </div>
-
-                <div class="topic">
-                    <em class="topic-title">integrated enviroments</em>
-                    ${ide.map(({type, tasks}, i) => html`
-                        <section>
-                            <header>
-                                <h3>${type.toUpperCase()}</h3>
-                            </header>
-                            <nav>
-                                <a>
-                                    ${tasks.map(detail => html`
-                                        <p>${detail}</p>
-                                        </a>
-                                    `)}
-                            </nav>
-                        </section>
-                    `)}
-                </div>
-
-                <div class="topic">
-                    <em class="topic-title">language</em>
+                    <em class="topic-title">languages</em>
                     ${lang.map(({type, tasks}, i) => html`
                         <section>
                             <header>
                                 <h3>${type.toUpperCase()}</h3>
                             </header>
                             <nav>
-                                <a>
-                                    ${tasks.map(detail => html`
+                                ${tasks.map(([title, detail], ii) => html`
+                                    <a>
+                                        <h4>${title.toUpperCase()}</h4>
                                         <p>${detail}</p>
-                                        </a>
-                                    `)}
+                                    </a>
+                                `)}
                             </nav>
                         </section>
                     `)}
+                </div>
+
+
                 </div>
 
 
@@ -158,6 +129,7 @@ customElements.define('page-text-cv',
             css`
                 article {
                     position: absolute;
+                    top: 0;
                     left: calc((100vw - 1000px) / 2);
                     display: flex;
                     flex-direction: column;
@@ -167,6 +139,7 @@ customElements.define('page-text-cv',
                     width: 1000px;
                     max-width: 100%;
                     overflow: auto;
+                    overflow-x: hidden;
                     background: white;
                     font-family: var(--sgs-font-family);
 
@@ -177,12 +150,13 @@ customElements.define('page-text-cv',
                         align-items: center;
 
                         .personal {
-                            
+
                         }
+
                         .occupational {
                             text-align: right;
                         }
-                        
+
                         h1 {
                             text-transform: capitalize;
                             padding: 0;
@@ -203,7 +177,7 @@ customElements.define('page-text-cv',
                             padding: 0;
                             margin: 0;
                         }
-                        
+
                         em {
                             font-size: small;
                         }

@@ -125,46 +125,40 @@ export const study = [
 
 export const tool = [
     {
-        type: "Experience",
+        type: "technology stack",
         tasks: [
-            `Node.js, Svelte, Nest.js, React.js, Next.js, ES6+, Web Components, PHP, MySQL, HTML5, CSS3, SCSS, Bootstrap, EWS, XML, XSLT, Docker, Docker-Compose,  Webpack, Vite, Typescript, Jest, Git, SVN, Nginx, Apache, Virtualbox, Linux-Terminal, Keycloak, Prometheus, Grafana, RabbitMQ`
+            [
+                'web technologies',
+                `Node.js, Svelte, Nest.js, React.js, Next.js, ES6+, Web Components, PHP, MySQL, HTML5, CSS3, SCSS, Bootstrap, EWS, XML, XSLT, Docker, Docker-Compose,  Webpack, Vite, Typescript, Jest, Git, SVN, Nginx, Apache, Virtualbox, Linux-Terminal, Keycloak, Prometheus, Grafana, RabbitMQ`
+            ],
+            [
+                'operating systems',
+                "Ubuntu, Fedora, Centos, Windows"
+            ],
+            [
+                'integrated environments',
+                "PHPStorm, WebStorm, PyCharm, VSCode, Eclipse, Notepad++"
+            ],
+            [
+                'graphics design',
+                "Adobe Master Suite, Gimp, Inkspace"
+            ],
         ]
     },
 ]
 
-export const os = [
-    {
-        type: "Environment",
-        tasks: [
-            "Ubuntu, Fedora, Centos, Windows"
-        ]
-    },
-]
-export const ide = [
-    {
-        type: "Development",
-        tasks: [
-            "PHPStorm, Eclipse, Notepad++"
-        ]
-    },
-    {
-        type: "Visuals",
-        tasks: [
-            "Adobe Master Suite, MS Access, MS Visio"
-        ]
-    },
-]
 export const lang = [
     {
-        type: "English",
+        type: "languages",
         tasks: [
-            "Studies by English University, Cambridge Lower Certificate"
-        ]
-    },
-    {
-        type: "Greek",
-        tasks: [
-            "Native speaker"
+            [
+                "english",
+                "Studies by English University, Cambridge Lower Certificate"
+            ],
+            [
+                'greek',
+                "Native speaker"
+            ],
         ]
     },
 ]
