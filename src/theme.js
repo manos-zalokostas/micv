@@ -186,6 +186,7 @@ export const theme = css`
 
     .noprint {
         @media print {
+            //font-size: 0.6em;
             display: none !important;
         }
     }

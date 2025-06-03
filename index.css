@@ -9,26 +9,12 @@
     font-style: normal;
     font-variation-settings:
             "wdth" 100;
-    /*font-family: 'Montserrat-Medium';*/
-    /*src: url(/font/Montserrat-Medium.ttf);*/
-    /*font-style: normal;*/
-    /*font-weight: 400;*/
-    /*font-display: swap;*/
 }
 
 html, body {
-    float: left;
-    padding: 0;
-    margin: 0;
-    border: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
     font-size: 18px;
 
-    /*--sgs-font-family: "Montserrat-Medium";*/
     --sgs-font-family: "Roboto";
-
 
     @media (max-width: 992px) {
         font-size: 16px;

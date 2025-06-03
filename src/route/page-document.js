@@ -2,7 +2,7 @@ import {html, css, LitElement} from 'lit';
 import {theme} from "../theme";
 import {work, study, tool, lang} from "./data-cv";
 
-customElements.define('page-text-cv',
+customElements.define('page-document',
 
     class PageTextCv extends LitElement {
 
@@ -25,12 +25,12 @@ customElements.define('page-text-cv',
                         <h1>MANOS ZALOKOSTAS</h1>
                         <em>mail: manos.zalokostas@gmail.com | mob: +30 6944266295</em>
                         <br/>
-                        <em>address:12 midias str, piraeus, greece</em>
+                        <em>addr:12 midias str, piraeus, greece</em>
                     </div>
                     <div class="occupational">
                         <br/>
                         <br/>
-                        <h2>creative - structured - disciplined - commtted</h2>
+                        <h2>creative - structured - disciplined - committed</h2>
                         <em>https://gr.linkedin.com/in/manos-zalokostas-93798332</em>
                         <br/>
                         <u>
@@ -79,11 +79,8 @@ customElements.define('page-text-cv',
 
                 <div class="topic">
                     <em class="topic-title">technologies applied</em>
-                    ${tool.map(({type, tasks}, i) => html`
+                    ${tool.map(({tasks}, i) => html`
                         <section>
-                            <header>
-                                <h3>${type.toUpperCase()}</h3>
-                            </header>
                             <nav>
                                 ${tasks.map(([title, detail], ii) => html`
                                     <a>
@@ -99,11 +96,8 @@ customElements.define('page-text-cv',
 
                 <div class="topic">
                     <em class="topic-title">languages</em>
-                    ${lang.map(({type, tasks}, i) => html`
+                    ${lang.map(({ tasks}, i) => html`
                         <section>
-                            <header>
-                                <h3>${type.toUpperCase()}</h3>
-                            </header>
                             <nav>
                                 ${tasks.map(([title, detail], ii) => html`
                                     <a>
@@ -128,26 +122,23 @@ customElements.define('page-text-cv',
             theme,
             css`
                 article {
-                    position: absolute;
-                    top: 0;
-                    left: calc((100vw - 1000px) / 2);
+                    font-size: 0.7em;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    padding: 0 100px;
-                    height: 95vh;
                     width: 1000px;
                     max-width: 100%;
-                    overflow: auto;
-                    overflow-x: hidden;
                     background: white;
                     font-family: var(--sgs-font-family);
+                    margin: auto;
+                    //border: 1px solid #ddd;
 
                     > header {
                         display: flex;
-                        width: 100%;
+                        width: 95%;
                         justify-content: space-between;
                         align-items: center;
+                        margin: 0 0 35px 0;
 
                         .personal {
 
@@ -161,25 +152,27 @@ customElements.define('page-text-cv',
                             text-transform: capitalize;
                             padding: 0;
                             margin: 0;
+                            font-size: 2em;
                         }
 
                         h2 {
-                            text-transform: uppercase;
-                            font-size: medium;
+                            text-transform: capitalize;
                             text-align: right;
                             padding: 0;
                             margin: 0;
+                            font-size: 1.3em;
                         }
 
                         p {
-                            font-size: x-small;
                             text-align: right;
                             padding: 0;
                             margin: 0;
                         }
 
                         em {
-                            font-size: small;
+                            color: #888;
+                            font-style: normal;
+                            font-size: 0.9em;
                         }
                     }
                 }
@@ -188,27 +181,28 @@ customElements.define('page-text-cv',
                 .topic {
                     position: relative;
                     background-color: #eee;
-                    width: 105%;
-                    top: 150px;
+                    width: 90%;
                     left: 3%;
-                    margin: 0 0 50px 0;
+                    margin: 15px 0 0 0;
 
                     .topic-title {
                         position: relative;
-                        top: -20px;
+                        top: -13px;
                         float: right;
-                        color: #aaa;
+                        color: #bbb;
+                        font-style: normal;
                     }
                 }
 
                 section {
                     position: relative;
                     left: -50px;
-                    margin: 50px 0 25px;
+                    //margin: 50px 0 25px;
                     width: 100%;
 
                     header {
-                        border-bottom: 4px solid #000;
+                        border-bottom: 2px solid #222;
+                        margin: 15px 0 5px 0;
 
                         h3 {
                             padding: 0;
@@ -224,11 +218,15 @@ customElements.define('page-text-cv',
                         //gap: 50px;
 
                         a {
-                            margin: 20px 0 10px 10px;
+                            margin: 0 0 5px 10px;
                             padding: 5px;
 
                             h4 {
                                 text-decoration: underline;
+                            }
+
+                            p {
+                                color: #444;
                             }
 
                             > * {
@@ -240,9 +238,10 @@ customElements.define('page-text-cv',
                                 position: relative;
                                 right: -50px;
                                 width: 100%;
-                                border-bottom: 2px solid #bbb;
-                                padding-bottom: 10px;
+                                border-bottom: 1px solid #aaa;
+                                padding-bottom: 5px;
                             }
+
                         }
 
                         sub {
@@ -252,7 +251,7 @@ customElements.define('page-text-cv',
                             width: 100%;
                             text-align: right;
                             color: #aaa;
-                            font-size: small;
+                            //font-size: small;
                         }
 
                     }

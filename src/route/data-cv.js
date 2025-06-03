@@ -125,19 +125,19 @@ export const study = [
 
 export const tool = [
     {
-        type: "technology stack",
+        type: null,
         tasks: [
             [
                 'web technologies',
                 `Node.js, Svelte, Nest.js, React.js, Next.js, ES6+, Web Components, PHP, MySQL, HTML5, CSS3, SCSS, Bootstrap, EWS, XML, XSLT, Docker, Docker-Compose,  Webpack, Vite, Typescript, Jest, Git, SVN, Nginx, Apache, Virtualbox, Linux-Terminal, Keycloak, Prometheus, Grafana, RabbitMQ`
             ],
             [
-                'operating systems',
-                "Ubuntu, Fedora, Centos, Windows"
-            ],
-            [
                 'integrated environments',
                 "PHPStorm, WebStorm, PyCharm, VSCode, Eclipse, Notepad++"
+            ],
+            [
+                'operating systems',
+                "Ubuntu, Fedora, Centos, Windows"
             ],
             [
                 'graphics design',
@@ -149,11 +149,11 @@ export const tool = [
 
 export const lang = [
     {
-        type: "languages",
+        type: null,
         tasks: [
             [
                 "english",
-                "Studies by English University, Cambridge Lower Certificate"
+                "Studies in English University, Cambridge Lower Certificate"
             ],
             [
                 'greek',

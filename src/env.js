@@ -15,7 +15,7 @@ export const PAGE = {
     LAND: 1,
     WORK: 2,
     CERT: 3,
-    PDF: 4
+    DOCU: 4
 }
 
 export const VIEW = {

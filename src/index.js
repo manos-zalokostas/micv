@@ -22,12 +22,12 @@ import "/src/component/timeline_asset.js";
 
 import "/src/route/page-content.js";
 import "/src/route/page-introduction.js";
-import "/src/route/page-text-cv.js";
+import "/src/route/page-document.js";
 
 import SWRegister from "/src/micv-sw-register";
 
 // @TODO:: ENABLE / DISABLE SW FOR PROD / DEV
-// await SWRegister();
+await SWRegister();
 
 
 customElements.define('site-index',
@@ -42,7 +42,7 @@ customElements.define('site-index',
 
         constructor() {
             super();
-            this.display = _DEV.PAGE
+            this.display = PAGE.LAND
         }
 
         action(idx) {
@@ -100,57 +100,66 @@ customElements.define('site-index',
             })
         }
 
-        render = () => html`
-
-            <div id="view"
-                 @page-transit=${this.evtPageTransit}
-                 @project-select=${this.evtProjectSelect}
-                 @tool-select=${this.evtToolSelect}>
-
-                <div id="wrapper">
-
-                    <header class="noprint">
-                        <global-menu></global-menu>
-                        <global-search></global-search>
-                    </header>
-
-                    <article>
-                        ${
-                                (PAGE.LAND === this.display && html`
-                                    <div id="introduction">
-                                        <page-introduction></page-introduction>
-                                    </div>
-                                `)
-
-                                || (PAGE.WORK === this.display && html`
-                                    <div id="content">
-                                        <page-content></page-content>
-                                    </div>
-                                `)
-                                // || (PAGE.CERT === this.display && html`
-                                //     <div id="credentials">
-                                //         <page-reference></page-reference>
-                                //     </div>
-                                // `)
-
-                                || (PAGE.PDF === this.display && html`
-                                    <div id="resume">
-                                        <page-text-cv></page-text-cv>
-                                    </div>
-                                `)
-
-                                || ''
-
-                        }
-                    </article>
+        render = () => {
+            if (window.location.pathname.endsWith('document')) return html`
+                <div id="document">
+                    <page-document></page-document>
                 </div>
+            `;
+            return [PAGE.LAND, PAGE.WORK].includes(this.display)
+                && html`
+                        <div id="view"
+                             @page-transit=${this.evtPageTransit}
+                             @project-select=${this.evtProjectSelect}
+                             @tool-select=${this.evtToolSelect}>
 
-            </div>
-        `;
+                            <div id="wrapper">
+
+                                <header class="noprint">
+                                    <global-menu></global-menu>
+                                    <global-search></global-search>
+                                </header>
+
+                                <article>
+                                    ${
+                                            (PAGE.LAND === this.display && html`
+                                                <div id="introduction">
+                                                    <page-introduction></page-introduction>
+                                                </div>
+                                            `)
+
+                                            || (PAGE.WORK === this.display && html`
+                                                <div id="content">
+                                                    <page-content></page-content>
+                                                </div>
+                                            `)
+                                            || ''
+                                    }
+                                </article>
+                            </div>
+
+                        </div> `
+        }
+
 
         static styles = [
             theme,
             css`
+                html, body {
+                    float: left;
+                    padding: 0;
+                    margin: 0;
+                    border: 0;
+                    width: 100%;
+                    height: 100%;
+                    /*overflow: hidden;*/
+                    //font-size: 18px;
+
+
+                    //@media (max-width: 992px) {
+                    //    font-size: 16px;
+                    //}
+                }
 
                 #view {
                     position: absolute;
@@ -209,4 +218,5 @@ customElements.define('site-index',
             `
         ]
     }
-);
+)
+;
