@@ -11,6 +11,8 @@ export const EVT = {
     TOOL_SELECT: 'tool-select',
 }
 
+export const BASEPATH = 'micv'
+
 export const PAGE = {
     LAND: 1,
     WORK: 2,

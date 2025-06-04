@@ -1,5 +1,5 @@
 import {html, css, LitElement} from 'lit';
-import {_DEV, DOMA, EVT, PAGE} from "./env";
+import {_DEV, BASEPATH, DOMA, EVT, PAGE} from "./env";
 import {theme} from "./theme";
 
 import "/src/component/badge-category.js";
@@ -27,13 +27,36 @@ import "/src/route/page-document.js";
 import SWRegister from "/src/micv-sw-register";
 
 // @TODO:: ENABLE / DISABLE SW FOR PROD / DEV
-await SWRegister();
+// await SWRegister();
 
 
 customElements.define('site-index',
 
 
     class SiteIndex extends LitElement {
+
+        #route = (path) => {
+            const l = window.location,
+                p = l.pathname;
+            // console.log("__________ 1")
+
+            // DOCUMENT
+            if (p === ["", BASEPATH, path].join("/")) return true
+
+            const parts = p.split("/");
+            // console.log("__________ 2", parts)
+            if (parts.length !== 4) return false;
+
+            // WORK
+            const [, , type, id] = parts;
+            if ('work' === type) return !this.evtProjectSelect({detail: {id}})
+
+            // TOOL
+            if ('tool' === type) return !this.evtToolSelect({detail: {id}})
+
+
+
+        }
 
         static properties = {
             active: {type: Number},
@@ -101,7 +124,7 @@ customElements.define('site-index',
         }
 
         render = () => {
-            if (window.location.pathname.endsWith('document')) return html`
+            if (this.#route('document')) return html`
                 <div id="document">
                     <page-document></page-document>
                 </div>
@@ -152,13 +175,6 @@ customElements.define('site-index',
                     border: 0;
                     width: 100%;
                     height: 100%;
-                    /*overflow: hidden;*/
-                    //font-size: 18px;
-
-
-                    //@media (max-width: 992px) {
-                    //    font-size: 16px;
-                    //}
                 }
 
                 #view {
