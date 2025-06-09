@@ -23,6 +23,16 @@ import "/src/component/timeline_asset.js";
 import "/src/route/page-content.js";
 import "/src/route/page-introduction.js";
 import "/src/route/page-document.js";
+import DATA, {T} from "/src/_core/_data"
+
+const IDS = Object.values(DATA).map(o => o.id),
+    TOOLS = Object.values(T);
+
+const PATH = {
+    DOCU: 'document',
+    PROJ: 'project',
+    TOOL: 'tool',
+}
 
 import SWRegister from "/src/micv-sw-register";
 
@@ -35,27 +45,26 @@ customElements.define('site-index',
 
     class SiteIndex extends LitElement {
 
-        #route = (path) => {
-            const l = window.location,
-                p = l.pathname;
-            // console.log("__________ 1")
+        #route = () => {
+            const {pathname} = window.location;
 
             // DOCUMENT
-            if (p === ["", BASEPATH, path].join("/")) return true
+            if (pathname === ["", BASEPATH, PATH.DOCU].join("/")) return true
 
-            const parts = p.split("/");
-            // console.log("__________ 2", parts)
+            const parts = pathname.split("/");
             if (parts.length !== 4) return false;
 
-            // WORK
-            const [, , type, id] = parts;
-            if ('work' === type) return !this.evtProjectSelect({detail: {id}})
+            let [, , type, id] = parts;
 
             // TOOL
-            if ('tool' === type) return !this.evtToolSelect({detail: {id}})
+            if (PATH.TOOL === type && TOOLS.includes(id)) return !this.evtToolSelect({detail: {tool: id}})
+
+            // WORK | STUDY
+            id = id.toUpperCase();
+            if (PATH.PROJ === type && IDS.includes(id)) return !this.evtProjectSelect({detail: {id}})
 
 
-
+            return false;
         }
 
         static properties = {
@@ -75,7 +84,6 @@ customElements.define('site-index',
 
 
         async evtPageTransit(evt) {
-            // console.log(" >>>  ", evt.detail);
 
             this.display = evt.detail.code;
 
@@ -124,7 +132,7 @@ customElements.define('site-index',
         }
 
         render = () => {
-            if (this.#route('document')) return html`
+            if (this.#route()) return html`
                 <div id="document">
                     <page-document></page-document>
                 </div>
