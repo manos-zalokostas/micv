@@ -49,7 +49,7 @@ export const MONIT = {
 
 
 export const _DEV = {
-    PAGE: PAGE.PDF,
+    PAGE: PAGE.DOCU,
     VIEW: VIEW.LAND.RESU,
     // MONIT: MONIT.TOOL,
 }
