@@ -26,6 +26,7 @@ customElements.define('global-menu',
 
         action(idx) {
             this.activeElem = idx
+            if (PAGE.LAND === idx) window.location.href = "/"
         }
 
         render = () => html`
