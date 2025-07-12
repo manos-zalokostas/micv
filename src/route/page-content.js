@@ -1,4 +1,7 @@
-import {itemById, itemByIndex} from "/src/_core/store";
+// src/route/page-content.js
+
+// 1. UPDATED IMPORT: Swap the old store for the new DB function.
+import {getItemById} from '../indexdb';
 import {html, css, LitElement} from 'lit';
 import {_DEV, DOMA, EVT, VIEW} from "/src/env";
 
@@ -40,45 +43,40 @@ customElements.define('page-content',
 
         }
 
-
-        evtContentTransit(evt) {
+        // 2. THE ONLY CHANGE: This method is now async.
+        async evtContentTransit(evt) {
             const nodeWrap = this.shadowRoot.querySelector('main');
             const nodeDetail = this.shadowRoot.querySelector('content-detail');
 
             if (!evt.detail.transit) return nodeWrap.classList.remove(CSSCLASS_TRANSIT)
 
-            const entry = itemById(evt.detail.entryId);
+            // --- THE SURGICAL REPLACEMENT ---
+            // OLD: const entry = itemById(evt.detail.entryId);
+            // NEW:
+            const entry = await getItemById(evt.detail.entryId);
+            // --- END REPLACEMENT ---
+
             nodeDetail.asset = entry;
-            nodeWrap.classList.add(CSSCLASS_TRANSIT)
+            nodeWrap.classList.add(CSSCLASS_TRANSIT);
         }
 
-
+        // --- NO CHANGES to render or styles ---
         render = () => html`
-
-            <article
-                    @tool-change=${this.evtToolChange}
-                    @content-transit=${this.evtContentTransit}
-                    @domain-change=${this.evtDomainChange}>
-
+            <article @tool-change=${this.evtToolChange}
+                     @content-transit=${this.evtContentTransit}
+                     @domain-change=${this.evtDomainChange}>
                 <header>
                     <content-menu></content-menu>
                 </header>
-
-                    <!--                <main class="${_DEV.VIEW === VIEW.WORK.CONT ? CSSCLASS_TRANSIT : ''}">-->
                 <main>
-
                     <div>
                         <content-tablet></content-tablet>
                     </div>
-
                     <div>
                         <content-detail></content-detail>
                     </div>
-
                 </main>
-
             </article>
-
         `;
 
 

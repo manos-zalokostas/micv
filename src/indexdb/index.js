@@ -1,7 +1,13 @@
-// database/index.js
+// src/indexdb/index.js
 
-// Import all functions from itemStore.js and re-export them.
+/**
+ * This file acts as the public API for the entire database module.
+ * It imports functions from other files in this folder and re-exports them
+ * from a single, clean entry point.
+ */
+
+// We keep the export for our item-related functions.
 export * from './store-item.js';
 
-// If we had a categoryStore.js, we would export its functions here too:
-// export * from './categoryStore.js';
+// We add a new line to also export our asset-related functions.
+export * from './store-asset.js'; // <-- ADD THIS LINE

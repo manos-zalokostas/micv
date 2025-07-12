@@ -1,39 +1,42 @@
-// database/itemStore.js
+// src/indexdb/store-item.js
 
 import { initDB } from './db.js';
 
-const STORE_NAME = 'items';
+// The name of our object store, to avoid typos.
+const STORE_NAME = 'item';
 
 /**
- * Adds or updates an item in the store.
- * IndexedDB's `put` method conveniently handles both creating and updating.
- * @param {object} item The item to add/update. Must have an 'id' property.
+ * Saves (adds or updates) an item in the database.
+ * Uses .put() which is an "upsert" - it will create a new item or
+ * overwrite an existing one with the same primary key. Perfect for seeding.
+ * @param {object} item The item object to save.
  */
 export async function saveItem(item) {
     const db = await initDB();
     return new Promise((resolve, reject) => {
+        // A 'readwrite' transaction is required for any data modification.
         const transaction = db.transaction(STORE_NAME, 'readwrite');
-        const objectStore = transaction.objectStore(STORE_NAME);
-        const request = objectStore.put(item); // .put() is great for create/update
+        transaction.onerror = (event) => reject(event.target.error);
+        transaction.oncomplete = () => resolve();
 
-        transaction.oncomplete = () => resolve(item);
-        transaction.onerror = (event) => reject(`Error saving item: ${event.target.error}`);
+        const store = transaction.objectStore(STORE_NAME);
+        store.put(item);
     });
 }
 
 /**
- * Retrieves an item by its ID.
+ * Retrieves a single item by its primary key (the 'id' property).
  * @param {string} id The ID of the item to retrieve.
  */
 export async function getItemById(id) {
     const db = await initDB();
     return new Promise((resolve, reject) => {
         const transaction = db.transaction(STORE_NAME, 'readonly');
-        const objectStore = transaction.objectStore(STORE_NAME);
-        const request = objectStore.get(id);
+        const store = transaction.objectStore(STORE_NAME);
+        const request = store.get(id);
 
-        request.onsuccess = () => resolve(request.result); // Returns the item or undefined
-        request.onerror = (event) => reject(`Error getting item: ${event.target.error}`);
+        request.onsuccess = () => resolve(request.result);
+        request.onerror = (event) => reject(event.target.error);
     });
 }
 
@@ -44,10 +47,57 @@ export async function getAllItems() {
     const db = await initDB();
     return new Promise((resolve, reject) => {
         const transaction = db.transaction(STORE_NAME, 'readonly');
-        const objectStore = transaction.objectStore(STORE_NAME);
-        const request = objectStore.getAll(); // Simple and effective!
+        const store = transaction.objectStore(STORE_NAME);
+        const request = store.getAll();
 
-        request.onsuccess = () => resolve(request.result); // Returns an array of all items
-        request.onerror = (event) => reject(`Error getting all items: ${event.target.error}`);
+        request.onsuccess = () => resolve(request.result);
+        request.onerror = (event) => reject(event.target.error);
     });
 }
+
+/**
+ * Retrieves items that have a specific tool in their 'tools' array.
+ * Uses the 'tools' multiEntry index for high performance.
+ * @param {string} tool The tool to search for.
+ */
+export async function getItemsByTool(tool) {
+    const db = await initDB();
+    return new Promise((resolve, reject) => {
+        const transaction = db.transaction(STORE_NAME, 'readonly');
+        const store = transaction.objectStore(STORE_NAME);
+        const index = store.index('tools'); // Use the index
+        const request = index.getAll(tool); // Query the index
+
+        request.onsuccess = () => {
+            // Transform data to match the old function's output
+            const pack = request.result.map(item => [item.id, item.title]);
+            resolve(pack);
+        };
+        request.onerror = (event) => reject(event.target.error);
+    });
+}
+
+/**
+ * Retrieves items belonging to a specific section.
+ * Uses the 'section' index for high performance.
+ * @param {string} section The section to search for.
+ */
+export async function getItemsBySection(section) {
+    const db = await initDB();
+    return new Promise((resolve, reject) => {
+        const transaction = db.transaction(STORE_NAME, 'readonly');
+        const store = transaction.objectStore(STORE_NAME);
+        const index = store.index('section'); // Use the index
+        const request = index.getAll(section); // Query the index
+
+        request.onsuccess = () => {
+            // Transform data to match the old function's output
+            const pack = request.result.map(item => [item.id, item.title]);
+            resolve(pack);
+        };
+        request.onerror = (event) => reject(event.target.error);
+    });
+}
+
+// NOTE: We will add more functions here later as we need them,
+// like `getItemsByDomain`, etc. This is a great starting set.

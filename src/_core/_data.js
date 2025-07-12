@@ -109,6 +109,7 @@ export const D = {
 export const P = {
     IMG: '/micv/images/'
 }
+
 export const C = {
     WD: 'web development',
     BM: 'business management',
