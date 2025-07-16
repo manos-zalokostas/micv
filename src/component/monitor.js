@@ -1,9 +1,9 @@
 import {unsafeHTML} from "lit/directives/unsafe-html.js";
-import {itemById} from "/src/service/store";
 import {html, css, LitElement} from 'lit';
 import {SVGI} from "../service/svg-icon";
 import {_DEV, MONIT} from "/src/service/env";
 import {theme} from "/src/service/theme";
+import * as Item from "../indexdb/store-item";
 
 
 const assets = {
@@ -55,13 +55,13 @@ customElements.define('joi-monitor',
             this.activePause = !this.activePause;
         }
 
-        forceConent(code) {
+        async forceConent(code) {
 
             this.activeContent = MONIT.WORK
             const ViewProject = this.shadowRoot.querySelector("monitor-view-project")
             ViewProject.pause();
 
-            ViewProject.project = itemById(code)
+            ViewProject.project = await Item.id(code)
         }
 
 

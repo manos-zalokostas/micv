@@ -1,4 +1,4 @@
-import {groupProjects, itemById, itemByIndex} from "/src/service/store";
+// import {groupProjects, itemById, itemByIndex} from "/src/service/store";
 import {html, css, LitElement} from 'lit';
 import {EVT} from "/src/service/env";
 
@@ -19,15 +19,12 @@ customElements.define('project-tool',
         constructor() {
             super();
             this.active = 'git'
-            this.entries = itemByIndex(5).tools
-
-            // console.log(this.project)
+            // this.entries = itemByIndex(5).tools
         }
 
         changeTool(tool='git') {
             // console.log(">>>>>> ", tool)
             this.active = tool;
-            // Child Component (global-menu)
             this.dispatchEvent(new CustomEvent(EVT.TOOL_CHANGE, {
                 detail: {tool},
                 bubbles: true,

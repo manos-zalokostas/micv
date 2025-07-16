@@ -1,8 +1,7 @@
 import {unsafeHTML} from "lit/directives/unsafe-html.js";
-import {itemById} from "/src/service/store";
+import {theme} from "/src/service/theme";
 import {css, html, LitElement} from 'lit';
 import {SVGI} from "../service/svg-icon";
-import {theme} from "/src/service/theme";
 import {EVT} from "/src/service/env";
 
 
@@ -18,7 +17,6 @@ customElements.define('content-detail',
         constructor() {
             super();
             this.active = 1
-            this.asset = itemById('WK13')
         }
 
 
@@ -26,52 +24,52 @@ customElements.define('content-detail',
             this.active = idx;
         }
 
-        render = () => html`
+        render = () => this.asset
+            && html`
 
-            <header>
+                    <header>
 
-                <button class="active"
-                        @click="${() => this.dispatchEvent(
-                                new CustomEvent(EVT.CONTENT_TRANSIT, {
-                                    detail: {transit: false},
-                                    composed: true,
-                                    bubbles: true,
-                                }))
-                        }">
-                    <strong>back</strong>
-                    <span class="buttonico">
+                        <button class="active"
+                                @click="${() => this.dispatchEvent(
+                                        new CustomEvent(EVT.CONTENT_TRANSIT, {
+                                            detail: {transit: false},
+                                            composed: true,
+                                            bubbles: true,
+                                        }))
+                                }">
+                            <strong>back</strong>
+                            <span class="buttonico">
                         ${unsafeHTML(SVGI.BACK({color: "#ccc"}))}
                     </span>
-                </button>
+                        </button>
 
-                <h3 class="mi-txt-h1">
-                    ${this.asset.title}
-                    <sup class="mi-txt-min pill ${this.asset.domain.toLocaleLowerCase()}">${this.asset.domain}</sup>
-                </h3>
+                        <h3 class="mi-txt-h1">
+                            ${this.asset.title}
+                            <sup class="mi-txt-min pill ${this.asset.domain.toLocaleLowerCase()}">${this.asset.domain}</sup>
+                        </h3>
 
-                <div class="nomob">
-                    <project-tool .entries="${this.asset.tools}"></project-tool>
-                </div>
+                        <div class="nomob">
+                            <project-tool .entries="${this.asset.tools}"></project-tool>
+                        </div>
 
-            </header>
+                    </header>
 
-            <main>
+                    <main>
 
-                <div>
-                    ${unsafeHTML(this.asset.description)}
-                </div>
+                        <div>
+                            ${unsafeHTML(this.asset.description)}
+                        </div>
 
-                <image-slider .asset="${this.asset}"></image-slider>
+                        <image-slider .asset="${this.asset}"></image-slider>
 
-            </main>
+                    </main>
 
-            <footer>
+                    <footer>
 
-                <badge-tool .entries="${this.asset.tools}"></badge-tool>
+                        <badge-tool .entries="${this.asset.tools}"></badge-tool>
 
-            </footer>
-
-        `;
+                    </footer>`
+            || "";
 
 
         static styles = [
@@ -106,7 +104,7 @@ customElements.define('content-detail',
                     padding: 25px;
                     height: calc(100vh - 300px);
                     overflow: auto;
-                    
+
                     > * {
                         flex-basis: 50%;
                     }

@@ -1,4 +1,4 @@
-import {initDB} from './database.js';
+import { initDB } from './database.js';
 
 const STORE_ITEM = 'item';
 

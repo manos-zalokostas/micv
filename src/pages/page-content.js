@@ -1,9 +1,6 @@
-// src/route/page-content.js
-
-// 1. UPDATED IMPORT: Swap the old store for the new DB function.
-import {StoreItem} from '../indexdb';
-import {html, css, LitElement} from 'lit';
 import {_DEV, DOMA, EVT, VIEW} from "/src/service/env";
+import {html, css, LitElement} from 'lit';
+import {StoreItem} from '../indexdb';
 
 const CSSCLASS_TRANSIT = 'mi-transit-detail';
 
