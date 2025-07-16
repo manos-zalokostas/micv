@@ -1,6 +1,6 @@
-import {groupProjects, itemById, itemByIndex} from "/src/_core/store";
+import {groupProjects, itemById, itemByIndex} from "/src/service/store";
 import {html, css, LitElement} from 'lit';
-import {EVT} from "../env";
+import {EVT} from "/src/service/env";
 
 
 /**

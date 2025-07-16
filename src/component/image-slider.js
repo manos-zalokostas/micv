@@ -1,7 +1,7 @@
 import {unsafeHTML} from "lit/directives/unsafe-html.js";
 import {css, html, LitElement} from 'lit';
-import {SVGI} from "../_core/svg-icon";
-import {theme} from "../theme";
+import {SVGI} from "../service/svg-icon";
+import {theme} from "/src/service/theme";
 
 
 customElements.define('image-slider',

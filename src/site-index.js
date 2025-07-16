@@ -1,6 +1,6 @@
+import {_DEV, BASEPATH, DOMA, EVT, PAGE} from "/src/service/env";
 import {html, css, LitElement} from 'lit';
-import {_DEV, BASEPATH, DOMA, EVT, PAGE} from "./env";
-import {theme} from "./theme";
+import {theme} from "/src/service/theme";
 
 import "/src/component/badge-category.js";
 import "/src/component/badge-tool.js";
@@ -20,30 +20,16 @@ import "/src/component/quote-intro.js";
 import "/src/component/timeline.js";
 import "/src/component/timeline_asset.js";
 
-import "/src/route/page-content.js";
-import "/src/route/page-introduction.js";
-import "/src/route/page-document.js";
+import "/src/pages/page-content.js";
+import "/src/pages/page-introduction.js";
+import "/src/pages/page-document.js";
 
-// At the top of src/index.js
-
-// Import our new cache initializer function.
-import { initializeCache } from './indexdb/cache-asset.js'; // <-- ADD THIS LINE
-
-// ... your other imports like 'saveAsset', 'DATA', etc. remain ...
-import { getAllItems, saveItem, saveAsset } from './indexdb';
-import DATA, { T, C, D, S } from "/src/_core/_data";
+import Seeder from "./indexdb/seeder"
+import Cache from "/src/service/cache";
+import Router from "/src/service/router";
 
 
-const IDS = Object.values(DATA).map(o => o.id),
-    TOOLS = Object.values(T);
-
-const PATH = {
-    DOCU: 'document',
-    PROJ: 'project',
-    TOOL: 'tool',
-}
-
-import SWRegister from "/src/micv-sw-register";
+import SWRegister from "/src/swr";
 
 // @TODO:: ENABLE / DISABLE SW FOR PROD / DEV
 // await SWRegister();
@@ -54,27 +40,7 @@ customElements.define('site-index',
 
     class SiteIndex extends LitElement {
 
-        #route = () => {
-            const {pathname} = window.location;
-
-            // DOCUMENT
-            if (pathname === ["", BASEPATH, PATH.DOCU].join("/")) return true
-
-            const parts = pathname.split("/");
-            if (parts.length !== 4) return false;
-
-            let [, , type, id] = parts;
-
-            // TOOL
-            if (PATH.TOOL === type && TOOLS.includes(id)) return !this.evtToolSelect({detail: {tool: id}})
-
-            // WORK | STUDY
-            id = id.toUpperCase();
-            if (PATH.PROJ === type && IDS.includes(id)) return !this.evtProjectSelect({detail: {id}})
-
-
-            return false;
-        }
+        #route = Router
 
         static properties = {
             active: {type: Number},
@@ -86,9 +52,6 @@ customElements.define('site-index',
             this.display = PAGE.LAND
         }
 
-        // --- ADD THE FOLLOWING TWO NEW METHODS ---
-
-// Inside your SiteIndex class in src/index.js
 
         /**
          * The connectedCallback lifecycle method orchestrates our entire app startup.
@@ -96,63 +59,12 @@ customElements.define('site-index',
         async connectedCallback() {
             super.connectedCallback();
 
-            // We make this an async function to control the startup order.
-            console.log('APP STARTUP: Kicking off initialization sequence...');
-
-            // 1. First, ensure the database is seeded. `await` makes sure this completes
-            //    before we move to the next step.
-            await this._seedDatabaseIfNeeded();
-
-            // 2. Second, now that we know the DB is ready, initialize our in-memory cache.
-            await initializeCache();
-
-            console.log('APP STARTUP: Initialization sequence complete. Application is ready.');
-
-            // Now, you could set a property to hide a global loading spinner, e.g.
-            // this.isAppReady = true;
-        }
-
-        /**
-         * This is our self-contained seeding logic. It checks the database
-         * and only populates it if it's empty.
-         */
-// Inside your SiteIndex class in src/index.js
-
-        async _seedDatabaseIfNeeded() {
-            try {
-                console.log('PHASE 2: Checking database status...');
-                const itemsInDB = await getAllItems();
-
-                // If the item store is empty, we assume a full seeding is needed.
-                if (itemsInDB.length === 0) {
-                    console.log('PHASE 2: Database is empty. Seeding "item" and "asset" stores...');
-
-                    // --- Step 1: Seed the 'item' store (same as before) ---
-                    const initialItems = DATA;
-                    await Promise.all(initialItems.map(item => saveItem(item)));
-                    console.log(` > ${initialItems.length} items saved.`);
-
-                    // --- Step 2: Seed the 'asset' store (NEW) ---
-                    await Promise.all([
-                        saveAsset('T', T),
-                        saveAsset('C', C),
-                        saveAsset('D', D),
-                        saveAsset('S', S)
-                    ]);
-                    console.log(` > 4 asset configurations saved.`);
-
-                    console.log('PHASE 2: Seeding complete.');
-                } else {
-                    console.log('PHASE 2: Database already populated. No seeding needed.');
-                }
-            } catch (error) {
-                console.error('PHASE 2: An error occurred during database seeding:', error);
-            }
+            await Seeder.init();
+            await Cache.init()
         }
 
         action(idx) {
             this.active = idx;
-            // console.log("--- ", idx);
         }
 
 
@@ -203,6 +115,7 @@ customElements.define('site-index',
                 }
             })
         }
+
 
         render = () => {
             if (this.#route()) return html`
@@ -274,7 +187,6 @@ customElements.define('site-index',
                         z-index: 1;
                         width: 100vw;
                         height: 100vh;
-                        //padding: 15px;
 
                         header {
                             position: relative;
@@ -282,16 +194,13 @@ customElements.define('site-index',
                             justify-content: space-between;
                             width: 95vw;
                             padding: 10px 25px;
-
                         }
-
 
                         article {
                             position: absolute;
                             left: 0;
                             width: 100vw;
                             height: 100vh;
-
 
                             #introduction {
                                 top: 0;
@@ -304,16 +213,8 @@ customElements.define('site-index',
                             #credentials {
                                 top: 200%;
                             }
-
                         }
-
-
                     }
-
-                }
-
-            `
+                } `
         ]
-    }
-)
-;
+    });

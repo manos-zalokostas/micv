@@ -1,6 +1,6 @@
+import {work, study, tool, lang} from "/src/indexdb/data-cv";
 import {html, css, LitElement} from 'lit';
-import {theme} from "../theme";
-import {work, study, tool, lang} from "./data-cv";
+import {theme} from "/src/service/theme";
 
 customElements.define('page-document',
 

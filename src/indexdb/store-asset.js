@@ -1,16 +1,17 @@
-// src/indexdb/store-asset.js
 
-import { initDB } from './db.js';
+import { initDB } from './database.js';
 
 // The name of our new object store.
 const STORE_NAME_ASSET = 'asset';
 
+
 /**
- * Saves a key-value pair into the asset store.
- * @param {string} key The key for the asset (e.g., 'T', 'C').
- * @param {object} value The asset object itself.
+ *
+ * @param key
+ * @param value
+ * @returns {Promise<unknown>}
  */
-export async function saveAsset(key, value) {
+export async function save(key, value) {
     const db = await initDB();
     return new Promise((resolve, reject) => {
         const transaction = db.transaction(STORE_NAME_ASSET, 'readwrite');
@@ -18,17 +19,16 @@ export async function saveAsset(key, value) {
         transaction.oncomplete = () => resolve();
 
         const store = transaction.objectStore(STORE_NAME_ASSET);
-        // The object we save must have a 'key' property to match our keyPath.
         store.put({ key: key, value: value });
     });
 }
 
+
 /**
- * Retrieves all assets from the store and transforms them into a
- * convenient key-value map for our cache.
- * @returns {Promise<object>} A promise that resolves to an object like { T: {...}, C: {...} }.
+ *
+ * @returns {Promise<unknown>}
  */
-export async function getAllAssets() {
+export async function all() {
     const db = await initDB();
     return new Promise((resolve, reject) => {
         const transaction = db.transaction(STORE_NAME_ASSET, 'readonly');
@@ -36,8 +36,6 @@ export async function getAllAssets() {
         const request = store.getAll();
 
         request.onsuccess = () => {
-            // The DB returns an array of objects: [{key: 'T', value: ...}, {key: 'C', ...}]
-            // We transform this into a more useful map: { T: {...}, C: {...} }
             const assetMap = request.result.reduce((map, asset) => {
                 map[asset.key] = asset.value;
                 return map;

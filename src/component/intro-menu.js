@@ -1,8 +1,8 @@
 import {unsafeHTML} from "lit/directives/unsafe-html.js";
-import {SVGI} from "../_core/svg-icon";
+import {SVGI} from "../service/svg-icon";
 import {css, html, LitElement} from 'lit';
-import {EVT, VIEW} from "/src/env";
-import {theme} from "../theme";
+import {EVT, VIEW} from "/src/service/env";
+import {theme} from "/src/service/theme";
 
 const assets = [
     ['WELCOME', VIEW.LAND.INTRO, SVGI.USER],

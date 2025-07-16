@@ -1,8 +1,8 @@
-import {groupProjects, itemById, itemByIndex} from "/src/_core/store";
+import {groupProjects, itemById, itemByIndex} from "/src/service/store";
 import {unsafeHTML} from "lit/directives/unsafe-html.js";
 import {html, css, LitElement} from 'lit';
-import {EVT, PAGE} from "../env";
-import {theme} from "../theme";
+import {EVT, PAGE} from "/src/service/env";
+import {theme} from "/src/service/theme";
 
 const entries = groupProjects()
 

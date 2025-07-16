@@ -2,7 +2,7 @@
 
 const CACHE_V = "1.9B";
 const HOST_PATH = "/micv/"
-const FILE_SW = 'micv-sw.js'
+const FILE_SW = 'sw.js'
 const FILE_MANIFEST = 'app.webmanifest'
 const IMAGES_KEY = 'IMAGE_V' + CACHE_V
 const FILES_STATIC_KEY = 'FILE_V1' + CACHE_V

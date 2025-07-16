@@ -1,8 +1,8 @@
 import {unsafeHTML} from "lit/directives/unsafe-html.js";
-import {SVGI} from "../_core/svg-icon";
+import {SVGI} from "../service/svg-icon";
 import {html, css, LitElement} from 'lit';
-import {DOMA, EVT} from "/src/env";
-import {theme} from "../theme";
+import {DOMA, EVT} from "/src/service/env";
+import {theme} from "/src/service/theme";
 
 const SVGS = [
     SVGI.WORK,

@@ -1,9 +1,9 @@
 import {unsafeHTML} from "lit/directives/unsafe-html.js";
 import {html, css, LitElement} from 'lit';
 import {assets} from "./timeline_asset";
-import {SVGI} from "../_core/svg-icon";
-import {theme} from "../theme";
-import {EVT} from "/src/env";
+import {SVGI} from "../service/svg-icon";
+import {theme} from "/src/service/theme";
+import {EVT} from "/src/service/env";
 
 
 customElements.define('joi-timeline',

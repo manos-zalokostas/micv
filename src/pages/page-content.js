@@ -1,9 +1,9 @@
 // src/route/page-content.js
 
 // 1. UPDATED IMPORT: Swap the old store for the new DB function.
-import {getItemById} from '../indexdb';
+import {StoreItem} from '../indexdb';
 import {html, css, LitElement} from 'lit';
-import {_DEV, DOMA, EVT, VIEW} from "/src/env";
+import {_DEV, DOMA, EVT, VIEW} from "/src/service/env";
 
 const CSSCLASS_TRANSIT = 'mi-transit-detail';
 
@@ -53,7 +53,7 @@ customElements.define('page-content',
             // --- THE SURGICAL REPLACEMENT ---
             // OLD: const entry = itemById(evt.detail.entryId);
             // NEW:
-            const entry = await getItemById(evt.detail.entryId);
+            const entry = await StoreItem.id(evt.detail.entryId);
             // --- END REPLACEMENT ---
 
             nodeDetail.asset = entry;

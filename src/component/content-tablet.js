@@ -1,7 +1,7 @@
-import {groupByDomain, groupByTool, groupTools, itemById} from "/src/_core/store";
+import {groupByDomain, groupByTool, groupTools, itemById} from "/src/service/store";
 import {css, html, LitElement} from 'lit';
-import {DOMA, EVT} from "/src/env";
-import {theme} from "../theme";
+import {DOMA, EVT} from "/src/service/env";
+import {theme} from "/src/service/theme";
 
 customElements.define('content-tablet',
 

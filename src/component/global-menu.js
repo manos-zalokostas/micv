@@ -1,8 +1,8 @@
 import {unsafeHTML} from "lit/directives/unsafe-html.js";
 import {css, html, LitElement} from 'lit';
-import {SVGI} from "../_core/svg-icon";
-import {EVT, PAGE} from "/src/env";
-import {theme} from "../theme";
+import {SVGI} from "../service/svg-icon";
+import {EVT, PAGE} from "/src/service/env";
+import {theme} from "/src/service/theme";
 
 
 const assets = [

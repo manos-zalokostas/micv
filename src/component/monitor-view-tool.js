@@ -1,7 +1,7 @@
 import {html, css, LitElement} from 'lit';
-import {groupProjects, groupTools, itemById, itemByIndex} from "/src/_core/store";
-import {theme} from "../theme";
-import {EVT} from "../env";
+import {groupProjects, groupTools, itemById, itemByIndex} from "/src/service/store";
+import {theme} from "/src/service/theme";
+import {EVT} from "/src/service/env";
 
 const list = groupTools();
 

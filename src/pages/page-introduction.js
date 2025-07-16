@@ -1,6 +1,6 @@
 import {html, css, LitElement} from 'lit';
-import {_DEV, PAGE, VIEW} from "/src/env";
-import {theme} from "../theme";
+import {_DEV, PAGE, VIEW} from "/src/service/env";
+import {theme} from "/src/service/theme";
 
 
 customElements.define('page-introduction',

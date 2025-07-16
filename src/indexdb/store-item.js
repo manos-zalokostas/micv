@@ -1,38 +1,37 @@
-// src/indexdb/store-item.js
+import {initDB} from './database.js';
 
-import { initDB } from './db.js';
+const STORE_ITEM = 'item';
 
-// The name of our object store, to avoid typos.
-const STORE_NAME = 'item';
 
 /**
- * Saves (adds or updates) an item in the database.
- * Uses .put() which is an "upsert" - it will create a new item or
- * overwrite an existing one with the same primary key. Perfect for seeding.
- * @param {object} item The item object to save.
+ *
+ * @param item
+ * @returns {Promise<unknown>}
  */
-export async function saveItem(item) {
+export async function save(item) {
     const db = await initDB();
     return new Promise((resolve, reject) => {
         // A 'readwrite' transaction is required for any data modification.
-        const transaction = db.transaction(STORE_NAME, 'readwrite');
+        const transaction = db.transaction(STORE_ITEM, 'readwrite');
         transaction.onerror = (event) => reject(event.target.error);
         transaction.oncomplete = () => resolve();
 
-        const store = transaction.objectStore(STORE_NAME);
+        const store = transaction.objectStore(STORE_ITEM);
         store.put(item);
     });
 }
 
+
 /**
- * Retrieves a single item by its primary key (the 'id' property).
- * @param {string} id The ID of the item to retrieve.
+ *
+ * @param id
+ * @returns {Promise<unknown>}
  */
-export async function getItemById(id) {
+export async function id(id) {
     const db = await initDB();
     return new Promise((resolve, reject) => {
-        const transaction = db.transaction(STORE_NAME, 'readonly');
-        const store = transaction.objectStore(STORE_NAME);
+        const transaction = db.transaction(STORE_ITEM, 'readonly');
+        const store = transaction.objectStore(STORE_ITEM);
         const request = store.get(id);
 
         request.onsuccess = () => resolve(request.result);
@@ -40,14 +39,16 @@ export async function getItemById(id) {
     });
 }
 
+
 /**
- * Retrieves all items from the store.
+ *
+ * @returns {Promise<unknown>}
  */
-export async function getAllItems() {
+export async function all() {
     const db = await initDB();
     return new Promise((resolve, reject) => {
-        const transaction = db.transaction(STORE_NAME, 'readonly');
-        const store = transaction.objectStore(STORE_NAME);
+        const transaction = db.transaction(STORE_ITEM, 'readonly');
+        const store = transaction.objectStore(STORE_ITEM);
         const request = store.getAll();
 
         request.onsuccess = () => resolve(request.result);
@@ -55,16 +56,17 @@ export async function getAllItems() {
     });
 }
 
+
 /**
- * Retrieves items that have a specific tool in their 'tools' array.
- * Uses the 'tools' multiEntry index for high performance.
- * @param {string} tool The tool to search for.
+ *
+ * @param tool
+ * @returns {Promise<unknown>}
  */
-export async function getItemsByTool(tool) {
+export async function tool(tool) {
     const db = await initDB();
     return new Promise((resolve, reject) => {
-        const transaction = db.transaction(STORE_NAME, 'readonly');
-        const store = transaction.objectStore(STORE_NAME);
+        const transaction = db.transaction(STORE_ITEM, 'readonly');
+        const store = transaction.objectStore(STORE_ITEM);
         const index = store.index('tools'); // Use the index
         const request = index.getAll(tool); // Query the index
 
@@ -77,16 +79,17 @@ export async function getItemsByTool(tool) {
     });
 }
 
+
 /**
- * Retrieves items belonging to a specific section.
- * Uses the 'section' index for high performance.
- * @param {string} section The section to search for.
+ *
+ * @param section
+ * @returns {Promise<unknown>}
  */
-export async function getItemsBySection(section) {
+export async function section(section) {
     const db = await initDB();
     return new Promise((resolve, reject) => {
-        const transaction = db.transaction(STORE_NAME, 'readonly');
-        const store = transaction.objectStore(STORE_NAME);
+        const transaction = db.transaction(STORE_ITEM, 'readonly');
+        const store = transaction.objectStore(STORE_ITEM);
         const index = store.index('section'); // Use the index
         const request = index.getAll(section); // Query the index
 
@@ -98,6 +101,3 @@ export async function getItemsBySection(section) {
         request.onerror = (event) => reject(event.target.error);
     });
 }
-
-// NOTE: We will add more functions here later as we need them,
-// like `getItemsByDomain`, etc. This is a great starting set.

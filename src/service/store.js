@@ -1,4 +1,4 @@
-import data from "./_data.js";
+import data from "/src/indexdb/_data";
 
 
 /*
@@ -35,7 +35,6 @@ export const groupTools = () => {
 
     return [...pack];
 }
-
 
 
 /*

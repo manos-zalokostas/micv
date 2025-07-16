@@ -1,9 +1,9 @@
 import {unsafeHTML} from "lit/directives/unsafe-html.js";
-import {itemById} from "/src/_core/store";
+import {itemById} from "/src/service/store";
 import {css, html, LitElement} from 'lit';
-import {SVGI} from "../_core/svg-icon";
-import {theme} from "../theme";
-import {EVT} from "/src/env";
+import {SVGI} from "../service/svg-icon";
+import {theme} from "/src/service/theme";
+import {EVT} from "/src/service/env";
 
 
 customElements.define('content-detail',
