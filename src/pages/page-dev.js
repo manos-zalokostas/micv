@@ -1,6 +1,5 @@
 import {html, css, LitElement} from 'lit';
-import {groupProjects, itemById} from "../service/store";
-import * as Item from "../indexdb/store-item";
+import store from "../indexdb/store";
 
 
 customElements.define('page-dev',
@@ -13,13 +12,15 @@ customElements.define('page-dev',
 
         constructor() {
             super();
-            this.entries = groupProjects()
-            console.log(this.entries)
+            // this.entries = groupProjects()
+            // console.log(this.entries)
         }
 
         async connectedCallback() {
             super.connectedCallback();
-            this.entries = await Item.id('WK06')
+            const Store = await store();
+            // this.entries = await Item.index("coding")
+            this.entries = await Store.query()
         }
 
         render = () => html`
