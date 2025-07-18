@@ -1,9 +1,9 @@
 import {unsafeHTML} from "lit/directives/unsafe-html.js";
+import {_DEV, MONIT, STORE} from "/src/service/env";
+import {theme} from "/src/service/theme";
 import {html, css, LitElement} from 'lit';
 import {SVGI} from "../service/svg-icon";
-import {_DEV, MONIT} from "/src/service/env";
-import {theme} from "/src/service/theme";
-import * as Item from "../indexdb/store-item";
+import store from "../indexdb/store";
 
 
 const assets = {
@@ -23,6 +23,7 @@ customElements.define('joi-monitor',
 
     class JoiMonitor extends LitElement {
 
+        #store = null;
 
         static properties = {
             activeContent: {type: String},
@@ -33,6 +34,13 @@ customElements.define('joi-monitor',
             super();
             // this.activeContent = 'INTRO'
             this.activeContent = MONIT.WORK
+        }
+
+
+        async connectedCallback() {
+            super.connectedCallback();
+
+            this.#store = await store(STORE.ITEM);
         }
 
         loopContent(val) {
@@ -61,7 +69,7 @@ customElements.define('joi-monitor',
             const ViewProject = this.shadowRoot.querySelector("monitor-view-project")
             ViewProject.pause();
 
-            ViewProject.project = await Item.id(code)
+            ViewProject.project = await this.#store.query(code)
         }
 
 

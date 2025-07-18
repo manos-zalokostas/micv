@@ -1,43 +1,54 @@
-import {groupByDomain, groupByTool, groupTools, itemById} from "/src/service/store";
-import {css, html, LitElement} from 'lit';
-import {DOMA, EVT} from "/src/service/env";
+import {groupByTool, groupTools, itemById, parseDomainSection} from "/src/service/store";
+import {DOMA, EVT, STORE} from "/src/service/env";
 import {theme} from "/src/service/theme";
+import {css, html, LitElement} from 'lit';
+import store from "../indexdb/store";
+
 
 customElements.define('content-tablet',
 
     class ContentTablet extends LitElement {
 
+        #store = null;
+        #assets = null;
+        #view = '';
+
         static properties = {
             tool: {type: String},
+            assets: {type: Array},
             domain: {type: String, default: DOMA.WORK},
-            assets: {type: Array}
         };
 
-        #view = '';
 
         constructor() {
             super();
-            this.assets = groupTools();
+        }
+
+        async connectedCallback() {
+            super.connectedCallback();
+
+            this.domain = DOMA.WORK;
+            this.#store = await store(STORE.ITEM);
+            this.#assets = await this.#store.query(groupTools)
             this.#view = this._viewTool();
         }
 
-        updated(changedProperties, x, z) {
+        async updated(changedProperties, x, z) {
             super.updated(changedProperties);
-
+            debugger
             if (changedProperties.has('domain')) {
-
                 if (this.domain === DOMA.TOOL) {
-                    this.assets = groupTools();
-                    this.#view = this._viewTool()
-                    return;
+                    this.#assets = await this.#store.query(groupTools)
+                    return this.#view = this._viewTool()
                 }
-                this.assets = this._packProjects(groupByDomain(this.domain))
+                const entries = await this.#store.queryIndex("domain", this.domain, parseDomainSection)
+                this.#assets = this._packProjects(entries)
                 this.#view = this._viewProject();
             }
 
             if (changedProperties.has('tool')) {
-
-                this.assets = this._packProjects([[this.tool, groupByTool(this.tool)]])
+                const entries = await this.#store.queryIndex("tools", this.tool, groupByTool)
+                this.#assets = this._packProjects(entries)
                 this.#view = this._viewProject();
             }
 
@@ -47,7 +58,7 @@ customElements.define('content-tablet',
         _packProjects(entries) {
             return entries.map(a => a[1])
                 .flat()
-                .map(([code]) => itemById(code))
+                .map(async ([code]) => await this.#store.query(code))
         }
 
 
@@ -79,7 +90,7 @@ customElements.define('content-tablet',
         _viewProject = () => html`
             <nav class="mi-tablet"
                  style="background-image: url('/micv/images/tech_logos/${this.tool}.jpg')">
-                ${this.assets.map((o) => html`
+                ${this.#assets.map((o) => html`
                     <a href="#" id="${o.id}" class="${o.domain.toLowerCase()}"
                        style="background-image: url('${o.shots[0]}')"
                        @click="${this.chooseProject}">
@@ -98,7 +109,7 @@ customElements.define('content-tablet',
 
         _viewTool = () => html`
             <nav class="mi-tablet">
-                ${this.assets.map(
+                ${this.#assets.map(
                         val => val
                                 && html`
                                     <a id="${val}" class="tool mi-tool"

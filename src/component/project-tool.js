@@ -1,4 +1,3 @@
-// import {groupProjects, itemById, itemByIndex} from "/src/service/store";
 import {html, css, LitElement} from 'lit';
 import {EVT} from "/src/service/env";
 

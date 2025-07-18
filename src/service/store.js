@@ -1,5 +1,3 @@
-import data from "/src/indexdb/_data";
-
 
 /*
 
@@ -28,7 +26,7 @@ export const itemById = (itemId) => {
 /*
 
  */
-export const groupTools = () => {
+export const groupTools = (data) => {
 
     let pack = data.map(o => Array.isArray(o.tools) ? o.tools : [])
     pack = new Set(pack.flat());
@@ -40,8 +38,7 @@ export const groupTools = () => {
 /*
 
  */
-export const groupProjects = () => {
-
+export const groupProjects = (data) => {
     let pack = data.map(o => [o.id, o.title, o.shots?.[0], o.id]);
     return pack;
 }
@@ -52,9 +49,9 @@ export const groupProjects = () => {
  * @param tool
  * @returns {[]}
  */
-export const groupByTool = (tool) => {
+export const groupByTool = (tools) => {
 
-    let tools = data.filter(o => o.tools.includes(tool));
+    // let tools = data.filter(o => o.tools.includes(tool));
 
     let pack = tools.map(item => [item.id, item.title])
 
@@ -94,6 +91,27 @@ export const groupByDomain = (domain = 'WORK') => {
     let pack = [];
     sections.forEach(str => {
         let a = domains.reduce((acc, o) => {
+            if (o.section === str) acc[1].push([o.id, o.title]);
+            return acc;
+        }, [str, []])
+        pack.push(a);
+    })
+
+    // console.log(">>>>>>>>>>>>>>>>>> ", pack)
+
+    return pack;
+}
+
+export const parseDomainSection = (data) => {
+
+
+    let sections = data.map(o => o.section);
+
+    sections = Array.from(new Set(sections));
+
+    let pack = [];
+    sections.forEach(str => {
+        let a = data.reduce((acc, o) => {
             if (o.section === str) acc[1].push([o.id, o.title]);
             return acc;
         }, [str, []])

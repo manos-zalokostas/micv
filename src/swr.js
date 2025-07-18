@@ -1,5 +1,5 @@
 export default async () => {
-debugger
+
 
     if (!'serviceWorker' in navigator) return;
     const HOST_PATH = "/micv/"
@@ -7,7 +7,7 @@ debugger
     let sw;
 
     try {
-debugger
+
 
         const reg = await navigator.serviceWorker.register(HOST_PATH + FILE_SW, {scope: HOST_PATH});
         console.log(' -- SW_REGISTRATION-INIT', reg);

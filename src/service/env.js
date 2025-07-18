@@ -53,3 +53,8 @@ export const _DEV = {
     VIEW: VIEW.LAND.RESU,
     // MONIT: MONIT.TOOL,
 }
+
+export const STORE = {
+    ITEM: 'item',
+    ASSE: 'asset',
+}

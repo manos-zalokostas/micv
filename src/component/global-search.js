@@ -1,21 +1,20 @@
+import {groupProjects, groupTools} from "../service/store";
 import {unsafeHTML} from "lit/directives/unsafe-html.js";
-import * as Store from "/src/service/store";
+import {EVT, STORE} from "/src/service/env";
 import {theme} from "/src/service/theme";
 import {SVGI} from "../service/svg-icon";
 import {css, html, LitElement} from 'lit';
-import {EVT} from "/src/service/env";
-
-const asset = {
-    work: Store.groupProjects(),
-    tools: Store.groupTools(),
-    list: ['work', 'skill',]
-}
-
+import store from "../indexdb/store";
 
 customElements.define('global-search',
 
     class GlobalSearch extends LitElement {
 
+        #store = null;
+        asset = {
+            work: [],
+            tools: [],
+        }
 
         static properties = {
             active: {type: String},
@@ -25,6 +24,23 @@ customElements.define('global-search',
         constructor() {
             super();
             this.active = '';
+        }
+
+        async connectedCallback() {
+            super.connectedCallback();
+
+            this.#store = await store(STORE.ITEM);
+
+            const [work, tools] = await Promise.all([
+                this.#store.query(groupProjects),
+                this.#store.query(groupTools),
+            ])
+
+            this.asset = {
+                list: ['work', 'skill'],
+                work,
+                tools,
+            }
         }
 
         search(evt) {
@@ -82,7 +98,7 @@ customElements.define('global-search',
                 </fieldset>
 
                 <nav>
-                    ${asset.work.filter(([key, name, img]) => !this.active || name.toLowerCase().includes(this.active))
+                    ${this.asset && this.asset.work.filter(([key, name, img]) => !this.active || name.toLowerCase().includes(this.active))
                             .map(([key, name, img, id]) => html`
                                 <a data-key="${key}" data-type="work"
                                    @click="${this.chooseProject}">
@@ -90,7 +106,7 @@ customElements.define('global-search',
                                     <img src="${img}" alt="logo ${name}"/>
                                 </a>
                             `)}
-                    ${asset.tools.filter((name) => !this.active || name.toLowerCase().includes(this.active))
+                    ${this.asset && this.asset.tools.filter((name) => !this.active || name.toLowerCase().includes(this.active))
                             .map((name) => html`
                                 <a data-key="${name}" data-type="tool"
                                    @click="${this.chooseTool}">

@@ -13,7 +13,7 @@ import "/src/component/image-slider.js";
 import "/src/component/intro-menu.js";
 import "/src/component/monitor.js";
 import "/src/component/monitor-view-project.js";
-import "/src/component/monitor-view-reference.js";
+// import "/src/component/monitor-view-reference.js";
 import "/src/component/monitor-view-tool.js";
 import "/src/component/project-tool.js";
 import "/src/component/quote-intro.js";

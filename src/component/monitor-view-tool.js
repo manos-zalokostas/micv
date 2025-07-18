@@ -1,15 +1,13 @@
-import {html, css, LitElement} from 'lit';
-import {groupProjects, groupTools, itemById, itemByIndex} from "/src/service/store";
+import {groupTools} from "/src/service/store";
+import {EVT, STORE} from "/src/service/env";
 import {theme} from "/src/service/theme";
-import {EVT} from "/src/service/env";
+import {html, css, LitElement} from 'lit';
+import Store from "../indexdb/store";
 
-const list = groupTools();
 
 /**
  *
  */
-
-
 customElements.define('monitor-view-tool',
 
 
@@ -23,6 +21,8 @@ customElements.define('monitor-view-tool',
         };
 
         #step = 12;
+        #store = null;
+        #list = [];
 
         constructor() {
             super();
@@ -32,15 +32,29 @@ customElements.define('monitor-view-tool',
             this.slice = null;
 
             this.display();
-            // this.tools = Monitor.curr().tools || []; // Default tools array from the current monitor object
-            // this.tools = itemByIndex(20).tools
         }
+
+
+        async connectedCallback() {
+            super.connectedCallback();
+            this.#store = await Store(STORE.ITEM)
+            this.#list = await this.#store.query(groupTools)
+            // console.log('Element launced the DOM!');
+            this.loop();
+        }
+
+        disconnectedCallback() {
+            super.disconnectedCallback();
+            // console.log('Element removed from the DOM!');
+            this.clear()
+        }
+
 
         display() {
             const start = this.activeIndex * this.#step,
                 end = start + this.#step;
 
-            this.tools = list.slice(start, end)
+            this.tools = this.#list.slice(start, end)
         }
 
         loop() {
@@ -64,14 +78,14 @@ customElements.define('monitor-view-tool',
             this.pause();
             this.activeIndex++;
             console.log(this.activeIndex, "<<<<<<<<<<<** ")
-            if (((this.activeIndex * this.#step) > list.length - 1)) this.activeIndex = 0;
+            if (((this.activeIndex * this.#step) > this.#list.length - 1)) this.activeIndex = 0;
             this.display()
         }
 
         prev() {
             this.pause();
             this.activeIndex--;
-            if (this.activeIndex < 0) this.activeIndex = (list.length / this.#step) - 1;
+            if (this.activeIndex < 0) this.activeIndex = (this.#list.length / this.#step) - 1;
             this.display()
         }
 
@@ -79,18 +93,6 @@ customElements.define('monitor-view-tool',
         clear() {
             clearInterval(this.timer)
             this.tools = null;
-        }
-
-        connectedCallback() {
-            super.connectedCallback();
-            // console.log('Element launced the DOM!');
-            this.loop();
-        }
-
-        disconnectedCallback() {
-            super.disconnectedCallback();
-            // console.log('Element removed from the DOM!');
-            this.clear()
         }
 
 
@@ -142,7 +144,7 @@ customElements.define('monitor-view-tool',
                     a {
                         display: flex;
                         justify-content: space-between;
-                         font-size: large;
+                        font-size: large;
                         font-family: var(--sgs-font-family)
                         color: var(--color-tool);
                         padding: 6px;
@@ -152,7 +154,7 @@ customElements.define('monitor-view-tool',
                         &:hover {
                             text-decoration: underline;
                         }
-                        
+
                         * {
                             pointer-events: none;
                         }

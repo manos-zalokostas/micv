@@ -1,19 +1,17 @@
-import {groupProjects, itemById, itemByIndex} from "/src/service/store";
 import {unsafeHTML} from "lit/directives/unsafe-html.js";
-import {html, css, LitElement} from 'lit';
-import {EVT, PAGE} from "/src/service/env";
+import {EVT, PAGE, STORE} from "/src/service/env";
+import {groupProjects} from "/src/service/store";
 import {theme} from "/src/service/theme";
-
-const entries = groupProjects()
-
-/**
- *
- */
+import {html, css, LitElement} from 'lit';
+import store from "../indexdb/store";
 
 
 customElements.define('monitor-view-project',
 
     class MonitorViewProject extends LitElement {
+
+        #store = null;
+        #entries = null;
 
         static properties = {
             active: {type: Number},
@@ -26,16 +24,28 @@ customElements.define('monitor-view-project',
             super();
             this.active = 1
             this.activeIndex = 0;
-            this.project = itemByIndex(0);
-            // this.loop();
-            // console.log(this.project)
+            this.project = null;
         }
 
+
+        async connectedCallback() {
+            super.connectedCallback();
+            this.#store = await store(STORE.ITEM);
+            this.#entries = await this.#store.query(groupProjects);
+            this.loop();
+        }
+
+        disconnectedCallback() {
+            super.disconnectedCallback();
+            this.clear()
+        }
+
+
         loop() {
-            this.timer = setInterval(
-                () => {
-                    const pid = entries[this.activeIndex][0]
-                    this.project = itemById(pid)
+            this.timer = setInterval(async () => {
+                    // const pid = this.#entries[this.activeIndex][0]
+                    // this.project = await this.#store.query(pid)
+                    this.project = await this.#store.queryAdvance(this.activeIndex);
                     if (!this.project) this.activeIndex = 0;
                     this.activeIndex++;
                 }, 5000
@@ -47,16 +57,18 @@ customElements.define('monitor-view-project',
             this.activeIndex--;
         }
 
-        next() {
+        async next() {
             this.activeIndex++;
-            if (this.activeIndex > entries.length - 1) this.activeIndex = 0;
-            this.project = itemById(entries[this.activeIndex][0])
+            if (this.activeIndex > this.#entries.length - 1) this.activeIndex = 0;
+            // this.project = await this.#store.query(this.#entries[this.activeIndex][0])
+            this.project = await this.#store.queryAdvance(this.activeIndex);
         }
 
-        prev() {
+        async prev() {
             this.activeIndex--;
-            if (this.activeIndex < 0) this.activeIndex = entries.length - 1;
-            this.project = itemById(entries[this.activeIndex][0])
+            if (this.activeIndex < 0) this.activeIndex = this.#entries.length - 1;
+            // this.project = await this.#store.query(this.#entries[this.activeIndex][0])
+            this.project = await this.#store.queryAdvance(this.activeIndex);
         }
 
         clear() {
@@ -83,19 +95,8 @@ customElements.define('monitor-view-project',
             )
         }
 
-        connectedCallback() {
-            super.connectedCallback();
-            this.loop();
-        }
-
-        disconnectedCallback() {
-            super.disconnectedCallback();
-            this.clear()
-        }
-
 
         render = () => {
-
             if (!this.project) return '';
 
             const {id, title, section, description, shots, tools, domain} = this.project;
