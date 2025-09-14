@@ -1,4 +1,4 @@
-import {groupByTool, groupTools, itemById, parseDomainSection} from "/src/service/store";
+import {groupByTool, groupTools, parseDomainSection} from "/src/service/store";
 import {DOMA, EVT, STORE} from "/src/service/env";
 import {theme} from "/src/service/theme";
 import {css, html, LitElement} from 'lit';
@@ -31,16 +31,20 @@ customElements.define('content-tablet',
             this.#store = await store(STORE.ITEM);
             this.#assets = await this.#store.query(groupTools)
             this.#view = this._viewTool();
+            debugger
         }
 
         async updated(changedProperties, x, z) {
             super.updated(changedProperties);
-            debugger
+
+            if (!this.#store) return;
+
             if (changedProperties.has('domain')) {
                 if (this.domain === DOMA.TOOL) {
                     this.#assets = await this.#store.query(groupTools)
                     return this.#view = this._viewTool()
                 }
+                debugger
                 const entries = await this.#store.queryIndex("domain", this.domain, parseDomainSection)
                 this.#assets = this._packProjects(entries)
                 this.#view = this._viewProject();
