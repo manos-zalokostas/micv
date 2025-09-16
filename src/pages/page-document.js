@@ -39,6 +39,30 @@ customElements.define('page-document',
                         </p>
                     </div>
                 </header>
+                <div class="topic bgless">
+                    <em class="topic-title"></em>
+                    Senior Full Stack Engineer with 10+ years of experience, built upon a foundation of 15+ years of
+                    continuous study and development. My core focus has been architecting and building complete,
+                    end-to-end systems—from creating new applications based on high-level business proposals, to
+                    modernizing chaotic legacy processes into robust, scalable, and secure web applications and
+                    their portable infrastructures.</i>
+                </div>
+                <br/>
+                <div class="topic">
+                    <em class="topic-title">technical experience</em>
+                    ${tool.map(({tasks}, i) => html`
+                        <section>
+                            <nav>
+                                ${tasks.map(([title, detail], ii) => html`
+                                    <a>
+                                        <h4>${title.toUpperCase()}</h4>
+                                        <p>${detail}</p>
+                                    </a>
+                                `)}
+                            </nav>
+                        </section>
+                    `)}
+                </div>
                 <div class="topic">
                     <em class="topic-title">occupational experience</em>
                     ${work.map(({type, tasks}, i) => html`
@@ -60,6 +84,22 @@ customElements.define('page-document',
                 </div>
 
                 <div class="topic">
+                    <em class="topic-title">publications & research</em>
+                    <section>
+                        <nav>
+                            <a>
+                                <h4>SYNERGY: A Big Data Platform for the Facilitation of the Energy Transition</h4>
+                                <p>Co-authored a technical paper on the SYNERGY platform's architecture, detailing
+                                    its design as a big data solution for the energy transition.
+                                    Published: 2023 International Conference on Future Energy Solutions (FES) / IEEE
+                                    Xplore.
+                                    Official Link: https://ieeexplore.ieee.org/author/37089912710</p>
+                            </a>
+                        </nav>
+                    </section>
+                </div>
+
+                <div class="topic">
                     <em class="topic-title">education & training</em>
                     ${study.map(({type, tasks}, i) => html`
                         <section>
@@ -78,25 +118,8 @@ customElements.define('page-document',
                 </div>
 
                 <div class="topic">
-                    <em class="topic-title">technologies applied</em>
-                    ${tool.map(({tasks}, i) => html`
-                        <section>
-                            <nav>
-                                ${tasks.map(([title, detail], ii) => html`
-                                    <a>
-                                        <h4>${title.toUpperCase()}</h4>
-                                        <p>${detail}</p>
-                                    </a>
-                                `)}
-                            </nav>
-                        </section>
-                    `)}
-                </div>
-
-
-                <div class="topic">
                     <em class="topic-title">languages</em>
-                    ${lang.map(({ tasks}, i) => html`
+                    ${lang.map(({tasks}, i) => html`
                         <section>
                             <nav>
                                 ${tasks.map(([title, detail], ii) => html`
@@ -110,9 +133,7 @@ customElements.define('page-document',
                     `)}
                 </div>
 
-
                 </div>
-
 
             </article>
         `;
@@ -184,6 +205,10 @@ customElements.define('page-document',
                     width: 90%;
                     left: 3%;
                     margin: 15px 0 0 0;
+                    
+                    &.bgless {
+                        background-color: transparent;
+                    }
 
                     .topic-title {
                         position: relative;
@@ -238,7 +263,8 @@ customElements.define('page-document',
                                 position: relative;
                                 right: -50px;
                                 width: 100%;
-                                border-bottom: 1px solid #aaa;
+                                border-left: 1px solid #ccc;
+                                border-bottom: 1px solid #ccc;
                                 padding-bottom: 5px;
                             }
 
@@ -246,11 +272,14 @@ customElements.define('page-document',
 
                         sub {
                             position: relative;
-                            right: -40px;
+                            right: -70px;
                             top: -5px;
                             width: 100%;
                             text-align: right;
-                            color: #aaa;
+                            color: #777;
+                            background: #eee;
+                            font-size: xx-small;
+                            //padding: 2px;
                             //font-size: small;
                         }
 
