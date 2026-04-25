@@ -69,7 +69,11 @@ customElements.define('joi-monitor',
             const ViewProject = this.shadowRoot.querySelector("monitor-view-project")
             ViewProject.pause();
 
-            ViewProject.project = await this.#store.query(code)
+            console.log(" -- MONITOR RECEIVED PROJECT CODE ", {code})
+            const projectCurr =  await this.#store.query(code)
+            console.log(" -- MONITOR RETRIEVED PROJECT ", {projectCurr})
+
+            ViewProject.project = projectCurr;
         }
 
 

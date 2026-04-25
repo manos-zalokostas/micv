@@ -19,6 +19,7 @@ let database;
  * Returns a Promise that resolves with the database instance.
  */
 export function initDB() {
+
     return new Promise((resolve, reject) => {
         // If the connection is already open, resolve the promise with it immediately.
         if (database) return resolve(database);

@@ -1,6 +1,7 @@
 import {html, css, LitElement} from 'lit';
-import {_DEV, PAGE, VIEW} from "/src/service/env";
+import {_DEV, PAGE, STORE, VIEW} from "/src/service/env";
 import {theme} from "/src/service/theme";
+import store from "../indexdb/store";
 
 
 customElements.define('page-introduction',
@@ -26,6 +27,7 @@ customElements.define('page-introduction',
         }
 
         evtMonitorContent(evt) {
+            console.log(" -- PAGE-INTRODUCTION CAUGHT 'MONITOR-CONTNET' EVENT W/:: ", {evt})
             const Monitor = this.shadowRoot.querySelector('joi-monitor');
             Monitor.forceConent(evt.detail.code)
         }
@@ -68,26 +70,26 @@ customElements.define('page-introduction',
             theme,
             css`
 
-            article {
+                article {
 
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                gap: 25px;
-                width: 100vw;
-                height: 100vh;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    gap: 25px;
+                    width: 100vw;
+                    height: 100vh;
 
-                aside {
-                    height: 375px;
-                    margin: 10px 0 50px 0;
+                    aside {
+                        height: 375px;
+                        margin: 10px 0 50px 0;
+                    }
+
+                    main {
+                        height: calc(100vh - 475px);
+                        overflow: auto;
+                    }
+
                 }
-
-                main {
-                    height: calc(100vh - 475px);
-                    overflow: auto;
-                }
-
-            }
-        `]
+            `]
     }
 );

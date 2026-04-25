@@ -43,8 +43,6 @@ customElements.define('monitor-view-project',
 
         loop() {
             this.timer = setInterval(async () => {
-                    // const pid = this.#entries[this.activeIndex][0]
-                    // this.project = await this.#store.query(pid)
                     this.project = await this.#store.queryAdvance(this.activeIndex);
                     if (!this.project) this.activeIndex = 0;
                     this.activeIndex++;
@@ -100,6 +98,8 @@ customElements.define('monitor-view-project',
             if (!this.project) return '';
 
             const {id, title, section, description, shots, tools, domain} = this.project;
+
+            console.log(" -- MONITOR-VIEW-PROJECT", {project: this.project})
             if (Array.isArray(tools)) tools.length = 15;
 
             return html`

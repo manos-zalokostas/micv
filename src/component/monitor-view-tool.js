@@ -39,7 +39,12 @@ customElements.define('monitor-view-tool',
             super.connectedCallback();
             this.#store = await Store(STORE.ITEM)
             this.#list = await this.#store.query(groupTools)
+            // const item = 'TSIKIS'
             // console.log('Element launced the DOM!');
+            // const StoreItem = await store(STORE.ITEM);
+            const item = await this.#store.query('WK06')
+            console.log(" _________________________________ ITEM", {item})
+            // console.log(" _________________________________ LIST ", this.#list)
             this.loop();
         }
 

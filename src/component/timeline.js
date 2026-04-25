@@ -54,6 +54,7 @@ customElements.define('joi-timeline',
                                                 <button class="work ${code === this.activeWork ? 'active' : ''}"
                                                         @click="${() => {
                                                             this.activeWork = code;
+                                                            console.log(" -- TIMELINE CODE:: ", {code})
                                                             this.dispatchEvent(
                                                                     new CustomEvent(EVT.MONITOR_CONTENT, {
                                                                         detail: {code},

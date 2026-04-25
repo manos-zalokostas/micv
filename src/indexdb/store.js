@@ -22,7 +22,7 @@ export default async function (store = 'item') {
                 let proc;
 
                 if (['string', 'number'].includes(typeof parse)) proc = resource.get(parse)
-                proc = resource.getAll();
+                else proc = resource.getAll();
 
                 proc.onsuccess = () => {
                     if (typeof parse === 'function') return resolve(parse(proc.result))

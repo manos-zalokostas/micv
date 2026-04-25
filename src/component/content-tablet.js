@@ -1,4 +1,4 @@
-import {groupByTool, groupTools, parseDomainSection} from "/src/service/store";
+import {groupByTool, groupTools, parseDomain, parseDomainSection} from "/src/service/store";
 import {DOMA, EVT, STORE} from "/src/service/env";
 import {theme} from "/src/service/theme";
 import {css, html, LitElement} from 'lit';
@@ -31,7 +31,6 @@ customElements.define('content-tablet',
             this.#store = await store(STORE.ITEM);
             this.#assets = await this.#store.query(groupTools)
             this.#view = this._viewTool();
-            debugger
         }
 
         async updated(changedProperties, x, z) {
@@ -44,9 +43,9 @@ customElements.define('content-tablet',
                     this.#assets = await this.#store.query(groupTools)
                     return this.#view = this._viewTool()
                 }
-                debugger
-                const entries = await this.#store.queryIndex("domain", this.domain, parseDomainSection)
-                this.#assets = this._packProjects(entries)
+
+                const entries = await this.#store.queryIndex("domain", this.domain, parseDomain)
+                this.#assets = entries
                 this.#view = this._viewProject();
             }
 
@@ -56,6 +55,7 @@ customElements.define('content-tablet',
                 this.#view = this._viewProject();
             }
 
+            this.render()
         }
 
 
@@ -92,24 +92,24 @@ customElements.define('content-tablet',
 
 
         _viewProject = () => html`
-            <nav class="mi-tablet"
-                 style="background-image: url('/micv/images/tech_logos/${this.tool}.jpg')">
+                <nav class="mi-tablet"
+                     style="background-image: url('/micv/images/tech_logos/${this.tool}.jpg')">
                 ${this.#assets.map((o) => html`
-                    <a href="#" id="${o.id}" class="${o.domain.toLowerCase()}"
-                       style="background-image: url('${o.shots[0]}')"
-                       @click="${this.chooseProject}">
-                        <small>${o.category}</small>
-                        <strong class="mi-txt-h2 ${o.domain.toLowerCase()}">${o.title}
-                            <small class="mi-txt-min pill ${o.domain.toLowerCase()}">${o.id}</small>
-                        </strong>
-                        <p>
-                            <span>${o.description.substring(0, 200)}<em>&nbsp&nbsp;...more</em></span>
-                        </p>
-                    </a>
+                                            <a href="#" id="${o.id}" class="${o.domain.toLowerCase()}"
+                                               style="background-image: url('${o.shots[0]}')"
+                                               @click="${this.chooseProject}">
+                                                <small>${o.category}</small>
+                                                <strong class="mi-txt-h2 ${o.domain.toLowerCase()}">${o.title}
+                                                    <small class="mi-txt-min pill ${o.domain.toLowerCase()}">${o.id}</small>
+                                                </strong>
+                                                <p>
+                                                    <span>${o.description.substring(0, 200)}<em>&nbsp&nbsp;...more</em></span>
+                                                </p>
+                                            </a>
                 `)}
 
-            </nav>
-        `;
+                </nav>
+            `;
 
         _viewTool = () => html`
             <nav class="mi-tablet">
@@ -131,7 +131,10 @@ customElements.define('content-tablet',
         `;
 
 
-        render = () => this.#view
+        render = () => {
+            debugger
+            return this.#view
+        }
 
 
         static styles = [
