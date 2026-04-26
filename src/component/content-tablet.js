@@ -9,15 +9,57 @@ customElements.define('content-tablet',
 
     class ContentTablet extends LitElement {
 
-        #store = null;
-        #assets = null;
-        #view = '';
-
         static properties = {
             tool: {type: String},
             assets: {type: Array},
-            domain: {type: String, default: DOMA.WORK},
+            domain: {type: String},
         };
+
+        #store = null;
+        #assets = null;
+        #domainCurr = null;
+        #toolCurr = null;
+        #viewCurr = '';
+        #viewAvail = {
+            project: () => {
+                return html`
+                    <nav class="mi-tablet"
+                         style="background-image: url('/micv/images/tech_logos/${this.tool}.jpg')">
+                        ${this.#assets.map((o) => html`
+                            <a href="#" id="${o.id}" class="${o.domain.toLowerCase()}"
+                               style="background-image: url('${o.shots[0]}')"
+                               @click="${this.chooseProject}">
+                                <small>${o.category}</small>
+                                <strong class="mi-txt-h2 ${o.domain.toLowerCase()}">${o.title}
+                                    <small class="mi-txt-min pill ${o.domain.toLowerCase()}">${o.id}</small>
+                                </strong>
+                                <p>
+                                    <span>${o.description.substring(0, 200)}<em>&nbsp&nbsp;...more</em></span>
+                                </p>
+                            </a>
+                        `)}
+                    </nav>
+                `
+            },
+            tool: () => {
+                return html`
+                    <nav class="mi-tablet">
+                        ${this.#assets.map(
+                                val => html`
+                                    <a id="${val}" class="tool mi-tool"
+                                       style="background-image: url('/micv/images/tech_logos/${val}.jpg')"
+                                       @click="${this.chooseTool}">
+                                        <h4>${val.replaceAll("_", " ").toUpperCase()}</h4>
+                                        <span>
+                                            <img src="/micv/images/tech_logos/${val}.jpg" alt="${val}"/>
+                                        </span>
+                                    </a>
+                                `
+                        )}
+                    </nav>
+                `
+            }
+        }
 
 
         constructor() {
@@ -25,44 +67,62 @@ customElements.define('content-tablet',
         }
 
         async connectedCallback() {
+            console.log(" -- CONTENT-TABLET -- CONNECTE-CALLBACK")
             super.connectedCallback();
 
-            this.domain = DOMA.WORK;
             this.#store = await store(STORE.ITEM);
-            this.#assets = await this.#store.query(groupTools)
-            this.#view = this._viewTool();
+            // this.#assets = await this.#store.query(groupTools)
         }
 
-        async updated(changedProperties, x, z) {
+        async updated(changedProperties) {
             super.updated(changedProperties);
+            console.log(" -- CONTENT-TABLET -- UPDATEID")
+            debugger
 
             if (!this.#store) return;
 
-            if (changedProperties.has('domain')) {
-                if (this.domain === DOMA.TOOL) {
-                    this.#assets = await this.#store.query(groupTools)
-                    return this.#view = this._viewTool()
+
+            if ([DOMA.WORK, DOMA.STUD].includes(this.domain)) {
+                this.#toolCurr = null;
+                if (this.#domainCurr !== this.domain) {
+                    this.#domainCurr = this.domain;
+                    this.#assets = await this.#store.queryIndex("domain", this.domain, parseDomain)
+                    this.#viewCurr = this.#viewAvail.project()
+                    this.requestUpdate();
                 }
-
-                const entries = await this.#store.queryIndex("domain", this.domain, parseDomain)
-                this.#assets = entries
-                this.#view = this._viewProject();
             }
 
-            if (changedProperties.has('tool')) {
-                const entries = await this.#store.queryIndex("tools", this.tool, groupByTool)
-                this.#assets = this._packProjects(entries)
-                this.#view = this._viewProject();
+            if ([DOMA.TOOL].includes(this.domain) && !(this.tool)) {
+                if (this.#domainCurr !== this.domain) {
+                    this.#domainCurr = this.domain;
+                    this.#assets = await this.#store.query(groupTools)
+                    this.#viewCurr = this.#viewAvail.tool()
+                    this.requestUpdate();
+                }
             }
 
-            this.render()
+            if ([DOMA.TOOL].includes(this.#domainCurr) && this.tool) {
+                this.#domainCurr = this.domain;
+                if (this.#toolCurr !== this.tool) {
+                    this.#toolCurr = this.tool;
+                    const entries = await this.#store.queryIndex("tools", this.tool, groupByTool)
+                    this.#assets = await this._packProjects(entries)
+                    this.#viewCurr = this.#viewAvail.project()
+                    this.requestUpdate();
+                }
+            }
         }
 
 
-        _packProjects(entries) {
-            return entries.map(a => a[1])
-                .flat()
-                .map(async ([code]) => await this.#store.query(code))
+        async _packProjects(entries) {
+            debugger
+            const pack = []
+            const codes = entries.map(a => a[0]).flat()
+            for (const code of codes) {
+                pack.push(await this.#store.query(code))
+            }
+            debugger
+            return pack;
         }
 
 
@@ -91,49 +151,14 @@ customElements.define('content-tablet',
         }
 
 
-        _viewProject = () => html`
-                <nav class="mi-tablet"
-                     style="background-image: url('/micv/images/tech_logos/${this.tool}.jpg')">
-                ${this.#assets.map((o) => html`
-                                            <a href="#" id="${o.id}" class="${o.domain.toLowerCase()}"
-                                               style="background-image: url('${o.shots[0]}')"
-                                               @click="${this.chooseProject}">
-                                                <small>${o.category}</small>
-                                                <strong class="mi-txt-h2 ${o.domain.toLowerCase()}">${o.title}
-                                                    <small class="mi-txt-min pill ${o.domain.toLowerCase()}">${o.id}</small>
-                                                </strong>
-                                                <p>
-                                                    <span>${o.description.substring(0, 200)}<em>&nbsp&nbsp;...more</em></span>
-                                                </p>
-                                            </a>
-                `)}
-
-                </nav>
-            `;
-
-        _viewTool = () => html`
-            <nav class="mi-tablet">
-                ${this.#assets.map(
-                        val => val
-                                && html`
-                                    <a id="${val}" class="tool mi-tool"
-                                       style="background-image: url('/micv/images/tech_logos/${val}.jpg')"
-                                       @click="${this.chooseTool}">
-                                        <h4>${val.replaceAll("_", " ").toUpperCase()}</h4>
-                                        <span>
-                                            <img src="/micv/images/tech_logos/${val}.jpg" alt="${val}"/>
-                                        </span>
-                                    </a>
-                                `
-                                || ""
-                )}
-            </nav>
-        `;
-
-
-        render = () => {
-            debugger
-            return this.#view
+        render = (x, y, z) => {
+            console.log(" -- CONTENT-TABLET -- RENDER INVOKED")
+            return this.#viewCurr;
+            // const view = this.domain !== DOMA.TOOL
+            //     ? this.#view.project()
+            //     : this.#view.tool()
+            // debugger
+            // return view
         }
 
 
@@ -241,4 +266,5 @@ customElements.define('content-tablet',
         ]
 
     }
-);
+)
+;

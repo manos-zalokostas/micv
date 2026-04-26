@@ -40,7 +40,7 @@ export const groupByTool = (tools) => {
  * @returns {[]}
  */
 export const parseDomainSection = (data) => {
-    debugger
+    
     let sections = data.map(o => o.section);
     sections = Array.from(new Set(sections));
 
@@ -52,7 +52,7 @@ export const parseDomainSection = (data) => {
         }, [str, []])
         pack.push(a);
     })
-debugger
+
     return pack;
 }
 
@@ -62,7 +62,7 @@ debugger
  * @returns {[]}
  */
 export const parseDomain = (data) => {
-//     debugger
+//     
 //     let domains = data.map(o => o.domain);
 //     domains = Array.from(new Set(domains));
 //
@@ -74,6 +74,6 @@ export const parseDomain = (data) => {
 //         }, [str, []])
 //         pack.push(a);
 //     })
-// debugger
+// 
     return data;
 }

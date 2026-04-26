@@ -26,12 +26,12 @@ customElements.define('content-menu',
 
 
         changeDomain(domain) {
-            if (this.active === domain) return;
+            // if (this.active === domain) return;
 
             this.activeTool = '';
             this.active = domain;
             this.dispatchEvent(new CustomEvent(EVT.DOMAIN_CHANGE, {
-                detail: {domain},
+                detail: {domain, tool: this.activeTool},
                 composed: true,
                 bubbles: true,
             }));
