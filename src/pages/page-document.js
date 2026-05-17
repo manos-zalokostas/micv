@@ -1,24 +1,21 @@
-import {work, study, tool, lang} from "/src/indexdb/data-cv";
-import {html, css, LitElement} from 'lit';
+import {work, study, tool, lang,  arendi, free} from "/src/indexdb/data-cv";
 import {theme} from "/src/service/theme";
+import {html, css, LitElement} from 'lit';
 
 customElements.define('page-document',
 
     class PageTextCv extends LitElement {
 
-        static properties = {
-            // activeContent: {type: String, default: VIEW.LAND.INTRO},
-        };
+        static properties = {};
 
         constructor() {
             super();
-            // this.activeContent = VIEW.LAND.INTRO
         }
-
 
         render = () => html`
 
             <article>
+               
                 <header>
                     <div class="personal">
                         <br/>
@@ -29,7 +26,6 @@ customElements.define('page-document',
                     </div>
                     <div class="occupational">
                         <br/>
-                        <br/>
                         <h2>creative - structured - disciplined - committed</h2>
                         <em>https://gr.linkedin.com/in/manos-zalokostas-93798332</em>
                         <br/>
@@ -39,19 +35,42 @@ customElements.define('page-document',
                         </p>
                     </div>
                 </header>
+                
                 <div class="topic bgless">
                     <em class="topic-title"></em>
-                    Senior Full Stack Engineer with 10+ years of experience, built upon a foundation of 15+ years of
-                    continuous study and development. My core focus has been architecting and building complete,
-                    end-to-end systems—from creating new applications based on high-level business proposals, to
-                    modernizing chaotic legacy processes into robust, scalable, and secure web applications and
-                    their portable infrastructures.</i>
+                    Senior Full Stack Engineer with 10+ years of experience, built upon a foundation of 15+ years of continuous study and development. My core focus has been architecting and building complete,end-to-end systems - from creating new applications based on high-level business proposals, to modernizing chaotic legacy processes into robust, scalable, and secure web applications and their portable infrastructures.</i>
                 </div>
                 <br/>
-                <div class="topic">
-                    <em class="topic-title">technical experience</em>
-                    ${tool.map(({tasks}, i) => html`
+
+                <!-- TECHNICAL EXPERIENCE -->
+                <!-- =======================================-->
+                <div class="topic techinical">
+                    <em class="topic-title">technical</em>
+                    <p class="columns">
+                        ${tool.map(({tasks}, i) => html`
+                            <section>
+                                <nav>
+                                    ${tasks.map(([title, detail], ii) => html`
+                                        <a>
+                                            <h4>${title.toUpperCase()}</h4>
+                                            <p>${detail}</p>
+                                        </a>
+                                    `)}
+                                </nav>
+                            </section>
+                        `)}
+                    </p>
+                </div>
+
+                <!-- OCCUPAITONAL EXPERIENCE -->
+                <!-- =======================================-->
+                <div class="topic occupational">
+                    <em class="topic-title">organizations</em>
+                    ${work.map(({type, tasks}, i) => html`
                         <section>
+                            <header>
+                                <h3>${type.toUpperCase()}</h3>
+                            </header>
                             <nav>
                                 ${tasks.map(([title, detail], ii) => html`
                                     <a>
@@ -63,44 +82,50 @@ customElements.define('page-document',
                         </section>
                     `)}
                 </div>
-                <div class="topic">
-                    <em class="topic-title">occupational experience</em>
-                    ${work.map(({type, tasks}, i) => html`
+
+                <!-- FREELANCING EXPERIENCE -->
+                <!-- =======================================-->
+                <div class="topic freelance">
+                    <em class="topic-title">freelance</em>
+                    ${free.map(({type, tasks}, i) => html`
                         <section>
                             <header>
                                 <h3>${type.toUpperCase()}</h3>
                             </header>
                             <nav>
                                 ${tasks.map(([title, detail], ii) => html`
-                                    <a class="${i === 0 && [1, 4].includes(ii) ? 'side-task' : ''}">
+                                    <a>
                                         <h4>${title.toUpperCase()}</h4>
                                         <p>${detail}</p>
                                     </a>
-                                    ${i === 0 && [1, 4].includes(ii) ? html`<sub>side project</sub>` : ''}
                                 `)}
                             </nav>
                         </section>
                     `)}
                 </div>
 
-                <div class="topic">
-                    <em class="topic-title">publications & research</em>
-                    <section>
-                        <nav>
-                            <a>
-                                <h4>SYNERGY: A Big Data Platform for the Facilitation of the Energy Transition</h4>
-                                <p>Co-authored a technical paper on the SYNERGY platform's architecture, detailing
-                                    its design as a big data solution for the energy transition.
-                                    Published: 2023 International Conference on Future Energy Solutions (FES) / IEEE
-                                    Xplore.
-                                    Official Link: https://ieeexplore.ieee.org/author/37089912710</p>
-                            </a>
-                        </nav>
-                    </section>
+                <!-- PERSONAL R&D-->
+                <!-- =======================================-->
+                <div class="topic research">
+                    <em class="topic-title">research / publications</em>
+                    ${arendi.map(({type, tasks}, i) => html`
+                        <section>
+                            <nav>
+                                <h3 class="margless">&nbsp;&nbsp;&nbsp;${type.toUpperCase()}</h3>
+                                ${tasks.map(detail => html`
+                                    <a>
+                                        <p>${detail}</p>
+                                    </a>
+                                `)}
+                            </nav>
+                        </section>
+                    `)}
                 </div>
 
-                <div class="topic">
-                    <em class="topic-title">education & training</em>
+                <!-- EDUCATION & TRAINING -->
+                <!-- =======================================-->
+                <div class="topic education">
+                    <em class="topic-title">education</em>
                     ${study.map(({type, tasks}, i) => html`
                         <section>
                             <header>
@@ -117,27 +142,8 @@ customElements.define('page-document',
                     `)}
                 </div>
 
-                <div class="topic">
-                    <em class="topic-title">languages</em>
-                    ${lang.map(({tasks}, i) => html`
-                        <section>
-                            <nav>
-                                ${tasks.map(([title, detail], ii) => html`
-                                    <a>
-                                        <h4>${title.toUpperCase()}</h4>
-                                        <p>${detail}</p>
-                                    </a>
-                                `)}
-                            </nav>
-                        </section>
-                    `)}
-                </div>
-
-                </div>
-
             </article>
         `;
-
 
         static styles = [
             theme,
@@ -152,14 +158,13 @@ customElements.define('page-document',
                     background: white;
                     font-family: var(--sgs-font-family);
                     margin: auto;
-                    //border: 1px solid #ddd;
 
                     > header {
                         display: flex;
                         width: 95%;
                         justify-content: space-between;
                         align-items: center;
-                        margin: 0 0 35px 0;
+                        margin: 0 0 25px 0;
 
                         .personal {
 
@@ -198,31 +203,37 @@ customElements.define('page-document',
                     }
                 }
 
-
                 .topic {
                     position: relative;
                     background-color: #eee;
                     width: 90%;
                     left: 3%;
                     margin: 15px 0 0 0;
-                    
+
                     &.bgless {
                         background-color: transparent;
+                    }
+
+                    .margless {
+                        margin: 0;
                     }
 
                     .topic-title {
                         position: relative;
                         top: -13px;
                         float: right;
-                        color: #bbb;
+                        color: #999;
                         font-style: normal;
+                    }
+
+                    p.columns {
+                        columns: 2;
                     }
                 }
 
                 section {
                     position: relative;
                     left: -50px;
-                    //margin: 50px 0 25px;
                     width: 100%;
 
                     header {
@@ -232,7 +243,6 @@ customElements.define('page-document',
                         h3 {
                             padding: 0;
                             margin: 0;
-                            //color: red;
                         }
                     }
 
@@ -240,7 +250,7 @@ customElements.define('page-document',
                         display: flex;
                         flex-direction: column;
                         margin-left: 50px;
-                        //gap: 50px;
+                        width: 98%;
 
                         a {
                             margin: 0 0 5px 10px;
@@ -252,6 +262,8 @@ customElements.define('page-document',
 
                             p {
                                 color: #444;
+
+                                &.t
                             }
 
                             > * {
@@ -279,8 +291,6 @@ customElements.define('page-document',
                             color: #777;
                             background: #eee;
                             font-size: xx-small;
-                            //padding: 2px;
-                            //font-size: small;
                         }
 
                     }
