@@ -13,7 +13,9 @@ import "/src/component/image-slider.js";
 import "/src/component/intro-menu.js";
 import "/src/component/monitor.js";
 import "/src/component/monitor-view-project.js";
-// import "/src/component/monitor-view-reference.js";
+
+
+
 import "/src/component/monitor-view-tool.js";
 import "/src/component/project-tool.js";
 import "/src/component/quote-intro.js";
@@ -28,6 +30,14 @@ import Seeder from "./indexdb/seeder"
 import Cache from "/src/service/cache";
 import Router from "/src/service/router";
 
+
+import "/src/component/view-doc-statement.js"
+import "/src/component/view-doc-technology.js"
+import "/src/component/view-doc-occupation.js"
+import "/src/component/view-doc-research.js"
+import "/src/component/view-doc-freelance.js"
+import "/src/component/view-doc-education.js"
+import "/src/component/view-doc-identity.js"
 
 import SWRegister from "/src/swr";
 

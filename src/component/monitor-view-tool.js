@@ -150,7 +150,7 @@ customElements.define('monitor-view-tool',
                         display: flex;
                         justify-content: space-between;
                         font-size: large;
-                        font-family: var(--sgs-font-family)
+                        font-family: var(--sgs-font)
                         color: var(--color-tool);
                         padding: 6px;
                         border-bottom: 1px solid #777;
