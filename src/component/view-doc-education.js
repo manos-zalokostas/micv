@@ -30,7 +30,7 @@ customElements.define('view-doc-education',
                     ${certs.map(({type, tasks}, i) => html`
                         <div>
                         ${tasks.map(detail => html`
-                            <h4>${type.toUpperCase()}</h4>
+                            <h5><u>${type.toUpperCase()}</u></h5>
                             <p>${detail}</p>
                         `)}
                         </div>

@@ -90,7 +90,7 @@ customElements.define('view-doc-occupation',
                              gap: 5px;
                              
                              a {
-                             font-size: x-small;
+                             font-size: 6pt;
                              text-decoration: none;
                              color: #aaa;
                              margin: 0;

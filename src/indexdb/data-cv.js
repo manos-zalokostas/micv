@@ -8,8 +8,8 @@ export const work = [
                 `Building analytical platform for major European energy suppliers, leveraging SvelteKit, Nest.js, and integrating Flask APIs for Python-based data transformations. The system extends the earlier European SYNERGIES initiative into a next-generation analytical platform for energy suppliers.`,
                 [
                     "https://cordis.europa.eu/project/id/101136128",
+                    "https://odeonproject.eu",
                     "https://www.linkedin.com/company/odeoneu",
-                    "https://odeonproject.eu"
                 ],
                 {
                     points: [
@@ -26,8 +26,8 @@ export const work = [
                 `Built the next-generation analytical platform for major European energy suppliers, leveraging SvelteKit, Nest.js, and integrating Flask APIs for Python-based data transformations. The system included a full observability stack (Prometheus/Grafana) and SSO (Keycloak).`,
                 [
                     "https://cordis.europa.eu/project/id/101069839",
+                    "https://synergies-project.eu/",
                     "https://www.linkedin.com/company/synergies-energy-data-spaces",
-                    "https://synergies-project.eu/"
                 ]
             ],
 
@@ -37,8 +37,8 @@ export const work = [
                 `Architected and deployed the complete full-stack application and containerized infrastructure for a multi-national EU environmental events repository using a SvelteKit & Nest.js stack.`,
                 [
                     "https://cordis.europa.eu/project/id/101075714",
+                    "https://r2d2project.eu/",
                     "https://www.linkedin.com/company/r2d2eu",
-                    "https://r2d2project.eu/"
                 ]
             ],
 
@@ -48,8 +48,8 @@ export const work = [
                 `Delivered a full-stack simulation platform for Greek and Danish national partners, designed to consume and visualize data from Python-based simulation algorithms.`,
                 [
                     "https://cordis.europa.eu/project/id/101018420",
-                    "https://www.linkedin.com/company/re-empowered-eu-india",
                     "https://reempowered-h2020.com/",
+                    "https://www.linkedin.com/company/re-empowered-eu-india",
                 ]
             ],
 
@@ -59,8 +59,8 @@ export const work = [
                 `Developed the original suite of big-data analytics applications for major European energy suppliers using a full-stack Next.js and Express.js architecture, which also integrated Python algorithm services.`,
                 [
                     "https://cordis.europa.eu/project/id/872734",
+                    "https://synergyh2020.eu/",
                     "https://www.linkedin.com/company/synergyh2020",
-                    "https://synergyh2020.eu/"
                 ]
             ],
 
