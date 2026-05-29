@@ -4,10 +4,10 @@ export const work = [
         tasks: [
 
             [
-                `2026 | sr. Software Engineer - ODEON (Horizon Europe) | [Budget: €7.2M]`,
+                `2026 | ODEON (Horizon Europe) | [Budget: €22.5M]`,
                 `Building analytical platform for major European energy suppliers, leveraging SvelteKit, Nest.js, and integrating Flask APIs for Python-based data transformations. The system extends the earlier European SYNERGIES initiative into a next-generation analytical platform for energy suppliers.`,
                 [
-                    "https://cordis.europa.eu/project/id/101123405",
+                    "https://cordis.europa.eu/project/id/101136128",
                     "https://www.linkedin.com/company/odeoneu",
                     "https://odeonproject.eu"
                 ],
@@ -22,7 +22,7 @@ export const work = [
 
 
             [
-                `2024 | sr. Software Engineer | SYNERGIES (Horizon Europe) | [Budget: €10M]`,
+                `2024 | SYNERGIES (Horizon Europe) | [Budget: €10M]`,
                 `Built the next-generation analytical platform for major European energy suppliers, leveraging SvelteKit, Nest.js, and integrating Flask APIs for Python-based data transformations. The system included a full observability stack (Prometheus/Grafana) and SSO (Keycloak).`,
                 [
                     "https://cordis.europa.eu/project/id/101069839",
@@ -33,10 +33,10 @@ export const work = [
 
 
             [
-                `2023 | sr. Software Engineer | R2D2 (Horizon Europe) | [Budget: €7.4M]`,
+                `2023 | R2D2 (Horizon Europe) | [Budget: €10M]`,
                 `Architected and deployed the complete full-stack application and containerized infrastructure for a multi-national EU environmental events repository using a SvelteKit & Nest.js stack.`,
                 [
-                    "https://cordis.europa.eu/project/id/101075782",
+                    "https://cordis.europa.eu/project/id/101075714",
                     "https://www.linkedin.com/company/r2d2eu",
                     "https://r2d2project.eu/"
                 ]
@@ -44,10 +44,10 @@ export const work = [
 
 
             [
-                `2022 | sr. Software Engineer | RE-EMPOWERED (Horizon 2020 / EU-India) | [Budget: €6M]`,
+                `2022 | RE-EMPOWERED (Horizon 2020 / EU-India) | [Budget: €5M]`,
                 `Delivered a full-stack simulation platform for Greek and Danish national partners, designed to consume and visualize data from Python-based simulation algorithms.`,
                 [
-                    "https://cordis.europa.eu/project/id/101018445",
+                    "https://cordis.europa.eu/project/id/101018420",
                     "https://www.linkedin.com/company/re-empowered-eu-india",
                     "https://reempowered-h2020.com/",
                 ]
@@ -55,7 +55,7 @@ export const work = [
 
 
             [
-                `2021 | sr. Software Engineer | SYNERGY (Horizon 2020) | [Budget: €12.7M]`,
+                `2021 | SYNERGY (Horizon 2020) | [Budget: €12.7M]`,
                 `Developed the original suite of big-data analytics applications for major European energy suppliers using a full-stack Next.js and Express.js architecture, which also integrated Python algorithm services.`,
                 [
                     "https://cordis.europa.eu/project/id/872734",
@@ -66,7 +66,7 @@ export const work = [
 
 
             [
-                `2020 | sr. Software Engineer | HELLENIC “HYBRID” (National Grid Project)`,
+                `2020 | HELLENIC “HYBRID” (National Grid Project)`,
                 `Engineered a mission-critical energy management application for the national energy supplier, handling power production and load data. Designed and implemented a Dockerized infrastructure for remote on-premise deployment.`,
                 [
                     "https://www.linkedin.com/company/diaxeiristis-ellinikou-diktiou-dianomis-ilektrikis-energeias",
@@ -137,15 +137,15 @@ export const study = [
         ]
     },
     {
-        type: "2008 / 2009  -  Certificate in Web design and Development",
+        type: "Web Design & Development | 2008 / 2009 ",
         tasks: ["Full year course certification studies at Intergraphics’ Vocational Training, Athens, Greece"]
     },
     {
-        type: "2005 / 2006  -  Certificate in Graphical Design for digital and Printable Mediums",
+        type: "Graphical Design | 2005 / 2006  ",
         tasks: ["Full year course certification studies at AKMI’ Vocational Training, Athens, Greece"]
     },
     {
-        type: "2001 / 2003  -  Certificate in Visual Design and 3D-Animation",
+        type: "3D-Animation Design | 2001 / 2003",
         tasks: ["2 years full course diploma studies at AKMI’ Vocational Training, Athens, Greece"]
     },
 ];

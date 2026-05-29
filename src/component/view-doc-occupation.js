@@ -24,11 +24,15 @@ customElements.define('view-doc-occupation',
                             <a>
                                 <h4><sup>&#8594;&nbsp;</sup>${title.toUpperCase()}</h4>
                                 ${links && Array.isArray(links) && html`
-                                            <small style="color: #999">
-                                                <img width="18" style="vertical-align: middle;"
-                                                     src="public/images/link.png"/>
-                                                <em>${(links).join(" -- ")}</em>
-                                            </small>`
+                                    <aside>
+                                        ${(links).map(
+                                                link => html`
+                                                    <a href=${link} target="_blank">
+                                                        &nbsp;&#9741;
+                                                        ${link}
+                                                    </a>
+                                                `)}
+                                    </aside>`
                                 }
                                 <p>${detail}</p>
                             </a>
@@ -36,7 +40,7 @@ customElements.define('view-doc-occupation',
                     </nav>
                 </section>
             `)}
-            
+
         `;
 
         static styles = [
@@ -64,22 +68,38 @@ customElements.define('view-doc-occupation',
                         flex-direction: column;
                         margin-left: 50px;
                         width: 98%;
-
+                            
+                        p {
+                            color: #444;
+                            padding: 0;
+                            margin: 0;
+                        }
+                            
                         a {
                             margin: 0 0 5px 10px;
                             padding: 5px;
 
-                            
+                            h4 {
+                            padding: 0;
+                            margin: 0;
+                           }
 
-                            p {
-                                color: #444;
-
-                                
-                            }
-
-                            > * {
-                                padding: 0;
-                                margin: 0;
+                            aside {
+                             display: flex;
+                             justify-content: flex-start;
+                             gap: 5px;
+                             
+                             a {
+                             font-size: x-small;
+                             text-decoration: none;
+                             color: #aaa;
+                             margin: 0;
+                             padding: 0;
+                             
+                             img {
+                             width: 16px;
+                             vertical-align: middle;
+                             }
                             }
 
 

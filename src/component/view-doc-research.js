@@ -19,21 +19,18 @@ customElements.define('view-doc-research',
                     <nav>
                         <h3 class="margless"><sup>&#8594;&nbsp;</sup>${type.toUpperCase()}</h3>
                         ${tasks.map((detail) => html`
-                                    <a>
-                                        <p>${detail}</p>
-                                        ${links && Array.isArray(links) && html`
-                                            <small style="color: #999">
-                                                <img width="18" style="vertical-align: middle;"
-                                                     src="public/images/link.png"/>
-                                                <em>${links[0]}: ${links[1]}</em>
-                                            </small>
-                                        `}
-                                    </a>
-                                `)}
+                            <a>
+                                <p>${detail}</p>
+                                ${links && Array.isArray(links) && html`
+                                    &nbsp;&#9741;
+                                    <a target="_blank" href="${links[1]}">${links[0]}: ${links[1]}</a>
+                                `}
+                            </a>
+                        `)}
                     </nav>
                 </section>
-            `)}            
-            
+            `)}
+
         `;
 
         static styles = [
@@ -58,15 +55,18 @@ customElements.define('view-doc-research',
                         width: 98%;
 
                         a {
+                        color: #999;
                             margin: 0 0 5px 10px;
                             padding: 5px;
 
+                        a {
+                        text-decoration: none;
+                        font-size: x-small;
+                            }
                             
 
                             p {
                                 color: #444;
-
-                                
                             }
 
                             > * {

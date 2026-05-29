@@ -1,0 +1,72 @@
+DAILY SCHEDULER
+=========================
+A database application to manage and track daily assignments efficiently, ensuring timely communication between departments and the supervisor.
+
+Key Features:
+- Register and monitor daily tasks with due dates and completion status.
+- Track the exact date notifications were received from departments to prevent scheduling conflicts.
+- Generate reports highlighting pending and upcoming assignments.
+- Integrate with MS Outlook to send daily schedules automatically to the supervisor.
+
+Impact / Benefits:
+-Kept supervisors informed and allowed proactive planning for incoming assignments.
+-Identified departments frequently missing notifications, enabling corrective actions.
+-Provided historical data to anticipate high-traffic days and manage workload.
+-Reduced conflicts and improved accountability between departments.
+
+
+MONTHLY BILLS
+=========================
+Key Features:
+-Record and index monthly bills and resource usage efficiently.
+-Generate charts and reports for internal review and HR feedback.
+-Compare partner invoices against internal records to identify discrepancies.
+-Summarize or detail expenditures for analysis and verification.
+-Integrate with MS Excel for data entry and reporting.
+
+Impact / Benefits:
+-Improved efficiency in tracking resource consumption and monthly costs.
+-Detected inconsistencies in partner billing, preventing overcharges.
+-Provided actionable insights for financial planning and departmental oversight.
+-Enhanced transparency and accountability across internal and external stakeholders.
+
+
+BOOKING ROOMS
+=========================
+A Microsoft Access application to manage and automate room bookings for company meetings, replacing the error-prone phone/email procedure.
+
+Key Features / Benefits:
+-Hosted in a shared folder with controlled access for employees.
+-Employees submit booking requests through a form; required fields are validated with informative messages.
+-Automatically generates a report of the request and emails it to the meeting-room administrator.
+-Preview and send buttons allow users to review or dispatch requests without extra steps.
+-Hovering or tabbing on inputs provides guidance on required fields.
+-Ensures accurate data submission, avoiding missing or incomplete booking requests.
+-Centralizes all booking requests for easier monitoring and conflict resolution.
+
+Impact:
+-Eliminated scheduling conflicts and missed requests from the old phone/email system.
+-Enabled the administrator to manage room bookings efficiently.
+-Ensured completeness and correctness of submitted requests.
+-Streamlined department workflow and improved accountability.
+
+
+HSE DATABASE
+=========================
+A unified Microsoft Access database providing comprehensive employee and fleet management information, supporting the Health, Safety, and Environment (HSE) department.
+
+Key Features / Benefits:
+-Maintain complete records of all employees, including job role, department, contact info, and location.
+-Track employee driving skills, training dates, scores, and trainer comments.
+-Manage company car assignments, recording vehicle details (brand, CC, color, leasing info, features, mileage, purchase date) and assigned drivers.
+-Allocate and monitor parking spaces across multiple buildings, correlating them with assigned vehicles and employees.
+-Provide a consolidated overview of each employee by integrating roadsafety, safetracks, and accident data.
+-Evaluate annual road safety performance for each driver with multi-row assessments and manager/HSE feedback.
+-Record and categorize driving accidents, including driver, date, description, and HSE classification.
+-Facilitate searching and reporting across all domains for quick, accurate access to information.
+
+Impact:
+-Centralized HSE and employee data for streamlined monitoring and compliance.
+-Enhanced visibility of driver performance, vehicle assignments, and parking management.
+-Supported risk assessment, safety tracking, and incident analysis effectively.
+-Reduced manual tracking errors and improved departmental efficiency.
