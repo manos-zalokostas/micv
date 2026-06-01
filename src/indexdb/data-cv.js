@@ -5,7 +5,18 @@ export const work = [
 
             [
                 `2026 | ODEON (Horizon Europe) | [Budget: €22.5M]`,
-                `Building analytical platform for major European energy suppliers, leveraging SvelteKit, Nest.js, and integrating Flask APIs for Python-based data transformations. The system extends the earlier European SYNERGIES initiative into a next-generation analytical platform for energy suppliers.`,
+`
+Official Project Scope: An active distributed simulation and long-term grid hosting capacity platform designed to evaluate electricity network expansion and future renewable energy integration scenarios over a 10-year horizon.
+My Subsystem & Delivery: Designed and delivered the complete three-tier distributed architecture. Personally built the SvelteKit Backend-for-Frontend (BFF) client, the NestJS Core API gateway, the Prisma-based database persistence layers, the Python Flask solver container, and the federated authentication and Redis session caching systems.
+Engineering Challenges:
+Orchestrating long-running grid-physics optimization models that exceed standard HTTP gateway timeout thresholds.
+Enforcing strict, zero-trust organization-level data separation within multi-tenant shared environments.
+System Innovations:
+Schema-Driven System Execution: Engineered a unified architecture where frontend UI form generation, API structures, cross-layer validation logic, and database access are dynamically derived from shared schema definitions, eliminating manual development synchronization.
+Asynchronous Simulation Pipeline: Designed a decoupled execution pipeline that asynchronously dispatches heavy computational simulation workloads from the NestJS core to an isolated Python solver, preventing application gateway timeouts and UI lag.
+Multi-Layer Tenant Isolation: Implemented a database-level tenant isolation system, injecting organization-level parameters (org_id) directly into database queries at the query-construction level via NestJS and Prisma middleware.
+Tech Stack: SvelteKit, NestJS, Python (Flask), Prisma ORM (MySQL), Redis, Keycloak, Docker, Docker Compose, Nginx, Linux.
+`,
                 [
                     "https://cordis.europa.eu/project/id/101136128",
                     "https://odeonproject.eu",
@@ -22,8 +33,19 @@ export const work = [
 
 
             [
-                `2024 | SYNERGIES (Horizon Europe) | [Budget: €10M]`,
-                `Built the next-generation analytical platform for major European energy suppliers, leveraging SvelteKit, Nest.js, and integrating Flask APIs for Python-based data transformations. The system included a full observability stack (Prometheus/Grafana) and SSO (Keycloak).`,
+`2024 | SYNERGIES (Horizon Europe) | [Budget: €10M]`,
+`
+Official Project Scope: A multi-tenant, system-of-systems energy data space designed for secure, sovereign grid data exchange and localized operational services among European energy communities.
+My Subsystem & Delivery: Designed and delivered the software suite for the Greek pilot node, consisting of a SvelteKit frontend, NestJS core API, Python-Flask solver wrapper, and a MySQL database. Engineered and published three pre-compiled, immutable container images to the Google Artifact Registry marketplace (the Planning application, the Flexibility application, and a shared Optimization Solver package) designed for completely decoupled, on-premises licensing and deployment.
+Engineering Challenges:
+Resolving critical runtime and network bridging failures when deploying Linux-based Docker images on-premises on physical Windows hosts operated by the national utility (HEDNO).
+Vite/SvelteKit build-time environmental variable interpolation hardcoding the build-server’s host credentials directly into compiled frontend assets, preventing the distribution of stateless, credential-free marketplace containers.
+System Innovations:
+Network-Shielded BFF Architecture: Implemented a Backend-for-Frontend (BFF) pattern, hiding the database dataserver behind a private Docker network and authenticating SvelteKit-to-NestJS calls via server-to-server signed API requests.
+Schema-Driven Form Generation: Prototyped a reactive schema-driven frontend runtime utilizing a custom Svelte store to dynamically generate UI input components and validation rules directly from backend-defined JSON schemas.
+Decoupled Packaging Model: Designed a three-tier container architecture allowing third-party utilities to purchase, license, and run isolated application and solver layers on their own premises with local domain separation.
+Tech Stack: SvelteKit, NestJS, Python (Flask), MySQL, Redis, Keycloak SSO, Docker, Nginx, GCP (Google Artifact Registry).
+`,
                 [
                     "https://cordis.europa.eu/project/id/101069839",
                     "https://synergies-project.eu/",
@@ -34,7 +56,19 @@ export const work = [
 
             [
                 `2023 | R2D2 (Horizon Europe) | [Budget: €10M]`,
-                `Architected and deployed the complete full-stack application and containerized infrastructure for a multi-national EU environmental events repository using a SvelteKit & Nest.js stack.`,
+`
+Official Project Scope: A European energy grid resilience and cybersecurity portal designed to orchestrate specialized weather, load forecasting, and power-flow simulation tools.
+My Subsystem & Delivery: Designed and delivered the complete, end-to-end full-stack monorepo architecture consisting of a SvelteKit BFF client and a NestJS backend gateway. Built and owned the dynamic form rendering components (TP-Form and TP-Fieldset), a custom session-based security flow (AUTHALL), a global dynamic guard (AUTH-Z), and reusable backend controller abstraction layers. Orchestrated the containerized, zero-dependency deployment and compiled artifact pipelines.
+Engineering Challenges:
+NestJS compiler-time decorator limitations (@Roles / @UseGuards) breaking standard class inheritance on the generic parent controller class.
+Manual file synchronization and schema drift across isolated repositories, requiring copy-paste harmonization of parallel schema files between the frontend and backend.
+Unexpected runtime reactive loops and UI parsing crashes when implementing Svelte 5 $state runes within dynamic form component effect wrappers.
+System Innovations:
+Config-Driven Authorization: Developed a dynamic, global NestJS authorization guard (AUTH-Z) that bypassed static framework limitations by evaluating route permissions on-the-fly via a declarative JSON configuration.
+Monorepo Consolidation: Migrated separate frontend and backend codebases into a unified pnpm monorepo workspace, establishing a shared-types package to eliminate cross-repository schema drift.
+BFF Security Architecture: Implemented a SvelteKit Backend-for-Frontend (BFF) architecture to route all client interactions through SvelteKit, isolating the backend NestJS gateway from direct browser-side public API requests.
+Tech Stack: SvelteKit (Svelte 5), NestJS, Prisma ORM (MySQL), WebSockets, RabbitMQ, Argon2, Docker, pnpm workspaces.
+`,
                 [
                     "https://cordis.europa.eu/project/id/101075714",
                     "https://r2d2project.eu/",
@@ -45,7 +79,18 @@ export const work = [
 
             [
                 `2022 | RE-EMPOWERED (Horizon 2020 / EU-India) | [Budget: €5M]`,
-                `Delivered a full-stack simulation platform for Greek and Danish national partners, designed to consume and visualize data from Python-based simulation algorithms.`,
+`
+Official Project Scope: A joint European-Indian Energy Management System (EMS) and Microgrid Controller platform designed to process physical grid telemetry and execute mathematical optimization forecasts.
+My Subsystem & Delivery: Designed and delivered a multi-service energy forecasting and grid analytics platform. Built the SvelteKit frontend, Node.js orchestration backend, Python (Flask) computation layer, MSSQL database architecture, and a multi-protocol integration layer. Orchestrated the unified system deployment via Docker Compose on ICCS-NTUA bare-metal infrastructure.
+Engineering Challenges:
+Coordinating heterogeneous execution models across physically decoupled regional applications utilizing cloned codebases.
+Managing the architectural divergence between a batch-oriented SCADA ingestion system and an event-driven message forecasting system.
+System Innovations:
+Multi-Protocol Integration: Designed a communication architecture integrating HTTP for synchronous orchestration, MQTT for real-time event propagation, and RabbitMQ for asynchronous external data pipelines.
+Schema-Driven Frontend Generation: Built a dynamic UI system that decoupled rendering from static components, driving frontend forms and cross-stack validation logic exclusively via backend-defined schema structures.
+Infrastructure Consolidation: Engineered a deployment merge, consolidating the previously separated, cloned regional container architectures into a single unified runtime environment while strictly preserving their isolated execution workflows.
+Tech Stack: SvelteKit, Node.js, Python (Flask), MSSQL, RabbitMQ, MQTT, Docker (Compose), Prometheus, Grafana, Linux.
+`,
                 [
                     "https://cordis.europa.eu/project/id/101018420",
                     "https://reempowered-h2020.com/",
@@ -56,7 +101,18 @@ export const work = [
 
             [
                 `2021 | SYNERGY (Horizon 2020) | [Budget: €12.7M]`,
-                `Developed the original suite of big-data analytics applications for major European energy suppliers using a full-stack Next.js and Express.js architecture, which also integrated Python algorithm services.`,
+`
+Official Project Scope: A smart grid big-data sharing platform and AI analytics marketplace for the Greek pilot demonstrator, processing operational grid data and network planning scenarios.
+My Subsystem & Delivery: Designed and delivered the core platform architectures for two separately licensed, distinct software products (Planning and Coordination) managed by different product teams. Built the Next.js frontends, Node.js backend services, a dedicated authentication layer, and physically isolated MySQL database architectures. Orchestrated their concurrent, resource-optimized deployment under a shared Nginx reverse proxy on ICCS-NTUA bare-metal infrastructure.
+Engineering Challenges:
+Maintaining independent codebases and product lifecycles across cloned branches while synchronizing shared database and validation utility models.
+Preventing containerized Node.js web servers from event-loop blocking during high-latency mathematical compute workloads.
+System Innovations:
+Session State Retention: Engineered an internal authentication layer utilizing Redis to manage token lifecycles and synchronize cross-application login continuity from an external identity provider.
+Hybrid Compute Offloading: Designed an execution flow that delegated heavy Python computational workloads from the Dockerized web layer directly to the bare-metal host execution environment.
+Backend Orchestration Abstraction: Developed internal abstraction layers to standardize request validation, data access, and Server-Side Rendering (SSR) execution lifecycles across multiple independent product codebases.
+Tech Stack: Next.js (React), Node.js, Python, MySQL, Redis, Docker (Compose), Nginx, Linux (Bare-metal).
+`,
                 [
                     "https://cordis.europa.eu/project/id/872734",
                     "https://synergyh2020.eu/",
@@ -67,7 +123,17 @@ export const work = [
 
             [
                 `2020 | HELLENIC “HYBRID” (National Grid Project)`,
-                `Engineered a mission-critical energy management application for the national energy supplier, handling power production and load data. Designed and implemented a Dockerized infrastructure for remote on-premise deployment.`,
+`
+Official Project Scope: A mission-critical energy scheduling and grid workflow platform for the national energy supplier, designed to orchestrate Day-Ahead and Intraday dispatch operations for renewable energy producers.
+My Subsystem & Delivery: Serving as the sole systems engineer, I designed and delivered the complete end-to-end platform topology on ICCS-NTUA infrastructure. My explicit ownership included building the Next.js frontend state-machine, the Node.js API Gateway, a custom Ticket-based RBAC authentication system, an automated XLS Extract-Transform-Load (ETL) pipeline, and the underlying MySQL database schema and Docker deployment assembly.
+Engineering Challenges:
+Overcoming severe Node.js event-loop blocking caused by executing heavy OS-level workloads, batch processes, and database dumps on the main application thread.
+Executing strict, isolated containerization and reverse-proxy routing on bare-metal Windows Server/Linux infrastructure without the use of Docker Compose orchestration.
+System Innovations:
+Isomorphic Validation Parity: Engineered a deterministic cross-layer rule engine that executed identical mathematical constraints across both the UI validation state and the backend API enforcement layer.
+Event-Loop Sidecar: Designed a decoupled dual-system architecture, utilizing child_process to delegate high-latency maintenance tasks to a separate daemon (HYBRID-AUX), protecting the main runtime.
+Tech Stack: Next.js, Node.js, MySQL, Docker (Raw CLI/Networking), Nginx, Bare-metal (Windows/Linux).
+`,
                 [
                     "https://www.linkedin.com/company/diaxeiristis-ellinikou-diktiou-dianomis-ilektrikis-energeias",
                     "https://www.deddie.gr/en/hedno"
