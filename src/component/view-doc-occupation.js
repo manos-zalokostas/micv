@@ -20,7 +20,7 @@ customElements.define('view-doc-occupation',
                         <h3>${type.toUpperCase()}</h3>
                     </header>
                     <nav>
-                        ${tasks.map(([title, detail, links], ii) => html`
+                        ${tasks.map(([title, detail, links, o], ii) => html`
                             <a>
                                 <h4><sup>&#8594;&nbsp;</sup>${title.toUpperCase()}</h4>
                                 ${links && Array.isArray(links) && html`
@@ -32,9 +32,25 @@ customElements.define('view-doc-occupation',
                                                         ${link}
                                                     </a>
                                                 `)}
-                                    </aside>`
+                                    </aside>
+                                `
                                 }
                                 <p>${detail}</p>
+                                <article style="display: none">
+                                    <menu>${o.highlight.split(".").map(
+                                            line => line && html`
+                                                <li>${line.split(":")[0]}</li>
+                                            `
+                                    )}
+                                    </menu>
+                                    <menu>${o.challenge.split(".").map(
+                                            line => line && html`
+                                                <li>${line}</li>
+                                            `
+                                    )}
+                                    </menu>
+                                </article>
+                                ${  o.techstack !=='' && html`<cite><span>&#9881;</span>${o.techstack} </cite>` || ''}
                             </a>
                         `)}
                     </nav>
@@ -68,44 +84,68 @@ customElements.define('view-doc-occupation',
                         flex-direction: column;
                         margin-left: 50px;
                         width: 98%;
-                            
+
                         p {
                             color: #444;
-                            padding: 0;
+                            padding-top: 5px;
                             margin: 0;
                         }
-                            
+
                         a {
                             margin: 0 0 5px 10px;
                             padding: 5px;
 
                             h4 {
-                            padding: 0;
-                            margin: 0;
-                           }
-
-                            aside {
-                             display: flex;
-                             justify-content: flex-start;
-                             gap: 5px;
-                             
-                             a {
-                             font-size: 6pt;
-                             text-decoration: none;
-                             color: #aaa;
-                             margin: 0;
-                             padding: 0;
-                             
-                             img {
-                             width: 16px;
-                             vertical-align: middle;
-                             }
+                                padding: 0;
+                                margin: 0;
                             }
 
+                            aside {
+                                display: flex;
+                                justify-content: flex-start;
+                                gap: 5px;
 
+                                a {
+                                    font-size: 6pt;
+                                    text-decoration: none;
+                                    color: #aaa;
+                                    margin: 0;
+                                    padding: 0;
+
+                                    img {
+                                        width: 16px;
+                                        vertical-align: middle;
+                                    }
+                                }
+                            }
+
+                            article {
+                                display: flex;
+
+                                menu {
+                                    &:first-of-type {
+                                        flex-basis: 30%;
+                                        font-size: 12px;
+                                    }
+
+                                    &:last-of-type {
+                                        flex-basis: 70%;
+                                        font-size: 10px;
+                                    }
+                                }
+                            }
                         }
 
+                        cite {
+                            color: #999;
+                            //padding: 2px 4px;
+                            //border-top: 1px solid;
+                            font-size: smaller;
 
+                            span {
+                                font-style: normal;
+                            }
+                        }
                     }
                 }
             `]
