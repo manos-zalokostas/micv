@@ -36,21 +36,17 @@ customElements.define('view-doc-occupation',
                                 `
                                 }
                                 <p>${detail}</p>
-                                <article style="display: none">
-                                    <menu>${o.highlight.split(".").map(
-                                            line => line && html`
-                                                <li>${line.split(":")[0]}</li>
-                                            `
-                                    )}
-                                    </menu>
-                                    <menu>${o.challenge.split(".").map(
-                                            line => line && html`
-                                                <li>${line}</li>
-                                            `
-                                    )}
-                                    </menu>
-                                </article>
-                                ${  o.techstack !=='' && html`<cite><span>&#9881;</span>${o.techstack} </cite>` || ''}
+                                ${o.highlight !== '' && html`
+                                    <cite><span>&#128161;</span>${
+                                            o.highlight.split(".").map(line => line.split(":").shift()).join(" -- ")
+                                    }</cite><br/>` || ''
+                        }
+                                ${o.challenge !== '' && html`
+                                    <cite><span>&#9889;</span>${o.challenge}</cite><br />` || ''
+                        }
+                                ${o.techstack !== '' && html`
+                                    <cite><span>&#128736;</span>${o.techstack}</cite><br />` || ''
+                        }
                             </a>
                         `)}
                     </nav>
