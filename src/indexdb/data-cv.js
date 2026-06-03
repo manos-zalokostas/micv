@@ -22,17 +22,14 @@ export const work = [
             [
                 `2024 | SYNERGIES (Horizon Europe) | [Budget: €10M]`,
                 `
- Designed and delivered the software suite for the Greek pilot node, consisting of a SvelteKit frontend, NestJS core API, Python-Flask solver wrapper, and a MySQL database. Engineered and published three pre-compiled, immutable container images to the Google Artifact Registry marketplace (the Planning application, the Flexibility application, and a shared Optimization Solver package) designed for completely decoupled, on-premises licensing and deployment.
-
-`,
+ Designed and delivered the software suite for the Greek pilot node, consisting of a SvelteKit frontend, NestJS core API, Python-Flask solver wrapper, and a MySQL database. Engineered and published three pre-compiled, immutable container images to the Google Artifact Registry marketplace (the "Planning" application, the "Flexibility" application, and a shared "Digital Twin" Solver package) designed for completely decoupled, on-premises licensing and deployment.`,
                 [
                     "https://cordis.europa.eu/project/id/101069839",
                     "https://synergies-project.eu/",
                     "https://www.linkedin.com/company/synergies-energy-data-spaces",
                 ],
                 {
-                    highlight: `
-                    
+                    highlight: `                    
 Network-Shielded BFF Architecture: Implemented a Backend-for-Frontend (BFF) pattern, hiding the database dataserver behind a private Docker network and authenticating SvelteKit-to-NestJS calls via server-to-server signed API requests.
 Schema-Driven Form Generation: Prototyped a reactive schema-driven frontend runtime utilizing a custom Svelte store to dynamically generate UI input components and validation rules directly from backend-defined JSON schemas.
 Decoupled Packaging Model: Designed a three-tier container architecture allowing third-party utilities to purchase, license, and run isolated application and solver layers on their own premises with local domain separation
@@ -52,7 +49,7 @@ Vite/SvelteKit build-time environmental variable interpolation hardcoding the bu
             [
                 `2023 | R2D2 (Horizon Europe) | [Budget: €10M]`,
                 `
- Designed and delivered the complete, end-to-end full-stack monorepo architecture consisting of a SvelteKit BFF client and a NestJS backend gateway. Built and owned the dynamic form rendering components (TP-Form and TP-Fieldset), a custom session-based security flow (AUTHALL), a global dynamic guard (AUTH-Z), and reusable backend controller abstraction layers. Orchestrated the containerized, zero-dependency deployment and compiled artifact pipelines.
+ Designed and delivered the complete, end-to-end full-stack monorepo architecture consisting of a SvelteKit BFF client and a NestJS backend gateway. Built and owned the dynamic form rendering components, a custom session-based security flow, a global dynamic guard , and reusable backend controller abstraction layers. Orchestrated the containerized, zero-dependency deployment and compiled artifact pipelines.
 `,
                 [
                     "https://cordis.europa.eu/project/id/101075714",
@@ -62,7 +59,7 @@ Vite/SvelteKit build-time environmental variable interpolation hardcoding the bu
                 {
                     highlight: `
 
-Config-Driven Authorization: Developed a dynamic, global NestJS authorization guard (AUTH-Z) that bypassed static framework limitations by evaluating route permissions on-the-fly via a declarative JSON configuration.
+Config-Driven Authorization: Developed a dynamic, global NestJS authorization guard that bypassed static framework limitations by evaluating route permissions on-the-fly via a declarative JSON configuration.
 Monorepo Consolidation: Migrated separate frontend and backend codebases into a unified pnpm monorepo workspace, establishing a shared-types package to eliminate cross-repository schema drift.
 BFF Security Architecture: Implemented a SvelteKit Backend-for-Frontend (BFF) architecture to route all client interactions through SvelteKit, isolating the backend NestJS gateway from direct browser-side public API requests
                     `,
@@ -110,7 +107,7 @@ Managing the architectural divergence between a batch-oriented SCADA ingestion s
             [
                 `2021 | SYNERGY (Horizon 2020) | [Budget: €12.7M]`,
                 `
- Designed and delivered the core platform architectures for two separately licensed, distinct software products (Planning and Coordination) managed by different product teams. Built the Next.js frontends, Nodejs backend services, a dedicated authentication layer, and physically isolated MySQL database architectures. Orchestrated their concurrent, resource-optimized deployment under a shared Nginx reverse proxy on ICCS-NTUA bare-metal infrastructure.
+ Designed and delivered the core platform architectures for two separately licensed, distinct software products ("Planning" and "Coordination") managed by different product teams. Built the Next.js frontends, Nodejs backend services, a dedicated authentication layer, and physically isolated MySQL database architectures. Orchestrated their concurrent, resource-optimized deployment under a shared Nginx reverse proxy on ICCS-NTUA bare-metal infrastructure.
 `,
                 [
                     "https://cordis.europa.eu/project/id/872734",
@@ -148,7 +145,7 @@ Preventing containerized Nodejs web servers from event-loop blocking during high
                     highlight: `
 
 Isomorphic Validation Parity: Engineered a deterministic cross-layer rule engine that executed identical mathematical constraints across both the UI validation state and the backend API enforcement layer.
-Event-Loop Sidecar: Designed a decoupled dual-system architecture, utilizing child_process to delegate high-latency maintenance tasks to a separate daemon (HYBRID-AUX), protecting the main runtime
+Event-Loop Sidecar: Designed a decoupled dual-system architecture, utilizing child_process to delegate high-latency maintenance tasks to a separate daemon, protecting the main runtime
                     `,
                     challenge: `
 
