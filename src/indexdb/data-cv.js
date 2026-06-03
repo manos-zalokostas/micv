@@ -5,9 +5,7 @@ export const work = [
 
             [
                 `2026 | ODEON (Horizon Europe) | [Budget: €22.5M]`,
-                `
- Designed and delivered the complete three-tier distributed architecture. Personally built the SvelteKit Backend-for-Frontend (BFF) client, the NestJS Core API gateway, the Prisma-based database persistence layers, the Python Flask solver container, and the federated authentication and Redis session caching systems.
-`,
+                ` Designed and delivered the complete three-tier distributed architecture. Personally built the SvelteKit Backend-for-Frontend (BFF) client, the NestJS Core API gateway, the Prisma-based database persistence layers, the Python Flask solver container, and the federated authentication and Redis session caching systems.`,
                 [
                     "https://cordis.europa.eu/project/id/101136128",
                     "https://odeonproject.eu",
@@ -15,7 +13,7 @@ export const work = [
                 ],
                 {
                     highlight: `Schema-Driven System Execution: Engineered a unified architecture where frontend UI form generation, API structures, cross-layer validation logic, and database access are dynamically derived from shared schema definitions, eliminating manual development synchronization. Asynchronous Simulation Pipeline: Designed a decoupled execution pipeline that asynchronously dispatches heavy computational simulation workloads from the NestJS core to an isolated Python solver, preventing application gateway timeouts and UI lag. Multi-Layer Tenant Isolation: Implemented a database-level tenant isolation system, injecting organization-level parameters (org_id) directly into database queries at the query-construction level via NestJS and Prisma middleware`,
-                    challenge: ` Orchestrating long-running grid-physics optimization models that exceed standard HTTP gateway timeout thresholds. Enforcing strict, zero-trust organization-level data separation within multi-tenant shared environments`,
+                    challenge: `Orchestrating long-running grid-physics optimization models that exceed standard HTTP gateway timeout thresholds. Maintaining structural consistency between dynamically generated user interfaces, nested validation rules, and database persistence layers while enforcing strict organization-level isolation in shared multi-tenant environments.`,
                     techstack: ` SvelteKit, NestJS, Python (Flask), Prisma ORM (MySQL), Redis, Keycloak, Docker, Docker Compose, Nginx, Linux. `,
                 }
             ],
