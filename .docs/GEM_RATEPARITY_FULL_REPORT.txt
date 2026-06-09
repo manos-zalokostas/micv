@@ -1,0 +1,121 @@
+SYSTEM CONTEXT
+
+  - Domain + purpose of system: Direct-booking conversion optimization,
+    real-time competitor price comparison, and behavioral targeting SaaS
+    platform for the hospitality industry.
+  - What it processes / handles / connects: Processes real-time competitor
+    prices scraped from online travel agencies (OTAs), user session cookies,
+    transactional voucher purchases, and visitor behavioral triggers (exit
+    intent, scroll depth, time delay). Connects client-browser runtimes, private
+    administrative extranet servers, and external booking engines (Webhotelier).
+  - Environment: Production SaaS, third-party injected scripts executing in host
+    browser DOMs, multi-tenant administrative extranet.
+
+SYSTEM POSITION
+
+  - Owned components/modules: Client-side micro-frontend widget suite
+    (PRICECHECK-FULL, PRICECHECK-MIN, PRICECHECK-TALL, PRICE-MOB), the unified
+    Installer script, the shared _CORE utility folder, the custom CacheSession
+    engine, the behavioral trigger engine, the PRICECHECK-MAX booking engine
+    SPA, the VOUCHERS transactional pipeline, and the React-based Extranet
+    administrative platform.
+  - Implemented systems/services: installer.min.js bootstrap script, COOKIE and
+    IDENTIFIER classes, AUTHALL session security layer, AUTH-Z dynamic global
+    guard, TP-Form/TP-Fieldset dynamic UI engines, PUBLIC-PATH-BUILDER asset
+    router, and the py-processor equivalent data-processing tools.
+  - Responsibility boundaries: Owned complete client-side application layer,
+    browser-side event execution, multi-widget state synchronization, CSS
+    sandboxing, and extranet configuration UI. Did not own the raw database
+    hosting or APIs in the cloud (managed by co-owner).
+  - End-to-end delivered subsystem(s): Unified client-side widget launcher
+    (installer.min.js), PRICECHECK-MAX app-shell, multi-step Vouchers
+    transactional checkout pipeline, and the Extranet admin dashboard.
+
+ENGINEERING REALITY (NO SOLUTIONS HERE)
+
+  - Exposed limitation in browser styling isolation where host-site global CSS
+    resets and tag styles (such as global article and section tags) corrupted
+    injected widget layouts.
+  - Required redesign due to multiple independent React widgets on the same host
+    page colliding on Webpack's default global jsonp namespace, crashing
+    chunk-loading.
+  - Exposed limitation in mobile network loading times while maintaining strict
+    backward compatibility with enterprise legacy browser runtimes (IE10+).
+  - Required redesign due to static CSS positioning breaking or clipping on
+    unpredictable, absolute-positioned host-site elements.
+  - Introduced complexity in state synchronization across decoupled widgets,
+    where asynchronous API responses (rates vs. availability) caused race
+    conditions and duplicate network requests (like /compare loading twice).
+  - Forced restructuring due to dynamic, shifting hotel policies (like minimum
+    stay requirements) breaking static datepicker calendars.
+  - Introduced complexity in client-side data streaming where sending real-time
+    price telemetry payloads risked blocking the browser thread or delaying
+    checkout.
+  - Forced restructuring due to Webhotelier's strict zero-interference security
+    policies, where any script exception risked disrupting their
+    mission-critical checkout DOM.
+  - Revealed architectural weakness in React v16.4 Class Components' lifecycles,
+    where updating nested, non-flat config states (Voucher V2) triggered
+    infinite render loops in componentDidUpdate.
+  - Exposed limitation in browser SameSite and Referrer policy updates in
+    late 2020, which blocked widget session-tracking calls.
+  - Forced restructuring due to manual file synchronization and code duplication
+    across decoupled widget repositories (pre-pnpm workspaces).
+
+SYSTEM TRANSFORMATION
+
+  - Implemented response to CSS resets by prefixing all widget classes with a
+    custom namespace (CMP-) and explicitly neutralizing inherited article and
+    section tags.
+  - Implemented response to Webpack namespace collisions by configuring unique
+    jsonpFunction compilation keys for each independent widget bundle.
+  - Implemented response to mobile loading times and IE10+ by re-engineering the
+    Webpack pipeline to implement lazy-loading via dynamic imports (import())
+    while selectively injecting ES5 polyfills (core-min-js) to legacy clients.
+  - Implemented response to static CSS limitations by engineering a hybrid
+    JS/CSS coordinate resolver (DynamicStylesResolver) to calculate and inject
+    dynamic offsets at runtime.
+  - Implemented response to state desynchronizations by migrating the
+    application state to React's Context API and building sequential request
+    queues.
+  - Implemented response to minimum stay constraints by building a custom,
+    dynamic validation state machine (RESOLVE_MINSTAY) directly into the
+    calendar grid.
+  - Implemented response to telemetry performance risks by utilizing
+    non-blocking, asynchronous POST requests to stream price-parity data.
+  - Implemented response to Webhotelier security constraints by exposing modular
+    lifecycles (mount, unmount) globally on the window object, allowing the
+    installer to gracefully destroy the widget if conflicts occurred.
+  - Implemented response to React 16.4 render-loop traps by isolating nested
+    state trees into decoupled accordion components and implementing defensive
+    prevProps/prevState checks in componentDidUpdate.
+  - Implemented response to SameSite/Referrer browser updates by centralizing a
+    global REFERER URL parameter patching mechanism inside the _CORE folder.
+  - Implemented response to codebase duplication by designing a shared _CORE
+    utility folder for Webpack alias path borrowing.
+  - Introduced solution pattern of the DEVENV=1 URL query parameter, writing a
+    session cookie to hijack the installer's asset router and load staging
+    versions directly on live production sites.
+  - Introduced solution pattern of the invisible: true licensing gate to load
+    and verify background script stability without rendering the visual
+    interface.
+
+SYSTEM OUTCOME
+
+  - Deployed in: Direct script-tag injection in the HTML header of hundreds of
+    live hotel sites and secure private backend servers.
+  - Used by: Hospitality managers, hotel operators, third-party visitors, and
+    internal quality auditors.
+  - Integrated with: Webhotelier booking engines, external OTAs
+    (Expedia/Booking.com), and custom backend telemetry databases.
+  - Maintained across: A successful corporate transition and official
+    acquisition by Carmelon Digital Marketing in 2020.
+
+TECHNOLOGY STACK
+
+Frontend (Widgets): React (v16.8+ Functional Components, Hooks, Context API), Webpack, Babel, HTML5, Sass, SVGs, Axios, JS Actions.
+Backend (Extranet App): React (v16.4 Class Components), React Router, HTML5, Sass, Axios.
+Data: MySQL, LocalStorage, sessionStorage (with custom SWR caching).
+Infrastructure: Docker (Extranet deployment), Nginx, Windows/Linux server.
+Messaging / Integration: Custom COOKIE / IDENTIFIER classes, HTTP REST.
+

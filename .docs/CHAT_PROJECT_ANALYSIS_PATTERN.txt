@@ -1,0 +1,106 @@
+OK GEM. WE VE DONE PHENOMENAL JOB IN ANALYZING THE PROJECT.
+NOW WE NEED AN ACCURATE REPORT BASED ON CONSTRAINT RULES.
+HERES THE PROMPT
+```
+
+We have a detailed prior analysis of a single project. Your task is ONLY to structure it into the format below.
+
+⚠️ CRITICAL RULES (MUST FOLLOW)
+Do NOT compress, summarize, or simplify anything
+Do NOT merge categories
+Do NOT rewrite into CV language
+Do NOT remove implementation detail or internal naming
+Do NOT interpret or rephrase meaning
+Only classify existing facts into sections
+⚠️ IMPORTANT SCOPE SEPARATION (THIS WAS PREVIOUSLY MISSING)
+
+You MUST strictly separate:
+
+A. SYSTEM FACT (what exists)
+components
+modules
+services
+infrastructure pieces
+real implementations
+B. SYSTEM ACTION (what was done)
+implemented
+built
+designed
+integrated
+modified
+C. SYSTEM FAILURE / PRESSURE (what broke assumptions)
+bottlenecks
+limitations
+breakdowns
+incompatibilities
+redesign triggers
+D. SYSTEM RESULT (what changed after action)
+deployments
+usage
+migrations
+system evolution
+
+🚨 DO NOT MIX A + C in the same bullet
+🚨 DO NOT MIX ACTION + RESULT in the same bullet
+🚨 EACH BULLET MUST BELONG TO ONLY ONE CATEGORY
+
+OUTPUT FORMAT (STRICT STRUCTURE ONLY)
+SYSTEM CONTEXT
+Domain + purpose of system (facts only)
+What it processes / handles / connects (facts only)
+Environment (production / research / consortium / legacy)
+SYSTEM POSITION
+Owned components/modules (explicit systems owned)
+Implemented systems/services (explicit builds)
+Responsibility boundaries (what you controlled vs did not)
+End-to-end delivered subsystem(s)
+ENGINEERING REALITY (NO SOLUTIONS HERE)
+
+⚠️ ONLY describe problems, constraints, failures, and breakdowns
+
+Required redesign due to [specific failure or constraint]
+Exposed limitation in [component/system]
+Introduced complexity in [area]
+Forced restructuring due to [trigger]
+Revealed architectural weakness in [system part]
+
+🚨 DO NOT include fixes or solutions here
+🚨 THIS SECTION MUST ONLY CONTAIN “WHAT DID NOT WORK / WHAT BROKE ASSUMPTIONS”
+
+SYSTEM TRANSFORMATION (NEW SECTION — IMPORTANT ADDITION)
+
+⚠️ THIS WAS MISSING BEFORE
+
+Implemented response to [engineering reality]
+Introduced solution pattern [ONLY if explicitly described in raw data]
+Resulted in change of [system architecture or flow]
+Resolved or mitigated [specific constraint]
+
+🚨 This is where fixes belong (NOT in ENGINEERING REALITY)
+
+SYSTEM OUTCOME
+Deployed in [environment]
+Used by [stakeholders]
+Integrated with [systems]
+Maintained across [time / versions / iterations]
+TECHNOLOGY STACK
+Frontend: [...]
+Backend: [...]
+Data: [...]
+Infrastructure: [...]
+Messaging / Integration: [...]
+FINAL INSTRUCTION
+
+Your job is classification only.
+
+You are building a structured map of reality, not rewriting it.
+
+Every piece of information must be placed into exactly ONE section:
+
+Context → existence
+Position → ownership
+Engineering Reality → problems only
+Transformation → responses only
+Outcome → post-state
+
+No duplication across sections.

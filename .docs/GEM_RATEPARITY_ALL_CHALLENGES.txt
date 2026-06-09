@@ -1,0 +1,89 @@
+Category 1: SPA Frontend Widgets & Installer
+
+1.  Third-Party CSS Bleed: Preventing host-site global styling overrides and CSS
+    resets (such as global article or section tags) from bleeding into and
+    corrupting the visual layouts of your injected widgets.
+2.  Global Webpack Namespace Collisions: Avoiding runtime script crashes when
+    multiple independent React micro-widgets loaded on the same host page and
+    clashed on Webpack’s default global jsonp namespace during chunk-loading.
+3.  Legacy Browser Performance (IE10+): Optimizing initial load times and
+    compiling bundles for slow mobile networks while maintaining strict backward
+    compatibility with enterprise legacy browser runtimes.
+4.  Dynamic Container-Responsive Positioning: Designing widgets to render,
+    scale, and align correctly without hardcoded CSS positioning (since host
+    sites had unpredictable, absolute-positioned structures).
+5.  State Synchronicity & Async Race Conditions: Ensuring decoupled,
+    concurrently running widgets (Pricecheck, Offers, Banners) synchronized
+    global variables (dates, guests, currencies) in real-time without causing
+    desynchronized UIs or duplicate, resource-wasting network queries (like
+    /compare loading twice).
+6.  Calendar Booking Logic & Constraint Validation: Transforming a simple
+    client-side date-picker into an intelligent reservation validator capable of
+    dynamically calculating and enforcing complex hotel policies (such as
+    dynamic minimum-stay inheritance and timezone-drifted SCADA calendar
+    boundaries).
+7.  Asynchronous Client-Side Telemetry Streaming: Designing an on-page,
+    non-blocking telemetry scraper to capture competitor prices and stream those
+    payloads asynchronously (POST) to backend databases without interrupting the
+    visitor's checkout flow or event-loop.
+8.  High-Risk Transactional DOM Injection (Webhotelier): Injecting guest scripts
+    directly into the highly protected checkout DOM of Greece's largest booking
+    engine (Webhotelier) with absolute zero risk of breaking their native
+    scripts or interrupting their transactional funnel.
+9.  Device-Aware Bootstrap Routing: Programming the primary script-tag installer
+    to detect browser user-agents at runtime via optimized Regex, selectively
+    downloading only the specific responsive bundle (Mobile vs. Desktop) to save
+    client bandwidth.
+10. Pre-Emptive Data Caching: Engineering the installer to initiate user
+    tracking sessions and pre-fetch heavy pricing payloads before the main React
+    and ReactDOM libraries had finished downloading to eliminate perceived
+    loading lag.
+11. Browser-Side Trigger Mutual Exclusion: Coordinating a complex, cascading
+    matrix of behavioral triggers (exit intent, scroll depth, time delay) and
+    enforcing strict single-trigger locks to prevent UI conflicts and
+    overlapping popups.
+12. Invisible Bounding Box click-blocking: Preventing absolute-positioned
+    containers of closed-state floating icons (like the collapsed Bell shortcut)
+    from physically overlapping and blocking mouse click events on adjacent
+    elements or the parent site.
+
+Category 2: Core Shared Modules (_CORE Folder)
+
+13. Cross-Repository Code Duplication: Maintaining shared core utilities, icon
+    sets, and helpers across multiple independent widget repositories without
+    having modern monorepo workspace tooling (pre-pnpm workspaces).
+14. Dynamic Asset Public-Path Resolution: Ensuring that lazy-loaded, code-split
+    Webpack chunks (import()) dynamically resolved their public asset URLs
+    depending on whether the system was running in Local, Staging, or Live
+    production environments.
+15. Global Security-Policy Patching: Quickly updating and deploying fixes to all
+    decoupled widgets simultaneously against sudden, browser-wide security
+    changes (such as SameSite cookie policy updates).
+
+Category 3: Backend Configuration React App (Extranet)
+
+16. Multi-Tenant Client-Side Routing Loops: Handling React Router
+    nested-path 404s under Nginx production servers on direct page refreshes,
+    and managing multi-tenant isolation parameters (?hotelcode) on context-free
+    pages (like User Profile) without triggering infinite redirect-to-login
+    loops.
+17. Non-Technical Visual Layout builders: Building an intuitive configuration
+    panel that allowed non-technical hotel clients to easily configure complex
+    coordinate positionings and visual color layouts without relying on standard
+    HTML select-boxes or text inputs.
+18. Nested State Mutations in React 16.4: Managing a complex, multi-dimensional
+    campaign builder (Voucher V2) featuring dynamic card-ordering, nested lists,
+    and custom image/thumbnail file uploads using React 16.4's stateful class
+    components and lifecycle methods (componentDidUpdate render-loop traps)
+    before Hooks existed.
+19. Data-Dense Layout Performance Lag: Rendering heavy, real-time administrative
+    tables, conversion charts, and a dynamic SVG World Map without triggering
+    performance-killing whole-page re-renders on every live WebSocket update.
+20. Client-Side Session Cache Pruning: Instantly updating or hiding resolved
+    table records (such as "Fixed Disparities" or "Deleted Messages") on the SPA
+    view to maintain a snappy user experience without waiting for slow database
+    round-trips to complete.
+21. API Schema Drift & Defensive Interception: Intercepting, sanitizing, and
+    validating unstable, constantly shifting JSON payloads coming from an
+    uncoordinated backend partner (co-owner) at response-time to prevent the
+    frontend from crashing or being littered with inline safety checks.

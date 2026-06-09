@@ -1,0 +1,43 @@
+Hiring Team,
+
+Please allow me to introduce and respectfully submit my profile for consideration.
+
+My occupational path is a unique fit for the challenges of the modern hospitality tech space. Currently occupied as senior systems engineer who has a proven track record of both modernizing legacy platforms and building innovative new products from the ground up.
+
+I have crossed paths with Hospitality products in the past and had the experiences I genuinely enjoyed.
+
+Cosmores, Athens.
+ A decade-old legacy PHP booking engine and PMS, is a clear example of this.
+ Employeed to secure, extend and overall modernize the entire platform procedures.
+ This involved a complete security plan restructure, including cutom authentication level enhancements and data encryption extending of 1M enties.
+ We took deep architectural refactoring of the legacy - almost deprecated - codebase.
+ I introduced modern development practices like a local virtual (VirtualBox) "stagging" clone of the environemt, a version control upgrade for the deployments (Git), built new, reusable PHP OOP Utility structures and expose REST-like API to enable stable, future feature development.
+
+The technical leverage of Cosmores, generated inspiration and the idea of a new contemporary product.
+
+Rateparity, Athens.
+Recruited upfront as a founding engineer and the sole frontend architect for Rateparity.
+ The role was to take a new hospitality tech product from a pure concept to a successful commercial exit.
+ Architected and built the entire product from scratch, navigating the difficult, poorly-documented transition to modern JavaScript (ES6+) and React Functional Components (v16.8).
+The core of the product was a suite of high-performance SPA conversion widgets, installable with a single line of HTML—a massive competitive advantage over bloated market alternatives. This technical excellence was validated when our code passed the rigorous review of Webhotelier, Greece's top hospitality tech company, securing a key strategic partnership.
+The success and trust we built led to collaborations with major property groups, which culminated in the company being successfully acquired by Israeli funders. The ultimate validation of my impact came after my resignation, when the owner had to hire a team of four engineers to manage the work I had been handling autonomously.
+
+For the last five years, I have operated as the sole autonomous systems engineer for the Greek counterparts in several high-budget, multi-national European research initiatives (R2D2, SYNERGY, Re-Empowered). My role is to take high-level academic proposals and single-handedly architect and deliver the complete, production-level software and infrastructure.
+I collaborate directly as a technical peer with top-level scholars and PhDs from major European energy distributors (HEDNO, IPTO, TREFOR) and world-renowned universities like Imperial College London. My responsibility is to translate their deep domain expertise in the energy sector into robust, data-intensive, and scalable platforms.
+
+
+My unique value is not just my past success in this domain, but my proven capacity to learn and deliver. To give you a complete and transparent picture of my capabilities, I have attached a "dossier" of three documents:
+
+- CORPORATE_INSIGHTS: Explaining my unique cross-domain background.
+
+- TIMELINE_RESUME: The full factual timeline of my work.
+
+- ENGINEERING_INSIGHTS: An objective, AI-generated "verdict" on my problem-solving process.
+
+I don't pretend to know the specific internal challenges you are facing, but I am confident that my experience, passion, dedication and consistency in delivering complete, end-to-end solutions makes me a strong asset for your team.
+
+Thank you for your time and consideration.
+
+Best Wishes,
+Manos Zalokostas
+https://www.linkedin.com/in/manos-zalokostas-93798332

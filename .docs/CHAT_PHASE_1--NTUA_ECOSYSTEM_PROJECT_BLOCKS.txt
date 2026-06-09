@@ -1,0 +1,101 @@
+PHASE 1 SNAPSHOT — NTUA ECOSYSTEM CV BLOCK
+HYBRID (HEDNO / ICCS-NTUA INTERNAL GRID SYSTEM)
+
+2020 | Athens, Greece
+
+Role: Greek node full-stack and infrastructure engineer (WP delivery)
+
+Key Contributions:
+
+Delivered full-stack energy management system deployed on ICCS bare-metal infrastructure for HEDNO-related operational workflows
+Built independently deployed Docker-based services manually interconnected at runtime under on-premises constraints
+Designed host-level Python execution service decoupled from web containers for heavy processing workloads
+Implemented backend automation services for data handling, logging, and operational workflow stabilization
+Established system separation between runtime application layer and infrastructure execution layer under constrained deployment conditions
+
+Tech Stack: Next.js, Node.js (Express), Docker, MySQL, Redis, Linux, Python (host execution layer)
+
+SYNERGY (HORIZON 2020 ENERGY DATA PLATFORM)
+
+2021–2023 | ICCS-NTUA
+
+Role: Greek node technical lead (full-stack + infrastructure delivery)
+
+Key Contributions:
+
+Delivered independent multi-service energy data platform node under EU consortium environment
+Built decoupled Docker-based infrastructure with manually composed runtime service orchestration
+Implemented host-level Python execution pipeline for external computation isolation
+Designed isolated authentication layer with Redis-backed session management for system stability
+Engineered asynchronous execution flows for external computational workloads
+Delivered full-stack integration across frontend and backend layers on ICCS bare-metal infrastructure
+
+Tech Stack: Next.js, Express.js, Node.js, Redis, MySQL, Sequelize ORM, Docker, Python, Keycloak
+
+RE-EMPOWERED (EU–INDIA ENERGY MANAGEMENT SYSTEM)
+
+2022–2023 | ICCS-NTUA
+
+Role: Greek node full-stack technical lead
+
+Key Contributions:
+
+Built dual-node system architecture (GR / DK) from shared codebase with isolated runtime execution
+Implemented asynchronous cross-node messaging workflows for distributed energy data exchange
+Developed time-series normalization layer for inconsistent SCADA telemetry streams
+Designed schema-driven frontend form and validation system for evolving research parameters
+Structured backend services for modular execution of energy management workflows
+Delivered containerized deployment across heterogeneous institutional environments
+
+Tech Stack: SvelteKit, NestJS, Python (Flask), MSSQL, Prisma, MQTT, RabbitMQ, Keycloak, Docker
+
+R2D2 (HORIZON EUROPE GRID RESILIENCE PLATFORM)
+
+2023–2025 | ICCS-NTUA
+
+Role: Greek node technical lead (API gateway + full-stack integration)
+
+Key Contributions:
+
+Built secure API gateway separating frontend BFF layer from backend dataserver systems
+Designed runtime-evaluated authorization framework replacing static role decorators (AUTH-Z)
+Implemented schema-driven dynamic UI system for complex grid scenario inputs
+Engineered asynchronous execution pipeline for external Python-based simulation tools
+Built structured validation layer for multi-dimensional grid scenario data integrity
+Integrated containerized service separation across frontend, API, and execution layers
+
+Tech Stack: SvelteKit (Svelte 5), NestJS, Prisma, Python (Flask), WebSockets, RabbitMQ, Keycloak, Docker, pnpm
+
+SYNERGIES (EXPERIMENTAL DISTRIBUTED ENERGY PLATFORM)
+
+2023–2024 | ICCS-NTUA
+
+Role: Greek node system engineer
+
+Key Contributions:
+
+Built dual application system (Planning / Coordination) from shared codebase with isolated runtime contexts
+Implemented federated single sign-on across multiple application entry points
+Engineered distributed energy data exchange workflows across consortium nodes
+Designed container-based multi-service orchestration under manual runtime composition
+Integrated host-level Python execution layer for external computational workloads
+Delivered monitoring and observability integration for system stability
+
+Tech Stack: Next.js, Express.js, Node.js, Redis, MySQL, Docker, Keycloak, Python, Prometheus, Grafana
+
+ODEON (HORIZON EUROPE GRID EXPANSION PLATFORM)
+
+2024–Present | ICCS-NTUA (ACTIVE)
+
+Role: Greek node technical lead (active system delivery)
+
+Key Contributions:
+
+Implemented full scenario execution pipeline from input definition to solver execution stage
+Engineered asynchronous processing flow for large-scale grid optimization tasks
+Built modular backend architecture for structured energy planning workflows
+Developed validation layer for multi-dimensional grid expansion scenarios
+Integrated frontend scenario definition system with backend solver execution services
+Delivered containerized deployment supporting external optimization services (SCIP / NEOS)
+
+Tech Stack: SvelteKit, NestJS, Python (Flask), PostgreSQL, Prisma, Docker, NEOS / SCIP

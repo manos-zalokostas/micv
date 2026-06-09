@@ -1,0 +1,250 @@
+1. Official Project Description
+ODEON is an active distributed simulation platform built as a schema-driven execution system on top of the WebBox infrastructure layer. It extends a prior planning-system architecture into a runtime platform capable of orchestrating UI generation, backend data processing, authentication, and computational simulation execution.
+
+The system is designed as a controlled multi-layer architecture for energy/grid simulation workflows, integrating external identity management and a dedicated computational solver engine.
+
+2. My Role (Sole Web Engineer)
+Designed full distributed system architecture (UI, API, computation layers)
+Implemented SvelteKit Backend-for-Frontend (BFF) as the single public entry layer
+Developed NestJS Core API for domain logic and data orchestration
+Integrated Python Flask solver as isolated computation engine
+Engineered Keycloak-based federated authentication (SSO integration)
+Designed Redis-based session caching and identity mapping system
+Implemented Prisma-based data persistence layer
+Designed schema-driven UI and API generation via WebBox system
+Built tenant isolation system using backend context injection (org_id)
+Defined secure internal service communication over Docker network
+Structured simulation lifecycle pipeline (input → validation → execution → results)
+Maintained deployment model supporting on-prem and multi-tenant environments
+3. Technology Stack
+Frontend: SvelteKit
+Backend: NestJS
+Solver: Python Flask (simulation engine)
+Database: PostgreSQL + Prisma ORM
+Cache: Redis
+Authentication: Keycloak (SSO)
+Infrastructure: Docker Compose, on-prem + registry deployment model
+Architecture Model: Schema-driven WebBox-based system
+Communication: HTTP REST (internal + external), Redis session layer
+4. Key Engineering Highlights
+Built full 3-layer distributed architecture separating UI, API, and computation
+Designed schema-driven system where UI, validation, and API are derived from shared definitions
+Implemented federated authentication with Keycloak + Redis session mediation
+Engineered strict backend-controlled tenant isolation at query level
+Built decoupled simulation pipeline with isolated Python solver execution
+Established BFF security model preventing direct backend exposure
+Designed deployment model supporting both on-prem and multi-tenant execution environments
+Introduced WebBox as structural system foundation for runtime orchestration
+
+DETAILS::
+Designed and implemented a schema-driven distributed simulation platform built on a three-tier architecture (SvelteKit BFF, NestJS Core API, Python Flask Solver), enforcing strict separation between UI orchestration, domain logic, and computational execution.
+Developed a Backend-for-Frontend (BFF) security and mediation layer, where all client interactions are routed through SvelteKit, acting as the single public interface for request validation, authentication mediation, and backend isolation.
+Implemented a federated authentication model using Keycloak SSO, combined with server-side token validation and Redis-based session caching, ensuring stateless client sessions with server-controlled identity resolution.
+Built a schema-driven system execution model (WebBox-based architecture) where UI generation, API structure, validation logic, and database access are derived from shared schema definitions, enabling unified cross-layer consistency.
+Engineered a multi-layer tenant isolation mechanism, enforcing organization-level data separation via backend context injection (org_id) at query construction level within NestJS + Prisma.
+Established a decoupled computational execution pipeline, where simulation workloads are asynchronously dispatched from backend services to a dedicated Python Flask solver, isolating heavy computation from application logic and UI flow.
+Designed a deployment-aware hybrid infrastructure model, supporting both on-premises isolated database deployments and multi-tenant shared environments with strict logical data segregation.
+
+
+========================================================================================================
+
+R2D2 — CV ENTRY (FULL STRUCTURE)
+1. Official Project Description
+
+R2D2 is a distributed web application system designed as a transition architecture between modular application development and a unified schema-driven platform approach. It introduces a monorepo-based structure integrating frontend and backend services under a shared execution and deployment model, enabling reusable abstractions for authentication, data access, and UI generation.
+
+The system acts as an intermediate architectural layer that later evolves into the foundational principles used in WebBox-based infrastructure.
+
+2. My Role (Sole Web Engineer)
+Designed and implemented full-stack architecture (frontend + backend integration layer)
+Built and maintained NestJS backend services and SvelteKit frontend BFF
+Designed authentication flow and session handling logic (custom AUTHALL system)
+Engineered Prisma-based data modeling and schema organization
+Developed reusable backend abstraction layers (BaseController, BaseService patterns)
+Implemented messaging integration layer (RabbitMQ-based event dispatching)
+Converted separate frontend/backend codebases into a unified pnpm monorepo structure
+Designed API routing layer and secure backend proxy architecture
+Implemented form generation and schema-driven UI components
+Defined system-level deployment structure using Docker Compose
+3. Technology Stack
+Frontend: SvelteKit
+Backend: NestJS
+Database: Prisma ORM (SQL-based DB)
+Messaging: RabbitMQ
+Authentication: Custom AUTHALL (local session-based auth system)
+Infrastructure: Docker, pnpm monorepo workspace
+API Communication: HTTP REST
+Architecture Style: Modular monorepo / early schema-driven design
+4. Key Engineering Highlights
+
+Introduced unified monorepo architecture combining frontend and backend services
+Designed schema-driven form generation system reducing manual UI definition
+Built custom authentication/session system independent of external providers
+Implemented strict backend controller abstraction for reusable API design
+Established separation between API layer and computational solver layer
+Created reusable service architecture enabling consistent domain modeling
+
+DETAILS:
+Designed and implemented a monorepo-based web platform architecture (SvelteKit + NestJS) with strict separation between public-facing BFF layer and private backend execution services, enforcing a controlled request and data access topology.
+Built a Backend-for-Frontend (BFF) security and routing model, where all client interactions are mediated through SvelteKit, which acts as the only public interface and enforces validation, request transformation, and backend isolation.
+Developed a schema-driven UI and form generation system (TP-Form / TP-Fieldset) enabling runtime generation of forms, validation rules, and API bindings from structured schema definitions, reducing UI logic coupling with backend implementation.
+Implemented a custom authentication and authorization architecture (AUTHALL + AUTH-Z) combining session handling with runtime route-based access control, decoupled from framework-level decorators and evaluated dynamically from configuration models.
+
+========================================================================================================
+
+REEMPOWERED — CV ENTRY (CONDENSED)
+
+2022–2024 | ICCS-NTUA / Energy Forecasting & Grid Systems
+
+Role
+
+Full-stack systems engineer responsible for designing and operating a multi-service energy forecasting and grid analytics platform spanning distributed applications, heterogeneous execution engines, and hybrid event-driven architectures.
+
+Key Contributions
+1. Dual-architecture system design (GR / DK divergence model)
+Engineered and maintained a dual-runtime system split into two operational domains (GR and DK) sharing a common codebase but diverging in execution logic and data flow.
+Designed contrasting processing models:
+GR: batch-oriented, SCADA-driven ingestion pipeline
+DK: event-driven forecasting pipeline using message-based external feeds
+Maintained architectural separation across data, services, and execution workflows.
+2. Distributed multi-protocol system integration
+Designed a heterogeneous communication architecture combining:
+HTTP for synchronous service orchestration (frontend ↔ backend ↔ compute layer)
+MQTT for forecasting/event propagation workflows
+RabbitMQ for external asynchronous integration pipelines
+Coordinated multiple communication paradigms within a single operational system.
+3. Schema-driven frontend architecture (dynamic UI system)
+Built a schema-driven UI generation system where frontend forms and validation logic were dynamically generated from backend-defined schemas.
+Decoupled UI rendering from static components, enabling runtime-adaptive interface generation.
+Established shared validation logic between frontend and backend through structured schema definitions.
+4. Hybrid compute architecture (Node.js ↔ Python execution layer)
+Integrated a dedicated Python forecasting engine (Flask-based ALGO service) into a Node.js orchestration system.
+Designed cross-runtime execution pipeline separating:
+orchestration layer (Node.js backend)
+computation layer (Python forecasting engine)
+Enabled controlled execution of heavy numerical workflows outside main web runtime.
+5. Infrastructure consolidation & deployment engineering (INFRA_MIX)
+Managed full system deployment using Docker Compose across multiple independent services.
+Engineered a later-stage infrastructure consolidation (INFRA_MIX) merging previously separated GR and DK deployment stacks into a unified multi-tenant runtime.
+Coordinated service networking, environment isolation, and cross-service connectivity in on-premises infrastructure.
+Technical Stack
+
+Frontend
+
+Svelte / SvelteKit
+
+Backend
+
+Node.js (NestJS-style architecture)
+Python (Flask computation services)
+
+Messaging / Integration
+
+MQTT
+RabbitMQ
+HTTP APIs
+
+Data
+
+MSSQL
+Legacy SCADA systems (external integration)
+
+Infrastructure
+
+Docker + Docker Compose
+Prometheus + Grafana
+Linux (ICCS-NTUA on-premises environment)
+
+Execution layer
+
+Node.js orchestration services
+Python ALGO forecasting engine (Flask)
+
+========================================================================================================
+
+SYNERGY — CV ENTRY (CONDENSED)
+
+2021–2023 | ICCS-NTUA / Energy Systems Platform
+
+Role
+
+Full-stack systems engineer responsible for designing and implementing a multi-application energy planning and coordination platform deployed in an on-premises research infrastructure, integrating distributed applications, authentication systems, and hybrid execution pipelines.
+
+Key Contributions
+1. Multi-application system architecture
+Designed and maintained a dual-application system (Planning / Coordination) running as independent but interoperable runtimes.
+Structured system into isolated application domains with separate databases (SPLANDB / SCORDDB).
+Coordinated shared core utilities across multiple independently deployed codebases.
+2. Hybrid execution architecture (container + host compute)
+Implemented a hybrid runtime model combining Dockerized web services with host-level Python execution (py-processor).
+Offloaded computational workloads from containerized Node.js applications to bare-metal execution environment.
+Defined controlled execution invocation flow between web layer and external compute engine.
+3. Authentication & SSO integration architecture
+Integrated external federated SSO (Synergy Platform identity provider) into a multi-application system.
+Designed and maintained an internal AUTHSERVER layer for token/session lifecycle management.
+Implemented Redis-based session state retention for cross-application login continuity.
+4. Infrastructure orchestration (on-premises)
+Deployed full system using Docker Compose multi-service architecture on ICCS-NTUA infrastructure.
+Configured Nginx reverse proxy as central routing layer for multiple applications and services.
+Managed service networking, routing rules, and environment-based service discovery in a bare-metal environment.
+5. Backend architecture & framework abstractions
+Developed internal backend abstraction layers:
+Controller orchestration layer (request validation + data access abstraction)
+SSR execution flow manager for server-side rendering lifecycle control
+Standardized backend structure across multiple application modules.
+6. Data architecture & domain isolation
+Designed physically separated database architecture:
+Planning domain database (SPLANDB)
+Coordination domain database (SCORDDB)
+Enforced strict separation of operational data domains across applications and workflows.
+Technical Stack
+
+Frontend
+
+Next.js (React)
+
+Backend
+
+Node.js
+
+Data
+
+MySQL (SPLANDB / SCORDDB)
+Redis (session/state retention for authentication continuity)
+
+Infrastructure
+
+Docker + Docker Compose
+Nginx reverse proxy
+Linux (ICCS-NTUA bare-metal environment)
+
+Execution layer
+
+Host-based Python execution engine (py-processor)
+Node.js runtime services
+
+Authentication
+
+External SSO (Synergy Platform)
+Internal AUTHSERVER (token/session management layer)
+
+========================================================================================================
+
+HYBRID (HEDNO / ICCS-NTUA INTERNAL GRID SYSTEM)
+
+2020 | Athens, Greece
+
+Role
+Full-stack systems engineer (Greek node), responsible for end-to-end development, deployment, and runtime architecture of an internal energy scheduling and grid workflow platform deployed on ICCS-NTUA infrastructure.
+
+Key Contributions
+Designed and implemented a dual-system architecture separating the main application (HYBRID) from a dedicated system-operations service (HYBRID-AUX), isolating heavy maintenance and batch workloads from the main runtime.
+Engineered a fully containerized deployment system using Docker CLI (no Compose orchestration), including manual service wiring, network bridging, and reverse-proxy routing via Nginx in a bare-metal environment.
+Built execution isolation layer using Node.js child_process, delegating high-latency system tasks (e.g. database dumps and maintenance operations) to auxiliary services to prevent event-loop blocking.
+Implemented a cross-layer validation parity system, where identical rule engines executed both in frontend UI validation and backend API enforcement, ensuring deterministic constraint consistency across the full stack.
+Technical Stack
+Frontend: Next.js (React)
+Backend: Node.js (Express)
+Data: MySQL
+Infrastructure: Docker (CLI), Nginx, Linux (ICCS bare-metal)
+System execution: Node.js child_process, auxiliary Node service (HYBRID-AUX)
