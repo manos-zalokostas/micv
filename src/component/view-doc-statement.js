@@ -13,11 +13,8 @@ customElements.define('view-doc-statement',
 
         render = () => html`
 
-            <h3>Senior Full Stack Engineer with 10+ years of experience designing and
-                delivering end-to-end software systems, spanning greenfield application development and
-                large-scale legacy modernization. My work focuses on architecting scalable, secure, and portable
-                web infrastructures that connect frontend systems, backend services, and distributed data
-                processing layers into cohesive platforms.
+            <h3>
+                Senior Full Stack Engineer with 10+ years of experience, driven by a deep motivation to systematically abstract and compact distributed system complexity. I have evolved through legacy database modernizations, to complex layout representations and dynamic interactions, to hardening applications security, to engineering schema-driven, runtime-interpreted platform architectures. My goal is to constantly optimize for building decoupled systems where UI generation, validation rules, and API endpoints are dynamically derived from a single source of trust. 
             </h3>
 
         `;

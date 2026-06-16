@@ -5,15 +5,23 @@ export const work = [
 
             [
                 `2026 | ODEON (Horizon Europe) | [Budget: €22.5M]`,
-                ` Designed and delivered the complete three-tier distributed architecture. Personally built the SvelteKit Backend-for-Frontend (BFF) client, the NestJS Core API gateway, the Prisma-based database persistence layers, the Python Flask solver container, and the federated authentication and Redis session caching systems.`,
+                ` Designing and building the complete three-tier distributed architecture. Personally built the SvelteKit Backend-for-Frontend (BFF) client, the NestJS Core API gateway, the Prisma-based database persistence layers, the Python Flask solver container, the federated authentication system, and a custom declarative dynamic form-rendering framework.`,
                 [
                     "https://cordis.europa.eu/project/id/101136128",
                     "https://odeonproject.eu",
                     "https://www.linkedin.com/company/odeoneu",
                 ],
                 {
-                    highlight: `Schema-Driven System Execution: Engineered a unified architecture where frontend UI form generation, API structures, cross-layer validation logic, and database access are dynamically derived from shared schema definitions, eliminating manual development synchronization. Asynchronous Simulation Pipeline: Designed a decoupled execution pipeline that asynchronously dispatches heavy computational simulation workloads from the NestJS core to an isolated Python solver, preventing application gateway timeouts and UI lag. Multi-Layer Tenant Isolation: Implemented a database-level tenant isolation system, injecting organization-level parameters (org_id) directly into database queries at the query-construction level via NestJS and Prisma middleware`,
-                    challenge: `Orchestrating long-running grid-physics optimization models that exceed standard HTTP gateway timeout thresholds. Maintaining structural consistency between dynamically generated user interfaces, nested validation rules, and database persistence layers while enforcing strict organization-level isolation in shared multi-tenant environments.`,
+                    highlight: `
+Schema Composition & Inheritance: Engineered a parent/child schema inheritance engine utilizing runtime JavaScript object composition to cleanly decouple presentation-focused UI configurations from transactional backend database models, allowing teams to develop and deploy independently.
+Declarative UI Rendering: Developed a custom form-rendering framework that abstracted complex input validation and state-tracking rules into reactive Svelte stores, while enabling developers to declaratively define custom user-interface layouts.
+Asynchronous Simulation Pipeline: Designed a decoupled execution pipeline that asynchronously dispatches heavy computational simulation workloads from the NestJS core to an isolated Python solver, preventing application gateway timeouts and UI lag
+`,
+                    challenge: `
+Orchestrating long-running grid-physics optimization models that exceed standard HTTP gateway timeout thresholds.
+Multi-team development bottlenecks where tight, static coupling between frontend UI components and backend database schemas forced constant cross-team coordination and synchronized deployment blocks.
+Exposed limitations in fully automated form generators, which failed to support custom visual section layouts, specific UX step-formatting, or dynamic user-defined asset instances
+                    `,
                     techstack: ` SvelteKit, NestJS, Python (Flask), Prisma ORM (MySQL), Redis, Keycloak, Docker, Docker Compose, Nginx, Linux. `,
                 }
             ],
@@ -162,12 +170,32 @@ Executing strict, isolated containerization and reverse-proxy routing on bare-me
     {
         type: '2018 / 2020 - Founding Engineer & Frontend Architect @Rateparity  | Piraeus Greece',
         tasks: [
-            [`Booking Conversion Widgets`, `Recruited as one of two core builders and the sole frontend engineer to take a new hospitality tech product from concept to a successful commercial exit. Architected and built a suite of high-performance SPA conversion widgets (installable with a single HTML line) using React.js that were an order of magnitude more efficient than competing paid products.`,
-                null,
+            [
+                `
+                HOSPITALITY SAAS CONVERSION PLATFORM | 0:1 | COMMERCIAL EXIT 
+                `,
+                `
+Recruited as the founding engineer to design and deliver the entire full-stack product topology from zero to successful acquisition. Personally built a suite of decoupled, high-performance React SPA widgets (Price Comparison, Offers, behavioral popups), a cross-origin script-tag DOM installer, a shared core utility library, and the entire React-based Extranet administrative platform backed by a MySQL database.
+            `,
+                [
+                    "https://www.rateparity.com/",
+                    "https://www.carmelon-digital.com"
+                ],
                 {
-                    challenge: ``,
-                    highlight: ``,
-                    techstack: ``,
+                    challenge: `
+Injecting and synchronizing a lightweight price-comparison widget directly into the highly protected checkout DOM of Greece's largest booking engine (Webhotelier) with absolute zero risk of breaking their native scripts or interrupting active payment funnels.
+Avoiding runtime script crashes when multiple independent React micro-widgets loaded on the same host page and clashed on Webpack’s default global JSONP namespace during chunk-loading.
+Coordinating competing behavioral event triggers (exit intent, scroll depth, time delay) on client browsers without causing UI popup overlap, memory leaks, or click-blocking container collisions
+                    `,
+                    highlight: `
+Stale-While-Revalidate (SWR) Cache Gate: Implemented a custom caching framework using sessionStorage and epoch timestamps to serve cached data instantly (0ms latency) while asynchronously dispatching background requests to refresh the cache.
+Response-Time Schema Sanitizer: Engineered an HTTP response interceptor that caught raw JSON payloads at response-time, validated them against expected models, and injected default fallbacks to insulate the UI from uncoordinated backend schema drift.
+Right-to-Left (RTL) Layout Sandboxing: Engineered an isolated schema-driven translation module supporting 15+ languages, manually neutralizing parent-site Right-to-Left (RTL) direction overrides to preserve widget layout alignment.
+Runtime Environment Overrides: Programmed an environment-routing pipeline within the static installer, reading URL parameters (DEVENV=1) and setting browser session storage flags to dynamically load staging script versions on live production sites
+                    `,
+                    techstack: `
+React (v16.08, v16.04), ES6+, SPA , Webpack, Babel, Context API, MySQL, Node.js, HTML5, Sass,  Git.
+                    `,
                 }
             ],
         ]
@@ -175,12 +203,26 @@ Executing strict, isolated containerization and reverse-proxy routing on bare-me
     {
         type: '2017 / 2020 - System Modernization & Security @Cosmores  | Piraeus Greece',
         tasks: [
-            [`Hospitality - Booking Engine`, `Brought on to modernize and secure a decade-old legacy PHP booking engine and PMS. Architected and implemented a complete security overhaul, including a new device-based authentication system and the encryption of over 1 million rows of sensitive data.`,
+            [
+                `direct booking engine & Property Management System (PMS)  `,
+                `
+Designed and delivered a complete application security overhaul, a modular dynamic yield management engine, and the first-generation cross-origin price-comparison widget. Personally built a centralized bootstrap routing gateway, a secure tokenized decryption microservice, offline database batch encryption utilities, and a zero-dependency client-side comparison widget.
+                `,
                 [],
                 {
-                    challenge: ``,
-                    highlight: ``,
-                    techstack: ``,
+                    challenge: `
+Securing over one million legacy database records containing clear-text guest credit card data to achieve strict PCI-DSS compliance under SQL injection and credential hijacking threats.
+Encapsulating a highly vulnerable legacy codebase consisting of uncoordinated flat files initializing independent global scopes and duplicate database connections.
+Managing and deploying critical software hot-swaps manually on live production servers under a strict administrative ban on Git-based version control in production environments                    
+                    `,
+                    highlight: `
+Tokenized Cryptographic Gateway: Authored offline database migration scripts to encrypt over 1M legacy records, and engineered an ephemeral temporal decryption gate utilizing dynamic secure tokens to restrict clear-text access windows to a 30-minute operational limit.
+Single-Entry Bootstrap Encapsulation: Designed a centralized initialization gateway to safely route and wrap the legacy multi-file ecosystem, refactoring the database wrapper to strictly enforce parameterized PDO queries.
+Zero-Dependency Widget Sandbox: Rewrote the cross-origin price-comparison widget into zero-dependency vanilla JavaScript with self-injecting scoped CSS, eliminating stylesheet overrides and third-party library conflicts on client hotel domains
+                    `,
+                    techstack: `
+OOP PHP (5.5.X), Vanilla JavaScript, MySQL, PDO (parameterized), Apache, CentOS, Linux.
+                    `,
                 }
             ]
         ],
@@ -188,12 +230,26 @@ Executing strict, isolated containerization and reverse-proxy routing on bare-me
     {
         type: `2016 / 2017 - System Modernization @ECEP TECHNOLOGIES | London England (remote)`,
         tasks: [
-            [`Warehouse Inventory`, `Architected and built an inventory management system, migrating the company's core business logic from a chaotic, multi-spreadsheet process for over 500,000 distinct barcodes. Designed and implemented a robust database schema and a secure, RESTful API using Laravel 5.1.`,
+            [
+                `Warehouse inventory & tracking system`,
+                `
+                Sole full scale systems engineer, owning the entire lifecycle from initial requirements elicitation to deployment. Conducted the primary business analysis and database normalization to translate scattered legacy spreadsheets into a structured, relational schema. Designed and built the core inventory management engine, automated ingestion services, stock-allocation algorithms, and backend reporting modules
+                `,
                 [],
                 {
-                    challenge: ``,
-                    highlight: ``,
-                    techstack: ``,
+                    challenge: `
+Overcoming database limitations in natively tracking historical transaction sequences and matching cascading states (such as restoring pending deficits when matched deliveries were deleted).
+Mitigating the high-consequence risk of accidental, catastrophic bulk updates or deletions across a live 500,000 barcode database table if query constraints were omitted.
+Exposed limitations in PHP's loose type comparisons when parsing Maatwebsite/Excel quantities as double/float values instead of strict integers
+                    `,
+                    highlight: `
+Defensive SQL Safeguard: Engineered an internal database security interceptor (_unrestrictedCommandAttempt) within the database wrapper (DBManagerTrait) that parsed all dynamic SQL updates and deletions, checking for the existence of WHERE criteria and instantly halting execution if omitted.
+Design-by-Contract Assertions: Built a runtime parameter-contract validation engine (ExceptionsTrait) that dynamically validated parameter types, ranges, and array limits before execution to prevent downstream data model pollution.
+Unified Output Routing: Designed an abstracted request-to-format controller pipeline (_handleOutput) that dynamically toggled between rendering Blade HTML templates, API JSON payloads, or spreadsheet downloads based on runtime request parameters
+                    `,
+                    techstack: `
+PHP (OOP), Laravel 5.1, MySQL, PHPExcel (Maatwebsite), Linux (CentOS), Git, HTML, Javascript, CSS
+                    `,
                 }
             ]
         ]
